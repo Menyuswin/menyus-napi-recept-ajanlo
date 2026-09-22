@@ -15,15 +15,28 @@ előkerüljön. Ugyanaznap újratöltve ugyanazt az ajánlást mutatja, éjfélk
 változik. A „Másik ötletet ebből a konyhából” gomb ugyanabból a konyhából
 kínál egy másik fogást, dátum-váltás nélkül is.
 
+Két jelölőnégyzet is szűri az ajánlást (az állapot a böngésző
+`localStorage`-ában marad, tehát emlékszik rá):
+
+- **„Egyszerűbb recepteket szeretnék”** — rövid elkészítési idejű, kevesebb
+  hozzávalós recepteket részesít előnyben.
+- **„Reggelire és vacsorára nem kell mindenáron főtt étel”** — ebédnél nem
+  számít, de reggelinél és vacsoránál olyan fogásokat hoz előre, amikhez nem
+  kell tűzhely vagy sütő (pl. hideg tál, szendvics, saláta).
+
+Ha egy adott konyhához/étkezéshez épp nincs a szűrésnek megfelelő találat,
+az oldal a teljes választékból ajánl helyette — sosem marad üresen egy kártya.
+
 ## Adatforrások
 
 Nincs egyetlen ingyenes, élőben lekérdezhető adatbázis, amely mind a hét
 konyhát magyar nyelven lefedné — ezért az oldal mind a 7 konyhához (olasz,
 francia, amerikai, lengyel, délszláv, görög, magyar) **kézzel, magyarul
-összeállított** recept-készletet tartalmaz: konyhánként 24 recept (8-8
-reggelire, ebédre, vacsorára), összesen 168. Minden recept lépésenkénti,
-kezdőbarát leírással készült (pontos hőfok/lángfokozat, időtartam, vizuális
-jelzés minden lépésnél), elkészítési idővel és adagszámmal.
+összeállított** recept-készletet tartalmaz: konyhánként 24-26 recept
+(reggelire/ebédre/vacsorára elosztva), összesen 186. Minden recept
+lépésenkénti, kezdőbarát leírással készült (pontos hőfok/lángfokozat,
+időtartam, vizuális jelzés minden lépésnél), elkészítési idővel és
+adagszámmal; a gyors/hideg fogások jóval rövidebb lépéssorral.
 
 A válogatás háttéranyagaként — klasszikus fogások és jellemző arányok
 tájékozódási pontjaként, nem szó szerinti átvételként — ezt az öt ingyenesen
