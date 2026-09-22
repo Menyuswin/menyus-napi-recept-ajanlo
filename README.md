@@ -32,15 +32,70 @@ magyarul lefedné, ezért az oldal két forrást kever:
 
 ### Spoonacular API-kulcs
 
-Az olasz/francia/amerikai/görög ajánláshoz saját, ingyenes Spoonacular
-API-kulcs kell — ezt az oldal **Beállítások** paneljén adod meg egyszer.
-A kulcs kizárólag a böngésződ `localStorage`-ában tárolódik, sosem kerül a
-kódba vagy szerverre (egy publikus repóba írt kulcsot percek alatt
-megtalálnak és ellopnak a kulcsvadász botok — ezért nem szabad oda írni).
-Kulcs nélkül a lengyel/délszláv/magyar ajánlás továbbra is működik, csak a
-másik négy konyha kér kulcsot.
+Az olasz/francia/amerikai/görög ajánláshoz Spoonacular-hozzáférés kell.
+Ehhez két út van, és **mindkettő egyszerre is elérhető** — ha van saját
+kulcsod, az élvez elsőbbséget, egyébként az oldal automatikusan a
+megosztott proxy-szolgáltatást használja (ha az üzemel):
 
-Ingyenes kulcs igényelhető itt: [spoonacular.com/food-api/console](https://spoonacular.com/food-api/console#Dashboard).
+- **Saját kulcs** (Beállítások panel): mindenki megadhatja a saját,
+  ingyenes Spoonacular API-kulcsát, ami kizárólag az ő böngészőjének
+  `localStorage`-ában tárolódik, sosem kerül a kódba vagy szerverre —
+  ekkor a saját napi keretét használja, függetlenül a megosztott
+  szolgáltatástól. Ingyenes kulcs igényelhető itt:
+  [spoonacular.com/food-api/console](https://spoonacular.com/food-api/console#Dashboard).
+- **Megosztott proxy-szolgáltatás** (az oldal tulajdonosa állítja be
+  egyszer — lásd alább): ha valaki nem ad meg saját kulcsot, az oldal
+  ezt hívja, és a kulcs soha nem látszik egyetlen látogató böngészőjében
+  sem.
+
+**Fontos, amit tudni érdemes a megosztott szolgáltatásról**: mivel a
+Spoonacular ingyenes kerete (jellemzően kb. 150 hívás/nap) az összes
+látogató között oszlik meg, nagyobb forgalomnál előfordulhat, hogy egy
+nap alatt elfogy — ilyenkor mindenkinek, aki nem adott meg saját
+kulcsot, aznapra megszűnik az élő konyhák elérése (a lengyel/délszláv/
+magyar ajánlás ettől függetlenül mindig működik). Egy publikus repóba
+sosem szabad közvetlenül beleírni a kulcsot — a GitHub kulcsvadász
+botjai percek-órák alatt megtalálják és ellopják —, ezért a kulcs
+kizárólag a lentebb leírt Cloudflare Worker Environment Variable-jában
+él, amit a böngésző soha nem lát.
+
+### Megosztott API-proxy (opcionális, az oldal tulajdonosának szól)
+
+Ha azt szeretnéd, hogy a látogatóknak **ne kelljen** saját Spoonacular-kulcsot
+megadniuk, egy ingyenes [Cloudflare Workers](https://workers.cloudflare.com/)
+proxy-t kell beüzemelned — ez egy apró háttérszolgáltatás, ami a Te
+kulcsoddal egészíti ki a kéréseket, mielőtt továbbküldi a Spoonacularnak,
+így a kulcs sosem kerül a böngészőbe. A proxy kódja a repóban van:
+[`spoonacular-proxy-worker.js`](./spoonacular-proxy-worker.js).
+
+Lépésről lépésre (kb. 5-10 perc, nem igényel programozói tudást):
+
+1. Regisztrálj egy ingyenes fiókot a [dash.cloudflare.com](https://dash.cloudflare.com/sign-up) oldalon (ha még nincs).
+2. A bal oldali menüben válaszd a **Workers & Pages**-t, majd kattints a **Create** / **Create Worker** gombra.
+3. Adj neki egy nevet (pl. `napirecept-proxy`), és hozd létre — Cloudflare generál egy alapértelmezett kódot.
+4. A Worker szerkesztőjében (Edit code / Quick edit) **töröld ki** az alapértelmezett kódot, és **másold be helyette** a repóban lévő [`spoonacular-proxy-worker.js`](./spoonacular-proxy-worker.js) fájl teljes tartalmát, majd mentsd/telepítsd (**Save and deploy**).
+5. Menj a Worker **Settings → Variables and Secrets** (vagy régebbi felületen **Environment Variables**) menüpontjára, és adj hozzá egy új változót:
+   - Név: `SPOONACULAR_API_KEY`
+   - Érték: a saját, ingyenes Spoonacular API-kulcsod
+   - Típus: **Secret** (titkosított, ha van ilyen választási lehetőség — így a Cloudflare felületén sem látszik utólag)
+   - Mentsd el (Save / Deploy).
+6. A Worker oldalán megjelenik egy URL, valami ilyesmi: `https://napirecept-proxy.<a-te-cloudflare-felhasználóneved>.workers.dev`. Másold ki ezt a linket.
+7. Nyisd meg az `index.html` fájlt, keresd meg ezt a sort:
+   ```js
+   var SHARED_PROXY_BASE = "";
+   ```
+   és írd be közé az idézőjelek közé a 6. lépésben kimásolt URL-t (a végén perjel nélkül), pl.:
+   ```js
+   var SHARED_PROXY_BASE = "https://napirecept-proxy.pelda-felhasznalo.workers.dev";
+   ```
+8. Mentsd el, commitold és push-old a változtatást a `main` ágra (ha nem magad csinálod, kérd meg, akitől a fejlesztést kéred, hogy tegye meg).
+
+Ha ezután megnyitod az oldalt, a Beállítások panelen a kulcs-státusz
+"a megosztott szolgáltatás automatikusan működik" szöveget mutatja majd
+kulcs megadása nélkül is. Ha bármikor le szeretnéd állítani a megosztást
+(pl. mert elfogyott a napi keret vagy vissza szeretnél térni a
+mindenki-a-sajátját modellre), elég visszaírni a sort üresre
+(`var SHARED_PROXY_BASE = "";`) — a Worker-t magát nem kötelező törölni.
 
 ## Személyre szabás
 
@@ -252,5 +307,6 @@ ugyanígy működik GitHub Pages-ről vagy bármilyen statikus tárhelyről.
 
 ## Fájlok
 
-    index.html    a teljes alkalmazás — stílus, jelölés, recept-adatok és logika egy fájlban
-    README.md     ez a leírás
+    index.html                      a teljes alkalmazás — stílus, jelölés, recept-adatok és logika egy fájlban
+    spoonacular-proxy-worker.js     opcionális Cloudflare Worker kód a megosztott API-proxyhoz (lásd "Megosztott API-proxy")
+    README.md                       ez a leírás
