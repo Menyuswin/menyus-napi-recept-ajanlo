@@ -93,6 +93,22 @@
   :where(a, button, [tabindex]):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   a { color: var(--accent); }
 
+  .tabs {
+    display: flex; flex-wrap: wrap; gap: 4px; margin-top: 20px; border-bottom: 1px solid var(--line);
+  }
+  .tab-btn {
+    font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
+    border: 1px solid transparent; border-bottom: none; background: none; color: var(--muted);
+    padding: 10px 16px; border-radius: 6px 6px 0 0;
+  }
+  .tab-btn:hover { color: var(--ink-2); }
+  .tab-btn[aria-selected="true"] {
+    color: var(--accent-2); background: var(--surface); border-color: var(--line);
+    box-shadow: 0 1px 0 var(--surface);
+  }
+  .tips-empty { padding: 32px 4px; color: var(--muted); }
+  .tips-empty h2 { font-size: 18px; color: var(--ink-2); margin: 0 0 8px; }
+
   .panel {
     margin: 16px 0 0; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
   }
@@ -230,6 +246,13 @@
     </div>
   </header>
 
+  <nav class="tabs" id="tabs">
+    <button type="button" class="tab-btn" data-tab="ajanlo" aria-selected="true">Napi ajánló</button>
+    <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false">Hasznos tanácsok háziasszonyoknak és háziuraknak</button>
+  </nav>
+
+  <div class="tab-panel" data-tab="ajanlo" id="tabAjanlo">
+
   <details class="panel" id="settingsPanel">
     <summary>Beállítások — API-kulcs és profilok</summary>
     <div class="inner">
@@ -316,6 +339,15 @@
     </ul>
     <p class="note">A gépi fordítás minősége nem éri el a kézzel írt szövegét — ha egy fordítás nem sikerül, az oldal az eredeti angol szöveget mutatja, jelezve ezt. Az "egyszerűbb" jelölés rövid elkészítési időt jelent, a "nem kell főtt étel" a tűzhely/sütő nélküli fogásokat emeli előre — ha egy konyhához/étkezéshez épp nincs ilyen (vagy a megadott intoleranciának megfelelő) találat, az oldal ezt jelzi, nem kínál helyette esetleg nem biztonságos alternatívát.</p>
   </footer>
+
+  </div>
+
+  <div class="tab-panel" data-tab="tanacsok" id="tabTanacsok" hidden>
+    <div class="tips-empty">
+      <h2>Hasznos tanácsok háziasszonyoknak és háziuraknak</h2>
+      <p>Ez a rovat hamarosan megtelik tartalommal — praktikus konyhai tanácsokkal, trükkökkel és tapasztalatokkal. Nézz vissza később!</p>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -836,8 +868,32 @@
     document.getElementById("dateLabel").textContent = dateFmt.format(now);
   }
 
+  var TAB_STORAGE = "napi-recept-active-tab";
+
+  function initTabs() {
+    var buttons = Array.prototype.slice.call(document.querySelectorAll(".tab-btn"));
+    var saved = "ajanlo";
+    try { saved = localStorage.getItem(TAB_STORAGE) || "ajanlo"; } catch (e) {}
+
+    function activate(tabName) {
+      buttons.forEach(function (btn) {
+        btn.setAttribute("aria-selected", btn.getAttribute("data-tab") === tabName ? "true" : "false");
+      });
+      document.getElementById("tabAjanlo").hidden = tabName !== "ajanlo";
+      document.getElementById("tabTanacsok").hidden = tabName !== "tanacsok";
+      try { localStorage.setItem(TAB_STORAGE, tabName); } catch (e) {}
+    }
+
+    buttons.forEach(function (btn) {
+      btn.addEventListener("click", function () { activate(btn.getAttribute("data-tab")); });
+    });
+
+    activate(saved);
+  }
+
   function init() {
     renderDateStamp();
+    initTabs();
     initSettings();
 
     var easyBox = document.getElementById("prefEasy");
