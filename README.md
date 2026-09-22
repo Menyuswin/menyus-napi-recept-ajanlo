@@ -101,6 +101,21 @@ szabadon elérhető. A tanácsokat és recepteket **nem szó szerint vettük
 írtuk át; a korabeli, ma már elavult vagy nem biztonságos részeket (pl.
 lúgból főzött házi szappan, cselédtartás körüli tudnivalók) kihagytuk.
 
+## Recept beküldése
+
+A harmadik fülön bárki javasolhat receptet egy űrlapon keresztül (név és
+e-mail nem kötelező, a recept neve, konyhája, étkezés-típusa, hozzávalói és
+elkészítési lépései igen). **A beküldés nem publikál automatikusan semmit.**
+Mivel az oldalnak nincs backendje és nincs élő AI-ellenőrzés a böngészőben,
+a beküldés egy előre megformázott szöveget állít össze, amit a beküldő
+vagy e-mailben elküld (a "Küldés e-mailben" gomb egy előre kitöltött
+levelet nyit meg), vagy kimásol és úgy küld el. Az űrlap ellenőrzi, hogy
+legalább a minimális adatok (cím, konyha, étkezés, legalább 3 hozzávaló,
+legalább 2 lépés) megvannak, de a **valódi tartalmi ellenőrzés** — hogy a
+recept ténylegesen elkészíthető, koherens, helyes-e — mindig kézzel
+történik, mielőtt bármi bekerülne az adatbázisba, ugyanúgy, ahogy a régi
+könyvből átvett tartalmaknál.
+
 ## Korlátok, amiket érdemes tudni
 
 - A gépi fordítás minősége nem éri el a kézzel írt szövegét.

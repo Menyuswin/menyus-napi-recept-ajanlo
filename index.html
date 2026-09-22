@@ -141,16 +141,35 @@
 
   .field-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
   .field-row label { font-size: 12.5px; color: var(--ink-2); display: flex; flex-direction: column; gap: 3px; }
-  input[type="text"], input[type="password"], input[type="number"], select {
+  input[type="text"], input[type="password"], input[type="number"], select, textarea {
     font: inherit; font-size: 13.5px; padding: 7px 9px; border-radius: 5px; border: 1px solid var(--line);
     background: var(--surface-2); color: var(--ink); min-width: 0;
   }
-  button.small {
+  textarea { width: 100%; resize: vertical; font-family: inherit; line-height: 1.5; }
+
+  .submit-form { display: flex; flex-direction: column; gap: 16px; margin-top: 18px; max-width: 760px; }
+  .submit-form .field-row { align-items: flex-start; }
+  .submit-form .field-row label { flex: 1 1 200px; }
+  .submit-form input, .submit-form select { width: 100%; }
+  .field-block { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; color: var(--ink-2); }
+  .field-hint { font-weight: 400; color: var(--muted); font-size: 11.5px; }
+  .submit-error {
+    color: var(--crit); background: var(--crit-tint); border: 1px solid var(--crit); border-radius: 6px;
+    padding: 10px 12px; font-size: 13px;
+  }
+  .submit-result {
+    margin-top: 24px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; max-width: 760px;
+  }
+  .submit-result h3 { margin: 0 0 6px; font-size: 15px; color: var(--ink-2); }
+  .submit-preview { width: 100%; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; margin: 10px 0; }
+  .small {
     font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; border-radius: 5px;
     border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); padding: 7px 12px;
+    display: inline-block;
   }
-  button.small:hover { border-color: var(--accent); color: var(--accent-2); }
-  button.small.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 600; }
+  .small:hover { border-color: var(--accent); color: var(--accent-2); }
+  .small.primary { background: var(--accent); border-color: var(--accent); color: var(--surface); font-weight: 600; }
+  .small.primary:hover { color: var(--surface); }
 
   .key-status { font-size: 12px; color: var(--muted); }
   .key-status.ok { color: var(--accent-2); }
@@ -270,6 +289,7 @@
   <nav class="tabs" id="tabs">
     <button type="button" class="tab-btn" data-tab="ajanlo" aria-selected="true">Napi ajánló</button>
     <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false">Hasznos tanácsok háziasszonyoknak és háziuraknak</button>
+    <button type="button" class="tab-btn" data-tab="bekuldes" aria-selected="false">Recept beküldése</button>
   </nav>
 
   <div class="tab-panel" data-tab="ajanlo" id="tabAjanlo">
@@ -424,6 +444,89 @@
       <p>Ez a két recept nem szerepel a napi ajánlóban — nem reggeli, ebéd vagy vacsora, hanem alkalmi süteményként érdemes elkészíteni. A hozzávalókat és a lépéseket mai mértékegységekre és mai konyhanyelvre írtuk át az eredeti recept alapján.</p>
     </div>
     <div class="showcase-grid" id="showcaseGrid"></div>
+  </div>
+
+  <div class="tab-panel" data-tab="bekuldes" id="tabBekuldes" hidden>
+    <div class="tips-intro">
+      <h2>Recept beküldése</h2>
+      <p>Van egy jó recepted, amit szívesen látnál a napi ajánlóban? Töltsd ki az alábbi űrlapot. <strong>A beküldött receptek nem kerülnek fel automatikusan</strong> — mindegyiket kézzel ellenőrizzük, hogy valóban elkészíthető, világos leírású recept-e, és csak utána adjuk hozzá az adatbázishoz. Ez eltarthat pár napig.</p>
+    </div>
+
+    <form class="submit-form" id="submitForm">
+      <div class="field-row">
+        <label>A neved (nem kötelező)
+          <input type="text" id="sName" placeholder="pl. Kovács Anna">
+        </label>
+        <label>E-mail címed (nem kötelező, ha visszakérdeznénk)
+          <input type="text" id="sEmail" placeholder="pl. te@example.com">
+        </label>
+      </div>
+
+      <div class="field-row">
+        <label>Recept neve *
+          <input type="text" id="sTitle" placeholder="pl. Nagymama gombalevese" required>
+        </label>
+        <label>Konyha *
+          <select id="sCuisine" required>
+            <option value="">válassz…</option>
+            <option value="Olasz">Olasz</option>
+            <option value="Francia">Francia</option>
+            <option value="Amerikai">Amerikai</option>
+            <option value="Lengyel">Lengyel</option>
+            <option value="Délszláv">Délszláv</option>
+            <option value="Görög">Görög</option>
+            <option value="Magyar">Magyar</option>
+            <option value="Egyéb">Egyéb</option>
+          </select>
+        </label>
+        <label>Étkezés *
+          <select id="sMeal" required>
+            <option value="">válassz…</option>
+            <option value="Reggeli">Reggeli</option>
+            <option value="Ebéd">Ebéd</option>
+            <option value="Vacsora">Vacsora</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="field-row">
+        <label>Elkészítési idő (nem kötelező)
+          <input type="text" id="sTime" placeholder="pl. 45 perc">
+        </label>
+        <label>Adagszám (nem kötelező)
+          <input type="text" id="sServings" placeholder="pl. 4 adag">
+        </label>
+      </div>
+
+      <label class="field-block">Hozzávalók * <span class="field-hint">(soronként egy hozzávaló, mennyiséggel)</span>
+        <textarea id="sIngredients" rows="6" placeholder="pl.&#10;4 tojás&#10;20 dkg liszt&#10;3 dl tej" required></textarea>
+      </label>
+
+      <label class="field-block">Elkészítés * <span class="field-hint">(soronként egy lépés, minél részletesebben: hőfok, időtartam, vizuális jelzés)</span>
+        <textarea id="sSteps" rows="8" placeholder="pl.&#10;A hagymát felaprítjuk, olajon közepes lángon 4-5 percig pirítjuk, amíg üvegesre puhul.&#10;..." required></textarea>
+      </label>
+
+      <label class="field-block">Megjegyzés (nem kötelező)
+        <textarea id="sNote" rows="3" placeholder="bármi, amit még jó, ha tudunk a receptről"></textarea>
+      </label>
+
+      <div id="submitError" class="submit-error" hidden></div>
+
+      <div class="field-row">
+        <button type="submit" class="small primary">Előnézet összeállítása</button>
+      </div>
+    </form>
+
+    <div id="submitResult" class="submit-result" hidden>
+      <h3>Előnézet</h3>
+      <p class="allergen-note">Ez a szöveg megy el ellenőrzésre. Másold ki, vagy kattints az e-mailes küldésre.</p>
+      <textarea id="submitPreview" class="submit-preview" rows="14" readonly></textarea>
+      <div class="field-row">
+        <button type="button" class="small" id="copyBtn">Másolás vágólapra</button>
+        <a class="small primary" id="mailtoBtn" href="#" style="text-decoration:none; display:inline-flex; align-items:center;">Küldés e-mailben</a>
+        <span id="copyStatus" class="key-status"></span>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -1070,6 +1173,115 @@
     });
   }
 
+  var SUBMIT_EMAIL = "pandaszemle@gmail.com";
+
+  function buildSubmissionText(data) {
+    var lines = [];
+    lines.push("ÚJ RECEPT BEKÜLDÉS - Napi recept ajánló");
+    lines.push("");
+    lines.push("Beküldő neve: " + (data.name || "(nincs megadva)"));
+    lines.push("Beküldő e-mail: " + (data.email || "(nincs megadva)"));
+    lines.push("");
+    lines.push("Recept neve: " + data.title);
+    lines.push("Konyha: " + data.cuisine);
+    lines.push("Étkezés: " + data.meal);
+    if (data.time) lines.push("Elkészítési idő: " + data.time);
+    if (data.servings) lines.push("Adagszám: " + data.servings);
+    lines.push("");
+    lines.push("Hozzávalók:");
+    data.ingredients.forEach(function (i) { lines.push("- " + i); });
+    lines.push("");
+    lines.push("Elkészítés:");
+    data.steps.forEach(function (s, idx) { lines.push((idx + 1) + ". " + s); });
+    if (data.note) {
+      lines.push("");
+      lines.push("Megjegyzés: " + data.note);
+    }
+    return lines.join("\n");
+  }
+
+  function splitLines(el) {
+    return el.value.split("\n").map(function (s) { return s.trim(); }).filter(Boolean);
+  }
+
+  function initSubmitForm() {
+    var form = document.getElementById("submitForm");
+    var errorBox = document.getElementById("submitError");
+    var resultBox = document.getElementById("submitResult");
+    var preview = document.getElementById("submitPreview");
+    var mailtoBtn = document.getElementById("mailtoBtn");
+    var copyBtn = document.getElementById("copyBtn");
+    var copyStatus = document.getElementById("copyStatus");
+
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      errorBox.hidden = true;
+
+      var title = document.getElementById("sTitle").value.trim();
+      var cuisine = document.getElementById("sCuisine").value;
+      var meal = document.getElementById("sMeal").value;
+      var time = document.getElementById("sTime").value.trim();
+      var servings = document.getElementById("sServings").value.trim();
+      var name = document.getElementById("sName").value.trim();
+      var email = document.getElementById("sEmail").value.trim();
+      var note = document.getElementById("sNote").value.trim();
+      var ingredients = splitLines(document.getElementById("sIngredients"));
+      var steps = splitLines(document.getElementById("sSteps"));
+
+      var problems = [];
+      if (!title) problems.push("Add meg a recept nevét.");
+      if (!cuisine) problems.push("Válassz konyhát.");
+      if (!meal) problems.push("Válassz étkezést.");
+      if (ingredients.length < 3) problems.push("Legalább 3 hozzávalót adj meg, soronként egyet.");
+      if (steps.length < 2) problems.push("Legalább 2 elkészítési lépést adj meg, soronként egyet.");
+
+      if (problems.length) {
+        errorBox.innerHTML = "";
+        var ul = document.createElement("ul");
+        ul.style.margin = "0";
+        ul.style.paddingLeft = "18px";
+        problems.forEach(function (p) {
+          var li = document.createElement("li");
+          li.textContent = p;
+          ul.appendChild(li);
+        });
+        errorBox.appendChild(ul);
+        errorBox.hidden = false;
+        return;
+      }
+
+      var text = buildSubmissionText({
+        name: name, email: email, title: title, cuisine: cuisine, meal: meal,
+        time: time, servings: servings, ingredients: ingredients, steps: steps, note: note
+      });
+
+      preview.value = text;
+      var subject = "Recept beküldés: " + title;
+      mailtoBtn.href = "mailto:" + SUBMIT_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(text);
+      copyStatus.textContent = "";
+      resultBox.hidden = false;
+      resultBox.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+
+    copyBtn.addEventListener("click", function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(preview.value).then(function () {
+          copyStatus.textContent = "Vágólapra másolva.";
+        }).catch(function () {
+          copyStatus.textContent = "Nem sikerült - jelöld ki kézzel a szöveget.";
+        });
+      } else {
+        preview.select();
+        try {
+          document.execCommand("copy");
+          copyStatus.textContent = "Vágólapra másolva.";
+        } catch (e) {
+          copyStatus.textContent = "Nem sikerült - jelöld ki kézzel a szöveget.";
+        }
+      }
+    });
+  }
+
   function renderDateStamp() {
     var now = new Date();
     var dayFmt = new Intl.DateTimeFormat("hu-HU", { weekday: "long" });
@@ -1082,6 +1294,7 @@
 
   function initTabs() {
     var buttons = Array.prototype.slice.call(document.querySelectorAll(".tab-btn"));
+    var panels = Array.prototype.slice.call(document.querySelectorAll(".tab-panel"));
     var saved = "ajanlo";
     try { saved = localStorage.getItem(TAB_STORAGE) || "ajanlo"; } catch (e) {}
 
@@ -1089,8 +1302,9 @@
       buttons.forEach(function (btn) {
         btn.setAttribute("aria-selected", btn.getAttribute("data-tab") === tabName ? "true" : "false");
       });
-      document.getElementById("tabAjanlo").hidden = tabName !== "ajanlo";
-      document.getElementById("tabTanacsok").hidden = tabName !== "tanacsok";
+      panels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute("data-tab") !== tabName;
+      });
       try { localStorage.setItem(TAB_STORAGE, tabName); } catch (e) {}
     }
 
@@ -1106,6 +1320,7 @@
     initTabs();
     initSettings();
     renderShowcase();
+    initSubmitForm();
 
     var easyBox = document.getElementById("prefEasy");
     var noCookBox = document.getElementById("prefNoCook");
