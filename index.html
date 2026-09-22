@@ -436,8 +436,8 @@
     </div>
 
     <div class="showcase-intro">
-      <h2>Két klasszikus édesség a könyvből</h2>
-      <p>Ez a két recept nem szerepel a napi ajánlóban — nem reggeli, ebéd vagy vacsora, hanem alkalmi süteményként érdemes elkészíteni. A hozzávalókat és a lépéseket mai mértékegységekre és mai konyhanyelvre írtuk át az eredeti recept alapján.</p>
+      <h2>Két klasszikus édesség</h2>
+      <p>Ez a két recept nem szerepel a napi ajánlóban — nem reggeli, ebéd vagy vacsora, hanem alkalmi süteményként érdemes elkészíteni.</p>
     </div>
     <div class="showcase-grid" id="showcaseGrid"></div>
   </div>
@@ -1158,11 +1158,6 @@
       title.className = "recipe-title";
       title.textContent = recipe.title;
       card.appendChild(title);
-
-      var src = document.createElement("div");
-      src.className = "recipe-source";
-      src.textContent = "A jó házi konyha (1920-as évek) nyomán, mai nyelvre átírva";
-      card.appendChild(src);
 
       var ing = document.createElement("details");
       ing.className = "ingredients";
