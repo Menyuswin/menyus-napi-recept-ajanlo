@@ -1,10 +1,63 @@
 # Napi recept ajánló
 
-Egyoldalas, statikus alkalmazás: minden nap ajánl egy-egy **reggelit, ebédet
-és vacsorát**, hét konyha közül válogatva — olasz, francia, amerikai, lengyel,
-délszláv, görög és magyar. Minden recept magyarul jelenik meg. Nincs
-build-lépés, nincs backend, nincs API-kulcs, nincs élő hálózati hívás sem —
-minden a böngészőben, helyben fut.
+Egyoldalas alkalmazás: minden nap ajánl egy-egy **reggelit, ebédet és
+vacsorát**, hét konyha közül válogatva — olasz, francia, amerikai, lengyel,
+délszláv, görög és magyar. Minden recept magyarul jelenik meg, igény szerint
+személyre szabva (kor, testsúly, nem, ételintolerancia, fehérjecél). Nincs
+build-lépés, nincs backend — statikus oldal, ami a böngészőből közvetlenül
+hív külső, ingyenes API-kat.
+
+## Hibrid adatforrás
+
+Nincs egyetlen ingyenes adatbázis, amely mind a hét konyhát pontosan,
+magyarul lefedné, ezért az oldal két forrást kever:
+
+- **Olasz, francia, amerikai, görög** — élőben, a [Spoonacular](https://spoonacular.com)
+  recept-API-jából (több százezer recept, beépített intolerancia- és
+  fehérjeszűrővel). A cím, hozzávalók és lépések angolul érkeznek, az oldal a
+  [MyMemory](https://mymemory.translated.net) ingyenes, kulcs nélküli
+  fordító API-val fordítja le a ténylegesen kiválasztott napi recepteket
+  (nem az egész adatbázist — csak amit aznap mutat).
+- **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad
+  (konyhánként 24-26 recept, összesen 78). A Spoonacularban ugyanis nincs
+  ezekre a régiókra bontott kategória — mindhármat egy általános
+  "kelet-európai" csoportba sorolná —, ezért itt a saját válogatás
+  pontosabb és megbízhatóbb, mint amit egy élő API adna.
+
+### Spoonacular API-kulcs
+
+Az olasz/francia/amerikai/görög ajánláshoz saját, ingyenes Spoonacular
+API-kulcs kell — ezt az oldal **Beállítások** paneljén adod meg egyszer.
+A kulcs kizárólag a böngésződ `localStorage`-ában tárolódik, sosem kerül a
+kódba vagy szerverre (egy publikus repóba írt kulcsot percek alatt
+megtalálnak és ellopnak a kulcsvadász botok — ezért nem szabad oda írni).
+Kulcs nélkül a lengyel/délszláv/magyar ajánlás továbbra is működik, csak a
+másik négy konyha kér kulcsot.
+
+Ingyenes kulcs igényelhető itt: [spoonacular.com/food-api/console](https://spoonacular.com/food-api/console#Dashboard).
+
+## Személyre szabás
+
+A Beállítások panelen felvehetsz **célszemélyeket** (pl. családtagokat):
+név, kor, testsúly, nem, fehérjedús étrend igénye, ételintolerancia
+(tejtermék, tojás, glutén, földimogyoró stb.). A "Kinek főzöl ma?" chipek
+közül mindig egy aktív — az oldal az ő adatai szerint szűr, amíg másikra
+nem váltasz (vagy "Mindenkinek / nincs profil"-ra, ami kikapcsolja a
+szűrést).
+
+- **Intolerancia**: az élő (Spoonacular-os) konyháknál az API saját,
+  pontos szűrője érvényesül. A kézzel írt lengyel/délszláv/magyar
+  recepteknél az oldal a hozzávalók szövegében keres kulcsszavakat (pl.
+  "tej", "liszt", "dió") — ez **tájékoztató jellegű becslés**, nem
+  klinikai pontosságú. Ha a kiválasztott intoleranciának egy adott
+  konyhánál/étkezésnél nincs biztonságos találata, az oldal ezt jelzi, és
+  **nem** kínál helyette esetleg nem biztonságos alternatívát. Súlyos
+  allergia esetén mindig olvasd el magad is a hozzávalókat.
+- **Fehérjecél**: a testsúlyból és a "fehérjedús" jelölésből az oldal egy
+  ökölszabály-alapú napi fehérjecélt számol (kb. 1,2–1,6 g/ttkg, korfüggő
+  szorzóval), amit reggeli/ebéd/vacsora között 25/40/35%-ban oszt szét, és
+  ez adja a Spoonacular-lekérdezés fehérje-paraméterét. Ez tájékoztató
+  becslés, nem orvosi tanács.
 
 ## Hogyan válogat
 
@@ -15,42 +68,31 @@ előkerüljön. Ugyanaznap újratöltve ugyanazt az ajánlást mutatja, éjfélk
 változik. A „Másik ötletet ebből a konyhából” gomb ugyanabból a konyhából
 kínál egy másik fogást, dátum-váltás nélkül is.
 
-Két jelölőnégyzet is szűri az ajánlást (az állapot a böngésző
-`localStorage`-ában marad, tehát emlékszik rá):
+Két jelölőnégyzet is szűri az ajánlást (localStorage-ban megjegyezve):
 
 - **„Egyszerűbb recepteket szeretnék”** — rövid elkészítési idejű, kevesebb
-  hozzávalós recepteket részesít előnyben.
+  hozzávalós recepteket részesít előnyben (élő konyháknál a Spoonacular
+  `maxReadyTime` paraméterén keresztül).
 - **„Reggelire és vacsorára nem kell mindenáron főtt étel”** — ebédnél nem
   számít, de reggelinél és vacsoránál olyan fogásokat hoz előre, amikhez nem
-  kell tűzhely vagy sütő (pl. hideg tál, szendvics, saláta).
+  kell tűzhely vagy sütő.
 
 Ha egy adott konyhához/étkezéshez épp nincs a szűrésnek megfelelő találat,
-az oldal a teljes választékból ajánl helyette — sosem marad üresen egy kártya.
+az oldal ezt jelzi ("Újra" gombbal), nem kínál helyette esetleg nem
+megfelelő alternatívát.
 
-## Adatforrások
+## Korlátok, amiket érdemes tudni
 
-Nincs egyetlen ingyenes, élőben lekérdezhető adatbázis, amely mind a hét
-konyhát magyar nyelven lefedné — ezért az oldal mind a 7 konyhához (olasz,
-francia, amerikai, lengyel, délszláv, görög, magyar) **kézzel, magyarul
-összeállított** recept-készletet tartalmaz: konyhánként 24-26 recept
-(reggelire/ebédre/vacsorára elosztva), összesen 186. Minden recept
-lépésenkénti, kezdőbarát leírással készült (pontos hőfok/lángfokozat,
-időtartam, vizuális jelzés minden lépésnél), elkészítési idővel és
-adagszámmal; a gyors/hideg fogások jóval rövidebb lépéssorral.
-
-A válogatás háttéranyagaként — klasszikus fogások és jellemző arányok
-tájékozódási pontjaként, nem szó szerinti átvételként — ezt az öt ingyenesen
-elérhető forrást használtam:
-
-1. [TheMealDB](https://www.themealdb.com) — ingyenes recept-adatbázis (olasz, francia, amerikai, lengyel, görög, délszláv/horvát receptek ihletője)
-2. [Wikibooks Cookbook](https://en.wikibooks.org/wiki/Cookbook) — CC BY-SA 3.0, konyhánkénti fejezetei
-3. Pellegrino Artusi: *La Scienza in cucina e l'Arte di mangiar bene* (1891) — közkincs, olasz klasszikusok
-4. Auguste Escoffier: *Le Guide Culinaire* (1907) — közkincs, francia klasszikusok
-5. Lucyna Ćwierczakiewiczowa: *365 obiadów za pięć złotych* (1858) és a Magyar Elektronikus Könyvtár közkincs szakácskönyvei — lengyel és magyar háttéranyag
-
-A délszláv konyhát a Balkán-félsziget elterjedt, több ország konyhájában is
-közös fogásai (pl. sarma, ćevapčići, burek) képviselik, mert nincs erre a
-régióra bontott, egységes forrás.
+- A gépi fordítás minősége nem éri el a kézzel írt szövegét — ha egy
+  fordítás nem sikerül teljesen, az oldal jelzi, és előfordulhat angol
+  szövegrészlet.
+- A MyMemory ingyenes napi kerete korlátos; napi 3 recept fordítására bőven
+  elég, de intenzívebb használatnál (sok "Másik ötletet" kattintás) elérheti
+  a limitet — ilyenkor a fordítatlan angol szöveg jelenik meg jelzéssel.
+- Ezt a projektet olyan sandbox-környezetben fejlesztettem, ahol a
+  Spoonacular és a MyMemory API-k nem érhetők el közvetlenül — a kódot
+  Playwright-tal, mesterséges (mock) API-válaszokkal teszteltem alaposan,
+  de az éles, valódi API-hívásokat neked kell ellenőrizned a böngésződben.
 
 ## Futtatás helyben
 
