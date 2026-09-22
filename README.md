@@ -83,12 +83,20 @@ megfelelő alternatívát.
 
 ## Korlátok, amiket érdemes tudni
 
-- A gépi fordítás minősége nem éri el a kézzel írt szövegét — ha egy
-  fordítás nem sikerül teljesen, az oldal jelzi, és előfordulhat angol
-  szövegrészlet.
-- A MyMemory ingyenes napi kerete korlátos; napi 3 recept fordítására bőven
-  elég, de intenzívebb használatnál (sok "Másik ötletet" kattintás) elérheti
-  a limitet — ilyenkor a fordítatlan angol szöveg jelenik meg jelzéssel.
+- A gépi fordítás minősége nem éri el a kézzel írt szövegét.
+- A fordítás **soronként** történik (cím, minden hozzávaló, minden lépés
+  külön-külön), nem egyben — így ha egy-egy sor fordítása nem sikerül (pl.
+  elfogyott a MyMemory napi ingyenes kerete), csak az a sor marad angol, nem
+  dől be tőle az egész recept. Ha legalább egy sor angol maradt, az oldal
+  jelzi ezt.
+- A sikeresen lefordított szövegeket az oldal megjegyzi (böngésző
+  localStorage), így ugyanaz a mondat/hozzávaló újra megjelenve nem fordul
+  le még egyszer — ez érezhetően csökkenti a MyMemory napi kerete
+  fogyását, és gyorsabb is.
+- A MyMemory ingyenes napi kerete így is korlátos; nagyon intenzív
+  használatnál (sok "Másik ötletet" kattintás egymás után, sok konyhán át)
+  elérheti a limitet — ilyenkor az adott sorok fordítatlanul, angolul
+  jelennek meg, jelezve.
 - Ezt a projektet olyan sandbox-környezetben fejlesztettem, ahol a
   Spoonacular és a MyMemory API-k nem érhetők el közvetlenül — a kódot
   Playwright-tal, mesterséges (mock) API-válaszokkal teszteltem alaposan,

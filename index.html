@@ -524,15 +524,58 @@
     return "https://api.spoonacular.com/recipes/complexSearch?" + params.toString();
   }
 
-  function translateText(text) {
+  var TRANSLATE_CACHE_KEY = "napi-recept-translate-cache";
+  var MM_ERROR_PATTERN = /MYMEMORY WARNING|QUERY LENGTH LIMIT|IS AN INVALID (SOURCE OR )?TARGET LANGUAGE|YOU USED ALL AVAILABLE FREE TRANSLATIONS|PLEASE SELECT TWO DISTINCT LANGUAGES|INVALID LANGPAIR/i;
+
+  function loadTranslateCache() {
+    try { return JSON.parse(localStorage.getItem(TRANSLATE_CACHE_KEY) || "{}"); } catch (e) { return {}; }
+  }
+  var translateCache = loadTranslateCache();
+
+  function saveTranslateCache() {
+    try {
+      var keys = Object.keys(translateCache);
+      if (keys.length > 800) {
+        keys.slice(0, keys.length - 800).forEach(function (k) { delete translateCache[k]; });
+      }
+      localStorage.setItem(TRANSLATE_CACHE_KEY, JSON.stringify(translateCache));
+    } catch (e) {}
+  }
+
+  function translateOne(text) {
     if (!text) return Promise.resolve(null);
+    if (translateCache[text]) return Promise.resolve(translateCache[text]);
     var url = "https://api.mymemory.translated.net/get?q=" + encodeURIComponent(text) + "&langpair=en|hu";
     return fetch(url).then(function (res) {
       if (!res.ok) return null;
       return res.json();
     }).then(function (data) {
-      return (data && data.responseData && data.responseData.translatedText) || null;
+      var t = (data && data.responseData && data.responseData.translatedText) || null;
+      if (!t || MM_ERROR_PATTERN.test(t)) return null;
+      translateCache[text] = t;
+      saveTranslateCache();
+      return t;
     }).catch(function () { return null; });
+  }
+
+  // Fordítjuk soronként (nem egy nagy szövegtömbként): egyetlen sikertelen sor
+  // így nem viszi magával az egész receptet angolra, és a MyMemory
+  // napi ingyenes kerete is jobban kitart, mert azonos sorokat gyorsítótárazzuk.
+  function translateBatch(texts) {
+    var results = new Array(texts.length);
+    var idx = 0;
+    var CONCURRENCY = 3;
+    function worker() {
+      if (idx >= texts.length) return Promise.resolve();
+      var my = idx++;
+      return translateOne(texts[my]).then(function (t) {
+        results[my] = t;
+        return worker();
+      });
+    }
+    var workers = [];
+    for (var i = 0; i < CONCURRENCY && i < texts.length; i++) workers.push(worker());
+    return Promise.all(workers).then(function () { return results; });
   }
 
   function extractSteps(item) {
@@ -548,20 +591,18 @@
   function translateRecipe(item) {
     var ingredientsOriginal = (item.extendedIngredients || []).map(function (i) { return i.original || i.name; }).filter(Boolean);
     var stepsOriginal = extractSteps(item);
+    var allTexts = [item.title].concat(ingredientsOriginal, stepsOriginal);
 
-    return Promise.all([
-      translateText(item.title),
-      translateText(ingredientsOriginal.join("\n")),
-      translateText(stepsOriginal.join("\n"))
-    ]).then(function (r) {
-      var titleT = r[0], ingredientsT = r[1], stepsT = r[2];
-      var ingredientsSplit = ingredientsT ? ingredientsT.split("\n") : null;
-      var stepsSplit = stepsT ? stepsT.split("\n") : null;
+    return translateBatch(allTexts).then(function (results) {
+      var titleT = results[0];
+      var ingredientsT = results.slice(1, 1 + ingredientsOriginal.length);
+      var stepsT = results.slice(1 + ingredientsOriginal.length);
 
-      var ingredients = (ingredientsSplit && ingredientsSplit.length === ingredientsOriginal.length) ? ingredientsSplit : ingredientsOriginal;
-      var steps = (stepsSplit && stepsSplit.length === stepsOriginal.length) ? stepsSplit : stepsOriginal;
-      var fullyTranslated = !!titleT && ingredients !== ingredientsOriginal ? true : false;
-      fullyTranslated = !!titleT && (ingredientsSplit && ingredientsSplit.length === ingredientsOriginal.length) && (stepsSplit && stepsSplit.length === stepsOriginal.length);
+      var ingredients = ingredientsOriginal.map(function (orig, i) { return ingredientsT[i] || orig; });
+      var steps = stepsOriginal.map(function (orig, i) { return stepsT[i] || orig; });
+
+      var anyMissing = !titleT || ingredientsT.some(function (t) { return !t; }) || stepsT.some(function (t) { return !t; });
+      var fullyTranslated = !anyMissing;
 
       return {
         title: titleT || item.title,
