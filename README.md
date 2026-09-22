@@ -18,15 +18,15 @@ magyarul lefedné, ezért az oldal két forrást kever:
   [MyMemory](https://mymemory.translated.net) ingyenes, kulcs nélküli
   fordító API-val fordítja le a ténylegesen kiválasztott napi recepteket
   (nem az egész adatbázist — csak amit aznap mutat).
-- **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad
-  (konyhánként 24-28 recept, összesen 80). A Spoonacularban ugyanis nincs
-  ezekre a régiókra bontott kategória — mindhármat egy általános
-  "kelet-európai" csoportba sorolná —, ezért itt a saját válogatás
-  pontosabb és megbízhatóbb, mint amit egy élő API adna. A magyar
-  recept-készlet két klasszikus fogással (Mákos metélt, Erőleves) bővült
-  egy 1920-as évekbeli magyar háztartási könyv, Bánffyhunyadi Hunyady
-  Erzsébet *A jó házi konyha* (MEK) ihletésére, mai nyelvre és
-  mértékegységekre átírva.
+- **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad.
+  A Spoonacularban ugyanis nincs ezekre a régiókra bontott kategória —
+  mindhármat egy általános "kelet-európai" csoportba sorolná —, ezért itt a
+  saját válogatás pontosabb és megbízhatóbb, mint amit egy élő API adna. A
+  lengyel és délszláv konyha 24-28 receptet tartalmaz étkezésenként; a
+  magyar konyha ennél jóval bővebb (179 recept), mert egy 1920-as évekbeli
+  magyar háztartási könyv, Bánffyhunyadi Hunyady Erzsébet *A jó házi
+  konyha* (MEK) átnézésével sok további, ma is jól használható fogást
+  emeltünk be belőle, mai nyelvre és mértékegységekre átírva.
 
 ### Spoonacular API-kulcs
 
