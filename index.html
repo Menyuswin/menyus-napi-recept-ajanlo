@@ -237,6 +237,27 @@
   .recipe-source a { color: var(--muted); text-decoration: underline; }
   .translate-note { font-size: 11px; color: var(--muted); font-style: italic; }
 
+  .week-nav { display: flex; align-items: center; gap: 12px; margin: 16px 0 10px; flex-wrap: wrap; }
+  .week-range { font-weight: 600; color: var(--ink-2); font-size: 14px; }
+  .week-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 14px; }
+  .week-day {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .week-day-head {
+    padding: 12px 16px; border-bottom: 1px solid var(--line-soft); background: var(--surface-2);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
+  }
+  .week-day-name { font-weight: 700; font-size: 14px; }
+  .week-day-date { font-size: 12.5px; color: var(--muted); }
+  .daytype-select { font-size: 12px; padding: 4px 8px; }
+  .week-meals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 14px 16px; }
+  @media (max-width: 820px) { .week-meals { grid-template-columns: 1fr; } }
+  .week-meal { background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 6px; padding: 10px 12px; }
+  .week-meal-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
+  .week-meal-body .recipe-title { font-size: 15px; }
+  .week-meal-body .skeleton { height: 12px; border-radius: 4px; background: var(--line-soft); margin: 4px 0; }
+
   details.ingredients summary, details.steps summary {
     cursor: pointer; font-weight: 600; font-size: 13px; color: var(--ink-2);
     padding: 2px 0;
@@ -293,6 +314,7 @@
 
   <nav class="tabs" id="tabs">
     <button type="button" class="tab-btn" data-tab="ajanlo" aria-selected="true">Napi ajánló</button>
+    <button type="button" class="tab-btn" data-tab="heti" aria-selected="false">Heti menü</button>
     <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false">Hasznos tanácsok háziasszonyoknak és háziuraknak</button>
     <button type="button" class="tab-btn" data-tab="bekuldes" aria-selected="false">Recept beküldése</button>
   </nav>
@@ -396,6 +418,17 @@
     <p class="note">A gépi fordítás minősége nem éri el a kézzel írt szövegét — ha egy fordítás nem sikerül, az oldal az eredeti angol szöveget mutatja, jelezve ezt. Az "egyszerűbb" jelölés rövid elkészítési időt jelent, a "nem kell főtt étel" a tűzhely/sütő nélküli fogásokat emeli előre — ha egy konyhához/étkezéshez épp nincs ilyen (vagy a megadott intoleranciának megfelelő) találat, az oldal ezt jelzi, nem kínál helyette esetleg nem biztonságos alternatívát. A napi kalóriacél és a fehérjecél csak az olasz/francia/amerikai/görög (élő) konyháknál befolyásolja az ajánlást, mert csak a Spoonacular ad tápérték-adatot — a lengyel/délszláv/magyar recepteknél nincs kalória-/fehérjeszűrés. A kártyákon látható kcal/fehérje érték a Spoonacular becslése, tájékoztató jellegű.</p>
   </footer>
 
+  </div>
+
+  <div class="tab-panel" data-tab="heti" id="tabHeti" hidden>
+    <div class="week-nav">
+      <button type="button" class="small" id="weekPrevBtn">‹ Előző hét</button>
+      <span class="week-range" id="weekRangeLabel">—</span>
+      <button type="button" class="small" id="weekTodayBtn">Aktuális hét</button>
+      <button type="button" class="small" id="weekNextBtn">Következő hét ›</button>
+    </div>
+    <p class="allergen-note">A heti nézet ugyanazt a kiválasztott profilt (intolerancia, kalória-, fehérjecél) és az "Egyszerűbb"/"Nem kell főzni" beállításokat használja, mint a napi ajánló. Hétköznapra a rendszer automatikusan egyszerűbb, gyorsabb fogásokat részesít előnyben, ünnepnapra a különlegesebbeket (nem "Egyszerű" jelölésű recepteket) — ezt, és a napok konyháját is, bármelyik napon kézzel felülbírálhatod. Élő (olasz/francia/amerikai/görög) konyháknál ünnepnapon csak az időkorlát oldódik fel, mert a Spoonacular nem jelez "ünnepi" fogást.</p>
+    <div class="week-grid" id="weekGrid"></div>
   </div>
 
   <div class="tab-panel" data-tab="tanacsok" id="tabTanacsok" hidden>
@@ -691,7 +724,7 @@
 
   // ---------- curated (lengyel / délszláv / magyar) ----------
 
-  function getCuratedPool(cuisineKey, slot, profile) {
+  function getCuratedPool(cuisineKey, slot, profile, dayType) {
     var pool = RECIPES[cuisineKey][slot];
     var filtered = pool;
 
@@ -706,7 +739,10 @@
       if (!filtered.length) return { pool: [], safetyEmpty: true };
     }
 
-    if (prefs.easy) {
+    if (dayType === "unnepnap") {
+      var byFestive = filtered.filter(function (r) { return !r.easy; });
+      if (byFestive.length) filtered = byFestive;
+    } else if (prefs.easy || dayType === "hetkoznap") {
       var byEasy = filtered.filter(function (r) { return r.easy; });
       if (byEasy.length) filtered = byEasy;
     }
@@ -719,7 +755,7 @@
 
   // ---------- live (Spoonacular + MyMemory) ----------
 
-  function buildSpoonacularUrl(cuisine, slot, profile) {
+  function buildSpoonacularUrl(cuisine, slot, profile, dayType) {
     var key = getApiKey();
     if (!key) return null;
     var params = new URLSearchParams();
@@ -742,7 +778,7 @@
     }
     if (prefs.noCook && (slot === "breakfast" || slot === "dinner")) {
       params.set("maxReadyTime", "15");
-    } else if (prefs.easy) {
+    } else if (prefs.easy || dayType === "hetkoznap") {
       params.set("maxReadyTime", "25");
     }
     return "https://api.spoonacular.com/recipes/complexSearch?" + params.toString();
@@ -853,8 +889,8 @@
     });
   }
 
-  function fetchLiveCandidates(cuisine, slot, profile) {
-    var url = buildSpoonacularUrl(cuisine, slot, profile);
+  function fetchLiveCandidates(cuisine, slot, profile, dayType) {
+    var url = buildSpoonacularUrl(cuisine, slot, profile, dayType);
     if (!url) return Promise.reject({ code: "no-key" });
     return fetch(url).then(function (res) {
       if (!res.ok) return Promise.reject({ code: "http", status: res.status });
@@ -866,12 +902,15 @@
 
   // ---------- rendering ----------
 
-  function renderLoading(card) {
-    card.querySelector(".body").innerHTML = '<div class="skeleton" style="width:70%"></div><div class="skeleton" style="width:90%"></div><div class="skeleton" style="width:40%"></div>';
+  function renderLoadingInto(body) {
+    body.innerHTML = '<div class="skeleton" style="width:70%"></div><div class="skeleton" style="width:90%"></div><div class="skeleton" style="width:40%"></div>';
   }
 
-  function renderMessage(card, cls, text, retryFn) {
-    var body = card.querySelector(".body");
+  function renderLoading(card) {
+    renderLoadingInto(card.querySelector(".body"));
+  }
+
+  function renderMessageInto(body, cls, text, retryFn) {
     body.innerHTML = "";
     var msg = document.createElement("div");
     msg.className = cls;
@@ -886,9 +925,12 @@
     }
   }
 
-  function renderRecipe(card, cuisine, recipe, opts) {
+  function renderMessage(card, cls, text, retryFn) {
+    renderMessageInto(card.querySelector(".body"), cls, text, retryFn);
+  }
+
+  function renderRecipeInto(body, cuisine, recipe, opts) {
     opts = opts || {};
-    var body = card.querySelector(".body");
     body.innerHTML = "";
 
     var title = document.createElement("h3");
@@ -933,30 +975,42 @@
     }
 
     var ing = document.createElement("details");
-    ing.className = "ingredients"; ing.open = true;
+    ing.className = "ingredients"; ing.open = opts.detailsOpen !== false;
     var ingSum = document.createElement("summary"); ingSum.textContent = "Hozzávalók"; ing.appendChild(ingSum);
     var ul = document.createElement("ul");
     recipe.ingredients.forEach(function (i) { var li = document.createElement("li"); li.textContent = i; ul.appendChild(li); });
     ing.appendChild(ul); body.appendChild(ing);
 
     var steps = document.createElement("details");
-    steps.className = "steps"; steps.open = true;
+    steps.className = "steps"; steps.open = opts.detailsOpen !== false;
     var stepsSum = document.createElement("summary"); stepsSum.textContent = "Elkészítés"; steps.appendChild(stepsSum);
     var ol = document.createElement("ol");
     recipe.steps.forEach(function (s) { var li = document.createElement("li"); li.textContent = s; ol.appendChild(li); });
     steps.appendChild(ol); body.appendChild(steps);
 
-    var foot = document.createElement("div");
-    foot.className = "foot";
-    var shuffle = document.createElement("button");
-    shuffle.className = "shuffle";
-    shuffle.textContent = "Másik ötletet ebből a konyhából";
-    shuffle.addEventListener("click", function () {
-      shuffleOffset[card.getAttribute("data-slot")] += 1;
-      loadSlot(card.getAttribute("data-slot"), cuisine);
+    if (opts.onShuffle) {
+      var foot = document.createElement("div");
+      foot.className = "foot";
+      var shuffle = document.createElement("button");
+      shuffle.className = "shuffle";
+      shuffle.textContent = "Másik ötletet ebből a konyhából";
+      shuffle.addEventListener("click", opts.onShuffle);
+      foot.appendChild(shuffle);
+      body.appendChild(foot);
+    }
+  }
+
+  function renderRecipe(card, cuisine, recipe, opts) {
+    opts = opts || {};
+    var body = card.querySelector(".body");
+    renderRecipeInto(body, cuisine, recipe, {
+      live: opts.live,
+      detailsOpen: true,
+      onShuffle: function () {
+        shuffleOffset[card.getAttribute("data-slot")] += 1;
+        loadSlot(card.getAttribute("data-slot"), cuisine);
+      }
     });
-    foot.appendChild(shuffle);
-    body.appendChild(foot);
   }
 
   function loadSlot(slot, cuisine) {
@@ -1002,6 +1056,7 @@
       var cuisine = effectiveCuisineForMeal(meal, doy);
       loadSlot(meal.slot, cuisine);
     });
+    refreshWeekIfVisible();
   }
 
   function initCuisineSelects() {
@@ -1028,6 +1083,322 @@
         loadSlot(meal.slot, effectiveCuisineForMeal(meal, doy));
       });
     });
+  }
+
+  // ---------- heti menü ----------
+
+  function capitalize(s) { return s ? s.charAt(0).toUpperCase() + s.slice(1) : s; }
+
+  function addDays(date, n) {
+    var d = new Date(date);
+    d.setDate(d.getDate() + n);
+    return d;
+  }
+
+  function dateKey(d) {
+    return d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  }
+
+  function mondayOf(date) {
+    var d = new Date(date);
+    var day = d.getDay();
+    var diff = day === 0 ? -6 : 1 - day;
+    d.setDate(d.getDate() + diff);
+    d.setHours(0, 0, 0, 0);
+    return d;
+  }
+
+  function easterSunday(year) {
+    var a = year % 19;
+    var b = Math.floor(year / 100);
+    var c = year % 100;
+    var d = Math.floor(b / 4);
+    var e = b % 4;
+    var f = Math.floor((b + 8) / 25);
+    var g = Math.floor((b - f + 1) / 3);
+    var h = (19 * a + b - d - g + 15) % 30;
+    var i = Math.floor(c / 4);
+    var k = c % 4;
+    var l = (32 + 2 * e + 2 * i - h - k) % 7;
+    var m = Math.floor((a + 11 * h + 22 * l) / 451);
+    var month = Math.floor((h + l - 7 * m + 114) / 31);
+    var day = ((h + l - 7 * m + 114) % 31) + 1;
+    return new Date(year, month - 1, day);
+  }
+
+  var holidayCache = {};
+
+  function hungarianHolidays(year) {
+    var easter = easterSunday(year);
+    var fixed = [[0, 1], [2, 15], [4, 1], [7, 20], [9, 23], [10, 1], [11, 25], [11, 26]];
+    var set = {};
+    fixed.forEach(function (md) { set[dateKey(new Date(year, md[0], md[1]))] = true; });
+    set[dateKey(addDays(easter, -2))] = true;
+    set[dateKey(easter)] = true;
+    set[dateKey(addDays(easter, 1))] = true;
+    set[dateKey(addDays(easter, 49))] = true;
+    set[dateKey(addDays(easter, 50))] = true;
+    return set;
+  }
+
+  function isHungarianHoliday(date) {
+    var year = date.getFullYear();
+    if (!holidayCache[year]) holidayCache[year] = hungarianHolidays(year);
+    return !!holidayCache[year][dateKey(date)];
+  }
+
+  var DAYTYPE_LABELS = { hetkoznap: "Hétköznap", hetvege: "Hétvége", unnepnap: "Ünnepnap" };
+  var DAYTYPE_OVERRIDE_KEY = "napi-recept-daytype-override";
+
+  function getDayTypeOverrides() {
+    try { return JSON.parse(localStorage.getItem(DAYTYPE_OVERRIDE_KEY) || "{}"); } catch (e) { return {}; }
+  }
+
+  function setDayTypeOverride(key, type) {
+    var overrides = getDayTypeOverrides();
+    if (type) overrides[key] = type; else delete overrides[key];
+    try { localStorage.setItem(DAYTYPE_OVERRIDE_KEY, JSON.stringify(overrides)); } catch (e) {}
+  }
+
+  function autoDayType(date) {
+    if (isHungarianHoliday(date)) return "unnepnap";
+    var wd = date.getDay();
+    return (wd === 0 || wd === 6) ? "hetvege" : "hetkoznap";
+  }
+
+  function dayTypeFor(date) {
+    var overrides = getDayTypeOverrides();
+    return overrides[dateKey(date)] || autoDayType(date);
+  }
+
+  var WEEKLY_CUISINE_OVERRIDE_KEY = "napi-recept-weekly-cuisine-override";
+
+  function getWeeklyCuisineOverrides() {
+    try { return JSON.parse(localStorage.getItem(WEEKLY_CUISINE_OVERRIDE_KEY) || "{}"); } catch (e) { return {}; }
+  }
+
+  function setWeeklyCuisineOverride(dateStr, slot, key) {
+    var overrides = getWeeklyCuisineOverrides();
+    var storeKey = dateStr + ":" + slot;
+    if (key) overrides[storeKey] = key; else delete overrides[storeKey];
+    try { localStorage.setItem(WEEKLY_CUISINE_OVERRIDE_KEY, JSON.stringify(overrides)); } catch (e) {}
+  }
+
+  function effectiveCuisineForDate(date, meal) {
+    var overrides = getWeeklyCuisineOverrides();
+    var overridden = overrides[dateKey(date) + ":" + meal.slot] && findCuisine(overrides[dateKey(date) + ":" + meal.slot]);
+    return overridden || cuisineForMeal(meal, dayOfYear(date));
+  }
+
+  var WEEK_START_STORAGE = "napi-recept-week-start";
+  var currentWeekMonday = null;
+  var weekShuffleOffset = {};
+  var weekDirty = true;
+  var weekFmt = new Intl.DateTimeFormat("hu-HU", { month: "short", day: "numeric" });
+  var dayNameFmt = new Intl.DateTimeFormat("hu-HU", { weekday: "long" });
+
+  function loadWeekStart() {
+    try {
+      var s = localStorage.getItem(WEEK_START_STORAGE);
+      if (s) {
+        var d = new Date(s);
+        if (!isNaN(d.getTime())) return mondayOf(d);
+      }
+    } catch (e) {}
+    return mondayOf(new Date());
+  }
+
+  function saveWeekStart(d) {
+    try { localStorage.setItem(WEEK_START_STORAGE, dateKey(d)); } catch (e) {}
+  }
+
+  function refreshWeekIfVisible() {
+    var panel = document.getElementById("tabHeti");
+    if (!panel) return;
+    if (panel.hidden) { weekDirty = true; return; }
+    weekDirty = false;
+    renderWeek();
+  }
+
+  function initWeekly() {
+    currentWeekMonday = loadWeekStart();
+    document.getElementById("weekPrevBtn").addEventListener("click", function () {
+      currentWeekMonday = addDays(currentWeekMonday, -7);
+      saveWeekStart(currentWeekMonday);
+      renderWeek();
+    });
+    document.getElementById("weekNextBtn").addEventListener("click", function () {
+      currentWeekMonday = addDays(currentWeekMonday, 7);
+      saveWeekStart(currentWeekMonday);
+      renderWeek();
+    });
+    document.getElementById("weekTodayBtn").addEventListener("click", function () {
+      currentWeekMonday = mondayOf(new Date());
+      saveWeekStart(currentWeekMonday);
+      renderWeek();
+    });
+  }
+
+  function loadWeekMeal(mealEl, date, meal, profile) {
+    var body = mealEl.querySelector(".body");
+    var badge = mealEl.querySelector(".cuisine-badge");
+    var dayType = dayTypeFor(date);
+    var cuisine = effectiveCuisineForDate(date, meal);
+    badge.textContent = cuisine.label;
+    var shuffleKey = dateKey(date) + ":" + meal.slot;
+    var doy = dayOfYear(date);
+
+    if (cuisine.mode === "curated") {
+      var res = getCuratedPool(cuisine.key, meal.slot, profile, dayType);
+      if (res.safetyEmpty) {
+        renderMessageInto(body, "state-empty", "A megadott érzékenység miatt erre a napra nincs biztonságos ajánlat ebből a konyhából.");
+        return;
+      }
+      var idx = (doy + (weekShuffleOffset[shuffleKey] || 0)) % res.pool.length;
+      renderRecipeInto(body, cuisine, res.pool[idx], {
+        live: false,
+        detailsOpen: false,
+        onShuffle: function () {
+          weekShuffleOffset[shuffleKey] = (weekShuffleOffset[shuffleKey] || 0) + 1;
+          loadWeekMeal(mealEl, date, meal, profile);
+        }
+      });
+      return;
+    }
+
+    renderLoadingInto(body);
+    fetchLiveCandidates(cuisine, meal.slot, profile, dayType).then(function (candidates) {
+      if (!candidates.length) {
+        renderMessageInto(body, "state-empty", "A megadott feltételeknek erre a napra nincs találat ebből a konyhából.", function () { loadWeekMeal(mealEl, date, meal, profile); });
+        return;
+      }
+      var idx = (doy + (weekShuffleOffset[shuffleKey] || 0)) % candidates.length;
+      var picked = candidates[idx];
+      return translateRecipe(picked).then(function (recipe) {
+        renderRecipeInto(body, cuisine, recipe, {
+          live: true,
+          detailsOpen: false,
+          onShuffle: function () {
+            weekShuffleOffset[shuffleKey] = (weekShuffleOffset[shuffleKey] || 0) + 1;
+            loadWeekMeal(mealEl, date, meal, profile);
+          }
+        });
+      });
+    }).catch(function (err) {
+      if (err && err.code === "no-key") {
+        renderMessageInto(body, "state-error", "Ehhez a konyhához Spoonacular API-kulcs kell — add meg a Beállításoknál.");
+      } else {
+        renderMessageInto(body, "state-error", "Nem sikerült elérni a recept-adatbázist.", function () { loadWeekMeal(mealEl, date, meal, profile); });
+      }
+    });
+  }
+
+  function renderWeekDayMeals(article, date, profile) {
+    var mealsWrap = article.querySelector(".week-meals");
+    mealsWrap.innerHTML = "";
+    var dateStr = dateKey(date);
+
+    MEALS.forEach(function (meal) {
+      var mealEl = document.createElement("div");
+      mealEl.className = "week-meal";
+      mealEl.setAttribute("data-slot", meal.slot);
+
+      var mHead = document.createElement("div");
+      mHead.className = "week-meal-head";
+      var mName = document.createElement("span"); mName.className = "meal-name"; mName.textContent = meal.label;
+      mHead.appendChild(mName);
+
+      var controls = document.createElement("div");
+      controls.className = "head-controls";
+      var badge = document.createElement("span"); badge.className = "cuisine-badge"; badge.textContent = "—";
+      controls.appendChild(badge);
+
+      var select = document.createElement("select");
+      select.className = "cuisine-select";
+      select.setAttribute("aria-label", meal.label + " konyhája — " + dateStr);
+      var autoOpt = document.createElement("option"); autoOpt.value = ""; autoOpt.textContent = "Automatikus";
+      select.appendChild(autoOpt);
+      CUISINES.forEach(function (c) {
+        var opt = document.createElement("option"); opt.value = c.key; opt.textContent = c.label;
+        select.appendChild(opt);
+      });
+      var weeklyOverrides = getWeeklyCuisineOverrides();
+      select.value = weeklyOverrides[dateStr + ":" + meal.slot] || "";
+      select.addEventListener("change", function () {
+        setWeeklyCuisineOverride(dateStr, meal.slot, select.value);
+        delete weekShuffleOffset[dateStr + ":" + meal.slot];
+        loadWeekMeal(mealEl, date, meal, profile);
+      });
+      controls.appendChild(select);
+      mHead.appendChild(controls);
+      mealEl.appendChild(mHead);
+
+      var body = document.createElement("div");
+      body.className = "week-meal-body body";
+      mealEl.appendChild(body);
+
+      mealsWrap.appendChild(mealEl);
+      loadWeekMeal(mealEl, date, meal, profile);
+    });
+  }
+
+  function buildWeekDayCard(date, profile) {
+    var key = dateKey(date);
+    var article = document.createElement("article");
+    article.className = "week-day";
+    article.setAttribute("data-date", key);
+
+    var head = document.createElement("div");
+    head.className = "week-day-head";
+
+    var nameWrap = document.createElement("div");
+    var nameSpan = document.createElement("span"); nameSpan.className = "week-day-name";
+    nameSpan.textContent = capitalize(dayNameFmt.format(date));
+    var dateSpan = document.createElement("span"); dateSpan.className = "week-day-date";
+    dateSpan.textContent = " · " + weekFmt.format(date) + ".";
+    nameWrap.appendChild(nameSpan); nameWrap.appendChild(dateSpan);
+    head.appendChild(nameWrap);
+
+    var typeSelect = document.createElement("select");
+    typeSelect.className = "daytype-select";
+    typeSelect.setAttribute("aria-label", "Nap típusa — " + key);
+    var auto = autoDayType(date);
+    var autoOpt = document.createElement("option");
+    autoOpt.value = "";
+    autoOpt.textContent = "Automatikus (" + DAYTYPE_LABELS[auto] + ")";
+    typeSelect.appendChild(autoOpt);
+    ["hetkoznap", "hetvege", "unnepnap"].forEach(function (t) {
+      var opt = document.createElement("option"); opt.value = t; opt.textContent = DAYTYPE_LABELS[t];
+      typeSelect.appendChild(opt);
+    });
+    var dtOverrides = getDayTypeOverrides();
+    typeSelect.value = dtOverrides[key] || "";
+    typeSelect.addEventListener("change", function () {
+      setDayTypeOverride(key, typeSelect.value);
+      renderWeekDayMeals(article, date, profile);
+    });
+    head.appendChild(typeSelect);
+    article.appendChild(head);
+
+    var mealsWrap = document.createElement("div");
+    mealsWrap.className = "week-meals";
+    article.appendChild(mealsWrap);
+
+    renderWeekDayMeals(article, date, profile);
+    return article;
+  }
+
+  function renderWeek() {
+    if (!currentWeekMonday) currentWeekMonday = loadWeekStart();
+    var days = [];
+    for (var i = 0; i < 7; i++) days.push(addDays(currentWeekMonday, i));
+
+    document.getElementById("weekRangeLabel").textContent = weekFmt.format(days[0]) + " – " + weekFmt.format(days[6]) + ".";
+
+    var grid = document.getElementById("weekGrid");
+    grid.innerHTML = "";
+    var profile = getSelectedProfile();
+    days.forEach(function (date) { grid.appendChild(buildWeekDayCard(date, profile)); });
   }
 
   // ---------- settings / profiles UI ----------
@@ -1387,6 +1758,10 @@
         panel.hidden = panel.getAttribute("data-tab") !== tabName;
       });
       try { localStorage.setItem(TAB_STORAGE, tabName); } catch (e) {}
+      if (tabName === "heti" && weekDirty) {
+        weekDirty = false;
+        renderWeek();
+      }
     }
 
     buttons.forEach(function (btn) {
@@ -1403,6 +1778,7 @@
     renderShowcase();
     initSubmitForm();
     initCuisineSelects();
+    initWeekly();
 
     var easyBox = document.getElementById("prefEasy");
     var noCookBox = document.getElementById("prefNoCook");

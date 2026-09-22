@@ -103,6 +103,42 @@ Ha egy adott konyhához/étkezéshez épp nincs a szűrésnek megfelelő talála
 az oldal ezt jelzi ("Újra" gombbal), nem kínál helyette esetleg nem
 megfelelő alternatívát.
 
+## Heti menü
+
+A "Heti menü" fülön egy teljes naptári hét (hétfőtől vasárnapig) ajánlása
+állítható össze egyszerre — mind a 21 étkezésre (7 nap × reggeli/ebéd/
+vacsora). A hét nyilakkal lapozható előre-hátra, bármely múltbeli vagy
+jövőbeli hétre; az "Aktuális hét" gomb visszaugrik a mai naphoz.
+
+Minden nap automatikusan **hétköznap**, **hétvége** vagy **ünnepnap**
+típusba sorolódik:
+
+- Az ünnepnapokat egy beépített, minden évre kiszámított magyar hivatalos
+  munkaszüneti nap-naptár jelöli (újév, márc. 15., nagypéntek,
+  húsvétvasárnap/-hétfő, május 1., pünkösdvasárnap/-hétfő, aug. 20.,
+  okt. 23., mindenszentek, karácsony és másnapja).
+- Szombat/vasárnap (ha nem esik ünnepre) automatikusan hétvége, a többi nap
+  hétköznap.
+- Bármelyik nap típusa kézzel felülbírálható (pl. ha szabadnapot vagy
+  családi eseményt szeretnél ünnepnapként kezelni).
+
+A nap típusa befolyásolja az ajánlást: **hétköznapra** a rendszer
+automatikusan az "Egyszerűbb" szűrőnek megfelelő, gyorsabb fogásokat
+részesíti előnyben (a kézzel írt lengyel/délszláv/magyar recepteknél az
+"Egyszerű" címkés tételeket, élő konyháknál rövidebb elkészítési idővel);
+**ünnepnapra** ezzel ellentétben a kézzel írt konyháknál kifejezetten a
+nem "Egyszerű" jelölésű, különlegesebb fogásokat hozza előre. **Fontos
+korlát**: az élő (olasz/francia/amerikai/görög) konyháknál a Spoonacular
+nem jelez "ünnepi" jelleget, ezért ott ünnepnapon csak az időkorlát
+oldódik fel — a kiválasztás nem lesz kifejezetten ünnepibb, mint hétvégén.
+
+Minden nap minden étkezéséhez ugyanaz a kis konyhaválasztó legördülő
+tartozik, mint a napi ajánlóban — ez a heti nézetben dátumhoz és
+étkezéshez kötve, külön jegyződik meg (localStorage). A heti nézet a
+Beállításokban kiválasztott profil intolerancia-, kalória- és
+fehérjeszűrését, valamint a globális "Egyszerűbb"/"Nem kell főzni"
+kapcsolókat is figyelembe veszi, ugyanúgy, mint a napi ajánló.
+
 ## Hasznos tanácsok háziasszonyoknak és háziuraknak
 
 A második fül gyakorlati háztartási tanácsokat gyűjt össze —
