@@ -265,6 +265,7 @@
   .shopping-list { margin: 6px 0 14px; padding-left: 22px; }
   .shopping-list li { margin: 3px 0; font-size: 13.5px; }
   .shopping-item-note { color: var(--muted); font-size: 11.5px; }
+  .shopping-item-detail { color: var(--muted); font-size: 11.5px; font-style: italic; }
   .store-finder .field-row { margin: 10px 0; }
   .store-finder input[type="text"] { flex: 1 1 220px; }
   .store-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -1454,7 +1455,8 @@
 
   var currentWeekDays = [];
 
-  var QUANTITY_RE = /^((?:\d+[\d.,]*|½|¼|¾)(?:\s*[-–]\s*\d+[\d.,]*)?\s*(?:kg|dkg|g|dl|cl|l|ml|db|evőkanál|ek\.?|teáskanál|tk\.?|csipet|szelet|gerezd|fej|szál|csokor|adag|marék|köteg|kanál)?)\s+(.+)$/i;
+  var UNIT_WORDS = "kg|dkg|g|dl|cl|l|ml|db|evőkanál|ek\\.?|teáskanál|tk\\.?|csipet|szelet|gerezd|fej|szál|csokor|adag|marék|köteg|kanál";
+  var QUANTITY_RE = new RegExp("^((?:\\d+[\\d.,]*|½|¼|¾)(?:\\s*[-–]\\s*\\d+[\\d.,]*)?\\s*(?:kis|közepes|nagy)?\\s*(?:" + UNIT_WORDS + ")?)\\s+(.+)$", "i");
 
   function splitIngredientLine(line) {
     var m = line.match(QUANTITY_RE);
@@ -1464,6 +1466,96 @@
 
   function normalizeIngredientName(name) {
     return name.toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  var WEIGHT_UNITS = { g: 1, dkg: 10, kg: 1000 };
+  var VOLUME_UNITS = { ml: 1, dl: 100, l: 1000, evőkanál: 15, "ek": 15, "ek.": 15, kanál: 15, teáskanál: 5, tk: 5, "tk.": 5 };
+  var FRACTION_CHARS = { "½": 0.5, "¼": 0.25, "¾": 0.75 };
+  var WEIGHT_LADDER = [50, 100, 200, 250, 500, 750, 1000];
+  var VOLUME_LADDER = [100, 200, 250, 500, 750, 1000];
+
+  function parseSingleNumber(tok) {
+    var t = tok.trim().toLowerCase();
+    if (FRACTION_CHARS[t] !== undefined) return FRACTION_CHARS[t];
+    var n = parseFloat(t.replace(",", "."));
+    return isNaN(n) ? null : n;
+  }
+
+  function parseQuantityPhrase(phrase) {
+    if (!phrase) return null;
+    var s = phrase.trim();
+    var unitMatch = s.match(new RegExp("(" + UNIT_WORDS + ")\\s*$", "i"));
+    var unit = unitMatch ? unitMatch[1].toLowerCase().replace(/\.$/, "") : null;
+    var numPart = unit ? s.slice(0, unitMatch.index).trim() : s;
+    numPart = numPart.replace(/\b(kis|közepes|nagy)\b/gi, "").trim();
+    if (!numPart) return unit ? { value: 1, unit: unit } : null;
+    var rangeMatch = numPart.match(/^([\d.,½¼¾]+)\s*[-–]\s*([\d.,]+)$/);
+    var value = rangeMatch ? parseSingleNumber(rangeMatch[2]) : parseSingleNumber(numPart);
+    if (value === null) return unit ? { value: 1, unit: unit } : null;
+    return { value: value, unit: unit };
+  }
+
+  function familyOfUnit(unit) {
+    if (!unit) return null;
+    if (WEIGHT_UNITS[unit] !== undefined) return "weight";
+    if (VOLUME_UNITS[unit] !== undefined) return "volume";
+    if (unit === "db") return "count";
+    return "unit:" + unit;
+  }
+
+  function toBaseAmount(value, unit) {
+    if (WEIGHT_UNITS[unit] !== undefined) return value * WEIGHT_UNITS[unit];
+    if (VOLUME_UNITS[unit] !== undefined) return value * VOLUME_UNITS[unit];
+    return value;
+  }
+
+  function roundUpLadder(value, ladder) {
+    for (var i = 0; i < ladder.length; i++) {
+      if (value <= ladder[i]) return ladder[i];
+    }
+    return Math.ceil(value / 500) * 500;
+  }
+
+  function formatNumberHu(n) {
+    return Number.isInteger(n) ? String(n) : String(n).replace(".", ",");
+  }
+
+  function formatWeight(grams) {
+    if (grams === 250) return "negyed kg";
+    if (grams === 500) return "fél kg";
+    if (grams === 750) return "háromnegyed kg";
+    if (grams >= 1000) return formatNumberHu(grams / 1000) + " kg";
+    if (grams % 10 === 0) return formatNumberHu(grams / 10) + " dkg";
+    return grams + " g";
+  }
+
+  function formatVolume(ml) {
+    if (ml === 250) return "negyed liter";
+    if (ml === 500) return "fél liter";
+    if (ml === 750) return "háromnegyed liter";
+    if (ml >= 1000) return formatNumberHu(ml / 1000) + " liter";
+    if (ml % 100 === 0) return formatNumberHu(ml / 100) + " dl";
+    return ml + " ml";
+  }
+
+  function aggregateItemQuantities(rawQtyPhrases) {
+    var buckets = {};
+    rawQtyPhrases.forEach(function (phrase) {
+      var parsed = parseQuantityPhrase(phrase);
+      if (!parsed) return;
+      var fam = familyOfUnit(parsed.unit);
+      if (!fam) return;
+      buckets[fam] = (buckets[fam] || 0) + toBaseAmount(parsed.value, parsed.unit);
+    });
+    var parts = [];
+    Object.keys(buckets).forEach(function (fam) {
+      var total = buckets[fam];
+      if (fam === "weight") parts.push(formatWeight(roundUpLadder(total, WEIGHT_LADDER)));
+      else if (fam === "volume") parts.push(formatVolume(roundUpLadder(total, VOLUME_LADDER)));
+      else if (fam === "count") parts.push(Math.ceil(total) + " db");
+      else parts.push(Math.ceil(total) + " " + fam.slice(5));
+    });
+    return parts;
   }
 
   var SHOPPING_CATEGORIES = [
@@ -1512,7 +1604,7 @@
     }
     var note = document.createElement("p");
     note.className = "allergen-note";
-    note.textContent = "A lista " + result.recipeCount + " betöltött étkezés hozzávalóiból állt össze. Az azonos nevű tételek mennyiségeit egymás mellett soroljuk fel (nem összegezzük automatikusan, mert eltérő mértékegységek lehetnek) — az összesítést és a kerekítést neked érdemes elvégezned vásárlás előtt.";
+    note.textContent = "A lista " + result.recipeCount + " betöltött étkezés hozzávalóiból állt össze. Az azonos nevű tételek mennyiségét megközelítőleg összeadtuk és felfelé kerekítettük egy vásárláskor kényelmes mennyiségre (pl. fél/1 kg, fél/1 liter) — ez becslés, a zárójeles rész mutatja a pontos, recepteként külön-külön szereplő mennyiségeket. Eltérő mértékegységű (pl. dkg és evőkanál) bejegyzéseket nem tudunk biztonságosan összevonni, ezek külön szerepelnek.";
     container.appendChild(note);
 
     var printBtn = document.createElement("button");
@@ -1538,11 +1630,22 @@
       list.sort(function (a, b) { return a.displayName.localeCompare(b.displayName, "hu"); });
       list.forEach(function (item) {
         var li = document.createElement("li");
-        var qtyText = item.quantities.length ? (item.quantities.join(" + ") + " ") : "";
-        li.appendChild(document.createTextNode(qtyText + item.displayName));
+        var aggParts = aggregateItemQuantities(item.quantities);
+        if (aggParts.length) {
+          var strong = document.createElement("strong");
+          strong.textContent = "≈ " + aggParts.join(" + ") + " ";
+          li.appendChild(strong);
+        }
+        li.appendChild(document.createTextNode(item.displayName));
+        if (item.quantities.length) {
+          var detailSpan = document.createElement("span");
+          detailSpan.className = "shopping-item-detail";
+          detailSpan.textContent = " (részletesen: " + item.quantities.join(" + ") + ")";
+          li.appendChild(detailSpan);
+        }
         var noteSpan = document.createElement("span");
         noteSpan.className = "shopping-item-note";
-        noteSpan.textContent = " (" + item.recipeTitles.length + " recept)";
+        noteSpan.textContent = " · " + item.recipeTitles.length + " recept";
         li.appendChild(noteSpan);
         ul.appendChild(li);
       });

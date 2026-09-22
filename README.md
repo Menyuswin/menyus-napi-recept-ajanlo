@@ -144,12 +144,20 @@ kapcsolókat is figyelembe veszi, ugyanúgy, mint a napi ajánló.
 A "Heti menü" fül alján egy gombbal összeállítható a betöltött heti
 étkezések hozzávalóiból egy bevásárlólista, boltrészlegek szerint
 csoportosítva (zöldség-gyümölcs, hús/hal, tejtermék/tojás, pékáru/tészta,
-fűszer/egyéb). Az azonos nevű hozzávalók mennyiségeit egymás mellett
-soroljuk fel — **nem összegezzük automatikusan**, mert a receptek
-eltérő mértékegységeket használhatnak (dkg, db, evőkanál stb.), és egy
-téves automatikus összeadás félrevezetőbb lenne, mint ha Te végzed el a
-végső összesítést/kerekítést vásárlás előtt. A lista nyomtatható is
-(a nyomtatási nézet elrejti a navigációt és a vezérlőket).
+fűszer/egyéb). Minden tétel elején egy **megközelítő, felfelé kerekített
+összmennyiség** áll (pl. "≈ fél kg cukor", "≈ 1 liter étkezési olaj",
+"≈ 6 db tojás") — ez a tétel azonos mértékegységű (súly: g/dkg/kg;
+űrtartalom: ml/dl/l/evőkanál/teáskanál; darab: db) előfordulásait adja
+össze, és egy vásárláskor kényelmes méretre kerekíti (pl. negyed/fél/
+háromnegyed/egész kg vagy liter). A pontos, recepteként külön szereplő
+mennyiségek zárójelben, "részletesen" jelöléssel követik, így bármikor
+ellenőrizhető, miből jött ki az összeg. **Korlát**: eltérő mértékegységű
+előfordulásokat (pl. egyszer dkg-ban, máskor evőkanálban megadott
+ugyanazon hozzávalót) nem vonjuk össze biztonságosan, ezek külön
+tételként/összegként jelennek meg; olyan hozzávalóknál, ahol a recept
+nem ad explicit mértékegységet (pl. "1 hagyma" darabszám nélkül), nincs
+összesítés, csak a részletes felsorolás. A lista nyomtatható is (a
+nyomtatási nézet elrejti a navigációt és a vezérlőket).
 
 ### Boltkereső
 
