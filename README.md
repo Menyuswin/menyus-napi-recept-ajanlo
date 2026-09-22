@@ -19,10 +19,14 @@ magyarul lefedné, ezért az oldal két forrást kever:
   fordító API-val fordítja le a ténylegesen kiválasztott napi recepteket
   (nem az egész adatbázist — csak amit aznap mutat).
 - **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad
-  (konyhánként 24-26 recept, összesen 78). A Spoonacularban ugyanis nincs
+  (konyhánként 24-28 recept, összesen 80). A Spoonacularban ugyanis nincs
   ezekre a régiókra bontott kategória — mindhármat egy általános
   "kelet-európai" csoportba sorolná —, ezért itt a saját válogatás
-  pontosabb és megbízhatóbb, mint amit egy élő API adna.
+  pontosabb és megbízhatóbb, mint amit egy élő API adna. A magyar
+  recept-készlet két klasszikus fogással (Mákos metélt, Erőleves) bővült
+  egy 1920-as évekbeli magyar háztartási könyv, Bánffyhunyadi Hunyady
+  Erzsébet *A jó házi konyha* (MEK) ihletésére, mai nyelvre és
+  mértékegységekre átírva.
 
 ### Spoonacular API-kulcs
 
@@ -80,6 +84,22 @@ Két jelölőnégyzet is szűri az ajánlást (localStorage-ban megjegyezve):
 Ha egy adott konyhához/étkezéshez épp nincs a szűrésnek megfelelő találat,
 az oldal ezt jelzi ("Újra" gombbal), nem kínál helyette esetleg nem
 megfelelő alternatívát.
+
+## Hasznos tanácsok háziasszonyoknak és háziuraknak
+
+A második fül gyakorlati háztartási tanácsokat gyűjt össze —
+háztartásszervezés, vendéglátás, terítés, tálalás és néhány konyhai
+fogás —, valamint két klasszikus magyar sütemény receptjét (Dobostorta,
+Rigó Jancsi), amelyek nem illenek a reggeli/ebéd/vacsora napi ajánlóba,
+inkább alkalmi süteményként készülnek.
+
+A tartalom forrása ugyanaz az 1920-as évekbeli könyv (Bánffyhunyadi
+Hunyady Erzsébet: *A jó házi konyha — Így kell főzni!*, Singer és
+Wolfner, hetedik kiadás), amely a Magyar Elektronikus Könyvtárban (MEK)
+szabadon elérhető. A tanácsokat és recepteket **nem szó szerint vettük
+át**, hanem mai nyelvre, mai mértékegységekre és mai háztartásokra
+írtuk át; a korabeli, ma már elavult vagy nem biztonságos részeket (pl.
+lúgból főzött házi szappan, cselédtartás körüli tudnivalók) kihagytuk.
 
 ## Korlátok, amiket érdemes tudni
 
