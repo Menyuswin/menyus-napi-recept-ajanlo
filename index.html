@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Napi recept ajánló</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+  :root { color-scheme: light dark; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  img { max-width: 100%; display: block; }
+  [hidden] { display: none !important; }
+
+  :root {
+    --paper:      #EFEAE2;
+    --surface:    #FBF8F3;
+    --surface-2:  #F1EBE0;
+    --ink:        #2A2116;
+    --ink-2:      #59493A;
+    --muted:      #8A7A66;
+    --line:       #D9CEBC;
+    --line-soft:  #E6DECE;
+    --accent:     #B24A22;
+    --accent-2:   #8A3818;
+    --accent-tint:#F0DCCF;
+    --focus:      #B24A22;
+    --shadow:     0 1px 2px rgba(42,33,22,.08), 0 8px 24px -18px rgba(42,33,22,.4);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #1B140D;
+      --surface:    #241B12;
+      --surface-2:  #2C2216;
+      --ink:        #F1E7D8;
+      --ink-2:      #D2C1A8;
+      --muted:      #9C8B74;
+      --line:       #3C2F20;
+      --line-soft:  #2F2517;
+      --accent:     #E0854F;
+      --accent-2:   #EFA679;
+      --accent-tint:#3A2617;
+      --focus:      #E0854F;
+      --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper:      #1B140D;
+    --surface:    #241B12;
+    --surface-2:  #2C2216;
+    --ink:        #F1E7D8;
+    --ink-2:      #D2C1A8;
+    --muted:      #9C8B74;
+    --line:       #3C2F20;
+    --line-soft:  #2F2517;
+    --accent:     #E0854F;
+    --accent-2:   #EFA679;
+    --accent-tint:#3A2617;
+    --focus:      #E0854F;
+    --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 56px; }
+
+  h1, h2, h3, .cond { font-family: "IBM Plex Sans Condensed", "IBM Plex Sans", sans-serif; }
+  .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+
+  header.top {
+    display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
+    gap: 12px 24px; padding-bottom: 16px; border-bottom: 2px solid var(--ink);
+  }
+  h1 { font-size: 30px; font-weight: 700; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+  .tagline { color: var(--muted); font-size: 13.5px; margin: 6px 0 0; max-width: 62ch; }
+  .stamp { text-align: right; font-size: 12.5px; color: var(--muted); }
+  .stamp .day { color: var(--ink-2); font-weight: 600; text-transform: capitalize; }
+
+  :where(a, button, [tabindex]):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+  a { color: var(--accent); }
+
+  .meals {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 26px;
+  }
+  @media (max-width: 820px) { .meals { grid-template-columns: 1fr; } }
+
+  .card {
+    background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    box-shadow: var(--shadow); display: flex; flex-direction: column; overflow: hidden;
+  }
+  .card .head {
+    padding: 14px 16px 10px; border-bottom: 1px solid var(--line-soft);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  }
+  .meal-name { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .cuisine-badge {
+    display: inline-flex; align-items: center; font-size: 12px; font-weight: 600;
+    padding: 3px 9px; border-radius: 999px; background: var(--accent-tint); color: var(--accent-2);
+    border: 1px solid var(--line-soft);
+  }
+  .card .body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .recipe-title { font-size: 19px; font-weight: 700; margin: 0; line-height: 1.25; }
+  .recipe-source { font-size: 11.5px; color: var(--muted); }
+
+  details.ingredients summary, details.steps summary {
+    cursor: pointer; font-weight: 600; font-size: 13px; color: var(--ink-2);
+    padding: 2px 0;
+  }
+  details[open] summary { margin-bottom: 6px; }
+  .ingredients ul { margin: 0; padding-left: 18px; font-size: 13.5px; }
+  .ingredients li { margin-bottom: 2px; }
+  .steps p { font-size: 13.5px; white-space: pre-line; margin: 0; color: var(--ink-2); }
+
+  .card .foot { margin-top: auto; padding-top: 8px; }
+  button.shuffle {
+    font: inherit; font-size: 12.5px; font-weight: 500; cursor: pointer; border-radius: 5px;
+    border: 1px solid var(--line); background: var(--surface-2); color: var(--ink);
+    padding: 7px 11px; width: 100%;
+  }
+  button.shuffle:hover { border-color: var(--accent); color: var(--accent-2); }
+
+  footer.sources {
+    margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--muted);
+  }
+  footer.sources h2 { font-size: 13px; margin: 0 0 8px; color: var(--ink-2); }
+  footer.sources ul { margin: 0; padding-left: 18px; }
+  footer.sources li { margin-bottom: 4px; }
+  footer.sources .note { margin-top: 12px; max-width: 74ch; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div>
+      <h1>Napi recept ajánló</h1>
+      <p class="tagline">Minden nap három konyhából — olasz, francia, amerikai, lengyel, délszláv, görög és magyar közül — ajánl egy-egy reggelit, ebédet és vacsorát, magyar nyelven. Éjfélkor vált, ugyanaznap újratöltve ugyanazt mutatja.</p>
+    </div>
+    <div class="stamp">
+      <div class="day" id="dayLabel">—</div>
+      <div class="num" id="dateLabel">—</div>
+    </div>
+  </header>
+
+  <section class="meals" id="meals">
+    <article class="card" data-slot="breakfast">
+      <div class="head">
+        <span class="meal-name">Reggeli</span>
+        <span class="cuisine-badge" data-role="cuisine">—</span>
+      </div>
+      <div class="body"></div>
+    </article>
+    <article class="card" data-slot="lunch">
+      <div class="head">
+        <span class="meal-name">Ebéd</span>
+        <span class="cuisine-badge" data-role="cuisine">—</span>
+      </div>
+      <div class="body"></div>
+    </article>
+    <article class="card" data-slot="dinner">
+      <div class="head">
+        <span class="meal-name">Vacsora</span>
+        <span class="cuisine-badge" data-role="cuisine">—</span>
+      </div>
+      <div class="body"></div>
+    </article>
+  </section>
+
+  <footer class="sources">
+    <h2>Adatforrások</h2>
+    <ul>
+      <li><strong>TheMealDB</strong> (themealdb.com) — ingyenes recept-adatbázis, az olasz, francia, amerikai, lengyel, görög és délszláv (horvát) válogatás egyik ihletője.</li>
+      <li><strong>Wikibooks Cookbook</strong> (en.wikibooks.org/wiki/Cookbook, CC BY-SA 3.0) — konyhánkénti fejezetei háttéranyagként szolgáltak.</li>
+      <li>Pellegrino Artusi: <em>La Scienza in cucina e l'Arte di mangiar bene</em> (1891) — közkincs, olasz klasszikusok ihletője.</li>
+      <li>Auguste Escoffier: <em>Le Guide Culinaire</em> (1907) — közkincs, francia klasszikusok ihletője.</li>
+      <li>Lucyna Ćwierczakiewiczowa: <em>365 obiadów za pięć złotych</em> (1858) és a Magyar Elektronikus Könyvtár közkincs szakácskönyvei — lengyel és magyar háttéranyag.</li>
+    </ul>
+    <p class="note">Minden recept ezen az oldalon kézzel, magyarul íródott — a fenti forrásokat ihletésként, klasszikus fogások és arányok tájékozódási pontjaként használva, nem szó szerinti átvételként. A délszláv konyhát a Balkán-félsziget elterjedt, közös fogásai (pl. sarma, ćevapčići, burek) képviselik, mert nincs erre a régióra bontott, egységes forrás.</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  "use strict";
+
+  var CUISINES = [
+    { key: "italian",     label: "Olasz" },
+    { key: "french",      label: "Francia" },
+    { key: "american",    label: "Amerikai" },
+    { key: "polish",      label: "Lengyel" },
+    { key: "southslavic", label: "Délszláv" },
+    { key: "greek",       label: "Görög" },
+    { key: "hungarian",   label: "Magyar" }
+  ];
+
+  var MEALS = [
+    { slot: "breakfast", label: "Reggeli", offset: 0 },
+    { slot: "lunch",     label: "Ebéd",    offset: 2 },
+    { slot: "dinner",    label: "Vacsora", offset: 4 }
+  ];
+
+  var RECIPES = {
+    italian: {
+      breakfast: [
+        {
+          title: "Frittata zöldségekkel",
+          ingredients: ["6 tojás", "1 cukkini", "1 kápia paprika", "1 kis vöröshagyma", "50 g reszelt parmezán", "2 evőkanál olívaolaj", "só, bors", "friss bazsalikom"],
+          steps: "A felkockázott zöldségeket olívaolajon megpirítjuk, amíg megpuhulnak.\nA tojásokat felverjük sóval, borssal és a parmezán felével, ráöntjük a zöldségekre.\nLassú tűzön, fedő alatt sütjük, amíg megszilárdul, a tetejét a maradék sajttal és bazsalikommal szórjuk meg."
+        },
+        {
+          title: "Ricottás palacsinta mézzel (crespelle)",
+          ingredients: ["2 tojás", "2 dl tej", "120 g liszt", "csipet só", "olaj a sütéshez", "250 g ricotta", "2 evőkanál méz", "reszelt citromhéj"],
+          steps: "A tojásból, tejből, lisztből és sóból sima palacsintatésztát keverünk, vékony lapokat sütünk.\nA ricottát elkeverjük mézzel és citromhéjjal.\nA palacsintákat megtöltjük, feltekerjük, tetejére még egy kevés mézet csorgatunk."
+        },
+        {
+          title: "Buggyantott tojás parmezános pirítóssal",
+          ingredients: ["4 tojás", "1 evőkanál ecet", "4 szelet kovászos kenyér", "olívaolaj", "reszelt parmezán", "frissen őrölt bors", "rukkola"],
+          steps: "A vizet ecettel felforraljuk, örvényt keltünk benne, és óvatosan beleszűrjük a tojásokat, 3 percig buggyantjuk.\nA kenyérszeleteket olívaolajon pirítjuk, majd megszórjuk parmezánnal.\nA pirítósra tesszük a buggyantott tojást, rukkolával és extra parmezánnal tálaljuk."
+        }
+      ],
+      lunch: [
+        {
+          title: "Spagetti carbonara",
+          ingredients: ["400 g spagetti", "150 g füstölt szalonna", "4 tojássárgája", "1 egész tojás", "80 g reszelt pecorino sajt", "frissen őrölt bors", "só a főzővízhez"],
+          steps: "A szalonnát kockákra vágva ropogósra sütjük zsiradék nélkül.\nA tojásokat elkeverjük a reszelt sajttal és bőven borssal.\nA kifőtt, még forró tésztát a szalonnához forgatjuk, tűzről lehúzva belekeverjük a tojásos-sajtos keveréket, hogy krémes legyen, ne rántotta."
+        },
+        {
+          title: "Bolognai lasagne",
+          ingredients: ["250 g lasagnelap", "400 g darált marhahús", "1 doboz paradicsomszósz (passata)", "1 sárgarépa", "1 szál zeller", "1 vöröshagyma", "500 ml besamelmártás", "150 g reszelt parmezán", "olívaolaj, só, bors"],
+          steps: "Az apróra vágott zöldségeket olívaolajon megpirítjuk, hozzáadjuk a darált húst, fehéredésig sütjük, majd felöntjük a paradicsomszósszal, és legalább 40 percig lassú tűzön főzzük.\nTepsibe rétegezzük a lasagnelapokat, a bolognai ragut és a besamelt, végül reszelt parmezánnal szórjuk meg.\n200 fokos sütőben kb. 30 percig sütjük, amíg a teteje aranybarna."
+        },
+        {
+          title: "Gombás rizottó",
+          ingredients: ["320 g rizottórizs (arborio)", "300 g gomba", "1 vöröshagyma", "1 dl fehérbor", "1 l zöldségalaplé", "50 g vaj", "50 g reszelt parmezán", "olívaolaj, só, bors"],
+          steps: "A hagymát olívaolajon megdinszteljük, hozzáadjuk a rizst, üvegesre pirítjuk, majd felöntjük a fehérborral.\nA gombát külön lepirítjuk, majd a rizshez adjuk, és merőkanalanként, folyamatos kevergetés mellett hozzáöntjük a forró alaplevet, amíg a rizs megpuhul.\nTűzről lehúzva vajjal és parmezánnal krémesre keverjük."
+        }
+      ],
+      dinner: [
+        {
+          title: "Milánói szelet",
+          ingredients: ["4 szelet borjú- vagy sertéskaraj", "2 tojás", "150 g zsemlemorzsa", "80 g reszelt parmezán", "liszt a panírozáshoz", "vaj a sütéshez", "citrom, só"],
+          steps: "A húsokat kiklopfoljuk, sózzuk.\nLisztbe, felvert tojásba, majd a parmezánnal kevert zsemlemorzsába forgatjuk.\nBő forró vajban aranybarnára sütjük mindkét oldalát, citromkarikákkal tálaljuk."
+        },
+        {
+          title: "Osso buco",
+          ingredients: ["4 szelet borjúcsülök (velős)", "1 sárgarépa", "1 szál zeller", "1 vöröshagyma", "2 dl fehérbor", "400 g darabolt paradicsom", "liszt a hús megforgatásához", "olívaolaj, babérlevél, só, bors"],
+          steps: "A lisztezett csülökszeleteket olívaolajon körbesütjük, kiemeljük.\nUgyanabban a zsiradékban megpirítjuk az apróra vágott zöldségeket, felöntjük a borral, majd a paradicsommal.\nVisszatesszük a húst, babérlevéllel, fedő alatt, lassú tűzön 1,5-2 órán át pároljuk, amíg a hús szinte szétesik."
+        },
+        {
+          title: "Padlizsán parmezánmódra",
+          ingredients: ["2 nagy padlizsán", "500 g paradicsomszósz", "200 g mozzarella", "100 g reszelt parmezán", "friss bazsalikom", "olívaolaj, só"],
+          steps: "A padlizsánt vékony szeletekre vágjuk, sózzuk, majd olívaolajon mindkét oldalát megsütjük.\nTepsibe rétegezzük a padlizsánszeleteket, paradicsomszószt, mozzarellát és parmezánt, ezt ismételjük.\n200 fokos sütőben 25-30 percig sütjük, amíg a teteje buborékol és aranybarna."
+        }
+      ]
+    },
+    french: {
+      breakfast: [
+        {
+          title: "Sonkás-sajtos melegszendvics tükörtojással",
+          ingredients: ["4 szelet szendvicskenyér", "4 szelet főtt sonka", "150 g reszelt gruyère sajt", "30 g vaj", "30 g liszt", "3 dl tej", "4 tojás", "szerecsendió, só, bors"],
+          steps: "A vajból és lisztből rántást készítünk, tejjel felengedjük, szerecsendióval, sóval fűszerezve sűrű besamelt főzünk.\nA kenyérszeleteket megkenjük besamellel, sonkával és sajttal megrakjuk, majd összefogjuk, tetejét is bevonjuk besamellel és sajttal, sütőben pirosra sütjük.\nKülön serpenyőben tükörtojást sütünk, és a kész szendvics tetejére tesszük."
+        },
+        {
+          title: "Francia palacsinta lekvárral",
+          ingredients: ["3 tojás", "5 dl tej", "250 g liszt", "csipet só", "30 g olvasztott vaj", "lekvár vagy csokoládékrém a töltéshez"],
+          steps: "A hozzávalókból sima, folyós tésztát keverünk, legalább 20 percig pihentetjük.\nForró, kivajazott serpenyőben vékony palacsintákat sütünk mindkét oldalukon.\nLekvárral vagy csokoládékrémmel megkenve, félbe vagy négybe hajtva tálaljuk."
+        },
+        {
+          title: "Szalonnás-sajtos francia pite (quiche lorraine)",
+          ingredients: ["1 vajas leveles vagy omlós tészta", "150 g füstölt szalonna", "3 tojás", "2,5 dl tejszín", "100 g reszelt sajt", "szerecsendió, só, bors"],
+          steps: "A tésztát piteformába nyomkodjuk, alját villával megszurkáljuk.\nA kockázott szalonnát üresre pirítjuk, elosztjuk a tésztán.\nA tojást tejszínnel, szerecsendióval, sóval elkeverjük, ráöntjük, sajttal megszórjuk, 190 fokon 30-35 percig sütjük, amíg megszilárdul és aranybarna."
+        }
+      ],
+      lunch: [
+        {
+          title: "Francia hagymaleves",
+          ingredients: ["4 nagy vöröshagyma", "50 g vaj", "1 evőkanál liszt", "1,5 dl fehérbor", "1 l marhaalaplé", "4 szelet bagett", "150 g reszelt gruyère sajt", "só, bors"],
+          steps: "A vékonyra szeletelt hagymát vajon nagyon lassú tűzön, félóránál is tovább dinszteljük, amíg mélybarnára karamellizálódik.\nMeghintjük liszttel, felöntjük a borral, majd az alaplével, és 20 percig főzzük.\nTűzálló csészékbe merjük, tetejére pirított bagettet és bőven sajtot teszünk, grill alatt megpirítjuk."
+        },
+        {
+          title: "Boros csirke (coq au vin)",
+          ingredients: ["1 feldarabolt csirke", "150 g füstölt szalonna", "200 g gomba", "12 gyöngyhagyma", "4 dl vörösbor", "2 dl alaplé", "1 evőkanál liszt", "fokhagyma, babérlevél, kakukkfű"],
+          steps: "A szalonnát kisütjük, kivesszük, majd a csirkedarabokat a zsiradékában körbesütjük.\nHozzáadjuk a gyöngyhagymát, fokhagymát, felöntjük a borral és az alaplével, babérlevéllel és kakukkfűvel fűszerezzük.\nFedő alatt, lassú tűzön 45 percig pároljuk, a végén a gombát és a szalonnát is hozzáadjuk, a szaftot kevés liszttel besűrítjük."
+        },
+        {
+          title: "Ratatouille",
+          ingredients: ["1 padlizsán", "2 cukkini", "1 kápia paprika", "2 paradicsom", "1 vöröshagyma", "2 gerezd fokhagyma", "olívaolaj", "friss kakukkfű, bazsalikom, só, bors"],
+          steps: "Minden zöldséget egyforma kockákra vágunk.\nA hagymát és fokhagymát olívaolajon megdinszteljük, majd hozzáadjuk sorban a padlizsánt, cukkinit, paprikát, paradicsomot.\nFűszerezzük, fedő alatt lassú tűzön 30-40 percig pároljuk, amíg minden zöldség puha, de nem szétfőtt."
+        }
+      ],
+      dinner: [
+        {
+          title: "Bourguignon marharagu",
+          ingredients: ["1 kg marhalábszár kockázva", "150 g füstölt szalonna", "2 sárgarépa", "1 vöröshagyma", "2 gerezd fokhagyma", "750 ml vörösbor", "300 g gomba", "2 evőkanál liszt", "babérlevél, kakukkfű"],
+          steps: "A húst lisztbe forgatva forró olajon körbesütjük, kiemeljük.\nAz apróra vágott zöldségeket és szalonnát megpirítjuk, visszatesszük a húst, felöntjük a vörösborral, fűszerezzük.\nFedő alatt, lassú tűzön (vagy 160 fokos sütőben) 2,5-3 órán át pároljuk, a végén a gombát is hozzáadjuk."
+        },
+        {
+          title: "Cassoulet",
+          ingredients: ["400 g fehér bab (áztatva vagy konzerv)", "200 g füstölt kolbász", "200 g libacomb vagy sertésoldalas", "1 vöröshagyma", "2 gerezd fokhagyma", "400 g darabolt paradicsom", "babérlevél, kakukkfű, só, bors"],
+          steps: "A húsokat és a kolbászt olajon körbesütjük, kiemeljük.\nUgyanott megpirítjuk a hagymát és fokhagymát, hozzáadjuk a paradicsomot és a babot, felöntjük annyi vízzel, hogy ellepje.\nVisszatesszük a húsokat, fűszerezzük, fedő alatt, lassú tűzön (vagy sütőben) legalább 1,5 órán át főzzük, amíg a bab puha és a szaft besűrűsödik."
+        },
+        {
+          title: "Kacsacomb confit",
+          ingredients: ["4 kacsacomb", "2 evőkanál durva só", "2 babérlevél", "4 gerezd fokhagyma", "kakukkfű", "kacsazsír (a comb ellepéséhez)"],
+          steps: "A kacsacombokat bedörzsöljük sóval, fokhagymával, kakukkfűvel, babérlevéllel, és legalább egy éjszakára hűtőbe tesszük.\nLemossuk, majd olvasztott kacsazsírba merítjük úgy, hogy teljesen ellepje.\n140 fokos sütőben 2,5-3 órán át confitáljuk, majd tálalás előtt forró serpenyőben ropogósra sütjük a bőrét."
+        }
+      ]
+    },
+    american: {
+      breakfast: [
+        {
+          title: "Amerikai palacsinta juharsziruppal",
+          ingredients: ["250 g liszt", "2 evőkanál cukor", "2 teáskanál sütőpor", "csipet só", "3 dl tej", "1 tojás", "30 g olvasztott vaj", "juharszirup a tálaláshoz"],
+          steps: "A száraz hozzávalókat összekeverjük, majd hozzáadjuk a tejet, tojást és a vajat, sima, kissé sűrű tésztát keverünk.\nForró, enyhén kivajazott serpenyőben kanalanként sütjük ki a palacsintákat, amíg buborékosak lesznek a tetejük, akkor fordítjuk.\nJuharsziruppal, esetleg vajjal és bogyós gyümölccsel tálaljuk."
+        },
+        {
+          title: "Franciatoast",
+          ingredients: ["4 szelet vastag kenyér (lehetőleg állott)", "2 tojás", "1,5 dl tej", "1 teáskanál fahéj", "1 evőkanál cukor", "vaj a sütéshez", "juharszirup"],
+          steps: "A tojást, tejet, cukrot és fahéjat összekeverjük.\nA kenyérszeleteket alaposan megforgatjuk benne, hogy átitatódjanak.\nVajon mindkét oldalukat aranybarnára sütjük, juharsziruppal tálaljuk."
+        },
+        {
+          title: "Klasszikus amerikai reggeli tál",
+          ingredients: ["4 szelet bacon", "4 tojás", "1 doboz sült bab", "2 szelet pirítós", "1 paradicsom félbevágva", "vaj"],
+          steps: "A bacont ropogósra sütjük száraz serpenyőben.\nUgyanabban a zsiradékban tükörtojást sütünk, a sült babot és a paradicsomot átmelegítjük.\nVajas pirítóssal, minden elemet egy tányéron tálalva adjuk az asztalra."
+        }
+      ],
+      lunch: [
+        {
+          title: "Sajtburger",
+          ingredients: ["500 g darált marhahús", "4 szelet cheddar sajt", "4 zsemle", "saláta, paradicsom, lilahagyma", "ketchup, mustár", "só, bors"],
+          steps: "A darált húst sóval, borssal ízesítve 4 pogácsává formázzuk.\nForró serpenyőben vagy grillen mindkét oldalukat megsütjük, a végén ráolvasztjuk a sajtot.\nA zsemlébe salátával, paradicsommal, hagymával és a kívánt szószokkal rétegezve tálaljuk."
+        },
+        {
+          title: "Sajtos tésztaköret",
+          ingredients: ["350 g makaróni", "50 g vaj", "50 g liszt", "5 dl tej", "250 g reszelt cheddar sajt", "szerecsendió, só, bors", "zsemlemorzsa a tetejére (elhagyható)"],
+          steps: "A makarónit sós vízben al dente-re főzzük.\nA vajból és lisztből rántást készítünk, tejjel felengedjük, sűrű besamelt főzünk, majd belekeverjük a sajtot, amíg krémes lesz.\nÖsszeforgatjuk a tésztával, kívánt esetben zsemlemorzsával megszórva a sütőben pár percig pirítjuk."
+        },
+        {
+          title: "Cobb saláta",
+          ingredients: ["jégsaláta vagy fejes saláta", "2 főtt tojás", "100 g grillezett csirkemell", "4 szelet bacon", "1 avokádó", "100 g kék sajt (pl. roquefort)", "koktélparadicsom", "vinaigrette öntet"],
+          steps: "A salátaleveleket feldaraboljuk, tálra rendezzük.\nSorokban elrendezzük rajta a felkarikázott tojást, csirkét, ropogósra sütött bacont, avokádót, morzsolt sajtot és paradicsomot.\nTálaláskor vinaigrette-tel meglocsoljuk."
+        }
+      ],
+      dinner: [
+        {
+          title: "BBQ oldalas",
+          ingredients: ["1,5 kg sertés oldalas", "2 evőkanál füstölt paprika", "1 evőkanál barna cukor", "1 teáskanál fokhagymapor", "BBQ szósz", "só, bors"],
+          steps: "Az oldalast bedörzsöljük a száraz fűszerkeverékkel, és legalább 2 órára (ideálisan egy éjszakára) hűtőbe tesszük.\n150 fokos sütőben, fóliába csomagolva 2-2,5 órán át puhára sütjük.\nAz utolsó 15 percben lefedetlenül, BBQ szósszal megkenve, magasabb hőfokon átsütjük, amíg a szósz karamellizálódik."
+        },
+        {
+          title: "Sült csirke déli módra",
+          ingredients: ["1 feldarabolt csirke", "5 dl írós vagy tejes-citromos áztatólé", "250 g liszt", "1 evőkanál fűszerpaprika", "fokhagymapor, cayenne bors, só", "olaj a sütéshez"],
+          steps: "A csirkedarabokat legalább 2 órára az íróba áztatjuk.\nA fűszerezett lisztbe forgatjuk, alaposan bepanírozzuk.\nBő forró olajban aranybarnára, ropogósra sütjük, papírtörlőn lecsepegtetve tálaljuk."
+        },
+        {
+          title: "Amerikai fasírtkenyér",
+          ingredients: ["700 g darált marha- vagy vegyes hús", "1 tojás", "1 vöröshagyma", "80 g zsemlemorzsa", "1 dl tej", "4 evőkanál ketchup", "1 evőkanál barna cukor", "só, bors"],
+          steps: "A darált húst összekeverjük a tojással, apróra vágott hagymával, zsemlemorzsával, tejjel, sóval, borssal.\nSütőformába vagy tepsibe kenyér formára formázzuk.\nA ketchupot a cukorral elkeverve megkenjük vele a tetejét, 180 fokon kb. 50-60 percig sütjük."
+        }
+      ]
+    },
+    polish: {
+      breakfast: [
+        {
+          title: "Lengyel rántotta snidlinggel",
+          ingredients: ["4 tojás", "2 evőkanál vaj", "2 evőkanál snidling", "só, bors", "kenyér a tálaláshoz"],
+          steps: "A tojásokat sóval, borssal felverjük.\nVajon, lassú tűzön, folyamatos kevergetéssel puha rántottává sütjük.\nFriss snidlinggel megszórva, kenyérrel tálaljuk."
+        },
+        {
+          title: "Burgonyalepény",
+          ingredients: ["1 kg burgonya", "1 vöröshagyma", "2 tojás", "3 evőkanál liszt", "só, bors", "olaj a sütéshez", "tejföl a tálaláshoz"],
+          steps: "A meghámozott burgonyát és hagymát lereszeljük, a levét kinyomkodjuk.\nHozzáadjuk a tojást, lisztet, sózzuk, borsozzuk, összekeverjük.\nForró olajban kanalanként lepényeket sütünk, mindkét oldalukat ropogósra, tejföllel tálaljuk."
+        },
+        {
+          title: "Lengyel túrós zsemle retekkel",
+          ingredients: ["250 g fehér (lengyel) túró", "2 evőkanál tejföl", "csévehagyma vagy snidling", "néhány retek", "só", "zsemle vagy kenyér"],
+          steps: "A túrót villával elkeverjük a tejföllel, sóval, amíg krémes lesz.\nBelekeverjük az apróra vágott csévehagymát és a felkarikázott retket.\nZsemlére vagy kenyérre kenve tálaljuk."
+        }
+      ],
+      lunch: [
+        {
+          title: "Savanyú rozsleves kolbásszal",
+          ingredients: ["500 ml savanyított rozsliszt-alaplé (żur)", "200 g füstölt kolbász", "1 db füstölt csülök vagy szalonna", "2 gerezd fokhagyma", "majoránna", "4 főtt tojás", "tejföl"],
+          steps: "A füstölt húsokat alaplében puhára főzzük, majd kockákra vágva visszatesszük a levesbe.\nHozzáöntjük a savanyított rozslisztet, fokhagymával és majoránnával fűszerezzük, felforraljuk.\nFélbevágott főtt tojással és egy kanál tejföllel tálaljuk."
+        },
+        {
+          title: "Vadászpörkölt (bigos)",
+          ingredients: ["500 g savanyú káposzta", "300 g friss fehér káposzta", "300 g vegyes hús (sertés, füstölt kolbász, szalonna)", "2 db aszalt szilva", "1 vöröshagyma", "babérlevél, borókabogyó, só, bors"],
+          steps: "A húsokat és a hagymát zsiradékon megpirítjuk.\nHozzáadjuk a savanyú és friss káposztát, az aszalt szilvát, a fűszereket, kevés vízzel felöntjük.\nFedő alatt, lassú tűzön legalább 1,5 órán át, időnként megkeverve pároljuk — minél tovább áll, annál jobb az íze."
+        },
+        {
+          title: "Töltött derelye burgonyás-túrós töltelékkel",
+          ingredients: ["500 g liszt", "1 tojás", "2,5 dl langyos víz", "csipet só", "töltelék: 400 g főtt krumpli, 200 g fehér túró, 1 sült hagyma", "vaj a tálaláshoz"],
+          steps: "A lisztből, tojásból, vízből és sóból rugalmas tésztát gyúrunk, pihentetjük.\nA krumplit összetörjük a túróval és a sült hagymával, sózzuk.\nA vékonyra nyújtott tésztából köröket szaggatunk, megtöltjük, összecsipkedjük, sós vízben kifőzzük, majd sült hagymás vajjal tálaljuk."
+        }
+      ],
+      dinner: [
+        {
+          title: "Rántott sertésszelet lengyel módra",
+          ingredients: ["4 szelet sertéskaraj", "2 tojás", "liszt", "zsemlemorzsa", "vaj vagy olaj a sütéshez", "só, bors", "főtt burgonya a köretnek"],
+          steps: "A húsokat kiklopfoljuk, sózzuk, borsozzuk.\nLisztbe, felvert tojásba, majd zsemlemorzsába forgatjuk.\nForró zsiradékban mindkét oldalukat aranybarnára sütjük, főtt burgonyával és savanyúsággal tálaljuk."
+        },
+        {
+          title: "Töltött káposzta lengyel módra",
+          ingredients: ["1 fej fehér káposzta", "300 g darált sertéshús", "100 g rizs", "1 vöröshagyma", "1 tojás", "400 g paradicsomszósz", "só, bors, majoránna"],
+          steps: "A káposztaleveleket forrásban lévő vízben megpuhítjuk.\nA félig főtt rizst összekeverjük a darált hússal, apróra vágott hagymával, tojással, sóval, borssal, majoránnával.\nA leveleket megtöltjük, feltekerjük, tepsibe rendezzük, paradicsomszósszal leöntve kb. 45 percig sütjük vagy pároljuk."
+        },
+        {
+          title: "Piros céklaleves",
+          ingredients: ["4 nagy cékla", "1 l zöldség- vagy húsalaplé", "2 gerezd fokhagyma", "1 evőkanál ecet vagy citromlé", "babérlevél", "só, bors", "tejföl a tálaláshoz (elhagyható)"],
+          steps: "A céklát meghámozzuk, lereszeljük vagy vékonyra szeleteljük, alaplében fokhagymával, babérlevéllel puhára főzzük.\nEcettel vagy citromlével ízesítjük, hogy kellemesen savanykás legyen.\nSzűrve, tisztán vagy tejföllel tálaljuk."
+        }
+      ]
+    },
+    southslavic: {
+      breakfast: [
+        {
+          title: "Túrós rétes (burek)",
+          ingredients: ["1 csomag rétestészta", "300 g fehér túró vagy feta", "2 tojás", "1 dl tejföl vagy joghurt", "olaj a lapokhoz", "só"],
+          steps: "A túrót elkeverjük a tojással, tejföllel, sóval.\nA rétestészta-lapokat olajjal megkenve rétegezzük, közéjük a töltelékből kanalazunk, majd spirálba vagy tepsi méretére hajtogatjuk.\n200 fokos sütőben aranybarnára, ropogósra sütjük."
+        },
+        {
+          title: "Tojásos szendvics ajvarral",
+          ingredients: ["4 tojás", "4 szelet fehér kenyér vagy lepény", "4 evőkanál ajvar (sült paprikakrém)", "1 kis uborka", "só, bors", "olaj"],
+          steps: "A tojásokat tükörtojásként vagy rántottaként elkészítjük.\nA kenyeret megkenjük ajvarral.\nRátesszük a tojást, felszeletelt uborkával, sóval-borssal tálaljuk."
+        },
+        {
+          title: "Kajmakos lepény",
+          ingredients: ["4 db lepénykenyér", "200 g kajmak (vagy sűrű tejföl-vaj keverék helyette)", "só", "opcionálisan pirított kolbászkarikák"],
+          steps: "A lepényt kettévágjuk, enyhén megpirítjuk.\nBelsejét bőven megkenjük kajmakkal, ennek híján sűrű, sós tejföl-vaj keverékkel.\nKívánság szerint pirított kolbászkarikákkal megszórva tálaljuk."
+        }
+      ],
+      lunch: [
+        {
+          title: "Töltött savanyú káposzta balkáni módra (sarma)",
+          ingredients: ["1 fej savanyú káposzta (leveleihez)", "400 g darált vegyes hús", "100 g rizs", "1 vöröshagyma", "füstölt húsdarabok vagy szalonna", "pirospaprika, só, bors"],
+          steps: "A darált húst összekeverjük a félig főtt rizzsel, apróra vágott hagymával, sóval, borssal, pirospaprikával.\nA savanyú káposztaleveleket megtöltjük, szorosan feltekerjük.\nFazékba rétegezve, füstölt hússal és apróra vágott káposztával, vízzel felöntve 2-2,5 órán át lassú tűzön főzzük."
+        },
+        {
+          title: "Fűszeres darálthús-hurkák lepénnyel (ćevapčići)",
+          ingredients: ["500 g vegyes darált hús (marha-sertés)", "1 gerezd fokhagyma", "1 teáskanál szódabikarbóna", "só, bors, pirospaprika", "lepénykenyér", "lilahagyma, ajvar a tálaláshoz"],
+          steps: "A darált húst fokhagymával, szódabikarbónával, sóval, borssal, pirospaprikával alaposan összegyúrjuk, pár órát pihentetjük hűtőben.\nUjjnyi vastag hurkácskákat formázunk belőle.\nForró grillen vagy serpenyőben körbesütjük, meleg lepényben, lilahagymával és ajvarral tálaljuk."
+        },
+        {
+          title: "Fűszeres bableves füstölt hússal",
+          ingredients: ["400 g szárazbab (áztatva)", "200 g füstölt csülök vagy kolbász", "1 vöröshagyma", "1 sárgarépa", "1 evőkanál pirospaprika", "1 babérlevél", "só, bors", "olaj"],
+          steps: "A hagymát olajon megpirítjuk, tűzről lehúzva pirospaprikát keverünk hozzá.\nHozzáadjuk az áztatott babot, a füstölt húst, a sárgarépát, babérlevelet, vízzel felöntjük.\nFedő alatt, lassú tűzön addig főzzük, amíg a bab teljesen megpuhul és a leves besűrűsödik."
+        }
+      ],
+      dinner: [
+        {
+          title: "Balkáni fűszeres húspogácsa hagymával (pljeskavica)",
+          ingredients: ["600 g vegyes darált hús", "1 vöröshagyma", "1 gerezd fokhagyma", "só, bors, pirospaprika", "lepénykenyér", "friss hagymakarikák, ajvar a tálaláshoz"],
+          steps: "A darált húst apróra vágott hagymával, fokhagymával, sóval, borssal, pirospaprikával összegyúrjuk.\nLapos, széles pogácsákat formázunk belőle.\nForró grillen vagy serpenyőben mindkét oldalát alaposan átsütjük, lepénnyel, nyers hagymával és ajvarral tálaljuk."
+        },
+        {
+          title: "Balkáni rakott padlizsán (muszaka)",
+          ingredients: ["2 padlizsán vagy burgonya", "400 g darált hús", "1 vöröshagyma", "400 g paradicsomszósz", "2 tojás", "2,5 dl tejföl vagy joghurt", "olaj, só, bors"],
+          steps: "A padlizsánt (vagy krumplit) szeletekre vágva olajon megsütjük.\nA darált húst a hagymával megpirítjuk, paradicsomszósszal felöntve besűrítjük.\nTepsibe rétegezzük a padlizsánt és a húsos szószt, tetejére a tojással elkevert tejfölt öntjük, sütőben aranybarnára sütjük."
+        },
+        {
+          title: "Balkáni halászlé",
+          ingredients: ["800 g halszelet (pl. ponty vagy harcsa)", "1 vöröshagyma", "1 sárgarépa", "1 paprika", "2 evőkanál pirospaprika", "1 paradicsom", "só, bors, babérlevél"],
+          steps: "A zöldségeket apróra vágva olajon megpirítjuk, tűzről lehúzva pirospaprikát adunk hozzá.\nFelöntjük vízzel, hozzáadjuk a paradicsomot, babérlevelet, felforraljuk.\nBeletesszük a haldarabokat, és addig főzzük, amíg megpuhulnak, sózzuk, borsozzuk ízlés szerint."
+        }
+      ]
+    },
+    greek: {
+      breakfast: [
+        {
+          title: "Görög joghurt mézzel és dióval",
+          ingredients: ["400 g sűrű görög joghurt", "3 evőkanál méz", "50 g dió", "opcionálisan friss gyümölcs"],
+          steps: "A joghurtot tálkákba adagoljuk.\nMegszórjuk durvára tört dióval.\nBőségesen meglocsoljuk mézzel, kívánság szerint friss gyümölccsel tálaljuk."
+        },
+        {
+          title: "Görög rántotta paradicsommal és fetával",
+          ingredients: ["5 tojás", "3 érett paradicsom", "1 vöröshagyma", "80 g feta", "olívaolaj", "friss oregánó, só, bors"],
+          steps: "A hagymát olívaolajon megdinszteljük, hozzáadjuk a lereszelt vagy apróra vágott paradicsomot, pár percig pároljuk, amíg besűrűsödik.\nA felvert tojást hozzáöntjük, lassú tűzön, kevergetve rántottává sütjük.\nMorzsolt fetával és oregánóval megszórva tálaljuk."
+        },
+        {
+          title: "Spenótos-fetás rétes",
+          ingredients: ["1 csomag rétestészta (filo)", "500 g spenót", "200 g feta", "1 vöröshagyma", "2 tojás", "olívaolaj", "só, bors, szerecsendió"],
+          steps: "A spenótot a hagymával olívaolajon összeesetjük, lehűtjük, majd összekeverjük a morzsolt fetával és a tojással.\nA filótésztát olívaolajjal kenve rétegezzük, közéjük a tölteléket elosztjuk, feltekerjük vagy tepsibe rétegezzük.\n180 fokos sütőben aranybarnára, ropogósra sütjük."
+        }
+      ],
+      lunch: [
+        {
+          title: "Görög saláta pitával",
+          ingredients: ["4 paradicsom", "1 uborka", "1 zöldpaprika", "1 vöröshagyma", "150 g feta (egy tömbben)", "marék olívabogyó", "olívaolaj, oregánó", "pitakenyér"],
+          steps: "A zöldségeket nagyobb kockákra, karikákra vágjuk, tálba rendezzük.\nTetejére egy egész szelet fetát teszünk, olívabogyóval megszórjuk.\nBőven olívaolajjal meglocsoljuk, oregánóval megszórjuk, meleg pitával tálaljuk."
+        },
+        {
+          title: "Padlizsános rakott étel besamellel (muszaka)",
+          ingredients: ["2 padlizsán", "2 burgonya", "500 g darált bárány- vagy marhahús", "1 vöröshagyma", "400 g paradicsomszósz", "fahéj, szegfűszeg", "besamelmártás: 50 g vaj, 50 g liszt, 5 dl tej", "reszelt sajt"],
+          steps: "A padlizsánt és a burgonyát szeletelve olívaolajon elősütjük.\nA darált húst a hagymával megpirítjuk, paradicsomszósszal, fahéjjal, szegfűszeggel fűszerezve besűrítjük.\nTepsibe rétegezzük a zöldségeket és a húsos szószt, tetejére besamelt és reszelt sajtot öntünk, 180 fokon kb. 45 percig sütjük."
+        },
+        {
+          title: "Szuvlaki tzatzikivel",
+          ingredients: ["600 g sertés- vagy csirkecomb kockázva", "olívaolaj, citromlé", "oregánó, fokhagyma", "tzatzikihoz: 250 g görög joghurt, 1 uborka, 1 gerezd fokhagyma, kapor", "pitakenyér"],
+          steps: "A húst olívaolaj, citromlé, fokhagyma és oregánó keverékében legalább 1 órát pácoljuk, nyársra húzzuk.\nGrillen vagy serpenyőben minden oldalát átsütjük.\nA tzatzikihoz a reszelt, kicsavart uborkát a joghurttal, zúzott fokhagymával és kaporral elkeverjük, a szuvlakihoz, pitával tálaljuk."
+        }
+      ],
+      dinner: [
+        {
+          title: "Töltött paprika és paradicsom rizzsel",
+          ingredients: ["4 paprika", "4 paradicsom", "150 g rizs", "1 vöröshagyma", "friss menta és petrezselyem", "olívaolaj", "só, bors"],
+          steps: "A paradicsomok belsejét kikanalazzuk, a húsát félretesszük.\nA rizst a hagymával, a kikanalazott paradicsomhússal, fűszernövényekkel, olívaolajjal, sóval, borssal összekeverjük.\nA paprikákat és paradicsomokat megtöltjük, tepsibe állítjuk, olívaolajjal meglocsolva 180 fokon kb. 1 órán át sütjük."
+        },
+        {
+          title: "Görög rakott makaróni",
+          ingredients: ["400 g vastag makaróni", "500 g darált marhahús", "1 vöröshagyma", "400 g paradicsomszósz", "fahéj", "besamelmártás: 50 g vaj, 50 g liszt, 5 dl tej, 2 tojás", "reszelt sajt"],
+          steps: "A tésztát al dente-re főzzük.\nA darált húst a hagymával megpirítjuk, paradicsomszósszal és fahéjjal fűszerezve besűrítjük.\nTepsibe rétegezzük a tésztát és a húsos szószt, tetejére tojással dúsított besamelt és sajtot öntünk, 180 fokon kb. 40 percig sütjük."
+        },
+        {
+          title: "Citromos-oregánós csirke burgonyával",
+          ingredients: ["1 feldarabolt csirke", "4 burgonya", "2 citrom leve", "olívaolaj", "2 gerezd fokhagyma", "oregánó, só, bors"],
+          steps: "A csirkét és a cikkekre vágott burgonyát tepsibe rendezzük.\nA citromlevet olívaolajjal, zúzott fokhagymával, oregánóval, sóval, borssal elkeverjük, ráöntjük.\n200 fokos sütőben kb. 1 órán át sütjük, időnként a saját levével meglocsolva, amíg a csirke és a burgonya is aranybarna."
+        }
+      ]
+    },
+    hungarian: {
+      breakfast: [
+        {
+          title: "Rántotta kolbásszal és paradicsommal",
+          ingredients: ["3 tojás", "1 db füstölt házi kolbász (vagy csabai)", "1 közepes paradicsom", "1 kis vöröshagyma", "só, bors", "1 evőkanál zsír vagy olaj", "friss kenyér"],
+          steps: "A hagymát megpirítjuk zsíron, hozzáadjuk a felkarikázott kolbászt, pár percig pirítjuk, majd a kockázott paradicsomot is hozzáadjuk.\nFelverjük a tojásokat sóval-borssal, ráöntjük, lassú tűzön, folyamatos kevergetéssel rántottává sütjük.\nFriss kenyérrel tálaljuk."
+        },
+        {
+          title: "Tejbegríz mézzel és fahéjjal",
+          ingredients: ["5 dl tej", "5 evőkanál búzadara", "1 evőkanál cukor", "csipet só", "méz és fahéj a tetejére", "vaj (elhagyható)"],
+          steps: "A tejet felforraljuk a cukorral és a sóval, majd folyamatos keverés mellett vékony sugárban belehintjük a búzadarát.\nKis lángon 3-4 percig főzzük, amíg besűrűsödik.\nTálaláskor mézzel és fahéjjal megszórjuk."
+        },
+        {
+          title: "Túrós palacsinta",
+          ingredients: ["2 tojás", "3 dl tej", "15 dkg liszt", "csipet só", "olaj a sütéshez", "25 dkg túró", "1 tojássárgája", "3 evőkanál cukor", "vaníliás cukor", "reszelt citromhéj", "1-2 evőkanál tejföl"],
+          steps: "A tésztahozzávalókból sima palacsintatésztát keverünk, vékony palacsintákat sütünk.\nA túrót elkeverjük a tojássárgájával, cukorral, vaníliás cukorral és citromhéjjal.\nA palacsintákat megtöltjük, feltekerjük, tejföllel tálaljuk."
+        }
+      ],
+      lunch: [
+        {
+          title: "Gulyásleves",
+          ingredients: ["50 dkg marhalábszár vagy lapocka, kockázva", "2 fej vöröshagyma", "2 gerezd fokhagyma", "2 evőkanál pirospaprika", "3 közepes burgonya", "2 sárgarépa", "1 petrezselyemgyökér", "1 db paprika", "1 paradicsom", "1 teáskanál köménymag", "só, bors", "olaj vagy zsír"],
+          steps: "A felkockázott hagymát üvegesre pirítjuk zsíron, tűzről lehúzva belekeverjük a pirospaprikát, majd rögtön felöntjük kevés vízzel, nehogy megégjen.\nHozzáadjuk a húst, a fokhagymát, a köménymagot, sózzuk, és puhára pároljuk, közben pótoljuk a vizet.\nAmikor a hús majdnem puha, hozzáadjuk a felkockázott zöldségeket, és tovább főzzük, amíg minden megpuhul."
+        },
+        {
+          title: "Paprikás csirke nokedlivel",
+          ingredients: ["1 feldarabolt csirke (vagy combok/mellek)", "2 fej vöröshagyma", "2 evőkanál pirospaprika", "1 paprika", "1 paradicsom", "2 dl tejföl", "1 evőkanál liszt", "só, zsír vagy olaj", "nokedlihez: 30 dkg liszt, 2 tojás, kevés víz, só"],
+          steps: "A hagymát megdinszteljük zsíron, tűzről lehúzva hozzáadjuk a pirospaprikát, majd a húst, és sózzuk.\nHozzáadjuk a paprikát, a paradicsomot, kevés vizet, és puhára pároljuk.\nA tejfölt elkeverjük a liszttel, behabarjuk vele a szaftot.\nKözben a nokedli hozzávalóiból sűrű tésztát keverünk, forró sós vízbe szaggatjuk, kifőzzük, és a csirkével tálaljuk."
+        },
+        {
+          title: "Töltött káposzta",
+          ingredients: ["1 fej savanyú káposzta (a leveleihez)", "40 dkg darált sertéshús", "10 dkg rizs", "1 fej vöröshagyma", "1 tojás", "1 gerezd fokhagyma", "pirospaprika, só, bors", "30 dkg apróra vágott savanyú káposzta", "füstölt szalonna vagy császárhús", "babérlevél"],
+          steps: "A rizst félig megfőzzük. A darált húst összekeverjük a rizzsel, apróra vágott hagymával, tojással, fokhagymával, sóval, borssal és pirospaprikával.\nA káposztaleveleket megtöltjük, feltekerjük.\nEgy fazék alját apróra vágott káposztával és szalonnával bélelünk, rátesszük a töltelékeket, majd újabb réteg káposztával fedjük.\nVízzel felöntjük, babérlevéllel kb. 1,5-2 órán át lassú tűzön főzzük."
+        }
+      ],
+      dinner: [
+        {
+          title: "Lecsó kolbásszal",
+          ingredients: ["4-5 db paprika (kápia vagy tölteni való)", "3-4 paradicsom", "1 fej vöröshagyma", "20 dkg füstölt kolbász", "2 evőkanál olaj vagy zsír", "1 teáskanál pirospaprika", "só, bors", "1 tojás (elhagyható)"],
+          steps: "A hagymát megpirítjuk olajon, hozzáadjuk a felkarikázott kolbászt, majd a csíkokra vágott paprikát.\nPár perc pirítás után rászórjuk a pirospaprikát, majd hozzáadjuk a felkockázott paradicsomot.\nSózzuk, borsozzuk, fedő alatt puhára pároljuk. Ha szeretjük, a végén felvert tojással behabarjuk."
+        },
+        {
+          title: "Hortobágyi húsos palacsinta",
+          ingredients: ["palacsintatészta: 2 tojás, 3 dl tej, 15 dkg liszt, csipet só", "30 dkg darált vagy apróra vágott főtt hús", "1 fej hagyma", "pirospaprika", "2 dl tejföl", "1 evőkanál liszt a szafthoz", "só, bors"],
+          steps: "Vékony palacsintákat sütünk.\nA hagymát megpirítjuk, tűzről lehúzva pirospaprikát adunk hozzá, majd a húst, sózzuk, borsozzuk, kevés vízzel puhára pároljuk, ledaráljuk vagy apróra vágjuk.\nA palacsintákba töltjük, feltekerjük.\nA maradék szaftot tejföllel és liszttel behabarjuk, a palacsinták tetejére öntjük."
+        },
+        {
+          title: "Rakott krumpli",
+          ingredients: ["1 kg burgonya", "6 főtt tojás", "20 dkg füstölt kolbász", "3 dl tejföl", "10 dkg reszelt sajt", "vaj a formához", "só"],
+          steps: "A krumplit héjában megfőzzük, meghámozzuk, karikákra vágjuk, akárcsak a főtt tojásokat és a kolbászt.\nKivajazott tepsibe rétegezzük: krumpli, tojás, kolbász, sózott tejföl — ezt ismételjük, a tetejét tejföllel és reszelt sajttal fedjük.\n180 fokos sütőben kb. 25-30 percig sütjük, amíg a teteje aranybarna lesz."
+        }
+      ]
+    }
+  };
+
+  var shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
+
+  function dayOfYear(d) {
+    var start = new Date(d.getFullYear(), 0, 0);
+    var diff = d - start;
+    return Math.floor(diff / 86400000);
+  }
+
+  function cuisineForMeal(meal, doy) {
+    var idx = (doy + meal.offset) % CUISINES.length;
+    return CUISINES[idx];
+  }
+
+  function renderRecipe(card, cuisine, recipe) {
+    var body = card.querySelector(".body");
+    body.innerHTML = "";
+
+    var title = document.createElement("h3");
+    title.className = "recipe-title";
+    title.textContent = recipe.title;
+    body.appendChild(title);
+
+    var src = document.createElement("div");
+    src.className = "recipe-source";
+    src.textContent = "Kézzel válogatott " + cuisine.label.toLowerCase() + " recept";
+    body.appendChild(src);
+
+    var ing = document.createElement("details");
+    ing.className = "ingredients";
+    ing.open = true;
+    var ingSum = document.createElement("summary");
+    ingSum.textContent = "Hozzávalók";
+    ing.appendChild(ingSum);
+    var ul = document.createElement("ul");
+    recipe.ingredients.forEach(function (i) {
+      var li = document.createElement("li");
+      li.textContent = i;
+      ul.appendChild(li);
+    });
+    ing.appendChild(ul);
+    body.appendChild(ing);
+
+    var steps = document.createElement("details");
+    steps.className = "steps";
+    var stepsSum = document.createElement("summary");
+    stepsSum.textContent = "Elkészítés";
+    steps.appendChild(stepsSum);
+    var p = document.createElement("p");
+    p.textContent = recipe.steps;
+    steps.appendChild(p);
+    body.appendChild(steps);
+
+    var foot = document.createElement("div");
+    foot.className = "foot";
+    var shuffle = document.createElement("button");
+    shuffle.className = "shuffle";
+    shuffle.textContent = "Másik ötletet ebből a konyhából";
+    shuffle.addEventListener("click", function () {
+      shuffleOffset[card.getAttribute("data-slot")] += 1;
+      loadSlot(card.getAttribute("data-slot"), cuisine);
+    });
+    foot.appendChild(shuffle);
+    body.appendChild(foot);
+  }
+
+  function loadSlot(slot, cuisine) {
+    var card = document.querySelector('.card[data-slot="' + slot + '"]');
+    card.querySelector('[data-role="cuisine"]').textContent = cuisine.label;
+
+    var doy = dayOfYear(new Date());
+    var pool = RECIPES[cuisine.key][slot];
+    var idx = (doy + shuffleOffset[slot]) % pool.length;
+    renderRecipe(card, cuisine, pool[idx]);
+  }
+
+  function renderDateStamp() {
+    var now = new Date();
+    var dayFmt = new Intl.DateTimeFormat("hu-HU", { weekday: "long" });
+    var dateFmt = new Intl.DateTimeFormat("hu-HU", { year: "numeric", month: "long", day: "numeric" });
+    document.getElementById("dayLabel").textContent = dayFmt.format(now);
+    document.getElementById("dateLabel").textContent = dateFmt.format(now);
+  }
+
+  function init() {
+    renderDateStamp();
+    var doy = dayOfYear(new Date());
+    MEALS.forEach(function (meal) {
+      var cuisine = cuisineForMeal(meal, doy);
+      loadSlot(meal.slot, cuisine);
+    });
+  }
+
+  init();
+})();
+</script>
+</body>
+</html>
