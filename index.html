@@ -258,6 +258,28 @@
   .week-meal-body .recipe-title { font-size: 15px; }
   .week-meal-body .skeleton { height: 12px; border-radius: 4px; background: var(--line-soft); margin: 4px 0; }
 
+  .shopping-section, .store-finder {
+    margin-top: 24px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  }
+  .shopping-section h2, .store-finder h2 { margin: 0 0 8px; font-size: 17px; }
+  .shopping-list { margin: 6px 0 14px; padding-left: 22px; }
+  .shopping-list li { margin: 3px 0; font-size: 13.5px; }
+  .shopping-item-note { color: var(--muted); font-size: 11.5px; }
+  .store-finder .field-row { margin: 10px 0; }
+  .store-finder input[type="text"] { flex: 1 1 220px; }
+  .store-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+  .store-item {
+    border: 1px solid var(--line-soft); border-radius: 6px; padding: 10px 12px; background: var(--surface-2);
+  }
+  .store-meta { font-size: 12.5px; color: var(--muted); margin: 2px 0 6px; }
+  .store-links a { font-size: 12.5px; color: var(--accent-2); text-decoration: underline; margin-right: 14px; }
+
+  @media print {
+    .tabs, .week-nav, .store-finder, #buildShoppingListBtn, #settingsPanel,
+    .prefs, .active-profile, .submit-form, footer.sources { display: none !important; }
+    .daytype-select, .cuisine-select, .shuffle, .foot { display: none !important; }
+  }
+
   details.ingredients summary, details.steps summary {
     cursor: pointer; font-weight: 600; font-size: 13px; color: var(--ink-2);
     padding: 2px 0;
@@ -429,6 +451,25 @@
     </div>
     <p class="allergen-note">A heti nézet ugyanazt a kiválasztott profilt (intolerancia, kalória-, fehérjecél) és az "Egyszerűbb"/"Nem kell főzni" beállításokat használja, mint a napi ajánló. Hétköznapra a rendszer automatikusan egyszerűbb, gyorsabb fogásokat részesít előnyben, ünnepnapra a különlegesebbeket (nem "Egyszerű" jelölésű recepteket) — ezt, és a napok konyháját is, bármelyik napon kézzel felülbírálhatod. Élő (olasz/francia/amerikai/görög) konyháknál ünnepnapon csak az időkorlát oldódik fel, mert a Spoonacular nem jelez "ünnepi" fogást.</p>
     <div class="week-grid" id="weekGrid"></div>
+
+    <section class="shopping-section">
+      <h2>Bevásárlólista</h2>
+      <p class="allergen-note">Összegyűjti a fent betöltött heti étkezések hozzávalóit, konyhánként/napok szerint csoportosítva, boltrészlegek szerint rendezve. Csak a jelenleg betöltött (görgesd fel, ha még töltődik) napok/étkezések kerülnek bele.</p>
+      <button type="button" class="small primary" id="buildShoppingListBtn">Bevásárlólista összeállítása ehhez a héthez</button>
+      <div id="shoppingListResult"></div>
+    </section>
+
+    <section class="store-finder">
+      <h2>Közeli boltok</h2>
+      <p class="allergen-note">Valós idejű ár- és akció-adatot nem tudunk lekérdezni — ilyen ingyenes, nyilvános API-t egyik magyar élelmiszerlánc sem biztosít. Ehelyett a helyzeted alapján megkeressük a közeli boltokat, és ahol felismerjük a láncot, linkelünk a saját aktuális akciós oldalára.</p>
+      <div class="field-row">
+        <button type="button" class="small" id="useLocationBtn">📍 Helyzetem megosztása</button>
+        <span>vagy</span>
+        <input type="text" id="manualLocationInput" placeholder="Város, irányítószám vagy cím">
+        <button type="button" class="small" id="searchLocationBtn">Keresés</button>
+      </div>
+      <div id="storeResults"></div>
+    </section>
   </div>
 
   <div class="tab-panel" data-tab="tanacsok" id="tabTanacsok" hidden>
@@ -1239,6 +1280,8 @@
     });
   }
 
+  var weekRecipeStore = {};
+
   function loadWeekMeal(mealEl, date, meal, profile) {
     var body = mealEl.querySelector(".body");
     var badge = mealEl.querySelector(".cuisine-badge");
@@ -1247,6 +1290,7 @@
     badge.textContent = cuisine.label;
     var shuffleKey = dateKey(date) + ":" + meal.slot;
     var doy = dayOfYear(date);
+    delete weekRecipeStore[shuffleKey];
 
     if (cuisine.mode === "curated") {
       var res = getCuratedPool(cuisine.key, meal.slot, profile, dayType);
@@ -1255,7 +1299,9 @@
         return;
       }
       var idx = (doy + (weekShuffleOffset[shuffleKey] || 0)) % res.pool.length;
-      renderRecipeInto(body, cuisine, res.pool[idx], {
+      var pickedCurated = res.pool[idx];
+      weekRecipeStore[shuffleKey] = { cuisine: cuisine, recipe: pickedCurated };
+      renderRecipeInto(body, cuisine, pickedCurated, {
         live: false,
         detailsOpen: false,
         onShuffle: function () {
@@ -1275,6 +1321,7 @@
       var idx = (doy + (weekShuffleOffset[shuffleKey] || 0)) % candidates.length;
       var picked = candidates[idx];
       return translateRecipe(picked).then(function (recipe) {
+        weekRecipeStore[shuffleKey] = { cuisine: cuisine, recipe: recipe };
         renderRecipeInto(body, cuisine, recipe, {
           live: true,
           detailsOpen: false,
@@ -1392,6 +1439,7 @@
     if (!currentWeekMonday) currentWeekMonday = loadWeekStart();
     var days = [];
     for (var i = 0; i < 7; i++) days.push(addDays(currentWeekMonday, i));
+    currentWeekDays = days;
 
     document.getElementById("weekRangeLabel").textContent = weekFmt.format(days[0]) + " – " + weekFmt.format(days[6]) + ".";
 
@@ -1399,6 +1447,252 @@
     grid.innerHTML = "";
     var profile = getSelectedProfile();
     days.forEach(function (date) { grid.appendChild(buildWeekDayCard(date, profile)); });
+    document.getElementById("shoppingListResult").innerHTML = "";
+  }
+
+  // ---------- bevásárlólista ----------
+
+  var currentWeekDays = [];
+
+  var QUANTITY_RE = /^((?:\d+[\d.,]*|½|¼|¾)(?:\s*[-–]\s*\d+[\d.,]*)?\s*(?:kg|dkg|g|dl|cl|l|ml|db|evőkanál|ek\.?|teáskanál|tk\.?|csipet|szelet|gerezd|fej|szál|csokor|adag|marék|köteg|kanál)?)\s+(.+)$/i;
+
+  function splitIngredientLine(line) {
+    var m = line.match(QUANTITY_RE);
+    if (m) return { qty: m[1].trim(), name: m[2].trim() };
+    return { qty: "", name: line.trim() };
+  }
+
+  function normalizeIngredientName(name) {
+    return name.toLowerCase().replace(/\s+/g, " ").trim();
+  }
+
+  var SHOPPING_CATEGORIES = [
+    { label: "Zöldség, gyümölcs", keywords: ["hagym", "fokhagym", "paradicsom", "paprika", "krumpli", "burgony", "sárgarépa", "zeller", "alma", "citrom", "salát", "ubork", "gomba", "petrezselyem", "káposzt", "cékl", "körte", "banán", "retek", "spenót", "cukkini", "padlizsán", "gyümölcs"] },
+    { label: "Hús, hal, felvágott", keywords: ["hús", "csirke", "pulyka", "marha", "sertés", "bárány", "kacsa", "liba", "szalonna", "kolbász", "sonka", "hal", "ponty", "harcsa", "virsli", "kaszanka", "szárny", "comb", "karaj", "tarja"] },
+    { label: "Tejtermék, tojás", keywords: ["tej", "vaj", "sajt", "tejföl", "tejszín", "joghurt", "túró", "tojás", "kajmak", "parmezán", "kefir"] },
+    { label: "Pékáru, tészta, gabona", keywords: ["liszt", "kenyér", "zsemle", "tészta", "rizs", "dara", "zabpehely", "bagett", "kifli", "morzsa", "nokedli", "galuska", "metélt"] },
+    { label: "Fűszer, alapanyag, egyéb", keywords: [] }
+  ];
+
+  function categorizeIngredient(name) {
+    var lower = name.toLowerCase();
+    for (var i = 0; i < SHOPPING_CATEGORIES.length - 1; i++) {
+      var cat = SHOPPING_CATEGORIES[i];
+      if (cat.keywords.some(function (kw) { return lower.indexOf(kw) !== -1; })) return cat.label;
+    }
+    return SHOPPING_CATEGORIES[SHOPPING_CATEGORIES.length - 1].label;
+  }
+
+  function buildShoppingList() {
+    var items = {};
+    var recipeCount = 0;
+    currentWeekDays.forEach(function (date) {
+      MEALS.forEach(function (meal) {
+        var entry = weekRecipeStore[dateKey(date) + ":" + meal.slot];
+        if (!entry) return;
+        recipeCount++;
+        entry.recipe.ingredients.forEach(function (line) {
+          var parsed = splitIngredientLine(line);
+          var norm = normalizeIngredientName(parsed.name);
+          if (!norm) return;
+          if (!items[norm]) items[norm] = { displayName: parsed.name, quantities: [], recipeTitles: [] };
+          if (parsed.qty) items[norm].quantities.push(parsed.qty);
+          if (items[norm].recipeTitles.indexOf(entry.recipe.title) === -1) items[norm].recipeTitles.push(entry.recipe.title);
+        });
+      });
+    });
+    return { items: items, recipeCount: recipeCount };
+  }
+
+  function renderShoppingList(container, result) {
+    container.innerHTML = "";
+    if (!result.recipeCount) {
+      renderMessageInto(container, "state-empty", "Ehhez előbb be kell töltődnie legalább néhány étkezésnek ezen a héten (görgess fel, várd meg a betöltést, vagy adj meg Spoonacular API-kulcsot az élő konyhákhoz).");
+      return;
+    }
+    var note = document.createElement("p");
+    note.className = "allergen-note";
+    note.textContent = "A lista " + result.recipeCount + " betöltött étkezés hozzávalóiból állt össze. Az azonos nevű tételek mennyiségeit egymás mellett soroljuk fel (nem összegezzük automatikusan, mert eltérő mértékegységek lehetnek) — az összesítést és a kerekítést neked érdemes elvégezned vásárlás előtt.";
+    container.appendChild(note);
+
+    var printBtn = document.createElement("button");
+    printBtn.type = "button"; printBtn.className = "small";
+    printBtn.textContent = "Nyomtatás";
+    printBtn.addEventListener("click", function () { window.print(); });
+    container.appendChild(printBtn);
+
+    var categorized = {};
+    Object.keys(result.items).forEach(function (key) {
+      var item = result.items[key];
+      var cat = categorizeIngredient(item.displayName);
+      if (!categorized[cat]) categorized[cat] = [];
+      categorized[cat].push(item);
+    });
+
+    SHOPPING_CATEGORIES.forEach(function (catDef) {
+      var list = categorized[catDef.label];
+      if (!list || !list.length) return;
+      var h = document.createElement("h4"); h.textContent = catDef.label;
+      container.appendChild(h);
+      var ul = document.createElement("ul"); ul.className = "shopping-list";
+      list.sort(function (a, b) { return a.displayName.localeCompare(b.displayName, "hu"); });
+      list.forEach(function (item) {
+        var li = document.createElement("li");
+        var qtyText = item.quantities.length ? (item.quantities.join(" + ") + " ") : "";
+        li.appendChild(document.createTextNode(qtyText + item.displayName));
+        var noteSpan = document.createElement("span");
+        noteSpan.className = "shopping-item-note";
+        noteSpan.textContent = " (" + item.recipeTitles.length + " recept)";
+        li.appendChild(noteSpan);
+        ul.appendChild(li);
+      });
+      container.appendChild(ul);
+    });
+  }
+
+  function initShoppingList() {
+    var btn = document.getElementById("buildShoppingListBtn");
+    var container = document.getElementById("shoppingListResult");
+    btn.addEventListener("click", function () {
+      renderShoppingList(container, buildShoppingList());
+    });
+  }
+
+  // ---------- boltkereső ----------
+
+  var STORE_CHAIN_LINKS = [
+    { match: /tesco/i, label: "Tesco", url: "https://tesco.hu/aktualis-ajanlatok/" },
+    { match: /spar|interspar/i, label: "SPAR", url: "https://www.spar.hu/ajanlatok" },
+    { match: /lidl/i, label: "Lidl", url: "https://www.lidl.hu/c/aktualis-ajanlataink/s10005903" },
+    { match: /aldi/i, label: "Aldi", url: "https://www.aldi.hu/hu/ajanlataink.html" },
+    { match: /penny/i, label: "Penny", url: "https://www.penny.hu/ajanlatok" },
+    { match: /\bcba\b/i, label: "CBA", url: "https://cba.hu/akcioink" },
+    { match: /auchan/i, label: "Auchan", url: "https://www.auchan.hu/akcio" },
+    { match: /coop/i, label: "Coop", url: "https://www.coop.hu/akcio" },
+    { match: /prima|príma/i, label: "Príma", url: "https://www.prima-abc.hu/akcio" },
+    { match: /reál|real magyarorsz/i, label: "Reál", url: "https://www.realmagyarorszag.hu/akcio" }
+  ];
+
+  function findChainLink(name) {
+    for (var i = 0; i < STORE_CHAIN_LINKS.length; i++) {
+      if (STORE_CHAIN_LINKS[i].match.test(name)) return STORE_CHAIN_LINKS[i];
+    }
+    return null;
+  }
+
+  function haversineKm(lat1, lon1, lat2, lon2) {
+    var R = 6371;
+    var dLat = (lat2 - lat1) * Math.PI / 180;
+    var dLon = (lon2 - lon1) * Math.PI / 180;
+    var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(lat1 * Math.PI / 180) * Math.cos(lat2 * Math.PI / 180) * Math.sin(dLon / 2) * Math.sin(dLon / 2);
+    return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  }
+
+  function geocodeAddress(query) {
+    var url = "https://nominatim.openstreetmap.org/search?format=json&limit=1&countrycodes=hu&q=" + encodeURIComponent(query);
+    return fetch(url).then(function (res) {
+      if (!res.ok) return Promise.reject(new Error("geocode-failed"));
+      return res.json();
+    }).then(function (results) {
+      if (!results.length) return Promise.reject(new Error("geocode-empty"));
+      return { lat: parseFloat(results[0].lat), lon: parseFloat(results[0].lon) };
+    });
+  }
+
+  function findNearbyStores(lat, lon) {
+    var query = '[out:json][timeout:15];(node["shop"~"supermarket|convenience|grocery"](around:3000,' + lat + "," + lon + '););out body 40;';
+    var url = "https://overpass-api.de/api/interpreter?data=" + encodeURIComponent(query);
+    return fetch(url).then(function (res) {
+      if (!res.ok) return Promise.reject(new Error("overpass-failed"));
+      return res.json();
+    }).then(function (data) {
+      return (data.elements || []).map(function (el) {
+        var tags = el.tags || {};
+        var name = tags.name || tags.brand || "Ismeretlen bolt";
+        var addrParts = [tags["addr:street"], tags["addr:housenumber"], tags["addr:city"]].filter(Boolean);
+        return {
+          name: name,
+          address: addrParts.join(" "),
+          lat: el.lat, lon: el.lon,
+          distanceKm: haversineKm(lat, lon, el.lat, el.lon)
+        };
+      }).sort(function (a, b) { return a.distanceKm - b.distanceKm; }).slice(0, 15);
+    });
+  }
+
+  function renderStoreResults(container, stores) {
+    container.innerHTML = "";
+    if (!stores.length) {
+      container.textContent = "Nem találtunk élelmiszerboltot a közelben (3 km-es körzetben).";
+      return;
+    }
+    var ul = document.createElement("ul");
+    ul.className = "store-list";
+    stores.forEach(function (s) {
+      var li = document.createElement("li");
+      li.className = "store-item";
+      var nameEl = document.createElement("strong"); nameEl.textContent = s.name;
+      li.appendChild(nameEl);
+      var meta = document.createElement("div"); meta.className = "store-meta";
+      meta.textContent = (s.address ? s.address + " — " : "") + s.distanceKm.toFixed(1) + " km";
+      li.appendChild(meta);
+      var links = document.createElement("div"); links.className = "store-links";
+      var chain = findChainLink(s.name);
+      if (chain) {
+        var a = document.createElement("a");
+        a.href = chain.url; a.target = "_blank"; a.rel = "noopener";
+        a.textContent = chain.label + " aktuális akciói →";
+        links.appendChild(a);
+      }
+      var mapsA = document.createElement("a");
+      mapsA.href = "https://www.google.com/maps/search/?api=1&query=" + s.lat + "," + s.lon;
+      mapsA.target = "_blank"; mapsA.rel = "noopener";
+      mapsA.textContent = "Útvonal (Google Maps)";
+      links.appendChild(mapsA);
+      li.appendChild(links);
+      ul.appendChild(li);
+    });
+    container.appendChild(ul);
+  }
+
+  function initStoreFinder() {
+    var useLocBtn = document.getElementById("useLocationBtn");
+    var manualInput = document.getElementById("manualLocationInput");
+    var searchBtn = document.getElementById("searchLocationBtn");
+    var resultsEl = document.getElementById("storeResults");
+
+    useLocBtn.addEventListener("click", function () {
+      if (!navigator.geolocation) {
+        resultsEl.textContent = "A böngésződ nem támogatja a helymeghatározást — add meg kézzel a várost/címet.";
+        return;
+      }
+      resultsEl.textContent = "Helyzet lekérése...";
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        resultsEl.textContent = "Közeli boltok keresése...";
+        findNearbyStores(pos.coords.latitude, pos.coords.longitude).then(function (stores) {
+          renderStoreResults(resultsEl, stores);
+        }).catch(function () {
+          resultsEl.textContent = "Nem sikerült elérni a bolt-adatbázist — próbáld újra kicsit később.";
+        });
+      }, function (err) {
+        resultsEl.textContent = "Nem sikerült lekérni a helyzeted (" + (err && err.message ? err.message : "engedély megtagadva") + ") — add meg kézzel a várost/címet.";
+      });
+    });
+
+    searchBtn.addEventListener("click", function () {
+      var q = manualInput.value.trim();
+      if (!q) { resultsEl.textContent = "Adj meg egy várost, irányítószámot vagy címet."; return; }
+      resultsEl.textContent = "Cím keresése...";
+      geocodeAddress(q).then(function (loc) {
+        resultsEl.textContent = "Közeli boltok keresése...";
+        return findNearbyStores(loc.lat, loc.lon);
+      }).then(function (stores) {
+        renderStoreResults(resultsEl, stores);
+      }).catch(function () {
+        resultsEl.textContent = "Nem találtuk a megadott helyet, vagy nem sikerült elérni a bolt-adatbázist.";
+      });
+    });
   }
 
   // ---------- settings / profiles UI ----------
@@ -1779,6 +2073,8 @@
     initSubmitForm();
     initCuisineSelects();
     initWeekly();
+    initShoppingList();
+    initStoreFinder();
 
     var easyBox = document.getElementById("prefEasy");
     var noCookBox = document.getElementById("prefNoCook");

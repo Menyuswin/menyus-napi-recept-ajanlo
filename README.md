@@ -139,6 +139,36 @@ Beállításokban kiválasztott profil intolerancia-, kalória- és
 fehérjeszűrését, valamint a globális "Egyszerűbb"/"Nem kell főzni"
 kapcsolókat is figyelembe veszi, ugyanúgy, mint a napi ajánló.
 
+### Bevásárlólista
+
+A "Heti menü" fül alján egy gombbal összeállítható a betöltött heti
+étkezések hozzávalóiból egy bevásárlólista, boltrészlegek szerint
+csoportosítva (zöldség-gyümölcs, hús/hal, tejtermék/tojás, pékáru/tészta,
+fűszer/egyéb). Az azonos nevű hozzávalók mennyiségeit egymás mellett
+soroljuk fel — **nem összegezzük automatikusan**, mert a receptek
+eltérő mértékegységeket használhatnak (dkg, db, evőkanál stb.), és egy
+téves automatikus összeadás félrevezetőbb lenne, mint ha Te végzed el a
+végső összesítést/kerekítést vásárlás előtt. A lista nyomtatható is
+(a nyomtatási nézet elrejti a navigációt és a vezérlőket).
+
+### Boltkereső
+
+**Fontos, amit tudni érdemes**: egyik magyar élelmiszerlánc sem biztosít
+szabadon elérhető, valós idejű ár- vagy akció-API-t, ezért az oldal
+**nem mutat és nem is talál ki valós árakat vagy akciókat** — ez
+megtévesztő lenne. Ehelyett a böngésző helymeghatározása (engedélykéréssel)
+vagy egy kézzel megadott város/irányítószám/cím alapján az
+[OpenStreetMap](https://www.openstreetmap.org) nyilvános, ingyenes
+Nominatim (geokódolás) és Overpass (helyadat-lekérdezés) API-jával
+megkeresi a 3 km-es körzeten belüli élelmiszerboltokat, feltünteti a nevüket,
+címüket és távolságukat, és ahol felismeri az üzletláncot (Tesco, SPAR,
+Lidl, Aldi, Penny, CBA, Auchan, Coop, Príma, Reál), közvetlenül a lánc
+saját, hivatalos aktuális-akciók oldalára linkel, hogy Te magad
+megnézhesd a valódi árakat. Ismeretlen/független boltokhoz csak
+útvonaltervezés-link jár (Google Maps). Az OpenStreetMap adatbázisa
+önkéntesek által karbantartott, ezért egy-egy kisebb bolt hiányozhat
+vagy pontatlan lehet benne.
+
 ## Hasznos tanácsok háziasszonyoknak és háziuraknak
 
 A második fül gyakorlati háztartási tanácsokat gyűjt össze —
