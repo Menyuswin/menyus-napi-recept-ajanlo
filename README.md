@@ -43,11 +43,11 @@ Ingyenes kulcs igényelhető itt: [spoonacular.com/food-api/console](https://spo
 ## Személyre szabás
 
 A Beállítások panelen felvehetsz **célszemélyeket** (pl. családtagokat):
-név, kor, testsúly, nem, fehérjedús étrend igénye, ételintolerancia
-(tejtermék, tojás, glutén, földimogyoró stb.). A "Kinek főzöl ma?" chipek
-közül mindig egy aktív — az oldal az ő adatai szerint szűr, amíg másikra
-nem váltasz (vagy "Mindenkinek / nincs profil"-ra, ami kikapcsolja a
-szűrést).
+név, kor, testsúly, nem, fehérjedús étrend igénye, napi kalóriacél,
+ételintolerancia (tejtermék, tojás, glutén, földimogyoró stb.). A "Kinek
+főzöl ma?" chipek közül mindig egy aktív — az oldal az ő adatai szerint
+szűr, amíg másikra nem váltasz (vagy "Mindenkinek / nincs profil"-ra, ami
+kikapcsolja a szűrést).
 
 - **Intolerancia**: az élő (Spoonacular-os) konyháknál az API saját,
   pontos szűrője érvényesül. A kézzel írt lengyel/délszláv/magyar
@@ -62,6 +62,16 @@ szűrést).
   szorzóval), amit reggeli/ebéd/vacsora között 25/40/35%-ban oszt szét, és
   ez adja a Spoonacular-lekérdezés fehérje-paraméterét. Ez tájékoztató
   becslés, nem orvosi tanács.
+- **Kalóriacél**: nem kötelező mező — ha megadod a napi kalóriacélodat
+  (kcal), az oldal ugyanazzal a 25/40/35%-os elosztással étkezésenkénti
+  célt számol, és egy tág (a cél 60-140%-át lefedő) tartományt küld a
+  Spoonacularnak, hogy ne szűkítse túlságosan a választékot. A kártyákon,
+  ha az API adott tápérték-adatot, megjelenik a becsült kalória- és
+  fehérjeérték is.
+- **Fontos korlát**: a kalória- és fehérjecél kizárólag az élő
+  (olasz/francia/amerikai/görög) konyháknál érvényesül, mert csak a
+  Spoonacular ad tápérték-adatot — a lengyel/délszláv/magyar, kézzel írt
+  recepteknél ez a két szűrő nem hat.
 
 ## Hogyan válogat
 

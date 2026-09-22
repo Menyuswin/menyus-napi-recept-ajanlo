@@ -330,6 +330,7 @@
         </div>
         <div class="field-row">
           <label style="flex-direction:row;gap:6px;"><input type="checkbox" id="pProteinFocus"> Fehérjedús étrendet szeretne</label>
+          <label>Napi kalóriacél (kcal, nem kötelező) <input type="number" id="pCalories" min="800" max="6000" step="50" placeholder="pl. 2000" style="width:110px;"></label>
         </div>
         <div class="intol-grid" id="intolGrid"></div>
         <p class="allergen-note">Az allergén-szűrés az olasz/francia/amerikai/görög konyhánál a Spoonacular saját szűrője; a lengyel/délszláv/magyar (kézzel írt) recepteknél kulcsszó-alapú, tájékoztató jellegű becslés. Súlyos allergia esetén mindig olvasd el magad is a hozzávalókat.</p>
@@ -378,7 +379,7 @@
       <li><strong>MyMemory</strong> (mymemory.translated.net) — ingyenes, kulcs nélküli gépfordító API.</li>
       <li>A lengyel, délszláv és magyar konyha <strong>kézzel, magyarul írt</strong> recept-készlet marad — a Spoonacularban nincs ezekre a régiókra bontott kategória (mindhármat egy általános "kelet-európai" csoportba sorolná), ezért itt a saját, konyhánként pontos válogatás megbízhatóbb.</li>
     </ul>
-    <p class="note">A gépi fordítás minősége nem éri el a kézzel írt szövegét — ha egy fordítás nem sikerül, az oldal az eredeti angol szöveget mutatja, jelezve ezt. Az "egyszerűbb" jelölés rövid elkészítési időt jelent, a "nem kell főtt étel" a tűzhely/sütő nélküli fogásokat emeli előre — ha egy konyhához/étkezéshez épp nincs ilyen (vagy a megadott intoleranciának megfelelő) találat, az oldal ezt jelzi, nem kínál helyette esetleg nem biztonságos alternatívát.</p>
+    <p class="note">A gépi fordítás minősége nem éri el a kézzel írt szövegét — ha egy fordítás nem sikerül, az oldal az eredeti angol szöveget mutatja, jelezve ezt. Az "egyszerűbb" jelölés rövid elkészítési időt jelent, a "nem kell főtt étel" a tűzhely/sütő nélküli fogásokat emeli előre — ha egy konyhához/étkezéshez épp nincs ilyen (vagy a megadott intoleranciának megfelelő) találat, az oldal ezt jelzi, nem kínál helyette esetleg nem biztonságos alternatívát. A napi kalóriacél és a fehérjecél csak az olasz/francia/amerikai/görög (élő) konyháknál befolyásolja az ajánlást, mert csak a Spoonacular ad tápérték-adatot — a lengyel/délszláv/magyar recepteknél nincs kalória-/fehérjeszűrés. A kártyákon látható kcal/fehérje érték a Spoonacular becslése, tájékoztató jellegű.</p>
   </footer>
 
   </div>
@@ -580,7 +581,7 @@
     "Wheat":     ["liszt", "zsemlemorzsa", "tészta", "búzadara"]
   };
 
-  var MEAL_PROTEIN_SHARE = { breakfast: 0.25, lunch: 0.40, dinner: 0.35 };
+  var MEAL_SHARE = { breakfast: 0.25, lunch: 0.40, dinner: 0.35 };
 
   var KEY_STORAGE = "napi-recept-spoonacular-key";
   var PROFILES_STORAGE = "napi-recept-profiles";
@@ -635,7 +636,12 @@
   function mealProteinTarget(profile, slot) {
     if (!profile || !profile.weightKg) return null;
     var daily = profile.weightKg * proteinFactorPerKg(profile.age || 30, !!profile.proteinFocus);
-    return Math.round(daily * MEAL_PROTEIN_SHARE[slot]);
+    return Math.round(daily * MEAL_SHARE[slot]);
+  }
+
+  function mealCalorieTarget(profile, slot) {
+    if (!profile || !profile.calorieTarget) return null;
+    return Math.round(profile.calorieTarget * MEAL_SHARE[slot]);
   }
 
   var shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
@@ -689,6 +695,7 @@
     params.set("cuisine", cuisine.spoonacularCuisine);
     params.set("number", "20");
     params.set("addRecipeInformation", "true");
+    params.set("addRecipeNutrition", "true");
     params.set("instructionsRequired", "true");
     params.set("type", slot === "breakfast" ? "breakfast" : "main course");
     if (profile && profile.intolerances && profile.intolerances.length) {
@@ -696,6 +703,11 @@
     }
     var proteinTarget = mealProteinTarget(profile, slot);
     if (proteinTarget) params.set("minProtein", String(proteinTarget));
+    var calorieTarget = mealCalorieTarget(profile, slot);
+    if (calorieTarget) {
+      params.set("minCalories", String(Math.round(calorieTarget * 0.6)));
+      params.set("maxCalories", String(Math.round(calorieTarget * 1.4)));
+    }
     if (prefs.noCook && (slot === "breakfast" || slot === "dinner")) {
       params.set("maxReadyTime", "15");
     } else if (prefs.easy) {
@@ -768,6 +780,15 @@
     return [];
   }
 
+  function extractNutrient(item, name) {
+    var nutrients = item.nutrition && item.nutrition.nutrients;
+    if (!nutrients) return null;
+    for (var i = 0; i < nutrients.length; i++) {
+      if (nutrients[i].name === name) return Math.round(nutrients[i].amount);
+    }
+    return null;
+  }
+
   function translateRecipe(item) {
     var ingredientsOriginal = (item.extendedIngredients || []).map(function (i) { return i.original || i.name; }).filter(Boolean);
     var stepsOriginal = extractSteps(item);
@@ -790,6 +811,8 @@
         steps: steps,
         time: item.readyInMinutes ? (item.readyInMinutes + " perc") : "",
         servings: item.servings ? (item.servings + " adag") : "",
+        calories: extractNutrient(item, "Calories"),
+        proteinGrams: extractNutrient(item, "Protein"),
         sourceUrl: item.sourceUrl || (item.id ? ("https://spoonacular.com/recipes/-" + item.id) : null),
         translated: fullyTranslated,
         easy: item.readyInMinutes ? item.readyInMinutes <= 25 : false,
@@ -845,6 +868,8 @@
     meta.className = "recipe-meta";
     if (recipe.time) { var t = document.createElement("span"); t.textContent = "Idő: " + recipe.time; meta.appendChild(t); }
     if (recipe.servings) { var s = document.createElement("span"); s.textContent = recipe.servings; meta.appendChild(s); }
+    if (recipe.calories) { var c = document.createElement("span"); c.textContent = "kb. " + recipe.calories + " kcal / adag"; meta.appendChild(c); }
+    if (recipe.proteinGrams) { var pg = document.createElement("span"); pg.textContent = recipe.proteinGrams + " g fehérje"; meta.appendChild(pg); }
     if (meta.childNodes.length) body.appendChild(meta);
 
     if (recipe.easy || recipe.noCook) {
@@ -1056,12 +1081,14 @@
       var weight = parseFloat(document.getElementById("pWeight").value) || 70;
       var gender = document.getElementById("pGender").value;
       var proteinFocus = document.getElementById("pProteinFocus").checked;
+      var caloriesRaw = document.getElementById("pCalories").value;
+      var calorieTarget = caloriesRaw ? parseInt(caloriesRaw, 10) : null;
       var intolerances = Array.prototype.slice.call(document.querySelectorAll(".intol-cb:checked")).map(function (cb) { return cb.value; });
 
       var profile = {
         id: "p" + Date.now() + Math.floor(Math.random() * 1000),
         name: name, age: age, weightKg: weight, gender: gender,
-        proteinFocus: proteinFocus, intolerances: intolerances
+        proteinFocus: proteinFocus, calorieTarget: calorieTarget, intolerances: intolerances
       };
       var list = getProfiles();
       list.push(profile);
@@ -1071,6 +1098,7 @@
       document.getElementById("pName").value = "";
       document.getElementById("pAge").value = "";
       document.getElementById("pWeight").value = "";
+      document.getElementById("pCalories").value = "";
       document.getElementById("pProteinFocus").checked = false;
       document.querySelectorAll(".intol-cb").forEach(function (cb) { cb.checked = false; });
 
