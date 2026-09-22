@@ -20,8 +20,10 @@ kínál egy másik fogást, dátum-váltás nélkül is.
 Nincs egyetlen ingyenes, élőben lekérdezhető adatbázis, amely mind a hét
 konyhát magyar nyelven lefedné — ezért az oldal mind a 7 konyhához (olasz,
 francia, amerikai, lengyel, délszláv, görög, magyar) **kézzel, magyarul
-összeállított** recept-készletet tartalmaz: konyhánként 9 recept (3-3
-reggelire, ebédre, vacsorára), összesen 63.
+összeállított** recept-készletet tartalmaz: konyhánként 24 recept (8-8
+reggelire, ebédre, vacsorára), összesen 168. Minden recept lépésenkénti,
+kezdőbarát leírással készült (pontos hőfok/lángfokozat, időtartam, vizuális
+jelzés minden lépésnél), elkészítési idővel és adagszámmal.
 
 A válogatás háttéranyagaként — klasszikus fogások és jellemző arányok
 tájékozódási pontjaként, nem szó szerinti átvételként — ezt az öt ingyenesen
