@@ -1538,14 +1538,56 @@
     return ml + " ml";
   }
 
-  function aggregateItemQuantities(rawQtyPhrases) {
+  // Kb. sűrűségek (g/ml) gyakori hozzávalókhoz, hogy a kanálban/dl-ben és
+  // dkg-ban/g-ban megadott mennyiségek is összeadhatók legyenek egyazon
+  // hozzávalónál. "preferredFamily" azt jelöli, melyik mértékegység-típus
+  // a természetes ennél a hozzávalónál (folyadékok -> térfogat, száraz/
+  // ömlesztett anyagok -> súly) — ide konvertáljuk az ellenkező típusú
+  // bejegyzéseket is. Csak közelítés, nem konyhai mérlegpontosságú.
+  var INGREDIENT_DENSITY = [
+    { keywords: ["porcukor"], gramsPerMl: 0.6, preferredFamily: "weight" },
+    { keywords: ["cukor"], gramsPerMl: 0.85, preferredFamily: "weight" },
+    { keywords: ["liszt"], gramsPerMl: 0.55, preferredFamily: "weight" },
+    { keywords: ["zsemlemorzsa", "morzsa"], gramsPerMl: 0.45, preferredFamily: "weight" },
+    { keywords: ["kakaópor", "kakaó"], gramsPerMl: 0.5, preferredFamily: "weight" },
+    { keywords: ["só"], gramsPerMl: 1.2, preferredFamily: "weight" },
+    { keywords: ["rizs"], gramsPerMl: 0.85, preferredFamily: "weight" },
+    { keywords: ["méz"], gramsPerMl: 1.4, preferredFamily: "weight" },
+    { keywords: ["olaj"], gramsPerMl: 0.92, preferredFamily: "volume" },
+    { keywords: ["ecet"], gramsPerMl: 1.01, preferredFamily: "volume" },
+    { keywords: ["tejszín", "tejföl", "tej"], gramsPerMl: 1.03, preferredFamily: "volume" },
+    { keywords: ["víz"], gramsPerMl: 1.0, preferredFamily: "volume" }
+  ];
+
+  function findDensity(ingredientName) {
+    var lower = ingredientName.toLowerCase();
+    for (var i = 0; i < INGREDIENT_DENSITY.length; i++) {
+      if (INGREDIENT_DENSITY[i].keywords.some(function (kw) { return lower.indexOf(kw) !== -1; })) {
+        return INGREDIENT_DENSITY[i];
+      }
+    }
+    return null;
+  }
+
+  function aggregateItemQuantities(ingredientName, rawQtyPhrases) {
+    var density = findDensity(ingredientName);
     var buckets = {};
     rawQtyPhrases.forEach(function (phrase) {
       var parsed = parseQuantityPhrase(phrase);
       if (!parsed) return;
       var fam = familyOfUnit(parsed.unit);
       if (!fam) return;
-      buckets[fam] = (buckets[fam] || 0) + toBaseAmount(parsed.value, parsed.unit);
+      var baseAmount = toBaseAmount(parsed.value, parsed.unit);
+
+      if (density && fam === "weight" && density.preferredFamily === "volume") {
+        buckets.volume = (buckets.volume || 0) + baseAmount / density.gramsPerMl;
+        return;
+      }
+      if (density && fam === "volume" && density.preferredFamily === "weight") {
+        buckets.weight = (buckets.weight || 0) + baseAmount * density.gramsPerMl;
+        return;
+      }
+      buckets[fam] = (buckets[fam] || 0) + baseAmount;
     });
     var parts = [];
     Object.keys(buckets).forEach(function (fam) {
@@ -1630,7 +1672,7 @@
       list.sort(function (a, b) { return a.displayName.localeCompare(b.displayName, "hu"); });
       list.forEach(function (item) {
         var li = document.createElement("li");
-        var aggParts = aggregateItemQuantities(item.quantities);
+        var aggParts = aggregateItemQuantities(item.displayName, item.quantities);
         if (aggParts.length) {
           var strong = document.createElement("strong");
           strong.textContent = "≈ " + aggParts.join(" + ") + " ";

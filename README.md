@@ -151,13 +151,26 @@ fűszer/egyéb). Minden tétel elején egy **megközelítő, felfelé kerekítet
 össze, és egy vásárláskor kényelmes méretre kerekíti (pl. negyed/fél/
 háromnegyed/egész kg vagy liter). A pontos, recepteként külön szereplő
 mennyiségek zárójelben, "részletesen" jelöléssel követik, így bármikor
-ellenőrizhető, miből jött ki az összeg. **Korlát**: eltérő mértékegységű
-előfordulásokat (pl. egyszer dkg-ban, máskor evőkanálban megadott
-ugyanazon hozzávalót) nem vonjuk össze biztonságosan, ezek külön
-tételként/összegként jelennek meg; olyan hozzávalóknál, ahol a recept
-nem ad explicit mértékegységet (pl. "1 hagyma" darabszám nélkül), nincs
-összesítés, csak a részletes felsorolás. A lista nyomtatható is (a
-nyomtatási nézet elrejti a navigációt és a vezérlőket).
+ellenőrizhető, miből jött ki az összeg.
+
+Néhány gyakori hozzávalónál (liszt, cukor, porcukor, só, zsemlemorzsa,
+rizs, kakaópor, méz, olaj, ecet, tej/tejszín/tejföl, víz) az oldal egy
+átlagos sűrűség-becslés alapján a kanalas/deciliteres és a
+dekás/grammos bejegyzéseket is **egyetlen összeggé vonja össze** — pl.
+"20 dkg liszt" + "1 evőkanál liszt" egy tételként jelenik meg, mert kb.
+10 g/evőkanál átváltással ugyanabba a súly-összegbe kerül. Minden ilyen
+hozzávalónak van egy "természetes" egysége (folyadékoknál — olaj, víz,
+tej — térfogat; száraz/ömlesztett anyagoknál — liszt, cukor, só —
+súly), és mindig erre vált át. Ez **csak közelítés** (nem konyhai
+mérlegpontosságú sűrűségadat), a zárójeles "részletesen" rész mindig
+mutatja a pontos, eredeti bejegyzéseket. Amit nem ismerünk fel
+(pl. ismeretlen nevű vagy különleges hozzávaló), ott — mint korábban —
+csak az azonos mértékegység-típusú (súly/térfogat/darab) bejegyzések
+adódnak össze, a különbözőek külön maradnak. Olyan hozzávalóknál, ahol
+a recept nem ad explicit mértékegységet (pl. "1 hagyma" darabszám
+nélkül), nincs összesítés, csak a részletes felsorolás. A lista
+nyomtatható is (a nyomtatási nézet elrejti a navigációt és a
+vezérlőket).
 
 ### Boltkereső
 
