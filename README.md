@@ -82,6 +82,12 @@ előkerüljön. Ugyanaznap újratöltve ugyanazt az ajánlást mutatja, éjfélk
 változik. A „Másik ötletet ebből a konyhából” gomb ugyanabból a konyhából
 kínál egy másik fogást, dátum-váltás nélkül is.
 
+Minden étkezés-kártya fejlécében egy kis legördülő menüvel felül is
+bírálható, melyik konyhából kérsz ajánlást aznapra ("Automatikus" vagy
+bármelyik a hét konyha közül) — ez a választás konyhánként/étkezésenként
+külön localStorage-ban megjegyződik, amíg vissza nem állítod
+"Automatikus"-ra.
+
 Két jelölőnégyzet is szűri az ajánlást (localStorage-ban megjegyezve):
 
 - **„Egyszerűbb recepteket szeretnék”** — rövid elkészítési idejű, kevesebb

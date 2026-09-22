@@ -215,10 +215,15 @@
     display: flex; align-items: center; justify-content: space-between; gap: 10px;
   }
   .meal-name { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .head-controls { display: flex; align-items: center; gap: 8px; }
   .cuisine-badge {
     display: inline-flex; align-items: center; font-size: 12px; font-weight: 600;
     padding: 3px 9px; border-radius: 999px; background: var(--accent-tint); color: var(--accent-2);
     border: 1px solid var(--line-soft);
+  }
+  .cuisine-select {
+    font-size: 11.5px; padding: 3px 7px; border-radius: 999px; min-width: 0;
+    background: var(--surface-2); color: var(--ink-2);
   }
   .card .body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
   .recipe-title { font-size: 19px; font-weight: 700; margin: 0; line-height: 1.25; }
@@ -352,21 +357,30 @@
     <article class="card" data-slot="breakfast">
       <div class="head">
         <span class="meal-name">Reggeli</span>
-        <span class="cuisine-badge" data-role="cuisine">—</span>
+        <div class="head-controls">
+          <span class="cuisine-badge" data-role="cuisine">—</span>
+          <select class="cuisine-select" data-role="cuisine-select" aria-label="Konyha kiválasztása reggelire"></select>
+        </div>
       </div>
       <div class="body"></div>
     </article>
     <article class="card" data-slot="lunch">
       <div class="head">
         <span class="meal-name">Ebéd</span>
-        <span class="cuisine-badge" data-role="cuisine">—</span>
+        <div class="head-controls">
+          <span class="cuisine-badge" data-role="cuisine">—</span>
+          <select class="cuisine-select" data-role="cuisine-select" aria-label="Konyha kiválasztása ebédre"></select>
+        </div>
       </div>
       <div class="body"></div>
     </article>
     <article class="card" data-slot="dinner">
       <div class="head">
         <span class="meal-name">Vacsora</span>
-        <span class="cuisine-badge" data-role="cuisine">—</span>
+        <div class="head-controls">
+          <span class="cuisine-badge" data-role="cuisine">—</span>
+          <select class="cuisine-select" data-role="cuisine-select" aria-label="Konyha kiválasztása vacsorára"></select>
+        </div>
       </div>
       <div class="body"></div>
     </article>
@@ -650,6 +664,29 @@
   function cuisineForMeal(meal, doy) {
     var idx = (doy + meal.offset) % CUISINES.length;
     return CUISINES[idx];
+  }
+
+  var CUISINE_OVERRIDE_KEY = "napi-recept-cuisine-override";
+
+  function getCuisineOverrides() {
+    try { return JSON.parse(localStorage.getItem(CUISINE_OVERRIDE_KEY) || "{}"); } catch (e) { return {}; }
+  }
+
+  function setCuisineOverride(slot, key) {
+    var overrides = getCuisineOverrides();
+    if (key) overrides[slot] = key; else delete overrides[slot];
+    try { localStorage.setItem(CUISINE_OVERRIDE_KEY, JSON.stringify(overrides)); } catch (e) {}
+  }
+
+  function findCuisine(key) {
+    for (var i = 0; i < CUISINES.length; i++) if (CUISINES[i].key === key) return CUISINES[i];
+    return null;
+  }
+
+  function effectiveCuisineForMeal(meal, doy) {
+    var overrides = getCuisineOverrides();
+    var overridden = overrides[meal.slot] && findCuisine(overrides[meal.slot]);
+    return overridden || cuisineForMeal(meal, doy);
   }
 
   // ---------- curated (lengyel / délszláv / magyar) ----------
@@ -962,8 +999,34 @@
   function loadAll() {
     var doy = dayOfYear(new Date());
     MEALS.forEach(function (meal) {
-      var cuisine = cuisineForMeal(meal, doy);
+      var cuisine = effectiveCuisineForMeal(meal, doy);
       loadSlot(meal.slot, cuisine);
+    });
+  }
+
+  function initCuisineSelects() {
+    var overrides = getCuisineOverrides();
+    MEALS.forEach(function (meal) {
+      var card = document.querySelector('.card[data-slot="' + meal.slot + '"]');
+      var select = card.querySelector('[data-role="cuisine-select"]');
+      select.innerHTML = "";
+      var autoOpt = document.createElement("option");
+      autoOpt.value = "";
+      autoOpt.textContent = "Automatikus";
+      select.appendChild(autoOpt);
+      CUISINES.forEach(function (c) {
+        var opt = document.createElement("option");
+        opt.value = c.key;
+        opt.textContent = c.label;
+        select.appendChild(opt);
+      });
+      select.value = overrides[meal.slot] || "";
+      select.addEventListener("change", function () {
+        setCuisineOverride(meal.slot, select.value);
+        shuffleOffset[meal.slot] = 0;
+        var doy = dayOfYear(new Date());
+        loadSlot(meal.slot, effectiveCuisineForMeal(meal, doy));
+      });
     });
   }
 
@@ -1339,6 +1402,7 @@
     initSettings();
     renderShowcase();
     initSubmitForm();
+    initCuisineSelects();
 
     var easyBox = document.getElementById("prefEasy");
     var noCookBox = document.getElementById("prefNoCook");
