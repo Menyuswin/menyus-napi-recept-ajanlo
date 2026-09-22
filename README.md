@@ -22,11 +22,13 @@ magyarul lefedné, ezért az oldal két forrást kever:
   A Spoonacularban ugyanis nincs ezekre a régiókra bontott kategória —
   mindhármat egy általános "kelet-európai" csoportba sorolná —, ezért itt a
   saját válogatás pontosabb és megbízhatóbb, mint amit egy élő API adna. A
-  lengyel és délszláv konyha 24-28 receptet tartalmaz étkezésenként; a
-  magyar konyha ennél jóval bővebb (179 recept), mert egy 1920-as évekbeli
-  magyar háztartási könyv, Bánffyhunyadi Hunyady Erzsébet *A jó házi
-  konyha* (MEK) átnézésével sok további, ma is jól használható fogást
-  emeltünk be belőle, mai nyelvre és mértékegységekre átírva.
+  magyar konyha egy 1920-as évekbeli magyar háztartási könyv,
+  Bánffyhunyadi Hunyady Erzsébet *A jó házi konyha* (MEK) átnézésével bővült
+  179 receptre. A lengyel és délszláv konyhához nem volt feldolgozható,
+  szabadon elérhető digitalizált könyv, ezért ezt a két konyhát hiteles,
+  ténylegesen létező fogásokkal bővítettük tovább (56, illetve 57 recept) —
+  a délszláv "gyűjtőkonyha" szándékosan vegyes: szerb, horvát, bosnyák,
+  szlovén, macedón és bolgár eredetű ételeket is tartalmaz.
 
 ### Spoonacular API-kulcs
 
