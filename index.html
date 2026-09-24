@@ -345,19 +345,8 @@
   <div class="tab-panel" data-tab="ajanlo" id="tabAjanlo">
 
   <details class="panel" id="settingsPanel">
-    <summary>Beállítások — API-kulcs és profilok</summary>
+    <summary>Beállítások — profilok</summary>
     <div class="inner">
-      <div>
-        <div class="field-row">
-          <label>Saját Spoonacular API-kulcs (nem kötelező)
-            <input type="password" id="apiKeyInput" placeholder="ide illeszd a kulcsod" autocomplete="off">
-          </label>
-          <button class="small primary" id="saveKeyBtn" type="button">Mentés</button>
-          <span class="key-status" id="keyStatus">Nincs kulcs beállítva — az olasz, francia, amerikai és görög ajánlás enélkül nem működik.</span>
-        </div>
-        <p class="allergen-note">Az oldal alapból egy megosztott, az oldal tulajdonosa által beüzemelt szolgáltatáson keresztül ér el élő recepteket — ezzel semmit nem kell itt beállítanod. Ha mégis megadod a saját, ingyenes kulcsodat (<a href="https://spoonacular.com/food-api/console#Dashboard" target="_blank" rel="noopener">spoonacular.com/food-api/console</a>), az élvez elsőbbséget, és a saját napi keretedet használja a közössel megosztott helyett. A kulcs csak a böngésződben (localStorage) tárolódik, sosem kerül fel a szerverre vagy a kódba.</p>
-      </div>
-
       <div>
         <div class="field-row" style="margin-bottom:8px;">
           <strong style="font-size:13px;color:var(--ink-2);">Kinek főzöl ma?</strong>
@@ -698,9 +687,10 @@
     try { localStorage.setItem(PREFS_KEY, JSON.stringify(prefs)); } catch (e) {}
   }
 
-  function getApiKey() {
-    try { return localStorage.getItem(KEY_STORAGE) || ""; } catch (e) { return ""; }
-  }
+  // Korábban a látogatók saját Spoonacular-kulcsot is megadhattak; ma már
+  // mindenki a megosztott proxyt használja, ezért a régi, böngészőben maradt
+  // kulcsot töröljük.
+  try { localStorage.removeItem(KEY_STORAGE); } catch (e) {}
 
   function getProfiles() {
     try { return JSON.parse(localStorage.getItem(PROFILES_STORAGE) || "[]"); } catch (e) { return []; }
@@ -819,24 +809,18 @@
 
   // ---------- live (Spoonacular + MyMemory) ----------
 
-  // Ha valaki megadja a saját Spoonacular kulcsát (Beállítások), az élvez
-  // elsőbbséget — közvetlenül a Spoonacularhoz megy, a saját napi keretét
-  // használva. Enélkül az oldal a SHARED_PROXY_BASE-en beállított,
-  // megosztott proxy-szolgáltatást hívja (ha a tulajdonos telepítette és
-  // beállította — lásd README "Megosztott API-proxy" szakasz); a proxy a
-  // saját szerverén tárolt kulccsal egészíti ki a kérést, így a kulcs
-  // sosem kerül a böngészőbe. Ha egyik sincs beállítva, az élő konyhák
-  // nem működnek — ezt a felület jelzi.
+  // Az élő konyhák a SHARED_PROXY_BASE-en beállított, megosztott
+  // proxy-szolgáltatáson keresztül érik el a Spoonacular API-t (lásd README
+  // "Megosztott API-proxy" szakasz); a proxy a saját szerverén tárolt
+  // kulccsal egészíti ki a kérést, így a kulcs sosem kerül a böngészőbe.
+  // Ha a proxy nincs beállítva, az élő konyhák nem működnek — ezt a felület
+  // jelzi.
   var SHARED_PROXY_BASE = "https://napirecept-proxy.nyugatioldalon.workers.dev";
 
   function buildSpoonacularUrl(cuisine, slot, profile, dayType) {
-    var key = getApiKey();
-    var endpoint = key
-      ? "https://api.spoonacular.com/recipes/complexSearch"
-      : (SHARED_PROXY_BASE ? SHARED_PROXY_BASE.replace(/\/$/, "") + "/recipes/complexSearch" : null);
-    if (!endpoint) return null;
+    if (!SHARED_PROXY_BASE) return null;
+    var endpoint = SHARED_PROXY_BASE.replace(/\/$/, "") + "/recipes/complexSearch";
     var params = new URLSearchParams();
-    if (key) params.set("apiKey", key);
     params.set("cuisine", cuisine.spoonacularCuisine);
     params.set("number", "20");
     params.set("addRecipeInformation", "true");
@@ -1127,7 +1111,9 @@
       });
     }).catch(function (err) {
       if (err && err.code === "no-key") {
-        renderMessage(card, "state-error", "Ehhez a konyhához Spoonacular-hozzáférés kell — nincs beállítva sem saját API-kulcs (Beállítások), sem elérhető megosztott szolgáltatás.");
+        renderMessage(card, "state-error", "Az élő receptszolgáltatás most nem érhető el — a magyar, lengyel és délszláv konyha addig is működik.");
+      } else if (err && err.status === 402) {
+        renderMessage(card, "state-error", "A mai közös recept-keret elfogyott — holnap újra elérhető. Addig a magyar, lengyel és délszláv konyha működik.");
       } else {
         renderMessage(card, "state-error", "Nem sikerült elérni a recept-adatbázist.", function () { loadSlot(slot, cuisine); });
       }
@@ -1376,7 +1362,9 @@
       });
     }).catch(function (err) {
       if (err && err.code === "no-key") {
-        renderMessageInto(body, "state-error", "Ehhez a konyhához Spoonacular-hozzáférés kell — nincs beállítva sem saját API-kulcs (Beállítások), sem elérhető megosztott szolgáltatás.");
+        renderMessageInto(body, "state-error", "Az élő receptszolgáltatás most nem érhető el — a magyar, lengyel és délszláv konyha addig is működik.");
+      } else if (err && err.status === 402) {
+        renderMessageInto(body, "state-error", "A mai közös recept-keret elfogyott — holnap újra elérhető. Addig a magyar, lengyel és délszláv konyha működik.");
       } else {
         renderMessageInto(body, "state-error", "Nem sikerült elérni a recept-adatbázist.", function () { loadWeekMeal(mealEl, date, meal, profile); });
       }
@@ -1884,20 +1872,6 @@
 
   // ---------- settings / profiles UI ----------
 
-  function renderKeyStatus() {
-    var el = document.getElementById("keyStatus");
-    if (getApiKey()) {
-      el.textContent = "Saját kulcs beállítva — ez élvez elsőbbséget a megosztott szolgáltatással szemben.";
-      el.classList.add("ok");
-    } else if (SHARED_PROXY_BASE) {
-      el.textContent = "Nincs saját kulcs megadva, de az oldal megosztott szolgáltatása automatikusan működik — nem kötelező kulcsot megadnod.";
-      el.classList.add("ok");
-    } else {
-      el.textContent = "Nincs kulcs beállítva, és megosztott szolgáltatás sincs elérhető — az olasz, francia, amerikai és görög ajánlás enélkül nem működik.";
-      el.classList.remove("ok");
-    }
-  }
-
   function renderIntolGrid() {
     var grid = document.getElementById("intolGrid");
     grid.innerHTML = "";
@@ -1972,17 +1946,6 @@
   }
 
   function initSettings() {
-    var apiKeyInput = document.getElementById("apiKeyInput");
-    apiKeyInput.value = getApiKey();
-    renderKeyStatus();
-
-    document.getElementById("saveKeyBtn").addEventListener("click", function () {
-      try { localStorage.setItem(KEY_STORAGE, apiKeyInput.value.trim()); } catch (e) {}
-      renderKeyStatus();
-      shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
-      loadAll();
-    });
-
     renderIntolGrid();
     renderProfileChips();
     renderActiveProfileLabel();

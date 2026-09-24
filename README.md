@@ -30,40 +30,27 @@ magyarul lefedné, ezért az oldal két forrást kever:
   a délszláv "gyűjtőkonyha" szándékosan vegyes: szerb, horvát, bosnyák,
   szlovén, macedón és bolgár eredetű ételeket is tartalmaz.
 
-### Spoonacular API-kulcs
+### Spoonacular-hozzáférés
 
-Az olasz/francia/amerikai/görög ajánláshoz Spoonacular-hozzáférés kell.
-Ehhez két út van, és **mindkettő egyszerre is elérhető** — ha van saját
-kulcsod, az élvez elsőbbséget, egyébként az oldal automatikusan a
-megosztott proxy-szolgáltatást használja (ha az üzemel):
+Az olasz/francia/amerikai/görög ajánláshoz Spoonacular-hozzáférés kell. Ezt
+a látogatóknak nem kell beállítaniuk: az oldal egy megosztott proxyn
+(Cloudflare Worker) keresztül éri el az API-t, a kulcs kizárólag a Worker
+titkos változójában él, egyetlen látogató böngészőjébe sem kerül. (Korábban
+a Beállításokban saját kulcsot is meg lehetett adni; ez a lehetőség
+megszűnt, a böngészőkben maradt régi kulcsokat az oldal törli.)
 
-- **Saját kulcs** (Beállítások panel): mindenki megadhatja a saját,
-  ingyenes Spoonacular API-kulcsát, ami kizárólag az ő böngészőjének
-  `localStorage`-ában tárolódik, sosem kerül a kódba vagy szerverre —
-  ekkor a saját napi keretét használja, függetlenül a megosztott
-  szolgáltatástól. Ingyenes kulcs igényelhető itt:
-  [spoonacular.com/food-api/console](https://spoonacular.com/food-api/console#Dashboard).
-- **Megosztott proxy-szolgáltatás** (az oldal tulajdonosa állítja be
-  egyszer — lásd alább): ha valaki nem ad meg saját kulcsot, az oldal
-  ezt hívja, és a kulcs soha nem látszik egyetlen látogató böngészőjében
-  sem.
+**Fontos, amit tudni érdemes**: a Spoonacular ingyenes kerete (kb. 150
+pont/nap) az összes látogató között oszlik meg. A proxy gyorsítótára
+sokat spórol, de nagy forgalomnál a keret egy nap alatt elfogyhat —
+ilyenkor az oldal jelzi, hogy a mai közös keret elfogyott, és aznapra csak
+a lengyel/délszláv/magyar ajánlás működik. Egy publikus repóba sosem
+szabad közvetlenül beleírni a kulcsot — a GitHub kulcsvadász botjai
+percek-órák alatt megtalálják és ellopják.
 
-**Fontos, amit tudni érdemes a megosztott szolgáltatásról**: mivel a
-Spoonacular ingyenes kerete (jellemzően kb. 150 hívás/nap) az összes
-látogató között oszlik meg, nagyobb forgalomnál előfordulhat, hogy egy
-nap alatt elfogy — ilyenkor mindenkinek, aki nem adott meg saját
-kulcsot, aznapra megszűnik az élő konyhák elérése (a lengyel/délszláv/
-magyar ajánlás ettől függetlenül mindig működik). Egy publikus repóba
-sosem szabad közvetlenül beleírni a kulcsot — a GitHub kulcsvadász
-botjai percek-órák alatt megtalálják és ellopják —, ezért a kulcs
-kizárólag a lentebb leírt Cloudflare Worker Environment Variable-jában
-él, amit a böngésző soha nem lát.
+### Megosztott API-proxy (az oldal tulajdonosának szól)
 
-### Megosztott API-proxy (opcionális, az oldal tulajdonosának szól)
-
-Ha azt szeretnéd, hogy a látogatóknak **ne kelljen** saját Spoonacular-kulcsot
-megadniuk, egy ingyenes [Cloudflare Workers](https://workers.cloudflare.com/)
-proxy-t kell beüzemelned — ez egy apró háttérszolgáltatás, ami a Te
+Az élő konyhákhoz egy ingyenes [Cloudflare Workers](https://workers.cloudflare.com/)
+proxy kell — ez egy apró háttérszolgáltatás, ami a Te
 kulcsoddal egészíti ki a kéréseket, mielőtt továbbküldi a Spoonacularnak,
 így a kulcs sosem kerül a böngészőbe. A proxy kódja a repóban van:
 [`spoonacular-proxy-worker.js`](./spoonacular-proxy-worker.js).
@@ -91,12 +78,10 @@ Lépésről lépésre (kb. 5-10 perc, nem igényel programozói tudást):
    ```
 8. Mentsd el, commitold és push-old a változtatást a `main` ágra (ha nem magad csinálod, kérd meg, akitől a fejlesztést kéred, hogy tegye meg).
 
-Ha ezután megnyitod az oldalt, a Beállítások panelen a kulcs-státusz
-"a megosztott szolgáltatás automatikusan működik" szöveget mutatja majd
-kulcs megadása nélkül is. Ha bármikor le szeretnéd állítani a megosztást
-(pl. mert elfogyott a napi keret vagy vissza szeretnél térni a
-mindenki-a-sajátját modellre), elég visszaírni a sort üresre
-(`var SHARED_PROXY_BASE = "";`) — a Worker-t magát nem kötelező törölni.
+A jelenlegi, működő proxy címe:
+`https://napirecept-proxy.nyugatioldalon.workers.dev` (a KV-gyorsítótárral
+együtt be van állítva). Ha a Worker kódja a repóban változik, az új
+tartalmat a Cloudflare szerkesztőjébe is be kell másolni és telepíteni.
 
 ## Személyre szabás
 
