@@ -226,6 +226,7 @@
     background: var(--surface-2); color: var(--ink-2);
   }
   .card .body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .recipe-img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background: var(--surface-2); }
   .recipe-title { font-size: 19px; font-weight: 700; margin: 0; line-height: 1.25; }
   .recipe-meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
   .recipe-tags { display: flex; gap: 6px; flex-wrap: wrap; }
@@ -950,6 +951,7 @@
         calories: extractNutrient(item, "Calories"),
         proteinGrams: extractNutrient(item, "Protein"),
         sourceUrl: item.sourceUrl || (item.id ? ("https://spoonacular.com/recipes/-" + item.id) : null),
+        image: item.image ? item.image.replace(/-\d+x\d+\./, "-556x370.") : null,
         translated: fullyTranslated,
         easy: item.readyInMinutes ? item.readyInMinutes <= 25 : false,
         noCook: false
@@ -1000,6 +1002,17 @@
   function renderRecipeInto(body, cuisine, recipe, opts) {
     opts = opts || {};
     body.innerHTML = "";
+
+    if (recipe.image) {
+      var img = document.createElement("img");
+      img.className = "recipe-img";
+      img.src = recipe.image;
+      img.alt = recipe.title;
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.addEventListener("error", function () { img.remove(); });
+      body.appendChild(img);
+    }
 
     var title = document.createElement("h3");
     title.className = "recipe-title";
