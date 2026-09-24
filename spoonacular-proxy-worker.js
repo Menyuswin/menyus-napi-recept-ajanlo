@@ -8,13 +8,22 @@
 // és soha nem kerül a látogatók böngészőjébe sem.
 //
 // Csak a Spoonacular /recipes/complexSearch végpontját engedi át, és csak a
-// megadott GitHub Pages origin felől érkező kéréseket fogadja el (CORS).
+// megadott GitHub Pages origin felől érkező kéréseket fogadja el (CORS) — más
+// oldalról vagy közvetlen (böngészőn kívüli) hívásból érkező kérést elutasít.
+//
+// Ha a Workerhez RECIPE_CACHE néven egy Workers KV tároló is hozzá van kötve
+// (opcionális, lásd README), a sikeres válaszokat CACHE_SECONDS ideig ott
+// tartja: mivel az ajánló naponta ugyanazokat a lekérdezéseket küldi (azonos
+// konyha, étkezés, szűrők), a többedik látogató már a tárolóból kapja a
+// választ, és nem fogyasztja a Spoonacular napi keretét. (A beépített Cache
+// API a *.workers.dev címeken nem működik, ezért kell hozzá KV.)
 
 const ALLOWED_ORIGIN = "https://menyuswin.github.io";
 const UPSTREAM = "https://api.spoonacular.com/recipes/complexSearch";
+const CACHE_SECONDS = 6 * 60 * 60;
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const origin = request.headers.get("Origin") || "";
     const corsHeaders = {
       "Access-Control-Allow-Origin": origin === ALLOWED_ORIGIN ? ALLOWED_ORIGIN : "null",
@@ -25,6 +34,10 @@ export default {
 
     if (request.method === "OPTIONS") {
       return new Response(null, { headers: corsHeaders });
+    }
+
+    if (origin !== ALLOWED_ORIGIN) {
+      return new Response("Forbidden", { status: 403, headers: corsHeaders });
     }
 
     const url = new URL(request.url);
@@ -43,16 +56,32 @@ export default {
       if (key.toLowerCase() === "apikey") continue; // a kliens sosem adhat meg saját kulcsot ezen a végponton
       upstream.searchParams.set(key, value);
     }
-    upstream.searchParams.set("apiKey", env.SPOONACULAR_API_KEY);
+    upstream.searchParams.sort();
 
+    // A gyorsítótár kulcsa a kulcs nélküli lekérdezés, így a kulcs a tárolóba sem kerül.
+    const kv = env.RECIPE_CACHE;
+    const cacheKey = upstream.search;
+    if (kv) {
+      const cached = await kv.get(cacheKey);
+      if (cached !== null) {
+        return new Response(cached, {
+          headers: { ...corsHeaders, "Content-Type": "application/json", "X-Proxy-Cache": "HIT" }
+        });
+      }
+    }
+
+    upstream.searchParams.set("apiKey", env.SPOONACULAR_API_KEY);
     const upstreamRes = await fetch(upstream.toString());
     const body = await upstreamRes.text();
+    const contentType = upstreamRes.headers.get("Content-Type") || "application/json";
+
+    if (kv && upstreamRes.ok) {
+      ctx.waitUntil(kv.put(cacheKey, body, { expirationTtl: CACHE_SECONDS }));
+    }
+
     return new Response(body, {
       status: upstreamRes.status,
-      headers: {
-        ...corsHeaders,
-        "Content-Type": upstreamRes.headers.get("Content-Type") || "application/json"
-      }
+      headers: { ...corsHeaders, "Content-Type": contentType, "X-Proxy-Cache": "MISS" }
     });
   }
 };

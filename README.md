@@ -79,6 +79,7 @@ Lépésről lépésre (kb. 5-10 perc, nem igényel programozói tudást):
    - Érték: a saját, ingyenes Spoonacular API-kulcsod
    - Típus: **Secret** (titkosított, ha van ilyen választási lehetőség — így a Cloudflare felületén sem látszik utólag)
    - Mentsd el (Save / Deploy).
+   - *Opcionális, de ajánlott — gyorsítótár:* a bal menüben **Storage & Databases → Workers KV → Create** (vagy **Create instance**), név pl. `napirecept-cache`. Utána a Worker oldalán **Bindings → Add binding → KV namespace**: a változó neve (Variable name) legyen pontosan `RECIPE_CACHE`, a tároló a most létrehozott `napirecept-cache`. Így ugyanazt a lekérdezést 6 órán belül a Worker a tárolóból szolgálja ki, és nem fogy vele a Spoonacular napi kerete. Enélkül is működik, csak gyorsabban fogy a keret.
 6. A Worker oldalán megjelenik egy URL, valami ilyesmi: `https://napirecept-proxy.<a-te-cloudflare-felhasználóneved>.workers.dev`. Másold ki ezt a linket.
 7. Nyisd meg az `index.html` fájlt, keresd meg ezt a sort:
    ```js
