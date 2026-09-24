@@ -648,8 +648,22 @@
     { value: "Shellfish", label: "Kagyló/rák" },
     { value: "Soy",       label: "Szója" },
     { value: "Sesame",    label: "Szezámmag" },
-    { value: "Wheat",     label: "Búza" }
+    { value: "Wheat",     label: "Búza" },
+    { value: "InsulinResistance", label: "Inzulinrezisztencia" }
   ];
+  // Az inzulinrezisztencia nem összetevő-intolerancia, ezért a Spoonacular
+  // "intolerances" paraméterébe nem kerül: élő konyháknál szénhidrát- és
+  // cukorplafon helyettesíti (a gyakori napi ~160 g szénhidrátos IR-étrend
+  // étkezésenkénti arányával), a kézzel írt recepteknél a hozzáadott cukros
+  // fogások kiesnek, a gyors felszívódású köretes fogások pedig hátrébb
+  // sorolódnak.
+  var IR_VALUE = "InsulinResistance";
+  var IR_DAILY_CARBS = 160;
+  var IR_MAX_SUGAR_PER_MEAL = 15;
+  var IR_FAST_CARB_KEYWORDS = ["zsemle", "kalács", "kifli", "bagett", "kenyér", "rizs", "burgonya", "krumpli", "tészta", "nokedli", "galuska", "makaróni", "búzadara", "piskóta"];
+  function hasInsulinResistance(profile) {
+    return !!(profile && profile.intolerances && profile.intolerances.indexOf(IR_VALUE) !== -1);
+  }
 
   var ALLERGEN_KEYWORDS = {
     "Dairy":     ["tej", "vaj", "sajt", "joghurt", "tejföl", "tejszín", "ricotta", "mozzarella", "feta", "kajmak", "parmezán", "besamel", "gruyère", "cheddar"],
@@ -662,7 +676,8 @@
     "Shellfish": ["garnéla", "kagyló", "rák"],
     "Soy":       ["szója"],
     "Sesame":    ["szezám"],
-    "Wheat":     ["liszt", "zsemlemorzsa", "tészta", "búzadara"]
+    "Wheat":     ["liszt", "zsemlemorzsa", "tészta", "búzadara"],
+    "InsulinResistance": ["cukor", "méz", "lekvár", "szirup", "karamell", "csokoládé", "kakaó"]
   };
 
   var MEAL_SHARE = { breakfast: 0.25, lunch: 0.40, dinner: 0.35 };
@@ -780,6 +795,13 @@
       });
       if (!filtered.length) return { pool: [], safetyEmpty: true };
     }
+    if (hasInsulinResistance(profile)) {
+      var bySlowCarb = filtered.filter(function (r) {
+        var text = r.ingredients.join(" ").toLowerCase();
+        return !IR_FAST_CARB_KEYWORDS.some(function (kw) { return text.indexOf(kw) !== -1; });
+      });
+      if (bySlowCarb.length) filtered = bySlowCarb;
+    }
 
     if (dayType === "unnepnap") {
       var byFestive = filtered.filter(function (r) { return !r.easy; });
@@ -821,8 +843,15 @@
     params.set("addRecipeNutrition", "true");
     params.set("instructionsRequired", "true");
     params.set("type", slot === "breakfast" ? "breakfast" : "main course");
-    if (profile && profile.intolerances && profile.intolerances.length) {
-      params.set("intolerances", profile.intolerances.join(","));
+    var apiIntolerances = profile && profile.intolerances
+      ? profile.intolerances.filter(function (v) { return v !== IR_VALUE; })
+      : [];
+    if (apiIntolerances.length) {
+      params.set("intolerances", apiIntolerances.join(","));
+    }
+    if (hasInsulinResistance(profile)) {
+      params.set("maxCarbs", String(Math.round(IR_DAILY_CARBS * MEAL_SHARE[slot])));
+      params.set("maxSugar", String(IR_MAX_SUGAR_PER_MEAL));
     }
     var proteinTarget = mealProteinTarget(profile, slot);
     if (proteinTarget) params.set("minProtein", String(proteinTarget));

@@ -114,6 +114,17 @@ kikapcsolja a szűrést).
   konyhánál/étkezésnél nincs biztonságos találata, az oldal ezt jelzi, és
   **nem** kínál helyette esetleg nem biztonságos alternatívát. Súlyos
   allergia esetén mindig olvasd el magad is a hozzávalókat.
+- **Inzulinrezisztencia**: az intoleranciák között külön jelölhető, de
+  nem összetevő-szűrőként működik. Az élő konyháknál az oldal
+  étkezésenkénti szénhidrát- és cukorplafont küld a Spoonacularnak (a
+  gyakori napi ~160 g szénhidrátos IR-étrendből a 25/40/35%-os elosztással:
+  reggeli max. 40 g, ebéd 64 g, vacsora 56 g szénhidrát, és étkezésenként
+  max. 15 g cukor). A kézzel írt recepteknél kiesnek a hozzáadott cukrot,
+  mézet, lekvárt, szirupot, csokoládét tartalmazó fogások, és az oldal
+  előnyben részesíti azokat, amelyekben nincs gyors felszívódású köret
+  (kenyér, péksütemény, rizs, burgonya, tészta, nokedli stb.) — ha ilyen
+  nincs, a többi közül választ. Ez is tájékoztató becslés, nem orvosi
+  vagy dietetikusi étrend.
 - **Fehérjecél**: a testsúlyból és a "fehérjedús" jelölésből az oldal egy
   ökölszabály-alapú napi fehérjecélt számol (kb. 1,2–1,6 g/ttkg, korfüggő
   szorzóval), amit reggeli/ebéd/vacsora között 25/40/35%-ban oszt szét, és
