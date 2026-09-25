@@ -414,7 +414,7 @@
   </div>
 
   <div class="global-cuisine">
-    <span class="global-cuisine-label">Konyha mindhárom étkezésre:</span>
+    <span class="global-cuisine-label">Konyhák (több is kiválasztható):</span>
     <div class="global-cuisine-btns" id="globalCuisineBtns"></div>
   </div>
 
@@ -772,9 +772,30 @@
     return Math.floor(diff / 86400000);
   }
 
+  // Ha a felhasználó egy vagy több konyhára szűkítette az ajánlást (lásd
+  // CUISINE_FILTER_KEY), a napi automatikus rotáció csak eközül választ.
+  // Üres szűrő = nincs megszorítás, az összes konyha jöhet, mint eddig.
+  var CUISINE_FILTER_KEY = "napi-recept-cuisine-filter";
+
+  function getCuisineFilter() {
+    try { return JSON.parse(localStorage.getItem(CUISINE_FILTER_KEY) || "[]"); } catch (e) { return []; }
+  }
+
+  function setCuisineFilter(keys) {
+    try { localStorage.setItem(CUISINE_FILTER_KEY, JSON.stringify(keys)); } catch (e) {}
+  }
+
+  function getAllowedCuisines() {
+    var filter = getCuisineFilter();
+    if (!filter.length) return CUISINES;
+    var allowed = CUISINES.filter(function (c) { return filter.indexOf(c.key) !== -1; });
+    return allowed.length ? allowed : CUISINES;
+  }
+
   function cuisineForMeal(meal, doy) {
-    var idx = (doy + meal.offset) % CUISINES.length;
-    return CUISINES[idx];
+    var pool = getAllowedCuisines();
+    var idx = (doy + meal.offset) % pool.length;
+    return pool[idx];
   }
 
   var CUISINE_OVERRIDE_KEY = "napi-recept-cuisine-override";
@@ -1215,9 +1236,12 @@
     });
   }
 
-  // Egy jól látható, közös kapcsoló, ami egyszerre állítja be ugyanazt a
-  // konyhát mind a három étkezésre (felülbírálva a napi automatikus
-  // rotációt) — azoknak, akik nem az alapértelmezett ajánlást szeretnék.
+  // Egy jól látható, több konyha egyidejű kijelölését engedő gombsor —
+  // ha egy vagy több konyhát kiválasztasz, a napi automatikus rotáció
+  // (és a heti menü) mindhárom étkezésnél csak eközül a konyhák közül
+  // választ; a kártyánkénti "Automatikus" legördülők ebből a szűkített
+  // készletből forognak tovább. Az "Automatikus (mind)" gomb törli a
+  // szűrést, ekkor újra mind a hét konyha jöhet, mint eddig.
   function initGlobalCuisineBtns() {
     var container = document.getElementById("globalCuisineBtns");
     container.innerHTML = "";
@@ -1230,16 +1254,22 @@
       btn.textContent = label;
       btn.setAttribute("aria-pressed", "false");
       btn.addEventListener("click", function () {
-        MEALS.forEach(function (meal) { setCuisineOverride(meal.slot, key); });
+        if (key === "") {
+          setCuisineFilter([]);
+        } else {
+          var filter = getCuisineFilter();
+          var idx = filter.indexOf(key);
+          if (idx !== -1) filter.splice(idx, 1); else filter.push(key);
+          setCuisineFilter(filter);
+        }
         shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
-        initCuisineSelects();
         loadAll();
         refreshGlobalCuisineBtns();
       });
       container.appendChild(btn);
     }
 
-    makeBtn("", "Automatikus");
+    makeBtn("", "Automatikus (mind)");
     CUISINES.forEach(function (c) { makeBtn(c.key, c.label); });
     refreshGlobalCuisineBtns();
   }
@@ -1247,12 +1277,11 @@
   function refreshGlobalCuisineBtns() {
     var container = document.getElementById("globalCuisineBtns");
     if (!container) return;
-    var overrides = getCuisineOverrides();
-    var slots = MEALS.map(function (m) { return overrides[m.slot] || ""; });
-    var allSame = slots.every(function (v) { return v === slots[0]; });
-    var active = allSame ? slots[0] : null;
+    var filter = getCuisineFilter();
     Array.prototype.forEach.call(container.children, function (btn) {
-      btn.setAttribute("aria-pressed", active !== null && btn.dataset.cuisineKey === active ? "true" : "false");
+      var key = btn.dataset.cuisineKey;
+      var pressed = key === "" ? filter.length === 0 : filter.indexOf(key) !== -1;
+      btn.setAttribute("aria-pressed", pressed ? "true" : "false");
     });
   }
 
