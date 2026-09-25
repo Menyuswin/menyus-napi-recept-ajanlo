@@ -505,6 +505,10 @@
       <button type="button" class="small" id="weekTodayBtn">Aktuális hét</button>
       <button type="button" class="small" id="weekNextBtn">Következő hét ›</button>
     </div>
+    <div class="global-cuisine">
+      <span class="global-cuisine-label">Konyhák (több is kiválasztható):</span>
+      <div class="global-cuisine-btns" id="globalCuisineBtnsWeek"></div>
+    </div>
     <p class="allergen-note">A heti nézet ugyanazt a kiválasztott profilt (intolerancia, kalória-, fehérjecél) és az "Egyszerűbb"/"Nem kell főzni" beállításokat használja, mint a napi ajánló. Hétköznapra a rendszer automatikusan egyszerűbb, gyorsabb fogásokat részesít előnyben, ünnepnapra a különlegesebbeket (nem "Egyszerű" jelölésű recepteket) — ezt, és a napok konyháját is, bármelyik napon kézzel felülbírálhatod. Élő (olasz/francia/amerikai/görög) konyháknál ünnepnapon csak az időkorlát oldódik fel, mert a Spoonacular nem jelez "ünnepi" fogást.</p>
     <div class="week-grid" id="weekGrid"></div>
 
@@ -1277,46 +1281,54 @@
   // választ; a kártyánkénti "Automatikus" legördülők ebből a szűkített
   // készletből forognak tovább. Az "Automatikus (mind)" gomb törli a
   // szűrést, ekkor újra mind a hét konyha jöhet, mint eddig.
+  var GLOBAL_CUISINE_CONTAINER_IDS = ["globalCuisineBtns", "globalCuisineBtnsWeek"];
+
   function initGlobalCuisineBtns() {
-    var container = document.getElementById("globalCuisineBtns");
-    container.innerHTML = "";
+    GLOBAL_CUISINE_CONTAINER_IDS.forEach(function (containerId) {
+      var container = document.getElementById(containerId);
+      if (!container) return;
+      container.innerHTML = "";
 
-    function makeBtn(key, label) {
-      var btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "global-cuisine-btn";
-      btn.dataset.cuisineKey = key;
-      btn.textContent = label;
-      btn.setAttribute("aria-pressed", "false");
-      btn.addEventListener("click", function () {
-        if (key === "") {
-          setCuisineFilter([]);
-        } else {
-          var filter = getCuisineFilter();
-          var idx = filter.indexOf(key);
-          if (idx !== -1) filter.splice(idx, 1); else filter.push(key);
-          setCuisineFilter(filter);
-        }
-        shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
-        loadAll();
-        refreshGlobalCuisineBtns();
-      });
-      container.appendChild(btn);
-    }
+      function makeBtn(key, label) {
+        var btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "global-cuisine-btn";
+        btn.dataset.cuisineKey = key;
+        btn.textContent = label;
+        btn.setAttribute("aria-pressed", "false");
+        btn.addEventListener("click", function () {
+          if (key === "") {
+            setCuisineFilter([]);
+          } else {
+            var filter = getCuisineFilter();
+            var idx = filter.indexOf(key);
+            if (idx !== -1) filter.splice(idx, 1); else filter.push(key);
+            setCuisineFilter(filter);
+          }
+          shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
+          loadAll();
+          refreshWeekIfVisible();
+          refreshGlobalCuisineBtns();
+        });
+        container.appendChild(btn);
+      }
 
-    makeBtn("", "Automatikus (mind)");
-    CUISINES.forEach(function (c) { makeBtn(c.key, c.label); });
+      makeBtn("", "Automatikus (mind)");
+      CUISINES.forEach(function (c) { makeBtn(c.key, c.label); });
+    });
     refreshGlobalCuisineBtns();
   }
 
   function refreshGlobalCuisineBtns() {
-    var container = document.getElementById("globalCuisineBtns");
-    if (!container) return;
     var filter = getCuisineFilter();
-    Array.prototype.forEach.call(container.children, function (btn) {
-      var key = btn.dataset.cuisineKey;
-      var pressed = key === "" ? filter.length === 0 : filter.indexOf(key) !== -1;
-      btn.setAttribute("aria-pressed", pressed ? "true" : "false");
+    GLOBAL_CUISINE_CONTAINER_IDS.forEach(function (containerId) {
+      var container = document.getElementById(containerId);
+      if (!container) return;
+      Array.prototype.forEach.call(container.children, function (btn) {
+        var key = btn.dataset.cuisineKey;
+        var pressed = key === "" ? filter.length === 0 : filter.indexOf(key) !== -1;
+        btn.setAttribute("aria-pressed", pressed ? "true" : "false");
+      });
     });
   }
 

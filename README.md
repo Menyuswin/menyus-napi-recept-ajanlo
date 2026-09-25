@@ -163,13 +163,14 @@ bármelyik a hét konyha közül) — ez a választás konyhánként/étkezésen
 külön localStorage-ban megjegyződik, amíg vissza nem állítod
 "Automatikus"-ra.
 
-A "Napi ajánló" fülön, a jelölőnégyzetek alatt egy jól látható gombsor
-("Konyhák (több is kiválasztható)") is szűkítheti az ajánlást — egy vagy
-több konyhára kattintva a napi automatikus rotáció (és a heti menü is)
-onnantól csakis a kiválasztott konyhák közül választ mindhárom
-étkezésnél; "Automatikus (mind)"-ra visszaállítva újra mind a hét konyha
-jöhet. Ez a szűrés (localStorage: `napi-recept-cuisine-filter`) a napi
-alap-rotáció készletét szűkíti, ezért egy adott étkezésre a kártyán
+A "Napi ajánló" fülön, a jelölőnégyzetek alatt, és a "Heti menü" fülön,
+a hét-navigáció alatt is megjelenik egy jól látható gombsor ("Konyhák
+(több is kiválasztható)") — a két hely ugyanazt az állapotot mutatja és
+vezérli. Egy vagy több konyhára kattintva a napi automatikus rotáció (és
+a heti menü is) onnantól csakis a kiválasztott konyhák közül választ
+mindhárom étkezésnél; "Automatikus (mind)"-ra visszaállítva újra mind a
+hét konyha jöhet. Ez a szűrés (localStorage: `napi-recept-cuisine-filter`)
+a napi alap-rotáció készletét szűkíti, ezért egy adott étkezésre a kártyán
 külön beállított konyha (lásd fent) továbbra is felülbírálja azt.
 
 Két jelölőnégyzet is szűri az ajánlást (localStorage-ban megjegyezve):
