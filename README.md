@@ -1,9 +1,9 @@
 # Napi recept ajánló
 
 Egyoldalas alkalmazás: minden nap ajánl egy-egy **reggelit, ebédet és
-vacsorát**, kilenc konyha közül válogatva — olasz, francia, amerikai,
-lengyel, délszláv, görög, magyar, indiai és kínai. Minden recept magyarul
-jelenik meg, igény szerint
+vacsorát**, tíz konyha közül válogatva — olasz, francia, amerikai,
+lengyel, délszláv, görög, magyar, indiai, kínai és japán. Minden recept
+magyarul jelenik meg, igény szerint
 személyre szabva (kor, testsúly, nem, ételintolerancia, fehérjecél). Nincs
 build-lépés, nincs backend — statikus oldal, ami a böngészőből közvetlenül
 hív külső, ingyenes API-kat.
@@ -59,15 +59,23 @@ visszaállítanál, vagy egy nyolcadik konyhát adnál hozzá élőben, azonnal
   szambárral, uttapam, aloo paratha, dhokla, thepla; ebédre dal fry, chana
   masala, rajma, aloo gobi, palak paneer, szambár, rasam, paneer tikka;
   vacsorára Butter Chicken, Chicken Biryani, Rogan Josh, Dal Makhani,
-  Tandoori Chicken, Chicken Korma, Saag Gosht. `mode: "curated"` — ez és a
-  kínai konyha eleve sosem volt Spoonacularon élőben, nincs `curatedSlots`
-  mező, csak a korábbi lengyel/délszláv/magyar mintát követi.
+  Tandoori Chicken, Chicken Korma, Saag Gosht. `mode: "curated"` — ez, a
+  kínai és a japán konyha eleve sosem volt Spoonacularon élőben, nincs
+  `curatedSlots` mezőjük, csak a korábbi lengyel/délszláv/magyar mintát
+  követik.
 - **Kínai** — szintén mindhárom étkezés kézzel írt, 15-15 hiteles kínai
   recepttel (webes kutatás alapján összeállítva): reggelire pl. congee,
   youtiao, baozi, jianbing, xiaolongbao, cheung fun, mantou; ebédre wonton
   leves, chow mein, jangzsoui sült rizs, dan dan noodles, zhajiangmian,
   jiaozi, gőzölt hal; vacsorára Kung Pao Chicken, Mapo Tofu, Peking Duck,
   Hong Shao Rou, Char Siu, General Tso's Chicken. `mode: "curated"`.
+- **Japán** — szintén mindhárom étkezés kézzel írt, 15-15 hiteles japán
+  recepttel (webes kutatás alapján összeállítva): reggelire pl. tamagoyaki,
+  dashimaki tamago, miso leves, natto gohan, onigiri, ohitashi; ebédre
+  shoyu/tonkotsu/miso ramen, zaru soba, kitsune udon, oyakodon, gyudon,
+  katsudon, karaage, chirashi don; vacsorára nigiri és maki sushi, sashimi,
+  tempura, sukiyaki, shabu-shabu, teriyaki csirke, yakitori, tonkatsu,
+  okonomiyaki, takoyaki, gyoza. `mode: "curated"`.
 - **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad.
   A Spoonacularban ugyanis nincs ezekre a régiókra bontott kategória —
   mindhármat egy általános "kelet-európai" csoportba sorolná —, ezért itt a
@@ -192,14 +200,14 @@ Az alábbi négy szűrő leírása kitér arra is, hogyan viselkedne egy élő
 
 A mai dátumból (az év hányadik napja) az alkalmazás determinisztikusan
 kiválaszt 3 különböző konyhát — egyet reggelire, egyet ebédre, egyet
-vacsorára —, úgy, hogy egy hét alatt mind a 9 konyha egyenlő eséllyel
+vacsorára —, úgy, hogy egy hét alatt mind a 10 konyha egyenlő eséllyel
 előkerüljön. Ugyanaznap újratöltve ugyanazt az ajánlást mutatja, éjfélkor
 változik. A „Másik ötletet ebből a konyhából” gomb ugyanabból a konyhából
 kínál egy másik fogást, dátum-váltás nélkül is.
 
 Minden étkezés-kártya fejlécében egy kis legördülő menüvel felül is
 bírálható, melyik konyhából kérsz ajánlást aznapra ("Automatikus" vagy
-bármelyik a kilenc konyha közül) — ez a választás konyhánként/étkezésenként
+bármelyik a tíz konyha közül) — ez a választás konyhánként/étkezésenként
 külön localStorage-ban megjegyződik, amíg vissza nem állítod
 "Automatikus"-ra.
 
@@ -209,7 +217,7 @@ a hét-navigáció alatt is megjelenik egy jól látható gombsor ("Konyhák
 vezérli. Egy vagy több konyhára kattintva a napi automatikus rotáció (és
 a heti menü is) onnantól csakis a kiválasztott konyhák közül választ
 mindhárom étkezésnél; "Automatikus (mind)"-ra visszaállítva újra mind a
-kilenc konyha jöhet. Ez a szűrés (localStorage: `napi-recept-cuisine-filter`)
+tíz konyha jöhet. Ez a szűrés (localStorage: `napi-recept-cuisine-filter`)
 a napi alap-rotáció készletét szűkíti, ezért egy adott étkezésre a kártyán
 külön beállított konyha (lásd fent) továbbra is felülbírálja azt.
 
