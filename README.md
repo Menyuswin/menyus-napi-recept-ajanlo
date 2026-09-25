@@ -155,6 +155,14 @@ bármelyik a hét konyha közül) — ez a választás konyhánként/étkezésen
 külön localStorage-ban megjegyződik, amíg vissza nem állítod
 "Automatikus"-ra.
 
+A "Napi ajánló" fülön, a jelölőnégyzetek alatt egy jól látható,
+gombsoros választó ("Konyha mindhárom étkezésre") is felülbírálhatja
+egyszerre mind a három étkezést ugyanarra a konyhára — azoknak, akik nem
+az automatikus, konyhánként váltakozó ajánlást szeretnék, hanem
+következetesen egy adott nemzeti konyhából kérnek recepteket. Ugyanazt a
+localStorage-os felülbírálást állítja be, mint a kártyánkénti legördülők,
+csak mindháromra egyszerre.
+
 Két jelölőnégyzet is szűri az ajánlást (localStorage-ban megjegyezve):
 
 - **„Egyszerűbb recepteket szeretnék”** — rövid elkészítési idejű, kevesebb

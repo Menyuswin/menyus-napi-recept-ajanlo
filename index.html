@@ -204,6 +204,22 @@
   }
   .prefs input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
 
+  .global-cuisine {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 12px 0 0;
+    padding: 12px 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+  }
+  .global-cuisine-label { font-size: 13.5px; font-weight: 600; color: var(--ink-2); }
+  .global-cuisine-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+  .global-cuisine-btn {
+    font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer;
+    padding: 6px 13px; border-radius: 999px; border: 1px solid var(--line);
+    background: var(--surface-2); color: var(--ink-2);
+  }
+  .global-cuisine-btn:hover { border-color: var(--accent); color: var(--accent-2); }
+  .global-cuisine-btn[aria-pressed="true"] {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+
   .active-profile { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
   .active-profile strong { color: var(--accent-2); }
 
@@ -286,7 +302,7 @@
 
   @media print {
     .tabs, .week-nav, .store-finder, #buildShoppingListBtn, #settingsPanel,
-    .prefs, .active-profile, .submit-form, footer.sources { display: none !important; }
+    .prefs, .global-cuisine, .active-profile, .submit-form, footer.sources { display: none !important; }
     .daytype-select, .cuisine-select, .shuffle, .foot { display: none !important; }
   }
 
@@ -395,6 +411,11 @@
   <div class="prefs">
     <label><input type="checkbox" id="prefEasy"> Egyszerűbb recepteket szeretnék</label>
     <label><input type="checkbox" id="prefNoCook"> Reggelire és vacsorára nem kell mindenáron főtt étel</label>
+  </div>
+
+  <div class="global-cuisine">
+    <span class="global-cuisine-label">Konyha mindhárom étkezésre:</span>
+    <div class="global-cuisine-btns" id="globalCuisineBtns"></div>
   </div>
 
   <section class="meals" id="meals">
@@ -1189,7 +1210,49 @@
         shuffleOffset[meal.slot] = 0;
         var doy = dayOfYear(new Date());
         loadSlot(meal.slot, effectiveCuisineForMeal(meal, doy));
+        refreshGlobalCuisineBtns();
       });
+    });
+  }
+
+  // Egy jól látható, közös kapcsoló, ami egyszerre állítja be ugyanazt a
+  // konyhát mind a három étkezésre (felülbírálva a napi automatikus
+  // rotációt) — azoknak, akik nem az alapértelmezett ajánlást szeretnék.
+  function initGlobalCuisineBtns() {
+    var container = document.getElementById("globalCuisineBtns");
+    container.innerHTML = "";
+
+    function makeBtn(key, label) {
+      var btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = "global-cuisine-btn";
+      btn.dataset.cuisineKey = key;
+      btn.textContent = label;
+      btn.setAttribute("aria-pressed", "false");
+      btn.addEventListener("click", function () {
+        MEALS.forEach(function (meal) { setCuisineOverride(meal.slot, key); });
+        shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
+        initCuisineSelects();
+        loadAll();
+        refreshGlobalCuisineBtns();
+      });
+      container.appendChild(btn);
+    }
+
+    makeBtn("", "Automatikus");
+    CUISINES.forEach(function (c) { makeBtn(c.key, c.label); });
+    refreshGlobalCuisineBtns();
+  }
+
+  function refreshGlobalCuisineBtns() {
+    var container = document.getElementById("globalCuisineBtns");
+    if (!container) return;
+    var overrides = getCuisineOverrides();
+    var slots = MEALS.map(function (m) { return overrides[m.slot] || ""; });
+    var allSame = slots.every(function (v) { return v === slots[0]; });
+    var active = allSame ? slots[0] : null;
+    Array.prototype.forEach.call(container.children, function (btn) {
+      btn.setAttribute("aria-pressed", active !== null && btn.dataset.cuisineKey === active ? "true" : "false");
     });
   }
 
@@ -2263,6 +2326,7 @@
     renderShowcase();
     initSubmitForm();
     initCuisineSelects();
+    initGlobalCuisineBtns();
     initWeekly();
     initShoppingList();
     initStoreFinder();
