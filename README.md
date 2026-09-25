@@ -7,26 +7,28 @@ személyre szabva (kor, testsúly, nem, ételintolerancia, fehérjecél). Nincs
 build-lépés, nincs backend — statikus oldal, ami a böngészőből közvetlenül
 hív külső, ingyenes API-kat.
 
-## Hibrid adatforrás
+## Adatforrás
 
-Nincs egyetlen ingyenes adatbázis, amely mind a hét konyhát pontosan,
-magyarul lefedné, ezért az oldal két forrást kever:
+Eredetileg nem volt egyetlen ingyenes adatbázis sem, amely mind a hét
+konyhát pontosan, magyarul lefedte volna, ezért az oldal két forrást
+kevert: élő Spoonacular-recepteket és kézzel írt recepteket. Mára a
+kézzel írt oldal annyira kibővült (dokumentum-feldolgozás és webes
+kutatás útján), hogy **minden konyha minden étkezése kézzel írt** —
+élő Spoonacular-hívás jelenleg nincs az oldalon. Az élő-lekérdezés kódja
+(proxy, fordítás, kalória-/fehérjecél-küldés a Spoonacularnak) a helyén
+maradt, dormant állapotban — ha egy `curatedSlots` beállítást
+visszaállítanál, vagy egy nyolcadik konyhát adnál hozzá élőben, azonnal
+újra működne, de jelen állapotban egyetlen kártya sem hívja.
 
-- **Francia ebéd** — élőben (a francia reggeli/vacsora kivételével, lásd
-  lent), a [Spoonacular](https://spoonacular.com)
-  recept-API-jából (több százezer recept, beépített intolerancia- és
-  fehérjeszűrővel). A cím, hozzávalók és lépések angolul érkeznek, az oldal a
-  [MyMemory](https://mymemory.translated.net) ingyenes, kulcs nélküli
-  fordító API-val fordítja le a ténylegesen kiválasztott napi recepteket
-  (nem az egész adatbázist — csak amit aznap mutat).
-- **Francia reggeli és vacsora** — 40 kézzel írt reggeli (tartine-ok,
-  croissant, pain au chocolat, brioche, kouign-amann, madeleine, œufs
-  cocotte, omlettek, croque-monsieur/-madame, quiche, crêpe, galette,
-  pain perdu, joghurtos-gyümölcsös reggelik) és 20 kézzel írt vacsora
-  (Ratatouille, Coq au Vin, Boeuf Bourguignon, Cassoulet, Duck Confit,
-  Bouillabaisse stb.), magyar nyelven. A francia ebéd továbbra is élő
-  Spoonacular-recept; a kódban ezt a konyha `curatedSlots: ["breakfast",
-  "dinner"]` beállítása kapcsolja.
+- **Francia** — 40 kézzel írt reggeli (tartine-ok, croissant, pain au
+  chocolat, brioche, kouign-amann, madeleine, œufs cocotte, omlettek,
+  croque-monsieur/-madame, quiche, crêpe, galette, pain perdu), 107
+  kézzel írt ebéd (salade lyonnaise, velouté-k, quiche-k és sós piték,
+  jambon-beurre és társai, hajdinagalette-ek, gratinek, œufs mimosa,
+  terrine-ek és pástétomok, aligot, socca, choucroute stb. — webes
+  kutatás alapján) és 20 kézzel írt vacsora (Ratatouille, Coq au Vin,
+  Boeuf Bourguignon, Cassoulet, Duck Confit, Bouillabaisse stb.), magyar
+  nyelven. `curatedSlots: ["breakfast", "lunch", "dinner"]`.
 - **Olasz** — mindhárom étkezés kézzel írt. A vacsora (20 recept: Spaghetti
   alla Carbonara, Risotto ai Funghi, Ossobuco alla Milanese, Lasagne al
   Forno, Saltimbocca, Porchetta stb.) volt meg először; a reggeli (15:
@@ -63,28 +65,32 @@ magyarul lefedné, ezért az oldal két forrást kever:
   a délszláv "gyűjtőkonyha" szándékosan vegyes: szerb, horvát, bosnyák,
   szlovén, macedón és bolgár eredetű ételeket is tartalmaz.
 
-### Spoonacular-hozzáférés
+### Spoonacular-hozzáférés (jelenleg nincs használatban)
 
-A francia ebédhez Spoonacular-hozzáférés kell — ez az egyetlen még élő
-adatforrásból jövő szelet (minden más
-konyha és étkezés kézzel írt). Ezt
-a látogatóknak nem kell beállítaniuk: az oldal egy megosztott proxyn
-(Cloudflare Worker) keresztül éri el az API-t, a kulcs kizárólag a Worker
+Mivel minden konyha minden étkezése kézzel írt, jelenleg **egyetlen
+kártya sem** hív élő Spoonacular-adatot — ez a szakasz azért maradt meg,
+mert a kód (proxy, fordítás) még mindig a helyén van, és bármikor
+visszakapcsolható, ha egy `curatedSlots`-ot visszaállítanál, vagy egy
+nyolcadik konyhát élőben adnál hozzá. Amíg ez nem történik meg, a
+látogatóknak semmit nem kell beállítaniuk. Aktív állapotban az oldal egy
+megosztott proxyn (Cloudflare Worker) keresztül érné el az API-t, a
+kulcs kizárólag a Worker
 titkos változójában él, egyetlen látogató böngészőjébe sem kerül. (Korábban
 a Beállításokban saját kulcsot is meg lehetett adni; ez a lehetőség
 megszűnt, a böngészőkben maradt régi kulcsokat az oldal törli.)
 
-**Fontos, amit tudni érdemes**: a Spoonacular ingyenes kerete (kb. 150
-pont/nap) az összes látogató között oszlik meg. A proxy gyorsítótára
-sokat spórol, de nagy forgalomnál a keret egy nap alatt elfogyhat —
-ilyenkor az oldal jelzi, hogy a mai közös keret elfogyott, és aznapra csak
-a lengyel/délszláv/magyar ajánlás működik. Egy publikus repóba sosem
-szabad közvetlenül beleírni a kulcsot — a GitHub kulcsvadász botjai
-percek-órák alatt megtalálják és ellopják.
+**Fontos, amit tudni érdemes (ha valaha újra aktiválnád)**: a Spoonacular
+ingyenes kerete (kb. 150 pont/nap) az összes látogató között oszlik meg.
+A proxy gyorsítótára sokat spórol, de nagy forgalomnál a keret egy nap
+alatt elfogyhat — ilyenkor az oldal jelzi, hogy a mai közös keret
+elfogyott, és aznapra csak a kézzel írt (jelenleg: az összes) konyha
+ajánlása működik. Egy publikus repóba sosem szabad közvetlenül beleírni
+a kulcsot — a GitHub kulcsvadász botjai percek-órák alatt megtalálják és
+ellopják.
 
-### Megosztott API-proxy (az oldal tulajdonosának szól)
+### Megosztott API-proxy (az oldal tulajdonosának szól — jelenleg nem kell hozzá, ha nem aktiválsz élő konyhát)
 
-Az élő konyhákhoz egy ingyenes [Cloudflare Workers](https://workers.cloudflare.com/)
+Élő konyhákhoz egy ingyenes [Cloudflare Workers](https://workers.cloudflare.com/)
 proxy kell — ez egy apró háttérszolgáltatás, ami a Te
 kulcsoddal egészíti ki a kéréseket, mielőtt továbbküldi a Spoonacularnak,
 így a kulcs sosem kerül a böngészőbe. A proxy kódja a repóban van:
@@ -127,9 +133,13 @@ főzöl ma?" chipek közül mindig egy aktív — az oldal az ő adatai szerint
 szűr, amíg másikra nem váltasz (vagy "Mindenkinek / nincs profil"-ra, ami
 kikapcsolja a szűrést).
 
-- **Intolerancia**: az élő (Spoonacular-os) konyháknál az API saját,
-  pontos szűrője érvényesül. A kézzel írt lengyel/délszláv/magyar
-  recepteknél az oldal a hozzávalók szövegében keres kulcsszavakat (pl.
+Az alábbi négy szűrő leírása kitér arra is, hogyan viselkedne egy élő
+(Spoonacular-os) konyhánál/étkezésnél — jelenleg ilyen nincs (lásd
+"Adatforrás" fent), úgyhogy a gyakorlatban mindenhol a kézzel írt ág fut:
+
+- **Intolerancia**: élő (Spoonacular-os) konyhánál/étkezésnél az API
+  saját, pontos szűrője érvényesülne. A kézzel írt recepteknél (jelenleg
+  mindenhol) az oldal a hozzávalók szövegében keres kulcsszavakat (pl.
   "tej", "liszt", "dió") — ez **tájékoztató jellegű becslés**, nem
   klinikai pontosságú. Ha a kiválasztott intoleranciának egy adott
   konyhánál/étkezésnél nincs biztonságos találata, az oldal ezt jelzi, és
@@ -157,10 +167,11 @@ kikapcsolja a szűrést).
   Spoonacularnak, hogy ne szűkítse túlságosan a választékot. A kártyákon,
   ha az API adott tápérték-adatot, megjelenik a becsült kalória- és
   fehérjeérték is.
-- **Fontos korlát**: a kalória- és fehérjecél kizárólag az élő
-  Spoonacular-szeletnél (francia ebéd) érvényesül, mert csak a
-  Spoonacular ad tápérték-adatot — a kézzel írt recepteknél
-  (a többi konyhánál és étkezésnél) ez a két szűrő nem hat.
+- **Fontos korlát**: a kalória- és fehérjecél kizárólag élő
+  Spoonacular-szeletnél érvényesülne, mert csak a Spoonacular ad
+  tápérték-adatot — jelenleg tehát ez a két szűrő sehol nem hat (kivéve
+  a kártyákon megjelenő, dokumentum-alapú becsült kcal-értéket, ahol
+  a forrás ezt megadta, pl. az amerikai konyhánál).
 
 ## Hogyan válogat
 
@@ -190,8 +201,9 @@ külön beállított konyha (lásd fent) továbbra is felülbírálja azt.
 Két jelölőnégyzet is szűri az ajánlást (localStorage-ban megjegyezve):
 
 - **„Egyszerűbb recepteket szeretnék”** — rövid elkészítési idejű, kevesebb
-  hozzávalós recepteket részesít előnyben (élő konyháknál a Spoonacular
-  `maxReadyTime` paraméterén keresztül).
+  hozzávalós recepteket részesít előnyben (a kézzel írt recepteknél az
+  "Egyszerű" jelölés alapján; élő konyhánál/étkezésnél a Spoonacular
+  `maxReadyTime` paraméterén keresztül működne).
 - **„Reggelire és vacsorára nem kell mindenáron főtt étel”** — ebédnél nem
   számít, de reggelinél és vacsoránál olyan fogásokat hoz előre, amikhez nem
   kell tűzhely vagy sütő.
@@ -221,14 +233,13 @@ típusba sorolódik:
 
 A nap típusa befolyásolja az ajánlást: **hétköznapra** a rendszer
 automatikusan az "Egyszerűbb" szűrőnek megfelelő, gyorsabb fogásokat
-részesíti előnyben (a kézzel írt recepteknél az "Egyszerű" címkés
-tételeket, élő Spoonacular-szeleteknél rövidebb elkészítési idővel);
-**ünnepnapra** ezzel ellentétben a kézzel írt konyháknál kifejezetten a
-nem "Egyszerű" jelölésű, különlegesebb fogásokat hozza előre. **Fontos
-korlát**: az élő Spoonacular-szeletnél (francia ebéd) a Spoonacular nem
-jelez "ünnepi" jelleget, ezért ott ünnepnapon
-csak az időkorlát oldódik fel — a kiválasztás nem lesz kifejezetten
-ünnepibb, mint hétvégén.
+részesíti előnyben (az "Egyszerű" címkés tételeket; élő
+Spoonacular-szeletnél rövidebb elkészítési idővel működne);
+**ünnepnapra** ezzel ellentétben kifejezetten a nem "Egyszerű" jelölésű,
+különlegesebb fogásokat hozza előre. Élő Spoonacular-szeletnél a
+Spoonacular nem jelezne "ünnepi" jelleget, ott ünnepnapon csak az
+időkorlát oldódna fel — ez a korlát jelenleg egyetlen konyhánál/
+étkezésnél sem érvényesül, mert nincs élő szelet.
 
 Minden nap minden étkezéséhez ugyanaz a kis konyhaválasztó legördülő
 tartozik, mint a napi ajánlóban — ez a heti nézetben dátumhoz és
@@ -320,6 +331,10 @@ történik, mielőtt bármi bekerülne az adatbázisba, ugyanúgy, ahogy a régi
 könyvből átvett tartalmaknál.
 
 ## Korlátok, amiket érdemes tudni
+
+*(A gépi fordításról szóló alábbi pontok jelenleg nem érvényesülnek,
+mert nincs élő konyha/étkezés, amit fordítani kellene — dormant kódról
+van szó, lásd "Adatforrás" fent.)*
 
 - A gépi fordítás minősége nem éri el a kézzel írt szövegét.
 - A fordítás **soronként** történik (cím, minden hozzávaló, minden lépés
