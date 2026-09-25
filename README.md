@@ -12,12 +12,18 @@ hív külső, ingyenes API-kat.
 Nincs egyetlen ingyenes adatbázis, amely mind a hét konyhát pontosan,
 magyarul lefedné, ezért az oldal két forrást kever:
 
-- **Olasz, francia, amerikai, görög** — élőben, a [Spoonacular](https://spoonacular.com)
+- **Olasz, francia, amerikai, görög** — élőben (a francia reggeli kivételével, lásd lent), a [Spoonacular](https://spoonacular.com)
   recept-API-jából (több százezer recept, beépített intolerancia- és
   fehérjeszűrővel). A cím, hozzávalók és lépések angolul érkeznek, az oldal a
   [MyMemory](https://mymemory.translated.net) ingyenes, kulcs nélküli
   fordító API-val fordítja le a ténylegesen kiválasztott napi recepteket
   (nem az egész adatbázist — csak amit aznap mutat).
+- **Francia reggeli** — 40 kézzel írt, magyar nyelvű recept (tartine-ok,
+  croissant, pain au chocolat, brioche, kouign-amann, madeleine, œufs
+  cocotte, omlettek, croque-monsieur/-madame, quiche, crêpe, galette,
+  pain perdu, joghurtos-gyümölcsös reggelik), becsült kalóriával. A
+  francia ebéd és vacsora továbbra is élő Spoonacular-recept; a kódban ezt
+  a konyha `curatedSlots: ["breakfast"]` beállítása kapcsolja.
 - **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad.
   A Spoonacularban ugyanis nincs ezekre a régiókra bontott kategória —
   mindhármat egy általános "kelet-európai" csoportba sorolná —, ezért itt a
