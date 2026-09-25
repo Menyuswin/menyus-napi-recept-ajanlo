@@ -12,8 +12,8 @@ hív külső, ingyenes API-kat.
 Nincs egyetlen ingyenes adatbázis, amely mind a hét konyhát pontosan,
 magyarul lefedné, ezért az oldal két forrást kever:
 
-- **Olasz, francia** — élőben (a francia reggeli/vacsora és az olasz
-  vacsora kivételével, lásd lent), a [Spoonacular](https://spoonacular.com)
+- **Francia ebéd** — élőben (a francia reggeli/vacsora kivételével, lásd
+  lent), a [Spoonacular](https://spoonacular.com)
   recept-API-jából (több százezer recept, beépített intolerancia- és
   fehérjeszűrővel). A cím, hozzávalók és lépések angolul érkeznek, az oldal a
   [MyMemory](https://mymemory.translated.net) ingyenes, kulcs nélküli
@@ -27,10 +27,15 @@ magyarul lefedné, ezért az oldal két forrást kever:
   Bouillabaisse stb.), magyar nyelven. A francia ebéd továbbra is élő
   Spoonacular-recept; a kódban ezt a konyha `curatedSlots: ["breakfast",
   "dinner"]` beállítása kapcsolja.
-- **Olasz vacsora** — 20 kézzel írt, klasszikus olasz recept (Spaghetti alla
-  Carbonara, Risotto ai Funghi, Ossobuco alla Milanese, Lasagne al Forno,
-  Saltimbocca, Porchetta stb.), magyar nyelven. Az olasz reggeli és ebéd
-  továbbra is élő Spoonacular-recept; `curatedSlots: ["dinner"]`.
+- **Olasz** — mindhárom étkezés kézzel írt. A vacsora (20 recept: Spaghetti
+  alla Carbonara, Risotto ai Funghi, Ossobuco alla Milanese, Lasagne al
+  Forno, Saltimbocca, Porchetta stb.) volt meg először; a reggeli (15:
+  cornetti, crostata di frutta, maritozzo, torta della nonna, granita di
+  mandorla con brioche stb.) és az ebéd (15: spaghetti al pomodoro,
+  amatriciana, pesto alla Genovese, pasta alla Norma, risotto alla
+  Milanese, focaccia Genovese stb.) webes kutatás alapján összeállítva
+  készült el utólag. `curatedSlots: ["breakfast", "lunch", "dinner"]`,
+  nincs élő Spoonacular-hívás ennél a konyhánál sem.
 - **Amerikai** — mindhárom étkezés (reggeli, ebéd, vacsora) kézzel írt,
   15-15 klasszikus amerikai recepttel (amerikai palacsinta, cheeseburger,
   BLT, déli sült csirke, pulled pork, barbecue-csirke, hálaadási
@@ -60,8 +65,8 @@ magyarul lefedné, ezért az oldal két forrást kever:
 
 ### Spoonacular-hozzáférés
 
-Az olasz reggelihez/ebédhez és a francia ebédhez Spoonacular-hozzáférés
-kell — ez a két egyetlen még élő adatforrásból jövő szelet (minden más
+A francia ebédhez Spoonacular-hozzáférés kell — ez az egyetlen még élő
+adatforrásból jövő szelet (minden más
 konyha és étkezés kézzel írt). Ezt
 a látogatóknak nem kell beállítaniuk: az oldal egy megosztott proxyn
 (Cloudflare Worker) keresztül éri el az API-t, a kulcs kizárólag a Worker
@@ -153,8 +158,8 @@ kikapcsolja a szűrést).
   ha az API adott tápérték-adatot, megjelenik a becsült kalória- és
   fehérjeérték is.
 - **Fontos korlát**: a kalória- és fehérjecél kizárólag az élő
-  Spoonacular-szeleteknél (olasz reggeli/ebéd, francia ebéd) érvényesül,
-  mert csak a Spoonacular ad tápérték-adatot — a kézzel írt recepteknél
+  Spoonacular-szeletnél (francia ebéd) érvényesül, mert csak a
+  Spoonacular ad tápérték-adatot — a kézzel írt recepteknél
   (a többi konyhánál és étkezésnél) ez a két szűrő nem hat.
 
 ## Hogyan válogat
@@ -220,8 +225,8 @@ részesíti előnyben (a kézzel írt recepteknél az "Egyszerű" címkés
 tételeket, élő Spoonacular-szeleteknél rövidebb elkészítési idővel);
 **ünnepnapra** ezzel ellentétben a kézzel írt konyháknál kifejezetten a
 nem "Egyszerű" jelölésű, különlegesebb fogásokat hozza előre. **Fontos
-korlát**: az élő Spoonacular-szeleteknél (olasz reggeli/ebéd, francia
-ebéd) a Spoonacular nem jelez "ünnepi" jelleget, ezért ott ünnepnapon
+korlát**: az élő Spoonacular-szeletnél (francia ebéd) a Spoonacular nem
+jelez "ünnepi" jelleget, ezért ott ünnepnapon
 csak az időkorlát oldódik fel — a kiválasztás nem lesz kifejezetten
 ünnepibb, mint hétvégén.
 
