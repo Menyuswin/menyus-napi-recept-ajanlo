@@ -12,7 +12,7 @@ hív külső, ingyenes API-kat.
 Nincs egyetlen ingyenes adatbázis, amely mind a hét konyhát pontosan,
 magyarul lefedné, ezért az oldal két forrást kever:
 
-- **Olasz, francia, görög** — élőben (a francia reggeli/vacsora és az olasz
+- **Olasz, francia** — élőben (a francia reggeli/vacsora és az olasz
   vacsora kivételével, lásd lent), a [Spoonacular](https://spoonacular.com)
   recept-API-jából (több százezer recept, beépített intolerancia- és
   fehérjeszűrővel). A cím, hozzávalók és lépések angolul érkeznek, az oldal a
@@ -34,10 +34,18 @@ magyarul lefedné, ezért az oldal két forrást kever:
 - **Amerikai** — mindhárom étkezés (reggeli, ebéd, vacsora) kézzel írt,
   15-15 klasszikus amerikai recepttel (amerikai palacsinta, cheeseburger,
   BLT, déli sült csirke, pulled pork, barbecue-csirke, hálaadási
-  pulykamell, jambalaya stb.), becsült kalóriaértékkel. Ez az egyetlen
-  konyha, ahol mindhárom étkezés kézzel válogatott —
-  `curatedSlots: ["breakfast", "lunch", "dinner"]` —, tehát az amerikai
-  konyhánál nincs élő Spoonacular-hívás.
+  pulykamell, jambalaya stb.), becsült kalóriaértékkel.
+  `curatedSlots: ["breakfast", "lunch", "dinner"]`, nincs élő
+  Spoonacular-hívás ennél a konyhánál.
+- **Görög** — szintén mindhárom étkezés kézzel írt, 15-15 hiteles görög
+  recepttel (webes kutatás alapján összeállítva): reggelire pl. görög
+  joghurt mézzel, sztrapatszada, bugatsa, tiropita, koulouri, loukoumades;
+  ebédre horiatiki saláta, tzatziki, szpanakopita, fakész és fasolada
+  leves, dolmadesz, csirkés szuvlaki, melitzanoszaláta; vacsorára
+  muszaka, pasztíció, gemísztá, sztifádó, kleftikó, gyros, citromos-
+  oregánós sült bárány/csirke, garidesz szaganaki, youvetsi.
+  `curatedSlots: ["breakfast", "lunch", "dinner"]`, nincs élő
+  Spoonacular-hívás ennél a konyhánál sem.
 - **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad.
   A Spoonacularban ugyanis nincs ezekre a régiókra bontott kategória —
   mindhármat egy általános "kelet-európai" csoportba sorolná —, ezért itt a
@@ -52,8 +60,9 @@ magyarul lefedné, ezért az oldal két forrást kever:
 
 ### Spoonacular-hozzáférés
 
-Az olasz/francia/görög ajánláshoz (és a francia ebédhez, olasz reggelihez/
-ebédhez) Spoonacular-hozzáférés kell. Ezt
+Az olasz reggelihez/ebédhez és a francia ebédhez Spoonacular-hozzáférés
+kell — ez a két egyetlen még élő adatforrásból jövő szelet (minden más
+konyha és étkezés kézzel írt). Ezt
 a látogatóknak nem kell beállítaniuk: az oldal egy megosztott proxyn
 (Cloudflare Worker) keresztül éri el az API-t, a kulcs kizárólag a Worker
 titkos változójában él, egyetlen látogató böngészőjébe sem kerül. (Korábban
@@ -144,9 +153,9 @@ kikapcsolja a szűrést).
   ha az API adott tápérték-adatot, megjelenik a becsült kalória- és
   fehérjeérték is.
 - **Fontos korlát**: a kalória- és fehérjecél kizárólag az élő
-  (olasz/francia/amerikai/görög) konyháknál érvényesül, mert csak a
-  Spoonacular ad tápérték-adatot — a lengyel/délszláv/magyar, kézzel írt
-  recepteknél ez a két szűrő nem hat.
+  Spoonacular-szeleteknél (olasz reggeli/ebéd, francia ebéd) érvényesül,
+  mert csak a Spoonacular ad tápérték-adatot — a kézzel írt recepteknél
+  (a többi konyhánál és étkezésnél) ez a két szűrő nem hat.
 
 ## Hogyan válogat
 
@@ -207,13 +216,14 @@ típusba sorolódik:
 
 A nap típusa befolyásolja az ajánlást: **hétköznapra** a rendszer
 automatikusan az "Egyszerűbb" szűrőnek megfelelő, gyorsabb fogásokat
-részesíti előnyben (a kézzel írt lengyel/délszláv/magyar recepteknél az
-"Egyszerű" címkés tételeket, élő konyháknál rövidebb elkészítési idővel);
+részesíti előnyben (a kézzel írt recepteknél az "Egyszerű" címkés
+tételeket, élő Spoonacular-szeleteknél rövidebb elkészítési idővel);
 **ünnepnapra** ezzel ellentétben a kézzel írt konyháknál kifejezetten a
 nem "Egyszerű" jelölésű, különlegesebb fogásokat hozza előre. **Fontos
-korlát**: az élő (olasz/francia/amerikai/görög) konyháknál a Spoonacular
-nem jelez "ünnepi" jelleget, ezért ott ünnepnapon csak az időkorlát
-oldódik fel — a kiválasztás nem lesz kifejezetten ünnepibb, mint hétvégén.
+korlát**: az élő Spoonacular-szeleteknél (olasz reggeli/ebéd, francia
+ebéd) a Spoonacular nem jelez "ünnepi" jelleget, ezért ott ünnepnapon
+csak az időkorlát oldódik fel — a kiválasztás nem lesz kifejezetten
+ünnepibb, mint hétvégén.
 
 Minden nap minden étkezéséhez ugyanaz a kis konyhaválasztó legördülő
 tartozik, mint a napi ajánlóban — ez a heti nézetben dátumhoz és
