@@ -6,7 +6,7 @@
 <title>Napi recept ajánló</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Archivo:ital,wght@0,400;0,500;0,600;0,700;1,500&display=swap">
 <style>
   :root { color-scheme: light dark; }
   * { box-sizing: border-box; }
@@ -15,75 +15,89 @@
   [hidden] { display: none !important; }
 
   :root {
-    --paper:      #EFEAE2;
-    --surface:    #FBF8F3;
-    --surface-2:  #F1EBE0;
-    --ink:        #2A2116;
-    --ink-2:      #59493A;
-    --muted:      #8A7A66;
-    --line:       #D9CEBC;
-    --line-soft:  #E6DECE;
-    --accent:     #B24A22;
-    --accent-2:   #8A3818;
-    --accent-tint:#F0DCCF;
-    --crit:       #9E2B21;
-    --crit-tint:  #F3D8D4;
-    --focus:      #B24A22;
-    --shadow:     0 1px 2px rgba(42,33,22,.08), 0 8px 24px -18px rgba(42,33,22,.4);
+    --paper:      #EAE3D2;
+    --surface:    #F8F4E8;
+    --surface-2:  #EFE7D3;
+    --ink:        #241C16;
+    --ink-2:      #52412F;
+    --muted:      #8A7A61;
+    --line:       #D6C9AC;
+    --line-soft:  #E2D6BC;
+    --accent:     #B0331F;
+    --accent-2:   #7E2515;
+    --accent-tint:#EFDACA;
+    --saffron:    #D69A2D;
+    --saffron-tint:#F5E6C2;
+    --olive:      #59642F;
+    --olive-tint: #E4E4C9;
+    --crit:       #8C2A1D;
+    --crit-tint:  #EFD9CC;
+    --focus:      #B0331F;
+    --shadow:     0 1px 2px rgba(36,28,22,.1), 0 10px 26px -18px rgba(36,28,22,.5);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-      --paper:      #1B140D;
-      --surface:    #241B12;
-      --surface-2:  #2C2216;
-      --ink:        #F1E7D8;
-      --ink-2:      #D2C1A8;
-      --muted:      #9C8B74;
-      --line:       #3C2F20;
-      --line-soft:  #2F2517;
-      --accent:     #E0854F;
-      --accent-2:   #EFA679;
-      --accent-tint:#3A2617;
-      --crit:       #EC7C6E;
-      --crit-tint:  #3D1D18;
-      --focus:      #E0854F;
+      --paper:      #1C150F;
+      --surface:    #261C14;
+      --surface-2:  #2E2217;
+      --ink:        #F1E6D4;
+      --ink-2:      #D6C2A3;
+      --muted:      #9C8B71;
+      --line:       #3E3020;
+      --line-soft:  #322619;
+      --accent:     #E2825F;
+      --accent-2:   #F0A883;
+      --accent-tint:#3D2519;
+      --saffron:    #E8B855;
+      --saffron-tint:#3B2E15;
+      --olive:      #A6B876;
+      --olive-tint: #2B2E1B;
+      --crit:       #E2825F;
+      --crit-tint:  #3D2519;
+      --focus:      #E2825F;
       --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
     }
   }
   :root[data-theme="dark"] {
-    --paper:      #1B140D;
-    --surface:    #241B12;
-    --surface-2:  #2C2216;
-    --ink:        #F1E7D8;
-    --ink-2:      #D2C1A8;
-    --muted:      #9C8B74;
-    --line:       #3C2F20;
-    --line-soft:  #2F2517;
-    --accent:     #E0854F;
-    --accent-2:   #EFA679;
-    --accent-tint:#3A2617;
-    --crit:       #EC7C6E;
-    --crit-tint:  #3D1D18;
-    --focus:      #E0854F;
+    --paper:      #1C150F;
+    --surface:    #261C14;
+    --surface-2:  #2E2217;
+    --ink:        #F1E6D4;
+    --ink-2:      #D6C2A3;
+    --muted:      #9C8B71;
+    --line:       #3E3020;
+    --line-soft:  #322619;
+    --accent:     #E2825F;
+    --accent-2:   #F0A883;
+    --accent-tint:#3D2519;
+    --saffron:    #E8B855;
+    --saffron-tint:#3B2E15;
+    --olive:      #A6B876;
+    --olive-tint: #2B2E1B;
+    --crit:       #E2825F;
+    --crit-tint:  #3D2519;
+    --focus:      #E2825F;
     --shadow:     0 1px 2px rgba(0,0,0,.4), 0 10px 26px -18px rgba(0,0,0,.8);
   }
 
   body {
     background: var(--paper);
     color: var(--ink);
-    font-family: "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
+    font-family: "Archivo", ui-sans-serif, system-ui, sans-serif;
     font-size: 15px;
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
   .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 56px; }
 
-  h1, h2, h3, .cond { font-family: "IBM Plex Sans Condensed", "IBM Plex Sans", sans-serif; }
-  .num { font-family: "IBM Plex Mono", ui-monospace, monospace; font-variant-numeric: tabular-nums; }
+  h1, h2, h3 { font-family: "Young Serif", Georgia, serif; font-weight: 400; }
+  .cond { font-family: "Archivo", sans-serif; font-weight: 600; }
+  .num { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
 
   .hero-banner {
-    width: 100%; height: 220px; object-fit: cover; border-radius: 10px;
-    margin-top: 4px; box-shadow: var(--shadow);
+    width: 100%; height: 220px; object-fit: cover; border-radius: 4px;
+    margin-top: 4px; border: 6px solid var(--surface); outline: 1px solid var(--line);
+    box-shadow: var(--shadow);
   }
   @media (max-width: 620px) { .hero-banner { height: 140px; } }
 
@@ -91,10 +105,14 @@
     display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between;
     gap: 12px 24px; padding-bottom: 16px; border-bottom: 2px solid var(--ink);
   }
-  h1 { font-size: 30px; font-weight: 700; letter-spacing: -.01em; margin: 0; text-wrap: balance; }
+  h1 { font-size: 34px; line-height: 1.15; margin: 0; text-wrap: balance; }
   .tagline { color: var(--muted); font-size: 13.5px; margin: 6px 0 0; max-width: 62ch; }
-  .stamp { text-align: right; font-size: 12.5px; color: var(--muted); }
-  .stamp .day { color: var(--ink-2); font-weight: 600; text-transform: capitalize; }
+  .stamp {
+    text-align: center; font-size: 12px; color: var(--ink-2);
+    border: 1.5px solid var(--accent); border-radius: 8px; padding: 6px 16px;
+    transform: rotate(2deg); flex-shrink: 0;
+  }
+  .stamp .day { color: var(--accent-2); font-weight: 700; text-transform: uppercase; letter-spacing: .04em; }
 
   :where(a, button, [tabindex]):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   a { color: var(--accent); }
@@ -167,7 +185,7 @@
     margin-top: 24px; padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; max-width: 760px;
   }
   .submit-result h3 { margin: 0 0 6px; font-size: 15px; color: var(--ink-2); }
-  .submit-preview { width: 100%; font-family: "IBM Plex Mono", ui-monospace, monospace; font-size: 12px; margin: 10px 0; }
+  .submit-preview { width: 100%; font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: 12px; margin: 10px 0; }
   .small {
     font: inherit; font-size: 13px; font-weight: 500; cursor: pointer; border-radius: 5px;
     border: 1px solid var(--line); background: var(--surface-2); color: var(--ink); padding: 7px 12px;
@@ -232,6 +250,9 @@
     background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
     box-shadow: var(--shadow); display: flex; flex-direction: column; overflow: hidden;
   }
+  .card[data-slot="breakfast"] { border-top: 4px solid var(--saffron); }
+  .card[data-slot="lunch"]     { border-top: 4px solid var(--accent); }
+  .card[data-slot="dinner"]    { border-top: 4px solid var(--ink-2); }
   .card .head {
     padding: 14px 16px 10px; border-bottom: 1px solid var(--line-soft);
     display: flex; align-items: center; justify-content: space-between; gap: 10px;
@@ -239,9 +260,11 @@
   .meal-name { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
   .head-controls { display: flex; align-items: center; gap: 8px; }
   .cuisine-badge {
-    display: inline-flex; align-items: center; font-size: 12px; font-weight: 600;
-    padding: 3px 9px; border-radius: 999px; background: var(--accent-tint); color: var(--accent-2);
-    border: 1px solid var(--line-soft);
+    display: inline-flex; align-items: center; font-size: 11px; font-weight: 700;
+    letter-spacing: .03em; text-transform: uppercase;
+    padding: 5px 11px; border-radius: 999px; background: var(--surface); color: var(--accent-2);
+    border: 1.5px solid var(--accent); box-shadow: inset 0 0 0 2px var(--accent-tint);
+    transform: rotate(-2deg);
   }
   .cuisine-select {
     font-size: 11.5px; padding: 3px 7px; border-radius: 999px; min-width: 0;
@@ -251,13 +274,15 @@
   .recipe-figure { position: relative; margin: 0; }
   .recipe-img-note { position: absolute; right: 6px; bottom: 6px; font-size: 10.5px; letter-spacing: .04em; padding: 2px 7px; border-radius: 10px; background: rgba(0,0,0,.55); color: #fff; }
   .recipe-img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background: var(--surface-2); }
-  .recipe-title { font-size: 19px; font-weight: 700; margin: 0; line-height: 1.25; }
+  .recipe-title { font-size: 21px; font-weight: 400; margin: 0; line-height: 1.25; }
   .recipe-meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
   .recipe-tags { display: flex; gap: 6px; flex-wrap: wrap; }
   .tag {
     font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600;
     padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line-soft); color: var(--ink-2); background: var(--surface-2);
   }
+  .tag-easy { border-color: var(--olive); color: var(--olive); background: var(--olive-tint); }
+  .tag-nocook { border-color: var(--saffron); color: var(--accent-2); background: var(--saffron-tint); }
   .recipe-source { font-size: 11.5px; color: var(--muted); }
   .recipe-source a { color: var(--muted); text-decoration: underline; }
   .translate-note { font-size: 11px; color: var(--muted); font-style: italic; }
@@ -313,8 +338,18 @@
   details[open] summary { margin-bottom: 6px; }
   .ingredients ul { margin: 0; padding-left: 18px; font-size: 13.5px; }
   .ingredients li { margin-bottom: 2px; }
-  .steps ol { margin: 0; padding-left: 20px; font-size: 13.5px; color: var(--ink-2); display: flex; flex-direction: column; gap: 7px; }
-  .steps li { padding-left: 2px; }
+  .steps ol {
+    list-style: none; counter-reset: step; margin: 0; padding-left: 0;
+    font-size: 13.5px; color: var(--ink-2); display: flex; flex-direction: column; gap: 10px;
+  }
+  .steps li { counter-increment: step; position: relative; padding-left: 30px; }
+  .steps li::before {
+    content: counter(step); position: absolute; left: 0; top: 0;
+    width: 20px; height: 20px; border-radius: 50%;
+    background: var(--accent); color: var(--surface);
+    font-family: "Archivo", sans-serif; font-weight: 700; font-size: 11px;
+    display: flex; align-items: center; justify-content: center; line-height: 1;
+  }
 
   .card .foot { margin-top: auto; padding-top: 8px; display: flex; flex-direction: column; gap: 6px; }
   button.shuffle {
@@ -1097,8 +1132,8 @@
     if (recipe.easy || recipe.noCook) {
       var tags = document.createElement("div");
       tags.className = "recipe-tags";
-      if (recipe.easy) { var te = document.createElement("span"); te.className = "tag"; te.textContent = "Egyszerű"; tags.appendChild(te); }
-      if (recipe.noCook) { var tn = document.createElement("span"); tn.className = "tag"; tn.textContent = "Nem kell főzni"; tags.appendChild(tn); }
+      if (recipe.easy) { var te = document.createElement("span"); te.className = "tag tag-easy"; te.textContent = "Egyszerű"; tags.appendChild(te); }
+      if (recipe.noCook) { var tn = document.createElement("span"); tn.className = "tag tag-nocook"; tn.textContent = "Nem kell főzni"; tags.appendChild(tn); }
       body.appendChild(tags);
     }
 
