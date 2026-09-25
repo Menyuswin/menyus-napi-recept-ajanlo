@@ -12,8 +12,8 @@ hív külső, ingyenes API-kat.
 Nincs egyetlen ingyenes adatbázis, amely mind a hét konyhát pontosan,
 magyarul lefedné, ezért az oldal két forrást kever:
 
-- **Olasz, francia, amerikai, görög** — élőben (a francia reggeli/vacsora és
-  az olasz vacsora kivételével, lásd lent), a [Spoonacular](https://spoonacular.com)
+- **Olasz, francia, görög** — élőben (a francia reggeli/vacsora és az olasz
+  vacsora kivételével, lásd lent), a [Spoonacular](https://spoonacular.com)
   recept-API-jából (több százezer recept, beépített intolerancia- és
   fehérjeszűrővel). A cím, hozzávalók és lépések angolul érkeznek, az oldal a
   [MyMemory](https://mymemory.translated.net) ingyenes, kulcs nélküli
@@ -31,6 +31,13 @@ magyarul lefedné, ezért az oldal két forrást kever:
   Carbonara, Risotto ai Funghi, Ossobuco alla Milanese, Lasagne al Forno,
   Saltimbocca, Porchetta stb.), magyar nyelven. Az olasz reggeli és ebéd
   továbbra is élő Spoonacular-recept; `curatedSlots: ["dinner"]`.
+- **Amerikai** — mindhárom étkezés (reggeli, ebéd, vacsora) kézzel írt,
+  15-15 klasszikus amerikai recepttel (amerikai palacsinta, cheeseburger,
+  BLT, déli sült csirke, pulled pork, barbecue-csirke, hálaadási
+  pulykamell, jambalaya stb.), becsült kalóriaértékkel. Ez az egyetlen
+  konyha, ahol mindhárom étkezés kézzel válogatott —
+  `curatedSlots: ["breakfast", "lunch", "dinner"]` —, tehát az amerikai
+  konyhánál nincs élő Spoonacular-hívás.
 - **Lengyel, délszláv, magyar** — kézzel, magyarul írt recept-készlet marad.
   A Spoonacularban ugyanis nincs ezekre a régiókra bontott kategória —
   mindhármat egy általános "kelet-európai" csoportba sorolná —, ezért itt a
@@ -45,7 +52,8 @@ magyarul lefedné, ezért az oldal két forrást kever:
 
 ### Spoonacular-hozzáférés
 
-Az olasz/francia/amerikai/görög ajánláshoz Spoonacular-hozzáférés kell. Ezt
+Az olasz/francia/görög ajánláshoz (és a francia ebédhez, olasz reggelihez/
+ebédhez) Spoonacular-hozzáférés kell. Ezt
 a látogatóknak nem kell beállítaniuk: az oldal egy megosztott proxyn
 (Cloudflare Worker) keresztül éri el az API-t, a kulcs kizárólag a Worker
 titkos változójában él, egyetlen látogató böngészőjébe sem kerül. (Korábban
