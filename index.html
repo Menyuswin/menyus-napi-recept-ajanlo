@@ -380,6 +380,46 @@
   footer.sources ul { margin: 0; padding-left: 18px; }
   footer.sources li { margin-bottom: 4px; }
   footer.sources .note { margin-top: 12px; max-width: 74ch; }
+
+  @media (max-width: 620px) {
+    .wrap { padding: 12px 14px 40px; }
+    header.top { align-items: center; gap: 10px 14px; padding-bottom: 12px; margin-top: 12px; }
+    h1 { font-size: 27px; }
+    .tagline { font-size: 13px; }
+    .stamp { padding: 4px 12px; font-size: 11px; }
+
+    .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 14px; border-bottom: none; }
+    .tab-long { display: none; }
+    .tab-btn {
+      border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2);
+      color: var(--ink-2); padding: 10px 8px; min-height: 44px; text-align: center; line-height: 1.25;
+    }
+    .tab-btn[aria-selected="true"] {
+      background: var(--accent); border-color: var(--accent); color: var(--surface); box-shadow: none;
+    }
+
+    input[type="text"], input[type="password"], input[type="number"], select, textarea { font-size: 16px; }
+    .cuisine-select { font-size: 14px; }
+    .card .head { flex-wrap: wrap; padding: 12px 14px 10px; }
+    .card .body { padding: 12px 14px 14px; }
+    .recipe-title { font-size: 19px; }
+    .panel, .prefs, .global-cuisine { padding: 12px; }
+    .week-meals { padding: 12px; }
+    .shopping-section, .store-finder { padding: 14px 12px; }
+  }
+
+  @media (pointer: coarse) {
+    .small, button.shuffle, button.retry, .global-cuisine-btn { min-height: 44px; }
+    .global-cuisine-btn { padding: 8px 15px; }
+    .cuisine-select, .daytype-select { min-height: 36px; padding: 6px 10px; }
+    .panel summary { min-height: 44px; }
+    details.ingredients summary, details.steps summary { padding: 11px 0; }
+    .chip { min-height: 40px; }
+    .chip button { min-width: 34px; min-height: 34px; }
+    .prefs label, .intol-grid label { min-height: 40px; }
+    .prefs input[type="checkbox"], .intol-grid input { width: 22px; height: 22px; }
+    .store-links a { display: inline-block; padding: 8px 0; }
+  }
 </style>
 </head>
 <body>
@@ -388,7 +428,7 @@
   <header class="top">
     <div>
       <h1>Napi recept ajánló</h1>
-      <p class="tagline">Minden nap három konyhából — olasz, francia, amerikai, lengyel, délszláv, görög és magyar közül — ajánl egy-egy reggelit, ebédet és vacsorát, magyar nyelven, igény szerint személyre szabva. Éjfélkor vált, ugyanaznap újratöltve ugyanazt mutatja.</p>
+      <p class="tagline">Minden nap három konyhából — olasz, francia, amerikai, görög, lengyel, délszláv, magyar, indiai, kínai és japán közül — ajánl egy-egy reggelit, ebédet és vacsorát, magyar nyelven, igény szerint személyre szabva. Éjfélkor vált, ugyanaznap újratöltve ugyanazt mutatja.</p>
     </div>
     <div class="stamp">
       <div class="day" id="dayLabel">—</div>
@@ -399,7 +439,7 @@
   <nav class="tabs" id="tabs">
     <button type="button" class="tab-btn" data-tab="ajanlo" aria-selected="true">Napi ajánló</button>
     <button type="button" class="tab-btn" data-tab="heti" aria-selected="false">Heti menü</button>
-    <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false">Hasznos tanácsok háziasszonyoknak és háziuraknak</button>
+    <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false">Hasznos tanácsok<span class="tab-long"> háziasszonyoknak és háziuraknak</span></button>
     <button type="button" class="tab-btn" data-tab="bekuldes" aria-selected="false">Recept beküldése</button>
   </nav>
 
