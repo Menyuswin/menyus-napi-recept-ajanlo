@@ -423,6 +423,47 @@
   .fav-empty { padding: 28px 18px; text-align: center; color: var(--ink-2); background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; }
   .fav-empty h2 { font-size: 19px; margin: 0 0 6px; }
 
+  .cook-dialog {
+    border: none; padding: 0; margin: 0; width: 100vw; height: 100vh; max-width: 100vw; max-height: 100vh;
+    background: var(--paper); color: var(--ink);
+  }
+  .cook-dialog::backdrop { background: var(--paper); }
+  .cook-wrap { max-width: 760px; margin: 0 auto; padding: 18px 20px 60px; }
+  .cook-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 12px; }
+  .cook-head h2 { font-size: 26px; line-height: 1.2; margin: 4px 0 0; }
+  .cook-wrap h3 { font-family: "Young Serif", Georgia, serif; font-weight: 400; font-size: 21px; margin: 22px 0 10px; }
+  .cook-ings { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+  .cook-ings label { display: flex; align-items: center; gap: 12px; font-size: 18px; padding: 6px 4px; cursor: pointer; }
+  .cook-ings input { width: 24px; height: 24px; accent-color: var(--olive); flex-shrink: 0; }
+  .cook-ings input:checked + span { text-decoration: line-through; color: var(--muted); }
+  .cook-steps { list-style: none; margin: 0; padding: 0; counter-reset: cstep; display: flex; flex-direction: column; gap: 10px; }
+  .cook-steps li {
+    counter-increment: cstep; position: relative; padding: 14px 14px 14px 58px; font-size: 19px; line-height: 1.5;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px; cursor: pointer;
+  }
+  .cook-steps li::before {
+    content: counter(cstep); position: absolute; left: 14px; top: 14px; width: 30px; height: 30px; border-radius: 50%;
+    background: var(--accent); color: var(--surface); font-family: "Archivo", sans-serif; font-weight: 700; font-size: 15px;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .cook-steps li.current { border: 2px solid var(--accent); box-shadow: var(--shadow); }
+  .cook-steps li.done { color: var(--muted); background: transparent; }
+  .cook-steps li.done::before { content: "✓"; background: var(--olive); }
+  .cook-steps li.done .cook-step-text { text-decoration: line-through; }
+  .cook-timer-btn {
+    display: inline-block; margin-top: 8px; font: inherit; font-size: 15px; font-weight: 600; cursor: pointer;
+    border: 1px solid var(--saffron); background: var(--saffron-tint); color: var(--ink); border-radius: 999px; padding: 5px 14px;
+  }
+  .cook-timer {
+    position: sticky; top: 0; z-index: 2; margin: 12px 0 0; padding: 10px 14px; border-radius: 10px;
+    background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    font-size: 20px; font-weight: 700; font-variant-numeric: tabular-nums;
+  }
+  .cook-timer.done { background: var(--accent); animation: cookpulse 1s ease-in-out infinite alternate; }
+  @keyframes cookpulse { to { opacity: .75; } }
+  .cook-timer button { font: inherit; font-size: 14px; font-weight: 600; cursor: pointer; border-radius: 6px; border: 1px solid currentColor; background: transparent; color: inherit; padding: 6px 12px; }
+  .cook-hint { font-size: 14px; color: var(--muted); margin: 14px 0 0; }
+  @media (prefers-reduced-motion: reduce) { .cook-timer.done { animation: none; } }
   .recipe-dialog { border: none; padding: 0; background: transparent; width: min(560px, calc(100vw - 24px)); max-height: calc(100vh - 32px); }
   .recipe-dialog::backdrop { background: rgba(36,28,22,.55); }
   .recipe-dialog .card { max-height: calc(100vh - 32px); overflow: auto; }
@@ -701,6 +742,28 @@
       </div>
       <div class="body" id="dlgBody"></div>
     </article>
+  </dialog>
+
+  <dialog class="cook-dialog" id="cookDialog" aria-labelledby="cookTitle">
+    <div class="cook-wrap">
+      <header class="cook-head">
+        <div>
+          <span class="meal-name" id="cookMeta"></span>
+          <h2 id="cookTitle"></h2>
+        </div>
+        <button type="button" class="dialog-close" id="cookClose" aria-label="Főzés mód bezárása">×</button>
+      </header>
+      <div class="cook-timer" id="cookTimer" role="timer" aria-live="polite" hidden>
+        <span id="cookTimerText"></span>
+        <button type="button" id="cookTimerStop">Leállítás</button>
+      </div>
+      <h3>Hozzávalók</h3>
+      <ul class="cook-ings" id="cookIngs"></ul>
+      <h3>Elkészítés</h3>
+      <p class="cook-hint">Koppints egy lépésre, ha elkészültél vele.</p>
+      <ol class="cook-steps" id="cookSteps"></ol>
+      <p class="cook-hint" id="cookWakeNote"></p>
+    </div>
   </dialog>
 
   <div class="tab-panel" data-tab="tanacsok" id="tabTanacsok" hidden>
@@ -1625,6 +1688,147 @@
     return out + text.slice(m[0].length);
   }
 
+  // ---------- főzés mód ----------
+  var cookWakeLock = null;
+  var cookTimerId = null;
+
+  function requestCookWakeLock() {
+    if (!("wakeLock" in navigator)) return;
+    navigator.wakeLock.request("screen").then(function (lock) { cookWakeLock = lock; }).catch(function () {});
+  }
+
+  function releaseCookWakeLock() {
+    if (cookWakeLock) { cookWakeLock.release().catch(function () {}); cookWakeLock = null; }
+  }
+
+  // "15-18 percig" → 15 perc, "1 órát" → 60, "fél órát" → 30
+  function stepTimerMinutes(text) {
+    var t = text.toLowerCase();
+    var m = t.match(/(\d+(?:[.,]\d+)?)(?:\s*[-–]\s*\d+(?:[.,]\d+)?)?\s*(perc|órá|óra)/);
+    if (m) {
+      var v = parseFloat(m[1].replace(",", "."));
+      return m[2] === "perc" ? v : v * 60;
+    }
+    if (/fél\s+ór/.test(t)) return 30;
+    return 0;
+  }
+
+  function formatClock(sec) {
+    var h = Math.floor(sec / 3600), m = Math.floor((sec % 3600) / 60), s = sec % 60;
+    var mm = (h ? String(m).padStart(2, "0") : String(m)) + ":" + String(s).padStart(2, "0");
+    return h ? h + ":" + mm : mm;
+  }
+
+  function beep() {
+    try {
+      var Ctx = window.AudioContext || window.webkitAudioContext;
+      var ctx = new Ctx();
+      [0, 0.4, 0.8].forEach(function (at) {
+        var o = ctx.createOscillator(), g = ctx.createGain();
+        o.frequency.value = 880; o.connect(g); g.connect(ctx.destination);
+        g.gain.setValueAtTime(0.25, ctx.currentTime + at);
+        o.start(ctx.currentTime + at); o.stop(ctx.currentTime + at + 0.25);
+      });
+    } catch (e) {}
+    if (navigator.vibrate) navigator.vibrate([300, 150, 300, 150, 300]);
+  }
+
+  function stopCookTimer() {
+    if (cookTimerId) { clearInterval(cookTimerId); cookTimerId = null; }
+    var bar = document.getElementById("cookTimer");
+    bar.hidden = true; bar.classList.remove("done");
+  }
+
+  function startCookTimer(minutes, stepNo) {
+    stopCookTimer();
+    var bar = document.getElementById("cookTimer");
+    var text = document.getElementById("cookTimerText");
+    var end = Date.now() + Math.round(minutes * 60) * 1000;
+    bar.hidden = false;
+    function tick() {
+      var left = Math.max(0, Math.round((end - Date.now()) / 1000));
+      if (left > 0) {
+        text.textContent = "⏱ " + formatClock(left) + " — " + stepNo + ". lépés";
+        return;
+      }
+      clearInterval(cookTimerId); cookTimerId = null;
+      bar.classList.add("done");
+      text.textContent = "Letelt az idő! (" + stepNo + ". lépés)";
+      beep();
+    }
+    tick();
+    cookTimerId = setInterval(tick, 1000);
+  }
+
+  function openCookMode(cuisine, recipe, scale) {
+    document.getElementById("cookMeta").textContent = cuisine.label + (scale.label ? " · " + scale.label : "") + (recipe.time ? " · " + recipe.time : "");
+    document.getElementById("cookTitle").textContent = recipe.title;
+
+    var ings = document.getElementById("cookIngs");
+    ings.innerHTML = "";
+    recipe.ingredients.forEach(function (i) {
+      var li = document.createElement("li");
+      var label = document.createElement("label");
+      var box = document.createElement("input"); box.type = "checkbox";
+      var span = document.createElement("span"); span.textContent = scaleIngredient(i, scale.factor);
+      label.appendChild(box); label.appendChild(span); li.appendChild(label); ings.appendChild(li);
+    });
+
+    var steps = document.getElementById("cookSteps");
+    steps.innerHTML = "";
+    function markCurrent() {
+      var items = Array.prototype.slice.call(steps.children);
+      items.forEach(function (li) { li.classList.remove("current"); });
+      var next = items.filter(function (li) { return !li.classList.contains("done"); })[0];
+      if (next) next.classList.add("current");
+    }
+    recipe.steps.forEach(function (st, idx) {
+      var li = document.createElement("li");
+      li.tabIndex = 0;
+      li.setAttribute("role", "button");
+      li.setAttribute("aria-pressed", "false");
+      var txt = document.createElement("div"); txt.className = "cook-step-text"; txt.textContent = st;
+      li.appendChild(txt);
+      var mins = stepTimerMinutes(st);
+      if (mins && mins <= 180) {
+        var tb = document.createElement("button");
+        tb.type = "button"; tb.className = "cook-timer-btn";
+        tb.textContent = "⏱ Időzítő: " + (mins >= 60 ? String(Math.round(mins / 6) / 10).replace(".", ",") + " óra" : mins + " perc");
+        tb.addEventListener("click", function (e) { e.stopPropagation(); startCookTimer(mins, idx + 1); });
+        li.appendChild(tb);
+      }
+      function toggle() {
+        var done = li.classList.toggle("done");
+        li.setAttribute("aria-pressed", done ? "true" : "false");
+        markCurrent();
+      }
+      li.addEventListener("click", toggle);
+      li.addEventListener("keydown", function (e) {
+        if (e.target === li && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(); }
+      });
+      steps.appendChild(li);
+    });
+    markCurrent();
+
+    document.getElementById("cookWakeNote").textContent = ("wakeLock" in navigator)
+      ? "Főzés mód alatt a képernyő nem sötétül el."
+      : "Tipp: ha a telefonod képernyője elsötétül főzés közben, állítsd hosszabbra a képernyőzár idejét.";
+    var dlg = document.getElementById("cookDialog");
+    dlg.showModal();
+    dlg.scrollTop = 0;
+    requestCookWakeLock();
+  }
+
+  function initCookMode() {
+    var dlg = document.getElementById("cookDialog");
+    document.getElementById("cookClose").addEventListener("click", function () { dlg.close(); });
+    document.getElementById("cookTimerStop").addEventListener("click", stopCookTimer);
+    dlg.addEventListener("close", function () { stopCookTimer(); releaseCookWakeLock(); });
+    document.addEventListener("visibilitychange", function () {
+      if (document.visibilityState === "visible" && dlg.open) requestCookWakeLock();
+    });
+  }
+
   function renderRecipeInto(body, cuisine, recipe, opts) {
     opts = opts || {};
     body.innerHTML = "";
@@ -1702,6 +1906,7 @@
       });
     }
     var serv = opts.live ? null : parseServings(recipe.servings);
+    var scaleState = { factor: 1, label: recipe.servings || "" };
     if (serv) {
       var current = serv.count;
       var ctl = document.createElement("div");
@@ -1716,7 +1921,9 @@
         minus.disabled = current <= 1;
         plus.disabled = current >= Math.max(serv.count * 4, 12);
         reset.hidden = current === serv.count;
-        fillIngredients(current / serv.count);
+        scaleState.factor = current / serv.count;
+        scaleState.label = current + " " + serv.unit;
+        fillIngredients(scaleState.factor);
       };
       minus.addEventListener("click", function () { if (current > 1) { current--; update(); } });
       plus.addEventListener("click", function () { current++; update(); });
@@ -1751,7 +1958,10 @@
         var shareBtn = document.createElement("button");
         shareBtn.type = "button"; shareBtn.textContent = "Megosztás";
         shareBtn.addEventListener("click", function () { shareRecipe(rid, recipe.title, shareBtn); });
-        actions.appendChild(favBtn); actions.appendChild(shareBtn);
+        var cookBtn = document.createElement("button");
+        cookBtn.type = "button"; cookBtn.textContent = "Főzés mód";
+        cookBtn.addEventListener("click", function () { openCookMode(cuisine, recipe, scaleState); });
+        actions.appendChild(favBtn); actions.appendChild(shareBtn); actions.appendChild(cookBtn);
         foot.appendChild(actions);
       }
       if (opts.onShuffle) {
@@ -3048,6 +3258,7 @@
     renderFavorites();
     initSharedRecipeDialog();
     initPantry();
+    initCookMode();
 
     var timeSel = document.getElementById("prefMaxTime");
     var noCookBox = document.getElementById("prefNoCook");

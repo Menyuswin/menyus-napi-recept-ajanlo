@@ -376,6 +376,24 @@ reggeli / ebéd / vacsora), 12-esével lapoz („További találatok”).
   nem módosítja. A bevásárlólista továbbra is az eredeti mennyiségekkel
   számol.
 
+## Főzés mód
+
+Minden kézzel írt recept kártyáján „Főzés mód” gomb: egész képernyős, nagy
+betűs nézet a konyhapultra.
+
+- A hozzávalók kipipálhatók; a mennyiségek a kártyán beállított adagszámot
+  követik.
+- A lépésekre koppintva késznek jelölhetők (áthúzva, zöld pipa), a
+  következő el nem végzett lépés kiemelve látszik. Billentyűzettel
+  (Enter/szóköz) is működik.
+- **Időzítő:** ha egy lépésben idő szerepel („15-18 percig”, „1 órát”,
+  „fél órát”), mellette ⏱ gomb indít visszaszámlálást (tartománynál az
+  alsó értékkel, legfeljebb 3 óráig). A sáv felül rögzítve marad; lejártakor
+  hangjelzés, rezgés (ahol van) és villogó „Letelt az idő!” felirat.
+  Egyszerre egy időzítő fut; a főzés mód bezárása leállítja.
+- A képernyő főzés közben nem sötétül el (Screen Wake Lock API, ahol a
+  böngésző támogatja; ha nem, erről egy tipp jelenik meg).
+
 ## Hasznos tanácsok háziasszonyoknak és háziuraknak
 
 A második fül gyakorlati háztartási tanácsokat gyűjt össze —
