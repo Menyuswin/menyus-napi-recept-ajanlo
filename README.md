@@ -429,6 +429,14 @@ betűs nézet a konyhapultra.
 
 ## Hasznos tanácsok háziasszonyoknak és háziuraknak
 
+A fül legelején **„Alapok kezdőknek”** blokk (olívazöld szegéllyel): 11
+alapfogás (előkészítés, mértékegységek, tészta- és rizsfőzés, üvegesre
+párolás, sütés forró serpenyőben, hús pihentetése, maghőmérsékletek —
+szárnyas 74 °C, darált hús 71 °C, egészben sült sertés/marha 63 °C —,
+tojásfőzés, sózás, biztonságos vágás). Alján a „Mutasd a kezdőbarát
+recepteket →” gomb átvált a Napi ajánlóra, és bekapcsolja a kereső
+„Kezdőknek is megy” szűrőjét.
+
 A második fül gyakorlati háztartási tanácsokat gyűjt össze —
 háztartásszervezés, vendéglátás, terítés, tálalás és néhány konyhai
 fogás —, valamint két klasszikus magyar sütemény receptjét (Dobostorta,

@@ -149,6 +149,10 @@
   .tips-category h3 { font-size: 15px; margin: 0 0 10px; color: var(--accent-2); }
   .tips-list { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 9px; font-size: 13.5px; }
   .tips-list li strong { color: var(--ink); }
+  .tips-category.tips-basics { border-left: 4px solid var(--olive); }
+  .tips-category.tips-basics h3 { color: var(--olive); font-size: 17px; }
+  .tips-basics-intro { font-size: 13.5px; color: var(--ink-2); margin: -4px 0 12px; }
+  .tips-basics-go { margin-top: 14px; }
 
   .showcase-intro { margin: 30px 0 4px; }
   .showcase-intro h2 { font-size: 18px; color: var(--ink-2); margin: 0 0 6px; }
@@ -814,6 +818,25 @@
 
   <div class="tab-panel" data-tab="tanacsok" id="tabTanacsok" hidden>
     <div class="tips-categories">
+      <div class="tips-category tips-basics">
+        <h3>Alapok kezdőknek</h3>
+        <p class="tips-basics-intro">Most kezdesz főzni, vagy ritkán állsz a tűzhely mellé? Ez a néhány fogás a legtöbb recepthez elég.</p>
+        <ul class="tips-list">
+          <li><strong>Előbb olvasd végig, aztán készíts elő mindent.</strong> Mérd ki és vágd fel a hozzávalókat, mielőtt bekapcsolod a tűzhelyt — így főzés közben nem kell kapkodni, és semmi nem ég oda, amíg a hagymát pucolod.</li>
+          <li><strong>Mértékegységek egy helyen.</strong> 1 dkg = 10 g, 1 dl = 100 ml, 1 evőkanál ≈ 15 ml, 1 teáskanál ≈ 5 ml. A „csipet” annyi, amennyi két ujjad közé fér.</li>
+          <li><strong>Tészta: bő, sós, forrásban lévő víz.</strong> 10 dkg tésztához kb. 1 liter víz és egy teáskanál só jár. A csomagoláson írt idő előtt egy perccel kóstold meg: akkor jó, ha puha, de a közepe még enyhén ellenáll.</li>
+          <li><strong>Rizs: mérd, fedd le, ne kavard.</strong> Fehér rizsnél általában 1 rész rizshez 1,5–2 rész víz kell (a csomagoláson megtalálod). Felforralod, lefeded, lassú tűzön megfőzöd, végül a tűzről levéve még 5 percig fedő alatt hagyod.</li>
+          <li><strong>Mit jelent az „üvegesre párolt” hagyma?</strong> Közepes lángon, kevés olajon vagy zsíron, gyakran kevergetve 5–8 perc, amíg a hagyma áttetsző és puha lesz, de még nem barnul.</li>
+          <li><strong>Forró serpenyő, nem zsúfolva.</strong> A hús és a zöldség akkor pirul szépen, ha a serpenyő és az olaj már forró, mielőtt beleteszed. Ne rakd tele: inkább süss két adagban, különben a saját levében párolódik pirulás helyett.</li>
+          <li><strong>A sült hús pihenjen, mielőtt felvágod.</strong> Letakarva 5–10 perc elég — így a leve a húsban marad, nem a vágódeszkán.</li>
+          <li><strong>Mikor kész a hús?</strong> A legbiztosabb egy olcsó maghőmérő a hús legvastagabb részébe szúrva: szárnyas 74 °C, darált hús 71 °C, egészben sült sertés és marha legalább 63 °C. Hőmérő nélkül: a csirke leve átlátszó legyen, ne rózsaszín.</li>
+          <li><strong>Tojásfőzés percre.</strong> Forrásban lévő vízbe engedve kb. 6 perc a lágy, 9–10 perc a kemény tojás. Utána hideg vízbe vele — így könnyebb pucolni, és nem szürkül meg a sárgája.</li>
+          <li><strong>Sóból inkább kevesebbet, aztán kóstolj.</strong> A végén mindig kóstold meg az ételt, és akkor igazíts rajta — hozzáadni könnyű, elvenni nem lehet.</li>
+          <li><strong>Biztonságos vágás.</strong> Tegyél nedves konyharuhát a vágódeszka alá, hogy ne csússzon, és a hozzávalót tartó kezed ujjbegyeit hajlítsd be. Az éles kés biztonságosabb a tompánál, mert nem csúszik meg.</li>
+        </ul>
+        <button type="button" class="small primary tips-basics-go" id="goBeginnerRecipes">Mutasd a kezdőbarát recepteket →</button>
+      </div>
+
       <div class="tips-category">
         <h3>Háztartásszervezés</h3>
         <ul class="tips-list">
@@ -3367,6 +3390,12 @@
     initSharedRecipeDialog();
     initPantry();
     initCookMode();
+    document.getElementById("goBeginnerRecipes").addEventListener("click", function () {
+      document.querySelector('.tab-btn[data-tab="ajanlo"]').click();
+      var tagBtn = document.querySelector('#pantryTags button[data-tag="beginner"]');
+      if (tagBtn.getAttribute("aria-pressed") !== "true") tagBtn.click();
+      document.getElementById("pantry").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
 
     var timeSel = document.getElementById("prefMaxTime");
     var noCookBox = document.getElementById("prefNoCook");
