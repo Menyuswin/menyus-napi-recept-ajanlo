@@ -264,6 +264,16 @@ Ha egy adott konyhához/étkezéshez épp nincs a szűrésnek megfelelő talála
 az oldal ezt jelzi ("Újra" gombbal), nem kínál helyette esetleg nem
 megfelelő alternatívát.
 
+**Ez a két beállítás egy összecsukható panelben van (2026-09-27):** a
+panel fejléce mindig mutatja az aktuális állapotot összefoglalva (pl.
+„Legfeljebb 30 perc · nincs extra szűrés”), a részletek csak rákattintva
+nyílnak ki. Első látogatáskor (amíg nincs semmi elmentve `localStorage`-ban
+a `napi-recept-prefs` kulcs alatt) a panel nyitva várja a látogatót; ha
+korábban már állított bármit, a panel automatikusan csukva nyílik meg —
+így visszatérő látogatónak nem kell minden egyes megnyitáskor végiggörgetni
+ugyanazokat a már beállított vezérlőket, mielőtt a tényleges ajánláshoz
+érne.
+
 ## Heti menü
 
 A "Heti menü" fülön egy teljes naptári hét (hétfőtől vasárnapig) ajánlása
@@ -307,6 +317,18 @@ kártyához görget és röviden kiemeli. Mobilon naponként egymás alá rendez
 Minden étkezés (újra)betöltése után frissül (`scheduleWeekOverview()`), így
 a „Másik ötlet”, a konyha- és a naptípus-váltás is azonnal látszik benne.
 
+**Összecsukható napi kártyák (2026-09-27):** az áttekintő táblázat alatti
+7 napi kártya (egyenként 3 teljes recepttel) alapból csak a mai napnál van
+kinyitva — a többi nap fejléce összecsukva jelenik meg ("▸ Részletek"
+gombbal), mert mind a 21 kártya egyszerre kiterítve kezelhetetlenül hosszú
+oldalt adott (asztalin ~5500 px, mobilon ~14 000 px). Az áttekintő
+táblázatban egy ételnévre kattintva a megfelelő nap automatikusan kinyílik,
+mielőtt a lap odagörgetne. Az állapot (`article.week-day.collapsed`) csak a
+memóriában él, hét váltásakor/újratöltéskor minden nap az alapállapotra áll
+vissza — nincs localStorage-perzisztencia, mert ez tudatosan egy
+"ránézésre áttekintem, aztán rákattintok, ami kell" munkafolyamat, nem egy
+tartós beállítás.
+
 ### Bevásárlólista
 
 A **Bevásárlólista** menüpont megnyitáskor automatikusan összeállítja az
@@ -340,6 +362,15 @@ a recept nem ad explicit mértékegységet (pl. "1 hagyma" darabszám
 nélkül), nincs összesítés, csak a részletes felsorolás. A lista
 nyomtatható is (a nyomtatási nézet elrejti a navigációt és a
 vezérlőket).
+
+**Kipipálható tételek (2026-09-27):** minden sor elején egy checkbox áll —
+vásárlás közben kipipálható, amit már kosárba tettél; a kipipált tétel
+áthúzva jelenik meg. Az állapot a héthez kötve (`localStorage`,
+`napi-recept-shop-checked:<hét hétfőjének dátuma>`) böngészőnként
+megmarad újratöltés után is, de csak azon a gépen — más eszközzel nem
+szinkronizál, és egy másik hétre váltva nem hordódik át. Nyomtatáskor a
+valódi checkbox rejtve marad, csak a már meglévő `☐` nyomtatási jelölés
+látszik.
 
 ### Nyomtatás: menü + bevásárlólista
 
@@ -499,6 +530,19 @@ betűs nézet a konyhapultra.
   Egyszerre egy időzítő fut; a főzés mód bezárása leállítja.
 - A képernyő főzés közben nem sötétül el (Screen Wake Lock API, ahol a
   böngésző támogatja; ha nem, erről egy tipp jelenik meg).
+
+**A kipipálható hozzávalók + koppintható lépések minta mindenhol megvan
+(2026-09-27),** nem csak Főzés módban: a napi ajánló kártyáin, a heti
+menüben, a Kedvenceim listában, a keresés találatain és a megosztott
+recept felugró ablakában is ugyanúgy pipálhatók a hozzávalók és
+koppinthatók (késznek jelölhetők) a lépések — nem kell külön Főzés módba
+lépni hozzá. A megosztott logika (`buildStepListItem`, `wireStepToggle`
+függvények) mindkét helyen (kártyák és Főzés mód) ugyanazt a viselkedést
+adja; az **időzítő gomb** viszont szándékosan Főzés mód-specifikus maradt
+— egyszerre több nyitott kártyán (pl. a heti menüben 21 is lehet) több
+egyidejű időzítő zavaró lenne. A pipálás/kész-jelölés állapota kártyánként
+nem tartós — újratöltéskor vagy adagszám-átszámoláskor nullázódik, ahogy
+Főzés módban is mindig üresen nyílik meg.
 
 ## Hasznos tanácsok háziasszonyoknak és háziuraknak
 
