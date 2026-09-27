@@ -118,18 +118,25 @@
   a { color: var(--accent); }
 
   .tabs {
-    display: flex; flex-wrap: wrap; gap: 4px; margin-top: 20px; border-bottom: 1px solid var(--line);
+    display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 18px; padding: 6px;
+    background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
+    outline: 1px solid var(--line-soft); outline-offset: 3px; box-shadow: var(--shadow);
   }
   .tab-btn {
-    font: inherit; font-size: 13.5px; font-weight: 600; cursor: pointer;
-    border: 1px solid transparent; border-bottom: none; background: none; color: var(--muted);
-    padding: 10px 16px; border-radius: 6px 6px 0 0;
+    flex: 1 1 auto; font-family: "Young Serif", Georgia, serif; font-size: 15px; font-weight: 400;
+    cursor: pointer; color: var(--ink-2); background: var(--surface-2);
+    border: 1px solid var(--line); border-radius: 7px; padding: 10px 18px; line-height: 1.25;
+    transition: background-color .15s, color .15s, border-color .15s, box-shadow .15s;
   }
-  .tab-btn:hover { color: var(--ink-2); }
+  .tab-long { color: var(--muted); }
+  .tab-btn:hover:not([aria-selected="true"]) {
+    color: var(--accent-2); border-color: var(--accent); background: var(--surface);
+  }
   .tab-btn[aria-selected="true"] {
-    color: var(--accent-2); background: var(--surface); border-color: var(--line);
-    box-shadow: 0 1px 0 var(--surface);
+    color: var(--surface); background: var(--accent); border-color: var(--accent-2);
+    box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3px var(--surface);
   }
+  .tab-btn[aria-selected="true"] .tab-long { color: inherit; opacity: .85; }
   .tips-empty { padding: 32px 4px; color: var(--muted); }
   .tips-empty h2 { font-size: 18px; color: var(--ink-2); margin: 0 0 8px; }
 
@@ -388,15 +395,9 @@
     .tagline { font-size: 13px; }
     .stamp { padding: 4px 12px; font-size: 11px; }
 
-    .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 14px; border-bottom: none; }
+    .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 14px 0 14px; padding: 5px; }
     .tab-long { display: none; }
-    .tab-btn {
-      border: 1px solid var(--line); border-radius: 8px; background: var(--surface-2);
-      color: var(--ink-2); padding: 10px 8px; min-height: 44px; text-align: center; line-height: 1.25;
-    }
-    .tab-btn[aria-selected="true"] {
-      background: var(--accent); border-color: var(--accent); color: var(--surface); box-shadow: none;
-    }
+    .tab-btn { font-size: 14px; padding: 10px 8px; min-height: 44px; text-align: center; }
 
     input[type="text"], input[type="password"], input[type="number"], select, textarea { font-size: 16px; }
     .cuisine-select { font-size: 14px; }
