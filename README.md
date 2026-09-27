@@ -147,6 +147,29 @@ A jelenlegi, működő proxy címe:
 együtt be van állítva). Ha a Worker kódja a repóban változik, az új
 tartalmat a Cloudflare szerkesztőjébe is be kell másolni és telepíteni.
 
+## Navigáció: bal oldali menüoszlop
+
+Asztali nézetben (900 px fölött) bal oldalon állandó, görgetéskor is
+helyben maradó menüoszlop, csoportosítva:
+
+- **Mit főzzek?** — Napi ajánló · Mi van itthon? · ♥ Kedvenceim (darabszámmal)
+- **Tervezés és vásárlás** — Heti menü · Bevásárlólista · Közeli boltok
+- **Tudástár** — Hasznos tanácsok · Alapok kezdőknek
+- **Közösség** — Recept beküldése
+
+Minden menüpont egy `.tab-panel`-t mutat (`data-tab`: `ajanlo`, `kereso`,
+`kedvencek`, `heti`, `bevasarlo`, `boltok`, `tanacsok`, `alapok`,
+`bekuldes`); az utoljára megnyitott oldal localStorage-ban megmarad. A
+„Kinek főzök?” és a „Mennyi időd van főzni?” beállítások csak a Napi
+ajánló és a Heti menü oldalon látszanak. Bármely `data-goto="…"`
+attribútumú gomb a megadott oldalra vált (pl. Heti menü →
+„Bevásárlólista ehhez a héthez →”).
+
+Mobilon/tableten (900 px alatt) a menü helyén felül egy rögzített sáv van
+„☰ Menü” gombbal és az aktuális oldal nevével; a gomb balról becsúszó
+menüt nyit ugyanezekkel a pontokkal (bezárás: ×, háttérre koppintás,
+Escape vagy egy menüpont választása).
+
 ## Személyre szabás
 
 A Beállítások panelen felvehetsz **célszemélyeket** (pl. családtagokat):
@@ -286,8 +309,9 @@ a „Másik ötlet”, a konyha- és a naptípus-váltás is azonnal látszik be
 
 ### Bevásárlólista
 
-A "Heti menü" fül alján egy gombbal összeállítható a betöltött heti
-étkezések hozzávalóiból egy bevásárlólista, boltrészlegek szerint
+A **Bevásárlólista** menüpont megnyitáskor automatikusan összeállítja az
+éppen kiválasztott hét (a Heti menüben lapozható) étkezéseinek
+hozzávalóiból a listát, boltrészlegek szerint
 csoportosítva (zöldség-gyümölcs, hús/hal, tejtermék/tojás, pékáru/tészta,
 fűszer/egyéb). Minden tétel elején egy **megközelítő, felfelé kerekített
 összmennyiség** áll (pl. "≈ fél kg cukor", "≈ 1 liter étkezési olaj",
@@ -348,7 +372,7 @@ vagy pontatlan lehet benne.
 
 ## „Mi van itthon?” kereső
 
-A Napi ajánló fülön, a konyhaválasztó alatt. Vesszővel (vagy „és”-sel)
+Saját menüpont („Mi van itthon?”). Vesszővel (vagy „és”-sel)
 elválasztott hozzávalókat vagy ételnevet vár, és mind a 734 kézzel írt
 receptben keres (cím + hozzávalók, ékezet-függetlenül, részszóra is: a
 „csirke” a „csirkemell”-t is megtalálja). Rangsor: minél több megadott
@@ -429,15 +453,15 @@ betűs nézet a konyhapultra.
 
 ## Hasznos tanácsok háziasszonyoknak és háziuraknak
 
-A fül legelején **„Alapok kezdőknek”** blokk (olívazöld szegéllyel): 11
+Az **„Alapok kezdőknek”** saját menüpontot kapott (olívazöld szegélyű blokk): 11
 alapfogás (előkészítés, mértékegységek, tészta- és rizsfőzés, üvegesre
 párolás, sütés forró serpenyőben, hús pihentetése, maghőmérsékletek —
 szárnyas 74 °C, darált hús 71 °C, egészben sült sertés/marha 63 °C —,
 tojásfőzés, sózás, biztonságos vágás). Alján a „Mutasd a kezdőbarát
-recepteket →” gomb átvált a Napi ajánlóra, és bekapcsolja a kereső
+recepteket →” gomb átvált a „Mi van itthon?” oldalra, és bekapcsolja a kereső
 „Kezdőknek is megy” szűrőjét.
 
-A második fül gyakorlati háztartási tanácsokat gyűjt össze —
+A „Hasznos tanácsok” oldal gyakorlati háztartási tanácsokat gyűjt össze —
 háztartásszervezés, vendéglátás, terítés, tálalás és néhány konyhai
 fogás —, valamint két klasszikus magyar sütemény receptjét (Dobostorta,
 Rigó Jancsi), amelyek nem illenek a reggeli/ebéd/vacsora napi ajánlóba,
@@ -453,7 +477,7 @@ lúgból főzött házi szappan, cselédtartás körüli tudnivalók) kihagytuk.
 
 ## Recept beküldése
 
-A harmadik fülön bárki javasolhat receptet egy űrlapon keresztül (név és
+A „Recept beküldése” oldalon bárki javasolhat receptet egy űrlapon keresztül (név és
 e-mail nem kötelező, a recept neve, konyhája, étkezés-típusa, hozzávalói és
 elkészítési lépései igen). **A beküldés nem publikál automatikusan semmit.**
 Mivel az oldalnak nincs backendje és nincs élő AI-ellenőrzés a böngészőben,

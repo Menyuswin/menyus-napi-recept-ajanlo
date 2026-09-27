@@ -88,7 +88,7 @@
     line-height: 1.55;
     -webkit-font-smoothing: antialiased;
   }
-  .wrap { max-width: 1080px; margin: 0 auto; padding: 28px 20px 56px; }
+  .wrap { max-width: 1320px; margin: 0 auto; padding: 28px 20px 56px; }
 
   h1, h2, h3 { font-family: "Young Serif", Georgia, serif; font-weight: 400; }
   .cond { font-family: "Archivo", sans-serif; font-weight: 600; }
@@ -117,26 +117,66 @@
   :where(a, button, [tabindex]):focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   a { color: var(--accent); }
 
-  .tabs {
-    display: flex; flex-wrap: wrap; gap: 6px; margin: 22px 0 18px; padding: 6px;
+  .layout { display: grid; grid-template-columns: 248px minmax(0, 1fr); gap: 28px; margin-top: 22px; align-items: start; }
+  .content { min-width: 0; }
+  .sidebar {
+    position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto;
     background: var(--surface); border: 1px solid var(--line); border-radius: 10px;
-    outline: 1px solid var(--line-soft); outline-offset: 3px; box-shadow: var(--shadow);
+    outline: 1px solid var(--line-soft); outline-offset: 3px; box-shadow: var(--shadow); padding: 10px 8px 12px;
   }
+  .sidebar-head { display: none; }
+  .nav-group {
+    margin: 16px 12px 6px; font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase;
+    font-weight: 700; color: var(--muted);
+  }
+  .nav-group:first-child { margin-top: 6px; }
+  .tabs { display: flex; flex-direction: column; gap: 3px; }
   .tab-btn {
-    flex: 1 1 auto; font-family: "Young Serif", Georgia, serif; font-size: 15px; font-weight: 400;
-    cursor: pointer; color: var(--ink-2); background: var(--surface-2);
-    border: 1px solid var(--line); border-radius: 7px; padding: 10px 18px; line-height: 1.25;
-    transition: background-color .15s, color .15s, border-color .15s, box-shadow .15s;
+    display: flex; align-items: center; gap: 8px; width: 100%; text-align: left; cursor: pointer;
+    font-family: "Young Serif", Georgia, serif; font-size: 15.5px; font-weight: 400; line-height: 1.25;
+    color: var(--ink-2); background: none; border: 1px solid transparent; border-radius: 7px; padding: 9px 12px;
+    transition: background-color .15s, color .15s, border-color .15s;
   }
-  .tab-long { color: var(--muted); }
-  .tab-btn:hover:not([aria-selected="true"]) {
-    color: var(--accent-2); border-color: var(--accent); background: var(--surface);
-  }
+  .tab-label { flex: 1; min-width: 0; }
+  .tab-sub { display: block; margin-top: 2px; font-family: "Archivo", sans-serif; font-size: 12px; color: var(--muted); }
+  .tab-btn:hover:not([aria-selected="true"]) { background: var(--surface-2); color: var(--accent-2); border-color: var(--line-soft); }
   .tab-btn[aria-selected="true"] {
     color: var(--surface); background: var(--accent); border-color: var(--accent-2);
     box-shadow: inset 0 0 0 2px var(--accent), inset 0 0 0 3px var(--surface);
   }
-  .tab-btn[aria-selected="true"] .tab-long { color: inherit; opacity: .85; }
+  .tab-btn[aria-selected="true"] .tab-sub { color: inherit; opacity: .85; }
+  .mobile-bar, .nav-backdrop { display: none; }
+  .panel-title { font-size: 24px; margin: 0 0 6px; }
+  .shop-actions { display: flex; gap: 8px; flex-wrap: wrap; margin: 10px 0 4px; }
+  .week-shop-link { margin: 14px 0 0; }
+
+  @media (max-width: 900px) {
+    .layout { display: block; margin-top: 0; }
+    .mobile-bar {
+      display: flex; position: sticky; top: 0; z-index: 30; align-items: center; gap: 12px;
+      margin: 12px 0 14px; padding: 8px 0; background: var(--paper); border-bottom: 1px solid var(--line);
+    }
+    .menu-toggle {
+      font: inherit; font-size: 15px; font-weight: 700; display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+      min-height: 44px; padding: 9px 14px; border-radius: 8px; border: 1px solid var(--accent-2);
+      background: var(--accent); color: var(--surface); flex-shrink: 0;
+    }
+    .current-section { font-family: "Young Serif", Georgia, serif; font-size: 17px; color: var(--ink); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .sidebar {
+      position: fixed; top: 0; left: 0; bottom: 0; z-index: 50; width: min(310px, 86vw); max-height: none;
+      border-radius: 0 12px 12px 0; outline: none; transform: translateX(-105%); visibility: hidden;
+      transition: transform .22s ease, visibility .22s;
+    }
+    .sidebar.open { transform: none; visibility: visible; }
+    .sidebar-head {
+      display: flex; align-items: center; justify-content: space-between; padding: 4px 4px 10px 12px;
+      margin-bottom: 4px; border-bottom: 1px solid var(--line-soft); font-family: "Young Serif", Georgia, serif; font-size: 19px;
+    }
+    .nav-backdrop.open { display: block; position: fixed; inset: 0; z-index: 40; background: rgba(36,28,22,.45); }
+    .tab-btn { min-height: 46px; }
+  }
+  @media (prefers-reduced-motion: reduce) { .sidebar { transition: none; } }
+
   .tips-empty { padding: 32px 4px; color: var(--muted); }
   .tips-empty h2 { font-size: 18px; color: var(--ink-2); margin: 0 0 8px; }
 
@@ -382,6 +422,9 @@
     body.print-week #shoppingListResult > button, body.print-week .shopping-item-detail,
     body.print-week .shopping-item-note { display: none !important; }
     body.print-week .print-week-title { display: block; font-size: 22px; margin: 0 0 10px; }
+    body.print-week #tabHeti, body.print-week #tabBevasarlo { display: block !important; }
+    body.print-week .panel-title, body.print-week #shopWeekNote { display: none !important; }
+    .sidebar, .mobile-bar, .nav-backdrop, .no-print { display: none !important; }
     body.print-week .week-overview { break-inside: avoid; border-color: #999; }
     body.print-week .wo-cell button { color: #000; }
     body.print-week .shopping-section { break-before: page; border: none; padding: 0; background: none; }
@@ -549,10 +592,6 @@
     .tagline { font-size: 13px; }
     .stamp { padding: 4px 12px; font-size: 11px; }
 
-    .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 14px 0 14px; padding: 5px; }
-    .tab-long { display: none; }
-    .tab-btn { font-size: 14px; padding: 10px 8px; min-height: 44px; text-align: center; }
-    .tab-btn:last-child { grid-column: span 2; }
     .wo-headrow { display: none !important; }
     .wo-row { grid-template-columns: 1fr; padding: 6px 0; }
     .wo-row > * { padding: 4px 14px; }
@@ -599,13 +638,36 @@
     </div>
   </header>
 
-  <nav class="tabs" id="tabs">
-    <button type="button" class="tab-btn" data-tab="ajanlo" aria-selected="true">Napi ajánló</button>
-    <button type="button" class="tab-btn" data-tab="heti" aria-selected="false">Heti menü</button>
-    <button type="button" class="tab-btn" data-tab="kedvencek" aria-selected="false">♥ Kedvenceim<span class="tab-count" id="favCount"></span></button>
-    <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false">Hasznos tanácsok<span class="tab-long"> háziasszonyoknak és háziuraknak</span></button>
-    <button type="button" class="tab-btn" data-tab="bekuldes" aria-selected="false">Recept beküldése</button>
-  </nav>
+  <div class="mobile-bar">
+    <button type="button" class="menu-toggle" id="menuToggle" aria-controls="sidebar" aria-expanded="false">☰ Menü</button>
+    <span class="current-section" id="currentSection">Napi ajánló</span>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar" aria-label="Fő menü">
+      <div class="sidebar-head">
+        <span>Menü</span>
+        <button type="button" class="dialog-close" id="menuClose" aria-label="Menü bezárása">×</button>
+      </div>
+      <nav class="tabs" id="tabs">
+        <p class="nav-group">Mit főzzek?</p>
+        <button type="button" class="tab-btn" data-tab="ajanlo" aria-selected="false"><span class="tab-label">Napi ajánló<span class="tab-sub">mai reggeli, ebéd, vacsora</span></span></button>
+        <button type="button" class="tab-btn" data-tab="kereso" aria-selected="false"><span class="tab-label">Mi van itthon?<span class="tab-sub">keresés hozzávalók szerint</span></span></button>
+        <button type="button" class="tab-btn" data-tab="kedvencek" aria-selected="false"><span class="tab-label">♥ Kedvenceim<span class="tab-count" id="favCount"></span><span class="tab-sub">elmentett receptek</span></span></button>
+        <p class="nav-group">Tervezés és vásárlás</p>
+        <button type="button" class="tab-btn" data-tab="heti" aria-selected="false"><span class="tab-label">Heti menü<span class="tab-sub">7 napra előre</span></span></button>
+        <button type="button" class="tab-btn" data-tab="bevasarlo" aria-selected="false"><span class="tab-label">Bevásárlólista<span class="tab-sub">a heti menü hozzávalói</span></span></button>
+        <button type="button" class="tab-btn" data-tab="boltok" aria-selected="false"><span class="tab-label">Közeli boltok<span class="tab-sub">és akciós újságjaik</span></span></button>
+        <p class="nav-group">Tudástár</p>
+        <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false"><span class="tab-label">Hasznos tanácsok<span class="tab-sub">háziasszonyoknak és háziuraknak</span></span></button>
+        <button type="button" class="tab-btn" data-tab="alapok" aria-selected="false"><span class="tab-label">Alapok kezdőknek<span class="tab-sub">az első lépések a konyhában</span></span></button>
+        <p class="nav-group">Közösség</p>
+        <button type="button" class="tab-btn" data-tab="bekuldes" aria-selected="false"><span class="tab-label">Recept beküldése<span class="tab-sub">oszd meg a kedvenced</span></span></button>
+      </nav>
+    </aside>
+
+    <main class="content" id="main">
 
   <div id="sharedSettings">
   <details class="panel" id="settingsPanel">
@@ -668,33 +730,6 @@
     <div class="global-cuisine-btns" id="globalCuisineBtns"></div>
   </div>
 
-  <section class="pantry" id="pantry" aria-labelledby="pantryTitle">
-    <h2 id="pantryTitle">Mi van itthon?</h2>
-    <p class="allergen-note">Írd be, mi van a hűtőben vagy a kamrában (vesszővel elválasztva), vagy egy étel nevét — megmutatjuk, mit főzhetsz belőle mind a tíz konyhából.</p>
-    <form id="pantryForm" role="search">
-      <input type="search" id="pantryInput" placeholder="pl. csirke, tejföl, krumpli" aria-label="Hozzávalók vagy ételnév" autocomplete="off">
-      <button type="submit" class="small primary">Keresés</button>
-    </form>
-    <div class="pantry-tags" id="pantryTags">
-      <span>Ötletek:</span>
-      <button type="button" data-tag="beginner" aria-pressed="false">Kezdőknek is megy</button>
-      <button type="button" data-tag="grill" aria-pressed="false">Grillen is</button>
-      <button type="button" data-tag="project" aria-pressed="false">Hétvégi projekt</button>
-      <button type="button" data-tag="nocook" aria-pressed="false">Nem kell főzni</button>
-    </div>
-    <div class="pantry-slots">
-      <span>Étkezés:</span>
-      <label><input type="radio" name="pantrySlot" value="" checked> mind</label>
-      <label><input type="radio" name="pantrySlot" value="breakfast"> reggeli</label>
-      <label><input type="radio" name="pantrySlot" value="lunch"> ebéd</label>
-      <label><input type="radio" name="pantrySlot" value="dinner"> vacsora</label>
-    </div>
-    <div id="pantryResults" hidden>
-      <div class="pantry-summary"><span id="pantrySummary"></span><button type="button" class="small" id="pantryClear">Találatok bezárása</button></div>
-      <div class="fav-grid" id="pantryGrid"></div>
-      <button type="button" class="small pantry-more" id="pantryMore" hidden>További találatok</button>
-    </div>
-  </section>
 
   <section class="meals" id="meals">
     <article class="card" data-slot="breakfast">
@@ -757,16 +792,58 @@
       <div id="weekOverview"></div>
     </section>
     <div class="week-grid" id="weekGrid"></div>
+    <button type="button" class="small primary week-shop-link no-print" data-goto="bevasarlo">Bevásárlólista ehhez a héthez →</button>
 
+
+  </div>
+
+  <div class="tab-panel" data-tab="kereso" id="tabKereso" hidden>
+  <section class="pantry" id="pantry" aria-labelledby="pantryTitle">
+    <h2 id="pantryTitle" class="panel-title">Mi van itthon?</h2>
+    <p class="allergen-note">Írd be, mi van a hűtőben vagy a kamrában (vesszővel elválasztva), vagy egy étel nevét — megmutatjuk, mit főzhetsz belőle mind a tíz konyhából.</p>
+    <form id="pantryForm" role="search">
+      <input type="search" id="pantryInput" placeholder="pl. csirke, tejföl, krumpli" aria-label="Hozzávalók vagy ételnév" autocomplete="off">
+      <button type="submit" class="small primary">Keresés</button>
+    </form>
+    <div class="pantry-tags" id="pantryTags">
+      <span>Ötletek:</span>
+      <button type="button" data-tag="beginner" aria-pressed="false">Kezdőknek is megy</button>
+      <button type="button" data-tag="grill" aria-pressed="false">Grillen is</button>
+      <button type="button" data-tag="project" aria-pressed="false">Hétvégi projekt</button>
+      <button type="button" data-tag="nocook" aria-pressed="false">Nem kell főzni</button>
+    </div>
+    <div class="pantry-slots">
+      <span>Étkezés:</span>
+      <label><input type="radio" name="pantrySlot" value="" checked> mind</label>
+      <label><input type="radio" name="pantrySlot" value="breakfast"> reggeli</label>
+      <label><input type="radio" name="pantrySlot" value="lunch"> ebéd</label>
+      <label><input type="radio" name="pantrySlot" value="dinner"> vacsora</label>
+    </div>
+    <div id="pantryResults" hidden>
+      <div class="pantry-summary"><span id="pantrySummary"></span><button type="button" class="small" id="pantryClear">Találatok bezárása</button></div>
+      <div class="fav-grid" id="pantryGrid"></div>
+      <button type="button" class="small pantry-more" id="pantryMore" hidden>További találatok</button>
+    </div>
+  </section>
+  </div>
+
+  <div class="tab-panel" data-tab="bevasarlo" id="tabBevasarlo" hidden>
     <section class="shopping-section">
-      <h2>Bevásárlólista</h2>
-      <p class="allergen-note">Egy kattintással összegyűjti a heti menü összes hozzávalóját, boltrészlegek szerint rendezve — így egyszerre megveheted, ami az egész hétre kell.</p>
-      <button type="button" class="small primary" id="buildShoppingListBtn">Bevásárlólista összeállítása ehhez a héthez</button>
+      <h2 class="panel-title">Bevásárlólista</h2>
+      <p class="allergen-note">A heti menü összes hozzávalója egy listában, boltrészlegek szerint rendezve — így egyszerre megveheted, ami az egész hétre kell.</p>
+      <p class="allergen-note" id="shopWeekNote"></p>
+      <div class="shop-actions no-print">
+        <button type="button" class="small" id="buildShoppingListBtn">Lista frissítése</button>
+        <button type="button" class="small primary" id="shopPrintBtn">Nyomtatás: menü + bevásárlólista</button>
+        <button type="button" class="small" data-goto="heti">Heti menü megnyitása</button>
+      </div>
       <div id="shoppingListResult"></div>
     </section>
+  </div>
 
+  <div class="tab-panel" data-tab="boltok" id="tabBoltok" hidden>
     <section class="store-finder">
-      <h2>Közeli boltok</h2>
+      <h2 class="panel-title">Közeli boltok</h2>
       <p class="allergen-note">Árakat és akciókat nem tudunk mutatni, de megkeressük a hozzád közeli boltokat, és ahol lehet, linkeljük az aktuális akciós újságjukat.</p>
       <div class="field-row">
         <button type="button" class="small" id="useLocationBtn">📍 Helyzetem megosztása</button>
@@ -776,6 +853,29 @@
       </div>
       <div id="storeResults"></div>
     </section>
+  </div>
+
+  <div class="tab-panel" data-tab="alapok" id="tabAlapok" hidden>
+    <div class="tips-categories">
+      <div class="tips-category tips-basics">
+        <h3>Alapok kezdőknek</h3>
+        <p class="tips-basics-intro">Most kezdesz főzni, vagy ritkán állsz a tűzhely mellé? Ez a néhány fogás a legtöbb recepthez elég.</p>
+        <ul class="tips-list">
+          <li><strong>Előbb olvasd végig, aztán készíts elő mindent.</strong> Mérd ki és vágd fel a hozzávalókat, mielőtt bekapcsolod a tűzhelyt — így főzés közben nem kell kapkodni, és semmi nem ég oda, amíg a hagymát pucolod.</li>
+          <li><strong>Mértékegységek egy helyen.</strong> 1 dkg = 10 g, 1 dl = 100 ml, 1 evőkanál ≈ 15 ml, 1 teáskanál ≈ 5 ml. A „csipet” annyi, amennyi két ujjad közé fér.</li>
+          <li><strong>Tészta: bő, sós, forrásban lévő víz.</strong> 10 dkg tésztához kb. 1 liter víz és egy teáskanál só jár. A csomagoláson írt idő előtt egy perccel kóstold meg: akkor jó, ha puha, de a közepe még enyhén ellenáll.</li>
+          <li><strong>Rizs: mérd, fedd le, ne kavard.</strong> Fehér rizsnél általában 1 rész rizshez 1,5–2 rész víz kell (a csomagoláson megtalálod). Felforralod, lefeded, lassú tűzön megfőzöd, végül a tűzről levéve még 5 percig fedő alatt hagyod.</li>
+          <li><strong>Mit jelent az „üvegesre párolt” hagyma?</strong> Közepes lángon, kevés olajon vagy zsíron, gyakran kevergetve 5–8 perc, amíg a hagyma áttetsző és puha lesz, de még nem barnul.</li>
+          <li><strong>Forró serpenyő, nem zsúfolva.</strong> A hús és a zöldség akkor pirul szépen, ha a serpenyő és az olaj már forró, mielőtt beleteszed. Ne rakd tele: inkább süss két adagban, különben a saját levében párolódik pirulás helyett.</li>
+          <li><strong>A sült hús pihenjen, mielőtt felvágod.</strong> Letakarva 5–10 perc elég — így a leve a húsban marad, nem a vágódeszkán.</li>
+          <li><strong>Mikor kész a hús?</strong> A legbiztosabb egy olcsó maghőmérő a hús legvastagabb részébe szúrva: szárnyas 74 °C, darált hús 71 °C, egészben sült sertés és marha legalább 63 °C. Hőmérő nélkül: a csirke leve átlátszó legyen, ne rózsaszín.</li>
+          <li><strong>Tojásfőzés percre.</strong> Forrásban lévő vízbe engedve kb. 6 perc a lágy, 9–10 perc a kemény tojás. Utána hideg vízbe vele — így könnyebb pucolni, és nem szürkül meg a sárgája.</li>
+          <li><strong>Sóból inkább kevesebbet, aztán kóstolj.</strong> A végén mindig kóstold meg az ételt, és akkor igazíts rajta — hozzáadni könnyű, elvenni nem lehet.</li>
+          <li><strong>Biztonságos vágás.</strong> Tegyél nedves konyharuhát a vágódeszka alá, hogy ne csússzon, és a hozzávalót tartó kezed ujjbegyeit hajlítsd be. Az éles kés biztonságosabb a tompánál, mert nem csúszik meg.</li>
+        </ul>
+        <button type="button" class="small primary tips-basics-go" id="goBeginnerRecipes">Mutasd a kezdőbarát recepteket →</button>
+      </div>
+    </div>
   </div>
 
   <div class="tab-panel" data-tab="kedvencek" id="tabKedvencek" hidden>
@@ -820,24 +920,6 @@
 
   <div class="tab-panel" data-tab="tanacsok" id="tabTanacsok" hidden>
     <div class="tips-categories">
-      <div class="tips-category tips-basics">
-        <h3>Alapok kezdőknek</h3>
-        <p class="tips-basics-intro">Most kezdesz főzni, vagy ritkán állsz a tűzhely mellé? Ez a néhány fogás a legtöbb recepthez elég.</p>
-        <ul class="tips-list">
-          <li><strong>Előbb olvasd végig, aztán készíts elő mindent.</strong> Mérd ki és vágd fel a hozzávalókat, mielőtt bekapcsolod a tűzhelyt — így főzés közben nem kell kapkodni, és semmi nem ég oda, amíg a hagymát pucolod.</li>
-          <li><strong>Mértékegységek egy helyen.</strong> 1 dkg = 10 g, 1 dl = 100 ml, 1 evőkanál ≈ 15 ml, 1 teáskanál ≈ 5 ml. A „csipet” annyi, amennyi két ujjad közé fér.</li>
-          <li><strong>Tészta: bő, sós, forrásban lévő víz.</strong> 10 dkg tésztához kb. 1 liter víz és egy teáskanál só jár. A csomagoláson írt idő előtt egy perccel kóstold meg: akkor jó, ha puha, de a közepe még enyhén ellenáll.</li>
-          <li><strong>Rizs: mérd, fedd le, ne kavard.</strong> Fehér rizsnél általában 1 rész rizshez 1,5–2 rész víz kell (a csomagoláson megtalálod). Felforralod, lefeded, lassú tűzön megfőzöd, végül a tűzről levéve még 5 percig fedő alatt hagyod.</li>
-          <li><strong>Mit jelent az „üvegesre párolt” hagyma?</strong> Közepes lángon, kevés olajon vagy zsíron, gyakran kevergetve 5–8 perc, amíg a hagyma áttetsző és puha lesz, de még nem barnul.</li>
-          <li><strong>Forró serpenyő, nem zsúfolva.</strong> A hús és a zöldség akkor pirul szépen, ha a serpenyő és az olaj már forró, mielőtt beleteszed. Ne rakd tele: inkább süss két adagban, különben a saját levében párolódik pirulás helyett.</li>
-          <li><strong>A sült hús pihenjen, mielőtt felvágod.</strong> Letakarva 5–10 perc elég — így a leve a húsban marad, nem a vágódeszkán.</li>
-          <li><strong>Mikor kész a hús?</strong> A legbiztosabb egy olcsó maghőmérő a hús legvastagabb részébe szúrva: szárnyas 74 °C, darált hús 71 °C, egészben sült sertés és marha legalább 63 °C. Hőmérő nélkül: a csirke leve átlátszó legyen, ne rózsaszín.</li>
-          <li><strong>Tojásfőzés percre.</strong> Forrásban lévő vízbe engedve kb. 6 perc a lágy, 9–10 perc a kemény tojás. Utána hideg vízbe vele — így könnyebb pucolni, és nem szürkül meg a sárgája.</li>
-          <li><strong>Sóból inkább kevesebbet, aztán kóstolj.</strong> A végén mindig kóstold meg az ételt, és akkor igazíts rajta — hozzáadni könnyű, elvenni nem lehet.</li>
-          <li><strong>Biztonságos vágás.</strong> Tegyél nedves konyharuhát a vágódeszka alá, hogy ne csússzon, és a hozzávalót tartó kezed ujjbegyeit hajlítsd be. Az éles kés biztonságosabb a tompánál, mert nem csúszik meg.</li>
-        </ul>
-        <button type="button" class="small primary tips-basics-go" id="goBeginnerRecipes">Mutasd a kezdőbarát recepteket →</button>
-      </div>
 
       <div class="tips-category">
         <h3>Háztartásszervezés</h3>
@@ -981,6 +1063,8 @@
         <span id="copyStatus" class="key-status"></span>
       </div>
     </div>
+  </div>
+    </main>
   </div>
 </div>
 
@@ -2824,19 +2908,14 @@
   function renderShoppingList(container, result) {
     container.innerHTML = "";
     if (!result.recipeCount) {
-      renderMessageInto(container, "state-empty", "Ehhez előbb be kell töltődnie legalább néhány étkezésnek ezen a héten (görgess fel, várd meg a betöltést, vagy nézd meg a Beállításoknál, elérhető-e az élő konyhákhoz szükséges hozzáférés).");
+      renderMessageInto(container, "state-empty", "Ehhez a héthez még nincs összeállított menü — nyisd meg a Heti menüt, és utána térj vissza ide.");
       return;
     }
     var note = document.createElement("p");
     note.className = "allergen-note";
-    note.textContent = "A lista " + result.recipeCount + " betöltött étkezés hozzávalóiból állt össze. Az azonos nevű tételek mennyiségét megközelítőleg összeadtuk és felfelé kerekítettük egy vásárláskor kényelmes mennyiségre (pl. fél/1 kg, fél/1 liter) — ez becslés, a zárójeles rész mutatja a pontos, recepteként külön-külön szereplő mennyiségeket. Eltérő mértékegységű (pl. dkg és evőkanál) bejegyzéseket nem tudunk biztonságosan összevonni, ezek külön szerepelnek.";
+    note.textContent = "Az azonos tételeket összeadtuk, és vásárlásra kényelmes mennyiségre kerekítettük (pl. fél vagy 1 kg) — ez becslés; a pontos, receptenkénti mennyiségek zárójelben látszanak. Az eltérő mértékegységű tételek (pl. dkg és evőkanál) külön sorban szerepelnek.";
     container.appendChild(note);
 
-    var printBtn = document.createElement("button");
-    printBtn.type = "button"; printBtn.className = "small";
-    printBtn.textContent = "Nyomtatás";
-    printBtn.addEventListener("click", printWeek);
-    container.appendChild(printBtn);
 
     var categorized = {};
     Object.keys(result.items).forEach(function (key) {
@@ -2879,7 +2958,8 @@
   }
 
   function printWeek() {
-    renderShoppingList(document.getElementById("shoppingListResult"), buildShoppingList());
+    ensureWeekRendered();
+    refreshShoppingPanel();
     document.getElementById("printWeekTitle").textContent = "Heti menü · " + document.getElementById("weekRangeLabel").textContent;
     document.body.classList.add("print-week");
     window.print();
@@ -2889,11 +2969,8 @@
 
   function initShoppingList() {
     document.getElementById("weekPrintBtn").addEventListener("click", printWeek);
-    var btn = document.getElementById("buildShoppingListBtn");
-    var container = document.getElementById("shoppingListResult");
-    btn.addEventListener("click", function () {
-      renderShoppingList(container, buildShoppingList());
-    });
+    document.getElementById("shopPrintBtn").addEventListener("click", printWeek);
+    document.getElementById("buildShoppingListBtn").addEventListener("click", refreshShoppingPanel);
   }
 
   // ---------- boltkereső ----------
@@ -3354,32 +3431,93 @@
 
   var TAB_STORAGE = "napi-recept-active-tab";
 
+  var activateTab = function () {};
+  var SETTINGS_TABS = ["ajanlo", "heti"];
+
+  function ensureWeekRendered() {
+    if (weekDirty || !currentWeekDays.length) {
+      weekDirty = false;
+      renderWeek();
+    }
+  }
+
+  function refreshShoppingPanel() {
+    ensureWeekRendered();
+    var result = buildShoppingList();
+    renderShoppingList(document.getElementById("shoppingListResult"), result);
+    document.getElementById("shopWeekNote").textContent = "A heti menü alapján: " +
+      document.getElementById("weekRangeLabel").textContent + " (" + result.recipeCount +
+      " étkezés). Másik hetet a Heti menüben választhatsz.";
+  }
+
   function initTabs() {
     var buttons = Array.prototype.slice.call(document.querySelectorAll(".tab-btn"));
     var panels = Array.prototype.slice.call(document.querySelectorAll(".tab-panel"));
-    var saved = "ajanlo";
-    try { saved = localStorage.getItem(TAB_STORAGE) || "ajanlo"; } catch (e) {}
+    var sidebar = document.getElementById("sidebar");
+    var backdrop = document.getElementById("navBackdrop");
+    var toggle = document.getElementById("menuToggle");
+    var layout = document.querySelector(".layout");
 
-    function activate(tabName) {
+    function openMenu() {
+      sidebar.classList.add("open"); backdrop.classList.add("open");
+      toggle.setAttribute("aria-expanded", "true");
+      var sel = sidebar.querySelector('.tab-btn[aria-selected="true"]') || buttons[0];
+      sel.focus();
+    }
+    function closeMenu(returnFocus) {
+      if (!sidebar.classList.contains("open")) return;
+      sidebar.classList.remove("open"); backdrop.classList.remove("open");
+      toggle.setAttribute("aria-expanded", "false");
+      if (returnFocus) toggle.focus();
+    }
+    toggle.addEventListener("click", function () {
+      if (sidebar.classList.contains("open")) closeMenu(true); else openMenu();
+    });
+    document.getElementById("menuClose").addEventListener("click", function () { closeMenu(true); });
+    backdrop.addEventListener("click", function () { closeMenu(true); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closeMenu(true); });
+
+    activateTab = function (tabName, opts) {
+      opts = opts || {};
+      if (!panels.some(function (p) { return p.getAttribute("data-tab") === tabName; })) tabName = "ajanlo";
       buttons.forEach(function (btn) {
-        btn.setAttribute("aria-selected", btn.getAttribute("data-tab") === tabName ? "true" : "false");
+        var on = btn.getAttribute("data-tab") === tabName;
+        btn.setAttribute("aria-selected", on ? "true" : "false");
+        if (on) {
+          btn.setAttribute("aria-current", "page");
+          document.getElementById("currentSection").textContent = btn.querySelector(".tab-label").firstChild.textContent;
+        } else {
+          btn.removeAttribute("aria-current");
+        }
       });
       panels.forEach(function (panel) {
         panel.hidden = panel.getAttribute("data-tab") !== tabName;
       });
-      document.getElementById("sharedSettings").hidden = tabName !== "ajanlo" && tabName !== "heti";
+      document.getElementById("sharedSettings").hidden = SETTINGS_TABS.indexOf(tabName) === -1;
       try { localStorage.setItem(TAB_STORAGE, tabName); } catch (e) {}
       if (tabName === "heti" && weekDirty) {
         weekDirty = false;
         renderWeek();
       }
-    }
+      if (tabName === "bevasarlo") refreshShoppingPanel();
+      closeMenu(false);
+      if (!opts.initial) {
+        var top = layout.getBoundingClientRect().top + window.scrollY - 8;
+        if (window.scrollY > top) window.scrollTo({ top: top });
+      }
+    };
 
     buttons.forEach(function (btn) {
-      btn.addEventListener("click", function () { activate(btn.getAttribute("data-tab")); });
+      btn.addEventListener("click", function () { activateTab(btn.getAttribute("data-tab")); });
+    });
+    document.addEventListener("click", function (e) {
+      var go = e.target.closest && e.target.closest("[data-goto]");
+      if (go) activateTab(go.getAttribute("data-goto"));
     });
 
-    activate(saved);
+    var saved = "ajanlo";
+    try { saved = localStorage.getItem(TAB_STORAGE) || "ajanlo"; } catch (e) {}
+    activateTab(saved, { initial: true });
   }
 
   function init() {
@@ -3398,10 +3536,9 @@
     initPantry();
     initCookMode();
     document.getElementById("goBeginnerRecipes").addEventListener("click", function () {
-      document.querySelector('.tab-btn[data-tab="ajanlo"]').click();
+      activateTab("kereso");
       var tagBtn = document.querySelector('#pantryTags button[data-tag="beginner"]');
       if (tagBtn.getAttribute("aria-pressed") !== "true") tagBtn.click();
-      document.getElementById("pantry").scrollIntoView({ behavior: "smooth", block: "start" });
     });
 
     var timeSel = document.getElementById("prefMaxTime");
