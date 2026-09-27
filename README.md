@@ -328,6 +328,27 @@ megnézhesd a valódi árakat. Ismeretlen/független boltokhoz csak
 önkéntesek által karbantartott, ezért egy-egy kisebb bolt hiányozhat
 vagy pontatlan lehet benne.
 
+## Kedvencek, megosztás, adagszám
+
+- **♡ Mentés / ♥ Elmentve** — minden kézzel írt recept kártyája alján (napi
+  ajánló, heti menü, kedvencek). A mentett receptek a **♥ Kedvenceim** fülre
+  kerülnek (a fülön a darabszám is látszik), localStorage-ban
+  (`napi-recept-favorites`), a legutóbb mentett elöl. Azonosító:
+  `<konyhakulcs>--<a cím slugja>` (pl. `american--klasszikus-amerikai-cheeseburger`),
+  ez konyhánként egyedi; ha egy recept címe megváltozik, a régi mentés
+  csendben kimarad a listából.
+- **Megosztás** — `…/#recept=<azonosító>` linket ad. Telefonon a rendszer
+  megosztó menüje nyílik meg (Messenger, Viber, e-mail stb.), asztali
+  böngészőben vágólapra másolja a linket. A linket megnyitva a recept egy
+  felugró ablakban jelenik meg; bezáráskor a `#recept=` rész eltűnik a címből.
+- **Mennyiség (− / +)** — a Hozzávalók alatt; az adagszámot (`servings`,
+  pl. „4 adag”, „12 db”) léptetve arányosan átszámolja a hozzávalók elején
+  álló mennyiséget (egész, tizedes, tört, tartomány, „fél”, „másfél”).
+  Konyhabarát kerekítés: 1 alatt negyed/fél/háromnegyed, 10 alatt fél
+  egységekre, fölötte egészre. Az ízlés szerinti tételeket (só, csipet)
+  nem módosítja. A bevásárlólista továbbra is az eredeti mennyiségekkel
+  számol.
+
 ## Hasznos tanácsok háziasszonyoknak és háziuraknak
 
 A második fül gyakorlati háztartási tanácsokat gyűjt össze —

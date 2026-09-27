@@ -360,6 +360,42 @@
   }
 
   .card .foot { margin-top: auto; padding-top: 8px; display: flex; flex-direction: column; gap: 6px; }
+  .foot-actions { display: flex; gap: 6px; }
+  .foot-actions button {
+    flex: 1; font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; border-radius: 5px;
+    border: 1px solid var(--line); background: var(--surface); color: var(--ink-2); padding: 7px 10px;
+  }
+  .foot-actions button:hover { border-color: var(--accent); color: var(--accent-2); }
+  .foot-actions button.fav-btn[aria-pressed="true"] { background: var(--accent-tint); border-color: var(--accent); color: var(--accent-2); }
+
+  .servings-ctl { display: flex; align-items: center; gap: 8px; margin: 6px 0 4px; font-size: 13px; color: var(--ink-2); }
+  .servings-ctl button {
+    font: inherit; font-weight: 700; width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+    border: 1px solid var(--line); background: var(--surface-2); color: var(--accent-2); line-height: 1; padding: 0;
+  }
+  .servings-ctl button:hover:not(:disabled) { border-color: var(--accent); }
+  .servings-ctl button:disabled { opacity: .4; cursor: default; }
+  .servings-ctl output { min-width: 64px; text-align: center; font-weight: 600; }
+  .servings-reset { font-size: 12px; color: var(--muted); background: none; border: none; text-decoration: underline; cursor: pointer; }
+
+  .tab-count {
+    display: inline-block; min-width: 20px; margin-left: 6px; padding: 1px 6px; border-radius: 999px;
+    font-family: "Archivo", sans-serif; font-size: 11.5px; font-weight: 700; line-height: 1.5;
+    background: var(--accent-tint); color: var(--accent-2); vertical-align: 2px;
+  }
+  .tab-count:empty { display: none; }
+  .fav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; align-items: start; }
+  .fav-empty { padding: 28px 18px; text-align: center; color: var(--ink-2); background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; }
+  .fav-empty h2 { font-size: 19px; margin: 0 0 6px; }
+
+  .recipe-dialog { border: none; padding: 0; background: transparent; width: min(560px, calc(100vw - 24px)); max-height: calc(100vh - 32px); }
+  .recipe-dialog::backdrop { background: rgba(36,28,22,.55); }
+  .recipe-dialog .card { max-height: calc(100vh - 32px); overflow: auto; }
+  .dialog-close {
+    font: inherit; font-size: 20px; line-height: 1; width: 32px; height: 32px; border-radius: 50%; cursor: pointer;
+    border: 1px solid var(--line); background: var(--surface-2); color: var(--ink-2);
+  }
+  .dialog-close:hover { border-color: var(--accent); color: var(--accent-2); }
   button.shuffle {
     font: inherit; font-size: 12.5px; font-weight: 500; cursor: pointer; border-radius: 5px;
     border: 1px solid var(--line); background: var(--surface-2); color: var(--ink);
@@ -399,6 +435,7 @@
     .tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; margin: 14px 0 14px; padding: 5px; }
     .tab-long { display: none; }
     .tab-btn { font-size: 14px; padding: 10px 8px; min-height: 44px; text-align: center; }
+    .tab-btn:last-child { grid-column: span 2; }
 
     input[type="text"], input[type="password"], input[type="number"], select, textarea { font-size: 16px; }
     .cuisine-select { font-size: 14px; }
@@ -441,6 +478,7 @@
   <nav class="tabs" id="tabs">
     <button type="button" class="tab-btn" data-tab="ajanlo" aria-selected="true">Napi ajánló</button>
     <button type="button" class="tab-btn" data-tab="heti" aria-selected="false">Heti menü</button>
+    <button type="button" class="tab-btn" data-tab="kedvencek" aria-selected="false">♥ Kedvenceim<span class="tab-count" id="favCount"></span></button>
     <button type="button" class="tab-btn" data-tab="tanacsok" aria-selected="false">Hasznos tanácsok<span class="tab-long"> háziasszonyoknak és háziuraknak</span></button>
     <button type="button" class="tab-btn" data-tab="bekuldes" aria-selected="false">Recept beküldése</button>
   </nav>
@@ -579,6 +617,24 @@
       <div id="storeResults"></div>
     </section>
   </div>
+
+  <div class="tab-panel" data-tab="kedvencek" id="tabKedvencek" hidden>
+    <p class="allergen-note">Itt vannak a receptek, amelyeket a kártyák alján a „♡ Mentés” gombbal eltettél. Ebben a böngészőben maradnak meg — a „Megosztás” gombbal bármelyiket elküldheted másnak is.</p>
+    <div class="fav-grid" id="favGrid"></div>
+  </div>
+
+  <dialog class="recipe-dialog" id="recipeDialog" aria-labelledby="dlgMeal">
+    <article class="card" id="dlgCard">
+      <div class="head">
+        <span class="meal-name" id="dlgMeal">Recept</span>
+        <div class="head-controls">
+          <span class="cuisine-badge" id="dlgCuisine">—</span>
+          <button type="button" class="dialog-close" id="dlgClose" aria-label="Bezárás">×</button>
+        </div>
+      </div>
+      <div class="body" id="dlgBody"></div>
+    </article>
+  </dialog>
 
   <div class="tab-panel" data-tab="tanacsok" id="tabTanacsok" hidden>
     <div class="tips-categories">
@@ -1185,6 +1241,177 @@
     renderMessageInto(card.querySelector(".body"), cls, text, retryFn);
   }
 
+  // ---------- kedvencek, megosztás, adagszám ----------
+  var FAV_STORAGE = "napi-recept-favorites";
+  var favorites = [];
+  try {
+    favorites = JSON.parse(localStorage.getItem(FAV_STORAGE) || "[]");
+    if (!Array.isArray(favorites)) favorites = [];
+  } catch (e) { favorites = []; }
+
+  function saveFavorites() {
+    try { localStorage.setItem(FAV_STORAGE, JSON.stringify(favorites)); } catch (e) {}
+  }
+
+  function slugify(text) {
+    return String(text).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .replace(/œ/g, "oe").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  }
+
+  function recipeId(cuisineKey, recipe) { return cuisineKey + "--" + slugify(recipe.title); }
+
+  var recipeIndex = null;
+  function findRecipeById(id) {
+    if (!recipeIndex) {
+      recipeIndex = {};
+      Object.keys(RECIPES).forEach(function (ck) {
+        Object.keys(RECIPES[ck]).forEach(function (slot) {
+          RECIPES[ck][slot].forEach(function (r) {
+            recipeIndex[recipeId(ck, r)] = { cuisineKey: ck, slot: slot, recipe: r };
+          });
+        });
+      });
+    }
+    return recipeIndex[id] || null;
+  }
+
+  function isFavorite(id) { return favorites.indexOf(id) !== -1; }
+
+  function setFavButton(btn, on) {
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    btn.textContent = on ? "♥ Elmentve" : "♡ Mentés";
+  }
+
+  function toggleFavorite(id) {
+    var i = favorites.indexOf(id);
+    if (i === -1) favorites.unshift(id); else favorites.splice(i, 1);
+    saveFavorites();
+    Array.prototype.forEach.call(document.querySelectorAll(".fav-btn"), function (b) {
+      if (b.getAttribute("data-recipe-id") === id) setFavButton(b, isFavorite(id));
+    });
+    renderFavorites();
+  }
+
+  function mealLabel(slot) {
+    var m = MEALS.filter(function (x) { return x.slot === slot; })[0];
+    return m ? m.label : "";
+  }
+
+  function renderFavorites() {
+    var count = document.getElementById("favCount");
+    var ids = favorites.filter(function (id) { return findRecipeById(id); });
+    count.textContent = ids.length ? String(ids.length) : "";
+    var grid = document.getElementById("favGrid");
+    grid.innerHTML = "";
+    if (!ids.length) {
+      grid.innerHTML = '<div class="fav-empty"><h2>Még nincs kedvenced</h2><p>Ha tetszik egy recept, kattints az alján a „♡ Mentés” gombra — ide gyűjtjük, így később is könnyen megtalálod.</p></div>';
+      return;
+    }
+    ids.forEach(function (id) {
+      var found = findRecipeById(id);
+      var cuisine = findCuisine(found.cuisineKey);
+      var card = document.createElement("article");
+      card.className = "card";
+      card.setAttribute("data-slot", found.slot);
+      var head = document.createElement("div");
+      head.className = "head";
+      var name = document.createElement("span");
+      name.className = "meal-name";
+      name.textContent = mealLabel(found.slot);
+      var badge = document.createElement("span");
+      badge.className = "cuisine-badge";
+      badge.textContent = cuisine.label;
+      head.appendChild(name); head.appendChild(badge);
+      var body = document.createElement("div");
+      body.className = "body";
+      card.appendChild(head); card.appendChild(body);
+      grid.appendChild(card);
+      renderRecipeInto(body, cuisine, found.recipe, { detailsOpen: false });
+    });
+  }
+
+  function recipeUrl(id) {
+    return location.origin + location.pathname + "#recept=" + encodeURIComponent(id);
+  }
+
+  function flashButton(btn, text) {
+    var orig = btn.textContent;
+    btn.textContent = text;
+    setTimeout(function () { btn.textContent = orig; }, 2000);
+  }
+
+  function shareRecipe(id, title, btn) {
+    var url = recipeUrl(id);
+    if (navigator.share) {
+      navigator.share({ title: title, text: title + " — ötlet a Napi recept ajánlóból", url: url }).catch(function () {});
+      return;
+    }
+    var copy = navigator.clipboard && navigator.clipboard.writeText
+      ? navigator.clipboard.writeText(url)
+      : Promise.reject();
+    copy.then(function () { flashButton(btn, "Link kimásolva ✓"); },
+      function () { window.prompt("Másold ki a recept linkjét:", url); });
+  }
+
+  function openSharedRecipeFromHash() {
+    var m = location.hash.match(/^#recept=(.+)$/);
+    if (!m) return;
+    var found = findRecipeById(decodeURIComponent(m[1]));
+    if (!found) return;
+    var cuisine = findCuisine(found.cuisineKey);
+    document.getElementById("dlgMeal").textContent = mealLabel(found.slot);
+    document.getElementById("dlgCuisine").textContent = cuisine.label;
+    document.getElementById("dlgCard").setAttribute("data-slot", found.slot);
+    renderRecipeInto(document.getElementById("dlgBody"), cuisine, found.recipe, { detailsOpen: true });
+    var dlg = document.getElementById("recipeDialog");
+    if (!dlg.open) dlg.showModal();
+  }
+
+  function initSharedRecipeDialog() {
+    var dlg = document.getElementById("recipeDialog");
+    document.getElementById("dlgClose").addEventListener("click", function () { dlg.close(); });
+    dlg.addEventListener("click", function (e) { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener("close", function () {
+      if (/^#recept=/.test(location.hash)) history.replaceState(null, "", location.pathname + location.search);
+    });
+    window.addEventListener("hashchange", openSharedRecipeFromHash);
+    openSharedRecipeFromHash();
+  }
+
+  // "4 adag (kb. 30 db)" → { count: 4, unit: "adag" }
+  function parseServings(text) {
+    var m = String(text || "").match(/^(?:kb\.\s*)?(\d+)(?:\s*-\s*\d+)?\s*([^\s(]+)?/);
+    if (!m) return null;
+    return { count: parseInt(m[1], 10), unit: m[2] || "adag" };
+  }
+
+  var QTY_RE = /^(kb\.\s*)?(másfél|fél|\d+(?:,\d+)?(?:\/\d+)?)(?:\s*-\s*(\d+(?:,\d+)?))?(?=\s|$)/;
+
+  function parseQty(str) {
+    if (str === "fél") return 0.5;
+    if (str === "másfél") return 1.5;
+    if (str.indexOf("/") !== -1) { var p = str.split("/"); return parseInt(p[0], 10) / parseInt(p[1], 10); }
+    return parseFloat(str.replace(",", "."));
+  }
+
+  function formatQty(n) {
+    if (n < 1) {
+      var q = Math.max(1, Math.round(n * 4));
+      return q === 1 ? "negyed" : q === 2 ? "fél" : q === 3 ? "háromnegyed" : "1";
+    }
+    var r = n >= 10 ? Math.round(n) : Math.round(n * 2) / 2;
+    return String(r).replace(".", ",");
+  }
+
+  function scaleIngredient(text, factor) {
+    if (factor === 1) return text;
+    var m = text.match(QTY_RE);
+    if (!m) return text;
+    var out = (m[1] || "") + formatQty(parseQty(m[2]) * factor);
+    if (m[3]) out += "-" + formatQty(parseQty(m[3]) * factor);
+    return out + text.slice(m[0].length);
+  }
+
   function renderRecipeInto(body, cuisine, recipe, opts) {
     opts = opts || {};
     body.innerHTML = "";
@@ -1255,7 +1482,38 @@
     ing.className = "ingredients"; ing.open = opts.detailsOpen !== false;
     var ingSum = document.createElement("summary"); ingSum.textContent = "Hozzávalók"; ing.appendChild(ingSum);
     var ul = document.createElement("ul");
-    recipe.ingredients.forEach(function (i) { var li = document.createElement("li"); li.textContent = i; ul.appendChild(li); });
+    function fillIngredients(factor) {
+      ul.innerHTML = "";
+      recipe.ingredients.forEach(function (i) {
+        var li = document.createElement("li"); li.textContent = scaleIngredient(i, factor); ul.appendChild(li);
+      });
+    }
+    var serv = opts.live ? null : parseServings(recipe.servings);
+    if (serv) {
+      var current = serv.count;
+      var ctl = document.createElement("div");
+      ctl.className = "servings-ctl";
+      var lbl = document.createElement("span"); lbl.textContent = "Mennyiség:";
+      var minus = document.createElement("button"); minus.type = "button"; minus.textContent = "−"; minus.setAttribute("aria-label", "Kevesebb adag");
+      var out = document.createElement("output");
+      var plus = document.createElement("button"); plus.type = "button"; plus.textContent = "+"; plus.setAttribute("aria-label", "Több adag");
+      var reset = document.createElement("button"); reset.type = "button"; reset.className = "servings-reset"; reset.textContent = "eredeti";
+      var update = function () {
+        out.textContent = current + " " + serv.unit;
+        minus.disabled = current <= 1;
+        plus.disabled = current >= Math.max(serv.count * 4, 12);
+        reset.hidden = current === serv.count;
+        fillIngredients(current / serv.count);
+      };
+      minus.addEventListener("click", function () { if (current > 1) { current--; update(); } });
+      plus.addEventListener("click", function () { current++; update(); });
+      reset.addEventListener("click", function () { current = serv.count; update(); });
+      ctl.appendChild(lbl); ctl.appendChild(minus); ctl.appendChild(out); ctl.appendChild(plus); ctl.appendChild(reset);
+      ing.appendChild(ctl);
+      update();
+    } else {
+      fillIngredients(1);
+    }
     ing.appendChild(ul); body.appendChild(ing);
 
     var steps = document.createElement("details");
@@ -1265,14 +1523,31 @@
     recipe.steps.forEach(function (s) { var li = document.createElement("li"); li.textContent = s; ol.appendChild(li); });
     steps.appendChild(ol); body.appendChild(steps);
 
-    if (opts.onShuffle) {
+    if (opts.onShuffle || !opts.live) {
       var foot = document.createElement("div");
       foot.className = "foot";
-      var shuffle = document.createElement("button");
-      shuffle.className = "shuffle";
-      shuffle.textContent = "Másik ötletet ebből a konyhából";
-      shuffle.addEventListener("click", opts.onShuffle);
-      foot.appendChild(shuffle);
+      if (!opts.live) {
+        var rid = recipeId(cuisine.key, recipe);
+        var actions = document.createElement("div");
+        actions.className = "foot-actions";
+        var favBtn = document.createElement("button");
+        favBtn.type = "button"; favBtn.className = "fav-btn";
+        favBtn.setAttribute("data-recipe-id", rid);
+        setFavButton(favBtn, isFavorite(rid));
+        favBtn.addEventListener("click", function () { toggleFavorite(rid); });
+        var shareBtn = document.createElement("button");
+        shareBtn.type = "button"; shareBtn.textContent = "Megosztás";
+        shareBtn.addEventListener("click", function () { shareRecipe(rid, recipe.title, shareBtn); });
+        actions.appendChild(favBtn); actions.appendChild(shareBtn);
+        foot.appendChild(actions);
+      }
+      if (opts.onShuffle) {
+        var shuffle = document.createElement("button");
+        shuffle.className = "shuffle";
+        shuffle.textContent = "Másik ötletet ebből a konyhából";
+        shuffle.addEventListener("click", opts.onShuffle);
+        foot.appendChild(shuffle);
+      }
       body.appendChild(foot);
     }
   }
@@ -2497,6 +2772,8 @@
     initWeekly();
     initShoppingList();
     initStoreFinder();
+    renderFavorites();
+    initSharedRecipeDialog();
 
     var timeSel = document.getElementById("prefMaxTime");
     var noCookBox = document.getElementById("prefNoCook");
