@@ -277,6 +277,13 @@ Beállításokban kiválasztott profil intolerancia-, kalória- és
 fehérjeszűrését, valamint a globális "Mennyi időd van főzni?"/"Nem kell
 főzni" beállításokat is figyelembe veszi, ugyanúgy, mint a napi ajánló.
 
+**„A hét menüje egy pillantásra”** — a heti kártyák fölötti tömör
+áttekintő: soronként egy nap, oszloponként reggeli/ebéd/vacsora (étel neve,
+konyha, idő), a mai nap kiemelve. Egy ételnévre kattintva a lap a részletes
+kártyához görget és röviden kiemeli. Mobilon naponként egymás alá rendezve.
+Minden étkezés (újra)betöltése után frissül (`scheduleWeekOverview()`), így
+a „Másik ötlet”, a konyha- és a naptípus-váltás is azonnal látszik benne.
+
 ### Bevásárlólista
 
 A "Heti menü" fül alján egy gombbal összeállítható a betöltött heti

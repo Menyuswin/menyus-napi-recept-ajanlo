@@ -311,6 +311,28 @@
   .daytype-select { font-size: 12px; padding: 4px 8px; }
   .week-meals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; padding: 14px 16px; }
   @media (max-width: 820px) { .week-meals { grid-template-columns: 1fr; } }
+  .week-overview {
+    margin-top: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
+    box-shadow: var(--shadow); overflow: hidden;
+  }
+  .week-overview h2 { font-size: 18px; margin: 0; padding: 12px 16px; border-bottom: 1px solid var(--line-soft); }
+  .wo-row { display: grid; grid-template-columns: 120px repeat(3, 1fr); border-bottom: 1px solid var(--line-soft); }
+  .wo-row:last-child { border-bottom: none; }
+  .wo-row > * { padding: 9px 12px; min-width: 0; }
+  .wo-headrow { background: var(--surface-2); }
+  .wo-headrow span { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .wo-day { font-weight: 700; font-size: 14px; color: var(--ink); }
+  .wo-day small { display: block; font-weight: 400; font-size: 12.5px; color: var(--muted); }
+  .wo-row.is-today { background: var(--saffron-tint); }
+  .wo-row.is-today .wo-day::after { content: "ma"; display: inline-block; margin-top: 3px; font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--accent-2); }
+  .wo-cell button {
+    font: inherit; text-align: left; background: none; border: none; padding: 0; cursor: pointer;
+    font-family: "Young Serif", Georgia, serif; font-size: 14.5px; line-height: 1.3; color: var(--ink);
+  }
+  .wo-cell button:hover { color: var(--accent-2); text-decoration: underline; }
+  .wo-cell small { display: block; margin-top: 2px; font-size: 12.5px; color: var(--muted); }
+  .wo-slot-label { display: none; }
+  .week-meal.flash { outline: 3px solid var(--saffron); outline-offset: 2px; transition: outline-color .6s; }
   .week-meal { background: var(--surface-2); border: 1px solid var(--line-soft); border-radius: 6px; padding: 10px 12px; }
   .week-meal-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; flex-wrap: wrap; }
   .week-meal-body .recipe-title { font-size: 15px; }
@@ -449,6 +471,13 @@
     .tab-long { display: none; }
     .tab-btn { font-size: 14px; padding: 10px 8px; min-height: 44px; text-align: center; }
     .tab-btn:last-child { grid-column: span 2; }
+    .wo-headrow { display: none !important; }
+    .wo-row { grid-template-columns: 1fr; padding: 6px 0; }
+    .wo-row > * { padding: 4px 14px; }
+    .wo-slot-label { display: block; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: var(--muted); margin-bottom: 1px; }
+    .wo-day { padding-top: 8px !important; }
+    .wo-day small { display: inline; margin-left: 6px; }
+    .wo-row.is-today .wo-day::after { margin-left: 8px; }
 
     input[type="text"], input[type="password"], input[type="number"], select, textarea { font-size: 16px; }
     .cuisine-select { font-size: 14px; }
@@ -630,6 +659,10 @@
       <div class="global-cuisine-btns" id="globalCuisineBtnsWeek"></div>
     </div>
     <p class="allergen-note">A heti menü ugyanazokat a beállításokat használja, mint a napi ajánló (kinek főzöl, mennyi időd van). Hétköznapokra gyorsabb, hétvégére és ünnepnapra különlegesebb ételeket ajánl — minden napnál átállíthatod a nap típusát és az étkezések konyháját is.</p>
+    <section class="week-overview" aria-labelledby="woTitle">
+      <h2 id="woTitle">A hét menüje egy pillantásra</h2>
+      <div id="weekOverview"></div>
+    </section>
     <div class="week-grid" id="weekGrid"></div>
 
     <section class="shopping-section">
@@ -2047,6 +2080,7 @@
       var res = getCuratedPool(cuisine.key, meal.slot, profile, dayType);
       if (res.safetyEmpty) {
         renderMessageInto(body, "state-empty", "A megadott érzékenység miatt erre a napra nincs biztonságos ajánlat ebből a konyhából.");
+        scheduleWeekOverview();
         return;
       }
       var idx = (doy + (weekShuffleOffset[shuffleKey] || 0)) % res.pool.length;
@@ -2060,6 +2094,7 @@
           loadWeekMeal(mealEl, date, meal, profile);
         }
       });
+      scheduleWeekOverview();
       return;
     }
 
@@ -2155,7 +2190,7 @@
     var nameSpan = document.createElement("span"); nameSpan.className = "week-day-name";
     nameSpan.textContent = capitalize(dayNameFmt.format(date));
     var dateSpan = document.createElement("span"); dateSpan.className = "week-day-date";
-    dateSpan.textContent = " · " + weekFmt.format(date) + ".";
+    dateSpan.textContent = " · " + weekFmt.format(date);
     nameWrap.appendChild(nameSpan); nameWrap.appendChild(dateSpan);
     head.appendChild(nameWrap);
 
@@ -2188,19 +2223,77 @@
     return article;
   }
 
+  var overviewTimer = null;
+  function scheduleWeekOverview() {
+    if (overviewTimer) return;
+    overviewTimer = setTimeout(function () { overviewTimer = null; renderWeekOverview(); }, 0);
+  }
+
+  function renderWeekOverview() {
+    var wrap = document.getElementById("weekOverview");
+    wrap.innerHTML = "";
+    var headRow = document.createElement("div");
+    headRow.className = "wo-row wo-headrow";
+    headRow.appendChild(document.createElement("span"));
+    MEALS.forEach(function (meal) {
+      var h = document.createElement("span"); h.textContent = meal.label; headRow.appendChild(h);
+    });
+    wrap.appendChild(headRow);
+    var todayKey = dateKey(new Date());
+    currentWeekDays.forEach(function (date) {
+      var key = dateKey(date);
+      var row = document.createElement("div");
+      row.className = "wo-row" + (key === todayKey ? " is-today" : "");
+      var day = document.createElement("div");
+      day.className = "wo-day";
+      day.textContent = capitalize(dayNameFmt.format(date));
+      var small = document.createElement("small"); small.textContent = weekFmt.format(date);
+      day.appendChild(small);
+      row.appendChild(day);
+      MEALS.forEach(function (meal) {
+        var cell = document.createElement("div");
+        cell.className = "wo-cell";
+        var lbl = document.createElement("span"); lbl.className = "wo-slot-label"; lbl.textContent = meal.label;
+        cell.appendChild(lbl);
+        var entry = weekRecipeStore[key + ":" + meal.slot];
+        if (entry) {
+          var btn = document.createElement("button");
+          btn.type = "button";
+          btn.textContent = entry.recipe.title;
+          btn.addEventListener("click", function () {
+            var target = document.querySelector('.week-day[data-date="' + key + '"] .week-meal[data-slot="' + meal.slot + '"]');
+            if (!target) return;
+            target.scrollIntoView({ behavior: "smooth", block: "center" });
+            target.classList.add("flash");
+            setTimeout(function () { target.classList.remove("flash"); }, 1600);
+          });
+          cell.appendChild(btn);
+          var info = document.createElement("small");
+          info.textContent = entry.cuisine.label + (entry.recipe.time ? " · " + entry.recipe.time : "");
+          cell.appendChild(info);
+        } else {
+          var none = document.createElement("small"); none.textContent = "—"; cell.appendChild(none);
+        }
+        row.appendChild(cell);
+      });
+      wrap.appendChild(row);
+    });
+  }
+
   function renderWeek() {
     if (!currentWeekMonday) currentWeekMonday = loadWeekStart();
     var days = [];
     for (var i = 0; i < 7; i++) days.push(addDays(currentWeekMonday, i));
     currentWeekDays = days;
 
-    document.getElementById("weekRangeLabel").textContent = weekFmt.format(days[0]) + " – " + weekFmt.format(days[6]) + ".";
+    document.getElementById("weekRangeLabel").textContent = weekFmt.format(days[0]) + " – " + weekFmt.format(days[6]);
 
     var grid = document.getElementById("weekGrid");
     grid.innerHTML = "";
     var profile = getSelectedProfile();
     days.forEach(function (date) { grid.appendChild(buildWeekDayCard(date, profile)); });
     document.getElementById("shoppingListResult").innerHTML = "";
+    scheduleWeekOverview();
   }
 
   // ---------- bevásárlólista ----------
