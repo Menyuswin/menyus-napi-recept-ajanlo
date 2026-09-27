@@ -819,8 +819,8 @@
     </form>
     <div class="pantry-photo">
       <button type="button" class="small" id="pantryPhotoBtn">📷 Fotó a hűtőről</button>
-      <input type="file" id="pantryPhotoInput" accept="image/*" capture="environment" hidden>
-      <span class="pantry-photo-note">A kép csak a te böngésződben marad, sehova nem töltjük fel — a felismerés a gépeden fut.</span>
+      <input type="file" id="pantryPhotoInput" accept="image/*" multiple hidden>
+      <span class="pantry-photo-note">Egyszerre több fotót is kiválaszthatsz (pl. külön a polcokról és az ajtóról). A kép csak a te böngésződben marad, sehova nem töltjük fel — a felismerés a gépeden fut.</span>
       <div class="pantry-photo-status" id="pantryPhotoStatus" hidden></div>
       <div class="pantry-photo-chips" id="pantryPhotoChips" hidden></div>
       <button type="button" class="small primary pantry-photo-runbtn" id="pantryPhotoRun" hidden>Keresés a felismert hozzávalókkal</button>
@@ -1760,51 +1760,62 @@
   // blokkban, hogy a fő szkript ES5-ös szintaxisa ne törjön el olyan
   // böngészőkön, amik a dinamikus import()-ot vagy a modult nem ismerik —
   // ott ez az egész funkció csendben nem jelenik meg.
+  // A harmadik szám mindegyik sorban a címke saját "alapzaja" — a CLIP nyers
+  // pontszáma erre a promptra semleges (szürke, illetve zajos) képeken mérve,
+  // tartalomtól függetlenül. Néhány prompt (pl. "a bottle of cooking oil")
+  // szisztematikusan magasabb pontszámot kap BÁRMILYEN képen, ami valódi
+  // hűtőfotókon tesztelve tömegesen hamis találatokhoz vezetett (a csukott
+  // szekrény/hűtő "kontextusát" ragadta meg egy korábbi verzió, most ez a
+  // torzítás okozott hasonló, kisebb mértékű problémát). A besorolás előtt
+  // ezt az alapzajt levonjuk minden pontszámból, hogy a rangsor a kép
+  // tényleges tartalmát tükrözze, ne a prompt eleve magasabb/alacsonyabb
+  // "hangerejét". Az értékek 6 valódi hűtőfotó tesztje alapján lettek
+  // véglegesítve (lásd a projekt memóriáját).
   var FRIDGE_CANDIDATES = [
-    ["a photo of eggs", "tojás"],
-    ["a photo of a milk carton", "tej"],
-    ["a photo of a block of cheese", "sajt"],
-    ["a photo of a stick of butter", "vaj"],
-    ["a photo of yogurt cups", "joghurt"],
-    ["a photo of sour cream", "tejföl"],
-    ["a photo of cooking cream", "tejszín"],
-    ["a photo of tomatoes", "paradicsom"],
-    ["a photo of a cucumber", "uborka"],
-    ["a photo of carrots", "sárgarépa"],
-    ["a photo of onions", "hagyma"],
-    ["a photo of garlic", "fokhagyma"],
-    ["a photo of potatoes", "burgonya"],
-    ["a photo of apples", "alma"],
-    ["a photo of lemons", "citrom"],
-    ["a photo of oranges", "narancs"],
-    ["a photo of bananas", "banán"],
-    ["a photo of lettuce", "saláta"],
-    ["a photo of bell peppers", "paprika"],
-    ["a photo of mushrooms", "gomba"],
-    ["a photo of broccoli", "brokkoli"],
-    ["a photo of zucchini", "cukkini"],
-    ["a photo of spinach", "spenót"],
-    ["a photo of cabbage", "káposzta"],
-    ["a photo of raw chicken meat", "csirke"],
-    ["a photo of ground meat", "darált hús"],
-    ["a photo of sliced ham", "sonka"],
-    ["a photo of sausages", "kolbász"],
-    ["a photo of bacon", "szalonna"],
-    ["a photo of raw fish", "hal"],
-    ["a photo of a loaf of bread", "kenyér"],
-    ["a photo of cooked rice", "rizs"],
-    ["a photo of pasta", "tészta"],
-    ["a photo of canned beans", "bab"],
-    ["a photo of corn", "kukorica"],
-    ["a photo of a ketchup bottle", "ketchup"],
-    ["a photo of a mustard jar", "mustár"],
-    ["a photo of mayonnaise", "majonéz"],
-    ["a photo of a jam jar", "lekvár"],
-    ["a photo of wine bottles", "bor"],
-    ["a photo of beer bottles", "sör"],
-    ["a photo of soda cans", "üdítő"],
-    ["a photo of a juice carton", "gyümölcslé"],
-    ["a photo of a bottle of cooking oil", "olaj"]
+    ["a photo of eggs", "tojás", 22.889],
+    ["a photo of a milk carton", "tej", 21.259],
+    ["a photo of a block of cheese", "sajt", 23.082],
+    ["a photo of a stick of butter", "vaj", 22.712],
+    ["a photo of yogurt cups", "joghurt", 22.491],
+    ["a photo of sour cream", "tejföl", 22.467],
+    ["a photo of cooking cream", "tejszín", 21.436],
+    ["a photo of tomatoes", "paradicsom", 21.982],
+    ["a photo of a cucumber", "uborka", 22.326],
+    ["a photo of carrots", "sárgarépa", 22.162],
+    ["a photo of onions", "hagyma", 23.168],
+    ["a photo of garlic", "fokhagyma", 23.417],
+    ["a photo of potatoes", "burgonya", 22.930],
+    ["a photo of apples", "alma", 22.607],
+    ["a photo of lemons", "citrom", 22.048],
+    ["a photo of oranges", "narancs", 22.409],
+    ["a photo of bananas", "banán", 22.524],
+    ["a photo of lettuce", "saláta", 22.196],
+    ["a photo of bell peppers", "paprika", 21.762],
+    ["a photo of mushrooms", "gomba", 21.751],
+    ["a photo of broccoli", "brokkoli", 22.805],
+    ["a photo of zucchini", "cukkini", 22.219],
+    ["a photo of spinach", "spenót", 22.541],
+    ["a photo of cabbage", "káposzta", 22.821],
+    ["a photo of raw chicken meat", "csirke", 22.112],
+    ["a photo of ground meat", "darált hús", 22.831],
+    ["a photo of sliced ham", "sonka", 22.740],
+    ["a photo of sausages", "kolbász", 21.642],
+    ["a photo of bacon", "szalonna", 22.868],
+    ["a photo of raw fish", "hal", 22.846],
+    ["a photo of a loaf of bread", "kenyér", 20.449],
+    ["a photo of cooked rice", "rizs", 21.386],
+    ["a photo of pasta", "tészta", 22.571],
+    ["a photo of canned beans", "bab", 23.126],
+    ["a photo of corn", "kukorica", 23.268],
+    ["a photo of a ketchup bottle", "ketchup", 23.053],
+    ["a photo of a mustard jar", "mustár", 23.118],
+    ["a photo of mayonnaise", "majonéz", 21.988],
+    ["a photo of a jam jar", "lekvár", 22.241],
+    ["a photo of wine bottles", "bor", 21.429],
+    ["a photo of beer bottles", "sör", 21.359],
+    ["a photo of soda cans", "üdítő", 22.538],
+    ["a photo of a juice carton", "gyümölcslé", 22.914],
+    ["a photo of a bottle of cooking oil", "olaj", 21.753]
   ];
   var FRIDGE_MODULE_TIMEOUT = 25000;
   var FRIDGE_TILE_PROB_FLOOR = 0.15;
@@ -1929,7 +1940,8 @@
       if (window.__fridgeDebug) console.log("FRIDGE_TILES_RAW", JSON.stringify(allTileRaw));
       var best = {};
       allTileRaw.forEach(function (raw) {
-        var probs = softmaxProbs(raw.map(function (r) { return r.score; }));
+        var calibrated = raw.map(function (r, i) { return r.score - FRIDGE_CANDIDATES[i][2]; });
+        var probs = softmaxProbs(calibrated);
         var ranked = FRIDGE_CANDIDATES.map(function (c, i) { return { term: c[1], prob: probs[i] }; })
           .sort(function (a, b) { return b.prob - a.prob; });
         ranked.slice(0, 2).forEach(function (r) {
@@ -1942,6 +1954,7 @@
   }
 
   var pantryRunSearch = null;
+  var pantryPhotoReset = null;
 
   function initPantryPhoto() {
     var btn = document.getElementById("pantryPhotoBtn");
@@ -1994,27 +2007,36 @@
       });
     }
 
+    function resetPhotoState() {
+      items = [];
+      renderChips();
+      setStatus("");
+    }
+    pantryPhotoReset = resetPhotoState;
+
     btn.addEventListener("click", function () { fileInput.click(); });
 
     fileInput.addEventListener("change", function () {
-      var file = fileInput.files && fileInput.files[0];
+      var files = fileInput.files ? Array.prototype.slice.call(fileInput.files) : [];
       fileInput.value = "";
-      if (!file) return;
-      items = [];
-      input.value = "";
-      renderChips();
+      if (!files.length) return;
       btn.disabled = true;
-      setStatus("Kép elemzése… (első használatkor egy kb. 90 MB-os, ingyenes felismerő modellt tölt le a böngésző — utána gyors és offline is működik)");
-      classifyFridgePhoto(file).then(function (result) {
+      setStatus((files.length > 1 ? files.length + " kép elemzése… " : "Kép elemzése… ") +
+        "(első használatkor egy kb. 90 MB-os, ingyenes felismerő modellt tölt le a böngésző — utána gyors és offline is működik)");
+      Promise.all(files.map(function (f) { return classifyFridgePhoto(f); })).then(function (results) {
         btn.disabled = false;
-        if (result.empty) {
-          setStatus("Nem sikerült ételt felismerni ezen a képen — próbálj nyitott hűtőről, jó fényben készült fotót, vagy írd be kézzel a hozzávalókat.", true);
+        results.forEach(function (r) {
+          r.items.forEach(function (term) {
+            if (items.indexOf(term) === -1) items.push(term);
+          });
+        });
+        if (!items.length) {
+          setStatus((files.length > 1 ? "Nem sikerült ételt felismerni ezeken a képeken" : "Nem sikerült ételt felismerni ezen a képen") + " — próbálj nyitott hűtőről, jó fényben készült fotót, vagy írd be kézzel a hozzávalókat.", true);
           return;
         }
-        items = result.items;
         input.value = items.join(", ");
         renderChips();
-        setStatus(items.length + " hozzávaló felismerve a fotón — töröld ki, ami nem stimmel, a mezőbe pedig kézzel beírhatod, amit kihagyott. A felismerés nem tökéletes, ezért mindig érdemes ellenőrizni.");
+        setStatus(items.length + " hozzávaló felismerve" + (files.length > 1 ? " a fotókon" : " a fotón") + " — töröld ki, ami nem stimmel, a mezőbe pedig kézzel beírhatod, amit kihagyott. A felismerés nem tökéletes, ezért mindig érdemes ellenőrizni.");
         if (pantryRunSearch) pantryRunSearch();
       }).catch(function () {
         btn.disabled = false;
@@ -2097,6 +2119,7 @@
     document.getElementById("pantryClear").addEventListener("click", function () {
       box.hidden = true; grid.innerHTML = ""; input.value = ""; activeTag = "";
       tagButtons.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
+      if (pantryPhotoReset) pantryPhotoReset();
     });
   }
 

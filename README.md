@@ -424,10 +424,20 @@ soha nem hagyja el a böngészőt:
   valószínűségi küszöböt (`FRIDGE_TILE_PROB_FLOOR = 0.15`).
 - A jelölt szavak (`FRIDGE_CANDIDATES`) angol CLIP-promptok (pl. „a photo
   of eggs”), magyar hozzávaló-névre leképezve; a lista bővíthető.
-- A felismerés nem tökéletes (valódi tesztfotón kb. 60% pontosságú volt) —
-  ezért a chipek egyesével törölhetők, és a mező kézzel is szerkeszthető;
-  egy chip törlése csak azt az egy szót veszi ki a mezőből, a kézzel
-  hozzáírt kiegészítéseket nem írja felül.
+- **Címke-kalibráció:** valódi hűtőfotókkal tesztelve kiderült, hogy egyes
+  promptok (pl. „a bottle of cooking oil”) szisztematikusan magasabb nyers
+  CLIP-pontszámot kapnak *bármilyen* képen, tartalomtól függetlenül — ez
+  torzította a rangsort. Minden jelölt szóhoz tartozik egy előre kimért
+  „alapzaj” érték (semleges szürke + zajos teszt-kép átlaga,
+  `FRIDGE_CANDIDATES` harmadik oszlopa), amit besorolás előtt levonunk a
+  nyers pontszámból — így a rangsor a kép tényleges tartalmát tükrözi.
+- A felismerés nem tökéletes — ezért a chipek egyesével törölhetők, és a
+  mező kézzel is szerkeszthető; egy chip törlése csak azt az egy szót
+  veszi ki a mezőből, a kézzel hozzáírt kiegészítéseket nem írja felül.
+- Egyszerre **több fotó** is kiválasztható (a fájlválasztó `multiple`), pl.
+  külön a polcokról és az ajtóról — a felismert hozzávalók uniója kerül a
+  listába. A „Találatok bezárása” gomb a fotós állapotot (chipek, mező) is
+  törli, hogy ne maradjon vissza inkonzisztens állapot egy korábbi fotóból.
 
 ### Címkék és „Ötletek” gombok
 
