@@ -317,6 +317,17 @@ nélkül), nincs összesítés, csak a részletes felsorolás. A lista
 nyomtatható is (a nyomtatási nézet elrejti a navigációt és a
 vezérlőket).
 
+### Nyomtatás: menü + bevásárlólista
+
+A heti áttekintő fejlécében „Nyomtatás: menü + bevásárlólista” gomb (a
+bevásárlólista „Nyomtatás” gombja is ugyanezt csinálja). Automatikusan
+összeállítja a bevásárlólistát, majd A4-re nyomtat: 1. oldal a heti
+áttekintő táblázat, 2. oldaltól a bevásárlólista két hasábban, kipipálható
+☐ négyzetekkel (a részletező zárójeles mennyiségek nélkül). A 21 részletes
+kártya, a fejléc és a beállítások nem kerülnek a papírra. Nyomtatáskor a
+színek mindig világos/fekete változatra váltanak, így sötét módból is
+olvasható lap jön ki. (`body.print-week` osztály, `afterprint`-re lekerül.)
+
 ### Boltkereső
 
 **Fontos, amit tudni érdemes**: egyik magyar élelmiszerlánc sem biztosít

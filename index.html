@@ -355,7 +355,32 @@
   .store-meta { font-size: 12.5px; color: var(--muted); margin: 2px 0 6px; }
   .store-links a { font-size: 12.5px; color: var(--accent-2); text-decoration: underline; margin-right: 14px; }
 
+  .print-week-title { display: none; }
+  .wo-headbar { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; padding: 10px 16px; border-bottom: 1px solid var(--line-soft); }
+  .wo-headbar h2 { padding: 0; border: none; }
+
   @media print {
+    html:root, html:root:not([data-theme="light"]), html:root[data-theme="dark"] {
+      --paper: #fff; --surface: #fff; --surface-2: #f3f0e8; --ink: #000; --ink-2: #222; --muted: #555;
+      --line: #bbb; --line-soft: #ddd; --accent: #8a2616; --accent-2: #6e1e11; --accent-tint: #f3e3da;
+      --saffron-tint: #f6ecd2; --olive: #3f4a1f; --shadow: none;
+    }
+    body { background: #fff; }
+    @page { margin: 12mm; }
+    body.print-week .hero-banner, body.print-week header.top, body.print-week #sharedSettings,
+    body.print-week #tabHeti > .allergen-note, body.print-week #weekGrid, body.print-week .week-print-btn,
+    body.print-week .shopping-section > .allergen-note, body.print-week #shoppingListResult > .allergen-note,
+    body.print-week #shoppingListResult > button, body.print-week .shopping-item-detail,
+    body.print-week .shopping-item-note { display: none !important; }
+    body.print-week .print-week-title { display: block; font-size: 22px; margin: 0 0 10px; }
+    body.print-week .week-overview { break-inside: avoid; border-color: #999; }
+    body.print-week .wo-cell button { color: #000; }
+    body.print-week .shopping-section { break-before: page; border: none; padding: 0; background: none; }
+    body.print-week #shoppingListResult { columns: 2; column-gap: 28px; }
+    body.print-week #shoppingListResult h4 { break-after: avoid; margin: 10px 0 4px; }
+    body.print-week .shopping-list { list-style: none; padding-left: 0; }
+    body.print-week .shopping-list li { break-inside: avoid; font-size: 12.5px; }
+    body.print-week .shopping-list li::before { content: "☐  "; }
     .tabs, .week-nav, .store-finder, #buildShoppingListBtn, #settingsPanel,
     .prefs, .global-cuisine, .active-profile, .submit-form, footer.sources { display: none !important; }
     .daytype-select, .cuisine-select, .shuffle, .foot { display: none !important; }
@@ -700,8 +725,12 @@
       <div class="global-cuisine-btns" id="globalCuisineBtnsWeek"></div>
     </div>
     <p class="allergen-note">A heti menü ugyanazokat a beállításokat használja, mint a napi ajánló (kinek főzöl, mennyi időd van). Hétköznapokra gyorsabb, hétvégére és ünnepnapra különlegesebb ételeket ajánl — minden napnál átállíthatod a nap típusát és az étkezések konyháját is.</p>
+    <h2 class="print-week-title" id="printWeekTitle">Heti menü</h2>
     <section class="week-overview" aria-labelledby="woTitle">
-      <h2 id="woTitle">A hét menüje egy pillantásra</h2>
+      <div class="wo-headbar">
+        <h2 id="woTitle">A hét menüje egy pillantásra</h2>
+        <button type="button" class="small week-print-btn" id="weekPrintBtn">Nyomtatás: menü + bevásárlólista</button>
+      </div>
       <div id="weekOverview"></div>
     </section>
     <div class="week-grid" id="weekGrid"></div>
@@ -2707,7 +2736,7 @@
     var printBtn = document.createElement("button");
     printBtn.type = "button"; printBtn.className = "small";
     printBtn.textContent = "Nyomtatás";
-    printBtn.addEventListener("click", function () { window.print(); });
+    printBtn.addEventListener("click", printWeek);
     container.appendChild(printBtn);
 
     var categorized = {};
@@ -2750,7 +2779,17 @@
     });
   }
 
+  function printWeek() {
+    renderShoppingList(document.getElementById("shoppingListResult"), buildShoppingList());
+    document.getElementById("printWeekTitle").textContent = "Heti menü · " + document.getElementById("weekRangeLabel").textContent;
+    document.body.classList.add("print-week");
+    window.print();
+  }
+
+  window.addEventListener("afterprint", function () { document.body.classList.remove("print-week"); });
+
   function initShoppingList() {
+    document.getElementById("weekPrintBtn").addEventListener("click", printWeek);
     var btn = document.getElementById("buildShoppingListBtn");
     var container = document.getElementById("shoppingListResult");
     btn.addEventListener("click", function () {
