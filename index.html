@@ -20,7 +20,7 @@
     --surface-2:  #EFE7D3;
     --ink:        #241C16;
     --ink-2:      #52412F;
-    --muted:      #8A7A61;
+    --muted:      #6E5F48;
     --line:       #D6C9AC;
     --line-soft:  #E2D6BC;
     --accent:     #B0331F;
@@ -183,7 +183,7 @@
   .submit-form .field-row label { flex: 1 1 200px; }
   .submit-form input, .submit-form select { width: 100%; }
   .field-block { display: flex; flex-direction: column; gap: 4px; font-size: 12.5px; color: var(--ink-2); }
-  .field-hint { font-weight: 400; color: var(--muted); font-size: 11.5px; }
+  .field-hint { font-weight: 400; color: var(--muted); font-size: 12.5px; }
   .submit-error {
     color: var(--crit); background: var(--crit-tint); border: 1px solid var(--crit); border-radius: 6px;
     padding: 10px 12px; font-size: 13px;
@@ -209,7 +209,7 @@
   .intol-grid label { display: flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--ink-2); cursor: pointer; }
   .intol-grid input { accent-color: var(--accent); }
 
-  .allergen-note { font-size: 11.5px; color: var(--muted); max-width: 70ch; }
+  .allergen-note { font-size: 13px; color: var(--muted); max-width: 70ch; }
 
   .profile-chips { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .chip {
@@ -228,6 +228,7 @@
     display: flex; align-items: center; gap: 8px; font-size: 13.5px; color: var(--ink-2); cursor: pointer;
   }
   .prefs input[type="checkbox"] { width: 16px; height: 16px; accent-color: var(--accent); cursor: pointer; }
+  .prefs select { font: inherit; font-size: 13.5px; }
 
   .global-cuisine {
     display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 12px 0 0;
@@ -264,7 +265,7 @@
     padding: 14px 16px 10px; border-bottom: 1px solid var(--line-soft);
     display: flex; align-items: center; justify-content: space-between; gap: 10px;
   }
-  .meal-name { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
+  .meal-name { font-size: 12.5px; letter-spacing: .12em; text-transform: uppercase; font-weight: 600; color: var(--muted); }
   .head-controls { display: flex; align-items: center; gap: 8px; }
   .cuisine-badge {
     display: inline-flex; align-items: center; font-size: 11px; font-weight: 700;
@@ -282,15 +283,15 @@
   .recipe-img-note { position: absolute; right: 6px; bottom: 6px; font-size: 10.5px; letter-spacing: .04em; padding: 2px 7px; border-radius: 10px; background: rgba(0,0,0,.55); color: #fff; }
   .recipe-img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 6px; background: var(--surface-2); }
   .recipe-title { font-size: 21px; font-weight: 400; margin: 0; line-height: 1.25; }
-  .recipe-meta { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+  .recipe-meta { font-size: 13px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
   .recipe-tags { display: flex; gap: 6px; flex-wrap: wrap; }
   .tag {
-    font-size: 10.5px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600;
+    font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; font-weight: 600;
     padding: 2px 7px; border-radius: 999px; border: 1px solid var(--line-soft); color: var(--ink-2); background: var(--surface-2);
   }
   .tag-easy { border-color: var(--olive); color: var(--olive); background: var(--olive-tint); }
   .tag-nocook { border-color: var(--saffron); color: var(--accent-2); background: var(--saffron-tint); }
-  .recipe-source { font-size: 11.5px; color: var(--muted); }
+  .recipe-source { font-size: 12.5px; color: var(--muted); }
   .recipe-source a { color: var(--muted); text-decoration: underline; }
   .translate-note { font-size: 11px; color: var(--muted); font-style: italic; }
 
@@ -321,8 +322,8 @@
   .shopping-section h2, .store-finder h2 { margin: 0 0 8px; font-size: 17px; }
   .shopping-list { margin: 6px 0 14px; padding-left: 22px; }
   .shopping-list li { margin: 3px 0; font-size: 13.5px; }
-  .shopping-item-note { color: var(--muted); font-size: 11.5px; }
-  .shopping-item-detail { color: var(--muted); font-size: 11.5px; font-style: italic; }
+  .shopping-item-note { color: var(--muted); font-size: 12.5px; }
+  .shopping-item-detail { color: var(--muted); font-size: 12.5px; font-style: italic; }
   .store-finder .field-row { margin: 10px 0; }
   .store-finder input[type="text"] { flex: 1 1 220px; }
   .store-list { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-direction: column; gap: 10px; }
@@ -381,9 +382,9 @@
 
   footer.sources {
     margin-top: 36px; padding-top: 16px; border-top: 1px solid var(--line);
-    font-size: 12px; color: var(--muted);
+    font-size: 13px; color: var(--muted);
   }
-  footer.sources h2 { font-size: 13px; margin: 0 0 8px; color: var(--ink-2); }
+  footer.sources h2 { font-size: 15px; margin: 0 0 8px; color: var(--ink-2); }
   footer.sources ul { margin: 0; padding-left: 18px; }
   footer.sources li { margin-bottom: 4px; }
   footer.sources .note { margin-top: 12px; max-width: 74ch; }
@@ -429,7 +430,7 @@
   <header class="top">
     <div>
       <h1>Napi recept ajánló</h1>
-      <p class="tagline">Minden nap három konyhából — olasz, francia, amerikai, görög, lengyel, délszláv, magyar, indiai, kínai és japán közül — ajánl egy-egy reggelit, ebédet és vacsorát, magyar nyelven, igény szerint személyre szabva. Éjfélkor vált, ugyanaznap újratöltve ugyanazt mutatja.</p>
+      <p class="tagline">Minden nap új ötlet reggelire, ebédre és vacsorára — tíz konyhából (olasz, francia, amerikai, görög, lengyel, délszláv, magyar, indiai, kínai és japán), magyarul, a családodra szabva. Napközben ugyanaz marad, ha újra megnyitod; éjfélkor jön a következő napi ajánlat.</p>
     </div>
     <div class="stamp">
       <div class="day" id="dayLabel">—</div>
@@ -446,7 +447,7 @@
 
   <div id="sharedSettings">
   <details class="panel" id="settingsPanel">
-    <summary>Beállítások — profilok</summary>
+    <summary>Kinek főzök? — családtagok, ételérzékenység</summary>
     <div class="inner">
       <div>
         <div class="field-row" style="margin-bottom:8px;">
@@ -473,7 +474,7 @@
           <label>Napi kalóriacél (kcal, nem kötelező) <input type="number" id="pCalories" min="800" max="6000" step="50" placeholder="pl. 2000" style="width:110px;"></label>
         </div>
         <div class="intol-grid" id="intolGrid"></div>
-        <p class="allergen-note">Az allergén-szűrés az olasz/francia/amerikai/görög konyhánál a Spoonacular saját szűrője; a lengyel/délszláv/magyar, valamint a francia reggeli (kézzel írt) recepteknél kulcsszó-alapú, tájékoztató jellegű becslés. Súlyos allergia esetén mindig olvasd el magad is a hozzávalókat.</p>
+        <p class="allergen-note">Az ételérzékenység szerinti szűrés a hozzávalók alapján történik, tájékoztató jellegű — súlyos allergia esetén mindig nézd át magad is a hozzávalókat. A kalória- és fehérjecél egyelőre csak tájékoztató, a receptválasztást még nem befolyásolja.</p>
         <div class="field-row">
           <button class="small primary" id="addProfileBtn" type="button">+ Új személy mentése</button>
         </div>
@@ -484,7 +485,15 @@
   <div class="active-profile" id="activeProfileLabel"></div>
 
   <div class="prefs">
-    <label><input type="checkbox" id="prefEasy"> Egyszerűbb recepteket szeretnék</label>
+    <label>Mennyi időd van főzni?
+      <select id="prefMaxTime">
+        <option value="0">Bármennyi</option>
+        <option value="20">Legfeljebb 20 perc</option>
+        <option value="30">Legfeljebb 30 perc</option>
+        <option value="45">Legfeljebb 45 perc</option>
+        <option value="60">Legfeljebb 1 óra</option>
+      </select>
+    </label>
     <label><input type="checkbox" id="prefNoCook"> Reggelire és vacsorára nem kell mindenáron főtt étel</label>
   </div>
   </div>
@@ -531,13 +540,8 @@
   </section>
 
   <footer class="sources">
-    <h2>Adatforrások</h2>
-    <ul>
-      <li><strong>Spoonacular</strong> (spoonacular.com) — élő recept-API, több százezer recepttel; ezt használja az olasz, francia, amerikai és görög konyha (a francia reggeli kivételével, amely kézzel írt receptekből jön). Saját intolerancia- és fehérjeszűrőt is biztosít. A hozzávalók és a lépések angolul érkeznek, az oldal a MyMemory ingyenes fordító API-val fordítja magyarra a kiválasztott napi recepteket.</li>
-      <li><strong>MyMemory</strong> (mymemory.translated.net) — ingyenes, kulcs nélküli gépfordító API.</li>
-      <li>A lengyel, délszláv és magyar konyha <strong>kézzel, magyarul írt</strong> recept-készlet marad — a Spoonacularban nincs ezekre a régiókra bontott kategória (mindhármat egy általános "kelet-európai" csoportba sorolná), ezért itt a saját, konyhánként pontos válogatás megbízhatóbb.</li>
-    </ul>
-    <p class="note">A gépi fordítás minősége nem éri el a kézzel írt szövegét — ha egy fordítás nem sikerül, az oldal az eredeti angol szöveget mutatja, jelezve ezt. Az "egyszerűbb" jelölés rövid elkészítési időt jelent, a "nem kell főtt étel" a tűzhely/sütő nélküli fogásokat emeli előre — ha egy konyhához/étkezéshez épp nincs ilyen (vagy a megadott intoleranciának megfelelő) találat, az oldal ezt jelzi, nem kínál helyette esetleg nem biztonságos alternatívát. A napi kalóriacél és a fehérjecél csak az olasz/francia/amerikai/görög (élő) konyháknál befolyásolja az ajánlást, mert csak a Spoonacular ad tápérték-adatot — a lengyel/délszláv/magyar recepteknél nincs kalória-/fehérjeszűrés. A kártyákon látható kcal/fehérje érték a Spoonacular becslése, tájékoztató jellegű.</p>
+    <h2>A receptekről</h2>
+    <p class="note">Mind a 734 recept kézzel válogatott és magyarul írt, konyhánként reggelire, ebédre és vacsorára. Az „Egyszerű” címke gyorsan, kevés munkával elkészíthető ételt jelöl, a „Nem kell főzni” pedig tűzhely és sütő nélkül összerakható fogást. Ha a megadott ételérzékenységnek egy konyhában épp nincs megfelelő receptje, az oldal ezt jelzi, és nem ajánl helyette bizonytalan alternatívát. Ha az időkorláthoz nincs elég gyors recept, a leggyorsabb közeli ötletet mutatja. A képek illusztrációk, nem a recept alapján készült fotók.</p>
   </footer>
 
   </div>
@@ -553,19 +557,19 @@
       <span class="global-cuisine-label">Konyhák (több is kiválasztható):</span>
       <div class="global-cuisine-btns" id="globalCuisineBtnsWeek"></div>
     </div>
-    <p class="allergen-note">A heti nézet ugyanazt a kiválasztott profilt (intolerancia, kalória-, fehérjecél) és az "Egyszerűbb"/"Nem kell főzni" beállításokat használja, mint a napi ajánló. Hétköznapra a rendszer automatikusan egyszerűbb, gyorsabb fogásokat részesít előnyben, ünnepnapra a különlegesebbeket (nem "Egyszerű" jelölésű recepteket) — ezt, és a napok konyháját is, bármelyik napon kézzel felülbírálhatod. Élő (olasz/francia/amerikai/görög) konyháknál ünnepnapon csak az időkorlát oldódik fel, mert a Spoonacular nem jelez "ünnepi" fogást.</p>
+    <p class="allergen-note">A heti menü ugyanazokat a beállításokat használja, mint a napi ajánló (kinek főzöl, mennyi időd van). Hétköznapokra gyorsabb, hétvégére és ünnepnapra különlegesebb ételeket ajánl — minden napnál átállíthatod a nap típusát és az étkezések konyháját is.</p>
     <div class="week-grid" id="weekGrid"></div>
 
     <section class="shopping-section">
       <h2>Bevásárlólista</h2>
-      <p class="allergen-note">Összegyűjti a fent betöltött heti étkezések hozzávalóit, konyhánként/napok szerint csoportosítva, boltrészlegek szerint rendezve. Csak a jelenleg betöltött (görgesd fel, ha még töltődik) napok/étkezések kerülnek bele.</p>
+      <p class="allergen-note">Egy kattintással összegyűjti a heti menü összes hozzávalóját, boltrészlegek szerint rendezve — így egyszerre megveheted, ami az egész hétre kell.</p>
       <button type="button" class="small primary" id="buildShoppingListBtn">Bevásárlólista összeállítása ehhez a héthez</button>
       <div id="shoppingListResult"></div>
     </section>
 
     <section class="store-finder">
       <h2>Közeli boltok</h2>
-      <p class="allergen-note">Valós idejű ár- és akció-adatot nem tudunk lekérdezni — ilyen ingyenes, nyilvános API-t egyik magyar élelmiszerlánc sem biztosít. Ehelyett a helyzeted alapján megkeressük a közeli boltokat, és ahol felismerjük a láncot, linkelünk a saját aktuális akciós oldalára.</p>
+      <p class="allergen-note">Árakat és akciókat nem tudunk mutatni, de megkeressük a hozzád közeli boltokat, és ahol lehet, linkeljük az aktuális akciós újságjukat.</p>
       <div class="field-row">
         <button type="button" class="small" id="useLocationBtn">📍 Helyzetem megosztása</button>
         <span>vagy</span>
@@ -793,10 +797,11 @@
   var SELECTED_PROFILE_STORAGE = "napi-recept-selected-profile";
   var PREFS_KEY = "napi-recept-prefs";
 
-  var prefs = { easy: false, noCook: false };
+  var prefs = { maxTime: 0, noCook: false };
   try {
     var savedPrefs = JSON.parse(localStorage.getItem(PREFS_KEY) || "{}");
-    if (typeof savedPrefs.easy === "boolean") prefs.easy = savedPrefs.easy;
+    if (typeof savedPrefs.maxTime === "number") prefs.maxTime = savedPrefs.maxTime;
+    else if (savedPrefs.easy === true) prefs.maxTime = 30;
     if (typeof savedPrefs.noCook === "boolean") prefs.noCook = savedPrefs.noCook;
   } catch (e) {}
 
@@ -915,6 +920,35 @@
     return cuisine.mode === "curated" || !!(cuisine.curatedSlots && cuisine.curatedSlots.indexOf(slot) !== -1);
   }
 
+  // "1 óra 30 perc (+ pihentetés)" → { minutes: 90, extraWait: true }
+  function parseRecipeTime(text) {
+    if (!text) return null;
+    var t = String(text).toLowerCase();
+    var main = t.split(/\+|\(|,\s*plusz|\s+plusz/)[0];
+    var minutes = 0;
+    var h = main.match(/(\d+(?:[.,]\d+)?)(?:\s*-\s*(\d+(?:[.,]\d+)?))?\s*óra/);
+    if (h) minutes += parseFloat((h[2] || h[1]).replace(",", ".")) * 60;
+    var m = main.match(/(\d+)\s*perc/);
+    if (m) minutes += parseInt(m[1], 10);
+    if (!minutes) return null;
+    var extraWait = /\+|plusz|éjszak|áztat|pácol|hűt|pihentet|dermeszt|fermentál|szárít|állás|sózás/.test(t.slice(main.length).replace(/\(ebből[^)]*\)/g, ""));
+    return { minutes: Math.round(minutes), extraWait: extraWait };
+  }
+
+  function fitsTimeLimit(recipe, limit) {
+    if (!limit) return true;
+    var pt = parseRecipeTime(recipe.time);
+    return !!pt && pt.minutes <= limit && !pt.extraWait;
+  }
+
+  function fastestRecipes(list, n) {
+    function cost(r) {
+      var pt = parseRecipeTime(r.time);
+      return pt ? pt.minutes + (pt.extraWait ? 600 : 0) : 9999;
+    }
+    return list.slice().sort(function (a, b) { return cost(a) - cost(b); }).slice(0, n);
+  }
+
   function getCuratedPool(cuisineKey, slot, profile, dayType) {
     var pool = RECIPES[cuisineKey][slot];
     var filtered = pool;
@@ -929,6 +963,7 @@
       });
       if (!filtered.length) return { pool: [], safetyEmpty: true };
     }
+    var safePool = filtered;
     if (hasInsulinResistance(profile)) {
       var bySlowCarb = filtered.filter(function (r) {
         var text = r.ingredients.join(" ").toLowerCase();
@@ -940,9 +975,15 @@
     if (dayType === "unnepnap") {
       var byFestive = filtered.filter(function (r) { return !r.easy; });
       if (byFestive.length) filtered = byFestive;
-    } else if (prefs.easy || dayType === "hetkoznap") {
+    } else if (dayType === "hetkoznap") {
       var byEasy = filtered.filter(function (r) { return r.easy; });
       if (byEasy.length) filtered = byEasy;
+    }
+    if (prefs.maxTime) {
+      var byTime = filtered.filter(function (r) { return fitsTimeLimit(r, prefs.maxTime); });
+      if (!byTime.length) byTime = safePool.filter(function (r) { return fitsTimeLimit(r, prefs.maxTime); });
+      if (!byTime.length) byTime = fastestRecipes(filtered, 3);
+      if (byTime.length) filtered = byTime;
     }
     if (prefs.noCook && (slot === "breakfast" || slot === "dinner")) {
       var byNoCook = filtered.filter(function (r) { return r.noCook; });
@@ -990,7 +1031,9 @@
     }
     if (prefs.noCook && (slot === "breakfast" || slot === "dinner")) {
       params.set("maxReadyTime", "15");
-    } else if (prefs.easy || dayType === "hetkoznap") {
+    } else if (prefs.maxTime) {
+      params.set("maxReadyTime", String(prefs.maxTime));
+    } else if (dayType === "hetkoznap") {
       params.set("maxReadyTime", "25");
     }
     return endpoint + "?" + params.toString();
@@ -2455,12 +2498,12 @@
     initShoppingList();
     initStoreFinder();
 
-    var easyBox = document.getElementById("prefEasy");
+    var timeSel = document.getElementById("prefMaxTime");
     var noCookBox = document.getElementById("prefNoCook");
-    easyBox.checked = prefs.easy;
+    timeSel.value = String(prefs.maxTime);
     noCookBox.checked = prefs.noCook;
-    easyBox.addEventListener("change", function () {
-      prefs.easy = easyBox.checked; savePrefs();
+    timeSel.addEventListener("change", function () {
+      prefs.maxTime = parseInt(timeSel.value, 10) || 0; savePrefs();
       shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
       loadAll();
     });

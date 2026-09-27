@@ -221,12 +221,18 @@ tíz konyha jöhet. Ez a szűrés (localStorage: `napi-recept-cuisine-filter`)
 a napi alap-rotáció készletét szűkíti, ezért egy adott étkezésre a kártyán
 külön beállított konyha (lásd fent) továbbra is felülbírálja azt.
 
-Két jelölőnégyzet is szűri az ajánlást (localStorage-ban megjegyezve):
+Két beállítás is szűri az ajánlást (localStorage-ban megjegyezve, a Napi
+ajánló és a Heti menü fülön is látszik):
 
-- **„Egyszerűbb recepteket szeretnék”** — rövid elkészítési idejű, kevesebb
-  hozzávalós recepteket részesít előnyben (a kézzel írt recepteknél az
-  "Egyszerű" jelölés alapján; élő konyhánál/étkezésnél a Spoonacular
-  `maxReadyTime` paraméterén keresztül működne).
+- **„Mennyi időd van főzni?”** — Bármennyi / legfeljebb 20, 30, 45 perc vagy
+  1 óra. A recept `time` mezőjét (pl. „1 óra 30 perc”, „40 perc + pácolás”)
+  a `parseRecipeTime()` percekre bontja; a korlátba csak az fér bele, ami
+  az időn belül elkészül és nincs külön előre elvégzendő várakozása
+  (pácolás, áztatás, hűtés stb. — az „(ebből …)” megjegyzés már benne van
+  a teljes időben, az nem számít külön). Ha egy konyhának nincs ilyen
+  receptje, a három leggyorsabb közül választ. A régi „Egyszerűbb
+  recepteket szeretnék” jelölés bekapcsolt állapota „legfeljebb 30
+  perc”-re alakul át.
 - **„Reggelire és vacsorára nem kell mindenáron főtt étel”** — ebédnél nem
   számít, de reggelinél és vacsoránál olyan fogásokat hoz előre, amikhez nem
   kell tűzhely vagy sütő.
@@ -255,7 +261,7 @@ típusba sorolódik:
   családi eseményt szeretnél ünnepnapként kezelni).
 
 A nap típusa befolyásolja az ajánlást: **hétköznapra** a rendszer
-automatikusan az "Egyszerűbb" szűrőnek megfelelő, gyorsabb fogásokat
+automatikusan a gyorsabb, "Egyszerű" címkés fogásokat
 részesíti előnyben (az "Egyszerű" címkés tételeket; élő
 Spoonacular-szeletnél rövidebb elkészítési idővel működne);
 **ünnepnapra** ezzel ellentétben kifejezetten a nem "Egyszerű" jelölésű,
@@ -268,8 +274,8 @@ Minden nap minden étkezéséhez ugyanaz a kis konyhaválasztó legördülő
 tartozik, mint a napi ajánlóban — ez a heti nézetben dátumhoz és
 étkezéshez kötve, külön jegyződik meg (localStorage). A heti nézet a
 Beállításokban kiválasztott profil intolerancia-, kalória- és
-fehérjeszűrését, valamint a globális "Egyszerűbb"/"Nem kell főzni"
-kapcsolókat is figyelembe veszi, ugyanúgy, mint a napi ajánló.
+fehérjeszűrését, valamint a globális "Mennyi időd van főzni?"/"Nem kell
+főzni" beállításokat is figyelembe veszi, ugyanúgy, mint a napi ajánló.
 
 ### Bevásárlólista
 
