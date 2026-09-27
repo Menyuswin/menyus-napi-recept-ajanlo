@@ -501,6 +501,18 @@
   }
   .pantry-tags button:hover { border-color: var(--accent); }
   .pantry-tags button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+  .pantry-photo { margin-top: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+  .pantry-photo-note { font-size: 12px; color: var(--muted); flex-basis: 100%; }
+  .pantry-photo-status { font-size: 13px; color: var(--ink-2); flex-basis: 100%; }
+  .pantry-photo-status.err { color: var(--crit); }
+  .pantry-photo-chips { display: flex; flex-wrap: wrap; gap: 6px; flex-basis: 100%; }
+  .photo-chip {
+    font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; border-radius: 999px; padding: 5px 10px 5px 12px;
+    border: 1px solid var(--olive); background: var(--olive-tint); color: var(--ink); display: inline-flex; align-items: center; gap: 6px;
+  }
+  .photo-chip:hover { border-color: var(--accent); }
+  .photo-chip .x { opacity: .65; font-weight: 700; }
+  .pantry-photo-runbtn { flex-basis: 100%; }
   .match-note { font-size: 12.5px; color: var(--olive); font-weight: 600; }
   .match-note .missing { color: var(--muted); font-weight: 400; }
   .fav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; align-items: start; }
@@ -805,6 +817,14 @@
       <input type="search" id="pantryInput" placeholder="pl. csirke, tejföl, krumpli" aria-label="Hozzávalók vagy ételnév" autocomplete="off">
       <button type="submit" class="small primary">Keresés</button>
     </form>
+    <div class="pantry-photo">
+      <button type="button" class="small" id="pantryPhotoBtn">📷 Fotó a hűtőről</button>
+      <input type="file" id="pantryPhotoInput" accept="image/*" capture="environment" hidden>
+      <span class="pantry-photo-note">A kép csak a te böngésződben marad, sehova nem töltjük fel — a felismerés a gépeden fut.</span>
+      <div class="pantry-photo-status" id="pantryPhotoStatus" hidden></div>
+      <div class="pantry-photo-chips" id="pantryPhotoChips" hidden></div>
+      <button type="button" class="small primary pantry-photo-runbtn" id="pantryPhotoRun" hidden>Keresés a felismert hozzávalókkal</button>
+    </div>
     <div class="pantry-tags" id="pantryTags">
       <span>Ötletek:</span>
       <button type="button" data-tag="beginner" aria-pressed="false">Kezdőknek is megy</button>
@@ -1734,6 +1754,279 @@
     return { terms: terms, results: results };
   }
 
+  // ---------- Hűtőfotó felismerés (ingyenes, helyben a böngészőben fut) ----------
+  // A kép soha nem hagyja el a böngészőt: nyílt CLIP modellt töltünk be
+  // (transformers.js, jsDelivr CDN-ről) egy elkülönített <script type="module">
+  // blokkban, hogy a fő szkript ES5-ös szintaxisa ne törjön el olyan
+  // böngészőkön, amik a dinamikus import()-ot vagy a modult nem ismerik —
+  // ott ez az egész funkció csendben nem jelenik meg.
+  var FRIDGE_CANDIDATES = [
+    ["a photo of eggs", "tojás"],
+    ["a photo of a milk carton", "tej"],
+    ["a photo of a block of cheese", "sajt"],
+    ["a photo of a stick of butter", "vaj"],
+    ["a photo of yogurt cups", "joghurt"],
+    ["a photo of sour cream", "tejföl"],
+    ["a photo of cooking cream", "tejszín"],
+    ["a photo of tomatoes", "paradicsom"],
+    ["a photo of a cucumber", "uborka"],
+    ["a photo of carrots", "sárgarépa"],
+    ["a photo of onions", "hagyma"],
+    ["a photo of garlic", "fokhagyma"],
+    ["a photo of potatoes", "burgonya"],
+    ["a photo of apples", "alma"],
+    ["a photo of lemons", "citrom"],
+    ["a photo of oranges", "narancs"],
+    ["a photo of bananas", "banán"],
+    ["a photo of lettuce", "saláta"],
+    ["a photo of bell peppers", "paprika"],
+    ["a photo of mushrooms", "gomba"],
+    ["a photo of broccoli", "brokkoli"],
+    ["a photo of zucchini", "cukkini"],
+    ["a photo of spinach", "spenót"],
+    ["a photo of cabbage", "káposzta"],
+    ["a photo of raw chicken meat", "csirke"],
+    ["a photo of ground meat", "darált hús"],
+    ["a photo of sliced ham", "sonka"],
+    ["a photo of sausages", "kolbász"],
+    ["a photo of bacon", "szalonna"],
+    ["a photo of raw fish", "hal"],
+    ["a photo of a loaf of bread", "kenyér"],
+    ["a photo of cooked rice", "rizs"],
+    ["a photo of pasta", "tészta"],
+    ["a photo of canned beans", "bab"],
+    ["a photo of corn", "kukorica"],
+    ["a photo of a ketchup bottle", "ketchup"],
+    ["a photo of a mustard jar", "mustár"],
+    ["a photo of mayonnaise", "majonéz"],
+    ["a photo of a jam jar", "lekvár"],
+    ["a photo of wine bottles", "bor"],
+    ["a photo of beer bottles", "sör"],
+    ["a photo of soda cans", "üdítő"],
+    ["a photo of a juice carton", "gyümölcslé"],
+    ["a photo of a bottle of cooking oil", "olaj"]
+  ];
+  var FRIDGE_MODULE_TIMEOUT = 25000;
+  var FRIDGE_TILE_PROB_FLOOR = 0.15;
+
+  function ensureFridgeModule() {
+    if (window.__fridgeClassifyPhoto) return Promise.resolve();
+    if (window.__fridgeModuleLoading) return window.__fridgeModuleLoading;
+    window.__fridgeModuleLoading = new Promise(function (resolve, reject) {
+      var done = false;
+      function finish(err) {
+        if (done) return;
+        done = true;
+        if (err) reject(err); else resolve();
+      }
+      window.addEventListener("fridge-module-ready", function handler() {
+        window.removeEventListener("fridge-module-ready", handler);
+        finish();
+      });
+      var s = document.createElement("script");
+      s.type = "module";
+      s.textContent = [
+        "import { AutoTokenizer, AutoProcessor, CLIPModel, RawImage, env } from 'https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2';",
+        "env.allowLocalModels = false;",
+        "var MODEL_ID = 'Xenova/clip-vit-base-patch32';",
+        // Manual CLIP forward pass instead of the zero-shot-image-classification
+        // pipeline: that pipeline softmaxes the scores ACROSS all candidate
+        // labels, so whichever label best matches the overall scene (e.g. "a
+        // fridge") wins almost every time, drowning out specific items. Here we
+        // read logits_per_image directly (cosine similarity * temperature,
+        // before softmax) so each candidate label is judged independently.
+        "var readyPromise = Promise.all([",
+        "  AutoTokenizer.from_pretrained(MODEL_ID),",
+        "  AutoProcessor.from_pretrained(MODEL_ID),",
+        "  CLIPModel.from_pretrained(MODEL_ID)",
+        "]).then(function (r) { return { tokenizer: r[0], processor: r[1], model: r[2] }; });",
+        "window.__fridgeClassifyPhoto = function (url, labels) {",
+        "  return readyPromise.then(function (ctx) {",
+        "    return RawImage.read(url).then(function (image) {",
+        "      return ctx.processor(image).then(function (imageInputs) {",
+        "        var textInputs = ctx.tokenizer(labels, { padding: true, truncation: true });",
+        "        var inputs = Object.assign({}, textInputs, imageInputs);",
+        "        return ctx.model(inputs).then(function (out) {",
+        "          var logits = out.logits_per_image.data;",
+        "          var result = [];",
+        "          for (var i = 0; i < labels.length; i++) result.push({ label: labels[i], score: logits[i] });",
+        "          return result;",
+        "        });",
+        "      });",
+        "    });",
+        "  });",
+        "};",
+        "window.dispatchEvent(new Event('fridge-module-ready'));"
+      ].join("\n");
+      s.onerror = function () { finish(new Error("modul-betöltési hiba")); };
+      document.head.appendChild(s);
+      setTimeout(function () { finish(new Error("időtúllépés")); }, FRIDGE_MODULE_TIMEOUT);
+    });
+    return window.__fridgeModuleLoading;
+  }
+
+  // A hűtőfotón sok apró tárgy van egyszerre; egyetlen egész-képes CLIP
+  // beágyazás elmossa őket, a pontszámok gyakorlatilag megkülönböztethetetlenek
+  // lesznek (kipróbálva: 0.20-0.26 közé zsúfolódik minden címke, a valódi
+  // tartalomtól függetlenül). Ehelyett a képet átfedő "csempékre" vágjuk —
+  // egy-egy csempén már jellemzően 1-2 tárgy dominál —, és csempénként
+  // választjuk ki a legvalószínűbb címké(ke)t (softmax a csempén belül,
+  // ugyanúgy, ahogy CLIP-nél a klasszikus egytárgyas zero-shot besorolás
+  // megbízhatóan működik), majd az eredményeket egyesítjük.
+  function generateFridgeTiles(file, tileMax) {
+    tileMax = tileMax || 336;
+    return new Promise(function (resolve, reject) {
+      if (!window.createImageBitmap) { reject(new Error("nem támogatott")); return; }
+      createImageBitmap(file).then(function (bitmap) {
+        var W = bitmap.width, H = bitmap.height;
+        var regions = [
+          [0, 0, W, H],
+          [0, 0, W * 0.6, H * 0.6],
+          [W * 0.4, 0, W * 0.6, H * 0.6],
+          [0, H * 0.4, W * 0.6, H * 0.6],
+          [W * 0.4, H * 0.4, W * 0.6, H * 0.6],
+          [W * 0.2, H * 0.2, W * 0.6, H * 0.6]
+        ];
+        var blobPromises = regions.map(function (r) {
+          var sx = r[0], sy = r[1], sw = r[2], sh = r[3];
+          var scale = Math.min(1, tileMax / Math.max(sw, sh));
+          var w = Math.max(1, Math.round(sw * scale)), h = Math.max(1, Math.round(sh * scale));
+          var canvas = document.createElement("canvas");
+          canvas.width = w; canvas.height = h;
+          canvas.getContext("2d").drawImage(bitmap, sx, sy, sw, sh, 0, 0, w, h);
+          return new Promise(function (res, rej) {
+            canvas.toBlob(function (blob) {
+              if (!blob) { rej(new Error("canvas hiba")); return; }
+              res(URL.createObjectURL(blob));
+            }, "image/jpeg", 0.85);
+          });
+        });
+        Promise.all(blobPromises).then(resolve, reject);
+      }, reject);
+    });
+  }
+
+  function softmaxProbs(rawScores) {
+    var max = -Infinity;
+    rawScores.forEach(function (s) { if (s > max) max = s; });
+    var exps = rawScores.map(function (s) { return Math.exp(s - max); });
+    var sum = exps.reduce(function (a, b) { return a + b; }, 0);
+    return exps.map(function (e) { return e / sum; });
+  }
+
+  function classifyFridgePhoto(file) {
+    var labels = FRIDGE_CANDIDATES.map(function (c) { return c[0]; });
+    return ensureFridgeModule().then(function () {
+      return generateFridgeTiles(file, 336);
+    }).then(function (tileUrls) {
+      return Promise.all(tileUrls.map(function (u) {
+        return window.__fridgeClassifyPhoto(u, labels).then(function (raw) {
+          URL.revokeObjectURL(u);
+          return raw;
+        });
+      }));
+    }).then(function (allTileRaw) {
+      if (window.__fridgeDebug) console.log("FRIDGE_TILES_RAW", JSON.stringify(allTileRaw));
+      var best = {};
+      allTileRaw.forEach(function (raw) {
+        var probs = softmaxProbs(raw.map(function (r) { return r.score; }));
+        var ranked = FRIDGE_CANDIDATES.map(function (c, i) { return { term: c[1], prob: probs[i] }; })
+          .sort(function (a, b) { return b.prob - a.prob; });
+        ranked.slice(0, 2).forEach(function (r) {
+          if (r.prob > FRIDGE_TILE_PROB_FLOOR && (!best[r.term] || best[r.term] < r.prob)) best[r.term] = r.prob;
+        });
+      });
+      var items = Object.keys(best).sort(function (a, b) { return best[b] - best[a]; }).slice(0, 10);
+      return { empty: !items.length, items: items };
+    });
+  }
+
+  var pantryRunSearch = null;
+
+  function initPantryPhoto() {
+    var btn = document.getElementById("pantryPhotoBtn");
+    var fileInput = document.getElementById("pantryPhotoInput");
+    var status = document.getElementById("pantryPhotoStatus");
+    var chipsBox = document.getElementById("pantryPhotoChips");
+    var runBtn = document.getElementById("pantryPhotoRun");
+    var input = document.getElementById("pantryInput");
+    if (!btn) return;
+    var items = [];
+
+    function setStatus(text, isErr) {
+      status.hidden = !text;
+      status.textContent = text || "";
+      status.className = "pantry-photo-status" + (isErr ? " err" : "");
+    }
+
+    // A mezőt csak a kezdeti felismeréskor töltjük fel egy az egyben; egy chip
+    // törlésekor csak azt az egy kifejezést vesszük ki a mező szövegéből, hogy
+    // amit a felhasználó időközben kézzel odaírt, az ne vesszen el.
+    function removeTermFromInput(term) {
+      var target = foldText(term);
+      var parts = input.value.split(",").map(function (p) { return p.trim(); }).filter(function (p) { return p.length; });
+      parts = parts.filter(function (p) { return foldText(p) !== target; });
+      input.value = parts.join(", ");
+    }
+
+    function renderChips() {
+      chipsBox.innerHTML = "";
+      chipsBox.hidden = !items.length;
+      runBtn.hidden = !items.length;
+      items.forEach(function (term, i) {
+        var chip = document.createElement("button");
+        chip.type = "button";
+        chip.className = "photo-chip";
+        chip.title = "Eltávolítás";
+        var label = document.createTextNode(term + " ");
+        var x = document.createElement("span");
+        x.className = "x";
+        x.textContent = "✕";
+        chip.appendChild(label);
+        chip.appendChild(x);
+        chip.addEventListener("click", function () {
+          items.splice(i, 1);
+          removeTermFromInput(term);
+          renderChips();
+          if (pantryRunSearch) pantryRunSearch();
+        });
+        chipsBox.appendChild(chip);
+      });
+    }
+
+    btn.addEventListener("click", function () { fileInput.click(); });
+
+    fileInput.addEventListener("change", function () {
+      var file = fileInput.files && fileInput.files[0];
+      fileInput.value = "";
+      if (!file) return;
+      items = [];
+      input.value = "";
+      renderChips();
+      btn.disabled = true;
+      setStatus("Kép elemzése… (első használatkor egy kb. 90 MB-os, ingyenes felismerő modellt tölt le a böngésző — utána gyors és offline is működik)");
+      classifyFridgePhoto(file).then(function (result) {
+        btn.disabled = false;
+        if (result.empty) {
+          setStatus("Nem sikerült ételt felismerni ezen a képen — próbálj nyitott hűtőről, jó fényben készült fotót, vagy írd be kézzel a hozzávalókat.", true);
+          return;
+        }
+        items = result.items;
+        input.value = items.join(", ");
+        renderChips();
+        setStatus(items.length + " hozzávaló felismerve a fotón — töröld ki, ami nem stimmel, a mezőbe pedig kézzel beírhatod, amit kihagyott. A felismerés nem tökéletes, ezért mindig érdemes ellenőrizni.");
+        if (pantryRunSearch) pantryRunSearch();
+      }).catch(function () {
+        btn.disabled = false;
+        setStatus("A képfelismerés nem működik ezen a böngészőn/eszközön — írd be kézzel a hozzávalókat.", true);
+      });
+    });
+
+    runBtn.addEventListener("click", function () {
+      if (pantryRunSearch) pantryRunSearch();
+    });
+  }
+
   var PANTRY_PAGE = 12;
 
   function initPantry() {
@@ -1785,6 +2078,8 @@
         (filtered ? " (" + prof.name + " ételérzékenysége szerint szűrve)" : "");
       showNext();
     }
+
+    pantryRunSearch = run;
 
     form.addEventListener("submit", function (e) { e.preventDefault(); run(); });
     Array.prototype.forEach.call(document.querySelectorAll('input[name="pantrySlot"]'), function (r) {
@@ -3534,6 +3829,7 @@
     renderFavorites();
     initSharedRecipeDialog();
     initPantry();
+    initPantryPhoto();
     initCookMode();
     document.getElementById("goBeginnerRecipes").addEventListener("click", function () {
       activateTab("kereso");

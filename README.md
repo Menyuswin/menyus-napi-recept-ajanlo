@@ -390,6 +390,45 @@ reggeli / ebéd / vacsora), 12-esével lapoz („További találatok”).
   `ALLERGEN_KEYWORDS` listával, mint a napi ajánló), és ezt a találatszám
   mellett jelzi is.
 
+### „Fotó a hűtőről” — ingyenes, helyi képfelismerés
+
+A kereső mellett egy **📷 Fotó a hűtőről** gomb is elérhető: a
+felhasználó lefotózza (vagy feltölti) a hűtő/kamra tartalmát, és a
+felismert hozzávalók eltávolítható „chip”-ekként jelennek meg, majd
+automatikusan lefut velük a keresés. Nincs szerveroldali költség és a kép
+soha nem hagyja el a böngészőt:
+
+- A felismerés a [transformers.js](https://github.com/xenova/transformers.js)
+  könyvtárral, egy nyílt **CLIP** modellel (`Xenova/clip-vit-base-patch32`,
+  ~90 MB, jsDelivr CDN-ről) fut helyben, a felhasználó gépén — első
+  használatkor tölti le a böngésző, utána a cache-ből gyors.
+- A betöltés egy külön beszúrt `<script type="module">` blokkban történik
+  (`ensureFridgeModule()`), hogy a fő szkript ES5-ös, `var`/`function`
+  stílusú szintaxisa ne törjön el olyan böngészőkön, amik a modult vagy a
+  dinamikus `import()`-ot nem ismerik — ott ez a funkció csendben nem
+  jelenik meg, a kézi keresés változatlanul működik.
+- **Miért csempézve (tile-olva) fut a felismerés, nem az egész képen
+  egyben:** egy hűtőfotón sok apró tárgy van egyszerre. Ha a teljes képet
+  egyetlen CLIP-beágyazással hasonlítjuk az összes jelölt szóhoz, a
+  pontszámok gyakorlatilag megkülönböztethetetlenné válnak (kipróbálva:
+  minden jelölt 0,20–0,26 közé esett, a valódi tartalomtól szinte
+  függetlenül) — és ha egy „csukott hűtő, nincs benne semmi” jelölt szót is
+  versenyeztetünk a többivel, az szinte mindig nyer, mert az egész kép
+  hűtő-kontextusát ragadja meg, nem a konkrét tartalmat (ez volt az első,
+  elvetett próbálkozás hibája). Ehelyett a képet 6, egymást átfedő
+  vágatra bontjuk (`generateFridgeTiles`), vágatonként **softmax**-oljuk a
+  kb. 40 jelölt szóra kapott nyers CLIP-logitokat (`logits_per_image`,
+  kézzel hívott `CLIPModel`, nem a kész zero-shot pipeline, ami
+  vágat-független, összes-címkés softmax-ot adna), és minden vágatból a
+  legvalószínűbb 1-2 találatot vesszük át, ha az meghalad egy
+  valószínűségi küszöböt (`FRIDGE_TILE_PROB_FLOOR = 0.15`).
+- A jelölt szavak (`FRIDGE_CANDIDATES`) angol CLIP-promptok (pl. „a photo
+  of eggs”), magyar hozzávaló-névre leképezve; a lista bővíthető.
+- A felismerés nem tökéletes (valódi tesztfotón kb. 60% pontosságú volt) —
+  ezért a chipek egyesével törölhetők, és a mező kézzel is szerkeszthető;
+  egy chip törlése csak azt az egy szót veszi ki a mezőből, a kézzel
+  hozzáírt kiegészítéseket nem írja felül.
+
 ### Címkék és „Ötletek” gombok
 
 A kártyák címkéi (`recipeTagInfo()`) az adatokból számolódnak, nem kell
