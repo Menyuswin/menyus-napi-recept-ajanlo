@@ -384,6 +384,19 @@
     background: var(--accent-tint); color: var(--accent-2); vertical-align: 2px;
   }
   .tab-count:empty { display: none; }
+  .pantry {
+    margin: 12px 0 0; padding: 14px 16px; background: var(--surface); border: 1px solid var(--line);
+    border-radius: 8px; border-left: 4px solid var(--olive);
+  }
+  .pantry h2 { font-size: 18px; margin: 0 0 4px; }
+  .pantry form { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+  .pantry input[type="search"] { flex: 1 1 260px; font: inherit; font-size: 14.5px; padding: 9px 12px; }
+  .pantry-slots { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; font-size: 13px; color: var(--ink-2); align-items: center; }
+  .pantry-slots label { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
+  .pantry-summary { margin: 12px 0 0; font-size: 13.5px; color: var(--ink-2); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .pantry-more { margin-top: 12px; }
+  .match-note { font-size: 12.5px; color: var(--olive); font-weight: 600; }
+  .match-note .missing { color: var(--muted); font-weight: 400; }
   .fav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; align-items: start; }
   .fav-empty { padding: 28px 18px; text-align: center; color: var(--ink-2); background: var(--surface); border: 1px dashed var(--line); border-radius: 8px; }
   .fav-empty h2 { font-size: 19px; margin: 0 0 6px; }
@@ -543,6 +556,27 @@
     <span class="global-cuisine-label">Konyhák (több is kiválasztható):</span>
     <div class="global-cuisine-btns" id="globalCuisineBtns"></div>
   </div>
+
+  <section class="pantry" id="pantry" aria-labelledby="pantryTitle">
+    <h2 id="pantryTitle">Mi van itthon?</h2>
+    <p class="allergen-note">Írd be, mi van a hűtőben vagy a kamrában (vesszővel elválasztva), vagy egy étel nevét — megmutatjuk, mit főzhetsz belőle mind a tíz konyhából.</p>
+    <form id="pantryForm" role="search">
+      <input type="search" id="pantryInput" placeholder="pl. csirke, tejföl, krumpli" aria-label="Hozzávalók vagy ételnév" autocomplete="off">
+      <button type="submit" class="small primary">Keresés</button>
+    </form>
+    <div class="pantry-slots">
+      <span>Étkezés:</span>
+      <label><input type="radio" name="pantrySlot" value="" checked> mind</label>
+      <label><input type="radio" name="pantrySlot" value="breakfast"> reggeli</label>
+      <label><input type="radio" name="pantrySlot" value="lunch"> ebéd</label>
+      <label><input type="radio" name="pantrySlot" value="dinner"> vacsora</label>
+    </div>
+    <div id="pantryResults" hidden>
+      <div class="pantry-summary"><span id="pantrySummary"></span><button type="button" class="small" id="pantryClear">Találatok bezárása</button></div>
+      <div class="fav-grid" id="pantryGrid"></div>
+      <button type="button" class="small pantry-more" id="pantryMore" hidden>További találatok</button>
+    </div>
+  </section>
 
   <section class="meals" id="meals">
     <article class="card" data-slot="breakfast">
@@ -1308,7 +1342,11 @@
       return;
     }
     ids.forEach(function (id) {
-      var found = findRecipeById(id);
+      grid.appendChild(buildRecipeCard(findRecipeById(id)));
+    });
+  }
+
+  function buildRecipeCard(found, beforeBody) {
       var cuisine = findCuisine(found.cuisineKey);
       var card = document.createElement("article");
       card.className = "card";
@@ -1325,8 +1363,150 @@
       var body = document.createElement("div");
       body.className = "body";
       card.appendChild(head); card.appendChild(body);
-      grid.appendChild(card);
       renderRecipeInto(body, cuisine, found.recipe, { detailsOpen: false });
+      if (beforeBody) body.insertBefore(beforeBody, body.querySelector(".recipe-title"));
+      return card;
+  }
+
+  // ---------- "Mi van itthon?" kereső ----------
+  var PANTRY_SYNONYMS = [
+    ["krumpli", "burgonya"],
+    ["disznó", "sertés"],
+    ["darált hús", "darált"]
+  ];
+  var PANTRY_BROADER = {
+    "csirke": ["tyúk"],
+    "hús": ["csirke", "marha", "sertés", "borjú", "bárány", "pulyka", "kacsa", "darált", "sonka", "kolbász", "szalonna"],
+    "tejszín": ["habtejszín", "főzőtejszín"],
+    "paradicsom": ["passata"],
+    "tészta": ["spagetti", "penne", "makaróni", "metélt", "lasagne", "tagliatelle", "fusilli", "nudli"],
+    "sajt": ["trappista", "parmezán", "mozzarella", "feta", "cheddar", "gouda", "ementáli", "pecorino", "ricotta", "kaskaval", "halloumi", "camembert", "brie", "gruyère", "comté"],
+    "gomba": ["csiperke", "vargánya", "shiitake", "laska"],
+    "hal": ["lazac", "tonhal", "tőkehal", "hekk", "pisztráng", "ponty", "harcsa", "szardínia", "hering", "makréla", "süllő"]
+  };
+
+  function foldText(t) {
+    return String(t).toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  }
+
+  function expandTerm(term) {
+    var f = foldText(term);
+    var out = [f];
+    function add(v) { v = foldText(v); if (out.indexOf(v) === -1) out.push(v); }
+    PANTRY_SYNONYMS.forEach(function (group) {
+      if (group.map(foldText).indexOf(f) !== -1) group.forEach(add);
+    });
+    Object.keys(PANTRY_BROADER).forEach(function (k) {
+      if (foldText(k) === f) PANTRY_BROADER[k].forEach(add);
+    });
+    return out;
+  }
+
+  var pantryIndex = null;
+  function getPantryIndex() {
+    if (pantryIndex) return pantryIndex;
+    pantryIndex = [];
+    Object.keys(RECIPES).forEach(function (ck) {
+      Object.keys(RECIPES[ck]).forEach(function (slot) {
+        RECIPES[ck][slot].forEach(function (r) {
+          pantryIndex.push({
+            found: { cuisineKey: ck, slot: slot, recipe: r },
+            title: foldText(r.title),
+            ingredients: foldText(r.ingredients.join(" | ")),
+            raw: r.ingredients.join(" ").toLowerCase()
+          });
+        });
+      });
+    });
+    return pantryIndex;
+  }
+
+  function searchPantry(query, slot, profile) {
+    var terms = query.split(/[,;\n]+|\s+és\s+/).map(function (t) { return t.trim(); }).filter(function (t) { return t.length >= 2; });
+    if (!terms.length) return { terms: [], results: [] };
+    var expanded = terms.map(expandTerm);
+    var intol = profile && profile.intolerances ? profile.intolerances : [];
+    var results = [];
+    getPantryIndex().forEach(function (entry) {
+      if (slot && entry.found.slot !== slot) return;
+      var unsafe = intol.some(function (i) {
+        return (ALLERGEN_KEYWORDS[i] || []).some(function (kw) { return entry.raw.indexOf(kw) !== -1; });
+      });
+      if (unsafe) return;
+      var have = [], missing = [], titleHit = false;
+      expanded.forEach(function (variants, i) {
+        var inTitle = variants.some(function (v) { return entry.title.indexOf(v) !== -1; });
+        var inIng = variants.some(function (v) { return entry.ingredients.indexOf(v) !== -1; });
+        if (inTitle) titleHit = true;
+        if (inTitle || inIng) have.push(terms[i]); else missing.push(terms[i]);
+      });
+      if (!have.length) return;
+      var pt = parseRecipeTime(entry.found.recipe.time);
+      results.push({
+        found: entry.found, have: have, missing: missing,
+        score: have.length * 10 + (titleHit ? 3 : 0),
+        minutes: pt ? pt.minutes + (pt.extraWait ? 600 : 0) : 9999
+      });
+    });
+    results.sort(function (a, b) { return b.score - a.score || a.minutes - b.minutes; });
+    return { terms: terms, results: results };
+  }
+
+  var PANTRY_PAGE = 12;
+
+  function initPantry() {
+    var form = document.getElementById("pantryForm");
+    var input = document.getElementById("pantryInput");
+    var box = document.getElementById("pantryResults");
+    var grid = document.getElementById("pantryGrid");
+    var summary = document.getElementById("pantrySummary");
+    var more = document.getElementById("pantryMore");
+    var current = [], shown = 0, termCount = 0;
+
+    function showNext() {
+      current.slice(shown, shown + PANTRY_PAGE).forEach(function (res) {
+        var note = document.createElement("div");
+        note.className = "match-note";
+        note.textContent = "✓ " + res.have.join(", ");
+        if (res.missing.length) {
+          var miss = document.createElement("span");
+          miss.className = "missing";
+          miss.textContent = " · nincs benne: " + res.missing.join(", ");
+          note.appendChild(miss);
+        }
+        grid.appendChild(buildRecipeCard(res.found, note));
+      });
+      shown = Math.min(shown + PANTRY_PAGE, current.length);
+      more.hidden = shown >= current.length;
+    }
+
+    function run() {
+      var slotEl = document.querySelector('input[name="pantrySlot"]:checked');
+      var out = searchPantry(input.value, slotEl ? slotEl.value : "", getSelectedProfile());
+      if (!out.terms.length) { box.hidden = true; return; }
+      current = out.results; shown = 0; termCount = out.terms.length;
+      grid.innerHTML = "";
+      box.hidden = false;
+      if (!current.length) {
+        summary.textContent = "Erre nincs találat — próbáld egyszerűbb szavakkal (pl. „csirke” a „csirkemellfilé” helyett).";
+        more.hidden = true;
+        return;
+      }
+      var full = current.filter(function (r) { return !r.missing.length; }).length;
+      var prof = getSelectedProfile();
+      var filtered = prof && prof.intolerances && prof.intolerances.some(function (i) { return ALLERGEN_KEYWORDS[i]; });
+      summary.textContent = current.length + " recept" + (termCount > 1 ? " — ebből " + full + " mindent tartalmaz, amit megadtál" : "") +
+        (filtered ? " (" + prof.name + " ételérzékenysége szerint szűrve)" : "");
+      showNext();
+    }
+
+    form.addEventListener("submit", function (e) { e.preventDefault(); run(); });
+    Array.prototype.forEach.call(document.querySelectorAll('input[name="pantrySlot"]'), function (r) {
+      r.addEventListener("change", function () { if (!box.hidden) run(); });
+    });
+    more.addEventListener("click", showNext);
+    document.getElementById("pantryClear").addEventListener("click", function () {
+      box.hidden = true; grid.innerHTML = ""; input.value = "";
     });
   }
 
@@ -2774,6 +2954,7 @@
     initStoreFinder();
     renderFavorites();
     initSharedRecipeDialog();
+    initPantry();
 
     var timeSel = document.getElementById("prefMaxTime");
     var noCookBox = document.getElementById("prefNoCook");

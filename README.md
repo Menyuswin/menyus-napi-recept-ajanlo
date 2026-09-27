@@ -328,6 +328,26 @@ megnézhesd a valódi árakat. Ismeretlen/független boltokhoz csak
 önkéntesek által karbantartott, ezért egy-egy kisebb bolt hiányozhat
 vagy pontatlan lehet benne.
 
+## „Mi van itthon?” kereső
+
+A Napi ajánló fülön, a konyhaválasztó alatt. Vesszővel (vagy „és”-sel)
+elválasztott hozzávalókat vagy ételnevet vár, és mind a 734 kézzel írt
+receptben keres (cím + hozzávalók, ékezet-függetlenül, részszóra is: a
+„csirke” a „csirkemell”-t is megtalálja). Rangsor: minél több megadott
+hozzávaló szerepel, annál előrébb; a címben szereplő szó plusz pontot ér;
+egyenlőségnél a gyorsabb recept előbb. Minden kártyán látszik, mi van meg
+(„✓ tejföl, krumpli”) és mi hiányzik belőle. Étkezésre szűrhető (mind /
+reggeli / ebéd / vacsora), 12-esével lapoz („További találatok”).
+
+- **Szinonimák** (`PANTRY_SYNONYMS`, oda-vissza): krumpli = burgonya,
+  disznó = sertés.
+- **Gyűjtőszavak** (`PANTRY_BROADER`, csak lefelé): pl. „sajt” → mozzarella,
+  feta, parmezán…; „hal” → lazac, tonhal…; „hús” → csirke, marha, sertés…
+  Fordítva nem bővít (a „mozzarella” nem hoz cheddart).
+- A kiválasztott profil **ételérzékenysége itt is szűr** (ugyanazzal az
+  `ALLERGEN_KEYWORDS` listával, mint a napi ajánló), és ezt a találatszám
+  mellett jelzi is.
+
 ## Kedvencek, megosztás, adagszám
 
 - **♡ Mentés / ♥ Elmentve** — minden kézzel írt recept kártyája alján (napi
