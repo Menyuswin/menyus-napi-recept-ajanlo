@@ -213,11 +213,44 @@ Az alábbi négy szűrő leírása kitér arra is, hogyan viselkedne egy élő
   Spoonacularnak, hogy ne szűkítse túlságosan a választékot. A kártyákon,
   ha az API adott tápérték-adatot, megjelenik a becsült kalória- és
   fehérjeérték is.
-- **Fontos korlát**: a kalória- és fehérjecél kizárólag élő
+- **Fontos korlát**: a kalória- és fehérjecél *szűrőként* kizárólag élő
   Spoonacular-szeletnél érvényesülne, mert csak a Spoonacular ad
-  tápérték-adatot — jelenleg tehát ez a két szűrő sehol nem hat (kivéve
-  a kártyákon megjelenő, dokumentum-alapú becsült kcal-értéket, ahol
-  a forrás ezt megadta, pl. az amerikai konyhánál).
+  tápérték-adatot — jelenleg tehát ez a két szűrő sehol nem szűr ténylegesen.
+  A kártyákon megjelenő kcal-érték (lásd lent) ettől független, minden
+  receptnél megjelenik, de nem befolyásolja, mely receptek kerülnek elő.
+
+### Kalóriaérték minden receptnél (2026-09-27)
+
+Minden kártyán megjelenik egy „kb. N kcal / adag” érték. Ennek eredete
+receptenként eltér:
+
+- **85 recept** (amerikai konyha, illetve a francia reggeli egy része)
+  a forrásdokumentum saját, dokumentum-alapú becslését használja
+  (`calories` mező, ahogy korábban is) — ezeket a hozzávaló-alapú
+  újraszámolás **nem írja felül**.
+- **A maradék 649 recept** (a többi 9 konyha, valamint az amerikai/francia
+  hiányzó darabjai) kalóriaértéke egy egyszeri, offline futtatott
+  hozzávaló-alapú becslő szkripttel készült: minden hozzávaló-sort
+  mennyiségre/egységre és névre bont (ugyanazzal a mintával, mint a
+  bevásárlólista összesítője), grammra vált (súly/térfogat-egységek
+  ismert sűrűséggel, darabszám-egységeknél — db/fej/gerezd/szelet/szál/
+  szem/csokor stb. — hozzávalónkénti jellemző súllyal), majd egy kb.
+  200 hozzávalót lefedő, kulcsszó-egyezéses kcal/100g adatbázis alapján
+  összegzi és elosztja az adagszámmal. Néhány recept egy tömbelemben,
+  vesszővel sorol fel több hozzávalót (pl. "a palacsintához: 2 db tojás,
+  3 dl tej, 15 dkg liszt…") — ezeket a szkript vessző mentén szétbontja,
+  különben csak az első hozzávaló mennyisége számítana be. A végeredményt
+  egy [80, 1600] kcal/adag tartományra szorítottuk (kb. 5%-ánál lépett
+  csak közbe), hogy egy-egy szokatlan megfogalmazás (pl. mennyiség nélküli
+  vagy a névbe ágyazott súlyú hozzávaló) se adhasson nyilvánvalóan
+  irreális végeredményt.
+- Ez **mindenhol tájékoztató, hozzávaló-alapú becslés**, nem konyhai
+  mérlegpontosságú vagy laboratóriumi adat — pontosan úgy, ahogy az
+  allergén-, fehérje- és kalóriacél-szűrők is csak becslések (lásd fent).
+  A generáló szkript (adatbázis + logika) a repóban van
+  (`tools/kcal-estimate/`, `node apply.js`) — új recept hozzáadása után
+  újrafuttatható, a meglévő `calories` mezőket nem írja felül, csak a
+  hiányzókat tölti ki. Részletek: `tools/kcal-estimate/README.md`.
 
 ## Hogyan válogat
 
@@ -620,4 +653,5 @@ ugyanígy működik GitHub Pages-ről vagy bármilyen statikus tárhelyről.
 
     index.html                      a teljes alkalmazás — stílus, jelölés, recept-adatok és logika egy fájlban
     spoonacular-proxy-worker.js     opcionális Cloudflare Worker kód a megosztott API-proxyhoz (lásd "Megosztott API-proxy")
+    tools/kcal-estimate/            hozzávaló-alapú kalória-becslő szkript (node apply.js) — lásd "Kalóriaérték minden receptnél"
     README.md                       ez a leírás
