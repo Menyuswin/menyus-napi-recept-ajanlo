@@ -366,6 +366,28 @@ reggeli / ebéd / vacsora), 12-esével lapoz („További találatok”).
   `ALLERGEN_KEYWORDS` listával, mint a napi ajánló), és ezt a találatszám
   mellett jelzi is.
 
+### Címkék és „Ötletek” gombok
+
+A kártyák címkéi (`recipeTagInfo()`) az adatokból számolódnak, nem kell
+kézzel jelölni őket:
+
+- **Kezdőknek is megy** — `easy` + legfeljebb 30 perc, nincs külön
+  várakozás, legfeljebb 5 lépés és 9 hozzávaló (ilyenkor az „Egyszerű”
+  helyett ez látszik). ~175 recept.
+- **Grillen is** — a címben „nyárs/grillezett/roston”, vagy egy lépés
+  grillt/nyársat/faszenet/parazsat említ úgy, hogy abban a lépésben nincs
+  sütő, kontaktgrill vagy „grill alatt”. ~29 recept.
+- **Előre kell kezdeni** — az időben külön várakozás van (pácolás,
+  áztatás, kelesztés, hűtés…). ~73 recept.
+- **Hétvégi projekt** — legalább 90 perc, külön várakozás nélkül. ~113 recept.
+
+„Egyedényes” címkét szándékosan nem adunk: a lépésekből nem lehet
+megbízhatóan eldönteni (a nokedlis vagy lasagnés recept is annak tűnne).
+
+A kereső alatti **Ötletek** gombokkal (Kezdőknek is megy / Grillen is /
+Hétvégi projekt / Nem kell főzni) keresőszó nélkül is böngészhető egy-egy
+címke; hozzávalóval és étkezéssel kombinálható, újra rákattintva kikapcsol.
+
 ## Kedvencek, megosztás, adagszám
 
 - **♡ Mentés / ♥ Elmentve** — minden kézzel írt recept kártyája alján (napi

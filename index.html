@@ -291,6 +291,9 @@
   }
   .tag-easy { border-color: var(--olive); color: var(--olive); background: var(--olive-tint); }
   .tag-nocook { border-color: var(--saffron); color: var(--accent-2); background: var(--saffron-tint); }
+  .tag-grill { border-color: var(--accent); color: var(--accent-2); background: var(--accent-tint); }
+  .tag-plan { border-color: var(--line); color: var(--ink-2); background: var(--surface-2); }
+  .tag-project { border-color: var(--ink-2); color: var(--ink); background: var(--surface); }
   .recipe-source { font-size: 12.5px; color: var(--muted); }
   .recipe-source a { color: var(--muted); text-decoration: underline; }
   .translate-note { font-size: 11px; color: var(--muted); font-style: italic; }
@@ -442,6 +445,13 @@
   .pantry-slots label { display: inline-flex; align-items: center; gap: 5px; cursor: pointer; }
   .pantry-summary { margin: 12px 0 0; font-size: 13.5px; color: var(--ink-2); display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
   .pantry-more { margin-top: 12px; }
+  .pantry-tags { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin-top: 8px; font-size: 13px; color: var(--ink-2); }
+  .pantry-tags button {
+    font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; border-radius: 999px; padding: 5px 12px;
+    border: 1px solid var(--line); background: var(--surface-2); color: var(--ink-2);
+  }
+  .pantry-tags button:hover { border-color: var(--accent); }
+  .pantry-tags button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
   .match-note { font-size: 12.5px; color: var(--olive); font-weight: 600; }
   .match-note .missing { color: var(--muted); font-weight: 400; }
   .fav-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-top: 12px; align-items: start; }
@@ -659,6 +669,13 @@
       <input type="search" id="pantryInput" placeholder="pl. csirke, tejföl, krumpli" aria-label="Hozzávalók vagy ételnév" autocomplete="off">
       <button type="submit" class="small primary">Keresés</button>
     </form>
+    <div class="pantry-tags" id="pantryTags">
+      <span>Ötletek:</span>
+      <button type="button" data-tag="beginner" aria-pressed="false">Kezdőknek is megy</button>
+      <button type="button" data-tag="grill" aria-pressed="false">Grillen is</button>
+      <button type="button" data-tag="project" aria-pressed="false">Hétvégi projekt</button>
+      <button type="button" data-tag="nocook" aria-pressed="false">Nem kell főzni</button>
+    </div>
     <div class="pantry-slots">
       <span>Étkezés:</span>
       <label><input type="radio" name="pantrySlot" value="" checked> mind</label>
@@ -708,7 +725,7 @@
 
   <footer class="sources">
     <h2>A receptekről</h2>
-    <p class="note">Mind a 734 recept kézzel válogatott és magyarul írt, konyhánként reggelire, ebédre és vacsorára. Az „Egyszerű” címke gyorsan, kevés munkával elkészíthető ételt jelöl, a „Nem kell főzni” pedig tűzhely és sütő nélkül összerakható fogást. Ha a megadott ételérzékenységnek egy konyhában épp nincs megfelelő receptje, az oldal ezt jelzi, és nem ajánl helyette bizonytalan alternatívát. Ha az időkorláthoz nincs elég gyors recept, a leggyorsabb közeli ötletet mutatja. A képek illusztrációk, nem a recept alapján készült fotók.</p>
+    <p class="note">Mind a 734 recept kézzel válogatott és magyarul írt, konyhánként reggelire, ebédre és vacsorára. A címkék segítenek választani: „Kezdőknek is megy” — gyors, kevés lépésből és hozzávalóból áll; „Egyszerű” — kevés munkával elkészül; „Nem kell főzni” — tűzhely és sütő nélkül összerakható; „Grillen is” — grillen, nyárson vagy roston is készülhet; „Előre kell kezdeni” — pácolás, áztatás, kelesztés vagy hűtés kell hozzá; „Hétvégi projekt” — másfél óránál hosszabb, ráérős főzés. Ha a megadott ételérzékenységnek egy konyhában épp nincs megfelelő receptje, az oldal ezt jelzi, és nem ajánl helyette bizonytalan alternatívát. Ha az időkorláthoz nincs elég gyors recept, a leggyorsabb közeli ötletet mutatja. A képek illusztrációk, nem a recept alapján készült fotók.</p>
   </footer>
 
   </div>
@@ -1150,6 +1167,25 @@
     return { minutes: Math.round(minutes), extraWait: extraWait };
   }
 
+  var GRILL_STEP_RE = /grill|roston|nyárs|faszén|parázs/;
+  var NOT_GRILL_RE = /sütő|salamander|kenyérpirító|kontaktgrill|grill alatt|nyárssal vagy tűvel/;
+
+  function recipeTagInfo(recipe) {
+    var pt = parseRecipeTime(recipe.time);
+    var title = recipe.title.toLowerCase();
+    var grill = /nyárs|grillezett|roston/.test(title) || recipe.steps.some(function (st) {
+      st = st.toLowerCase();
+      return GRILL_STEP_RE.test(st) && !NOT_GRILL_RE.test(st);
+    });
+    if (title.indexOf("sütőben") !== -1) grill = false;
+    return {
+      beginner: !!(recipe.easy && pt && pt.minutes <= 30 && !pt.extraWait && recipe.steps.length <= 5 && recipe.ingredients.length <= 9),
+      grill: grill,
+      plan: !!(pt && pt.extraWait),
+      project: !!(pt && !pt.extraWait && pt.minutes >= 90)
+    };
+  }
+
   function fitsTimeLimit(recipe, limit) {
     if (!limit) return true;
     var pt = parseRecipeTime(recipe.time);
@@ -1546,14 +1582,21 @@
     return pantryIndex;
   }
 
-  function searchPantry(query, slot, profile) {
+  function hasPantryTag(recipe, tag) {
+    if (!tag) return true;
+    if (tag === "nocook") return !!recipe.noCook;
+    return !!recipeTagInfo(recipe)[tag];
+  }
+
+  function searchPantry(query, slot, profile, tag) {
     var terms = query.split(/[,;\n]+|\s+és\s+/).map(function (t) { return t.trim(); }).filter(function (t) { return t.length >= 2; });
-    if (!terms.length) return { terms: [], results: [] };
+    if (!terms.length && !tag) return { terms: [], results: [] };
     var expanded = terms.map(expandTerm);
     var intol = profile && profile.intolerances ? profile.intolerances : [];
     var results = [];
     getPantryIndex().forEach(function (entry) {
       if (slot && entry.found.slot !== slot) return;
+      if (!hasPantryTag(entry.found.recipe, tag)) return;
       var unsafe = intol.some(function (i) {
         return (ALLERGEN_KEYWORDS[i] || []).some(function (kw) { return entry.raw.indexOf(kw) !== -1; });
       });
@@ -1565,7 +1608,7 @@
         if (inTitle) titleHit = true;
         if (inTitle || inIng) have.push(terms[i]); else missing.push(terms[i]);
       });
-      if (!have.length) return;
+      if (terms.length && !have.length) return;
       var pt = parseRecipeTime(entry.found.recipe.time);
       results.push({
         found: entry.found, have: have, missing: missing,
@@ -1586,11 +1629,14 @@
     var grid = document.getElementById("pantryGrid");
     var summary = document.getElementById("pantrySummary");
     var more = document.getElementById("pantryMore");
-    var current = [], shown = 0, termCount = 0;
+    var current = [], shown = 0, termCount = 0, activeTag = "";
+    var tagButtons = Array.prototype.slice.call(document.querySelectorAll("#pantryTags button"));
 
     function showNext() {
       current.slice(shown, shown + PANTRY_PAGE).forEach(function (res) {
-        var note = document.createElement("div");
+        var note = null;
+        if (res.have.length) {
+        note = document.createElement("div");
         note.className = "match-note";
         note.textContent = "✓ " + res.have.join(", ");
         if (res.missing.length) {
@@ -1598,6 +1644,7 @@
           miss.className = "missing";
           miss.textContent = " · nincs benne: " + res.missing.join(", ");
           note.appendChild(miss);
+        }
         }
         grid.appendChild(buildRecipeCard(res.found, note));
       });
@@ -1607,8 +1654,8 @@
 
     function run() {
       var slotEl = document.querySelector('input[name="pantrySlot"]:checked');
-      var out = searchPantry(input.value, slotEl ? slotEl.value : "", getSelectedProfile());
-      if (!out.terms.length) { box.hidden = true; return; }
+      var out = searchPantry(input.value, slotEl ? slotEl.value : "", getSelectedProfile(), activeTag);
+      if (!out.terms.length && !activeTag) { box.hidden = true; return; }
       current = out.results; shown = 0; termCount = out.terms.length;
       grid.innerHTML = "";
       box.hidden = false;
@@ -1630,8 +1677,17 @@
       r.addEventListener("change", function () { if (!box.hidden) run(); });
     });
     more.addEventListener("click", showNext);
+    tagButtons.forEach(function (b) {
+      b.addEventListener("click", function () {
+        var tag = b.getAttribute("data-tag");
+        activeTag = activeTag === tag ? "" : tag;
+        tagButtons.forEach(function (x) { x.setAttribute("aria-pressed", x.getAttribute("data-tag") === activeTag ? "true" : "false"); });
+        run();
+      });
+    });
     document.getElementById("pantryClear").addEventListener("click", function () {
-      box.hidden = true; grid.innerHTML = ""; input.value = "";
+      box.hidden = true; grid.innerHTML = ""; input.value = ""; activeTag = "";
+      tagButtons.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
     });
   }
 
@@ -1896,11 +1952,24 @@
     if (recipe.proteinGrams) { var pg = document.createElement("span"); pg.textContent = recipe.proteinGrams + " g fehérje"; meta.appendChild(pg); }
     if (meta.childNodes.length) body.appendChild(meta);
 
-    if (recipe.easy || recipe.noCook) {
+    var info = opts.live ? {} : recipeTagInfo(recipe);
+    var tagList = [];
+    if (info.beginner) tagList.push(["tag-easy", "Kezdőknek is megy", "Gyors, kevés lépés és hozzávaló — első főzéshez is jó választás."]);
+    else if (recipe.easy) tagList.push(["tag-easy", "Egyszerű", ""]);
+    if (recipe.noCook) tagList.push(["tag-nocook", "Nem kell főzni", ""]);
+    if (info.grill) tagList.push(["tag-grill", "Grillen is", "Grillen, nyárson vagy roston is elkészíthető."]);
+    if (info.plan) tagList.push(["tag-plan", "Előre kell kezdeni", "Pácolás, áztatás, kelesztés vagy hűtés kell hozzá: " + recipe.time]);
+    if (info.project) tagList.push(["tag-project", "Hétvégi projekt", "Hosszabb, ráérős főzés: " + recipe.time]);
+    if (tagList.length) {
       var tags = document.createElement("div");
       tags.className = "recipe-tags";
-      if (recipe.easy) { var te = document.createElement("span"); te.className = "tag tag-easy"; te.textContent = "Egyszerű"; tags.appendChild(te); }
-      if (recipe.noCook) { var tn = document.createElement("span"); tn.className = "tag tag-nocook"; tn.textContent = "Nem kell főzni"; tags.appendChild(tn); }
+      tagList.forEach(function (t) {
+        var el = document.createElement("span");
+        el.className = "tag " + t[0];
+        el.textContent = t[1];
+        if (t[2]) el.title = t[2];
+        tags.appendChild(el);
+      });
       body.appendChild(tags);
     }
 
