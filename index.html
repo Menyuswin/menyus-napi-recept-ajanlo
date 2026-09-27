@@ -443,8 +443,7 @@
     <button type="button" class="tab-btn" data-tab="bekuldes" aria-selected="false">Recept beküldése</button>
   </nav>
 
-  <div class="tab-panel" data-tab="ajanlo" id="tabAjanlo">
-
+  <div id="sharedSettings">
   <details class="panel" id="settingsPanel">
     <summary>Beállítások — profilok</summary>
     <div class="inner">
@@ -487,6 +486,10 @@
     <label><input type="checkbox" id="prefEasy"> Egyszerűbb recepteket szeretnék</label>
     <label><input type="checkbox" id="prefNoCook"> Reggelire és vacsorára nem kell mindenáron főtt étel</label>
   </div>
+  </div>
+
+  <div class="tab-panel" data-tab="ajanlo" id="tabAjanlo">
+
 
   <div class="global-cuisine">
     <span class="global-cuisine-label">Konyhák (több is kiválasztható):</span>
@@ -2424,6 +2427,7 @@
       panels.forEach(function (panel) {
         panel.hidden = panel.getAttribute("data-tab") !== tabName;
       });
+      document.getElementById("sharedSettings").hidden = tabName !== "ajanlo" && tabName !== "heti";
       try { localStorage.setItem(TAB_STORAGE, tabName); } catch (e) {}
       if (tabName === "heti" && weekDirty) {
         weekDirty = false;
