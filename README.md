@@ -179,6 +179,11 @@ főzöl ma?" chipek közül mindig egy aktív — az oldal az ő adatai szerint
 szűr, amíg másikra nem váltasz (vagy "Mindenkinek / nincs profil"-ra, ami
 kikapcsolja a szűrést).
 
+Egy már felvett személy adatai utólag is módosíthatók: a chipen a **✎**
+gomb betölti az összes adatát (az ételérzékenységeket is) az űrlapba, a
+„Módosítások mentése” ugyanazt a profilt írja felül, a „Mégse” elveti a
+változtatást.
+
 Az alábbi négy szűrő leírása kitér arra is, hogyan viselkedne egy élő
 (Spoonacular-os) konyhánál/étkezésnél — jelenleg ilyen nincs (lásd
 "Adatforrás" fent), úgyhogy a gyakorlatban mindenhol a kézzel írt ág fut:
@@ -362,6 +367,42 @@ vissza — nincs localStorage-perzisztencia, mert ez tudatosan egy
 "ránézésre áttekintem, aztán rákattintok, ami kell" munkafolyamat, nem egy
 tartós beállítás.
 
+### Előre főzés több napra („Hány napra főzöl előre?”)
+
+A Heti menü tetején beállítható, hogy nem minden nap főzöl, hanem egyszerre
+több napra. Gyorsgombok: **Minden nap** (az alapállapot), **3× (H–K ·
+Sze–P · Szo–V)**, **2× (H–Sze · Cs–V)**. Utána minden főzésnél külön
+választható, **hány napra főzöl előre (1–4 nap)** — a következő főzés
+napja ebből adódik, a hét végét új főzések töltik ki. A beosztás
+localStorage-ban marad (`napi-recept-cook-plan`, pl. `[2,3,2]`: a főzések
+hossza napokban, hétfőtől, összesen 7).
+
+- **A főzés napján** az ebéd és a vacsora annyi napra szóló mennyiséggel
+  jelenik meg, ahány napra szól (az adagszám-átszámoló már eleve ×N-en áll),
+  fölötte egy „Főzés napja — N napra (hétfő–kedd)” sáv tárolási tippel;
+  4 napnál azt is jelzi, hogy a 4. napi adagot biztonságosabb lefagyasztani.
+- **A többi napon** csak „Maradék a hétfői főzésből: …” áll, egy gombbal,
+  ami a főzés napjához ugrik. Ha a főzés napján „Másik ötletet” kérsz vagy
+  konyhát váltasz, a maradék-napok követik.
+- **A reggeli** minden napra külön ajánlás marad.
+- **Csak jól eltartható ételt ajánl** (`keepsWell()`, a cím alapján):
+  leveseket, pörkölteket, főzelékeket, ragukat, curryket, rakott és töltött
+  ételeket, sülteket. Kimarad a rántott, ropogós, salátás, tojásos, halas,
+  tésztás-gombócos és frissen jó étel. Ha a nap automatikus konyhájában
+  kettőnél kevesebb ilyen van (a japánban egy sincs), a következő olyan
+  konyhát ajánlja, amelyikben van elég, és ezt kiírja; kézzel választott
+  konyhát nem cserél.
+- **Legfeljebb 4 nap** egy főzés — főtt ételt ennél tovább hűtőben nem
+  ajánlott tárolni.
+- **A bevásárlólista** a főzés napjainak receptjeit ×N mennyiséggel számolja,
+  a maradék-napokat nem számolja még egyszer.
+- **Hány főre főzöl?** — „a recept szerint” (alapállapot) vagy 1–10 fő
+  (`napi-recept-household`). Beállítva a heti menü minden receptje (a
+  reggeli is) és a bevásárlólista erre számol: fő / eredeti adag × napok
+  (pl. 2 fő, 4 adagos recept, 3 napra → 6 adag). Csak az „adag” vagy „fő”
+  egységű recepteket számolja át főre; a „12 db”, „8 szelet” jellegűeknél
+  nem tudni, hány embernek elég, ott csak a napokkal szoroz.
+
 ### Bevásárlólista
 
 A **Bevásárlólista** menüpont megnyitáskor automatikusan összeállítja az
@@ -514,8 +555,17 @@ kézzel jelölni őket:
 - **Grillen is** — a címben „nyárs/grillezett/roston”, vagy egy lépés
   grillt/nyársat/faszenet/parazsat említ úgy, hogy abban a lépésben nincs
   sütő, kontaktgrill vagy „grill alatt”. ~29 recept.
-- **Előre kell kezdeni** — az időben külön várakozás van (pácolás,
-  áztatás, kelesztés, hűtés…). ~73 recept.
+- **Előkészítés szükséges** — áztatás, kelesztés, fermentálás, szárítás,
+  sózás kell hozzá, vagy a receptnek van pácolása. A hűtés, pihentetés,
+  dermesztés és állás **nem** kap címkét, de mivel ezek is várakozást
+  jelentenek, az időkorlát-szűrő és a „Kezdőknek is megy” / „Hétvégi
+  projekt” címke továbbra is figyelembe veszi őket.
+
+**Pácolás:** a pácolás ideje nem számít bele a recept `time` mezőjébe,
+hanem a külön `marinate` mezőben áll (pl. `"time": "1 óra"`,
+`"marinate": "legalább 2 óra, ideálisan egy éjszaka"`), és a kártyán
+külön „Pácolás: …” sorként látszik. Az időkorlát-szűrő a pácolós recepteket
+nem ajánlja rövid időkerethez.
 - **Hétvégi projekt** — legalább 90 perc, külön várakozás nélkül. ~113 recept.
 
 „Egyedényes” címkét szándékosan nem adunk: a lépésekből nem lehet
@@ -640,6 +690,42 @@ van szó, lásd "Adatforrás" fent.)*
   Spoonacular és a MyMemory API-k nem érhetők el közvetlenül — a kódot
   Playwright-tal, mesterséges (mock) API-válaszokkal teszteltem alaposan,
   de az éles, valódi API-hívásokat neked kell ellenőrizned a böngésződben.
+
+## Új recept felvétele — mezők
+
+A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
+(`polish`, `southslavic`, `hungarian`, `french`, `italian`, `american`,
+`greek`, `indian`, `chinese`, `japanese`) és étkezés (`breakfast`, `lunch`,
+`dinner`) szerint. Egy recept:
+
+    {
+      "title": "Marhapörkölt",
+      "time": "2 óra 30 perc",
+      "marinate": "legalább 2 óra, ideálisan egy éjszaka",
+      "servings": "4 adag",
+      "ingredients": ["1 kg marhalábszár", "2 fej vöröshagyma", "..."],
+      "steps": ["...", "..."],
+      "easy": false,
+      "noCook": false,
+      "keepsWell": true
+    }
+
+- `time` — a teljes idő **pácolás nélkül**. Ha kell hozzá áztatás,
+  kelesztés, hűtés vagy pihentetés, azt a fő idő után írd: `"1 óra 15 perc
+  + egy éjszaka áztatás"`, `"30 perc + 1 óra hűtés"` — a címkék és az
+  időkorlát-szűrő ebből dolgoznak. Ellenőrizd, hogy a lépésekben szereplő
+  idők (sütés, főzés, pihentetés) összege belefér-e.
+- `marinate` — nem kötelező; csak ha a receptet pácolni kell. Külön sorban
+  látszik a kártyán, és nem számít bele a `time`-ba.
+- `servings` — `"4 adag"`, `"2 fő"`, `"12 db"`; az adag-átszámoló és a
+  „Hány főre főzöl?” ebből indul.
+- `easy` — hétköznapra is gyorsan elkészíthető (a heti menü hétköznapokra
+  ezeket részesíti előnyben); `noCook` — nem kell hozzá főzni.
+- `keepsWell` — nem kötelező; `true`, ha hűtőben 3-4 napig jól eláll és
+  felmelegítve is jó (több napra előre főzhető), `false`, ha nem. Ha
+  hiányzik, a cím alapján döntjük el (`keepsWell()` az `index.html`-ben).
+- `calories` és `image` — a `calories`-t a `tools/kcal-estimate` szkript
+  tölti ki (`node tools/kcal-estimate/apply.js`), az `image` nem kötelező.
 
 ## Futtatás helyben
 
