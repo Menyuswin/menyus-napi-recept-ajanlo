@@ -727,6 +727,44 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
 - `calories` és `image` — a `calories`-t a `tools/kcal-estimate` szkript
   tölti ki (`node tools/kcal-estimate/apply.js`), az `image` nem kötelező.
 
+## Angol változat (English version)
+
+Az oldal jobb felső sarkában az **English** / **Magyar** linkkel lehet
+nyelvet váltani. A böngésző megjegyzi a választást (`napi-recept-lang`),
+és közvetlenül is linkelhető: `index.html?lang=en`. Angolul jelenik meg
+a teljes felület és mind a 734 recept (cím, idő, pácolás, adag,
+hozzávalók, lépések). Ugyanígy a bevásárlólista, a „Mi van itthon?”
+kereső, a heti menü és az előre főzés is. A mennyiségek grammban és
+milliliterben szerepelnek (a dkg és a dl átszámolva), és az
+adagszám-átszámoló angolul is működik.
+
+- Az alap a magyar adat: a szűrés, a heti menü, a kedvencek és a címkék
+  mind a magyar receptből dolgoznak, az angol szöveg csak megjelenítés.
+  Ezért a kedvencek és a mentett menük nyelvváltás után is megmaradnak.
+- `i18n/en-ui.js`: a felület szövegei. A kulcs a magyar szöveg (`t("...")`
+  az `index.html`-ben; egyes szám: `"<kulcs>|1"`).
+- `i18n/en-recipes.js`: a receptek fordítása. A kulcs `<konyha>--<a magyar
+  cím slugja>`. A két fájl csak angol nyelv választásakor töltődik be, így
+  a magyar oldalt nem lassítja.
+- Ha egy receptnek nincs fordítása, vagy eltér a hozzávalók vagy a lépések
+  száma (például mert utólag módosult a magyar recept), az oldal a magyar
+  szöveget mutatja, egy „This recipe has not been translated yet”
+  megjegyzéssel. Ettől semmi nem romlik el.
+
+**Új recept vagy új felületi szöveg után** futtasd:
+
+    node tools/i18n-check.js
+
+A szkript kilistázza:
+
+- a fordítás nélküli recepteket,
+- az eltérő szerkezetű recepteket,
+- az árva fordításokat (ezek átnevezett magyar címre utalnak),
+- a hiányzó felületi szövegeket.
+
+Az új recept angol változatát az `i18n/en-recipes.js`-be kell felvenni.
+A hozzávalók és a lépések száma és sorrendje egyezzen a magyar recepttel.
+
 ## Futtatás helyben
 
     python3 -m http.server 8000
@@ -739,5 +777,7 @@ ugyanígy működik GitHub Pages-ről vagy bármilyen statikus tárhelyről.
 
     index.html                      a teljes alkalmazás — stílus, jelölés, recept-adatok és logika egy fájlban
     spoonacular-proxy-worker.js     opcionális Cloudflare Worker kód a megosztott API-proxyhoz (lásd "Megosztott API-proxy")
+    i18n/en-ui.js, en-recipes.js    az angol változat szövegei (lásd "Angol változat")
+    tools/i18n-check.js             az angol fordítás teljességének ellenőrzése (node tools/i18n-check.js)
     tools/kcal-estimate/            hozzávaló-alapú kalória-becslő szkript (node apply.js) — lásd "Kalóriaérték minden receptnél"
     README.md                       ez a leírás
