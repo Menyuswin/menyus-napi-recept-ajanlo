@@ -530,6 +530,24 @@ vissza — nincs localStorage-perzisztencia, mert ez tudatosan egy
 "ránézésre áttekintem, aztán rákattintok, ami kell" munkafolyamat, nem egy
 tartós beállítás.
 
+### Témás heti menük
+
+A „Heti menü” fülön a „Téma” lista (alapértelmezés: „Nincs téma”, ilyenkor a heti menü pontosan úgy készül, mint eddig) a hét egészét egy gyűjteményhez igazítja. A lista minden eleme mellett ott a témához illő étkezési receptek száma (csak a téma számít, a profil és a konyhák nem), pl. „Halas hét (122)”. A választás a böngészőben marad (`napi-recept-week-theme`), a témát a hét fejlécében és a nyomtatott menü címében is kiírjuk, a váltás újragenerálja a hetet. Minden szabály a recept adataiból számolódik, és a meglévő gombok szabályait használja újra.
+
+| Téma | Mely étkezésekre | Szabály |
+|---|---|---|
+| Halas hét | ebéd, vacsora | hal, tenger gyümölcse a hozzávalók között (a „hal” csoport szavai + garnéla, kagyló, tintahal…) |
+| Hüvelyes hét | ebéd, vacsora | bab, lencse, csicseriborsó, borsó, tofu, szója, tempeh, hummusz (szójaszósz nem számít) |
+| Gyors hét | mind | legfeljebb 30 perc (a „30 perces” gomb, a pácolás nem számít bele) |
+| Munkába vihető hét | ebéd | `lunchbox` jelölésű recept |
+| Hosszú életért hét | mind | `longevity` jelölésű recept |
+| Könnyű hét | mind | legfeljebb 450 kcal adagonként |
+| Magas fehérjetartalmú hét | ebéd, vacsora | `isHighProtein()` |
+| Egy fazékos hét | ebéd, vacsora | az „Egy fazékban / tepsiben” szabály |
+| Húsmentes hét (becsült) | mind | a „húsmentes” (becsült) szabály |
+
+**Tartalék szabály.** A téma csak előnyben részesítés, soha nem hiba. A menü először a már szűrt listából (érzékenység, időkorlát, konyhaszűrő) választ témához illő receptet; ha az adott konyhában nincs ilyen, az automatikus konyha helyett a következő engedélyezett konyhát veszi, ahol van. Kézzel választott konyhát nem cserélünk. Ha így sincs illő recept (például szűk konyhaszűrő és erős érzékenység mellett), a szokásos ajánlás marad, és a menü felett az áll, hogy „N étkezésnél nem találtunk a témához illő receptet”. Az érzékenységi és időkorlát-szabályokat a téma nem lazítja; a „hétköznap könnyű / ünnepnap különleges” és a „nem kell főzni” csak kívánság, ezeknél a téma az erősebb. Az „előre főzés” tervben a főzés napján a témához illő, több napig eltartható ételt keresi (ha nincs, téma nélkül folytatja); a maradék a főzés receptjét követi. Az élő (Spoonacular) konyhák ebédje és vacsorája nem témázható, ott a jelzés számol.
+
 ### Becsült tápérték a hétre
 
 A hét alatt (a „Bevásárlólista ehhez a héthez” gomb fölött) egy **Becsült

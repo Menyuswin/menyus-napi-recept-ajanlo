@@ -2,6 +2,19 @@
 // Új magyar felületi szövegnél ide kell felvenni az angolt is (a hiányzót a tools/i18n-check.js jelzi).
 // Egyes szám: "<kulcs>|1".
 window.I18N_EN_UI = {
+ "Téma": "Theme",
+ "Nincs téma": "No theme",
+ "Halas hét": "Fish week",
+ "Hüvelyes hét": "Legume week",
+ "Gyors hét": "Quick week",
+ "Munkába vihető hét": "Lunchbox week",
+ "Hosszú életért hét": "Long-life week",
+ "Könnyű hét": "Light week",
+ "Magas fehérjetartalmú hét": "High-protein week",
+ "Egy fazékos hét": "One-pot week",
+ "Húsmentes hét (becsült)": "Meatless week (estimated)",
+ "Téma: {name}": "Theme: {name}",
+ "{n} étkezésnél nem találtunk a témához illő receptet — ott a szokásos ajánlást látod.": "We found no recipe matching the theme for {n} meals — those show the usual suggestion.",
  "Munkába is vihető": "Lunchbox-friendly",
  "Hosszú életért (longevity)": "For a long life",
  "Hüvelyes, hal, zöldség, teljes kiőrlésű gabona, dió vagy olívaolaj; kevés feldolgozott és vörös hús, cukor, tejszín.": "Legumes, fish, vegetables, whole grains, nuts or olive oil; little processed or red meat, sugar or cream.",

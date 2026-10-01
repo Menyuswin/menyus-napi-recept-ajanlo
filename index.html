@@ -403,6 +403,8 @@
 
   .week-nav { display: flex; align-items: center; gap: 12px; margin: 16px 0 10px; flex-wrap: wrap; }
   .week-range { font-weight: 600; color: var(--ink-2); font-size: 14px; }
+  .week-theme-badge { font-size: 12.5px; font-weight: 600; color: var(--accent-2); border: 1px solid var(--accent-2); border-radius: 999px; padding: 2px 10px; }
+  .week-theme .cook-plan-household { margin-top: 0; }
   .week-grid { display: flex; flex-direction: column; gap: 16px; margin-top: 14px; }
   .week-day {
     background: var(--surface); border: 1px solid var(--line); border-radius: 8px;
@@ -912,6 +914,7 @@
     <div class="week-nav">
       <button type="button" class="small" id="weekPrevBtn">‹ Előző hét</button>
       <span class="week-range" id="weekRangeLabel">—</span>
+      <span class="week-theme-badge" id="weekThemeBadge" hidden></span>
       <button type="button" class="small" id="weekTodayBtn">Aktuális hét</button>
       <button type="button" class="small" id="weekNextBtn">Következő hét ›</button>
     </div>
@@ -919,6 +922,12 @@
       <span class="global-cuisine-label">Konyhák (több is kiválasztható):</span>
       <div class="global-cuisine-btns" id="globalCuisineBtnsWeek"></div>
     </div>
+    <section class="cook-plan week-theme no-print">
+      <label class="cook-plan-household">Téma
+        <select id="weekThemeSelect"></select>
+      </label>
+      <p class="allergen-note" id="weekThemeNote" hidden></p>
+    </section>
     <section class="cook-plan no-print" aria-labelledby="cookPlanTitle">
       <div class="cook-plan-head">
         <span class="global-cuisine-label" id="cookPlanTitle">Hány napra főzöl előre?</span>
@@ -1688,7 +1697,8 @@
     return list.slice().sort(function (a, b) { return cost(a) - cost(b); }).slice(0, n);
   }
 
-  function getCuratedPool(cuisineKey, slot, profile, dayType) {
+  // theme (nem kötelező): a heti menü témájának kulcsa; a találatot részesítjük előnyben, ha nincs, marad a tema nélküli lista (themeHit: false).
+  function getCuratedPool(cuisineKey, slot, profile, dayType, theme) {
     var pool = RECIPES[cuisineKey][slot];
     var filtered = pool;
 
@@ -1703,6 +1713,7 @@
       if (!filtered.length) return { pool: [], safetyEmpty: true };
     }
     var safePool = filtered;
+    var themeBase = null;
     if (hasInsulinResistance(profile)) {
       var bySlowCarb = filtered.filter(function (r) {
         var text = r.ingredients.join(" ").toLowerCase();
@@ -1710,6 +1721,7 @@
       });
       if (bySlowCarb.length) filtered = bySlowCarb;
     }
+    themeBase = filtered;
 
     if (dayType === "unnepnap") {
       var byFestive = filtered.filter(function (r) { return !r.easy; });
@@ -1728,7 +1740,18 @@
       var byNoCook = filtered.filter(function (r) { return r.noCook; });
       if (byNoCook.length) filtered = byNoCook;
     }
-    return { pool: filtered.length ? filtered : pool, safetyEmpty: false };
+    var themeHit = false;
+    if (theme && themeAppliesTo(theme, slot)) {
+      var themed = filtered.filter(function (r) { return themeMatches(theme, r); });
+      if (!themed.length) {
+        // a „könnyű nap” és a „nincs főzés” csak kívánság: a téma előbbre való, az idő- és érzékenységi szűrő marad
+        themed = themeBase.filter(function (r) {
+          return (!prefs.maxTime || fitsTimeLimit(r, prefs.maxTime)) && themeMatches(theme, r);
+        });
+      }
+      if (themed.length) { filtered = themed; themeHit = true; }
+    }
+    return { pool: filtered.length ? filtered : pool, safetyEmpty: false, themeHit: themeHit };
   }
 
   // ---------- live (Spoonacular + MyMemory) ----------
@@ -2230,6 +2253,66 @@
     lbhealthy: function (r) { return !!r.lunchbox && (!!r.longevity || (r.calories > 0 && r.calories <= 450)); },
     lbveg: function (r) { return !!r.lunchbox && isMeatlessEstimate(r); }
   };
+
+  // ---------- témás heti menü ----------
+
+  // Minden téma egy szabály a recept adataiból (nincs kézi jelölés): a meglévő gombok szabályait használja újra.
+  // A heti menü a témához illő receptet részesíti előnyben, és ha a konyhában nincs, a téma nélküli listához tér vissza.
+  var FISH_WORDS = PANTRY_BROADER["hal"].concat(["garnéla", "tenger gyümölcse", "kagyló", "tintahal", "szardella", "polip", "languszta", "kaviár", "szürimi", "szusi hal", "surimi", "fogas", "busa", "keszeg", "compó", "angolna", "tilápia", "tilapia", "szardínia", "szardinia", "szardellafilé", "pangasius", "sügér"]);
+  var FISH_RE = new RegExp("(^|[^a-z])(hal(?![lvm])|" + FISH_WORDS.map(function (w) { return foldText(w).replace(/ /g, "\\s"); }).join("|") + ")");
+  var LEGUME_WORDS = PANTRY_BROADER["hüvelyes"].concat(["csicseriborsó", "zöldborsó", "tofu", "tempeh", "hummusz"]);
+  var LEGUME_RE = new RegExp("(^|[^a-z])(" + LEGUME_WORDS.map(foldText).join("|") + "|bab(?!er|y)|(zold)?borso(?!s)|szoja(?!szosz)|csicseri|lencs)");
+  var themeTextCache = typeof Map === "function" ? new Map() : null;
+  function themeIngredientText(recipe) {
+    var c = themeTextCache && themeTextCache.get(recipe);
+    if (c) return c;
+    c = foldText(recipe.ingredients.join(" | "));
+    if (themeTextCache) themeTextCache.set(recipe, c);
+    return c;
+  }
+  var ALL_MEAL_SLOTS = ["breakfast", "lunch", "dinner"];
+  var LD_SLOTS = ["lunch", "dinner"];
+  var WEEK_THEMES = [
+    { key: "fish", label: t("Halas hét"), slots: LD_SLOTS, test: function (r) { return FISH_RE.test(themeIngredientText(r)); } },
+    { key: "legume", label: t("Hüvelyes hét"), slots: LD_SLOTS, test: function (r) { return LEGUME_RE.test(themeIngredientText(r)); } },
+    { key: "quick", label: t("Gyors hét"), slots: ALL_MEAL_SLOTS, test: function (r) { return QUICK_TAGS.t30(r); } },
+    { key: "lunchbox", label: t("Munkába vihető hét"), slots: ["lunch"], test: function (r) { return !!r.lunchbox; } },
+    { key: "longevity", label: t("Hosszú életért hét"), slots: ALL_MEAL_SLOTS, test: function (r) { return !!r.longevity; } },
+    { key: "light", label: t("Könnyű hét"), slots: ALL_MEAL_SLOTS, test: function (r) { return Number(r.calories) > 0 && Number(r.calories) <= HP_LIGHT_KCAL; } },
+    { key: "highprotein", label: t("Magas fehérjetartalmú hét"), slots: LD_SLOTS, test: function (r) { return isHighProtein(r); } },
+    { key: "onepot", label: t("Egy fazékos hét"), slots: LD_SLOTS, test: function (r) { return isOnePot(r); } },
+    { key: "meatless", label: t("Húsmentes hét (becsült)"), slots: ALL_MEAL_SLOTS, test: function (r) { return isMeatlessEstimate(r); } }
+  ];
+
+  function findWeekTheme(key) {
+    for (var i = 0; i < WEEK_THEMES.length; i++) if (WEEK_THEMES[i].key === key) return WEEK_THEMES[i];
+    return null;
+  }
+  function themeAppliesTo(key, slot) {
+    var th = findWeekTheme(key);
+    return !!th && th.slots.indexOf(slot) !== -1;
+  }
+  function themeMatches(key, recipe) {
+    var th = findWeekTheme(key);
+    return !!th && th.test(recipe);
+  }
+
+  // Hány étkezési recept illik a témához (csak a téma számít, a profil, idő és konyha nem): egyszer számoljuk.
+  var themeCountCache = null;
+  function themeCounts() {
+    if (themeCountCache) return themeCountCache;
+    themeCountCache = {};
+    WEEK_THEMES.forEach(function (th) {
+      var n = 0;
+      Object.keys(RECIPES).forEach(function (ck) {
+        th.slots.forEach(function (slot) {
+          (RECIPES[ck][slot] || []).forEach(function (r) { if (th.test(r)) n++; });
+        });
+      });
+      themeCountCache[th.key] = n;
+    });
+    return themeCountCache;
+  }
 
   function searchPantry(query, slot, profile, tag) {
     var terms = query.split(LANG === "en" ? /[,;\n]+|\s+and\s+/ : /[,;\n]+|\s+és\s+/).map(function (t) { return t.trim(); }).filter(function (t) { return t.length >= 2; });
@@ -3406,8 +3489,33 @@
   function effectiveCuisineForDate(date, meal) {
     var overrides = getWeeklyCuisineOverrides();
     var overridden = overrides[dateKey(date) + ":" + meal.slot] && findCuisine(overrides[dateKey(date) + ":" + meal.slot]);
-    return overridden || cuisineForMeal(meal, dayOfYear(date));
+    if (overridden) return overridden;
+    var auto = cuisineForMeal(meal, dayOfYear(date));
+    if (!weekTheme || !themeAppliesTo(weekTheme, meal.slot)) return auto;
+    // téma esetén az automatikus konyha helyett az első (a konyhaszűrőnek megfelelő) konyha, amelyikben van illő recept
+    var profile = getSelectedProfile(), dayType = dayTypeFor(date);
+    var hasHit = function (c) { return isCuratedFor(c, meal.slot) && getCuratedPool(c.key, meal.slot, profile, dayType, weekTheme).themeHit; };
+    if (hasHit(auto)) return auto;
+    var allowed = getAllowedCuisines(), from = allowed.indexOf(auto);
+    for (var k = 1; k < allowed.length; k++) {
+      var c = allowed[(from + k) % allowed.length];
+      if (hasHit(c)) return c;
+    }
+    return auto;
   }
+
+  var WEEK_THEME_STORAGE = "napi-recept-week-theme";
+  function loadWeekTheme() {
+    try {
+      var k = localStorage.getItem(WEEK_THEME_STORAGE);
+      if (k && findWeekTheme(k)) return k;
+    } catch (e) {}
+    return "";
+  }
+  function saveWeekTheme(k) {
+    try { if (k) localStorage.setItem(WEEK_THEME_STORAGE, k); else localStorage.removeItem(WEEK_THEME_STORAGE); } catch (e) {}
+  }
+  var weekTheme = "";
 
   var WEEK_START_STORAGE = "napi-recept-week-start";
   var currentWeekMonday = null;
@@ -3452,6 +3560,21 @@
     hh.value = String(getHousehold());
     hh.addEventListener("change", function () {
       saveHousehold(parseInt(hh.value, 10) || 0);
+      renderWeek();
+    });
+    weekTheme = loadWeekTheme();
+    var ts = document.getElementById("weekThemeSelect");
+    var counts = themeCounts();
+    var tNone = document.createElement("option"); tNone.value = ""; tNone.textContent = t("Nincs téma");
+    ts.appendChild(tNone);
+    WEEK_THEMES.forEach(function (th) {
+      var o = document.createElement("option"); o.value = th.key; o.textContent = /\)$/.test(th.label) ? th.label.replace(/\)$/, ", " + counts[th.key] + ")") : th.label + " (" + counts[th.key] + ")";
+      ts.appendChild(o);
+    });
+    ts.value = weekTheme;
+    ts.addEventListener("change", function () {
+      weekTheme = findWeekTheme(ts.value) ? ts.value : "";
+      saveWeekTheme(weekTheme);
       renderWeek();
     });
     document.getElementById("weekPrevBtn").addEventListener("click", function () {
@@ -3579,15 +3702,23 @@
   }
 
   function batchPool(cuisineKey, slot, profile, dayType) {
-    var res = getCuratedPool(cuisineKey, slot, profile, dayType);
+    var res = getCuratedPool(cuisineKey, slot, profile, dayType, weekTheme);
     if (res.safetyEmpty) return res;
+    var hit = !!res.themeHit;
     var good = res.pool.filter(keepsWell);
     if (good.length < 2) {
-      var wide = getCuratedPool(cuisineKey, slot, profile, "");
+      var wide = getCuratedPool(cuisineKey, slot, profile, "", weekTheme);
       var wideGood = wide.safetyEmpty ? [] : wide.pool.filter(keepsWell);
-      if (wideGood.length > good.length) good = wideGood;
+      if (wideGood.length > good.length) { good = wideGood; hit = !!wide.themeHit; }
     }
-    return { pool: good, safetyEmpty: false };
+    if (!good.length && hit) {
+      // a témához illő receptek közt nincs több napig eltartható: téma nélkül
+      var plain = getCuratedPool(cuisineKey, slot, profile, dayType);
+      good = plain.pool.filter(keepsWell);
+      hit = false;
+    }
+    if (hit) hit = good.some(function (r) { return themeMatches(weekTheme, r); });
+    return { pool: good, safetyEmpty: false, themeHit: hit };
   }
 
   // Ha a nap automatikus konyhájában kevés az eltartható étel (pl. japán),
@@ -3599,8 +3730,20 @@
     var auto = effectiveCuisineForDate(date, meal);
     if (chosen) return { cuisine: chosen, replaced: null };
     if (!isCuratedFor(auto, meal.slot)) return { cuisine: auto, replaced: null };
-    if (batchPool(auto.key, meal.slot, profile, dayType).pool.length >= 2) return { cuisine: auto, replaced: null };
+    var themed = !!weekTheme && themeAppliesTo(weekTheme, meal.slot);
+    var ap = batchPool(auto.key, meal.slot, profile, dayType);
+    if (ap.pool.length >= 2 && (!themed || ap.themeHit)) return { cuisine: auto, replaced: null };
     var from = CUISINES.indexOf(auto);
+    if (themed) {
+      // téma esetén előbb olyan konyhát keresünk, ahol van a témához illő, több napig eltartható étel
+      for (var j = 1; j < CUISINES.length; j++) {
+        var cj = CUISINES[(from + j) % CUISINES.length];
+        if (!isCuratedFor(cj, meal.slot)) continue;
+        var pj = batchPool(cj.key, meal.slot, profile, dayType);
+        if (pj.pool.length >= 1 && pj.themeHit && getAllowedCuisines().indexOf(cj) !== -1) return { cuisine: cj, replaced: ap.pool.length >= 2 ? null : auto };
+      }
+      if (ap.pool.length >= 2) return { cuisine: auto, replaced: null };
+    }
     for (var k = 1; k < CUISINES.length; k++) {
       var c = CUISINES[(from + k) % CUISINES.length];
       if (isCuratedFor(c, meal.slot) && batchPool(c.key, meal.slot, profile, dayType).pool.length >= 2) return { cuisine: c, replaced: auto };
@@ -3669,7 +3812,7 @@
 
     var res = batchPool(cuisine.key, meal.slot, profile, dayType);
     if (res.safetyEmpty || !res.pool.length) {
-      res = getCuratedPool(cuisine.key, meal.slot, profile, dayType);
+      res = getCuratedPool(cuisine.key, meal.slot, profile, dayType, weekTheme);
       if (res.safetyEmpty) {
         renderMessageInto(body, "state-empty", t("A megadott érzékenység miatt erre a napra nincs biztonságos ajánlat ebből a konyhából."));
         refreshLeftovers(dateKey(date), meal.slot);
@@ -3789,7 +3932,7 @@
     delete weekRecipeStore[shuffleKey];
 
     if (isCuratedFor(cuisine, meal.slot)) {
-      var res = getCuratedPool(cuisine.key, meal.slot, profile, dayType);
+      var res = getCuratedPool(cuisine.key, meal.slot, profile, dayType, weekTheme);
       if (res.safetyEmpty) {
         renderMessageInto(body, "state-empty", t("A megadott érzékenység miatt erre a napra nincs biztonságos ajánlat ebből a konyhából."));
         scheduleWeekOverview();
@@ -4028,6 +4171,24 @@
       wrap.appendChild(row);
     });
     renderWeekNutrition();
+    updateWeekThemeUI();
+  }
+
+  // A téma neve a hét fejlécében, és hány étkezésnél nem volt illő recept (a mutatott receptek alapján, a maradék is számít).
+  function updateWeekThemeUI() {
+    var badge = document.getElementById("weekThemeBadge"), note = document.getElementById("weekThemeNote");
+    var th = weekTheme ? findWeekTheme(weekTheme) : null;
+    if (!th) { badge.hidden = true; badge.textContent = ""; note.hidden = true; note.textContent = ""; return; }
+    badge.hidden = false; badge.textContent = t("Téma: {name}", { name: th.label });
+    var miss = 0;
+    currentWeekDays.forEach(function (date) {
+      th.slots.forEach(function (slot) {
+        var entry = weekRecipeStore[dateKey(date) + ":" + slot];
+        if (entry && !th.test(entry.recipe)) miss++;
+      });
+    });
+    note.hidden = !miss;
+    note.textContent = miss ? t("{n} étkezésnél nem találtunk a témához illő receptet — ott a szokásos ajánlást látod.", { n: miss }) : "";
   }
 
   // Becsült tápérték: a napi étkezések adagonkénti kalóriája (egy főre). Az
@@ -4459,7 +4620,7 @@
   function printWeek() {
     ensureWeekRendered();
     refreshShoppingPanel();
-    document.getElementById("printWeekTitle").textContent = t("Heti menü · ") + document.getElementById("weekRangeLabel").textContent;
+    document.getElementById("printWeekTitle").textContent = t("Heti menü · ") + document.getElementById("weekRangeLabel").textContent + (weekTheme && findWeekTheme(weekTheme) ? " · " + findWeekTheme(weekTheme).label : "");
     document.body.classList.add("print-week");
     window.print();
   }
