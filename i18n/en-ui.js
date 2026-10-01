@@ -559,7 +559,31 @@ window.I18N_EN_UI = {
  "kb. 140 g": "approx. 140 g",
  "kb. 335 g": "approx. 335 g",
  "kb. 90 g": "approx. 90 g",
- "kb. 220 g": "approx. 220 g"
+ "kb. 220 g": "approx. 220 g",
+ "Becsült, általános útmutatás, nem élelmiszer-biztonsági garancia.": "Estimated general guidance, not a food-safety guarantee.",
+ "fagyasztóban": "in the freezer",
+ "Hűtsd le, adagold, jelöld meg a dátummal. Olvaszd fel a hűtőben, majd mikróban vagy lábasban melegítsd át; ne fagyaszd újra.": "Cool it, portion it and label it with the date. Thaw it in the fridge, then reheat it in the microwave or in a pot; do not refreeze.",
+ "Fagyasztható": "Freezable",
+ "Fagyasztás": "Freezing",
+ "A főtt ételt hűtsd le gyorsan, és adagold.": "Cool cooked food quickly and portion it.",
+ "Egy-két órán belül tedd át lapos dobozba vagy zacskóba, és fagyaszd egy-egy étkezésnyi adagokban, így gyorsabban lehűl, és csak annyit olvasztasz fel, amennyi kell.": "Within an hour or two, move it to a flat container or bag and freeze it in single-meal portions: it cools faster, and you thaw only what you need.",
+ "Írd rá a dátumot és az étel nevét.": "Write the date and the name of the dish on it.",
+ "A „Fagyasztható” címke és a kártyán látható tárolási idő becsült, általános útmutatás; a fagyasztó hőfokától és a csomagolástól függően rövidebb is lehet, és nem élelmiszer-biztonsági vagy orvosi garancia.": "The \"Freezable\" tag and the storage time on the card are estimated, general guidance; depending on your freezer temperature and packaging they can be shorter, and they are not a food-safety or medical guarantee.",
+ "Olvaszd fel a hűtőben, és csak egyszer melegítsd át.": "Thaw it in the fridge and reheat it only once.",
+ "Az étel legyen végig átforrósodva; a felolvasztott ételt ne fagyaszd vissza. A nyers húst sem fagyaszd vissza felolvasztás után, csak ha közben megfőzted.": "Heat it until it is hot all the way through; do not refreeze thawed food. Do not refreeze thawed raw meat either, unless you have cooked it in between.",
+ "Fagyasztóban jól eltartható étel (becsült, általános útmutatás): leves, ragu, fasírt, sütemény, pite, palacsinta, főtt rizs vagy tészta.": "Keeps well in the freezer (estimated, general guidance): soup, stew, meatballs, baked goods, pie, pancakes, cooked rice or pasta.",
+ "Gombóc, derelye, töltött tészta": "Dumplings, filled pasta",
+ "Fasírt, húsgolyó": "Meatballs, patties",
+ "Leves, krémleves": "Soup, cream soup",
+ "Palacsinta, lepény": "Pancakes, flatbread",
+ "Pite, quiche": "Pie, quiche",
+ "Sütemény, muffin, kenyér, szelet": "Cake, muffins, bread, bars",
+ "Főtt rizs, tészta": "Cooked rice, pasta",
+ "Ragu, főzelék, curry": "Stew, vegetable stew, curry",
+ "kb. 3 hónapig": "for about 3 months",
+ "kb. 2-3 hónapig": "for about 2-3 months",
+ "kb. 2 hónapig": "for about 2 months",
+ "kb. 1-2 hónapig": "for about 1-2 months"
 };
 
 window.I18N_EN_SHOWCASE = [

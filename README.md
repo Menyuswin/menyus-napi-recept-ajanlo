@@ -66,6 +66,30 @@ be a `RECIPES` soron (`JSON.stringify`-jal). Jelenleg 178 receptet jelöl
 (az összes 1370 közül), konyhánként 10-28-at; ebből 36-ot kifejezetten ehhez a
 címkéhez írtunk (hüvelyes, hal, zöldség, teljes kiőrlésű gabona).
 
+### „Fagyasztható jelzés”
+
+Egy szabály alapján megjelölt receptek (`freezable: true`, 400 recept a 1370-ből), a kártyán „Fagyasztható”
+címkével, a kereső „Ötletek” sorában „Fagyasztható (N)” gombbal. A címke tooltipje a
+tárolási időt és az olvasztási tippet mutatja; mindez **becsült, általános útmutatás**, nem
+élelmiszer-biztonsági garancia. A receptek szövegét nem írtuk át, csak megjelöltük a megfelelőket.
+A „Hasznos tanácsok” fülön a „Fagyasztás” blokk a biztonságos fagyasztásról szól.
+
+A szabály (konzervatív; a kizáró szó mindig erősebb):
+
+- **Típus a címből.** Fagyasztható: leves és krémleves, pörkölt/ragu/főzelék/curry/chili/dal, töltött
+  káposzta és paprika, fasírt/húsgolyó/húspogácsa, gombóc/derelye/pierogi/gnocchi, palacsinta és
+  lepény, pite/quiche/rétes/pizza/burrito, sütemény/muffin/keksz/kenyér/szelet, főtt rizs és rakott tészta.
+- **Kizárás a címben:** saláta, nyers, puding/mousse/zselé/krémes, rántott, rántotta/omlett, tejleves,
+  hideg étel, szendvics/wrap, fánk/lángos. **Kizárás a címben, hozzávalóban vagy lépésben:**
+  majonéz, tejszínhab/habtejszín/mascarpone/zselatin, friss saláta/avokádó/rukkola, tükörtojás és
+  lágy tojás, ropogós, bő olajban sült, panírozott.
+- **Egyéb kizárás:** hal és tenger gyümölcse; tésztás vagy gombócos leves (megázik); burgonya a levesben,
+  raguban és rakottban (kivéve a krémlevest); tejfölös/joghurtos étel (a sütemény kivételével); tojásos leves/ragu/rizs.
+- Aránya: 29 %. A tárolási szöveg a cím alapján készül az `index.html`-ben (`FREEZE_KINDS`): leves, ragu,
+  gombóc kb. 3 hónap; fasírt és sütemény kb. 2-3 hónap; pite, quiche, palacsinta kb. 2 hónap;
+  főtt rizs és tészta kb. 1-2 hónap. Mindenhol: lehűtve, adagolva, dátummal; felolvasztás a hűtőben;
+  ne fagyaszd újra. Új receptnél a szerkesztő állítja be a szabály szerint.
+
 ### „Könnyű sütik” fül
 
 Külön menüpont 200 egészségesebb édességgel, konyhánként 20-20 recepttel
@@ -899,6 +923,8 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
 - `longevity` — nem kötelező; `true`, ha a recept megfelel a „Hosszú életért”
   szabálynak (lásd fent): „Hosszú életért” címke és szűrő. Új receptnél a
   szerkesztő állítja be a szabály szerint.
+- `freezable` — nem kötelező; `true`, ha a recept a „Fagyasztható jelzés” szabálya szerint jól
+  fagyasztható („Fagyasztható” címke és szűrő; a tárolási idő a címből számolódik).
 - `source` — nem kötelező; csak szabad licencű forrásból átdolgozott
   receptnél: `{"name": "Wikibooks Cookbook", "title": "<eredeti cím>",
   "url": "<eredeti oldal>", "license": "CC BY-SA 4.0"}`. A kártyán a
