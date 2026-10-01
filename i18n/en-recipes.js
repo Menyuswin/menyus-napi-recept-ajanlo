@@ -462,6 +462,28 @@ window.I18N_EN_RECIPES = {
    "Serve warm, dusted with icing sugar."
   ]
  },
+ "polish--kefires-hajdinakasa-gyumolccsel-es-dioval": {
+  "title": "Buckwheat with kefir, fruit and walnuts",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "100 g buckwheat",
+   "200 ml water",
+   "300 ml kefir",
+   "1 apple, diced",
+   "100 g blueberries or raspberries",
+   "40 g walnuts, chopped",
+   "1 tsp cinnamon",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Rinse the buckwheat, bring it to the boil with the water and a pinch of salt, then cook under a lid for 12-15 minutes until the water is absorbed.",
+   "Let it cool slightly.",
+   "Divide between two bowls and pour the kefir over.",
+   "Top with the apple, berries and walnuts and dust with cinnamon.",
+   "Cooked buckwheat keeps 3 days in the fridge, so in the morning you only need to assemble the bowl."
+  ]
+ },
  "polish--savanyu-rozsleves-kolbasszal": {
   "title": "Sour rye soup with sausage (żurek)",
   "time": "1 hr 15 min",
@@ -1254,6 +1276,55 @@ window.I18N_EN_RECIPES = {
    "Drain the fritters on kitchen paper; it keeps 2-3 days in a box; it heats through in the microwave in 1-2 minutes and is good cold too."
   ]
  },
+ "polish--barszcz-feher-babbal-lengyel-ceklaleves": {
+  "title": "Barszcz with white beans (Polish beetroot soup)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g beetroot, peeled and diced",
+   "1 tin (400 g) white beans, rinsed",
+   "1 onion, finely chopped",
+   "2 carrots, sliced",
+   "1 parsley root",
+   "2 tbsp olive oil",
+   "1 litre vegetable stock",
+   "2 tbsp apple cider vinegar",
+   "2 cloves garlic",
+   "1 bunch dill",
+   "marjoram, salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion, carrots and parsley root in the olive oil for 5 minutes.",
+   "Add the diced beetroot, pour in the stock and cook for 25 minutes.",
+   "Add the garlic, marjoram and beans and cook for another 10 minutes.",
+   "Season with the vinegar, salt and pepper.",
+   "Serve with fresh dill; it keeps 4 days in the fridge and tastes even better the next day."
+  ]
+ },
+ "polish--arpakasa-sult-zoldsegekkel": {
+  "title": "Pearl barley with roasted vegetables",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g pearl barley",
+   "600 ml water",
+   "3 carrots, diced",
+   "2 parsnips, diced",
+   "1 beetroot, diced",
+   "1 onion, cut into wedges",
+   "3 tbsp olive oil",
+   "1 tsp dried thyme",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Heat the oven to 210 °C.",
+   "Toss the vegetables on a tray with 2 tbsp olive oil, thyme, salt and pepper and roast for 35 minutes, stirring halfway.",
+   "Meanwhile rinse the barley and cook it in the water with a pinch of salt for 30 minutes until tender, then drain.",
+   "Fold the barley together with the roasted vegetables and the remaining oil.",
+   "Sprinkle with parsley and serve; in a box it keeps 4 days and is good cold too."
+  ]
+ },
  "polish--rantott-sertesszelet-lengyel-modra": {
   "title": "Polish breaded pork cutlets (kotlet schabowy)",
   "time": "40 min",
@@ -2035,6 +2106,28 @@ window.I18N_EN_RECIPES = {
    "Soften the onions in the same fat and put on top of the meat with the bay leaves and allspice; pour in the water.",
    "Braise covered over low heat for 45-50 minutes until tender; finally stir in the mustard and sour cream if you like.",
    "Serve with potatoes or buckwheat; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--sult-hering-hagymaval-es-citrommal-sledz-pieczony": {
+  "title": "Baked herring with onions and lemon (śledź pieczony)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 fresh herring fillets (about 600 g)",
+   "3 onions, sliced into rings",
+   "3 tbsp olive oil",
+   "1 lemon",
+   "2 tbsp wholemeal breadcrumbs",
+   "1 bunch dill",
+   "1 carrot, thinly sliced",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Heat the oven to 200 °C.",
+   "Soften the onions and carrot in 2 tbsp olive oil for 8 minutes and season with salt.",
+   "Season the herring fillets with salt and pepper and sprinkle with lemon juice.",
+   "Spread half of the onion mixture in a baking dish, lay the fillets on top and cover with the rest of the onions.",
+   "Sprinkle with the breadcrumbs, drizzle with the remaining oil and bake for 15 minutes; serve with dill and boiled potatoes."
   ]
  },
  "polish--sernik-light-konnyu-sult-turotorta-skyrrel": {
@@ -3824,6 +3917,32 @@ window.I18N_EN_RECIPES = {
    "Serve with pasta or polenta; it keeps 2 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "southslavic--vegan-pasulj-husmentes-balkani-bableves": {
+  "title": "Vegan pasulj (meat-free Balkan bean stew)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (2 × 400 g) white beans, rinsed",
+   "3 tbsp olive oil",
+   "2 onions, finely chopped",
+   "2 carrots, sliced",
+   "1 pepper, diced",
+   "3 cloves garlic",
+   "2 tbsp tomato purée",
+   "1 tbsp sweet paprika",
+   "2 bay leaves",
+   "1 tsp smoked paprika",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Fry the onions in the olive oil until glossy, add the carrots and pepper and cook for 6 minutes.",
+   "Stir in the garlic and tomato purée, then take off the heat and stir in the sweet paprika.",
+   "Add the beans, bay leaves and smoked paprika and pour in 800 ml water.",
+   "Simmer uncovered for 25 minutes so the stew thickens; mash some of the beans.",
+   "Season with salt and pepper and serve with parsley; it keeps 4 days and reheats well in the microwave."
+  ]
+ },
  "southslavic--balkani-fuszeres-huspogacsa-hagymaval-pljeskavica": {
   "title": "Balkan spiced meat patty with onion (pljeskavica)",
   "time": "1 hr (+ resting)",
@@ -4696,6 +4815,29 @@ window.I18N_EN_RECIPES = {
    "Stuff the onions and stand them in a saucepan; scatter the rest of the chopped onion between them.",
    "Mix the tomato purée with 500 ml water and the oil, pour over and simmer covered over low heat for 45-50 minutes.",
    "Serve with yogurt; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--kovaszos-uborkas-sargaborso-salata": {
+  "title": "Yellow split pea salad with pickled cucumbers",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g dried yellow split peas",
+   "3 fermented pickled cucumbers, diced",
+   "1 pepper, diced",
+   "1 red onion, thinly sliced",
+   "3 tbsp olive oil",
+   "2 tbsp apple cider vinegar",
+   "1 bunch parsley",
+   "1 tsp mustard",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Rinse the split peas and cook them in plenty of salted water for 30-35 minutes until tender but not mushy, then drain and cool.",
+   "Whisk the oil with the vinegar, mustard, salt and pepper until creamy.",
+   "Fold the cooled peas together with the cucumbers, pepper and onion.",
+   "Pour over the dressing and leave for 10 minutes.",
+   "Sprinkle with parsley and serve cold; it keeps 3 days in the fridge."
   ]
  },
  "southslavic--tikvenik-light-sutotokos-dios-reteslepeny-keves-cukorral": {
@@ -6185,6 +6327,27 @@ window.I18N_EN_RECIPES = {
    "Take a piece of dough smaller than a tennis ball and flatten it by hand (not with a rolling pin), turning it, into a disc about 20 cm across, thin in the middle and thicker at the edge.",
    "Slide it carefully into the oil, fry for about 30 seconds until it puffs, flip and fry both sides golden.",
    "Drain and serve with garlic water, sour cream and grated cheese."
+  ]
+ },
+ "hungarian--zabkasa-turoval-es-dioval": {
+  "title": "Oatmeal with quark and walnuts",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "80 g rolled oats",
+   "300 ml water or milk",
+   "200 g semi-skimmed quark",
+   "60 g walnuts, roughly chopped",
+   "1 apple, grated",
+   "1 tsp cinnamon",
+   "1 tsp honey",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Cook the oats with the water and a pinch of salt for 5-6 minutes until creamy.",
+   "Divide between two bowls and crumble the quark over the top with a fork.",
+   "Mix the grated apple with the cinnamon and spoon it onto the oatmeal.",
+   "Sprinkle with the walnuts and drizzle with the honey; the oatmeal can be made the evening before and eaten cold or reheated."
   ]
  },
  "hungarian--gulyasleves": {
@@ -8282,6 +8445,104 @@ window.I18N_EN_RECIPES = {
    "It keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
   ]
  },
+ "hungarian--lencsefozelek-tojassal-es-uborkaval": {
+  "title": "Lentil stew with eggs and pickles",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g brown lentils",
+   "2 carrots, diced",
+   "1 parsley root, diced",
+   "2 tbsp olive oil",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "1 tbsp wholemeal flour",
+   "1 tsp paprika",
+   "2 tbsp apple cider vinegar",
+   "4 eggs",
+   "4 fermented pickled cucumbers",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Rinse the lentils and simmer them with the carrots and parsley root in 1 litre of salted water for 25-30 minutes until tender.",
+   "Fry the onion and garlic in the olive oil until glossy, stir in the flour, take off the heat, add the paprika and quickly loosen with a ladle of cooking liquid.",
+   "Stir this roux into the lentils, cook together for 5 minutes, and season with vinegar and pepper.",
+   "Boil the eggs for 8 minutes until hard, peel and halve them.",
+   "Serve the stew with the eggs and sliced pickles; in a sealed box it keeps 4 days, reheat in the microwave with a few spoonfuls of water."
+  ]
+ },
+ "hungarian--zoldseges-bableves-zellerrel-husmentes": {
+  "title": "Vegetable bean soup with celeriac (meat-free)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (2 × 400 g) white beans, rinsed",
+   "2 tbsp olive oil",
+   "1 onion, finely chopped",
+   "3 carrots, sliced",
+   "½ celeriac, diced",
+   "1 parsley root, diced",
+   "2 cloves garlic",
+   "1 tbsp paprika",
+   "1 tomato, diced",
+   "2 bay leaves",
+   "salt, pepper",
+   "fresh parsley to serve"
+  ],
+  "steps": [
+   "Fry the onion in the olive oil until glossy, then take off the heat and stir in the paprika.",
+   "Add the carrots, celeriac, parsley root, garlic and tomato and cook gently for 5 minutes.",
+   "Pour in 1.5 litres of water, add the bay leaves and cook for 20 minutes.",
+   "Add the rinsed beans and cook for another 15 minutes; mash about half of them with a fork to thicken the soup.",
+   "Season with salt and pepper and serve with parsley; it keeps 4 days in the fridge and reheats well in the microwave."
+  ]
+ },
+ "hungarian--tokmagos-sargarepas-kremleves": {
+  "title": "Carrot soup with pumpkin seeds",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "800 g carrots, sliced",
+   "1 onion, finely chopped",
+   "2 tbsp olive oil",
+   "1 potato, diced",
+   "1 piece ginger (2 cm), grated",
+   "800 ml vegetable stock or water",
+   "80 g pumpkin seeds",
+   "1 lemon, juiced",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion and ginger in the olive oil for 3 minutes.",
+   "Add the carrots and potato, stir for 5 minutes, then pour in the stock.",
+   "Cook until tender, about 20 minutes, then blend smooth with a stick blender.",
+   "Toast half of the pumpkin seeds in a dry pan until fragrant and blend the other half into the soup.",
+   "Season with lemon juice, salt and pepper and serve with the toasted seeds; it keeps 4 days in the fridge."
+  ]
+ },
+ "hungarian--rozmaringos-sult-harcsafile-parolt-zoldsegekkel": {
+  "title": "Rosemary pan-fried catfish with steamed vegetables",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g catfish fillet, cut into 4 pieces",
+   "1 lemon",
+   "3 tbsp olive oil",
+   "2 courgettes, sliced",
+   "2 carrots, cut into sticks",
+   "200 g broccoli, in florets",
+   "2 cloves garlic",
+   "2 sprigs rosemary",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Season the fish with salt and pepper and sprinkle with the juice of half the lemon.",
+   "Fry the fish in 1 tbsp olive oil for 4 minutes per side with the rosemary and crushed garlic, then set aside.",
+   "In the same pan, fry the carrots in the remaining oil for 3 minutes.",
+   "Add the courgettes and broccoli, pour in 3 tbsp water and steam under a lid for 6-7 minutes.",
+   "Season with salt, lay the fish on the vegetables and serve with lemon slices."
+  ]
+ },
  "hungarian--lecso-kolbasszal": {
   "title": "Lecsó with sausage",
   "time": "40 min",
@@ -9999,6 +10260,54 @@ window.I18N_EN_RECIPES = {
    "Toss the potatoes and onions with half the spiced oil and spread in a roasting tin.",
    "Rub the chicken with the rest of the spiced oil and lay it on the potatoes.",
    "Roast for 50-60 minutes until the chicken skin is crisp and the potatoes are tender; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--sult-ponty-zoldsegagyon": {
+  "title": "Baked carp on a bed of vegetables",
+  "time": "55 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 carp (about 1.2 kg), cleaned and cut into 4 steaks",
+   "1 lemon, juiced",
+   "3 tbsp olive oil",
+   "3 peppers, cut into strips",
+   "3 tomatoes, sliced",
+   "2 onions, sliced into rings",
+   "3 cloves garlic",
+   "1 tsp paprika",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Salt the carp steaks, sprinkle with lemon juice and leave for 10 minutes.",
+   "Heat the oven to 200 °C.",
+   "Grease a baking tray with olive oil, fill it with the onions, peppers, tomatoes and garlic, and season with salt and pepper.",
+   "Lay the fish steaks on the vegetables, dust with paprika and drizzle with the remaining oil.",
+   "Bake for 30-35 minutes until the flesh flakes easily from the bones; scatter with parsley and serve with bread or boiled potatoes."
+  ]
+ },
+ "hungarian--savanyu-kaposztas-babos-tal-olivaolajjal": {
+  "title": "Sauerkraut and bean bowl with olive oil",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (2 × 400 g) white beans, rinsed",
+   "500 g sauerkraut, squeezed out",
+   "2 tbsp olive oil",
+   "1 onion, finely chopped",
+   "2 carrots, grated",
+   "2 cloves garlic",
+   "1 tsp paprika",
+   "1 tsp caraway seeds",
+   "1 bunch dill",
+   "pepper"
+  ],
+  "steps": [
+   "Soften the onion with the caraway seeds in the olive oil for 4 minutes.",
+   "Add the garlic, then take off the heat and stir in the paprika.",
+   "Fold in the sauerkraut and carrots and cook for 10 minutes, adding a little water if needed.",
+   "Stir in the beans and heat for another 8 minutes.",
+   "Season with pepper and sprinkle with fresh dill; good hot or cold, and it keeps 4 days in a box."
   ]
  },
  "hungarian--fitt-zabpelyhes-turos-pite-konnyitett-rakoczi-turos": {
@@ -11991,6 +12300,29 @@ window.I18N_EN_RECIPES = {
    "Add the tomatoes and herbs, return the chicken and simmer covered for 25 minutes.",
    "Add the olives and cook uncovered for 5 more minutes.",
    "Serve with rice or pasta; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--cabillaud-en-papillote-tokehal-pergamenben-citromos-zoldsegekkel": {
+  "title": "Cabillaud en papillote (cod parcels with lemony vegetables)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g cod fillet, cut into 4 pieces",
+   "2 courgettes, thinly sliced",
+   "2 carrots, cut into thin sticks",
+   "15 cherry tomatoes, halved",
+   "1 lemon, sliced",
+   "3 tbsp olive oil",
+   "4 sprigs thyme",
+   "2 cloves garlic",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Heat the oven to 200 °C and cut four large sheets of baking paper.",
+   "On the middle of each sheet make a bed of courgette, carrot and tomato.",
+   "Lay a seasoned piece of cod on top with lemon slices, thyme and sliced garlic, and drizzle with olive oil.",
+   "Fold the paper tightly into parcels.",
+   "Bake for 18-20 minutes; open the parcels at the table."
   ]
  },
  "french--salade-lyonnaise-feldelos-salata-bacon-nal-es-buggyantott-tojassal": {
@@ -14474,6 +14806,56 @@ window.I18N_EN_RECIPES = {
    "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "french--ratatouille-csicseriborsoval": {
+  "title": "Ratatouille with chickpeas",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 aubergine, diced",
+   "2 courgettes, diced",
+   "2 peppers, diced",
+   "1 onion, finely chopped",
+   "4 tomatoes, diced",
+   "1 tin (400 g) chickpeas, rinsed",
+   "4 tbsp olive oil",
+   "3 cloves garlic",
+   "1 tbsp herbes de Provence",
+   "fresh basil",
+   "salt, pepper"
+  ],
+  "steps": [
+   "In a large pot brown the aubergine in 2 tbsp oil, then remove it.",
+   "Soften the onion and garlic in the remaining oil for 4 minutes.",
+   "Add the courgettes, peppers and herbs and cook for 8 minutes.",
+   "Return the aubergine, add the tomatoes and chickpeas and cook under a lid for 20 minutes.",
+   "Season with salt and pepper and sprinkle with basil; good hot or cold, and it keeps 4 days."
+  ]
+ },
+ "french--soupe-de-lentilles-au-citron-et-aux-epinards-lencseleves-citrommal-es-spenottal": {
+  "title": "Lentil soup with lemon and spinach",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g green or brown lentils",
+   "2 tbsp olive oil",
+   "1 onion, finely chopped",
+   "2 carrots, diced",
+   "2 celery sticks, sliced",
+   "3 cloves garlic",
+   "1.2 litres vegetable stock",
+   "200 g fresh spinach",
+   "1 lemon, juiced",
+   "1 tsp cumin seeds",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion, carrots and celery with the cumin seeds in the olive oil for 6 minutes.",
+   "Add the garlic, lentils and stock.",
+   "Bring to the boil, then cook for 25 minutes until the lentils are tender.",
+   "Stir in the spinach and cook for 2 minutes until wilted.",
+   "Season with lemon juice, salt and pepper; it keeps 4 days in the fridge and reheats well in the microwave."
+  ]
+ },
  "french--clafoutis-aux-cerises-light-konnyu-cseresznyes-clafoutis": {
   "title": "Clafoutis aux cerises light (light cherry clafoutis)",
   "time": "50 min",
@@ -15794,6 +16176,29 @@ window.I18N_EN_RECIPES = {
    "Spread 1.5 cm thick on a wet tray or baking paper and leave to cool for 20 minutes.",
    "Cut out rounds with a cutter, arrange overlapping in a buttered dish and sprinkle with the rest of the Parmesan and dots of butter.",
    "Bake at 220 °C for 20-25 minutes until golden; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "italian--sarde-al-forno-sult-szardinia-citrommal-es-petrezselyemmel": {
+  "title": "Sarde al forno (baked sardines with lemon and parsley)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "800 g fresh sardines, cleaned",
+   "3 tbsp olive oil",
+   "2 lemons",
+   "4 cloves garlic",
+   "1 bunch parsley",
+   "3 tbsp wholemeal breadcrumbs",
+   "1 tsp dried oregano",
+   "200 g cherry tomatoes",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Heat the oven to 200 °C.",
+   "Mix the breadcrumbs with the chopped parsley, crushed garlic, oregano and 1 tbsp of the oil.",
+   "Put the sardines in an oiled baking tray, add the tomatoes and season with salt and pepper.",
+   "Sprinkle with the crumbs and drizzle with the remaining oil and the juice of half a lemon.",
+   "Bake for 12-15 minutes until the crumbs are golden; serve with lemon wedges and a salad."
   ]
  },
  "italian--cornetti-vajas-briostesztas-kifli-lekvaros-vagy-kremes-toltelekkel": {
@@ -17265,6 +17670,54 @@ window.I18N_EN_RECIPES = {
    "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "italian--zuppa-di-orzo-e-verdure-olasz-arpaleves-zoldsegekkel-es-babbal": {
+  "title": "Zuppa di orzo e verdure (Italian barley soup with vegetables and beans)",
+  "time": "55 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "150 g pearl barley",
+   "1 tin (400 g) white beans, rinsed",
+   "2 tbsp olive oil",
+   "1 onion, finely chopped",
+   "2 carrots, diced",
+   "2 celery sticks, sliced",
+   "1 courgette, diced",
+   "1 tin (400 g) peeled tomatoes",
+   "1 litre vegetable stock",
+   "1 sprig rosemary",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion, carrots and celery in the olive oil for 7 minutes.",
+   "Add the tomatoes (crushed with a fork), the stock, the rosemary and the rinsed barley.",
+   "Cook under a lid for 30 minutes.",
+   "Add the courgette and beans and cook for another 10 minutes.",
+   "Season with salt and pepper and remove the rosemary; it keeps 4 days in the fridge, thickens as it cools and is loosened with a little water when reheated."
+  ]
+ },
+ "italian--insalata-di-ceci-e-tonno-csicseriborso-tonhalsalata": {
+  "title": "Insalata di ceci e tonno (chickpea and tuna salad)",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (2 × 400 g) chickpeas, rinsed",
+   "2 tins (2 × 140 g) tuna in water, drained",
+   "1 cucumber, diced",
+   "15 cherry tomatoes, halved",
+   "1 red onion, thinly sliced",
+   "3 tbsp olive oil",
+   "1 lemon, juiced",
+   "1 handful parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Drain the chickpeas and put them in a bowl.",
+   "Add the flaked tuna, cucumber, tomatoes and onion.",
+   "Mix the olive oil with the lemon juice, salt and pepper.",
+   "Gently toss the salad with the dressing and sprinkle with parsley.",
+   "It keeps 2 days in the fridge and works as a lunchbox salad."
+  ]
+ },
  "italian--torta-di-ricotta-light-konnyu-ricottatorta-citrommal": {
   "title": "Torta di ricotta light (light lemon ricotta cake)",
   "time": "1 hr",
@@ -18413,6 +18866,48 @@ window.I18N_EN_RECIPES = {
    "Serve with fruit, yogurt or syrup."
   ]
  },
+ "american--ejszakai-zabkasa-chiamaggal-es-bogyos-gyumolccsel": {
+  "title": "Overnight oats with chia seeds and berries",
+  "time": "10 min + overnight chilling",
+  "servings": "2 servings",
+  "ingredients": [
+   "80 g rolled oats",
+   "2 tbsp chia seeds",
+   "250 ml milk or plant milk",
+   "100 ml plain yoghurt",
+   "150 g frozen or fresh berries",
+   "30 g walnuts",
+   "1 tsp honey",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Mix the oats, chia seeds, milk, yoghurt and cinnamon in a jar or box.",
+   "Cover and chill for at least 6 hours, ideally overnight.",
+   "In the morning stir, and loosen with a little milk if it is thick.",
+   "Top with berries, chopped walnuts and the honey.",
+   "The jar keeps 3 days, so several portions can be prepared on Monday."
+  ]
+ },
+ "american--kefires-smoothie-bogyos-gyumolccsel-es-zabbal": {
+  "title": "Berry kefir smoothie with oats",
+  "time": "5 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "400 ml kefir",
+   "200 g frozen berries",
+   "1 banana",
+   "4 tbsp rolled oats",
+   "1 tbsp ground flaxseed",
+   "1 tbsp almonds",
+   "1 tsp honey"
+  ],
+  "steps": [
+   "Put all the ingredients in a blender.",
+   "Blend for 1-2 minutes until completely smooth.",
+   "If it is too thick, loosen with a little kefir or water.",
+   "Drink straight away."
+  ]
+ },
  "american--klasszikus-amerikai-cheeseburger": {
   "title": "Classic American cheeseburger",
   "time": "25 min",
@@ -19406,6 +19901,31 @@ window.I18N_EN_RECIPES = {
    "Packed in portions it keeps 3-4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
   ]
  },
+ "american--lazacos-quinoas-tal": {
+  "title": "Salmon and quinoa bowl",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g quinoa",
+   "2 salmon fillets (about 400 g)",
+   "1 avocado, sliced",
+   "1 cucumber, diced",
+   "200 g spinach leaves",
+   "100 g edamame or green peas",
+   "2 tbsp olive oil",
+   "1 lemon, juiced",
+   "1 tbsp sesame seeds",
+   "1 tbsp soy sauce",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Rinse the quinoa and cook it in twice its volume of salted water for 12-15 minutes, then drain.",
+   "Season the salmon and fry it in the olive oil skin side down for 4 minutes and 3 minutes on the other side, then break into pieces.",
+   "Boil the edamame in hot water for 3 minutes.",
+   "Mix the lemon juice with the soy sauce.",
+   "Fill bowls with quinoa, spinach, cucumber, avocado, edamame and salmon, drizzle with the dressing and sprinkle with sesame; it keeps 2 days in a box."
+  ]
+ },
  "american--sutoben-sult-barbecue-csirke": {
   "title": "Oven-baked barbecue chicken",
   "time": "55 min",
@@ -20340,6 +20860,32 @@ window.I18N_EN_RECIPES = {
    "Serve each bowl with a spoonful of ricotta and basil; it keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
   ]
  },
+ "american--feketebab-burger-teljes-kiorlesu-zsemleben": {
+  "title": "Black bean burgers on wholemeal buns",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (2 × 400 g) black beans, rinsed",
+   "100 g rolled oats",
+   "1 egg",
+   "1 onion, grated",
+   "2 cloves garlic",
+   "1 tsp smoked paprika",
+   "1 tsp cumin",
+   "2 tbsp olive oil",
+   "4 wholemeal buns",
+   "1 avocado, sliced",
+   "lettuce leaves, tomato",
+   "salt"
+  ],
+  "steps": [
+   "Mash half of the beans with a fork and leave the rest whole.",
+   "Mix in the oats, egg, onion, crushed garlic, spices and a pinch of salt.",
+   "With wet hands shape four patties and chill them for 10 minutes.",
+   "Fry them in the olive oil for 4-5 minutes per side, turning gently.",
+   "Fill the buns with lettuce, tomato, a patty and avocado; the patties keep 4 days once cooked."
+  ]
+ },
  "american--black-bean-brownies-fekete-babos-brownie-liszt-nelkul": {
   "title": "Black bean brownies (flourless)",
   "time": "40 min",
@@ -21077,6 +21623,28 @@ window.I18N_EN_RECIPES = {
    "Bring the syrup ingredients to the boil, boil for a few minutes, then pour over the still-warm pie."
   ]
  },
+ "greek--teljes-kiorlesu-pita-hummusszal-uborkaval-es-paradicsommal": {
+  "title": "Wholemeal pita with hummus, cucumber and tomato",
+  "time": "10 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 wholemeal pitas",
+   "200 g hummus",
+   "1 cucumber, sliced",
+   "2 tomatoes, sliced",
+   "1 red onion, thinly sliced",
+   "1 tbsp olive oil",
+   "1 handful olives",
+   "1 tsp dried oregano"
+  ],
+  "steps": [
+   "Warm the pitas in a dry pan or toaster for about a minute each.",
+   "Spread each one with hummus.",
+   "Pile on the cucumber, tomato and onion.",
+   "Finish with olives, oregano and olive oil.",
+   "Eat folded or open."
+  ]
+ },
  "greek--horiatiki-gorog-salata": {
   "title": "Horiatiki (Greek salad)",
   "time": "15 min",
@@ -21717,6 +22285,31 @@ window.I18N_EN_RECIPES = {
    "Add the rice, stir and pour in the hot stock.",
    "Cook covered over low heat for 18-20 minutes; finally stir in the butter and rest for 5 minutes.",
    "Serve with yogurt; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--briam-gorog-sult-zoldsegek-olivaolajjal": {
+  "title": "Briam (Greek roasted vegetables with olive oil)",
+  "time": "1 h 10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 courgettes, sliced",
+   "1 aubergine, diced",
+   "2 peppers, cut into strips",
+   "3 potatoes, thinly sliced",
+   "4 tomatoes, sliced",
+   "2 onions, sliced into rings",
+   "4 cloves garlic",
+   "5 tbsp olive oil",
+   "1 tsp dried oregano",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Heat the oven to 190 °C.",
+   "In a large tray toss the courgettes, aubergine, peppers, potatoes, onions and garlic with 4 tbsp olive oil, oregano, salt and pepper.",
+   "Arrange the tomato slices on top and drizzle with the remaining oil.",
+   "Cover with foil and bake for 35 minutes, then remove the foil and bake for another 25-30 minutes until the vegetables are soft and browned.",
+   "Sprinkle with parsley; good hot or cold, and it keeps 3 days in a box."
   ]
  },
  "greek--muszaka": {
@@ -22427,6 +23020,31 @@ window.I18N_EN_RECIPES = {
    "Add the courgette, beans and pasta and cook for another 10 minutes.",
    "Off the heat, stir in the lemon juice and the rest of the olive oil.",
    "It keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "greek--tahinis-csicseriborso-tal-sult-zoldsegekkel": {
+  "title": "Tahini chickpea bowl with roasted vegetables",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (2 × 400 g) chickpeas, rinsed",
+   "1 courgette, diced",
+   "1 pepper, diced",
+   "1 aubergine, diced",
+   "3 tbsp olive oil",
+   "3 tbsp tahini",
+   "1 lemon, juiced",
+   "1 clove garlic",
+   "1 tsp smoked paprika",
+   "1 handful parsley",
+   "salt"
+  ],
+  "steps": [
+   "Heat the oven to 220 °C.",
+   "Toss the vegetables and chickpeas on a tray with 2 tbsp oil, the smoked paprika and salt.",
+   "Roast for 25 minutes, stirring halfway.",
+   "Whisk the tahini with the lemon juice, crushed garlic, the remaining oil and 4 tbsp water until smooth.",
+   "Divide the roasted vegetables between bowls, drizzle with the tahini sauce and sprinkle with parsley; it keeps 3 days in a box."
   ]
  },
  "greek--yiaourtopita-gorog-joghurtos-citromos-torta-liszt-nelkul": {
@@ -23269,6 +23887,30 @@ window.I18N_EN_RECIPES = {
    "Heat the oil with the mustard seeds in a frying pan and cover, as they pop.",
    "When the mustard seeds stop popping, add everything except the rice and toast until golden.",
    "Mix the spice mixture into the cooked rice, season and serve."
+  ]
+ },
+ "indian--pongal-rizses-mungobabos-fuszeres-reggeli-kasa": {
+  "title": "Pongal (spiced rice and mung bean porridge)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "150 g brown or basmati rice",
+   "100 g split yellow mung beans (moong dal)",
+   "1 litre water",
+   "2 tbsp olive oil",
+   "1 piece ginger (3 cm), grated",
+   "1 tsp black pepper, coarsely crushed",
+   "1 tsp cumin seeds",
+   "60 g cashews, roughly chopped",
+   "1 sprig curry leaves or 1 bay leaf",
+   "salt"
+  ],
+  "steps": [
+   "Toast the rice and mung beans in a dry pan for 1 minute each, then rinse.",
+   "Cook them in a pot with the water and salt for about 25 minutes (brown rice takes longer), stirring now and then until it turns into a creamy porridge.",
+   "Meanwhile fry the cumin, pepper, ginger and cashews in the olive oil together with the leaf.",
+   "Pour the spiced oil over the finished porridge and stir it in.",
+   "Serve hot; it keeps 3 days in the fridge and is reheated with a little water."
   ]
  },
  "indian--dal-fry-sargaborso-fozelek-indiai-modra": {
@@ -24141,6 +24783,30 @@ window.I18N_EN_RECIPES = {
    "Serve with coriander and rice; it keeps 4-5 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "indian--mungobab-chaat-fuszeres-mungobab-salata-uborkaval-es-citrommal": {
+  "title": "Moong chaat (spiced mung bean salad with cucumber and lemon)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g whole green mung beans",
+   "1 cucumber, diced",
+   "2 tomatoes, diced",
+   "1 red onion, finely chopped",
+   "1 bunch coriander",
+   "1 lemon, juiced",
+   "1 tbsp olive oil",
+   "1 tsp toasted cumin seeds, crushed",
+   "1 green chilli, finely chopped",
+   "salt"
+  ],
+  "steps": [
+   "Rinse the mung beans and boil them in plenty of water for 20-25 minutes until tender but whole, then drain and cool.",
+   "Dice the vegetables and chop the coriander and chilli finely.",
+   "Add the cucumber, tomatoes, onion, coriander and chilli to the beans.",
+   "Mix the olive oil with the lemon juice, cumin and salt.",
+   "Toss with the dressing; it keeps 3 days in the fridge and is served cold."
+  ]
+ },
  "indian--butter-chicken-murgh-makhani": {
   "title": "Butter chicken (murgh makhani)",
   "time": "1 hr",
@@ -24950,6 +25616,31 @@ window.I18N_EN_RECIPES = {
    "Stir in the turmeric and garam masala, then the crumbled paneer; season.",
    "Heat through for 2-3 minutes, stirring, and sprinkle with coriander.",
    "Serve with flatbread or toast; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--saag-tofu-spenotos-tofu-indiai-fuszerekkel": {
+  "title": "Saag tofu (spinach with tofu and Indian spices)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g firm tofu, cubed",
+   "500 g fresh spinach",
+   "2 tbsp olive oil",
+   "1 onion, finely chopped",
+   "3 cloves garlic",
+   "1 piece ginger (3 cm), grated",
+   "2 tomatoes, diced",
+   "1 tsp garam masala",
+   "1 tsp turmeric",
+   "1 tsp cumin seeds",
+   "salt"
+  ],
+  "steps": [
+   "Blanch the spinach in boiling water for 2 minutes, cool in iced water, squeeze out and blend smooth.",
+   "Fry the tofu cubes in the oil until golden and remove.",
+   "In the same oil toast the cumin, add the onion, ginger and garlic and cook for 6 minutes.",
+   "Add the tomatoes, turmeric, garam masala and salt and cook for 5 minutes.",
+   "Add the spinach purée and tofu and cook together for 5 minutes; serve with brown rice, it keeps 3 days."
   ]
  },
  "indian--datolyas-dios-ladoo-cukor-nelkuli-golyok": {
@@ -26515,6 +27206,31 @@ window.I18N_EN_RECIPES = {
    "Serve with rice; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "chinese--gyors-kaposztasalata-kimchi-modra": {
+  "title": "Quick kimchi-style cabbage salad",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g Chinese cabbage or white cabbage, thinly sliced",
+   "2 carrots, grated",
+   "4 radishes, thinly sliced",
+   "4 spring onions, sliced",
+   "2 cloves garlic, crushed",
+   "1 piece ginger (2 cm), grated",
+   "2 tbsp rice vinegar",
+   "1 tbsp soy sauce",
+   "1 tsp hot chilli flakes",
+   "1 tbsp sesame seeds",
+   "1 tsp salt"
+  ],
+  "steps": [
+   "Work the salt into the cabbage, leave for 10 minutes, then squeeze it out.",
+   "Mix the garlic, ginger, vinegar, soy sauce and chilli into a paste.",
+   "Add the carrots, radishes and spring onions to the cabbage.",
+   "Mix thoroughly with the paste and sprinkle with sesame seeds.",
+   "It can be eaten at once but is even better after 1-2 days in the fridge; in a jar it keeps 5 days."
+  ]
+ },
  "chinese--kung-pao-chicken": {
   "title": "Kung pao chicken",
   "time": "30 min",
@@ -27217,6 +27933,31 @@ window.I18N_EN_RECIPES = {
    "Serve with rice or noodles; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "chinese--bok-choy-shiitake-gombaval-es-tofuval-gyomberes-szoszban": {
+  "title": "Bok choy with shiitake and tofu in ginger sauce",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g firm tofu, cubed",
+   "500 g bok choy or Chinese cabbage, chopped",
+   "200 g shiitake mushrooms, sliced",
+   "2 tbsp oil",
+   "3 cloves garlic",
+   "1 piece ginger (3 cm), grated",
+   "3 tbsp soy sauce",
+   "1 tbsp rice vinegar",
+   "1 tsp sesame oil",
+   "1 tbsp sesame seeds",
+   "cooked brown rice to serve"
+  ],
+  "steps": [
+   "Pat the tofu dry with kitchen paper and fry it in 1 tbsp oil until golden on all sides, then remove.",
+   "Fry the mushrooms in the remaining oil for 3 minutes.",
+   "Add the garlic and ginger and stir for 30 seconds.",
+   "Add the bok choy, soy sauce, vinegar and 3 tbsp water and steam under a lid for 3-4 minutes.",
+   "Return the tofu, drizzle with sesame oil, sprinkle with sesame seeds and serve with brown rice."
+  ]
+ },
  "chinese--parolt-tojaspuding-gyumolccsel-zheng-danggao": {
   "title": "Steamed egg pudding with fruit (zhēng dànggāo)",
   "time": "25 min",
@@ -27916,6 +28657,29 @@ window.I18N_EN_RECIPES = {
    "Sprinkle with sesame seeds and serve."
   ]
  },
+ "japanese--ochazuke-zold-teas-barna-rizs-sult-lazaccal-es-spenottal": {
+  "title": "Ochazuke (brown rice in green tea with baked salmon and spinach)",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 portions cooked brown rice (about 300 g)",
+   "2 salmon fillets (about 250 g)",
+   "100 g spinach",
+   "400 ml strong green tea or dashi",
+   "1 tbsp soy sauce",
+   "1 spring onion, sliced",
+   "1 tbsp sesame seeds",
+   "1 sheet nori, cut into strips",
+   "1 tsp oil"
+  ],
+  "steps": [
+   "Fry the salmon in a little oil skin side down for 4 minutes and for 2-3 minutes on the other side, then flake with a fork.",
+   "Blanch the spinach in boiling water for 1 minute, squeeze it out and chop.",
+   "Divide the rice between two bowls and top with the salmon and spinach.",
+   "Season the hot tea or dashi with the soy sauce and pour it over.",
+   "Sprinkle with the spring onion, sesame seeds and nori and serve at once."
+  ]
+ },
  "japanese--shoyu-ramen-szojaszoszos-ramen": {
   "title": "Shoyu ramen (soy sauce ramen)",
   "time": "1 hr",
@@ -28558,6 +29322,53 @@ window.I18N_EN_RECIPES = {
    "Put the hot fish straight into the marinade and toss with the vegetables.",
    "Leave to take on flavour for at least 30 minutes (it improves for days in the fridge).",
    "It keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--kinpira-piritott-gyokerzoldsegek-szezammal": {
+  "title": "Kinpira (stir-fried root vegetables with sesame)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 carrots, cut into thin sticks",
+   "2 parsnips, cut into thin sticks",
+   "2 celery sticks, cut into thin strips",
+   "1 piece ginger (2 cm), grated",
+   "1 tbsp sesame oil",
+   "2 tbsp soy sauce",
+   "1 tbsp rice vinegar",
+   "2 tbsp sesame seeds",
+   "1 dried chilli or a pinch of chilli flakes"
+  ],
+  "steps": [
+   "Fry the ginger and chilli in the sesame oil for 2 minutes.",
+   "Add the carrots and parsnips and stir-fry over high heat for 5 minutes.",
+   "Add the celery and 2 tbsp water and stir-fry for 3 more minutes.",
+   "Pour in the soy sauce and vinegar and cook until the liquid has evaporated.",
+   "Sprinkle with sesame seeds; a side dish for hot or cold, it keeps 4 days."
+  ]
+ },
+ "japanese--barna-rizses-lazacos-uborkas-tal-sushi-bowl": {
+  "title": "Brown rice bowl with salmon and cucumber (sushi bowl)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g brown rice",
+   "3 tbsp rice vinegar",
+   "2 salmon fillets (about 400 g)",
+   "1 cucumber, thinly sliced",
+   "1 avocado, sliced",
+   "2 carrots, grated",
+   "2 sheets nori, cut into strips",
+   "2 tbsp soy sauce",
+   "1 tbsp sesame seeds",
+   "1 piece ginger (2 cm), grated"
+  ],
+  "steps": [
+   "Rinse the brown rice and cook it in twice its volume of water for 30 minutes, then mix with 2 tbsp of the vinegar and let it cool.",
+   "Bake the salmon in the oven at 200 °C for 12 minutes, then flake it with a fork.",
+   "Mix the soy sauce with the remaining vinegar and the ginger.",
+   "Fill the bowls with rice, then salmon, cucumber, avocado, carrots and nori strips.",
+   "Drizzle with the sauce and sprinkle with sesame seeds; it keeps 2 days in a box."
   ]
  },
  "japanese--nigiri-sushi": {
@@ -29260,6 +30071,52 @@ window.I18N_EN_RECIPES = {
    "Add the ketchup, sugar, vinegar and 1 tsp cornflour mixed into the water and boil until thick.",
    "Return the prawns with the spring onion and toss for 1 minute.",
    "Serve with rice; it keeps 2 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--tara-no-nitsuke-szojas-gyomberes-parolt-tokehal-zoldsegekkel": {
+  "title": "Tara no nitsuke (cod simmered in soy and ginger with vegetables)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g cod fillet, cut into 4 pieces",
+   "3 tbsp soy sauce",
+   "1 piece ginger (3 cm), sliced",
+   "200 ml water",
+   "1 tbsp rice vinegar",
+   "1 tsp honey",
+   "300 g bok choy or broccoli",
+   "2 carrots, thinly sliced",
+   "cooked brown rice to serve"
+  ],
+  "steps": [
+   "In a wide pan bring the water, soy sauce, vinegar, honey and ginger to the boil.",
+   "Add the carrots and cook for 4 minutes.",
+   "Lay the fish pieces in the liquid and simmer under a lid for 6-7 minutes.",
+   "Add the bok choy or broccoli next to the fish and cook for another 3 minutes.",
+   "Serve the fish with the vegetables and sauce over brown rice."
+  ]
+ },
+ "japanese--edamame-salata-szezammal-es-uborkaval": {
+  "title": "Edamame salad with sesame and cucumber",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g frozen shelled edamame",
+   "1 cucumber, diced",
+   "2 carrots, grated",
+   "4 spring onions, sliced",
+   "2 tbsp sesame seeds",
+   "2 tbsp rice vinegar",
+   "1 tbsp soy sauce",
+   "1 tbsp sesame oil",
+   "1 piece ginger (2 cm), grated"
+  ],
+  "steps": [
+   "Boil the edamame in hot salted water for 4 minutes, drain and rinse with cold water.",
+   "Toast the sesame seeds in a dry pan until fragrant.",
+   "Mix the vinegar, soy sauce, sesame oil and ginger.",
+   "Toss the edamame with the cucumber, carrots and spring onions.",
+   "Pour over the dressing and sprinkle with the sesame seeds; it keeps 3 days in the fridge."
   ]
  },
  "japanese--matcsas-joghurtos-szelet-matcha-yogurt-cake": {

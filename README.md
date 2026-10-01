@@ -62,8 +62,9 @@ a hozzávalók és a lépések kulcsszavaiból dolgozik, az édességeket nem je
   több mint 750 kcal.
 
 A szkript a recept szövegét nem módosítja, csak a `longevity` mezőt állítja
-be a `RECIPES` soron (`JSON.stringify`-jal). Jelenleg 133 receptet jelöl
-(az összes 1334 közül), konyhánként 7-25-öt.
+be a `RECIPES` soron (`JSON.stringify`-jal). Jelenleg 178 receptet jelöl
+(az összes 1370 közül), konyhánként 10-28-at; ebből 36-ot kifejezetten ehhez a
+címkéhez írtunk (hüvelyes, hal, zöldség, teljes kiőrlésű gabona).
 
 ### „Könnyű sütik” fül
 
@@ -558,7 +559,7 @@ vagy pontatlan lehet benne.
 ## „Mi van itthon?” kereső
 
 Saját menüpont („Mi van itthon?”). Vesszővel (vagy „és”-sel)
-elválasztott hozzávalókat vagy ételnevet vár, és mind a 1334 kézzel írt
+elválasztott hozzávalókat vagy ételnevet vár, és mind a 1370 kézzel írt
 receptben keres (cím + hozzávalók, ékezet-függetlenül, részszóra is: a
 „csirke” a „csirkemell”-t is megtalálja). Rangsor: minél több megadott
 hozzávaló szerepel, annál előrébb; a címben szereplő szó plusz pontot ér;
@@ -821,7 +822,7 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
 Az oldal jobb felső sarkában az **English** / **Magyar** linkkel lehet
 nyelvet váltani. A böngésző megjegyzi a választást (`napi-recept-lang`),
 és közvetlenül is linkelhető: `index.html?lang=en`. Angolul jelenik meg
-a teljes felület és mind a 1334 recept (cím, idő, pácolás, adag,
+a teljes felület és mind a 1370 recept (cím, idő, pácolás, adag,
 hozzávalók, lépések). Ugyanígy a bevásárlólista, a „Mi van itthon?”
 kereső, a heti menü és az előre főzés is. A mennyiségek grammban és
 milliliterben szerepelnek (a dkg és a dl átszámolva), és az
