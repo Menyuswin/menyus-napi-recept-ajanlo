@@ -581,6 +581,36 @@
   }
   .pantry-tags button:hover { border-color: var(--accent); }
   .pantry-tags button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+  .quick-ideas { margin-top: 10px; border: 1px solid var(--line); border-radius: 10px; padding: 6px 12px 10px; background: var(--surface); }
+  .quick-ideas summary { cursor: pointer; font-size: 13.5px; font-weight: 700; color: var(--ink); padding: 4px 0; }
+  .quick-group span { flex-basis: 100%; font-weight: 600; font-size: 12.5px; }
+  @media (min-width: 600px) { .quick-group span { flex-basis: auto; min-width: 118px; } }
+  .week-nutrition { margin-top: 18px; padding: 14px 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+  .week-nutrition h2 { font-size: 16px; margin: 0 0 4px; }
+  .week-nutrition .wn-note { font-size: 12.5px; color: var(--muted); margin: 0 0 10px; }
+  .wn-table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+  .wn-table th, .wn-table td { text-align: left; padding: 5px 8px; border-bottom: 1px solid var(--line); }
+  .wn-table tfoot th, .wn-table tfoot td { font-weight: 700; border-bottom: 0; }
+  .wn-scroll { overflow-x: auto; }
+  .staples { margin: 10px 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 13px; color: var(--ink-2); }
+  .staples-label { font-weight: 700; }
+  .staples-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .staples-chips button {
+    font: inherit; font-size: 12.5px; font-weight: 600; cursor: pointer; border-radius: 999px; padding: 5px 12px;
+    border: 1px solid var(--line); background: var(--surface-2); color: var(--ink-2);
+  }
+  .staples-chips button[aria-pressed="true"] { background: var(--ink); border-color: var(--ink); color: var(--surface); }
+  .staples-note { flex-basis: 100%; font-size: 12px; color: var(--muted); }
+  .staples-hidden-note { font-size: 12.5px; color: var(--muted); margin: 6px 0; }
+  .tips-converter h4 { font-size: 14px; margin: 14px 0 6px; color: var(--ink); }
+  .conv-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 0 6px; }
+  .conv-form input { width: 110px; font: inherit; font-size: 14.5px; padding: 8px 10px; }
+  .conv-form select { font: inherit; font-size: 14px; padding: 8px 6px; max-width: 100%; }
+  .conv-result { font-size: 15px; font-weight: 700; margin: 4px 0 0; color: var(--ink); }
+  .conv-table-wrap { overflow-x: auto; }
+  .conv-table { border-collapse: collapse; font-size: 13px; min-width: 100%; }
+  .conv-table th, .conv-table td { text-align: left; padding: 5px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+  .conv-note { font-size: 12.5px; color: var(--muted); margin: 6px 0 0; }
   .pantry-photo { margin-top: 10px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
   .pantry-photo-note { font-size: 12px; color: var(--muted); flex-basis: 100%; }
   .pantry-photo-status { font-size: 13px; color: var(--ink-2); flex-basis: 100%; }
@@ -908,6 +938,7 @@
       <div id="weekOverview"></div>
     </section>
     <div class="week-grid" id="weekGrid"></div>
+    <section class="week-nutrition no-print" id="weekNutrition" aria-labelledby="wnTitle"></section>
     <button type="button" class="small primary week-shop-link no-print" data-goto="bevasarlo">Bevásárlólista ehhez a héthez →</button>
 
 
@@ -938,6 +969,33 @@
       <button type="button" data-tag="lunchbox" aria-pressed="false">Munkába is vihető</button>
       <button type="button" data-tag="longevity" aria-pressed="false" title="Hüvelyes, hal, zöldség, teljes kiőrlésű gabona, dió vagy olívaolaj; kevés feldolgozott és vörös hús, cukor, tejszín.">Hosszú életért (longevity)</button>
     </div>
+    <details class="quick-ideas" id="quickIdeas">
+      <summary>Gyors ötletek</summary>
+      <div class="pantry-tags quick-group">
+        <span>Idő, edény:</span>
+        <button type="button" data-tag="t15" aria-pressed="false" title="Legfeljebb 15 perc a recept „Idő” mezője szerint (a pácolás és a külön várakozás nincs benne).">15 perces</button>
+        <button type="button" data-tag="t30" aria-pressed="false" title="Legfeljebb 30 perc a recept „Idő” mezője szerint (a pácolás és a külön várakozás nincs benne).">30 perces</button>
+        <button type="button" data-tag="onepot" aria-pressed="false" title="Becsült: a recept címe egytálételt, rakottat, tepsist vagy fazékban készülő ételt jelez, vagy a lépések egyetlen edényről szólnak.">Egy fazékban / tepsiben</button>
+      </div>
+      <div class="pantry-tags quick-group">
+        <span>Munkába vihető:</span>
+        <button type="button" data-tag="lbfast" aria-pressed="false">Munkába – gyors (≤ 30 perc)</button>
+        <button type="button" data-tag="lbhealthy" aria-pressed="false" title="„Hosszú életért” címkéjű, vagy legfeljebb 450 kcal / adag.">Munkába – egészséges</button>
+        <button type="button" data-tag="lbveg" aria-pressed="false" title="Becsült: a hozzávalók között nincs hús-, hal- vagy szárnyasszó. Az alaplé vagy a zsír elkerülheti a szűrőt — ellenőrizd a hozzávalókat.">Munkába – húsmentes (becsült)</button>
+      </div>
+      <div class="pantry-tags quick-group">
+        <span>Maradék:</span>
+        <button type="button" data-q="rizs">Maradt főtt rizs</button>
+        <button type="button" data-q="csirke">Maradt csirke</button>
+        <button type="button" data-q="kenyér">Maradt kenyér</button>
+        <button type="button" data-q="burgonya">Maradt főtt burgonya</button>
+        <button type="button" data-q="tészta">Maradt tészta</button>
+        <button type="button" data-q="tojás">Maradt tojás</button>
+      </div>
+      <div class="pantry-tags quick-group" id="quickIngredients">
+        <span>Alapanyag szerint:</span>
+      </div>
+    </details>
     <div class="pantry-slots">
       <span>Étkezés:</span>
       <label><input type="radio" name="pantrySlot" value="" checked> mind</label>
@@ -962,6 +1020,11 @@
         <button type="button" class="small" id="buildShoppingListBtn">Lista frissítése</button>
         <button type="button" class="small primary" id="shopPrintBtn">Nyomtatás: menü + bevásárlólista</button>
         <button type="button" class="small" data-goto="heti">Heti menü megnyitása</button>
+      </div>
+      <div class="staples no-print" id="staplesBox">
+        <span class="staples-label" id="staplesLabel">Nálam van:</span>
+        <div class="staples-chips" id="staplesChips" role="group" aria-labelledby="staplesLabel"></div>
+        <span class="staples-note">A bejelölt alapanyagok nem jelennek meg a listán (a nyomtatáson sem). A választás ezen a gépen megmarad.</span>
       </div>
       <div id="shoppingListResult"></div>
     </section>
@@ -1000,6 +1063,50 @@
           <li><strong>Biztonságos vágás.</strong> Tegyél nedves konyharuhát a vágódeszka alá, hogy ne csússzon, és a hozzávalót tartó kezed ujjbegyeit hajlítsd be. Az éles kés biztonságosabb a tompánál, mert nem csúszik meg.</li>
         </ul>
         <button type="button" class="small primary tips-basics-go" id="goBeginnerRecipes">Mutasd a kezdőbarát recepteket →</button>
+      </div>
+      <div class="tips-category tips-converter" id="unitConverter">
+        <h3>Mértékegység-átváltó</h3>
+        <p class="tips-basics-intro">Kb. értékek, konyhai használatra: 1 dkg = 10 g, 1 dl = 100 ml, 1 evőkanál ≈ 15 ml, 1 teáskanál ≈ 5 ml, 1 csésze ≈ 2,4 dl (240 ml; ezt vettük alapul, a csészék mérete eltér).</p>
+        <form class="conv-form no-print" id="convForm" onsubmit="return false">
+          <input type="number" id="convValue" value="1" step="any" inputmode="decimal" aria-label="Érték">
+          <select id="convFrom" aria-label="Ebből a mértékegységből"></select>
+          <span aria-hidden="true">→</span>
+          <select id="convTo" aria-label="Erre a mértékegységre"></select>
+        </form>
+        <p class="conv-result" id="convResult" role="status" aria-live="polite"></p>
+        <h4>Hozzávalók: kb. hány gramm?</h4>
+        <div class="conv-table-wrap">
+          <table class="conv-table">
+            <thead><tr><th>Hozzávaló</th><th>1 evőkanál</th><th>1 teáskanál</th><th>1 dl</th><th>1 csésze</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">Liszt</th><td>kb. 8 g</td><td>kb. 3 g</td><td>kb. 55 g</td><td>kb. 130 g</td></tr>
+              <tr><th scope="row">Kristálycukor</th><td>kb. 13 g</td><td>kb. 4 g</td><td>kb. 85 g</td><td>kb. 205 g</td></tr>
+              <tr><th scope="row">Vaj</th><td>kb. 14 g</td><td>kb. 5 g</td><td>kb. 95 g</td><td>kb. 230 g</td></tr>
+              <tr><th scope="row">Méz</th><td>kb. 21 g</td><td>kb. 7 g</td><td>kb. 140 g</td><td>kb. 335 g</td></tr>
+              <tr><th scope="row">Rizs (nyers)</th><td>kb. 13 g</td><td>kb. 4 g</td><td>kb. 85 g</td><td>kb. 205 g</td></tr>
+              <tr><th scope="row">Olaj</th><td>kb. 14 g</td><td>kb. 5 g</td><td>kb. 90 g</td><td>kb. 220 g</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="conv-note">Az evő- és teáskanál csapott kanálnyi; a púpozott kb. másfélszer annyi.</p>
+        <h4>Sütőhőfok</h4>
+        <div class="conv-table-wrap">
+          <table class="conv-table">
+            <thead><tr><th>°C</th><th>Gázfokozat</th><th>°F</th><th>Jellemzően</th></tr></thead>
+            <tbody>
+              <tr><td>140</td><td>1</td><td>275</td><td>nagyon alacsony</td></tr>
+              <tr><td>150</td><td>2</td><td>300</td><td>alacsony</td></tr>
+              <tr><td>160</td><td>3</td><td>325</td><td>mérsékelt</td></tr>
+              <tr><td>180</td><td>4</td><td>350</td><td>közepes</td></tr>
+              <tr><td>190</td><td>5</td><td>375</td><td>közepesen forró</td></tr>
+              <tr><td>200</td><td>6</td><td>400</td><td>forró</td></tr>
+              <tr><td>220</td><td>7</td><td>425</td><td>erős</td></tr>
+              <tr><td>230</td><td>8</td><td>450</td><td>nagyon erős</td></tr>
+              <tr><td>240</td><td>9</td><td>475</td><td>legerősebb</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="conv-note">A gázfokozat az angol (Gas Mark) skála szerinti; a °F-értékek a szokásos kerekített konyhai értékek. Légkeveréses (kombi) sütőnél általában 20 °C-kal kevesebbet állíts.</p>
       </div>
     </div>
   </div>
@@ -1415,6 +1522,27 @@
   function mealCalorieTarget(profile, slot) {
     if (!profile || !profile.calorieTarget) return null;
     return Math.round(profile.calorieTarget * MEAL_SHARE[slot]);
+  }
+
+  // Az adag a napi szükséglet hány százaléka. A profil kalóriacélja, ennek
+  // hiányában a 2000 kcal-os referencia; a fehérjénél a testsúlyból számolt
+  // napi cél, ennek hiányában az 50 g-os referencia. Csak százalék, a
+  // recept saját értékei nem változnak.
+  var REF_KCAL = 2000, REF_PROTEIN = 50;
+  function nutritionShare(recipe, profile) {
+    var out = { kcal: "", protein: "" };
+    var kcal = Number(recipe.calories), prot = Number(recipe.proteinGrams);
+    if (kcal > 0) {
+      var goal = profile && profile.calorieTarget > 0 ? profile.calorieTarget : 0;
+      var pct = Math.round(kcal / (goal || REF_KCAL) * 100);
+      out.kcal = goal ? t("≈ {p} % a napi kalóriacélból", { p: pct }) : t("≈ {p} % a 2000 kcal-os referenciához képest", { p: pct });
+    }
+    if (prot > 0) {
+      var pgoal = profile && profile.weightKg > 0 ? Math.round(profile.weightKg * proteinFactorPerKg(profile.age || 30, !!profile.proteinFocus)) : 0;
+      var ppct = Math.round(prot / (pgoal || REF_PROTEIN) * 100);
+      out.protein = pgoal ? t("≈ {p} % a napi fehérjeszükségletből", { p: ppct }) : t("≈ {p} % az 50 g-os fehérje-referenciához képest", { p: ppct });
+    }
+    return out;
   }
 
   var shuffleOffset = { breakfast: 0, lunch: 0, dinner: 0 };
@@ -1932,7 +2060,9 @@
     "tészta": ["spagetti", "penne", "makaróni", "metélt", "lasagne", "tagliatelle", "fusilli", "nudli"],
     "sajt": ["trappista", "parmezán", "mozzarella", "feta", "cheddar", "gouda", "ementáli", "pecorino", "ricotta", "kaskaval", "halloumi", "camembert", "brie", "gruyère", "comté"],
     "gomba": ["csiperke", "vargánya", "shiitake", "laska"],
-    "hal": ["lazac", "tonhal", "tőkehal", "hekk", "pisztráng", "ponty", "harcsa", "szardínia", "hering", "makréla", "süllő"]
+    "hal": ["lazac", "tonhal", "tőkehal", "hekk", "pisztráng", "ponty", "harcsa", "szardínia", "hering", "makréla", "süllő"],
+    "hüvelyes": ["lencse", "csicseri", "fehérbab", "vörösbab", "tarkabab", "fekete bab", "szárazbab", "sárgaborsó", "mungóbab", "edamame"],
+    "zöldség": ["cukkini", "sárgarépa", "brokkoli", "karfiol", "padlizsán", "spenót", "káposzta", "cékla", "sütőtök", "zeller", "uborka", "póréhagyma", "paprika", "paradicsom"]
   };
 
   var PANTRY_BROADER_EN = {
@@ -1942,7 +2072,9 @@
     "pasta": ["spaghetti", "penne", "macaroni", "noodle", "lasagne", "tagliatelle", "fusilli"],
     "cheese": ["parmesan", "mozzarella", "feta", "cheddar", "gouda", "emmental", "pecorino", "ricotta", "halloumi", "camembert", "brie", "gruyère", "comté"],
     "mushroom": ["porcini", "shiitake", "oyster mushroom"],
-    "fish": ["salmon", "tuna", "cod", "hake", "trout", "carp", "catfish", "sardine", "herring", "mackerel", "pike-perch", "zander"]
+    "fish": ["salmon", "tuna", "cod", "hake", "trout", "carp", "catfish", "sardine", "herring", "mackerel", "pike-perch", "zander"],
+    "legume": ["lentil", "chickpea", "white bean", "kidney bean", "black bean", "mung bean", "edamame"],
+    "vegetable": ["zucchini", "courgette", "carrot", "broccoli", "cauliflower", "aubergine", "eggplant", "spinach", "cabbage", "beetroot", "pumpkin", "celery", "cucumber", "leek", "pepper", "tomato"]
   };
 
   // "potatoes" → "potato", "eggs" → "egg": a rövid szótő a többes számú
@@ -2004,8 +2136,40 @@
     if (tag === "nocook") return !!recipe.noCook;
     if (tag === "lunchbox") return !!recipe.lunchbox;
     if (tag === "longevity") return !!recipe.longevity;
+    if (QUICK_TAGS[tag]) return QUICK_TAGS[tag](recipe);
     return !!recipeTagInfo(recipe)[tag];
   }
+
+  // „Gyors ötletek” gyűjtőgombok. A szabályok becslések, a recept adataiból
+  // számolódnak (nincs kézi jelölés): idő a `time` mező első része (a
+  // `marinate` külön, nincs benne), „egy edényben” címszó-/lépéskulcsszó,
+  // „húsmentes” a hozzávalók szavai alapján.
+  function recipeMinutes(recipe) {
+    var pt = recipeTiming(recipe);
+    return pt ? pt.minutes : null;
+  }
+
+  var ONEPOT_TITLE_RE = /egytál|rakott|tepsis|tepsiben|egy (fazék|lábas|serpenyő|edény)|fazékétel|fazékban|lábasban|edényben|egyben sült/;
+  var ONEPOT_STEP_RE = /(mindent|az egészet|összes hozzávalót|mindezt|mindet)[^.]{0,50}egy (fazék|lábas|serpenyő|tepsi|edény)|egyetlen (fazék|lábas|serpenyő|tepsi|edény)|egy edényben|egy tepsiben/;
+  function isOnePot(recipe) {
+    return ONEPOT_TITLE_RE.test(recipe.title.toLowerCase()) || ONEPOT_STEP_RE.test(recipe.steps.join(" ").toLowerCase());
+  }
+
+  // Ékezet nélküli, szó eleji hús/hal/szárnyas szavak (a „hal” ne fogja meg a halloumit,
+  // a „rak” a rakottat, a „kagyló” a kagylótésztát). Alaplé, zsír nem számít — ezért „becsült”.
+  var MEAT_RE = /(^|[^a-z])(hus|csirk|pulyka|marha|sertes|barany|kacsa|liba|szalonna|kolbasz|sonka|virsli|felvagott|bacon|chorizo|szalami|borju|nyul|pecsenye|tarja|karaj|lapocka|oldalas|maj(?!o)|hal($|[^a-z])|halfile|halat|ponty|harcsa|tonhal|lazac|szardinia|szardella|hering|makrela|tokehal|sullo|pisztrang|hekk|garnela|tintahal|polip|kagylo(?!tesz)|osztriga|kaviar|pastetom|parizer|gyros|kebab)/;
+  function isMeatlessEstimate(recipe) {
+    return !MEAT_RE.test(foldText(recipe.title + " | " + recipe.ingredients.join(" | ")));
+  }
+
+  var QUICK_TAGS = {
+    t15: function (r) { var m = recipeMinutes(r); return m !== null && m <= 15; },
+    t30: function (r) { var m = recipeMinutes(r); return m !== null && m <= 30; },
+    onepot: isOnePot,
+    lbfast: function (r) { var m = recipeMinutes(r); return !!r.lunchbox && m !== null && m <= 30; },
+    lbhealthy: function (r) { return !!r.lunchbox && (!!r.longevity || (r.calories > 0 && r.calories <= 450)); },
+    lbveg: function (r) { return !!r.lunchbox && isMeatlessEstimate(r); }
+  };
 
   function searchPantry(query, slot, profile, tag) {
     var terms = query.split(LANG === "en" ? /[,;\n]+|\s+and\s+/ : /[,;\n]+|\s+és\s+/).map(function (t) { return t.trim(); }).filter(function (t) { return t.length >= 2; });
@@ -2344,7 +2508,7 @@
     var summary = document.getElementById("pantrySummary");
     var more = document.getElementById("pantryMore");
     var current = [], shown = 0, termCount = 0, activeTag = "";
-    var tagButtons = Array.prototype.slice.call(document.querySelectorAll("#pantryTags button"));
+    var tagButtons = Array.prototype.slice.call(document.querySelectorAll("#pantryTags button, #quickIdeas button[data-tag]"));
 
     function showNext() {
       current.slice(shown, shown + PANTRY_PAGE).forEach(function (res) {
@@ -2401,10 +2565,45 @@
         run();
       });
     });
+    initQuickIdeas(input, run);
     document.getElementById("pantryClear").addEventListener("click", function () {
       box.hidden = true; grid.innerHTML = ""; input.value = ""; activeTag = "";
       tagButtons.forEach(function (x) { x.setAttribute("aria-pressed", "false"); });
       if (pantryPhotoReset) pantryPhotoReset();
+    });
+  }
+
+  // „Gyors ötletek”: a darabszámok egyszer, induláskor számolódnak (a profil
+  // érzékenysége nélkül); a gombok a meglévő kereséssel dolgoznak.
+  function initQuickIdeas(input, run) {
+    var area = document.getElementById("quickIdeas");
+    area.open = (window.innerWidth || 1024) >= 700;
+    var index = getPantryIndex();
+    Array.prototype.forEach.call(area.querySelectorAll("button[data-tag]"), function (b) {
+      var tag = b.getAttribute("data-tag");
+      var n = index.filter(function (e) { return hasPantryTag(e.found.recipe, tag); }).length;
+      b.textContent = b.textContent + " (" + n + ")";
+    });
+    var holder = document.getElementById("quickIngredients");
+    [t("csirke"), t("sertés"), t("marha"), t("hal"), t("tojás"), t("tészta"), t("rizs"), t("burgonya"), t("hüvelyes"), t("zöldség"), t("gomba"), t("sajt")].forEach(function (term) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("data-term", term);
+      b.textContent = term + " (" + searchPantry(term, "", null, "").results.length + ")";
+      holder.appendChild(b);
+    });
+    function goTo(term) {
+      input.value = term;
+      run();
+      var res = document.getElementById("pantryResults");
+      if (res && res.scrollIntoView) res.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    }
+    holder.addEventListener("click", function (e) {
+      var b = e.target.closest ? e.target.closest("button[data-term]") : null;
+      if (b) goTo(b.getAttribute("data-term"));
+    });
+    Array.prototype.forEach.call(area.querySelectorAll("button[data-q]"), function (b) {
+      b.addEventListener("click", function () { goTo(t(b.getAttribute("data-q"))); });
     });
   }
 
@@ -2735,8 +2934,15 @@
     if (recipe.time) { var tm = document.createElement("span"); tm.textContent = t("Idő: ") + recipe.time; meta.appendChild(tm); }
     if (recipe.marinate) { var mr = document.createElement("span"); mr.className = "meta-marinate"; mr.textContent = t("Pácolás: ") + recipe.marinate; mr.title = t("A pácolás ideje nincs benne a fenti időben — érdemes előre elkezdeni."); meta.appendChild(mr); }
     if (recipe.servings) { var s = document.createElement("span"); s.textContent = recipe.servings; meta.appendChild(s); }
-    if (recipe.calories) { var c = document.createElement("span"); c.textContent = t("kb. {n} kcal / adag", { n: recipe.calories }); meta.appendChild(c); }
-    if (recipe.proteinGrams) { var pg = document.createElement("span"); pg.textContent = recipe.proteinGrams + t(" g fehérje"); meta.appendChild(pg); }
+    var share = nutritionShare(recipe, getSelectedProfile());
+    if (recipe.calories) {
+      var c = document.createElement("span"); c.textContent = t("kb. {n} kcal / adag", { n: recipe.calories }); meta.appendChild(c);
+      if (share.kcal) { var cs = document.createElement("span"); cs.className = "meta-share"; cs.textContent = share.kcal; meta.appendChild(cs); }
+    }
+    if (recipe.proteinGrams) {
+      var pg = document.createElement("span"); pg.textContent = recipe.proteinGrams + t(" g fehérje"); meta.appendChild(pg);
+      if (share.protein) { var ps = document.createElement("span"); ps.className = "meta-share"; ps.textContent = share.protein; meta.appendChild(ps); }
+    }
     if (meta.childNodes.length) body.appendChild(meta);
 
     var info = opts.live ? {} : recipeTagInfo(base);
@@ -3753,6 +3959,60 @@
       });
       wrap.appendChild(row);
     });
+    renderWeekNutrition();
+  }
+
+  // Becsült tápérték: a napi étkezések adagonkénti kalóriája (egy főre). Az
+  // adag a recept `calories` mezője; a fehérje csak ott, ahol van `proteinGrams`.
+  function renderWeekNutrition() {
+    var sec = document.getElementById("weekNutrition");
+    sec.innerHTML = "";
+    var days = currentWeekDays.map(function (date) {
+      var d = { date: date, meals: 0, kcalMeals: 0, kcal: 0, protMeals: 0, prot: 0 };
+      MEALS.forEach(function (meal) {
+        var entry = weekRecipeStore[dateKey(date) + ":" + meal.slot];
+        if (!entry) return;
+        d.meals++;
+        var c = Number(entry.recipe.calories), pr = Number(entry.recipe.proteinGrams);
+        if (c > 0) { d.kcalMeals++; d.kcal += c; }
+        if (pr > 0) { d.protMeals++; d.prot += pr; }
+      });
+      return d;
+    });
+    sec.hidden = !days.some(function (d) { return d.meals; });
+    if (sec.hidden) return;
+    var h = document.createElement("h2"); h.id = "wnTitle"; h.textContent = t("Becsült tápérték"); sec.appendChild(h);
+    var note = document.createElement("p"); note.className = "wn-note";
+    note.textContent = t("Becsült, egy főre, adagonként: a nap étkezéseinek összege. A fehérje csak ott szerepel, ahol megvan az adat. A napi átlag a teljes (mind a három étkezéssel megtervezett) napokból készül.");
+    sec.appendChild(note);
+    var num = function (n) { return Math.round(n).toLocaleString(LOCALE); };
+    var wrap = document.createElement("div"); wrap.className = "wn-scroll";
+    var table = document.createElement("table"); table.className = "wn-table";
+    var thead = document.createElement("thead"), hr = document.createElement("tr");
+    [t("Nap"), t("Kalória"), t("Fehérje")].forEach(function (x) { var th = document.createElement("th"); th.textContent = x; hr.appendChild(th); });
+    thead.appendChild(hr); table.appendChild(thead);
+    var tbody = document.createElement("tbody");
+    days.forEach(function (d) {
+      var tr = document.createElement("tr");
+      tr.setAttribute("data-date", dateKey(d.date));
+      var c0 = document.createElement("td"); c0.textContent = capitalize(dayNameFmt.format(d.date)) + " (" + weekFmt.format(d.date) + ")";
+      var c1 = document.createElement("td"), c2 = document.createElement("td");
+      c1.textContent = d.kcalMeals ? t("{n} kcal", { n: num(d.kcal) }) + (d.kcalMeals < MEALS.length ? t(" ({k} étkezésből)", { k: d.kcalMeals }) : "") : "—";
+      c2.textContent = d.protMeals ? t("{n} g", { n: num(d.prot) }) + (d.protMeals < MEALS.length ? t(" ({k} étkezésből)", { k: d.protMeals }) : "") : "—";
+      tr.appendChild(c0); tr.appendChild(c1); tr.appendChild(c2); tbody.appendChild(tr);
+    });
+    table.appendChild(tbody);
+    var full = days.filter(function (d) { return d.kcalMeals === MEALS.length; });
+    var fullP = days.filter(function (d) { return d.protMeals === MEALS.length; });
+    var avg = function (list, key) { return list.reduce(function (a, d) { return a + d[key]; }, 0) / list.length; };
+    var tfoot = document.createElement("tfoot"), fr = document.createElement("tr");
+    fr.id = "wnAverage";
+    var f0 = document.createElement("th"), f1 = document.createElement("td"), f2 = document.createElement("td");
+    f0.textContent = t("Napi átlag");
+    f1.textContent = full.length ? t("{n} kcal", { n: num(avg(full, "kcal")) }) : "—";
+    f2.textContent = fullP.length ? t("{n} g", { n: num(avg(fullP, "prot")) }) : "—";
+    fr.appendChild(f0); fr.appendChild(f1); fr.appendChild(f2); tfoot.appendChild(fr); table.appendChild(tfoot);
+    wrap.appendChild(table); sec.appendChild(wrap);
   }
 
   function renderWeek() {
@@ -4002,6 +4262,57 @@
     try { localStorage.setItem(SHOP_CHECKED_KEY_PREFIX + weekKey, JSON.stringify(map)); } catch (e) {}
   }
 
+  // „Nálam van” alapanyagok: a bejelölt tételek nem látszanak a listán (a
+  // nyomtatáson sem, az ugyanebből a listából készül). Ékezet nélküli, szóhatáros
+  // egyezés, hogy a „só” ne fogja meg a sonkát, a „bors” a borsót.
+  var STAPLES_KEY = "napi-recept-staples";
+  var STAPLES = [
+    { id: "so", label: t("só"), re: /(^|[^a-z])sot?($|[^a-z])/ },
+    { id: "bors", label: t("bors"), re: /(^|[^a-z])(fekete|feher|olt)? ?bors($|[^a-z])|feketebors/ },
+    { id: "olaj", label: t("olaj"), re: /olaj(?!bogyo|os)/ },
+    { id: "liszt", label: t("liszt"), re: /liszt(?!harmat)/ },
+    { id: "cukor", label: t("cukor"), re: /cukor(?!bors|kukorica)/ },
+    { id: "ecet", label: t("ecet"), re: /ecet(?!es)/ },
+    { id: "paprika", label: t("fűszerpaprika"), re: /fuszerpaprika|pirospaprika|piros fuszerpaprika|paprikapor|(edesnemes|csipos|fustolt|olt) paprika/ },
+    { id: "sutopor", label: t("sütőpor, szódabikarbóna"), re: /sutopor|szodabikarbona/ },
+    { id: "baber", label: t("babérlevél"), re: /baber/ },
+    { id: "viz", label: t("víz"), re: /(^|[^a-z])viz($|[^a-z])/ }
+  ];
+
+  function getStaples() {
+    try {
+      var v = JSON.parse(localStorage.getItem(STAPLES_KEY) || "[]");
+      return Array.isArray(v) ? v : [];
+    } catch (e) { return []; }
+  }
+
+  function saveStaples(ids) {
+    try { localStorage.setItem(STAPLES_KEY, JSON.stringify(ids)); } catch (e) {}
+  }
+
+  function stapleHides(displayName, ids) {
+    var f = foldText(displayName);
+    return STAPLES.some(function (s) { return ids.indexOf(s.id) !== -1 && s.re.test(f); });
+  }
+
+  function initStaples() {
+    var holder = document.getElementById("staplesChips");
+    var ids = getStaples();
+    STAPLES.forEach(function (s) {
+      var b = document.createElement("button");
+      b.type = "button"; b.setAttribute("data-staple", s.id); b.textContent = s.label;
+      b.setAttribute("aria-pressed", ids.indexOf(s.id) !== -1 ? "true" : "false");
+      b.addEventListener("click", function () {
+        var cur = getStaples(), at = cur.indexOf(s.id);
+        if (at === -1) cur.push(s.id); else cur.splice(at, 1);
+        saveStaples(cur);
+        b.setAttribute("aria-pressed", at === -1 ? "true" : "false");
+        refreshShoppingPanel();
+      });
+      holder.appendChild(b);
+    });
+  }
+
   function renderShoppingList(container, result) {
     container.innerHTML = "";
     if (!result.recipeCount) {
@@ -4017,12 +4328,20 @@
     var checkedMap = getShopCheckedMap(weekKey);
 
     var categorized = {};
+    var staples = getStaples(), hiddenCount = 0;
     Object.keys(result.items).forEach(function (key) {
       var item = result.items[key];
+      if (staples.length && stapleHides(item.displayName, staples)) { hiddenCount++; return; }
       var cat = categorizeIngredient(item.displayName);
       if (!categorized[cat]) categorized[cat] = [];
       categorized[cat].push(item);
     });
+
+    if (hiddenCount) {
+      var hn = document.createElement("p"); hn.className = "staples-hidden-note";
+      hn.textContent = t("{n} tétel nem látszik, mert a „Nálam van” alapanyagok között jelölted.", { n: hiddenCount });
+      container.appendChild(hn);
+    }
 
     SHOPPING_CATEGORIES.forEach(function (catDef) {
       var list = categorized[catDef.label];
@@ -4080,9 +4399,69 @@
   window.addEventListener("afterprint", function () { document.body.classList.remove("print-week"); });
 
   function initShoppingList() {
+    initStaples();
     document.getElementById("weekPrintBtn").addEventListener("click", printWeek);
     document.getElementById("shopPrintBtn").addEventListener("click", printWeek);
     document.getElementById("buildShoppingListBtn").addEventListener("click", refreshShoppingPanel);
+  }
+
+  // ---------- mértékegység-átváltó (Alapok kezdőknek) ----------
+  // Kb. értékek: 1 dkg = 10 g, 1 dl = 100 ml, evőkanál 15 ml, teáskanál 5 ml,
+  // csésze 2,4 dl. A gramm és a milliliter közti átváltás hozzávalótól függ,
+  // ezért csak azonos fajtán belül váltunk (tömeg, térfogat, hőmérséklet).
+  var CONV_UNITS = [
+    { id: "g", label: "g", kind: "mass", f: 1 },
+    { id: "dkg", label: "dkg", kind: "mass", f: 10 },
+    { id: "ml", label: "ml", kind: "vol", f: 1 },
+    { id: "dl", label: "dl", kind: "vol", f: 100 },
+    { id: "l", label: t("liter"), kind: "vol", f: 1000 },
+    { id: "cup", label: t("csésze (2,4 dl)"), kind: "vol", f: 240 },
+    { id: "tbsp", label: t("evőkanál (15 ml)"), kind: "vol", f: 15 },
+    { id: "tsp", label: t("teáskanál (5 ml)"), kind: "vol", f: 5 },
+    { id: "c", label: "°C", kind: "temp" },
+    { id: "f", label: "°F", kind: "temp" }
+  ];
+
+  function convertUnits(value, fromId, toId) {
+    var a = CONV_UNITS.filter(function (u) { return u.id === fromId; })[0];
+    var b = CONV_UNITS.filter(function (u) { return u.id === toId; })[0];
+    if (!a || !b || a.kind !== b.kind) return null;
+    if (a.kind === "temp") {
+      if (a.id === b.id) return value;
+      return a.id === "c" ? value * 9 / 5 + 32 : (value - 32) * 5 / 9;
+    }
+    return value * a.f / b.f;
+  }
+
+  function initConverter() {
+    var val = document.getElementById("convValue"), from = document.getElementById("convFrom"), to = document.getElementById("convTo");
+    var out = document.getElementById("convResult");
+    CONV_UNITS.forEach(function (u) {
+      var o = document.createElement("option"); o.value = u.id; o.textContent = u.label; from.appendChild(o);
+    });
+    function fillTo() {
+      var kind = CONV_UNITS.filter(function (u) { return u.id === from.value; })[0].kind;
+      var keep = to.value;
+      to.innerHTML = "";
+      CONV_UNITS.forEach(function (u) {
+        if (u.kind !== kind || u.id === from.value) return;
+        var o = document.createElement("option"); o.value = u.id; o.textContent = u.label; to.appendChild(o);
+      });
+      if (keep && Array.prototype.some.call(to.options, function (o) { return o.value === keep; })) to.value = keep;
+    }
+    function show() {
+      var x = parseFloat(String(val.value).replace(",", "."));
+      if (isNaN(x)) { out.textContent = ""; return; }
+      var r = convertUnits(x, from.value, to.value);
+      if (r === null) { out.textContent = ""; return; }
+      var fmt = function (n) { return fmtDec(Math.round(n * 100) / 100); };
+      var label = function (sel) { return sel.options[sel.selectedIndex].textContent; };
+      out.textContent = fmt(x) + " " + label(from) + " ≈ " + fmt(r) + " " + label(to);
+    }
+    from.value = "cup"; fillTo(); to.value = "dl"; show();
+    from.addEventListener("change", function () { fillTo(); show(); });
+    to.addEventListener("change", show);
+    val.addEventListener("input", show);
   }
 
   // ---------- boltkereső ----------
@@ -4701,6 +5080,7 @@
     initGlobalCuisineBtns();
     initWeekly();
     initShoppingList();
+    initConverter();
     initStoreFinder();
     document.querySelector('.tab-btn[data-tab="sutik"]').addEventListener("click", function () { if (!sweetsRendered) renderSweets(); });
     renderFavorites();

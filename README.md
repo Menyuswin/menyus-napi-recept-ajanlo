@@ -233,9 +233,9 @@ tartalmat a Cloudflare szerkesztőjébe is be kell másolni és telepíteni.
 Asztali nézetben (900 px fölött) bal oldalon állandó, görgetéskor is
 helyben maradó menüoszlop, csoportosítva:
 
-- **Mit főzzek?** — Napi ajánló · Mi van itthon? · ♥ Kedvenceim (darabszámmal)
-- **Tervezés és vásárlás** — Heti menü · Bevásárlólista · Közeli boltok
-- **Tudástár** — Hasznos tanácsok · Alapok kezdőknek
+- **Mit főzzek?** — Napi ajánló · Mi van itthon? (Gyors ötletekkel) · ♥ Kedvenceim (darabszámmal)
+- **Tervezés és vásárlás** — Heti menü (becsült tápértékkel) · Bevásárlólista („Nálam van” gombokkal) · Közeli boltok
+- **Tudástár** — Hasznos tanácsok · Alapok kezdőknek (mértékegység-átváltóval)
 - **Közösség** — Recept beküldése
 
 Minden menüpont egy `.tab-panel`-t mutat (`data-tab`: `ajanlo`, `kereso`,
@@ -337,6 +337,18 @@ receptenként eltér:
   (`tools/kcal-estimate/`, `node apply.js`) — új recept hozzáadása után
   újrafuttatható, a meglévő `calories` mezőket nem írja felül, csak a
   hiányzókat tölti ki. Részletek: `tools/kcal-estimate/README.md`.
+
+### Az adag a napi szükséglet hány százaléka
+
+A kalóriasor mellett (ahol van „kb. N kcal / adag”) egy kis szürke sor mutatja
+az arányt, a meglévő számok változatlanok. Ha a kiválasztott profilnak van
+napi kalóriacélja, ahhoz viszonyít („≈ 23 % a napi kalóriacélból”); ha nincs
+profil vagy cél, a 2000 kcal-os referenciához („≈ 17 % a 2000 kcal-os
+referenciához képest”). Fehérjesor csak akkor jelenik meg, ha a receptnek van
+`proteinGrams` mezője: a profil testsúlyából számolt napi szükséglethez
+(ugyanazzal a g/testsúlykilogramm szorzóval, mint a fehérjecél a szűrésnél),
+ennek híján az 50 g-os referenciához viszonyít. A százalék egyetlen adagra
+vonatkozik, tájékoztató becslés.
 
 ## Hogyan válogat
 
@@ -448,6 +460,19 @@ vissza — nincs localStorage-perzisztencia, mert ez tudatosan egy
 "ránézésre áttekintem, aztán rákattintok, ami kell" munkafolyamat, nem egy
 tartós beállítás.
 
+### Becsült tápérték a hétre
+
+A hét alatt (a „Bevásárlólista ehhez a héthez” gomb fölött) egy **Becsült
+tápérték** táblázat mutatja naponta a kalóriát (a nap étkezéseinek `calories`
+értéke, adagonként, egy főre) és a fehérjét — ez utóbbit csak ott, ahol a
+receptnek van `proteinGrams` mezője (a kézzel írt receptekben ma nincs, ott
+„—” látszik). Ha egy napnak csak néhány étkezéséhez van adat, a sor ezt jelzi
+(„… kcal (2 étkezésből)”). A **napi átlag** csak a teljes, mindhárom
+étkezéssel megtervezett napokból készül. A táblázat a menü minden
+változásánál (újragenerálás, másik étel, hétváltás) újraszámolódik; a
+maradékból felmelegített étkezés is beleszámít, mert azt is megeszik.
+Nyomtatásban nem jelenik meg.
+
 ### Előre főzés több napra („Hány napra főzöl előre?”)
 
 A Heti menü tetején beállítható, hogy nem minden nap főzöl, hanem egyszerre
@@ -526,6 +551,19 @@ megmarad újratöltés után is, de csak azon a gépen — más eszközzel nem
 szinkronizál, és egy másik hétre váltva nem hordódik át. Nyomtatáskor a
 valódi checkbox rejtve marad, csak a már meglévő `☐` nyomtatási jelölés
 látszik.
+
+### „Nálam van” — alapanyagok a listáról
+
+A Bevásárlólista fölött 10 „Nálam van:” gomb van (só, bors, olaj, liszt, cukor,
+ecet, fűszerpaprika, sütőpor/szódabikarbóna, babérlevél, víz). Ha egyet
+bejelölsz, az ilyen nevű tételek nem látszanak a listán, helyette egy rövid
+jegyzet mondja meg, hány tételt rejtettünk el. Az egyezés ékezet nélküli,
+szóhatáros (a „só” nem fogja meg a sonkát, a „bors” a borsót, az „olaj” az
+olajbogyót, az „ecet” az ecetes uborkát), a lista pedig a nyomtatáshoz is ugyanez, így a
+kinyomtatott lapon sem szerepelnek. A választás a `napi-recept-staples`
+localStorage-kulcsban marad meg (hét helyett az egész oldalra érvényes); ha a
+böngésző nem engedi az írást, a gombok akkor is működnek, csak újratöltés után
+nem maradnak bejelölve.
 
 ### Nyomtatás: menü + bevásárlólista
 
@@ -651,10 +689,46 @@ nem ajánlja rövid időkerethez.
 
 „Egyedényes” címkét szándékosan nem adunk: a lépésekből nem lehet
 megbízhatóan eldönteni (a nokedlis vagy lasagnés recept is annak tűnne).
+A „Gyors ötletek” alatti **Egy fazékban / tepsiben** gyűjtőgomb ezért csak
+egy konzervatív, becsült szabályt használ (lásd lent), és nem kerül
+címkeként a kártyára.
 
 A kereső alatti **Ötletek** gombokkal (Kezdőknek is megy / Grillen is /
 Hétvégi projekt / Nem kell főzni / Munkába is vihető) keresőszó nélkül is böngészhető egy-egy
 címke; hozzávalóval és étkezéssel kombinálható, újra rákattintva kikapcsol.
+
+### Gyors ötletek („Mi van itthon?”)
+
+A kereső „Ötletek” sora alatt egy összecsukható **Gyors ötletek** blokk van
+(asztali szélességen nyitva, mobilon csukva nyílik; a gombok a meglévő
+címkegombok stílusát használják, nincs vízszintes görgetés). Ami darabszámot
+mutat, azt induláskor egyszer számolja ki az oldal, a profil
+ételérzékenysége nélkül (a találatlista viszont szűr rá).
+
+- **Idő, edény** — „15 perces (182)” és „30 perces (559)”: a recept `time`
+  mezőjének **első** főzési ideje (pl. „1 óra 10 perc” = 70, „10 perc + egy
+  éjszaka hűtés” = 10); a `marinate` külön mező, nem számít bele.
+  „Egy fazékban / tepsiben (49)”: becsült, kulcsszavas szabály — a cím
+  egytálételt, rakottat, tepsist vagy fazékban/lábasban/edényben készülő
+  ételt jelez (`egytál|rakott|tepsis|tepsiben|egy fazék/lábas/serpenyő/edény|
+  fazékétel|fazékban|lábasban|edényben|egyben sült`), vagy egy lépés azt írja,
+  hogy mindent egy edényben/tepsiben készíts. Szándékosan szűk, ezért
+  kihagy olyan egyedényes ételt, amit a szöveg nem így nevez meg.
+- **Munkába vihető** — csak a „Munkába is vihető” (`lunchbox`) receptek közül:
+  „gyors (≤ 30 perc)” (36), „egészséges” (110: „Hosszú életért” címke vagy
+  legfeljebb 450 kcal / adag) és „húsmentes (becsült)” (62): a cím és a
+  hozzávalók között nincs hús-, hal- vagy szárnyasszó (ékezet nélkül, szó
+  eleji egyezéssel, hogy a „halloumi” vagy a „kagylótészta” ne számítson
+  húsnak). Az alaplé és a zsír nem számít, ezért „becsült”.
+- **Maradék** — „Maradt főtt rizs / csirke / kenyér / főtt burgonya / tészta /
+  tojás”: a keresőmezőbe beírja az alapanyagot, és lefuttatja a keresést.
+- **Alapanyag szerint** — csirke, sertés, marha, hal, tojás, tészta, rizs,
+  burgonya, hüvelyes, zöldség, gomba, sajt; mindegyik mellett a találatok
+  száma. A „hüvelyes” és a „zöldség” bővebb szólistára keres (lencse,
+  csicseriborsó, fehérbab… illetve cukkini, sárgarépa, káposzta…).
+
+A gombok az „Ötletek” gombokkal azonos módon működnek: egyszerre egy címke
+aktív, kereséssel és étkezéssel kombinálható, újra rákattintva kikapcsol.
 
 ## Kedvencek, megosztás, adagszám
 
@@ -731,6 +805,21 @@ szabadon elérhető. A tanácsokat és recepteket **nem szó szerint vettük
 át**, hanem mai nyelvre, mai mértékegységekre és mai háztartásokra
 írtuk át; a korabeli, ma már elavult vagy nem biztonságos részeket (pl.
 lúgból főzött házi szappan, cselédtartás körüli tudnivalók) kihagytuk.
+
+### Mértékegység-átváltó
+
+Az **Alapok kezdőknek** oldal alján (a „Mértékegységek egy helyen” tipp
+mellett) egy kis átváltó és két táblázat van. Az átváltóban egy érték és két
+legördülő (honnan → hová) van; csak azonos fajtán belül lehet váltani:
+tömeg (g, dkg), térfogat (ml, dl, liter, csésze, evőkanál, teáskanál) vagy
+hőmérséklet (°C, °F). Alapértékek: 1 dkg = 10 g, 1 dl = 100 ml, evőkanál ≈ 15 ml,
+teáskanál ≈ 5 ml, **csésze ≈ 2,4 dl** (ezt vettük alapul; a csészék mérete
+eltér). A gramm és a milliliter közötti váltás hozzávalótól függ, ezért ezt a
+„kb. hány gramm” táblázat adja meg liszt, kristálycukor, vaj, méz, nyers rizs
+és olaj esetén (ugyanazokkal a sűrűségekkel, mint a bevásárlólista
+összeadása). A sütőhőfok-táblázat °C ↔ gázfokozat (angol Gas Mark) ↔ °F, a
+szokásos kerekített konyhai értékekkel; légkeveréses sütőnél általában
+20 °C-kal kevesebbet kell állítani.
 
 ## Recept beküldése
 
