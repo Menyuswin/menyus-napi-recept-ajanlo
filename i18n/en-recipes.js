@@ -2037,6 +2037,435 @@ window.I18N_EN_RECIPES = {
    "Serve with potatoes or buckwheat; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "polish--sernik-light-konnyu-sult-turotorta-skyrrel": {
+  "title": "Sernik light (light baked cheesecake with skyr)",
+  "time": "1 hr 15 min + chilling",
+  "servings": "12 slices",
+  "ingredients": [
+   "750 g low-fat curd cheese (ideally smooth)",
+   "400 g skyr or Greek yogurt",
+   "4 eggs",
+   "80 g erythritol or 5 tbsp honey",
+   "2 tbsp cornflour",
+   "1 lemon, zest grated",
+   "1 tsp vanilla",
+   "for the base: 80 g oat biscuits or rolled oats, 2 tbsp melted butter"
+  ],
+  "steps": [
+   "Preheat the oven to 160 °C; crumble the oat biscuits with the butter and press into the bottom of a 24 cm springform tin.",
+   "Blend the curd cheese, skyr, eggs, sweetener, cornflour, lemon zest and vanilla until smooth (don't whisk to a foam).",
+   "Pour over the base and bake for 55-60 minutes until the edge is set and the centre still wobbles slightly.",
+   "Let it cool in the switched-off oven with the door ajar, then chill overnight.",
+   "It keeps 5 days in the fridge."
+  ]
+ },
+ "polish--szarlotka-fit-almas-pite-zabmorzsaval": {
+  "title": "Szarlotka fit (apple pie with oat crumble)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "1.5 kg tart apples, peeled and diced",
+   "2 tsp cinnamon",
+   "2 tbsp honey",
+   "1 tbsp lemon juice",
+   "for the crumble: 150 g rolled oats, 100 g wholemeal flour, 60 g cold butter, 1 egg, 4 tbsp brown sugar or erythritol, 1 tsp baking powder"
+  ],
+  "steps": [
+   "Cook the apples with the cinnamon, honey and lemon juice covered for 8-10 minutes until slightly softened.",
+   "Work the crumble ingredients into a crumbly dough; preheat the oven to 180 °C.",
+   "Press two-thirds of the crumble into the bottom of a 20×30 cm tin.",
+   "Spread over the apples and scatter the rest of the crumble on top.",
+   "Bake for 40 minutes until golden; slice once cool, it keeps 4 days."
+  ]
+ },
+ "polish--racuchy-pieczone-sutoben-sult-almas-lepenykek": {
+  "title": "Racuchy pieczone (oven-baked apple pancakes)",
+  "time": "35 min",
+  "servings": "4 servings (16 pancakes)",
+  "ingredients": [
+   "2 apples, finely diced",
+   "150 g wholemeal flour",
+   "200 ml kefir or buttermilk",
+   "1 egg",
+   "1 tbsp honey",
+   "1 tsp baking powder",
+   "1 tsp cinnamon",
+   "a little oil for the tray"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C, line a tray with baking paper and brush it lightly with oil.",
+   "Whisk the kefir with the egg and honey, add the flour, baking powder and cinnamon.",
+   "Stir in the apple.",
+   "Drop 16 small spoonfuls onto the tray and bake for 15-18 minutes, turning halfway.",
+   "Serve with yogurt; they keep 2 days in a box."
+  ]
+ },
+ "polish--kisiel-gyumolcsos-kemenyitos-poharkrem": {
+  "title": "Kisiel (Polish fruit starch pudding)",
+  "time": "15 min + chilling",
+  "servings": "4 cups",
+  "ingredients": [
+   "500 g berries or sour cherries (frozen is fine)",
+   "600 ml water",
+   "2-3 tbsp honey or erythritol",
+   "3 tbsp potato starch",
+   "1 lemon, juiced"
+  ],
+  "steps": [
+   "Cook the fruit in 500 ml water for 5 minutes and sweeten to taste.",
+   "Whisk the starch into the remaining 100 ml cold water until smooth.",
+   "Pour into the hot fruit while stirring and boil for 1 minute until thickened.",
+   "Stir in the lemon juice and pour into glasses.",
+   "Serve warm or cold; it keeps 3 days in the fridge."
+  ]
+ },
+ "polish--budyn-jaglany-kolespuding-kakaoval-es-banannal": {
+  "title": "Budyń jaglany (millet chocolate banana pudding)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "100 g millet",
+   "500 ml milk or plant milk",
+   "1 ripe banana",
+   "2 tbsp unsweetened cocoa powder",
+   "1-2 tbsp honey",
+   "pinch of salt",
+   "berries to serve"
+  ],
+  "steps": [
+   "Rinse the millet twice with boiling water (this removes bitterness).",
+   "Cook it in the milk with the salt over low heat, covered, for 20 minutes until soft.",
+   "Blend with the banana, cocoa and honey until creamy.",
+   "Pour into glasses.",
+   "Serve with fruit; it keeps 3 days in the fridge."
+  ]
+ },
+ "polish--babka-jogurtowa-konnyu-joghurtos-kuglof": {
+  "title": "Babka jogurtowa (light yogurt marble bundt cake)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "250 g wholemeal spelt flour",
+   "250 ml plain yogurt",
+   "3 eggs",
+   "80 g erythritol or brown sugar",
+   "6 tbsp oil",
+   "1 sachet baking powder",
+   "1 lemon, zest grated",
+   "2 tbsp cocoa powder (for marbling)"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and grease a bundt tin.",
+   "Whisk the eggs with the sweetener until fluffy, add the yogurt, oil and lemon zest, then the flour mixed with the baking powder.",
+   "Stir the cocoa into a third of the batter.",
+   "Pour the light and cocoa batters alternately into the tin and swirl with a fork to marble.",
+   "Bake for 45 minutes; slice once cool, it keeps 5 days."
+  ]
+ },
+ "polish--pierniczki-owsiane-zabpelyhes-mezeskalacs-keksz": {
+  "title": "Pierniczki owsiane (oat gingerbread cookies)",
+  "time": "30 min",
+  "servings": "20 cookies",
+  "ingredients": [
+   "150 g oat flour",
+   "50 g wholemeal flour",
+   "3 tbsp honey",
+   "1 egg",
+   "3 tbsp oil",
+   "2 tsp gingerbread spice mix",
+   "½ tsp bicarbonate of soda",
+   "2 tbsp unsweetened cocoa powder"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a baking tray.",
+   "Mix the flours, cocoa, spice and bicarbonate of soda.",
+   "Add the honey, egg and oil and knead quickly into a dough (chill for 10 minutes if sticky).",
+   "Shape small balls and flatten, or roll out and cut shapes.",
+   "Bake for 10-12 minutes; they keep 2 weeks in an airtight tin."
+  ]
+ },
+ "polish--jab-ka-pieczone-z-twarogiem-turoval-toltott-sult-alma": {
+  "title": "Jabłka pieczone z twarogiem (baked apples stuffed with curd cheese)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 large tart apples",
+   "200 g low-fat curd cheese",
+   "1 tbsp honey",
+   "2 tbsp raisins or cranberries",
+   "2 tbsp ground walnuts",
+   "1 tsp cinnamon",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C.",
+   "Cut the tops off the apples and core them to make a hollow.",
+   "Mix the curd cheese with the honey, raisins, walnuts, cinnamon and vanilla.",
+   "Fill the apples, replace the tops, stand them in a dish with a little water underneath and bake for 25-30 minutes.",
+   "Serve warm or cold; they keep 2 days in the fridge."
+  ]
+ },
+ "polish--sernik-na-zimno-z-jagodami-afonyas-hideg-turotorta": {
+  "title": "Sernik na zimno (no-bake blueberry cheesecake)",
+  "time": "25 min + 4 hr chilling",
+  "servings": "10 slices",
+  "ingredients": [
+   "600 g low-fat curd cheese",
+   "200 ml Greek yogurt",
+   "3 tbsp honey or erythritol",
+   "15 g gelatine",
+   "1 lemon, juiced",
+   "300 g blueberries (fresh or frozen)",
+   "12 sponge fingers or 100 g oat biscuits for the base"
+  ],
+  "steps": [
+   "Lay the sponge fingers in the bottom of a 22 cm tin lined with film.",
+   "Soak the gelatine in 5 tbsp cold water, then dissolve over low heat.",
+   "Blend the curd cheese with the yogurt, sweetener and lemon juice until smooth and stir in the lukewarm gelatine.",
+   "Fold in half the blueberries, spread in the tin and scatter the rest on top.",
+   "Chill for at least 4 hours; it keeps 3 days."
+  ]
+ },
+ "polish--ciasto-ze-sliwkami-szilvas-joghurtos-kevert": {
+  "title": "Ciasto ze śliwkami (plum yogurt traybake)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "200 g wholemeal flour",
+   "200 ml plain yogurt",
+   "2 eggs",
+   "60 g brown sugar or erythritol",
+   "5 tbsp oil",
+   "1 tsp baking powder",
+   "1 tsp cinnamon",
+   "600 g plums, halved and stoned",
+   "2 tbsp flaked almonds"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×30 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy and add the yogurt and oil.",
+   "Stir in the flour mixed with the baking powder and cinnamon and spread in the tin.",
+   "Press the plums cut side up closely into the batter and sprinkle with the almonds.",
+   "Bake for 35-40 minutes; slice once cool, it keeps 3 days."
+  ]
+ },
+ "polish--placuszki-z-twarogu-turos-lepenykek-gyumolccsel": {
+  "title": "Placuszki z twarogu (curd cheese pancakes with fruit)",
+  "time": "25 min",
+  "servings": "3 servings (12 pancakes)",
+  "ingredients": [
+   "250 g low-fat curd cheese",
+   "2 eggs",
+   "50 g oat flour or wholemeal flour",
+   "1 tbsp honey",
+   "1 tsp vanilla",
+   "pinch of salt",
+   "a little oil for frying",
+   "berries and yogurt to serve"
+  ],
+  "steps": [
+   "Mash the curd cheese with a fork and mix with the eggs, flour, honey, vanilla and salt.",
+   "Brush a non-stick frying pan lightly with oil.",
+   "Drop in spoonfuls and flatten slightly.",
+   "Cook over medium heat for 2-3 minutes per side until golden.",
+   "Serve with fruit and yogurt; they keep 2 days in the fridge."
+  ]
+ },
+ "polish--makowiec-bez-maki-liszt-nelkuli-makos-piskota": {
+  "title": "Makowiec bez mąki (flourless poppy seed sponge)",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "250 g ground poppy seeds",
+   "5 eggs, separated",
+   "80 g erythritol or 4 tbsp honey",
+   "1 apple, grated",
+   "1 orange, zest grated",
+   "1 tsp baking powder",
+   "30 g raisins",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Preheat the oven to 170 °C and line a 20×25 cm tin.",
+   "Whisk the yolks with half the sweetener until fluffy, add the poppy seeds, apple, orange zest, raisins, vanilla and baking powder.",
+   "Whisk the whites with the rest of the sweetener to stiff peaks and fold gently into the poppy mixture.",
+   "Spread in the tin and bake for 35-40 minutes.",
+   "Slice once cool; it keeps 4 days."
+  ]
+ },
+ "polish--ciasteczka-owsiane-z-zurawina-vorosafonyas-zabkeksz": {
+  "title": "Ciasteczka owsiane z żurawiną (cranberry oat cookies)",
+  "time": "25 min",
+  "servings": "18 cookies",
+  "ingredients": [
+   "150 g rolled oats",
+   "60 g wholemeal flour",
+   "50 g dried cranberries",
+   "30 g ground almonds",
+   "1 egg",
+   "3 tbsp honey",
+   "3 tbsp coconut oil or oil",
+   "½ tsp bicarbonate of soda",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a baking tray.",
+   "Mix the dry ingredients.",
+   "Add the egg, honey and oil and work together.",
+   "Put 18 spoonfuls on the tray and flatten.",
+   "Bake for 12-14 minutes; they keep 1 week in a tin."
+  ]
+ },
+ "polish--batony-owsiane-dios-magvas-zabszelet": {
+  "title": "Batony owsiane (nut and seed oat bars)",
+  "time": "35 min",
+  "servings": "12 bars",
+  "ingredients": [
+   "200 g rolled oats",
+   "50 g walnuts, roughly chopped",
+   "30 g sunflower seeds",
+   "30 g pumpkin seeds",
+   "50 g prunes or dates, chopped",
+   "2 ripe bananas, mashed",
+   "3 tbsp honey",
+   "2 tbsp peanut butter",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×20 cm tin.",
+   "Mix the banana with the honey and peanut butter.",
+   "Add the oats, seeds, walnuts, dried fruit and cinnamon.",
+   "Press into the tin and bake for 22-25 minutes.",
+   "Slice once cool; they keep 1 week in a box."
+  ]
+ },
+ "polish--mus-jab-kowy-fahejas-almapure-desszert-joghurttal": {
+  "title": "Mus jabłkowy (cinnamon apple purée dessert with yogurt)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg sweet-tart apples, peeled and diced",
+   "100 ml water",
+   "1 tsp cinnamon",
+   "1 tbsp lemon juice",
+   "1 tbsp honey (optional)",
+   "200 ml Greek yogurt",
+   "2 tbsp toasted oats or walnuts"
+  ],
+  "steps": [
+   "Cook the apples with the water, cinnamon and lemon juice covered for 12-15 minutes until they fall apart.",
+   "Blend with a stick blender and sweeten with honey to taste.",
+   "Leave to cool.",
+   "Layer in glasses with the yogurt and sprinkle with toasted oats.",
+   "It keeps 4 days in the fridge (the purée alone keeps 1 week)."
+  ]
+ },
+ "polish--galaretka-z-owocami-gyumolcsos-zsele-joghurthabbal": {
+  "title": "Galaretka z owocami (fruit jelly with yogurt cream)",
+  "time": "20 min + 3 hr chilling",
+  "servings": "6 cups",
+  "ingredients": [
+   "500 ml 100% fruit juice (apple or grape)",
+   "12 g gelatine",
+   "300 g mixed fruit (strawberries, blueberries, peaches), chopped",
+   "200 ml Greek yogurt",
+   "1 tbsp honey",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Soak the gelatine in 100 ml cold juice for 5 minutes.",
+   "Warm the rest of the juice (don't boil) and dissolve the gelatine in it.",
+   "Divide the fruit between glasses and pour over the lukewarm jelly.",
+   "Chill for at least 3 hours until set.",
+   "Whisk the yogurt with the honey and vanilla and spoon on top; it keeps 3 days in the fridge."
+  ]
+ },
+ "polish--paczki-pieczone-sutoben-sult-joghurtos-fankocskak": {
+  "title": "Pączki pieczone (oven-baked yogurt doughnut bites)",
+  "time": "35 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "200 g wholemeal spelt flour",
+   "150 ml plain yogurt",
+   "1 egg",
+   "2 tbsp honey",
+   "2 tbsp oil",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "1 lemon, zest grated",
+   "8 tsp sugar-free jam for filling",
+   "1 tbsp powdered erythritol for the top"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and grease a mini muffin tin.",
+   "Whisk the yogurt with the egg, honey, oil and lemon zest.",
+   "Add the flour, baking powder and bicarbonate of soda and mix into a smooth batter.",
+   "Half-fill the holes, add ½ tsp jam, cover with batter and bake for 15-17 minutes.",
+   "Dust with powdered sweetener; they keep 3 days in a box."
+  ]
+ },
+ "polish--ptasie-mleczko-fit-konnyu-vanilias-joghurtos-habszelet-csokoladeval": {
+  "title": "Ptasie mleczko fit (light vanilla yogurt mousse squares with chocolate)",
+  "time": "30 min + 4 hr chilling",
+  "servings": "16 squares",
+  "ingredients": [
+   "500 g Greek yogurt or skyr",
+   "300 ml milk",
+   "20 g gelatine",
+   "4 tbsp erythritol or honey",
+   "2 tsp vanilla",
+   "2 egg whites (pasteurised) or 200 ml whipped cream (optional)",
+   "50 g dark chocolate (70%) for the top"
+  ],
+  "steps": [
+   "Soak the gelatine in the cold milk for 5 minutes, then dissolve over low heat without boiling.",
+   "Whisk the yogurt with the sweetener and vanilla until fluffy and pour in the lukewarm gelatine milk in a thin stream while stirring.",
+   "For a lighter texture, gently fold in the whipped egg whites or cream.",
+   "Pour into a 20×20 cm tin lined with film and chill for 3 hours.",
+   "Spread the melted chocolate on top, chill for another hour, then cut into squares; it keeps 4 days in the fridge."
+  ]
+ },
+ "polish--kasza-manna-z-malinami-malnas-tejbegriz-keves-mezzel": {
+  "title": "Kasza manna z malinami (semolina pudding with raspberries)",
+  "time": "15 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "600 ml milk or plant milk",
+   "6 tbsp wholemeal semolina",
+   "1 tbsp honey",
+   "pinch of salt",
+   "1 tsp vanilla",
+   "200 g raspberries (fresh or frozen)"
+  ],
+  "steps": [
+   "Bring the milk to the boil with the salt and vanilla.",
+   "Sprinkle in the semolina while stirring and cook over low heat for 4-5 minutes until thickened.",
+   "Take off the heat and stir in the honey.",
+   "Mash half the raspberries with a fork and spoon over the pudding with the rest left whole.",
+   "Serve warm or cold; it keeps 2 days in the fridge."
+  ]
+ },
+ "polish--muffinki-jagodowe-owsiane-afonyas-zabmuffin": {
+  "title": "Muffinki jagodowe owsiane (blueberry oat muffins)",
+  "time": "35 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "180 g oat flour",
+   "2 ripe bananas, mashed",
+   "2 eggs",
+   "150 ml plain yogurt",
+   "2 tbsp honey",
+   "3 tbsp oil",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "150 g blueberries"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin.",
+   "Mix the banana with the eggs, yogurt, honey and oil.",
+   "Add the oat flour, baking powder and bicarbonate of soda and stir just to combine.",
+   "Fold in the blueberries, spoon into the tin and bake for 20-22 minutes.",
+   "They keep 3 days in a box, or 1 month frozen."
+  ]
+ },
  "southslavic--turos-retes-burek": {
   "title": "Cheese burek",
   "time": "1 hr 15 min",
@@ -4267,6 +4696,434 @@ window.I18N_EN_RECIPES = {
    "Stuff the onions and stand them in a saucepan; scatter the rest of the chopped onion between them.",
    "Mix the tomato purée with 500 ml water and the oil, pour over and simmer covered over low heat for 45-50 minutes.",
    "Serve with yogurt; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--tikvenik-light-sutotokos-dios-reteslepeny-keves-cukorral": {
+  "title": "Tikvenik light (pumpkin walnut filo pie with little sugar)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "1 kg pumpkin or squash, grated",
+   "80 g ground walnuts",
+   "4 tbsp honey or erythritol",
+   "2 tsp cinnamon",
+   "1 lemon, zest grated",
+   "250 g filo or strudel pastry",
+   "4 tbsp melted butter or oil for brushing"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and grease a 20×30 cm tin.",
+   "Squeeze the grated pumpkin lightly and mix with the walnuts, honey, cinnamon and lemon zest.",
+   "Brush a sheet lightly with oil, scatter over some filling, roll up and coil in the tin; repeat until used up.",
+   "Brush the top and bake for 35-40 minutes until golden.",
+   "Slice once cool; it keeps 3 days in a box."
+  ]
+ },
+ "southslavic--tufahije-light-dios-toltott-fott-alma": {
+  "title": "Tufahije light (poached apples stuffed with walnuts)",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "6 medium firm apples (e.g. Jonagold), peeled and cored",
+   "500 ml water",
+   "3 tbsp honey",
+   "1 lemon, juiced",
+   "1 cinnamon stick",
+   "80 g ground walnuts",
+   "1 tsp vanilla",
+   "200 ml Greek yogurt for the top"
+  ],
+  "steps": [
+   "Bring the water to the boil with the honey, lemon juice and cinnamon.",
+   "Add the apples and poach gently for 10-12 minutes, turning, until just tender (not falling apart); lift out.",
+   "Reduce the syrup slightly for 5 minutes.",
+   "Mix the walnuts with the vanilla and 3 tbsp syrup and fill the apples.",
+   "Spoon yogurt on top and drizzle with a little syrup; they keep 3 days in the fridge."
+  ]
+ },
+ "southslavic--integralne-palacinke-teljes-kiorlesu-palacsinta-turoval-es-gyumolccsel": {
+  "title": "Integralne palačinke (wholemeal crêpes with curd cheese and fruit)",
+  "time": "35 min",
+  "servings": "4 servings (8 crêpes)",
+  "ingredients": [
+   "120 g wholemeal flour",
+   "2 eggs",
+   "300 ml milk",
+   "100 ml sparkling water",
+   "pinch of salt",
+   "a little oil for frying",
+   "for the filling: 300 g low-fat curd cheese, 100 ml yogurt, 1 tbsp honey, 1 tsp vanilla, 200 g berries"
+  ],
+  "steps": [
+   "Mix the flour, eggs, milk, water and salt until smooth and rest for 10 minutes.",
+   "Cook 8 thin crêpes in a lightly oiled frying pan.",
+   "Mix the curd cheese with the yogurt, honey and vanilla until smooth.",
+   "Spread the crêpes with the cream, scatter over the fruit and roll up.",
+   "They keep 2 days in the fridge."
+  ]
+ },
+ "southslavic--kolac-od-jogurta-bosnyak-joghurtos-piskota-konnyu-szirupban": {
+  "title": "Kolač od jogurta (Bosnian yogurt cake in light syrup)",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "250 ml plain yogurt",
+   "3 eggs",
+   "200 g wholemeal spelt flour",
+   "60 g brown sugar or erythritol",
+   "6 tbsp oil",
+   "1 sachet baking powder",
+   "1 lemon, zest grated",
+   "for the syrup: 200 ml water, 3 tbsp honey, 1 lemon, juiced"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×25 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy, add the yogurt, oil and lemon zest, then the flour mixed with the baking powder.",
+   "Pour into the tin and bake for 30 minutes.",
+   "Meanwhile, boil the water with the honey and lemon juice for 3 minutes.",
+   "Cut the warm cake into slices and drizzle with the lukewarm syrup; it keeps 4 days."
+  ]
+ },
+ "southslavic--strudla-s-jabukama-almas-retes-filotesztabol-keves-cukorral": {
+  "title": "Štrudla s jabukama (filo apple strudel with little sugar)",
+  "time": "55 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "1 kg tart apples, grated and lightly squeezed",
+   "50 g ground walnuts",
+   "4 tbsp rolled oats",
+   "2 tbsp honey",
+   "2 tsp cinnamon",
+   "1 lemon, juiced",
+   "250 g filo pastry",
+   "3 tbsp melted butter or oil"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and line a baking tray.",
+   "Mix the apple with the walnuts, oats, honey, cinnamon and lemon juice.",
+   "Stack 2-3 sheets, brushing each lightly, pile half the filling along the long edge and roll up; make the second roll the same way.",
+   "Brush the tops, score and bake for 30-35 minutes.",
+   "Slice while lukewarm; it keeps 3 days."
+  ]
+ },
+ "southslavic--rogac-kolac-szentjanoskenyer-lisztes-kakaos-kevert": {
+  "title": "Rogač kolač (carob flour chocolatey traybake)",
+  "time": "45 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "80 g carob flour (rogač)",
+   "120 g wholemeal flour",
+   "3 eggs",
+   "200 ml plain yogurt",
+   "5 tbsp oil",
+   "3 tbsp honey",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "50 g roughly chopped walnuts"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×20 cm tin.",
+   "Whisk the eggs with the honey until fluffy and add the yogurt and oil.",
+   "Stir in both flours, the baking powder and bicarbonate of soda.",
+   "Spread in the tin, sprinkle with walnuts and bake for 25-30 minutes.",
+   "Slice once cool; it keeps 4 days (carob is naturally sweet, so a little honey is enough)."
+  ]
+ },
+ "southslavic--orasnice-light-dios-habcsok-keksz-kevesebb-cukorral": {
+  "title": "Orasnice light (walnut meringue cookies with less sugar)",
+  "time": "35 min",
+  "servings": "20 cookies",
+  "ingredients": [
+   "3 egg whites",
+   "80 g erythritol or 60 g sugar",
+   "200 g coarsely ground walnuts",
+   "1 lemon, zest grated",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Preheat the oven to 160 °C and line a baking tray.",
+   "Whisk the egg whites to stiff peaks, gradually adding the sweetener.",
+   "Gently fold in the walnuts, lemon zest and vanilla.",
+   "With wet hands or two spoons, shape 20 small logs on the tray.",
+   "Bake for 15-18 minutes until lightly coloured on top; they keep 1 week in a tin."
+  ]
+ },
+ "southslavic--medenjaci-fit-mezes-fuszeres-teljes-kiorlesu-keksz": {
+  "title": "Medenjaci fit (honey spice wholemeal cookies)",
+  "time": "35 min",
+  "servings": "24 cookies",
+  "ingredients": [
+   "200 g wholemeal flour",
+   "50 g ground almonds",
+   "4 tbsp honey",
+   "1 egg",
+   "3 tbsp oil",
+   "1 tsp gingerbread spice",
+   "½ tsp bicarbonate of soda",
+   "1 orange, zest grated"
+  ],
+  "steps": [
+   "Warm the honey with the oil until lukewarm.",
+   "Mix the flour, almonds, spice and bicarbonate of soda, add the honey oil, egg and orange zest and knead into a dough.",
+   "Chill for 20 minutes; preheat the oven to 175 °C.",
+   "Roll out 5 mm thick, cut out shapes and put on a tray.",
+   "Bake for 10-12 minutes; they keep 2 weeks in a tin and soften over time."
+  ]
+ },
+ "southslavic--krempita-light-konnyu-vanilias-kremes": {
+  "title": "Krempita light (lighter vanilla custard slice)",
+  "time": "40 min + 3 hr chilling",
+  "servings": "12 squares",
+  "ingredients": [
+   "1 sheet (270 g) puff pastry",
+   "800 ml milk (1.5%)",
+   "3 egg yolks",
+   "6 tbsp cornflour",
+   "60 g erythritol or 4 tbsp honey",
+   "2 tsp vanilla",
+   "12 g gelatine",
+   "3 egg whites",
+   "1 tbsp powdered erythritol for the top"
+  ],
+  "steps": [
+   "Cut the pastry in two and bake in two tins at 200 °C for 12-15 minutes until golden; cut one into squares.",
+   "Soak the gelatine in 5 tbsp water. Boil half the milk, whisk the other half with the yolks, cornflour and half the sweetener, pour into the hot milk and cook, stirring, into a thick custard.",
+   "Off the heat, stir in the vanilla and gelatine.",
+   "Whisk the whites with the rest of the sweetener to stiff peaks and fold into the lukewarm custard.",
+   "Spread over the whole sheet, cover with the cut top, chill for 3 hours and dust with powdered sweetener; it keeps 3 days."
+  ]
+ },
+ "southslavic--sutlijas-light-fahejas-tejberizs-keves-cukorral": {
+  "title": "Sutlijaš light (cinnamon rice pudding with little sugar)",
+  "time": "45 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "120 g short-grain rice",
+   "300 ml water",
+   "800 ml milk (1.5%) or plant milk",
+   "2-3 tbsp honey or erythritol",
+   "1 tsp vanilla",
+   "1 lemon, peel pared in one piece",
+   "cinnamon for the top"
+  ],
+  "steps": [
+   "Cook the rice in the water for 8-10 minutes until it absorbs the water.",
+   "Pour in the milk, add the lemon peel and cook over low heat, stirring often, for 25-30 minutes until creamy.",
+   "Remove the lemon peel and stir in the honey and vanilla.",
+   "Divide into bowls.",
+   "Serve cold, dusted with cinnamon; it keeps 3 days in the fridge."
+  ]
+ },
+ "southslavic--pita-s-visnjama-meggyes-reteslepeny-zabpehellyel": {
+  "title": "Pita s višnjama (sour cherry filo pie with oats)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "600 g pitted sour cherries (frozen is fine, drained)",
+   "4 tbsp rolled oats",
+   "3 tbsp erythritol or honey",
+   "1 tsp cinnamon",
+   "250 g filo pastry",
+   "3 tbsp melted butter or oil",
+   "1 tbsp powdered erythritol for the top"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and grease a 20×30 cm tin.",
+   "Mix the cherries with the oats, sweetener and cinnamon.",
+   "Layer half the sheets in the tin, brushing each lightly, scatter over the cherries and cover with the rest of the brushed sheets.",
+   "Score the top into portions and bake for 35 minutes until golden.",
+   "Dust with powdered sweetener once cool; it keeps 3 days."
+  ]
+ },
+ "southslavic--kiselo-mlyako-s-med-i-orehi-bolgar-joghurt-mezzel-es-dioval": {
+  "title": "Kiselo mlyako s med i orehi (Bulgarian yogurt with honey and walnuts)",
+  "time": "5 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "400 ml thick live plain yogurt (Bulgarian style)",
+   "2 tsp honey",
+   "30 g walnuts, roughly crushed",
+   "1 tsp cinnamon (optional)",
+   "a few pieces of fresh fruit (fig, grapes or pear)"
+  ],
+  "steps": [
+   "Divide the yogurt between two bowls.",
+   "Drizzle with the honey.",
+   "Sprinkle with the walnuts and cinnamon.",
+   "Garnish with fresh fruit.",
+   "Serve at once — the simplest healthy dessert."
+  ]
+ },
+ "southslavic--pecene-kruske-s-orasima-dios-mezes-sult-korte": {
+  "title": "Pečene kruške s orasima (baked pears with walnuts and honey)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 ripe but firm pears, halved and cored",
+   "4 tsp honey",
+   "40 g walnuts, roughly chopped",
+   "1 tsp cinnamon",
+   "100 ml plain yogurt or curd cheese cream to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Lay the pears cut side up in an ovenproof dish and pour 3 tbsp water underneath.",
+   "Fill the hollows with walnuts, drizzle with honey and sprinkle with cinnamon.",
+   "Bake for 20-25 minutes until soft and caramelised.",
+   "Serve lukewarm with yogurt; they keep 2 days in the fridge."
+  ]
+ },
+ "southslavic--kuglice-od-urmi-i-oraha-datolyas-dios-kakaogolyok": {
+  "title": "Kuglice od urmi i oraha (date, walnut and cocoa balls)",
+  "time": "15 min + 30 min chilling",
+  "servings": "18 balls",
+  "ingredients": [
+   "200 g dates, pitted",
+   "120 g walnuts",
+   "3 tbsp rolled oats",
+   "2 tbsp unsweetened cocoa powder",
+   "1 orange, zest grated",
+   "pinch of salt",
+   "desiccated coconut or ground walnuts for rolling"
+  ],
+  "steps": [
+   "Soak the dates in hot water for 5 minutes, then drain.",
+   "Blitz the walnuts, oats, cocoa, orange zest and salt in a food processor to crumbs.",
+   "Add the dates and blitz until it becomes a sticky mass.",
+   "Shape 18 balls and roll in coconut.",
+   "Chill for 30 minutes; they keep 1 week in the fridge."
+  ]
+ },
+ "southslavic--zobeni-kolac-sa-sljivama-zabpelyhes-szilvas-sutemeny": {
+  "title": "Zobeni kolač sa šljivama (oat and plum cake)",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "200 g rolled oats",
+   "2 eggs",
+   "200 ml kefir or yogurt",
+   "3 tbsp honey",
+   "3 tbsp oil",
+   "1 tsp baking powder",
+   "1 tsp cinnamon",
+   "500 g plums, quartered",
+   "30 g flaked almonds"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×25 cm tin.",
+   "Mix the oats with the baking powder and cinnamon.",
+   "Add the eggs, kefir, honey and oil and leave for 10 minutes.",
+   "Spread in the tin, press in the plums, sprinkle with almonds and bake for 30-35 minutes.",
+   "Slice once cool; it keeps 4 days."
+  ]
+ },
+ "southslavic--lenja-pita-s-jabukama-light-lusta-almas-pite-keves-cukorral": {
+  "title": "Lenja pita s jabukama light (lazy apple pie with little sugar)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "250 g wholemeal spelt flour",
+   "80 g cold butter",
+   "1 egg",
+   "100 ml plain yogurt",
+   "1 tsp baking powder",
+   "2 tbsp honey",
+   "1.2 kg apples, grated and squeezed",
+   "2 tsp cinnamon",
+   "3 tbsp rolled oats"
+  ],
+  "steps": [
+   "Rub the flour with the baking powder and butter, add the egg, yogurt and honey and knead into a dough; divide in two.",
+   "Preheat the oven to 180 °C; mix the apple with the cinnamon.",
+   "Press or roll half the dough into the bottom of a 20×30 cm tin, sprinkle with oats and spread over the apple.",
+   "Grate (or roll out) the other half over the top.",
+   "Bake for 40 minutes; slice once cool, it keeps 4 days."
+  ]
+ },
+ "southslavic--vocni-kup-s-jogurtom-gyumolcskehely-joghurttal-mezzel-es-piritott-dioval": {
+  "title": "Voćni kup s jogurtom (fruit cups with yogurt, honey and toasted nuts)",
+  "time": "10 min",
+  "servings": "4 cups",
+  "ingredients": [
+   "500 g mixed seasonal fruit (peaches, grapes, strawberries, apple), diced",
+   "1 tbsp lemon juice",
+   "400 ml Greek yogurt",
+   "2 tsp honey",
+   "40 g walnuts or almonds, dry-toasted",
+   "fresh mint"
+  ],
+  "steps": [
+   "Toss the fruit with the lemon juice.",
+   "Whisk the yogurt with the honey.",
+   "Layer the fruit and yogurt in glasses.",
+   "Sprinkle toasted nuts and mint on top.",
+   "Serve at once or chilled; it keeps 1 day in the fridge."
+  ]
+ },
+ "southslavic--ravanija-light-narancsos-daras-piskota-konnyu-sziruppal": {
+  "title": "Ravanija light (orange semolina sponge in light syrup)",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "4 eggs, separated",
+   "60 g erythritol or brown sugar",
+   "150 g wholemeal semolina",
+   "40 g flour",
+   "1 tsp baking powder",
+   "2 oranges, zest grated",
+   "3 tbsp oil",
+   "for the syrup: juice of 2 oranges, 100 ml water, 2 tbsp honey"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×25 cm tin.",
+   "Whisk the yolks with half the sweetener, the oil and orange zest until fluffy, add the semolina, flour and baking powder.",
+   "Whisk the whites with the rest of the sweetener to stiff peaks and fold in.",
+   "Spread in the tin and bake for 25-30 minutes; meanwhile boil the syrup ingredients for 3 minutes.",
+   "Cut the hot sponge into slices and drizzle with the lukewarm syrup; it keeps 4 days."
+  ]
+ },
+ "southslavic--mafini-od-rogaca-i-banane-szentjanoskenyeres-bananos-muffin": {
+  "title": "Mafini od rogača i banane (carob banana muffins)",
+  "time": "35 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "3 ripe bananas, mashed",
+   "2 eggs",
+   "5 tbsp oil",
+   "100 ml plain yogurt",
+   "50 g carob flour",
+   "150 g wholemeal flour",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "1 tsp cinnamon",
+   "30 g walnuts"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin.",
+   "Mix the banana with the eggs, oil and yogurt.",
+   "Add both flours, the baking powder, bicarbonate of soda and cinnamon and stir just to combine.",
+   "Spoon into the tin, sprinkle with walnuts and bake for 20 minutes.",
+   "They keep 3 days in a box and can be frozen."
+  ]
+ },
+ "southslavic--peceni-sir-s-medom-sult-turokocka-mezzel-es-fahejjal": {
+  "title": "Pečeni sir s medom (baked curd cheese squares with honey and cinnamon)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g semi-fat curd cheese",
+   "2 eggs",
+   "2 tbsp semolina",
+   "1 tbsp honey + 2 tbsp for the top",
+   "1 lemon, zest grated",
+   "pinch of salt",
+   "1 tsp cinnamon",
+   "30 g walnuts"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and grease a small ovenproof dish.",
+   "Mix the curd cheese with the eggs, semolina, 1 tbsp honey, lemon zest and salt.",
+   "Spread in the dish and bake for 25 minutes until golden and set.",
+   "Cut into squares while lukewarm, drizzle with honey and sprinkle with cinnamon and walnuts.",
+   "It keeps 3 days in the fridge."
   ]
  },
  "hungarian--rantotta-kolbasszal-es-paradicsommal": {
@@ -9144,6 +10001,430 @@ window.I18N_EN_RECIPES = {
    "Roast for 50-60 minutes until the chicken skin is crisp and the potatoes are tender; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "hungarian--fitt-zabpelyhes-turos-pite-konnyitett-rakoczi-turos": {
+  "title": "Light oat and curd cheese pie (lighter Rákóczi túrós)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "for the base: 150 g oat flour (or ground oats), 50 g melted butter, 1 egg, 2 tbsp honey",
+   "for the filling: 750 g low-fat curd cheese, 3 eggs, 200 ml Greek yogurt, 4 tbsp honey or erythritol, 1 lemon, zest grated, 1 tsp vanilla, 2 tbsp cornflour",
+   "300 g fresh or frozen raspberries or apricots for the top"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 24 cm cake tin with baking paper.",
+   "Knead the base ingredients together, press into the bottom of the tin and pre-bake for 10 minutes.",
+   "Mash the curd cheese and whisk smooth with the eggs, yogurt, honey, lemon zest, vanilla and cornflour, then pour over the pre-baked base.",
+   "Bake for 35-40 minutes until the centre is just set; leave to cool in the switched-off oven with the door ajar.",
+   "Pile the fruit on top; it keeps 4 days in the fridge."
+  ]
+ },
+ "hungarian--almas-fahejas-zabszelet": {
+  "title": "Apple cinnamon oat bars",
+  "time": "45 min",
+  "servings": "12 bars",
+  "ingredients": [
+   "200 g rolled oats",
+   "3 apples, grated",
+   "2 eggs",
+   "200 ml plain yogurt",
+   "3 tbsp honey",
+   "1 tsp baking powder",
+   "2 tsp cinnamon",
+   "50 g roughly chopped walnuts",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a tin of about 20×30 cm with baking paper.",
+   "Mix the oats with the baking powder, cinnamon and salt.",
+   "In another bowl, mix the eggs, yogurt and honey, then the grated apple, and fold into the oat mixture.",
+   "Spread in the tin, sprinkle with the walnuts and bake for 25-30 minutes until golden.",
+   "Slice once cool; it keeps 4 days in a box."
+  ]
+ },
+ "hungarian--fitt-repatorta-joghurtos-turos-kremmel": {
+  "title": "Light carrot cake with yogurt and curd cheese frosting",
+  "time": "1 hr + chilling",
+  "servings": "12 slices",
+  "ingredients": [
+   "300 g carrots, finely grated",
+   "3 eggs",
+   "150 g wholemeal spelt flour",
+   "50 g ground walnuts",
+   "80 g brown sugar or erythritol",
+   "5 tbsp oil",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "2 tsp cinnamon, pinch of nutmeg",
+   "for the frosting: 250 g low-fat curd cheese, 200 ml Greek yogurt, 2 tbsp honey, 1 lemon, zest"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 24 cm tin.",
+   "Whisk the eggs with the sugar until fluffy, mix in the oil, then the flour, baking powder, bicarbonate of soda, spices and walnuts.",
+   "Fold in the carrots, pour into the tin and bake for 35-40 minutes.",
+   "For the frosting, blend the curd cheese with the yogurt, honey and lemon zest until smooth.",
+   "Spread over the cooled cake and chill for 1 hour; it keeps 4 days."
+  ]
+ },
+ "hungarian--meggyes-joghurtos-kevert-teljes-kiorlesu-liszttel": {
+  "title": "Sour cherry yogurt traybake with wholemeal flour",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "200 g wholemeal spelt flour",
+   "3 eggs",
+   "200 ml plain yogurt",
+   "5 tbsp oil",
+   "70 g brown sugar or 4 tbsp honey",
+   "1 sachet baking powder",
+   "1 lemon, zest grated",
+   "400 g pitted sour cherries (frozen is fine, drained)"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a tin of about 20×30 cm.",
+   "Whisk the eggs with the sugar until fluffy and add the yogurt, oil and lemon zest.",
+   "Stir in the flour mixed with the baking powder and spread in the tin.",
+   "Scatter over the cherries and bake for 30-35 minutes until a skewer comes out clean.",
+   "Slice once cool; it keeps 3 days in a box."
+  ]
+ },
+ "hungarian--turos-barackos-zabkosarkak": {
+  "title": "Curd cheese and apricot oat tartlets",
+  "time": "40 min",
+  "servings": "12 pieces",
+  "ingredients": [
+   "150 g rolled oats, ground",
+   "1 banana, mashed",
+   "2 tbsp coconut oil or butter, melted",
+   "250 g low-fat curd cheese",
+   "1 egg",
+   "2 tbsp honey",
+   "1 tsp vanilla",
+   "3 apricots (or 6 tinned apricot halves, drained), cut into wedges"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and grease a 12-hole muffin tin.",
+   "Mix the ground oats with the banana and oil and press into the bottom and sides of the holes; bake for 8 minutes.",
+   "Whisk the curd cheese with the egg, honey and vanilla until smooth and fill the cases.",
+   "Top each with apricot wedges and bake for 18-20 minutes.",
+   "Lift out carefully once cool; they keep 3 days in the fridge."
+  ]
+ },
+ "hungarian--fitt-makos-almas-zabszelet": {
+  "title": "Light poppy seed and apple oat bars",
+  "time": "50 min",
+  "servings": "12 bars",
+  "ingredients": [
+   "120 g ground poppy seeds",
+   "120 g oat flour",
+   "3 eggs",
+   "3 apples, grated",
+   "3 tbsp honey or erythritol",
+   "100 ml milk",
+   "1 lemon, zest grated",
+   "1 tsp baking powder",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a tin of about 20×25 cm.",
+   "Whisk the eggs with the honey until fluffy and add the milk and lemon zest.",
+   "Stir in the poppy seeds, oat flour, baking powder and cinnamon, then the squeezed-out apple.",
+   "Spread in the tin and bake for 30-35 minutes.",
+   "Slice once cool; it keeps 4 days in a box."
+  ]
+ },
+ "hungarian--sutotokos-fahejas-muffin": {
+  "title": "Pumpkin cinnamon muffins",
+  "time": "40 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "250 g roasted pumpkin purée",
+   "2 eggs",
+   "5 tbsp oil",
+   "4 tbsp honey or maple syrup",
+   "100 ml plain yogurt",
+   "200 g wholemeal flour",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "2 tsp cinnamon, ½ tsp ginger, pinch of cloves",
+   "3 tbsp pumpkin seeds"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin with paper cases.",
+   "Mix the pumpkin purée with the eggs, oil, honey and yogurt.",
+   "Add the flour, baking powder, bicarbonate of soda and spices and stir just to combine.",
+   "Spoon into the cases, sprinkle with pumpkin seeds and bake for 20-22 minutes.",
+   "They keep 4 days in a box."
+  ]
+ },
+ "hungarian--bananos-zabos-keksz-cukor-nelkul": {
+  "title": "Banana oat cookies (no added sugar)",
+  "time": "25 min",
+  "servings": "16 cookies",
+  "ingredients": [
+   "2 very ripe bananas",
+   "150 g rolled oats",
+   "30 g roughly chopped dark chocolate (70%) or raisins",
+   "2 tbsp peanut butter or ground walnuts",
+   "1 tsp cinnamon",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a baking tray with baking paper.",
+   "Mash the bananas with a fork and mix with the other ingredients.",
+   "Put 16 spoonfuls on the tray and flatten slightly.",
+   "Bake for 12-15 minutes until golden at the edges.",
+   "Cool on a rack; they keep 4 days in a box."
+  ]
+ },
+ "hungarian--epres-turotorta-zabalappal-sutes-nelkul": {
+  "title": "No-bake strawberry curd cheese cake with oat base",
+  "time": "30 min + 4 hr chilling",
+  "servings": "10 slices",
+  "ingredients": [
+   "120 g rolled oats",
+   "80 g dates, pitted",
+   "2 tbsp cocoa powder",
+   "500 g low-fat curd cheese",
+   "250 ml Greek yogurt",
+   "3 tbsp honey",
+   "1 lemon, juice and grated zest",
+   "12 g gelatine (or 2 tsp agar-agar)",
+   "400 g strawberries"
+  ],
+  "steps": [
+   "Blitz the oats with the dates and cocoa in a food processor to a sticky crumb and press into the bottom of a 22 cm springform tin.",
+   "Soak the gelatine in 5 tbsp cold water for 5 minutes, then dissolve over low heat (without boiling).",
+   "Blend the curd cheese with the yogurt, honey and lemon until smooth and stir in the lukewarm gelatine.",
+   "Fold in half the strawberries, sliced, and spread over the base.",
+   "Chill for at least 4 hours; decorate with the rest of the strawberries, it keeps 3 days."
+  ]
+ },
+ "hungarian--szilvas-fahejas-zabmorzsas": {
+  "title": "Plum and cinnamon oat crumble",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "800 g plums, stoned and quartered",
+   "1 tbsp honey",
+   "1 tsp cinnamon",
+   "for the crumble: 100 g rolled oats, 50 g wholemeal flour, 30 g ground walnuts, 40 g cold butter, 2 tbsp brown sugar"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Toss the plums with the honey and half the cinnamon and spread in an ovenproof dish.",
+   "Rub the crumble ingredients together with the rest of the cinnamon using your fingertips and scatter over the fruit.",
+   "Bake for 30 minutes until golden on top and the fruit is bubbling.",
+   "Serve lukewarm with a spoonful of yogurt; it keeps 3 days in the fridge."
+  ]
+ },
+ "hungarian--cukkinis-kakaos-fitt-kevert": {
+  "title": "Light courgette chocolate traybake",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "300 g courgette, finely grated",
+   "2 eggs",
+   "150 g oat flour",
+   "3 tbsp unsweetened cocoa powder",
+   "60 g brown sugar or erythritol",
+   "5 tbsp oil",
+   "100 ml plain yogurt",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "30 g dark chocolate chips"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×20 cm tin.",
+   "Lightly squeeze out the grated courgette.",
+   "Mix the eggs with the sugar, oil and yogurt, then add the oat flour, cocoa, baking powder and bicarbonate of soda.",
+   "Fold in the courgette and chocolate chips, spread in the tin and bake for 30-35 minutes.",
+   "Slice once cool; it keeps 4 days in a box."
+  ]
+ },
+ "hungarian--konnyu-almas-pite-teljes-kiorlesu-tesztaval": {
+  "title": "Light apple pie with wholemeal pastry",
+  "time": "1 hr 10 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "for the pastry: 250 g wholemeal spelt flour, 80 g cold butter, 1 egg, 100 ml plain yogurt, 1 tsp baking powder, 2 tbsp honey",
+   "for the filling: 1.2 kg tart apples, grated and squeezed, 2 tsp cinnamon, 2 tbsp honey, 3 tbsp rolled oats, 1 lemon, juiced"
+  ],
+  "steps": [
+   "Quickly knead the pastry ingredients, divide in two and chill for 15 minutes; preheat the oven to 180 °C.",
+   "Mix the apple with the cinnamon, honey and lemon juice.",
+   "Roll out half the pastry to fit a tin of about 20×30 cm, lay it in, sprinkle with the oats and spread over the apple.",
+   "Roll out the other half, lay it on top and prick with a fork.",
+   "Bake for 40 minutes until golden; slice once cool, it keeps 4 days."
+  ]
+ },
+ "hungarian--dios-mezes-zabgolyok-sutes-nelkul": {
+  "title": "No-bake walnut honey oat balls",
+  "time": "20 min + 30 min chilling",
+  "servings": "20 balls",
+  "ingredients": [
+   "150 g rolled oats",
+   "100 g ground walnuts",
+   "80 g dates, pitted and chopped",
+   "3 tbsp honey",
+   "2 tbsp unsweetened cocoa powder",
+   "1 tsp cinnamon",
+   "pinch of salt",
+   "desiccated coconut for rolling"
+  ],
+  "steps": [
+   "Soak the dates in hot water for 5 minutes, then drain.",
+   "Blitz the oats, walnuts, dates, honey, cocoa, cinnamon and salt in a food processor into a sticky mass.",
+   "With wet hands, shape 20 walnut-sized balls.",
+   "Roll them in desiccated coconut.",
+   "Chill for 30 minutes; they keep 1 week in the fridge."
+  ]
+ },
+ "hungarian--zabpelyhes-turogomboc-fahejas-joghurtos-ontettel": {
+  "title": "Oat curd cheese dumplings with cinnamon oats and yogurt",
+  "time": "40 min",
+  "servings": "4 servings (12 dumplings)",
+  "ingredients": [
+   "500 g low-fat curd cheese",
+   "2 eggs",
+   "80 g fine oats",
+   "2 tbsp semolina",
+   "1 tbsp honey",
+   "pinch of salt",
+   "for coating: 4 tbsp rolled oats, 1 tsp butter, 1 tsp cinnamon",
+   "to serve: 200 ml Greek yogurt, fruit"
+  ],
+  "steps": [
+   "Mash the curd cheese and mix with the eggs, oats, semolina, honey and salt, then chill for 20 minutes.",
+   "With wet hands, shape 12 dumplings and simmer in lightly salted water for 10-12 minutes.",
+   "Meanwhile, toast the oats with the cinnamon in the butter.",
+   "Roll the drained dumplings in the toasted oats.",
+   "Serve with yogurt and fruit; they keep 2 days in the fridge."
+  ]
+ },
+ "hungarian--kortes-gyomberes-sult-zabkasa-szeletekben": {
+  "title": "Baked pear and ginger oatmeal squares",
+  "time": "45 min",
+  "servings": "8 squares",
+  "ingredients": [
+   "200 g rolled oats",
+   "400 ml milk or plant milk",
+   "2 eggs",
+   "3 tbsp honey",
+   "1 tsp baking powder",
+   "1 tsp grated fresh ginger",
+   "1 tsp cinnamon",
+   "2 pears, sliced",
+   "3 tbsp flaked almonds"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and grease a dish of about 20×20 cm.",
+   "Mix the oats with the baking powder and spices.",
+   "Whisk the milk with the eggs and honey and pour over the oats.",
+   "Pour into the dish, arrange the pear slices on top, sprinkle with almonds and bake for 30-35 minutes.",
+   "Slice warm or cold; it keeps 4 days."
+  ]
+ },
+ "hungarian--kakaos-bananos-turokrem-pohardesszert": {
+  "title": "Chocolate banana curd cheese cups",
+  "time": "15 min",
+  "servings": "4 cups",
+  "ingredients": [
+   "400 g low-fat curd cheese or skyr",
+   "2 ripe bananas",
+   "2 tbsp unsweetened cocoa powder",
+   "1-2 tbsp honey (optional)",
+   "100 ml milk",
+   "4 tbsp rolled oats or granola",
+   "20 g dark chocolate, grated"
+  ],
+  "steps": [
+   "Blend the curd cheese with half the banana, the cocoa, honey and milk until creamy.",
+   "Slice the remaining banana.",
+   "Layer in glasses: oats, cream, banana slices, cream.",
+   "Sprinkle the top with grated chocolate.",
+   "Serve at once or chilled; it keeps 2 days in the fridge."
+  ]
+ },
+ "hungarian--rebarbaras-joghurtos-morzsasuti": {
+  "title": "Rhubarb yogurt crumble cake",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "500 g rhubarb, cut into 1 cm pieces",
+   "3 tbsp honey or erythritol",
+   "for the batter: 180 g oat flour, 2 eggs, 150 ml plain yogurt, 4 tbsp oil, 1 tsp baking powder, 1 tsp vanilla",
+   "for the crumble: 50 g rolled oats, 20 g butter, 1 tbsp brown sugar"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×25 cm tin; toss the rhubarb with the honey.",
+   "Mix the eggs, yogurt, oil and vanilla, then add the oat flour mixed with the baking powder.",
+   "Spread in the tin and scatter over the rhubarb.",
+   "Rub the crumble ingredients together, sprinkle over the top and bake for 35 minutes.",
+   "Slice once cool; it keeps 3 days."
+  ]
+ },
+ "hungarian--citromos-joghurtos-bogres-suti-light": {
+  "title": "Light lemon yogurt mug cake",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "1 pot (250 ml) plain yogurt",
+   "2 pots wholemeal spelt flour",
+   "½ pot brown sugar or erythritol",
+   "½ pot oil",
+   "3 eggs",
+   "2 lemons, zest and juice",
+   "1 sachet baking powder",
+   "1 tbsp poppy seeds (optional)"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a loaf tin or a 20×20 cm tin.",
+   "Empty the yogurt and use the pot as a measure; whisk the eggs with the sugar until fluffy.",
+   "Add the yogurt, oil, lemon zest and half the lemon juice, then the flour mixed with the baking powder and the poppy seeds.",
+   "Pour into the tin and bake for 35-40 minutes; brush the top with the rest of the lemon juice while still warm.",
+   "Slice once cool; it keeps 4 days in a box."
+  ]
+ },
+ "hungarian--konnyu-meggyes-lepeny-zabos-tesztaval": {
+  "title": "Light sour cherry sponge with oat flour",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "4 eggs, separated",
+   "60 g erythritol or brown sugar",
+   "120 g oat flour",
+   "3 tbsp oil",
+   "3 tbsp milk",
+   "1 tsp baking powder",
+   "450 g pitted sour cherries",
+   "1 tbsp icing sugar or powdered erythritol for the top"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×30 cm tin.",
+   "Whisk the yolks with half the sugar, the oil and milk until fluffy, then add the oat flour mixed with the baking powder.",
+   "Whisk the whites with the rest of the sugar to stiff peaks and fold gently into the batter.",
+   "Spread in the tin, scatter over the cherries and bake for 25-30 minutes.",
+   "Dust with icing sugar once cool; it keeps 3 days."
+  ]
+ },
+ "hungarian--konnyitett-makos-guba-zabtejjel-es-keves-mezzel": {
+  "title": "Lighter poppy seed bread pudding (mákos guba) with oat milk",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 wholemeal crescent rolls or 4 slices wholemeal brioche, diced",
+   "500 ml oat milk or skimmed milk",
+   "2 tbsp honey",
+   "1 tsp vanilla",
+   "1 lemon, zest grated",
+   "60 g ground poppy seeds",
+   "2 tbsp powdered erythritol or 1 tbsp icing sugar"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C.",
+   "Warm the milk with the honey, vanilla and lemon zest until lukewarm.",
+   "Drizzle the bread cubes with the milk in an ovenproof dish and leave to soak for 5 minutes.",
+   "Mix the poppy seeds with the powdered sweetener, sprinkle over and toss; bake for 10 minutes.",
+   "Serve warm; it keeps 2 days in the fridge."
+  ]
+ },
  "french--tartine-vajjal-es-gyumolcslekvarral": {
   "title": "Tartine with butter and jam",
   "time": "5 min",
@@ -13193,6 +14474,423 @@ window.I18N_EN_RECIPES = {
    "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "french--clafoutis-aux-cerises-light-konnyu-cseresznyes-clafoutis": {
+  "title": "Clafoutis aux cerises light (light cherry clafoutis)",
+  "time": "50 min",
+  "servings": "8 servings",
+  "ingredients": [
+   "500 g cherries (stoned, or with stones as is traditional)",
+   "3 eggs",
+   "60 g wholemeal or spelt flour",
+   "400 ml milk (1.5%)",
+   "4 tbsp erythritol or 3 tbsp honey",
+   "1 tsp vanilla",
+   "pinch of salt",
+   "1 tsp butter for the dish"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and butter a 24 cm ovenproof dish.",
+   "Whisk the eggs with the sweetener, vanilla and salt, add the flour, then gradually the milk to make a smooth, thin batter.",
+   "Scatter the cherries in the dish.",
+   "Pour over the batter.",
+   "Bake for 35-40 minutes until puffed and golden; serve warm or cold, it keeps 3 days in the fridge."
+  ]
+ },
+ "french--far-breton-light-breton-aszalt-szilvas-pudingsutemeny": {
+  "title": "Far breton light (Breton prune custard cake)",
+  "time": "1 hr",
+  "servings": "10 slices",
+  "ingredients": [
+   "200 g pitted prunes",
+   "3 eggs",
+   "120 g flour (half wholemeal)",
+   "700 ml milk (1.5%)",
+   "50 g brown sugar or erythritol",
+   "1 tsp vanilla",
+   "pinch of salt",
+   "1 tbsp butter for the tin"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and butter a 24 cm tin.",
+   "Whisk the eggs with the sweetener, vanilla and salt, add the flour, then gradually the milk.",
+   "Scatter the prunes in the tin and pour over the batter.",
+   "Bake for 10 minutes at 200 °C, then at 180 °C for another 35-40 minutes until browned and set.",
+   "Slice once cool; it keeps 4 days in the fridge."
+  ]
+ },
+ "french--flan-patissier-sans-pate-teszta-nelkuli-vanilias-flan": {
+  "title": "Flan pâtissier sans pâte (crustless vanilla flan)",
+  "time": "50 min + 3 hr chilling",
+  "servings": "10 slices",
+  "ingredients": [
+   "1 litre milk (1.5%)",
+   "3 eggs",
+   "80 g cornflour",
+   "60 g erythritol or 4 tbsp honey",
+   "2 tsp vanilla (or 1 vanilla pod)",
+   "1 tsp butter for the tin"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and butter a 22 cm tin.",
+   "Bring 800 ml of the milk to the boil with the vanilla; whisk the remaining 200 ml with the eggs, cornflour and sweetener until smooth.",
+   "Pour into the hot milk and cook, stirring, for 2-3 minutes into a thick custard.",
+   "Spread in the tin and bake for 35-40 minutes until spotted brown on top.",
+   "Once cool, chill for at least 3 hours; it keeps 4 days."
+  ]
+ },
+ "french--petits-pots-de-creme-au-chocolat-light-csokolades-poharkrem-keves-cukorral": {
+  "title": "Petits pots de crème au chocolat light (chocolate custard pots with little sugar)",
+  "time": "40 min + 2 hr chilling",
+  "servings": "6 pots",
+  "ingredients": [
+   "500 ml milk (1.5%)",
+   "60 g dark chocolate (70%), broken up",
+   "2 tbsp unsweetened cocoa powder",
+   "3 egg yolks + 1 whole egg",
+   "3 tbsp erythritol or honey",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Preheat the oven to 150 °C.",
+   "Warm the milk and dissolve the chocolate and cocoa in it.",
+   "Mix the egg and yolks with the sweetener and vanilla (not frothy), then slowly pour in the warm chocolate milk.",
+   "Pour into small ramekins or heatproof glasses, stand in a roasting tin and pour hot water into the tin (bain-marie); bake for 25-30 minutes until set at the edges.",
+   "Once cool, chill for 2 hours; they keep 3 days."
+  ]
+ },
+ "french--tarte-fine-aux-pommes-vekony-almas-lepeny-filotesztan": {
+  "title": "Tarte fine aux pommes (thin apple tart on filo)",
+  "time": "40 min",
+  "servings": "8 slices",
+  "ingredients": [
+   "6 sheets filo pastry",
+   "2 tbsp melted butter",
+   "3 apples, cored and very thinly sliced",
+   "1 tbsp lemon juice",
+   "1 tsp cinnamon",
+   "2 tbsp honey or 2 tbsp no-sugar apricot jam for the glaze",
+   "2 tbsp ground almonds"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and line a baking tray.",
+   "Stack the filo sheets, brushing each lightly with butter, and sprinkle with ground almonds.",
+   "Toss the apple slices with the lemon juice and overlap them tightly on the pastry like scales; sprinkle with cinnamon.",
+   "Bake for 20-25 minutes until the pastry is crisp and the apple edges are browned.",
+   "Warm the honey or jam with a little water and brush over the hot apples; best on the day, keeps 2 days."
+  ]
+ },
+ "french--poires-pochees-au-the-teaban-es-vaniliaban-buggyantott-korte": {
+  "title": "Poires pochées au thé (pears poached in tea and vanilla)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 ripe but firm pears, peeled (stalks left on)",
+   "1 litre water",
+   "2 black or Earl Grey tea bags",
+   "2 tbsp honey",
+   "1 vanilla pod or 1 tsp vanilla",
+   "1 cinnamon stick",
+   "1 lemon, peel",
+   "200 ml Greek yogurt to serve"
+  ],
+  "steps": [
+   "Bring the water to the boil, steep the tea bags in it for 4 minutes, then remove.",
+   "Add the honey, vanilla, cinnamon and lemon peel.",
+   "Stand the pears in the liquid and poach gently, turning now and then, for 15-20 minutes until tender.",
+   "Lift out the pears and boil half the liquid for 10 minutes to a syrup.",
+   "Serve with yogurt, drizzled with the syrup; in their liquid they keep 4 days in the fridge."
+  ]
+ },
+ "french--mousse-au-chocolat-light-konnyu-csokoladehab": {
+  "title": "Mousse au chocolat light (light chocolate mousse)",
+  "time": "20 min + 3 hr chilling",
+  "servings": "6 cups",
+  "ingredients": [
+   "100 g dark chocolate (70%)",
+   "4 eggs (fresh, ideally pasteurised), separated",
+   "2 tbsp erythritol or honey",
+   "100 ml Greek yogurt",
+   "pinch of salt",
+   "1 tsp instant coffee (optional)"
+  ],
+  "steps": [
+   "Melt the chocolate over steam or in the microwave and let it cool slightly.",
+   "Stir in the yolks, yogurt and coffee.",
+   "Whisk the whites with the salt and sweetener to stiff peaks.",
+   "Fold gently into the chocolate in three batches.",
+   "Divide into glasses and chill for at least 3 hours; it keeps 2 days."
+  ]
+ },
+ "french--gateau-au-yaourt-light-francia-joghurtos-piskota-poharral-merve": {
+  "title": "Gâteau au yaourt light (French yogurt pot cake)",
+  "time": "45 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "1 pot (125 g) plain yogurt",
+   "2 pots wholemeal spelt flour",
+   "½ pot brown sugar or erythritol",
+   "½ pot oil",
+   "3 eggs",
+   "1 sachet baking powder",
+   "1 lemon, zest grated"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 22 cm tin.",
+   "Empty the yogurt into a bowl and use the pot as a measure.",
+   "Add the eggs, sweetener, oil and lemon zest, then the flour mixed with the baking powder, and mix until smooth.",
+   "Pour into the tin.",
+   "Bake for 30-35 minutes; slice once cool, it keeps 4 days."
+  ]
+ },
+ "french--galettes-de-sarrasin-aux-pommes-hajdinas-palacsinta-mezes-almaval": {
+  "title": "Galettes de sarrasin aux pommes (buckwheat crêpes with honey apples)",
+  "time": "35 min",
+  "servings": "4 servings (8 crêpes)",
+  "ingredients": [
+   "120 g buckwheat flour",
+   "1 egg",
+   "300 ml milk",
+   "100 ml water",
+   "pinch of salt",
+   "a little butter for frying",
+   "3 apples, cut into wedges",
+   "1 tbsp honey",
+   "1 tsp cinnamon",
+   "200 ml Greek yogurt or fromage blanc"
+  ],
+  "steps": [
+   "Whisk the buckwheat flour with the egg, milk, water and salt until smooth and rest for 15 minutes.",
+   "In a frying pan, cook the apples in a little butter with the honey and cinnamon for 6-8 minutes until soft.",
+   "Cook 8 thin crêpes in a lightly buttered pan.",
+   "Fill each with apple and a spoonful of yogurt and fold into quarters.",
+   "Serve warm; the crêpes keep 2 days in the fridge."
+  ]
+ },
+ "french--clafoutis-aux-abricots-sargabarackos-mandulas-clafoutis": {
+  "title": "Clafoutis aux abricots (apricot almond clafoutis)",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g apricots, halved and stoned",
+   "3 eggs",
+   "50 g ground almonds",
+   "30 g wholemeal flour",
+   "300 ml milk",
+   "3 tbsp honey",
+   "1 tsp vanilla",
+   "2 tbsp flaked almonds"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and grease a 24 cm dish.",
+   "Arrange the apricots cut side down in the dish.",
+   "Whisk the eggs with the honey and vanilla, add the ground almonds and flour, then the milk.",
+   "Pour over the apricots and sprinkle with flaked almonds.",
+   "Bake for 30-35 minutes; serve lukewarm, it keeps 3 days in the fridge."
+  ]
+ },
+ "french--crumble-pommes-poires-a-l-avoine-almas-kortes-zabcrumble": {
+  "title": "Crumble pommes-poires à l'avoine (apple and pear oat crumble)",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "3 apples and 2 pears, diced",
+   "1 tbsp lemon juice",
+   "1 tsp cinnamon",
+   "1 tsp vanilla",
+   "for the crumble: 80 g rolled oats, 40 g ground almonds, 30 g wholemeal flour, 40 g cold butter, 2 tbsp honey"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Toss the fruit with the lemon juice, cinnamon and vanilla and put in an ovenproof dish.",
+   "Rub the crumble ingredients together with your fingertips.",
+   "Scatter over the fruit.",
+   "Bake for 30 minutes until golden; serve warm with yogurt, it keeps 3 days."
+  ]
+ },
+ "french--compote-pommes-rhubarbe-vanilias-alma-rebarbara-kompot": {
+  "title": "Compote pommes-rhubarbe (vanilla apple and rhubarb compote)",
+  "time": "25 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "4 apples, diced",
+   "400 g rhubarb, cut into 2 cm pieces",
+   "100 ml water",
+   "2-3 tbsp honey",
+   "1 tsp vanilla",
+   "1 piece of ginger, grated (optional)"
+  ],
+  "steps": [
+   "Put the apples, rhubarb and water in a saucepan.",
+   "Cook covered over low heat for 12-15 minutes until the fruit breaks down.",
+   "Add the honey, vanilla and ginger.",
+   "Mash with a fork to taste or leave chunky.",
+   "Serve warm or cold with yogurt; it keeps 5 days in the fridge."
+  ]
+ },
+ "french--souffle-au-fromage-blanc-et-citron-citromos-turofelfujt": {
+  "title": "Soufflé au fromage blanc et citron (lemon curd cheese soufflé)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g fromage blanc or low-fat curd cheese, smooth",
+   "3 eggs, separated",
+   "3 tbsp honey or erythritol",
+   "2 tbsp cornflour",
+   "1 lemon, zest and juice",
+   "1 tsp vanilla",
+   "butter for the dishes"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and butter 4 ramekins or a small dish.",
+   "Whisk the curd cheese with the yolks, half the honey, the cornflour, lemon and vanilla until smooth.",
+   "Whisk the whites with the rest of the honey to stiff peaks and fold in gently.",
+   "Spoon into the dishes.",
+   "Bake for 20-25 minutes until risen and golden; serve at once (good cold too, but it sinks), it keeps 2 days in the fridge."
+  ]
+ },
+ "french--tarte-au-citron-light-citromos-pite-zabalappal-konnyebb-kremmel": {
+  "title": "Tarte au citron light (lemon tart with oat base and lighter curd)",
+  "time": "50 min + 2 hr chilling",
+  "servings": "10 slices",
+  "ingredients": [
+   "for the base: 150 g oat flour, 50 g ground almonds, 4 tbsp oil, 2 tbsp honey, 1 egg yolk",
+   "for the curd: 3 lemons, juice and grated zest, 3 eggs, 6 tbsp erythritol or 4 tbsp honey, 2 tbsp cornflour, 200 ml water, 20 g butter"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C; knead the base ingredients, press into a 22 cm tart tin, prick with a fork and bake for 15 minutes until golden.",
+   "Bring the lemon juice, zest, water and sweetener to the boil.",
+   "Whisk the eggs with the cornflour until smooth, slowly pour in the hot lemon liquid, return to the heat and cook, stirring, until thick; stir in the butter.",
+   "Spread the curd over the cooled base.",
+   "Chill for at least 2 hours; it keeps 3 days."
+  ]
+ },
+ "french--gateau-de-semoule-light-mazsolas-daras-puding-sutemeny": {
+  "title": "Gâteau de semoule light (semolina pudding cake with raisins)",
+  "time": "40 min + chilling",
+  "servings": "8 slices",
+  "ingredients": [
+   "800 ml milk (1.5%)",
+   "100 g wholemeal semolina",
+   "2 eggs",
+   "3 tbsp honey or erythritol",
+   "50 g raisins",
+   "1 lemon, zest grated",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and grease a loaf or bundt tin.",
+   "Bring the milk to the boil with the lemon zest and vanilla, sprinkle in the semolina and cook, stirring, for 5 minutes.",
+   "Take off the heat, stir in the honey and raisins, cool a little, then quickly stir in the beaten eggs.",
+   "Pour into the tin and bake for 25 minutes.",
+   "Turn out once cool and serve with fruit purée; it keeps 4 days in the fridge."
+  ]
+ },
+ "french--ile-flottante-light-madartej-konnyitett-valtozat": {
+  "title": "Île flottante light (lighter floating islands)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 ml milk (1.5%)",
+   "3 eggs, separated",
+   "3 tbsp erythritol or honey",
+   "1 tbsp cornflour",
+   "1 tsp vanilla",
+   "20 g toasted flaked almonds"
+  ],
+  "steps": [
+   "Warm the milk with the vanilla in a wide saucepan until it just simmers.",
+   "Whisk the whites with 1 tbsp sweetener to stiff peaks, drop spoonfuls into the milk and poach for 1 minute per side; lift out.",
+   "Mix the yolks with the rest of the sweetener and the cornflour, pour in the hot milk and thicken over low heat, stirring (don't boil).",
+   "Pour the custard into bowls and top with the meringues.",
+   "Serve cold, sprinkled with toasted almonds; it keeps 2 days in the fridge."
+  ]
+ },
+ "french--flognarde-aux-pommes-almas-sult-palacsintateszta-limousini-modra": {
+  "title": "Flognarde aux pommes (Limousin baked apple batter pudding)",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "3 apples, thinly sliced",
+   "1 tbsp butter",
+   "1 tsp cinnamon",
+   "3 eggs",
+   "60 g wholemeal flour",
+   "350 ml milk",
+   "3 tbsp honey",
+   "1 tsp vanilla",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C; fry the apple in the butter with the cinnamon for 5 minutes and spread in a buttered dish.",
+   "Whisk the eggs with the honey, vanilla and salt, add the flour, then the milk.",
+   "Pour over the apples.",
+   "Bake for 30 minutes until puffed and golden.",
+   "Serve lukewarm; it keeps 2 days in the fridge."
+  ]
+ },
+ "french--sables-a-l-avoine-et-au-citron-citromos-zabos-omlos-keksz": {
+  "title": "Sablés à l'avoine et au citron (lemon oat shortbread)",
+  "time": "30 min + 20 min chilling",
+  "servings": "24 biscuits",
+  "ingredients": [
+   "120 g oat flour",
+   "80 g wholemeal spelt flour",
+   "60 g cold butter",
+   "50 g erythritol or brown sugar",
+   "1 egg",
+   "1 lemon, zest grated",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Rub the flours, salt and sweetener with the butter.",
+   "Add the egg and lemon zest and quickly bring together.",
+   "Shape into a 3 cm thick log, wrap in film and chill for 20 minutes; preheat the oven to 180 °C.",
+   "Slice into 5 mm rounds and put on a lined tray.",
+   "Bake for 12-14 minutes until golden at the edges; they keep 2 weeks in a tin."
+  ]
+ },
+ "french--tuiles-aux-amandes-light-vekony-mandulas-cserepkeksz": {
+  "title": "Tuiles aux amandes light (thin almond tuiles)",
+  "time": "30 min",
+  "servings": "20 tuiles",
+  "ingredients": [
+   "2 egg whites",
+   "40 g erythritol or 30 g sugar",
+   "20 g melted butter",
+   "20 g flour",
+   "80 g flaked almonds",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Preheat the oven to 170 °C and line two baking trays.",
+   "Lightly beat the whites with the sweetener with a fork, mix in the flour, butter and vanilla, then the almonds.",
+   "Put teaspoonfuls on the trays and spread very thinly with a fork.",
+   "Bake for 8-10 minutes until golden at the edges.",
+   "While still warm, drape over a rolling pin to curve; they keep 1 week airtight."
+  ]
+ },
+ "french--verrines-poire-chocolat-kortes-csokolades-turokremes-pohardesszert": {
+  "title": "Verrines poire-chocolat (pear and chocolate curd cheese cups)",
+  "time": "20 min",
+  "servings": "4 cups",
+  "ingredients": [
+   "2 ripe pears, diced",
+   "1 tsp lemon juice",
+   "300 g fromage blanc or low-fat curd cheese",
+   "2 tbsp honey",
+   "1 tbsp unsweetened cocoa powder",
+   "1 tsp vanilla",
+   "4 oat biscuits or 4 tbsp granola",
+   "20 g dark chocolate, grated"
+  ],
+  "steps": [
+   "Toss the pear with the lemon juice.",
+   "Whisk half the curd cheese with the vanilla and 1 tbsp honey, and the other half with the cocoa and the rest of the honey.",
+   "Put crumbled biscuits in the bottom of the glasses, then layer the vanilla cream, pear and cocoa cream.",
+   "Sprinkle grated chocolate on top.",
+   "Serve chilled; they keep 2 days in the fridge."
+  ]
+ },
  "italian--spaghetti-alla-carbonara": {
   "title": "Spaghetti alla carbonara",
   "time": "20 min",
@@ -15565,6 +17263,426 @@ window.I18N_EN_RECIPES = {
    "Pour in the wine, then add the tomatoes and oregano.",
    "Return the chicken and simmer covered for 20-25 minutes until tender and the sauce is thick.",
    "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--torta-di-ricotta-light-konnyu-ricottatorta-citrommal": {
+  "title": "Torta di ricotta light (light lemon ricotta cake)",
+  "time": "1 hr",
+  "servings": "10 slices",
+  "ingredients": [
+   "500 g light ricotta or low-fat curd cheese",
+   "3 eggs",
+   "5 tbsp honey or erythritol",
+   "2 tbsp cornflour",
+   "1 lemon and 1 orange, zest grated",
+   "1 tsp vanilla",
+   "2 tbsp flaked almonds"
+  ],
+  "steps": [
+   "Preheat the oven to 170 °C and line a 22 cm tin.",
+   "Whisk the ricotta with the eggs, sweetener, cornflour, zests and vanilla until smooth.",
+   "Pour into the tin and sprinkle with the almonds.",
+   "Bake for 40-45 minutes until the centre is just set.",
+   "Chill once cool; it keeps 4 days."
+  ]
+ },
+ "italian--torta-pere-e-cacao-kortes-kakaos-konnyu-torta": {
+  "title": "Torta pere e cacao (light pear and cocoa cake)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "3 ripe pears (2 diced, 1 sliced)",
+   "2 eggs",
+   "60 g brown sugar or erythritol",
+   "150 ml plain yogurt",
+   "5 tbsp oil",
+   "150 g wholemeal flour",
+   "3 tbsp unsweetened cocoa powder",
+   "1 sachet baking powder",
+   "30 g dark chocolate, finely chopped"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 22 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy and add the yogurt and oil.",
+   "Stir in the flour, cocoa and baking powder, then the diced pear and chocolate.",
+   "Spread in the tin and arrange the pear slices on top.",
+   "Bake for 40 minutes; slice once cool, it keeps 4 days."
+  ]
+ },
+ "italian--budino-di-chia-al-cacao-kakaos-chiapuding-banannal": {
+  "title": "Budino di chia al cacao (chocolate chia pudding with banana)",
+  "time": "10 min + 3 hr chilling",
+  "servings": "4 cups",
+  "ingredients": [
+   "6 tbsp chia seeds",
+   "400 ml milk or almond drink",
+   "2 tbsp unsweetened cocoa powder",
+   "2 tbsp honey",
+   "1 tsp vanilla",
+   "1 banana, sliced",
+   "20 g hazelnuts, roughly chopped"
+  ],
+  "steps": [
+   "Whisk the milk with the cocoa, honey and vanilla until smooth.",
+   "Stir in the chia seeds and stir again after 10 minutes so it doesn't clump.",
+   "Divide into glasses.",
+   "Chill for at least 3 hours (or overnight).",
+   "Serve with banana and hazelnuts; it keeps 3 days in the fridge."
+  ]
+ },
+ "italian--semifreddo-allo-yogurt-bogyos-joghurtos-semifreddo": {
+  "title": "Semifreddo allo yogurt (berry yogurt semifreddo)",
+  "time": "15 min + 5 hr freezing",
+  "servings": "8 slices",
+  "ingredients": [
+   "500 g Greek yogurt",
+   "200 ml double cream (or 2 pasteurised egg whites, whisked)",
+   "4 tbsp honey",
+   "1 tsp vanilla",
+   "300 g mixed berries",
+   "1 lemon, zest grated"
+  ],
+  "steps": [
+   "Purée half the berries with half the honey.",
+   "Whisk the yogurt with the rest of the honey, the vanilla and lemon zest; whip the cream and fold in gently.",
+   "Layer the yogurt cream and berry purée in a loaf tin lined with film, scattering the remaining berries between.",
+   "Marble slightly with a fork, cover and freeze for at least 5 hours.",
+   "Leave at room temperature for 10 minutes before slicing; it keeps 2 weeks frozen."
+  ]
+ },
+ "italian--biscotti-integrali-all-avena-teljes-kiorlesu-zabkeksz": {
+  "title": "Biscotti integrali all'avena (wholemeal oat cookies)",
+  "time": "30 min",
+  "servings": "20 cookies",
+  "ingredients": [
+   "120 g rolled oats",
+   "100 g wholemeal flour",
+   "50 g brown sugar or 3 tbsp honey",
+   "4 tbsp olive oil",
+   "1 egg",
+   "1 lemon, zest grated",
+   "1 tsp baking powder",
+   "30 g dark chocolate chips or raisins"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a baking tray.",
+   "Mix the oats, flour, baking powder and lemon zest.",
+   "Add the egg, oil and sweetener, then the chocolate, and bring together.",
+   "Shape 20 balls and flatten on the tray.",
+   "Bake for 12-14 minutes; they keep 10 days in a tin."
+  ]
+ },
+ "italian--cantucci-light-mandulas-ketszersult-kevesebb-cukorral": {
+  "title": "Cantucci light (almond biscotti with less sugar)",
+  "time": "50 min",
+  "servings": "30 biscotti",
+  "ingredients": [
+   "200 g wholemeal spelt flour",
+   "2 eggs",
+   "60 g brown sugar or erythritol",
+   "100 g whole almonds",
+   "1 orange, zest grated",
+   "1 tsp baking powder",
+   "1 tsp vanilla",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a baking tray.",
+   "Whisk the eggs with the sweetener, vanilla and orange zest until fluffy, add the flour, baking powder and salt, then the almonds.",
+   "With wet hands, shape two logs about 4 cm wide and bake for 25 minutes.",
+   "Leave to cool slightly, then cut diagonally into 1.5 cm slices.",
+   "Dry cut side up for another 10 minutes; they keep 3 weeks airtight."
+  ]
+ },
+ "italian--crostata-integrale-teljes-kiorlesu-lekvaros-pite-cukormentes-lekvarral": {
+  "title": "Crostata integrale (wholemeal jam tart with no-sugar jam)",
+  "time": "50 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "220 g wholemeal spelt flour",
+   "60 g cold butter or 5 tbsp olive oil",
+   "1 egg",
+   "3 tbsp honey",
+   "1 lemon, zest grated",
+   "1 tsp baking powder",
+   "300 g no-sugar (100% fruit) apricot or sour cherry jam"
+  ],
+  "steps": [
+   "Rub the flour with the baking powder and butter, add the egg, honey and lemon zest and knead into a dough; chill for 20 minutes.",
+   "Preheat the oven to 180 °C.",
+   "Roll out two-thirds of the pastry and line a 22 cm tart tin; spread with the jam.",
+   "Cut the rest into strips and lay on top as a lattice.",
+   "Bake for 30-35 minutes until golden; slice once cool, it keeps 5 days."
+  ]
+ },
+ "italian--tiramisu-light-ricottas-joghurtos-kevesebb-cukorral": {
+  "title": "Tiramisù light (ricotta and yogurt, less sugar)",
+  "time": "25 min + 4 hr chilling",
+  "servings": "8 servings",
+  "ingredients": [
+   "250 g light ricotta",
+   "250 g Greek yogurt",
+   "3 tbsp honey or erythritol",
+   "1 tsp vanilla",
+   "20 sponge fingers",
+   "250 ml strong cooled coffee",
+   "2 tbsp unsweetened cocoa powder"
+  ],
+  "steps": [
+   "Whisk the ricotta with the yogurt, sweetener and vanilla until smooth.",
+   "Dip the sponge fingers one at a time quickly in the coffee and lay in the bottom of a dish of about 20×20 cm.",
+   "Spread over half the cream, add another layer of dipped fingers and the rest of the cream.",
+   "Cover and chill for at least 4 hours.",
+   "Dust with cocoa before serving; it keeps 3 days in the fridge."
+  ]
+ },
+ "italian--torta-all-arancia-intera-egesz-narancsos-mandulatorta-liszt-nelkul": {
+  "title": "Torta all'arancia intera (flourless whole orange almond cake)",
+  "time": "1 hr 30 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "2 unwaxed oranges",
+   "4 eggs",
+   "80 g erythritol or brown sugar",
+   "200 g ground almonds",
+   "1 tsp baking powder",
+   "2 tbsp flaked almonds"
+  ],
+  "steps": [
+   "Boil the whole oranges in water for 40 minutes (or soften in the microwave for 10 minutes), then cool, remove the pips and purée with the peel.",
+   "Preheat the oven to 175 °C and line a 22 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy, add the orange purée, ground almonds and baking powder.",
+   "Pour into the tin, sprinkle with flaked almonds and bake for 40-45 minutes.",
+   "Slice once cool; it keeps 5 days and gets moister each day."
+  ]
+ },
+ "italian--castagnaccio-toszkan-gesztenyelisztes-lepeny-hozzaadott-cukor-nelkul": {
+  "title": "Castagnaccio (Tuscan chestnut flour cake, no added sugar)",
+  "time": "50 min",
+  "servings": "8 slices",
+  "ingredients": [
+   "250 g chestnut flour",
+   "350 ml water",
+   "3 tbsp olive oil",
+   "pinch of salt",
+   "30 g raisins, soaked",
+   "30 g pine nuts",
+   "1 sprig rosemary",
+   "1 orange, zest grated"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and grease a tin of about 24 cm with 1 tbsp oil.",
+   "Mix the chestnut flour with the salt and orange zest and gradually whisk in the water to a smooth batter the thickness of pancake batter.",
+   "Stir in half the raisins and 1 tbsp oil, then pour into the tin (about 1 cm deep).",
+   "Scatter over the rest of the raisins, the pine nuts and rosemary leaves and drizzle with the remaining oil.",
+   "Bake for 30-35 minutes until the top cracks; serve warm or cold with ricotta, it keeps 4 days."
+  ]
+ },
+ "italian--pesche-ripiene-al-forno-amarettos-kakaos-toltott-sult-barack": {
+  "title": "Pesche ripiene al forno (amaretti and cocoa stuffed baked peaches)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 large ripe peaches, halved and stoned",
+   "6 amaretti biscuits or 4 tbsp ground almonds",
+   "1 tbsp unsweetened cocoa powder",
+   "1 egg yolk",
+   "1 tbsp honey",
+   "100 ml white wine or water"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C.",
+   "Scoop a little flesh out of the middle of each peach half with a spoon and chop it.",
+   "Mix the crumbled amaretti, cocoa, egg yolk, honey and scooped-out peach.",
+   "Fill the peach halves, put them in an ovenproof dish and pour the wine underneath.",
+   "Bake for 25-30 minutes; serve warm or cold, they keep 2 days in the fridge."
+  ]
+ },
+ "italian--tartufini-di-ricotta-e-cacao-ricottas-kakaos-golyok": {
+  "title": "Tartufini di ricotta e cacao (ricotta cocoa truffles)",
+  "time": "15 min + 1 hr chilling",
+  "servings": "16 truffles",
+  "ingredients": [
+   "250 g light ricotta, well drained",
+   "80 g ground almonds or oat flour",
+   "2 tbsp unsweetened cocoa powder + extra for rolling",
+   "2 tbsp honey",
+   "1 orange, zest grated",
+   "20 g grated dark chocolate"
+  ],
+  "steps": [
+   "Mix the ricotta with the almonds, cocoa, honey, orange zest and chocolate.",
+   "If too soft, add a little more ground almonds.",
+   "Shape 16 balls with a teaspoon.",
+   "Roll them in cocoa powder.",
+   "Chill for 1 hour; they keep 3 days in the fridge."
+  ]
+ },
+ "italian--crostata-di-ricotta-e-frutti-di-bosco-ricottas-bogyos-pite-zabalappal": {
+  "title": "Crostata di ricotta e frutti di bosco (ricotta berry tart with oat base)",
+  "time": "55 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "for the base: 150 g oat flour, 50 g ground almonds, 4 tbsp oil, 2 tbsp honey, 1 egg",
+   "for the filling: 400 g light ricotta, 2 eggs, 3 tbsp honey, 1 lemon, zest grated",
+   "250 g mixed berries"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C; knead the base ingredients and press into the bottom and sides of a 22 cm tart tin.",
+   "Pre-bake for 10 minutes.",
+   "Whisk the ricotta with the eggs, honey and lemon zest until smooth and pour onto the base.",
+   "Scatter over the berries and bake for 30 minutes until the filling is set.",
+   "Chill once cool; it keeps 3 days."
+  ]
+ },
+ "italian--torta-di-polenta-e-limone-citromos-kukoricadara-torta": {
+  "title": "Torta di polenta e limone (lemon polenta cake)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "120 g fine polenta",
+   "100 g ground almonds",
+   "50 g wholemeal flour",
+   "3 eggs",
+   "80 g erythritol or brown sugar",
+   "150 ml plain yogurt",
+   "5 tbsp olive oil",
+   "2 lemons, zest and juice",
+   "1 tsp baking powder"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 22 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy, add the yogurt, oil, lemon zest and the juice of one lemon.",
+   "Stir in the polenta, almonds, flour and baking powder.",
+   "Pour into the tin and bake for 35-40 minutes; drizzle with the other lemon's juice while warm.",
+   "Slice once cool; it keeps 5 days (for gluten-free, use more almonds instead of the flour)."
+  ]
+ },
+ "italian--fragole-all-aceto-balsamico-balzsamecetes-eper-ricottakremmel": {
+  "title": "Fragole all'aceto balsamico (balsamic strawberries with ricotta cream)",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g strawberries, quartered",
+   "1 tbsp balsamic vinegar",
+   "1 tsp honey",
+   "a few basil or mint leaves",
+   "250 g light ricotta",
+   "1 tbsp honey for the cream",
+   "1 tsp vanilla"
+  ],
+  "steps": [
+   "Toss the strawberries with the balsamic vinegar and 1 tsp honey and leave for 10 minutes.",
+   "Whisk the ricotta with the honey and vanilla until fluffy.",
+   "Spoon the cream into glasses or onto plates.",
+   "Spoon over the strawberries with their juice.",
+   "Garnish with basil; it keeps 1 day in the fridge."
+  ]
+ },
+ "italian--sorbetto-di-fragole-e-banana-epres-bananos-sorbet-cukor-nelkul": {
+  "title": "Sorbetto di fragole e banana (sugar-free strawberry banana sorbet)",
+  "time": "10 min + 1 hr freezing",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g frozen strawberries",
+   "2 frozen ripe bananas, sliced",
+   "1 lemon, juiced",
+   "3-4 tbsp plain yogurt or water",
+   "a few mint leaves"
+  ],
+  "steps": [
+   "Leave the frozen fruit at room temperature for 5 minutes.",
+   "Blend in a strong food processor or blender with the lemon juice and yogurt until creamy (scraping down the sides now and then).",
+   "It can be eaten at once as soft-serve.",
+   "For a firmer texture, freeze in a box for 1 hour.",
+   "Serve with mint; it keeps 2 weeks frozen (let it soften for 10 minutes before serving)."
+  ]
+ },
+ "italian--muffin-integrali-alle-mele-almas-teljes-kiorlesu-muffin": {
+  "title": "Muffin integrali alle mele (wholemeal apple muffins)",
+  "time": "35 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "200 g wholemeal flour",
+   "2 apples, finely diced",
+   "2 eggs",
+   "150 ml plain yogurt",
+   "5 tbsp olive oil",
+   "4 tbsp honey",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "1 tsp cinnamon",
+   "1 lemon, zest grated"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin.",
+   "Mix the eggs with the yogurt, oil, honey and lemon zest.",
+   "Add the flour, baking powder, bicarbonate of soda and cinnamon and stir just to combine.",
+   "Fold in the apple, spoon into the tin and bake for 20-22 minutes.",
+   "They keep 3 days in a box and can be frozen."
+  ]
+ },
+ "italian--torta-caprese-light-liszt-nelkuli-csokolades-mandulas-torta-kevesebb-cukorral": {
+  "title": "Torta caprese light (flourless chocolate almond cake with less sugar)",
+  "time": "50 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "100 g dark chocolate (70%)",
+   "50 g butter or 4 tbsp olive oil",
+   "4 eggs, separated",
+   "80 g erythritol or brown sugar",
+   "150 g ground almonds",
+   "2 tbsp unsweetened cocoa powder",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 170 °C and line a 22 cm tin.",
+   "Melt the chocolate with the butter over steam or in the microwave.",
+   "Whisk the yolks with half the sweetener until fluffy, add the chocolate, almonds and cocoa.",
+   "Whisk the whites with the salt and the rest of the sweetener to stiff peaks and fold in gently.",
+   "Bake for 30-35 minutes (the centre should stay slightly moist); slice once cool, it keeps 5 days."
+  ]
+ },
+ "italian--crema-di-yogurt-al-caffe-kaves-joghurtkrem-kakaoval": {
+  "title": "Crema di yogurt al caffè (coffee yogurt cream with cocoa)",
+  "time": "10 min",
+  "servings": "4 cups",
+  "ingredients": [
+   "500 g Greek yogurt",
+   "100 ml strong cooled espresso",
+   "2 tbsp honey or erythritol",
+   "1 tsp vanilla",
+   "4 oat biscuits, crumbled",
+   "1 tsp unsweetened cocoa powder"
+  ],
+  "steps": [
+   "Whisk the yogurt with the coffee, sweetener and vanilla until fluffy.",
+   "Scatter half the biscuit crumbs in the bottom of the glasses.",
+   "Spoon over the coffee cream.",
+   "Scatter the rest of the crumbs on top and dust with cocoa.",
+   "Serve at once or chilled; it keeps 2 days in the fridge."
+  ]
+ },
+ "italian--plumcake-integrale-banana-e-noci-teljes-kiorlesu-bananos-dios-kalacs": {
+  "title": "Plumcake integrale banana e noci (wholemeal banana walnut loaf)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "3 very ripe bananas, mashed",
+   "2 eggs",
+   "5 tbsp olive oil",
+   "2 tbsp honey",
+   "100 ml plain yogurt",
+   "200 g wholemeal flour",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "1 tsp cinnamon",
+   "60 g walnuts, roughly chopped"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a loaf tin.",
+   "Mix the banana with the eggs, oil, honey and yogurt.",
+   "Add the flour, baking powder, bicarbonate of soda and cinnamon, then most of the walnuts.",
+   "Pour into the tin, sprinkle with the rest of the walnuts and bake for 45-50 minutes.",
+   "Slice once cool; it keeps 5 days and can be frozen in slices."
   ]
  },
  "american--iros-amerikai-palacsinta": {
@@ -18222,6 +20340,444 @@ window.I18N_EN_RECIPES = {
    "Serve each bowl with a spoonful of ricotta and basil; it keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
   ]
  },
+ "american--black-bean-brownies-fekete-babos-brownie-liszt-nelkul": {
+  "title": "Black bean brownies (flourless)",
+  "time": "40 min",
+  "servings": "16 squares",
+  "ingredients": [
+   "1 tin (400 g) black beans, well rinsed",
+   "3 eggs",
+   "4 tbsp unsweetened cocoa powder",
+   "5 tbsp honey or maple syrup",
+   "3 tbsp coconut oil or oil",
+   "1 tsp vanilla",
+   "½ tsp baking powder",
+   "pinch of salt",
+   "50 g dark chocolate chips"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×20 cm tin.",
+   "Blend the beans with the eggs, cocoa, honey, oil, vanilla, baking powder and salt until completely smooth.",
+   "Stir in half the chocolate, spread in the tin and scatter the rest on top.",
+   "Bake for 25-28 minutes until the centre is just set.",
+   "Cut into squares once completely cool; they keep 5 days in the fridge."
+  ]
+ },
+ "american--oatmeal-raisin-cookies-light-mazsolas-zabkeksz": {
+  "title": "Oatmeal raisin cookies light",
+  "time": "30 min",
+  "servings": "20 cookies",
+  "ingredients": [
+   "150 g rolled oats",
+   "80 g wholemeal flour",
+   "60 g raisins",
+   "1 egg",
+   "1 ripe banana, mashed",
+   "3 tbsp oil or melted butter",
+   "3 tbsp brown sugar or honey",
+   "1 tsp cinnamon",
+   "½ tsp bicarbonate of soda",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a baking tray.",
+   "Mix the banana with the egg, oil and sweetener.",
+   "Add the oats, flour, cinnamon, bicarbonate of soda and salt, then the raisins.",
+   "Drop spoonfuls onto the tray and flatten.",
+   "Bake for 12-14 minutes; they keep 1 week in a tin."
+  ]
+ },
+ "american--peanut-butter-energy-bites-mogyorovajas-zabgolyok": {
+  "title": "Peanut butter energy bites",
+  "time": "15 min + 30 min chilling",
+  "servings": "20 bites",
+  "ingredients": [
+   "150 g rolled oats",
+   "120 g natural peanut butter",
+   "4 tbsp honey",
+   "3 tbsp ground flaxseed or chia seeds",
+   "30 g dark chocolate chips",
+   "1 tsp vanilla",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Mix all the ingredients in a bowl.",
+   "If too dry, add a little peanut butter or water; if too sticky, a few more oats.",
+   "Chill for 20 minutes to make shaping easier.",
+   "With wet hands, shape 20 balls.",
+   "They keep 1 week in the fridge, or 2 months frozen."
+  ]
+ },
+ "american--blueberry-oat-bars-afonyas-zabszelet": {
+  "title": "Blueberry oat bars",
+  "time": "45 min",
+  "servings": "12 bars",
+  "ingredients": [
+   "200 g rolled oats",
+   "80 g wholemeal flour",
+   "60 g coconut oil or butter, melted",
+   "4 tbsp honey",
+   "½ tsp bicarbonate of soda",
+   "pinch of salt",
+   "for the filling: 350 g blueberries (frozen is fine), 1 tbsp honey, 1 tbsp cornflour, 1 lemon, juiced"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×20 cm tin.",
+   "Mix the oats, flour, bicarbonate of soda and salt, add the oil and honey to make a crumbly mixture.",
+   "Press two-thirds into the bottom of the tin.",
+   "Toss the blueberries with the honey, cornflour and lemon juice, spread over and scatter the rest of the crumble on top.",
+   "Bake for 30-35 minutes; slice once completely cool, they keep 5 days in the fridge."
+  ]
+ },
+ "american--crustless-pumpkin-pie-teszta-nelkuli-sutotokpite": {
+  "title": "Crustless pumpkin pie",
+  "time": "1 hr + chilling",
+  "servings": "8 slices",
+  "ingredients": [
+   "450 g pumpkin purée (from roasted pumpkin)",
+   "2 eggs",
+   "250 ml milk or light evaporated milk",
+   "4 tbsp maple syrup or honey",
+   "2 tbsp wholemeal or oat flour",
+   "2 tsp pumpkin pie spice (cinnamon, ginger, nutmeg, cloves)",
+   "1 tsp vanilla",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and grease a 22 cm pie dish.",
+   "Blend all the ingredients until smooth.",
+   "Pour into the dish.",
+   "Bake for 45-50 minutes until the edges are set and the centre still slightly wobbles.",
+   "Chill once cool; serve with Greek yogurt, it keeps 4 days."
+  ]
+ },
+ "american--baked-oatmeal-cups-sult-zabkasa-muffinformaban": {
+  "title": "Baked oatmeal cups",
+  "time": "35 min",
+  "servings": "12 cups",
+  "ingredients": [
+   "200 g rolled oats",
+   "350 ml milk",
+   "2 eggs",
+   "2 ripe bananas, mashed",
+   "2 tbsp maple syrup or honey",
+   "1 tsp baking powder",
+   "1 tsp cinnamon",
+   "1 tsp vanilla",
+   "120 g berries or chopped apple"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and grease or line a muffin tin.",
+   "Mix the banana with the eggs, milk, syrup and vanilla.",
+   "Add the oats, baking powder and cinnamon, then half the fruit.",
+   "Divide between the holes and scatter the rest of the fruit on top.",
+   "Bake for 20-25 minutes; they keep 5 days in the fridge and heat through in the microwave in 20 seconds."
+  ]
+ },
+ "american--zucchini-bread-light-fahejas-cukkinis-kalacs": {
+  "title": "Zucchini bread light (cinnamon courgette loaf)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "300 g courgette, grated and lightly squeezed",
+   "2 eggs",
+   "80 g brown sugar or 5 tbsp honey",
+   "6 tbsp oil",
+   "100 ml plain yogurt",
+   "220 g wholemeal flour",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "2 tsp cinnamon",
+   "50 g walnuts, roughly chopped"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a loaf tin.",
+   "Mix the eggs with the sweetener, oil and yogurt.",
+   "Add the flour, baking powder, bicarbonate of soda and cinnamon, then the courgette and walnuts.",
+   "Spread in the tin.",
+   "Bake for 50 minutes; slice once cool, it keeps 5 days and can be frozen."
+  ]
+ },
+ "american--morning-glory-muffins-repas-almas-magvas-muffin": {
+  "title": "Morning glory muffins (carrot, apple and seed muffins)",
+  "time": "40 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "180 g wholemeal flour",
+   "2 carrots, finely grated",
+   "1 apple, grated",
+   "30 g raisins",
+   "30 g walnuts or sunflower seeds",
+   "2 tbsp desiccated coconut",
+   "2 eggs",
+   "5 tbsp oil",
+   "4 tbsp honey",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "2 tsp cinnamon"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin.",
+   "Mix the eggs with the oil and honey.",
+   "Add the flour, baking powder, bicarbonate of soda and cinnamon.",
+   "Fold in the carrot, apple, raisins, walnuts and coconut.",
+   "Spoon into the tin and bake for 22-25 minutes; they keep 4 days."
+  ]
+ },
+ "american--chickpea-blondies-csicseriborsos-mogyorovajas-blondie": {
+  "title": "Chickpea blondies (peanut butter chickpea blondies)",
+  "time": "35 min",
+  "servings": "16 squares",
+  "ingredients": [
+   "1 tin (400 g) chickpeas, rinsed and patted dry",
+   "100 g natural peanut butter",
+   "5 tbsp honey or maple syrup",
+   "2 tsp vanilla",
+   "½ tsp baking powder, ½ tsp bicarbonate of soda",
+   "pinch of salt",
+   "50 g dark chocolate chips"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×20 cm tin.",
+   "Blend the chickpeas with the peanut butter, honey, vanilla, baking powder, bicarbonate of soda and salt until completely smooth.",
+   "Stir in two-thirds of the chocolate, spread in the tin and scatter the rest on top.",
+   "Bake for 20-25 minutes until golden at the edges.",
+   "Cut into squares once cool; they keep 5 days in the fridge."
+  ]
+ },
+ "american--peanut-butter-banana-nice-cream-mogyorovajas-bananfagyi": {
+  "title": "Peanut butter banana nice cream",
+  "time": "10 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "4 ripe bananas, sliced and frozen",
+   "2 tbsp natural peanut butter",
+   "1 tbsp unsweetened cocoa powder (optional)",
+   "3-4 tbsp milk",
+   "pinch of salt",
+   "1 tbsp roasted peanuts for the top"
+  ],
+  "steps": [
+   "Leave the frozen banana at room temperature for 5 minutes.",
+   "Blend in a strong food processor with the peanut butter, cocoa, salt and milk until creamy.",
+   "Scrape down the sides now and then.",
+   "Serve at once as soft-serve, sprinkled with peanuts.",
+   "For a firmer texture, freeze for 1 hour; it keeps 2 weeks."
+  ]
+ },
+ "american--strawberry-shortcake-light-joghurtos-pogacsa-eperrel": {
+  "title": "Strawberry shortcake light (yogurt biscuits with strawberries)",
+  "time": "35 min",
+  "servings": "8 servings",
+  "ingredients": [
+   "200 g wholemeal spelt flour",
+   "2 tsp baking powder",
+   "2 tbsp honey",
+   "40 g cold butter",
+   "150 ml plain yogurt",
+   "pinch of salt",
+   "500 g strawberries, sliced",
+   "1 tsp honey for the strawberries",
+   "300 ml Greek yogurt with vanilla"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and line a baking tray.",
+   "Rub the flour with the baking powder and salt into the butter, add the yogurt and honey and bring together just barely.",
+   "Pat out 2 cm thick, cut 8 rounds and bake for 12-15 minutes.",
+   "Toss the strawberries with the honey and leave for 10 minutes.",
+   "Split the biscuits and fill with vanilla yogurt and strawberries; the biscuits keep 3 days, eat the filled ones on the day."
+  ]
+ },
+ "american--chocolate-mug-cake-light-bogres-csokis-suti-mikroban": {
+  "title": "Chocolate mug cake light (microwave)",
+  "time": "5 min",
+  "servings": "1 serving",
+  "ingredients": [
+   "3 tbsp oat flour",
+   "1 tbsp unsweetened cocoa powder",
+   "½ tsp baking powder",
+   "1 egg",
+   "3 tbsp milk",
+   "1 tbsp honey",
+   "1 tsp oil",
+   "a few pieces of dark chocolate"
+  ],
+  "steps": [
+   "Mix the oat flour, cocoa and baking powder in a large mug with a fork.",
+   "Add the egg, milk, honey and oil and mix until smooth.",
+   "Press the chocolate pieces into the middle.",
+   "Cook in the microwave on full power for 60-80 seconds until risen.",
+   "Eat at once with a spoonful of yogurt."
+  ]
+ },
+ "american--sweet-potato-brownies-edesburgonyas-brownie": {
+  "title": "Sweet potato brownies",
+  "time": "45 min",
+  "servings": "16 squares",
+  "ingredients": [
+   "300 g roasted sweet potato purée",
+   "2 eggs",
+   "100 g natural peanut or almond butter",
+   "4 tbsp maple syrup or honey",
+   "5 tbsp unsweetened cocoa powder",
+   "3 tbsp oat flour",
+   "½ tsp bicarbonate of soda",
+   "pinch of salt",
+   "40 g dark chocolate chips"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×20 cm tin.",
+   "Mix the sweet potato with the eggs, nut butter and syrup until smooth.",
+   "Add the cocoa, oat flour, bicarbonate of soda and salt, then the chocolate.",
+   "Spread in the tin and bake for 25-30 minutes.",
+   "Cut into squares once completely cool; they keep 5 days in the fridge."
+  ]
+ },
+ "american--lemon-blueberry-yogurt-loaf-citromos-afonyas-joghurtos-kalacs": {
+  "title": "Lemon blueberry yogurt loaf",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "200 g wholemeal spelt flour",
+   "200 ml Greek yogurt",
+   "2 eggs",
+   "80 g erythritol or brown sugar",
+   "5 tbsp oil",
+   "2 lemons, zest grated, and juice of 1",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "150 g blueberries"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a loaf tin.",
+   "Whisk the eggs with the sweetener until fluffy, add the yogurt, oil, lemon zest and juice.",
+   "Stir in the flour, baking powder and bicarbonate of soda.",
+   "Toss the blueberries in a little flour, fold in and spread in the tin.",
+   "Bake for 50 minutes; slice once cool, it keeps 4 days."
+  ]
+ },
+ "american--cranberry-orange-muffins-narancsos-vorosafonyas-muffin": {
+  "title": "Cranberry orange muffins",
+  "time": "35 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "200 g wholemeal flour",
+   "50 g rolled oats",
+   "2 eggs",
+   "150 ml plain yogurt",
+   "5 tbsp oil",
+   "4 tbsp honey",
+   "1 orange, zest and juice",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "100 g fresh or frozen cranberries (or 50 g dried)"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin.",
+   "Mix the eggs with the yogurt, oil, honey, orange zest and juice.",
+   "Add the flour, oats, baking powder and bicarbonate of soda and stir just to combine.",
+   "Fold in the cranberries and spoon into the tin.",
+   "Bake for 20-22 minutes; they keep 4 days and can be frozen."
+  ]
+ },
+ "american--peach-cobbler-light-barackos-cobbler-zabos-feltettel": {
+  "title": "Peach cobbler light (with oat topping)",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "6 peaches (or 2 tins, drained), sliced",
+   "1 tbsp honey",
+   "1 tsp cinnamon",
+   "1 tbsp cornflour",
+   "for the topping: 80 g wholemeal flour, 40 g rolled oats, 1 tsp baking powder, 30 g cold butter, 100 ml plain yogurt, 1 tbsp honey"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Toss the peaches with the honey, cinnamon and cornflour and put in an ovenproof dish.",
+   "Rub the flour, oats and baking powder into the butter, add the yogurt and honey and mix into a soft dough.",
+   "Drop spoonfuls over the fruit.",
+   "Bake for 30 minutes until golden; serve warm, it keeps 3 days."
+  ]
+ },
+ "american--chia-jam-thumbprint-cookies-chias-lekvarral-toltott-zabkeksz": {
+  "title": "Chia jam thumbprint cookies",
+  "time": "35 min",
+  "servings": "18 cookies",
+  "ingredients": [
+   "150 g oat flour",
+   "50 g ground almonds",
+   "4 tbsp oil or coconut oil",
+   "4 tbsp honey or maple syrup",
+   "1 tsp vanilla",
+   "pinch of salt",
+   "for the chia jam: 150 g raspberries or strawberries, 1 tbsp chia seeds, 1 tsp honey"
+  ],
+  "steps": [
+   "Mash the fruit with a fork, mix with the chia seeds and honey and leave for 15 minutes to thicken.",
+   "Preheat the oven to 175 °C and line a baking tray.",
+   "Knead the oat flour, almonds, oil, honey, vanilla and salt into a dough and shape 18 balls.",
+   "Put on the tray, press a hollow into each with your thumb and fill with the chia jam.",
+   "Bake for 12-14 minutes; they keep 5 days in the fridge."
+  ]
+ },
+ "american--apple-nachos-almaszeletek-mogyorovajjal-es-csokival": {
+  "title": "Apple nachos (apple slices with peanut butter and chocolate)",
+  "time": "10 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 crisp apples, cored and thinly sliced",
+   "1 tsp lemon juice",
+   "2 tbsp natural peanut butter, slightly warmed",
+   "10 g dark chocolate, melted",
+   "1 tbsp rolled oats or granola",
+   "1 tbsp desiccated coconut",
+   "pinch of cinnamon"
+  ],
+  "steps": [
+   "Drizzle the apple slices with lemon juice so they don't brown.",
+   "Fan them out on a plate.",
+   "Drizzle the peanut butter and chocolate over in thin streams.",
+   "Sprinkle with the oats, coconut and cinnamon.",
+   "Serve at once — a favourite snack with children too."
+  ]
+ },
+ "american--key-lime-pie-jars-light-lime-os-joghurtkrem-poharban-zabmorzsaval": {
+  "title": "Key lime pie jars light (lime yogurt cream with oat crumbs)",
+  "time": "15 min + 1 hr chilling",
+  "servings": "4 jars",
+  "ingredients": [
+   "400 g Greek yogurt or skyr",
+   "2 limes, zest and juice",
+   "2 tbsp honey",
+   "1 tsp vanilla",
+   "6 oat or graham biscuits, crumbled",
+   "1 tbsp melted butter or coconut oil"
+  ],
+  "steps": [
+   "Mix the biscuit crumbs with the melted butter and press into the bottom of the jars.",
+   "Whisk the yogurt with the lime juice, most of the zest, the honey and vanilla until smooth.",
+   "Spoon the cream over the crumbs.",
+   "Scatter the remaining lime zest on top.",
+   "Chill for 1 hour; they keep 2 days in the fridge."
+  ]
+ },
+ "american--cheesecake-stuffed-strawberries-kremsajttal-toltott-eper": {
+  "title": "Cheesecake-stuffed strawberries",
+  "time": "15 min",
+  "servings": "4 servings (20 pieces)",
+  "ingredients": [
+   "20 large strawberries",
+   "150 g light cream cheese or low-fat curd cheese, smooth",
+   "50 g Greek yogurt",
+   "1 tbsp honey",
+   "1 tsp vanilla",
+   "1 lemon, zest grated",
+   "2 oat biscuits, finely crumbled"
+  ],
+  "steps": [
+   "Cut the stalks off the strawberries and hollow out the middles with a small knife; slice a thin piece off the bottoms so they stand.",
+   "Whisk the cream cheese with the yogurt, honey, vanilla and lemon zest until fluffy.",
+   "Fill the strawberries with a piping bag or teaspoon.",
+   "Sprinkle the tops with biscuit crumbs.",
+   "Serve chilled; best on the day."
+  ]
+ },
  "greek--gorog-joghurt-mezzel-es-dioval": {
   "title": "Greek yogurt with honey and walnuts",
   "time": "5 min",
@@ -19871,6 +22427,426 @@ window.I18N_EN_RECIPES = {
    "Add the courgette, beans and pasta and cook for another 10 minutes.",
    "Off the heat, stir in the lemon juice and the rest of the olive oil.",
    "It keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "greek--yiaourtopita-gorog-joghurtos-citromos-torta-liszt-nelkul": {
+  "title": "Yiaourtopita (flourless Greek yogurt lemon cake)",
+  "time": "50 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "500 g Greek yogurt",
+   "3 eggs, separated",
+   "5 tbsp honey or erythritol",
+   "3 tbsp cornflour",
+   "1 lemon, zest and juice",
+   "1 tsp vanilla",
+   "berries to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 170 °C and line a 22 cm tin with baking paper.",
+   "Whisk the yogurt with the yolks, half the honey, the cornflour, lemon zest and juice and vanilla until smooth.",
+   "Whisk the whites with the rest of the honey to stiff peaks and gently fold in.",
+   "Pour into the tin and bake for 35-40 minutes until golden and just set in the middle.",
+   "Serve with fruit once cool; it keeps 4 days in the fridge."
+  ]
+ },
+ "greek--karydopita-light-dios-fahejas-piskota-konnyu-mezes-sziruppal": {
+  "title": "Karydopita light (walnut cinnamon sponge in light honey syrup)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "4 eggs, separated",
+   "60 g erythritol or brown sugar",
+   "150 g ground walnuts",
+   "80 g wholemeal breadcrumbs or oat flour",
+   "1 tsp baking powder",
+   "2 tsp cinnamon, pinch of cloves",
+   "1 orange, zest grated",
+   "for the syrup: 150 ml water, 3 tbsp honey, 1 lemon, juiced"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×25 cm tin.",
+   "Whisk the yolks with half the sweetener until fluffy, add the walnuts, crumbs, baking powder, spices and orange zest.",
+   "Whisk the whites with the rest of the sweetener to stiff peaks and fold in gently.",
+   "Spread in the tin and bake for 30 minutes; meanwhile boil the syrup ingredients for 3 minutes.",
+   "Cut the warm cake into slices and drizzle with the lukewarm syrup; it keeps 5 days."
+  ]
+ },
+ "greek--melomakarona-light-olivaolajos-narancsos-mezes-keksz": {
+  "title": "Melomakarona light (olive oil orange honey cookies)",
+  "time": "45 min",
+  "servings": "24 cookies",
+  "ingredients": [
+   "250 g wholemeal flour",
+   "50 g fine semolina",
+   "100 ml olive oil",
+   "100 ml fresh orange juice",
+   "1 orange, zest grated",
+   "2 tbsp honey",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "1 tsp cinnamon, pinch of cloves",
+   "for dipping: 3 tbsp honey, 3 tbsp water",
+   "40 g ground walnuts"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a baking tray.",
+   "Mix the oil with the orange juice, zest and honey, add the flour, semolina, baking powder, bicarbonate of soda and spices and knead into a soft dough.",
+   "Shape walnut-sized ovals, mark with a fork and bake for 18-20 minutes.",
+   "Boil the honey with the water and dip the lukewarm cookies one by one.",
+   "Sprinkle with walnuts; they keep 2 weeks in a tin."
+  ]
+ },
+ "greek--revani-light-joghurtos-daras-sutemeny-citromos-sziruppal": {
+  "title": "Revani light (yogurt semolina cake with lemon syrup)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "150 g fine semolina",
+   "80 g wholemeal flour",
+   "200 ml Greek yogurt",
+   "3 eggs",
+   "60 g erythritol or brown sugar",
+   "4 tbsp olive oil",
+   "1 sachet baking powder",
+   "1 lemon, zest grated",
+   "for the syrup: 200 ml water, 3 tbsp honey, 1 lemon, juiced"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×25 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy and add the yogurt, oil and lemon zest.",
+   "Stir in the semolina, flour and baking powder and pour into the tin.",
+   "Bake for 30 minutes; meanwhile boil the syrup ingredients for 3 minutes.",
+   "Cut the hot cake into slices and pour over the lukewarm syrup; it keeps 4 days."
+  ]
+ },
+ "greek--milopita-gorog-almas-sutemeny-olivaolajjal": {
+  "title": "Milopita (Greek olive oil apple cake)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "4 apples, peeled and thinly sliced",
+   "2 eggs",
+   "80 g erythritol or brown sugar",
+   "100 ml olive oil",
+   "100 ml plain yogurt",
+   "200 g wholemeal flour",
+   "1 sachet baking powder",
+   "2 tsp cinnamon",
+   "50 g roughly chopped walnuts"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 24 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy and add the oil and yogurt.",
+   "Stir in the flour mixed with the baking powder and cinnamon, then two-thirds of the apple and the walnuts.",
+   "Spread in the tin and fan the remaining apple over the top.",
+   "Bake for 40 minutes; slice once cool, it keeps 4 days."
+  ]
+ },
+ "greek--galatopita-light-teszta-nelkuli-gorog-tejes-pite": {
+  "title": "Galatopita light (crustless Greek milk pie)",
+  "time": "55 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "1 litre milk (1.5%)",
+   "120 g fine semolina",
+   "3 eggs",
+   "5 tbsp honey or erythritol",
+   "20 g butter",
+   "1 lemon, zest grated",
+   "1 tsp vanilla",
+   "cinnamon for the top"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and grease a 24 cm tin.",
+   "Bring the milk to the boil with the lemon zest and sprinkle in the semolina while stirring constantly; cook for 4-5 minutes until thick.",
+   "Take off the heat, stir in the butter, honey and vanilla and let it cool a little.",
+   "Quickly stir in the beaten eggs and pour into the tin.",
+   "Bake for 40 minutes until golden; dust with cinnamon once cool, it keeps 4 days in the fridge."
+  ]
+ },
+ "greek--sika-psita-me-meli-mezes-kakukkfuves-sult-fuge-joghurttal": {
+  "title": "Sika psita me meli (honey thyme roasted figs with yogurt)",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 fresh figs, cut in a cross at the top",
+   "2 tsp honey",
+   "a few sprigs fresh thyme",
+   "20 g walnuts or pistachios, roughly chopped",
+   "300 ml Greek yogurt"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Stand the figs in an ovenproof dish and open the cuts slightly.",
+   "Drizzle with honey and scatter over the thyme.",
+   "Roast for 12-15 minutes until soft and fragrant.",
+   "Serve with yogurt and nuts; the roasted figs keep 2 days in the fridge."
+  ]
+ },
+ "greek--fagyasztott-joghurtos-gyumolcslap-frozen-yogurt-bark": {
+  "title": "Frozen yogurt bark with berries",
+  "time": "10 min + 3 hr freezing",
+  "servings": "12 pieces",
+  "ingredients": [
+   "500 g Greek yogurt",
+   "2 tbsp honey",
+   "1 tsp vanilla",
+   "200 g berries (raspberries, blueberries, strawberries)",
+   "30 g pistachios or almonds, roughly chopped",
+   "20 g dark chocolate, grated"
+  ],
+  "steps": [
+   "Whisk the yogurt with the honey and vanilla.",
+   "Spread about 1 cm thick on a tray lined with baking paper.",
+   "Scatter over the fruit, nuts and chocolate and press in slightly.",
+   "Freeze for at least 3 hours.",
+   "Break into pieces and serve straight from the freezer; it keeps 1 month frozen."
+  ]
+ },
+ "greek--tahinis-mezes-keksz-szezammaggal": {
+  "title": "Tahini honey sesame cookies",
+  "time": "25 min",
+  "servings": "18 cookies",
+  "ingredients": [
+   "120 g tahini",
+   "4 tbsp honey",
+   "1 egg",
+   "120 g oat flour or wholemeal flour",
+   "½ tsp bicarbonate of soda",
+   "1 tsp cinnamon",
+   "pinch of salt",
+   "3 tbsp sesame seeds"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a baking tray.",
+   "Mix the tahini with the honey and egg until smooth.",
+   "Add the flour, bicarbonate of soda, cinnamon and salt and knead into a dough.",
+   "Shape 18 balls, roll in sesame seeds and flatten slightly.",
+   "Bake for 12 minutes; they keep 10 days in a tin."
+  ]
+ },
+ "greek--pasteli-mezes-szezamszelet": {
+  "title": "Pasteli (honey sesame bars)",
+  "time": "20 min + 1 hr cooling",
+  "servings": "16 bars",
+  "ingredients": [
+   "200 g sesame seeds",
+   "20 g roughly chopped almonds or pistachios (optional)",
+   "120 g honey",
+   "1 orange, zest grated",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Toast the sesame seeds in a dry frying pan, stirring, until golden.",
+   "Boil the honey in a small saucepan for 3-4 minutes until slightly thickened.",
+   "Stir in the sesame, almonds, orange zest and salt.",
+   "Tip onto baking paper, cover with another sheet and roll out about 5 mm thick.",
+   "Cut into bars while still warm and leave to cool completely; they keep 2 weeks airtight."
+  ]
+ },
+ "greek--lathopita-narancsos-olivaolajos-kevert": {
+  "title": "Lathopita (orange olive oil cake)",
+  "time": "55 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "2 oranges, zest grated and 200 ml fresh juice",
+   "100 ml olive oil",
+   "3 eggs",
+   "80 g erythritol or brown sugar",
+   "220 g wholemeal spelt flour",
+   "1 sachet baking powder",
+   "1 tsp cinnamon",
+   "2 tbsp sesame seeds"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a loaf tin or 20×20 cm tin.",
+   "Whisk the eggs with the sweetener until fluffy, add the oil, orange juice and zest.",
+   "Stir in the flour mixed with the baking powder and cinnamon.",
+   "Pour into the tin, sprinkle with sesame and bake for 40 minutes.",
+   "Slice once cool; it keeps 5 days."
+  ]
+ },
+ "greek--citromos-joghurtos-mousse-sutes-nelkul": {
+  "title": "No-bake lemon yogurt mousse",
+  "time": "20 min + 2 hr chilling",
+  "servings": "6 cups",
+  "ingredients": [
+   "500 g Greek yogurt",
+   "2 lemons, zest and juice",
+   "3 tbsp honey",
+   "8 g gelatine",
+   "2 egg whites (pasteurised) or 100 ml whipped cream",
+   "berries and mint to serve"
+  ],
+  "steps": [
+   "Soak the gelatine in 4 tbsp cold water, then dissolve over low heat.",
+   "Whisk the yogurt with the lemon zest, juice and honey until smooth and stir in the lukewarm gelatine.",
+   "Whisk the whites to stiff peaks and fold in gently.",
+   "Divide into glasses.",
+   "Chill for at least 2 hours; serve with fruit, it keeps 3 days."
+  ]
+ },
+ "greek--moustokouloura-light-mustos-fuszeres-kekszkarikak": {
+  "title": "Moustokouloura light (spiced grape must cookie rings)",
+  "time": "40 min",
+  "servings": "24 cookies",
+  "ingredients": [
+   "200 ml grape must syrup or 200 ml 100% grape juice with 3 tbsp honey",
+   "100 ml olive oil",
+   "350 g wholemeal flour",
+   "1 tsp bicarbonate of soda",
+   "1 tsp cinnamon, ½ tsp cloves",
+   "1 orange, zest grated",
+   "2 tbsp sesame seeds"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line two baking trays.",
+   "Mix the must with the oil and orange zest.",
+   "Add the flour, bicarbonate of soda and spices and knead into a soft dough.",
+   "Roll finger-thick ropes, shape into rings, press into sesame and put on the trays.",
+   "Bake for 15-18 minutes; they keep 2 weeks in a tin."
+  ]
+ },
+ "greek--halvas-simigdalenios-light-olivaolajos-daras-halva-kevesebb-cukorral": {
+  "title": "Halvas simigdalenios light (olive oil semolina halva with less sugar)",
+  "time": "30 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "180 g coarse semolina",
+   "8 tbsp olive oil",
+   "50 g almonds or walnuts, roughly chopped",
+   "for the syrup: 600 ml water, 6 tbsp honey or 80 g erythritol, 1 cinnamon stick, 1 lemon, peel",
+   "cinnamon for the top"
+  ],
+  "steps": [
+   "Bring the syrup ingredients to the boil and keep warm.",
+   "Toast the semolina and almonds in the oil in a heavy-based saucepan, stirring, for 8-10 minutes until golden.",
+   "Take off the heat, remove the cinnamon and lemon peel from the syrup and carefully pour it over the semolina (it spatters!).",
+   "Cook over low heat, stirring, for 3-4 minutes until it comes away from the sides.",
+   "Press into a mould, let it cool, turn out and slice, dusted with cinnamon; it keeps 5 days."
+  ]
+ },
+ "greek--karpouzopita-gorog-gorogdinnyes-mezes-lepeny": {
+  "title": "Karpouzopita (Greek watermelon honey pie)",
+  "time": "1 hr",
+  "servings": "12 slices",
+  "ingredients": [
+   "1 kg watermelon flesh, seeded and diced",
+   "150 g fine semolina",
+   "50 g wholemeal flour",
+   "3 tbsp honey",
+   "4 tbsp olive oil",
+   "1 tsp cinnamon",
+   "1 tsp baking powder",
+   "3 tbsp sesame seeds"
+  ],
+  "steps": [
+   "Leave the watermelon to drain in a sieve for 20 minutes, then crush lightly with a fork.",
+   "Preheat the oven to 190 °C and oil a 20×25 cm tin.",
+   "Mix the watermelon with the honey, oil, semolina, flour, baking powder and cinnamon.",
+   "Pour into the tin, sprinkle with sesame and bake for 40-45 minutes until golden and set.",
+   "Slice once cool; it keeps 3 days in the fridge."
+  ]
+ },
+ "greek--joghurtos-panna-cotta-mezzel-es-kakukkfuvel": {
+  "title": "Yogurt panna cotta with honey and thyme",
+  "time": "15 min + 4 hr chilling",
+  "servings": "6 cups",
+  "ingredients": [
+   "400 ml Greek yogurt",
+   "200 ml milk",
+   "8 g gelatine",
+   "3 tbsp honey",
+   "1 tsp vanilla",
+   "2 sprigs fresh thyme",
+   "6 tsp honey and a few walnuts to serve"
+  ],
+  "steps": [
+   "Soak the gelatine in 3 tbsp cold water.",
+   "Warm the milk with the honey, vanilla and thyme (don't boil), leave for 5 minutes, strain and dissolve the gelatine in it.",
+   "Stir the lukewarm milk into the yogurt.",
+   "Pour into glasses or moulds and chill for 4 hours.",
+   "Serve with a teaspoon of honey and walnuts each; it keeps 3 days in the fridge."
+  ]
+ },
+ "greek--amygdalota-light-mandulas-habcsok-suti-kevesebb-cukorral": {
+  "title": "Amygdalota light (almond cookies with less sugar)",
+  "time": "30 min",
+  "servings": "20 cookies",
+  "ingredients": [
+   "200 g ground almonds",
+   "2 egg whites",
+   "60 g erythritol or 50 g icing sugar",
+   "1 tsp orange blossom water or vanilla",
+   "1 lemon, zest grated",
+   "20 whole almonds to decorate"
+  ],
+  "steps": [
+   "Preheat the oven to 170 °C and line a baking tray.",
+   "Whisk the whites with the sweetener until lightly frothy (not stiff).",
+   "Add the ground almonds, orange blossom water and lemon zest and mix into a sticky paste.",
+   "With wet hands, shape 20 balls and press an almond into the top of each.",
+   "Bake for 15-18 minutes until pale golden; they keep 1 week in a tin."
+  ]
+ },
+ "greek--mini-baklava-tekercsek-keves-mezzel": {
+  "title": "Mini baklava rolls with little honey",
+  "time": "50 min",
+  "servings": "20 pieces",
+  "ingredients": [
+   "10 sheets filo pastry",
+   "150 g walnuts and pistachios, coarsely ground",
+   "1 tsp cinnamon",
+   "1 tbsp honey for the filling",
+   "4 tbsp melted butter or olive oil",
+   "for the glaze: 4 tbsp honey, 3 tbsp water, 1 tbsp lemon juice"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and grease a small tin.",
+   "Mix the nuts with the cinnamon and 1 tbsp honey.",
+   "Stack two sheets, brush lightly, scatter a strip of filling along the long edge and roll up tightly; make 5 rolls.",
+   "Cut each roll into 4, put in the tin, brush and bake for 25 minutes until golden.",
+   "Boil the glaze for 2 minutes and spoon over the warm rolls; they keep 1 week in a box."
+  ]
+ },
+ "greek--joghurtos-barackos-jegkremrudak-pagota-yiaourti": {
+  "title": "Peach yogurt ice lollies (pagota yiaourti)",
+  "time": "10 min + 5 hr freezing",
+  "servings": "8 lollies",
+  "ingredients": [
+   "400 g Greek yogurt",
+   "3 ripe peaches or 250 g mango, diced",
+   "2 tbsp honey",
+   "1 tsp vanilla",
+   "100 ml milk"
+  ],
+  "steps": [
+   "Purée half the fruit with the honey and milk.",
+   "Whisk the yogurt with the vanilla.",
+   "Spoon the yogurt, fruit purée and remaining fruit pieces alternately into the moulds.",
+   "Insert the sticks.",
+   "Freeze for at least 5 hours; they keep 1 month frozen."
+  ]
+ },
+ "greek--portokali-me-kanella-fahejas-mezes-narancs-pisztaciaval": {
+  "title": "Portokali me kanella (cinnamon honey oranges with pistachios)",
+  "time": "10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 oranges",
+   "1 tsp cinnamon",
+   "2 tsp honey",
+   "1 tbsp lemon juice",
+   "20 g pistachios, roughly chopped",
+   "a few mint leaves",
+   "200 ml Greek yogurt (optional)"
+  ],
+  "steps": [
+   "Peel the oranges with a sharp knife, removing the white pith, and slice into thin rounds.",
+   "Arrange on plates.",
+   "Mix the honey with the lemon juice and drizzle over.",
+   "Sprinkle with cinnamon, pistachios and mint.",
+   "Serve on its own or with yogurt; it keeps 1 day in the fridge."
   ]
  },
  "indian--poha-lapitott-rizses-reggeli-hagymaval-es-foldimogyoroval": {
@@ -21976,6 +24952,430 @@ window.I18N_EN_RECIPES = {
    "Serve with flatbread or toast; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "indian--datolyas-dios-ladoo-cukor-nelkuli-golyok": {
+  "title": "Date and nut ladoo (no added sugar)",
+  "time": "20 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "200 g pitted dates",
+   "80 g walnuts",
+   "50 g almonds",
+   "2 tbsp desiccated coconut + extra for rolling",
+   "½ tsp ground cardamom",
+   "1 tsp ghee or coconut oil"
+  ],
+  "steps": [
+   "Toast the walnuts and almonds in a dry pan for 3-4 minutes, then chop roughly.",
+   "Grind the dates to a sticky paste in a food processor.",
+   "Add the nuts, coconut, cardamom and ghee and work together.",
+   "With oiled hands shape 16 balls and roll in coconut.",
+   "They keep 2 weeks in the fridge."
+  ]
+ },
+ "indian--mangos-lassi-krem-chiaval": {
+  "title": "Mango lassi chia cream",
+  "time": "10 min + 2 hr chilling",
+  "servings": "4 glasses",
+  "ingredients": [
+   "2 ripe mangoes, flesh only (or 400 g frozen mango)",
+   "400 g plain or Greek yogurt",
+   "3 tbsp chia seeds",
+   "1 tbsp honey (if the mango is not sweet enough)",
+   "½ tsp ground cardamom",
+   "1 tbsp pistachios, chopped"
+  ],
+  "steps": [
+   "Blend half the mango with the yogurt, honey and cardamom until smooth.",
+   "Stir in the chia seeds and chill for 2 hours (or overnight) to thicken.",
+   "Dice the remaining mango.",
+   "Layer the cream in glasses with the mango cubes.",
+   "Serve sprinkled with pistachios; it keeps 2 days in the fridge."
+  ]
+ },
+ "indian--konnyu-kheer-barna-rizzsel-es-kardamommal": {
+  "title": "Light kheer with brown rice and cardamom",
+  "time": "50 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "80 g brown or basmati rice, rinsed",
+   "1 litre semi-skimmed milk",
+   "3 tbsp date syrup or honey",
+   "4 cardamom pods, crushed",
+   "pinch of saffron (optional)",
+   "2 tbsp flaked almonds",
+   "1 tbsp raisins"
+  ],
+  "steps": [
+   "Bring the rice to the boil with the milk and cardamom.",
+   "Simmer gently for 40-45 minutes, stirring often, until the rice is soft and the milk has thickened.",
+   "Off the heat, stir in the sweetener, saffron and raisins.",
+   "Spoon into bowls and sprinkle with almonds.",
+   "Good warm or cold; it keeps 3 days in the fridge."
+  ]
+ },
+ "indian--shrikhand-light-safranyos-kardamomos-joghurtkrem": {
+  "title": "Shrikhand light (saffron and cardamom yogurt cream)",
+  "time": "10 min + 4 hr straining",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g plain yogurt (or 300 g Greek yogurt without straining)",
+   "2 tbsp honey",
+   "½ tsp ground cardamom",
+   "pinch of saffron soaked in 1 tbsp warm milk",
+   "1 tbsp pistachios, chopped",
+   "fresh fruit to serve"
+  ],
+  "steps": [
+   "Pour the yogurt into a sieve lined with muslin and strain in the fridge for 4 hours.",
+   "Mix the thick yogurt with the honey, cardamom and saffron milk until smooth.",
+   "Spoon into bowls.",
+   "Sprinkle with pistachios.",
+   "Serve with fresh fruit; it keeps 3 days in the fridge."
+  ]
+ },
+ "indian--repas-halwa-light-gajar-halwa-keves-cukorral": {
+  "title": "Carrot halwa light (gajar halwa with less sugar)",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "600 g carrots, finely grated",
+   "600 ml semi-skimmed milk",
+   "1 tbsp ghee",
+   "4 tbsp date syrup or 3 tbsp brown sugar",
+   "½ tsp ground cardamom",
+   "2 tbsp cashews or almonds, chopped",
+   "1 tbsp raisins"
+  ],
+  "steps": [
+   "Bring the carrots to the boil with the milk in a wide pan.",
+   "Cook over medium heat, stirring often, for 30 minutes until the milk has almost completely evaporated.",
+   "Add the ghee and fry for 5 more minutes.",
+   "Stir in the sweetener, cardamom, nuts and raisins.",
+   "Serve warm or lukewarm; it keeps 4 days and reheats well in the microwave."
+  ]
+ },
+ "indian--zabos-kokuszos-ladoo-jaggeryvel": {
+  "title": "Oat and coconut ladoo with jaggery",
+  "time": "25 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "150 g rolled oats",
+   "50 g desiccated coconut",
+   "50 g jaggery or coconut sugar",
+   "3 tbsp ghee or coconut oil",
+   "3 tbsp milk",
+   "½ tsp ground cardamom",
+   "2 tbsp raisins"
+  ],
+  "steps": [
+   "Toast the oats in a dry pan for 5 minutes, then grind roughly with the coconut.",
+   "Melt the ghee, add the jaggery and milk and stir until dissolved.",
+   "Mix in the oat mixture, cardamom and raisins.",
+   "Let cool a little, then shape 16 balls while warm.",
+   "They keep 1 week in a tin."
+  ]
+ },
+ "indian--ragi-bananos-kenyer-koleslisztes-banankalacs": {
+  "title": "Ragi banana bread (finger millet banana loaf)",
+  "time": "1 hr",
+  "servings": "10 slices",
+  "ingredients": [
+   "3 ripe bananas, mashed",
+   "120 g ragi (finger millet) flour or buckwheat flour",
+   "80 g wholemeal flour",
+   "2 eggs",
+   "4 tbsp oil",
+   "3 tbsp jaggery or brown sugar",
+   "1 tsp bicarbonate of soda",
+   "1 tsp ground cardamom and cinnamon",
+   "30 g walnuts"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a loaf tin.",
+   "Mix the banana with the eggs, oil and sweetener.",
+   "Add the flours, bicarbonate of soda and spices.",
+   "Spread in the tin and sprinkle with walnuts.",
+   "Bake for 45 minutes; slice once cool, it keeps 5 days."
+  ]
+ },
+ "indian--sheera-light-buzadaras-puding-gyumolccsel": {
+  "title": "Sheera light (semolina pudding with fruit)",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "80 g wholemeal semolina",
+   "1 tbsp ghee",
+   "400 ml milk, or half milk and half water",
+   "2 tbsp honey or jaggery",
+   "1 banana or 1 cup pineapple chunks",
+   "½ tsp cardamom",
+   "pinch of saffron",
+   "1 tbsp cashews"
+  ],
+  "steps": [
+   "Heat the ghee and toast the semolina in it for 5-6 minutes until fragrant.",
+   "Heat the milk separately and pour it onto the semolina, stirring.",
+   "Cook over low heat for 3-4 minutes until thick.",
+   "Stir in the sweetener, spices and fruit.",
+   "Serve warm sprinkled with cashews; it keeps 2 days."
+  ]
+ },
+ "indian--kulfi-light-pisztacias-kardamomos-jegkrem": {
+  "title": "Kulfi light (pistachio and cardamom ice lolly)",
+  "time": "15 min + 6 hr freezing",
+  "servings": "6 pieces",
+  "ingredients": [
+   "400 ml unsweetened light evaporated milk",
+   "200 ml Greek yogurt",
+   "3 tbsp honey",
+   "½ tsp ground cardamom",
+   "pinch of saffron in 1 tbsp warm milk",
+   "3 tbsp pistachios, chopped"
+  ],
+  "steps": [
+   "Mix the evaporated milk with the yogurt, honey, cardamom and saffron until smooth.",
+   "Stir in most of the pistachios.",
+   "Pour into lolly moulds or small cups and sprinkle with the rest of the pistachios.",
+   "Freeze for at least 6 hours.",
+   "Dip the mould in warm water for 10 seconds before serving; it keeps 1 month frozen."
+  ]
+ },
+ "indian--kardamomos-sult-alma-joghurttal": {
+  "title": "Cardamom baked apples with yogurt",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 apples, cored",
+   "4 dates, chopped",
+   "2 tbsp almonds or walnuts, chopped",
+   "½ tsp cardamom",
+   "½ tsp cinnamon",
+   "1 tsp ghee or butter",
+   "200 ml Greek yogurt"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Mix the dates with the nuts, spices and ghee.",
+   "Stand the apples in an ovenproof dish and fill them with the mixture; pour 3 tbsp water into the dish.",
+   "Bake for 25-30 minutes until the apples are soft.",
+   "Serve with yogurt; they keep 3 days."
+  ]
+ },
+ "indian--besan-ladoo-light-csicseriborsoliszt-golyok": {
+  "title": "Besan ladoo light (chickpea flour balls)",
+  "time": "30 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "150 g chickpea flour (besan)",
+   "50 g ghee",
+   "60 g powdered jaggery or coconut sugar",
+   "½ tsp cardamom",
+   "2 tbsp pistachios or almonds, chopped"
+  ],
+  "steps": [
+   "Heat the ghee in a pan and add the flour.",
+   "Toast over low heat, stirring constantly, for 15-18 minutes until golden and nutty-smelling.",
+   "Cool until lukewarm, then mix in the sweetener, cardamom and nuts.",
+   "Shape 16 small balls.",
+   "They keep 2 weeks in a tin."
+  ]
+ },
+ "indian--kokuszos-ananaszos-rizspuding-payasam-light": {
+  "title": "Coconut pineapple rice pudding (payasam light)",
+  "time": "35 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "60 g basmati rice",
+   "400 ml light coconut milk",
+   "400 ml milk",
+   "3 tbsp jaggery or honey",
+   "250 g pineapple, diced",
+   "½ tsp cardamom",
+   "1 tbsp cashews, toasted"
+  ],
+  "steps": [
+   "Bring the rice to the boil with the coconut milk and milk.",
+   "Simmer gently for 25 minutes, stirring often, until creamy.",
+   "Stir in the sweetener and cardamom.",
+   "Leave to cool a little, then add the pineapple.",
+   "Serve lukewarm or cold sprinkled with cashews; it keeps 3 days."
+  ]
+ },
+ "indian--sandesh-light-turos-kardamomos-falatok": {
+  "title": "Sandesh light (curd cheese and cardamom bites)",
+  "time": "25 min + 1 hr chilling",
+  "servings": "14 pieces",
+  "ingredients": [
+   "300 g low-fat curd cheese (or homemade paneer), well squeezed",
+   "3 tbsp honey",
+   "½ tsp cardamom",
+   "1 orange, zest grated",
+   "pinch of saffron",
+   "14 pistachios"
+  ],
+  "steps": [
+   "Mash the curd cheese smooth, or process it until creamy.",
+   "Stir it with the honey in a non-stick pan over low heat for 6-8 minutes until it comes away from the sides.",
+   "Off the heat, mix in the cardamom, orange zest and saffron.",
+   "When lukewarm, shape 14 small discs and press a pistachio onto each.",
+   "Chill for 1 hour; they keep 3 days."
+  ]
+ },
+ "indian--masala-chai-zabszelet": {
+  "title": "Masala chai oat bars",
+  "time": "40 min",
+  "servings": "12 bars",
+  "ingredients": [
+   "200 g rolled oats",
+   "50 g almonds, chopped",
+   "2 ripe bananas, mashed",
+   "4 tbsp honey",
+   "3 tbsp oil",
+   "1 egg",
+   "1 tsp cinnamon",
+   "½ tsp mix of ginger, cardamom and cloves",
+   "pinch of pepper",
+   "1 tsp baking powder"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×20 cm tin.",
+   "Mix the banana with the egg, honey and oil.",
+   "Add the oats, almonds, spices and baking powder.",
+   "Press into the tin.",
+   "Bake for 25 minutes; slice once cool, they keep 1 week."
+  ]
+ },
+ "indian--mangos-kokuszos-chia-puding": {
+  "title": "Mango coconut chia pudding",
+  "time": "10 min + 3 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 ml light coconut milk",
+   "5 tbsp chia seeds",
+   "1 tbsp honey",
+   "½ tsp cardamom",
+   "1 large mango, puréed",
+   "2 tbsp toasted coconut chips"
+  ],
+  "steps": [
+   "Mix the coconut milk with the chia seeds, honey and cardamom.",
+   "Stir again after 10 minutes so it doesn't clump.",
+   "Chill for at least 3 hours.",
+   "Layer in glasses with the mango purée.",
+   "Serve with coconut chips; it keeps 3 days."
+  ]
+ },
+ "indian--sargarepas-kardamomos-muffin": {
+  "title": "Carrot cardamom muffins",
+  "time": "35 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "200 g wholemeal flour",
+   "2 carrots, finely grated",
+   "2 eggs",
+   "150 ml plain yogurt",
+   "5 tbsp oil",
+   "4 tbsp jaggery or brown sugar",
+   "1 tsp cardamom",
+   "½ tsp ginger",
+   "1 tsp baking powder, ½ tsp bicarbonate of soda",
+   "30 g pistachios"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin.",
+   "Mix the eggs with the yogurt, oil and sweetener.",
+   "Add the flour, spices, baking powder and bicarbonate of soda, then the carrot.",
+   "Spoon into the tin and sprinkle with pistachios.",
+   "Bake for 20-22 minutes; they keep 4 days."
+  ]
+ },
+ "indian--makos-kokuszos-energiagolyo-til-coconut-ladoo": {
+  "title": "Sesame coconut energy balls (til-coconut ladoo)",
+  "time": "20 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "100 g sesame seeds",
+   "50 g desiccated coconut",
+   "120 g pitted dates",
+   "30 g peanuts, roasted",
+   "½ tsp cardamom",
+   "1 tsp ghee"
+  ],
+  "steps": [
+   "Toast the sesame seeds in a dry pan until golden, then cool.",
+   "Grind the dates to a paste in a food processor.",
+   "Add three-quarters of the sesame, the coconut, peanuts, cardamom and ghee and work together.",
+   "Shape 16 balls and roll in the remaining sesame.",
+   "They keep 2 weeks in a tin."
+  ]
+ },
+ "indian--rozsavizes-gyumolcsraita-desszert": {
+  "title": "Rosewater fruit raita dessert",
+  "time": "10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g Greek yogurt",
+   "1 tbsp honey",
+   "1 tsp rosewater (optional)",
+   "½ tsp cardamom",
+   "1 pomegranate, seeds only",
+   "1 apple, diced",
+   "1 banana, sliced",
+   "1 tbsp pistachios"
+  ],
+  "steps": [
+   "Mix the yogurt with the honey, rosewater and cardamom until smooth.",
+   "Fold in the apple and banana.",
+   "Spoon into bowls.",
+   "Sprinkle with pomegranate seeds and pistachios.",
+   "Serve cold; best on the day."
+  ]
+ },
+ "indian--sutotokos-halwa-kokusszal": {
+  "title": "Pumpkin halwa with coconut",
+  "time": "35 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "600 g pumpkin, grated",
+   "300 ml light coconut milk",
+   "1 tbsp ghee or coconut oil",
+   "3 tbsp jaggery or date syrup",
+   "½ tsp cardamom",
+   "pinch of nutmeg",
+   "2 tbsp desiccated coconut",
+   "1 tbsp cashews"
+  ],
+  "steps": [
+   "Sauté the pumpkin in the ghee for 5 minutes.",
+   "Pour in the coconut milk and cook, stirring often, for 20 minutes until thick.",
+   "Stir in the sweetener and spices.",
+   "Stir for another 3-4 minutes.",
+   "Serve sprinkled with coconut and cashews; it keeps 4 days and reheats well in the microwave."
+  ]
+ },
+ "indian--kokuszos-lencses-edes-palacsinta-dal-pancake-jaggeryvel": {
+  "title": "Sweet lentil pancakes with jaggery",
+  "time": "30 min",
+  "servings": "8 pancakes",
+  "ingredients": [
+   "100 g red lentils, soaked for 2 hours",
+   "50 g oat flour",
+   "1 banana",
+   "200 ml milk",
+   "2 tbsp jaggery or honey",
+   "½ tsp cardamom",
+   "½ tsp baking powder",
+   "oil for frying",
+   "200 ml Greek yogurt and fresh fruit to serve"
+  ],
+  "steps": [
+   "Blend the drained lentils with the oat flour, banana, milk, sweetener and cardamom until smooth.",
+   "Stir in the baking powder and rest for 10 minutes.",
+   "Fry 8 small pancakes in a lightly oiled pan, 2-3 minutes per side.",
+   "Serve with yogurt and fruit.",
+   "They keep 2 days in the fridge and reheat in the microwave."
+  ]
+ },
  "chinese--congee-rizskasa-serteshussal-es-gyomberrel": {
   "title": "Congee (rice porridge with pork and ginger)",
   "time": "1 hr",
@@ -23817,6 +27217,397 @@ window.I18N_EN_RECIPES = {
    "Serve with rice or noodles; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
+ "chinese--parolt-tojaspuding-gyumolccsel-zheng-danggao": {
+  "title": "Steamed egg pudding with fruit (zhēng dànggāo)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "3 eggs",
+   "300 ml milk",
+   "2 tbsp honey",
+   "1 tsp vanilla",
+   "2 kiwis or 1 mango, diced"
+  ],
+  "steps": [
+   "Whisk the eggs with the milk, honey and vanilla until smooth, then strain through a sieve.",
+   "Pour into 4 small bowls and cover with foil.",
+   "Steam in a steamer or covered pan over low heat for 12-15 minutes until set.",
+   "Cool and top with the fruit.",
+   "It keeps 2 days in the fridge."
+  ]
+ },
+ "chinese--vorosbabos-zabgolyo-hongdou-sha-energiagolyo": {
+  "title": "Red bean oat balls (hóngdòu energy balls)",
+  "time": "20 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "200 g cooked sweet red (adzuki) beans or red bean paste",
+   "100 g rolled oats",
+   "3 tbsp honey",
+   "2 tbsp sesame seeds",
+   "½ tsp cinnamon"
+  ],
+  "steps": [
+   "Mash the beans to a paste with a fork.",
+   "Mix in the oats, honey and cinnamon.",
+   "Shape 16 balls.",
+   "Roll in sesame seeds.",
+   "They keep 5 days in the fridge."
+  ]
+ },
+ "chinese--mungobab-leves-ludou-tang-edes": {
+  "title": "Sweet mung bean soup (lǜdòu tāng)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g mung beans, soaked for 1 hour",
+   "1.2 litres water",
+   "3 tbsp honey or rock sugar",
+   "1 small piece dried tangerine peel (optional)",
+   "1 tbsp desiccated coconut"
+  ],
+  "steps": [
+   "Bring the beans to the boil with the water and tangerine peel.",
+   "Simmer gently for 35-40 minutes until the beans break down.",
+   "Stir in the sweetener.",
+   "Serve warm or cold.",
+   "Sprinkle with coconut; it keeps 3 days in the fridge."
+  ]
+ },
+ "chinese--szezamos-datolyas-pehelykeksz-heizhima-datolya": {
+  "title": "Black sesame and date cookies",
+  "time": "30 min",
+  "servings": "16 cookies",
+  "ingredients": [
+   "150 g oat flour",
+   "50 g black sesame seeds",
+   "100 g pitted dates, puréed",
+   "3 tbsp oil",
+   "½ tsp baking powder",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a baking tray.",
+   "Mix the date purée with the oil.",
+   "Add the flour, sesame, baking powder and salt.",
+   "Shape 16 small discs on the tray.",
+   "Bake for 12-14 minutes; they keep 1 week in a tin."
+  ]
+ },
+ "chinese--parolt-korte-goji-bogyoval": {
+  "title": "Poached pear with goji berries",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 pears, peeled and halved",
+   "2 tbsp goji berries",
+   "2 tbsp honey",
+   "400 ml water",
+   "1 slice fresh ginger"
+  ],
+  "steps": [
+   "Put the pears in a pan with the water, ginger and honey.",
+   "Simmer covered over low heat for 20 minutes.",
+   "Add the goji berries and cook for 10 more minutes.",
+   "Remove the ginger.",
+   "Serve warm or cold in its juices; it keeps 3 days."
+  ]
+ },
+ "chinese--mandulatej-puding-xingren-doufu": {
+  "title": "Almond milk pudding (xìngrén dòufu)",
+  "time": "15 min + 3 hr chilling",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 ml almond milk",
+   "1 tbsp gelatine (or 1 tsp agar-agar)",
+   "2 tbsp honey",
+   "½ tsp almond extract",
+   "100 g berries"
+  ],
+  "steps": [
+   "Soak the gelatine in 3 tbsp cold water.",
+   "Warm the almond milk with the honey until lukewarm and stir in the gelatine.",
+   "Stir in the extract.",
+   "Pour into bowls and chill for at least 3 hours.",
+   "Serve with fruit; it keeps 3 days."
+  ]
+ },
+ "chinese--edesburgonyas-szezamos-golyo-keves-olajjal-sutve": {
+  "title": "Sweet potato sesame balls (baked with little oil)",
+  "time": "35 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "400 g sweet potato",
+   "80 g rice flour",
+   "2 tbsp honey",
+   "3 tbsp white sesame seeds",
+   "1 tbsp oil"
+  ],
+  "steps": [
+   "Bake or boil the sweet potato and mash it.",
+   "Add the rice flour and honey and knead into a soft dough.",
+   "Shape 16 balls and roll in sesame.",
+   "Place on a lined tray and brush with the oil.",
+   "Bake at 200 °C for 18-20 minutes; they keep 3 days."
+  ]
+ },
+ "chinese--kokuszos-tapiokas-puding-mangoval-yezhi-ximilu": {
+  "title": "Coconut tapioca pudding with mango",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "5 tbsp small tapioca pearls",
+   "400 ml light coconut milk",
+   "200 ml water",
+   "2 tbsp honey",
+   "1 ripe mango, diced"
+  ],
+  "steps": [
+   "Bring the tapioca to the boil with the water and coconut milk.",
+   "Simmer gently, stirring, for 15-20 minutes until translucent.",
+   "Stir in the honey.",
+   "Cool until lukewarm.",
+   "Serve with the mango cubes; it keeps 2 days."
+  ]
+ },
+ "chinese--zoldtea-joghurt-suti-matcsas-fagyasztott-szelet": {
+  "title": "Matcha yogurt bars (frozen)",
+  "time": "20 min + 4 hr freezing",
+  "servings": "8 bars",
+  "ingredients": [
+   "400 g Greek yogurt",
+   "2 tbsp honey",
+   "2 tsp matcha powder",
+   "80 g rolled oats",
+   "2 tbsp melted butter",
+   "1 tbsp honey for the base"
+  ],
+  "steps": [
+   "Mix the oats with the melted butter and honey and press into a small loaf tin.",
+   "Whisk the yogurt with the honey and matcha until smooth.",
+   "Spread over the base.",
+   "Freeze for 4 hours.",
+   "Take out 10 minutes before slicing; it keeps 1 month frozen."
+  ]
+ },
+ "chinese--gesztenyes-zabkasa-szelet": {
+  "title": "Chestnut oat bars",
+  "time": "35 min",
+  "servings": "10 bars",
+  "ingredients": [
+   "200 g cooked, peeled chestnuts",
+   "150 g rolled oats",
+   "2 eggs",
+   "200 ml milk",
+   "3 tbsp honey",
+   "1 tsp baking powder"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×20 cm tin.",
+   "Blend the chestnuts with the milk and honey to a purée.",
+   "Add the eggs, oats and baking powder.",
+   "Spread in the tin.",
+   "Bake for 25 minutes; slice once cool, they keep 4 days."
+  ]
+ },
+ "chinese--sargabarackos-mandulas-keksz-xingren-bing-light": {
+  "title": "Almond cookies with apricot (xìngrén bǐng light)",
+  "time": "30 min",
+  "servings": "18 cookies",
+  "ingredients": [
+   "150 g almond flour",
+   "50 g oat flour",
+   "1 egg",
+   "3 tbsp honey",
+   "1 tsp vanilla",
+   "18 pieces dried apricot or almonds for the top"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a baking tray.",
+   "Mix the egg with the honey and vanilla.",
+   "Add the flours and knead into a dough.",
+   "Shape 18 balls, flatten and press a piece into each.",
+   "Bake for 12-14 minutes; they keep 1 week in a tin."
+  ]
+ },
+ "chinese--tofus-csokikrem-selyemtofu-mousse": {
+  "title": "Silken tofu chocolate mousse",
+  "time": "15 min + 2 hr chilling",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g silken tofu",
+   "4 tbsp unsweetened cocoa powder",
+   "3 tbsp honey",
+   "1 tsp vanilla",
+   "pinch of salt",
+   "100 g raspberries"
+  ],
+  "steps": [
+   "Blend the tofu with the cocoa, honey, vanilla and salt until completely smooth.",
+   "Spoon into glasses.",
+   "Chill for at least 2 hours.",
+   "Top with raspberries.",
+   "It keeps 3 days in the fridge."
+  ]
+ },
+ "chinese--lotuszmagos-jujubas-edes-leves": {
+  "title": "Lotus seed and jujube sweet soup",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "50 g dried lotus seeds",
+   "8 jujubes (Chinese dates), pitted",
+   "1 litre water",
+   "2 tbsp rock sugar or honey",
+   "1 tbsp goji berries"
+  ],
+  "steps": [
+   "Soak the lotus seeds for 1 hour.",
+   "Cook the lotus seeds and jujubes in the water for 35 minutes.",
+   "Add the goji berries and sweetener.",
+   "Cook for 5 more minutes.",
+   "Serve warm; it keeps 3 days in the fridge."
+  ]
+ },
+ "chinese--narancsos-gyomberes-sult-banan": {
+  "title": "Baked banana with orange and ginger",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 bananas, sliced lengthways",
+   "1 orange, juice and grated zest",
+   "1 tsp grated ginger",
+   "1 tbsp honey",
+   "1 tbsp sesame seeds"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Lay the bananas in an ovenproof dish.",
+   "Mix the orange juice with the zest, ginger and honey and pour over.",
+   "Bake for 20 minutes.",
+   "Serve warm sprinkled with sesame."
+  ]
+ },
+ "chinese--csias-tejpuding-kokusszal": {
+  "title": "Chia milk pudding with coconut",
+  "time": "10 min + 3 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 ml milk",
+   "4 tbsp chia seeds",
+   "1 tbsp honey",
+   "½ tsp vanilla",
+   "1 tbsp desiccated coconut",
+   "100 g sliced strawberries"
+  ],
+  "steps": [
+   "Mix the milk with the chia, honey and vanilla.",
+   "Stir again after 10 minutes.",
+   "Chill for at least 3 hours.",
+   "Divide between glasses.",
+   "Serve with coconut and strawberries; it keeps 3 days."
+  ]
+ },
+ "chinese--fahejas-almas-gozpogacsa-teljes-kiorlesu-lisztbol": {
+  "title": "Cinnamon apple steamed buns (wholemeal)",
+  "time": "50 min",
+  "servings": "10 buns",
+  "ingredients": [
+   "250 g wholemeal flour",
+   "100 ml lukewarm milk",
+   "1 tsp dried yeast",
+   "1 tbsp honey",
+   "2 apples, finely diced",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Dissolve the yeast and honey in the milk and knead with the flour into a dough.",
+   "Let rise in a warm place for 30 minutes.",
+   "Mix the apple with the cinnamon.",
+   "Divide the dough into 10 pieces, flatten, fill and pinch closed on baking paper.",
+   "Steam for 15 minutes; they keep 3 days in the fridge."
+  ]
+ },
+ "chinese--osmanthus-os-kortejoghurt": {
+  "title": "Osmanthus pear yogurt",
+  "time": "10 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "300 g Greek yogurt",
+   "1 ripe pear, diced",
+   "1 tsp dried osmanthus or jasmine flowers (optional)",
+   "1 tbsp honey",
+   "1 tbsp toasted walnuts"
+  ],
+  "steps": [
+   "Mix the yogurt with the honey.",
+   "Fold in the pear cubes.",
+   "Divide between two bowls.",
+   "Sprinkle with the flowers.",
+   "Serve with the walnuts."
+  ]
+ },
+ "chinese--szezamos-zabrudak": {
+  "title": "Sesame oat crisps",
+  "time": "25 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "150 g rolled oats",
+   "50 g sesame seeds",
+   "4 tbsp honey",
+   "3 tbsp oil",
+   "1 egg white",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 170 °C and line a baking tray.",
+   "Mix all the ingredients.",
+   "Press small piles onto the tray.",
+   "Bake for 15 minutes until golden.",
+   "They crisp as they cool; they keep 1 week in a tin."
+  ]
+ },
+ "chinese--sutotokos-vorosbabos-suti": {
+  "title": "Pumpkin and red bean cake",
+  "time": "45 min",
+  "servings": "12 slices",
+  "ingredients": [
+   "250 g pumpkin purée",
+   "100 g cooked sweet red beans",
+   "2 eggs",
+   "100 g oat flour",
+   "3 tbsp honey",
+   "1 tsp baking powder",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a 20×20 cm tin.",
+   "Mix the pumpkin with the eggs and honey.",
+   "Add the flour, baking powder and cinnamon.",
+   "Spread half in the tin, layer the beans on top, then the remaining batter.",
+   "Bake for 30 minutes; slice once cool, it keeps 4 days."
+  ]
+ },
+ "chinese--karamellizalt-sult-ananasz-szezammal": {
+  "title": "Caramelised grilled pineapple with sesame",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 pineapple, sliced",
+   "2 tbsp honey",
+   "1 tsp oil",
+   "½ tsp cinnamon",
+   "1 tbsp sesame seeds",
+   "200 ml Greek yogurt"
+  ],
+  "steps": [
+   "Brush the slices with the oil and fry in a hot pan for 3 minutes per side.",
+   "Brush the tops with the honey and fry for 1 more minute.",
+   "Sprinkle with cinnamon and sesame.",
+   "Serve with yogurt.",
+   "Best warm."
+  ]
+ },
  "japanese--tamagoyaki-edes-sos-hengerelt-omlett": {
   "title": "Tamagoyaki (sweet-savoury rolled omelette)",
   "time": "20 min",
@@ -25469,6 +29260,396 @@ window.I18N_EN_RECIPES = {
    "Add the ketchup, sugar, vinegar and 1 tsp cornflour mixed into the water and boil until thick.",
    "Return the prawns with the spring onion and toss for 1 minute.",
    "Serve with rice; it keeps 2 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--matcsas-joghurtos-szelet-matcha-yogurt-cake": {
+  "title": "Matcha yogurt loaf",
+  "time": "50 min",
+  "servings": "10 slices",
+  "ingredients": [
+   "150 g oat flour",
+   "200 ml Greek yogurt",
+   "2 eggs",
+   "4 tbsp honey",
+   "3 tbsp oil",
+   "2 tsp matcha powder",
+   "1 tsp baking powder"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a small loaf tin.",
+   "Mix the eggs with the honey, oil and yogurt.",
+   "Add the flour, matcha and baking powder.",
+   "Spread in the tin.",
+   "Bake for 35 minutes; slice once cool, it keeps 4 days."
+  ]
+ },
+ "japanese--sult-edesburgonya-mezzel-yaki-imo": {
+  "title": "Roasted sweet potato with honey (yaki-imo)",
+  "time": "55 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 medium sweet potatoes",
+   "1 tbsp honey",
+   "1 tsp black sesame seeds",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Wash the sweet potatoes and put them whole on the oven rack.",
+   "Roast for 45-50 minutes until the skin is wrinkled and the inside syrupy.",
+   "Cut in half.",
+   "Drizzle with honey and sprinkle with sesame and salt."
+  ]
+ },
+ "japanese--vorosbabos-zabkasa-tal-anko-oatmeal": {
+  "title": "Red bean oatmeal bowl (anko oatmeal)",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "80 g rolled oats",
+   "300 ml milk",
+   "6 tbsp sweet red bean paste (anko), low sugar",
+   "1 tbsp matcha or roasted soybean flour (kinako)",
+   "1 tsp honey"
+  ],
+  "steps": [
+   "Cook the oats with the milk for 5 minutes, stirring.",
+   "Spoon into bowls.",
+   "Put 3 tbsp anko in the middle of each.",
+   "Sprinkle with matcha or kinako.",
+   "Drizzle with honey; eat warm."
+  ]
+ },
+ "japanese--mochi-szeru-rizsliszt-golyo-eperrel-egyszeru-daifuku": {
+  "title": "Simple strawberry daifuku (rice flour mochi)",
+  "time": "25 min",
+  "servings": "8 pieces",
+  "ingredients": [
+   "100 g glutinous rice flour (mochiko)",
+   "120 ml water",
+   "1 tbsp honey",
+   "8 small strawberries",
+   "8 tsp sweet red bean paste",
+   "cornflour for dusting"
+  ],
+  "steps": [
+   "Mix the flour with the water and honey in a microwave-safe bowl until smooth.",
+   "Cover and microwave for 1 minute, stir, then another 1 minute.",
+   "Turn onto a cornflour-dusted surface and divide into 8.",
+   "Put 1 tsp bean paste and 1 strawberry in the middle of each.",
+   "Pinch closed; best on the day."
+  ]
+ },
+ "japanese--vorosbabzsele-kockak-mizu-yokan-light": {
+  "title": "Light mizu-yokan (red bean jelly)",
+  "time": "20 min + 2 hr chilling",
+  "servings": "6 pieces",
+  "ingredients": [
+   "250 g sweet red bean paste (anko), low sugar",
+   "250 ml water",
+   "1 tsp agar-agar powder",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Bring the agar to the boil with the water and cook for 2 minutes.",
+   "Stir in the anko and salt.",
+   "Pour into a small tin or 6 cups.",
+   "Chill for 2 hours.",
+   "Serve cut into cubes; it keeps 4 days."
+  ]
+ },
+ "japanese--sutotokos-tofus-muffin": {
+  "title": "Pumpkin tofu muffins",
+  "time": "40 min",
+  "servings": "10 muffins",
+  "ingredients": [
+   "200 g pumpkin purée",
+   "100 g silken tofu",
+   "2 eggs",
+   "120 g oat flour",
+   "3 tbsp honey",
+   "1 tsp baking powder",
+   "½ tsp cinnamon"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a muffin tin.",
+   "Blend the pumpkin with the tofu, eggs and honey until smooth.",
+   "Add the flour, baking powder and cinnamon.",
+   "Spoon into the tin.",
+   "Bake for 22 minutes; they keep 4 days."
+  ]
+ },
+ "japanese--kinako-s-sult-banan-szelet": {
+  "title": "Pan-fried banana with kinako",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 bananas, halved lengthways",
+   "1 tsp oil",
+   "2 tbsp roasted soybean flour (kinako)",
+   "1 tsp honey",
+   "1 tbsp toasted sesame seeds"
+  ],
+  "steps": [
+   "Put the bananas cut-side down in a hot oiled pan.",
+   "Fry for 3 minutes, turn and fry for 2 more minutes.",
+   "Put on a plate.",
+   "Sprinkle with kinako and sesame.",
+   "Drizzle with honey; serve warm."
+  ]
+ },
+ "japanese--gyomberes-citromos-gyumolcszsele-agar-zsele": {
+  "title": "Ginger lemon agar fruit jelly",
+  "time": "15 min + 2 hr chilling",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 ml apple juice",
+   "1 tsp agar-agar powder",
+   "1 lemon, juiced",
+   "1 tsp grated ginger",
+   "150 g mixed fruit, diced"
+  ],
+  "steps": [
+   "Bring the apple juice to the boil with the agar and cook for 2 minutes.",
+   "Add the lemon juice and ginger.",
+   "Divide the fruit between glasses.",
+   "Pour the liquid over.",
+   "Chill for 2 hours; it keeps 3 days."
+  ]
+ },
+ "japanese--kabocsas-rizslisztgolyo-kinakoval-kabocha-dango": {
+  "title": "Kabocha dango with kinako",
+  "time": "30 min",
+  "servings": "16 pieces",
+  "ingredients": [
+   "250 g roasted kabocha or pumpkin",
+   "100 g glutinous rice flour (shiratamako)",
+   "1 tbsp honey",
+   "3 tbsp roasted soybean flour (kinako)",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Mash the pumpkin to a purée.",
+   "Knead the rice flour with the pumpkin and honey into a soft dough.",
+   "Shape 16 balls.",
+   "Boil in hot water until they float, then 2 minutes more.",
+   "Cool in iced water and roll in kinako; best on the day."
+  ]
+ },
+ "japanese--zold-tea-bananos-palacsinta-dorayaki-light": {
+  "title": "Matcha banana dorayaki light",
+  "time": "30 min",
+  "servings": "8 pieces",
+  "ingredients": [
+   "100 g oat flour",
+   "2 eggs",
+   "1 ripe banana",
+   "100 ml milk",
+   "1 tsp matcha",
+   "1 tsp baking powder",
+   "8 tbsp sweet red bean paste (anko), low sugar"
+  ],
+  "steps": [
+   "Blend the banana with the eggs and milk until smooth.",
+   "Add the flour, matcha and baking powder.",
+   "Fry 16 small pancakes in a lightly oiled pan, 1-2 minutes per side.",
+   "Sandwich 1 tbsp anko between two pancakes.",
+   "They keep 3 days in the fridge."
+  ]
+ },
+ "japanese--fekete-szezam-puding-goma-purin": {
+  "title": "Black sesame pudding (goma purin)",
+  "time": "15 min + 3 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 ml milk",
+   "1 tbsp gelatine",
+   "3 tbsp black sesame paste or ground black sesame",
+   "2 tbsp honey",
+   "1 tbsp black sesame seeds for the top"
+  ],
+  "steps": [
+   "Soak the gelatine in 3 tbsp cold water.",
+   "Warm the milk with the sesame and honey without boiling.",
+   "Stir in the gelatine.",
+   "Pour into bowls and chill for 3 hours.",
+   "Serve sprinkled with sesame; it keeps 3 days."
+  ]
+ },
+ "japanese--yuzu-s-joghurt-krem-poharban": {
+  "title": "Yuzu yogurt cream cups",
+  "time": "10 min + 1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g Greek yogurt",
+   "2 tbsp yuzu or lemon juice",
+   "1 tbsp honey",
+   "1 lemon, zest grated",
+   "4 oat biscuits, crumbled"
+  ],
+  "steps": [
+   "Whisk the yogurt with the juice, honey and zest until smooth.",
+   "Put the biscuit crumbs in the bottom of the glasses.",
+   "Spoon the cream over.",
+   "Chill for 1 hour.",
+   "It keeps 2 days in the fridge."
+  ]
+ },
+ "japanese--ume-szilvas-zabszelet": {
+  "title": "Plum oat bars",
+  "time": "40 min",
+  "servings": "12 bars",
+  "ingredients": [
+   "200 g rolled oats",
+   "300 g plums, pitted and diced",
+   "3 tbsp honey",
+   "3 tbsp oil",
+   "1 egg",
+   "1 tsp cinnamon",
+   "½ tsp baking powder"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a 20×20 cm tin.",
+   "Mix the oats with the oil, egg, cinnamon and baking powder.",
+   "Press half into the tin.",
+   "Toss the plums with the honey, spread over and cover with the remaining oats.",
+   "Bake for 30 minutes; slice once cool, they keep 5 days."
+  ]
+ },
+ "japanese--sult-alma-edes-miso-val": {
+  "title": "Baked apples with sweet miso",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 apples, cored",
+   "1 tsp white miso",
+   "2 tbsp honey",
+   "1 tbsp butter",
+   "2 tbsp rolled oats",
+   "1 tbsp sesame seeds"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Mix the miso with the honey, butter and oats.",
+   "Stand the apples in an ovenproof dish and fill them.",
+   "Sprinkle with sesame.",
+   "Bake for 30 minutes; serve warm."
+  ]
+ },
+ "japanese--fekete-szezamos-bananos-zabkeksz": {
+  "title": "Black sesame banana oat cookies",
+  "time": "25 min",
+  "servings": "14 cookies",
+  "ingredients": [
+   "150 g rolled oats",
+   "2 ripe bananas",
+   "2 tbsp black sesame seeds",
+   "1 tbsp honey",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C and line a baking tray.",
+   "Mash the bananas with a fork.",
+   "Mix in the other ingredients.",
+   "Drop small piles onto the tray.",
+   "Bake for 15 minutes; they keep 4 days in a tin."
+  ]
+ },
+ "japanese--edamame-kremes-pohar-zunda-krem": {
+  "title": "Edamame cream cups (zunda cream)",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "150 g cooked, shelled edamame",
+   "200 ml Greek yogurt",
+   "2 tbsp honey",
+   "1 tbsp milk",
+   "pinch of salt",
+   "2 tbsp roasted peanuts"
+  ],
+  "steps": [
+   "Blend the edamame with the yogurt, honey, milk and salt until creamy.",
+   "Spoon into glasses.",
+   "Chill.",
+   "Sprinkle with peanuts.",
+   "It keeps 2 days in the fridge."
+  ]
+ },
+ "japanese--datolyas-tahinis-matcsas-golyo": {
+  "title": "Date and tahini matcha balls",
+  "time": "20 min",
+  "servings": "14 pieces",
+  "ingredients": [
+   "150 g pitted dates",
+   "3 tbsp tahini",
+   "2 tbsp kinako",
+   "1 tbsp matcha for rolling",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Grind the dates to a paste in a food processor.",
+   "Add the tahini, kinako and salt.",
+   "Shape 14 balls.",
+   "Roll in the matcha.",
+   "They keep 1 week in the fridge."
+  ]
+ },
+ "japanese--rizspuding-gesztenyevel-es-szezammal-kuri-kayu": {
+  "title": "Chestnut rice porridge with sesame (kuri kayu)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "80 g short-grain rice",
+   "600 ml water",
+   "150 g cooked chestnuts, chopped",
+   "2 tbsp honey",
+   "1 tsp black sesame seeds",
+   "pinch of salt"
+  ],
+  "steps": [
+   "Bring the rice to the boil with the water.",
+   "Simmer over low heat, stirring often, for 30 minutes.",
+   "Add the chestnuts and salt.",
+   "Cook for 5 more minutes.",
+   "Serve with honey and sesame; it keeps 2 days."
+  ]
+ },
+ "japanese--matcha-kokuszos-chiapuding": {
+  "title": "Matcha coconut chia pudding",
+  "time": "10 min + 3 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 ml light coconut milk",
+   "5 tbsp chia seeds",
+   "2 tsp matcha",
+   "1 tbsp honey",
+   "100 g blueberries"
+  ],
+  "steps": [
+   "Whisk the coconut milk with the matcha and honey until smooth.",
+   "Add the chia and stir again after 10 minutes.",
+   "Chill for at least 3 hours.",
+   "Divide between glasses.",
+   "Serve with blueberries; it keeps 3 days."
+  ]
+ },
+ "japanese--oszibarackos-agar-zsele-joghurttal": {
+  "title": "Peach agar jelly with yogurt",
+  "time": "20 min + 2 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "3 peaches, peeled and sliced",
+   "300 ml water",
+   "1 tsp agar-agar powder",
+   "2 tbsp honey",
+   "200 ml Greek yogurt"
+  ],
+  "steps": [
+   "Bring the water to the boil with the agar and honey and cook for 2 minutes.",
+   "Divide the peaches between glasses.",
+   "Pour the liquid over.",
+   "Chill for 2 hours.",
+   "Serve with yogurt; it keeps 3 days."
   ]
  }
 };

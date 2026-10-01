@@ -38,6 +38,20 @@ dobozban, a munkahelyi mikróban gyorsan felmelegítve is jók. Mindegyiknél:
 Ezek saját, házias receptek (nem átvett szövegek), ezért nincs `source`
 mezőjük.
 
+### „Könnyű sütik” fül
+
+Külön menüpont 200 egészségesebb édességgel, konyhánként 20-20 recepttel
+(magyar, lengyel, délszláv, görög, olasz, francia, amerikai, indiai, kínai,
+japán). A receptek teljes kiőrlésű lisztet vagy zabot, joghurtot és túrót
+használnak, gyümölccsel és kevés mézzel édesítenek, és kis adagot adnak: a
+legtöbb szelet 100–250 kalória (az érték a többi recepthez hasonlóan
+becslés). A fülön konyha szerint lehet szűrni.
+
+Az adatban ezek a `RECIPES[konyha].sweet` helyen vannak, külön a reggeli,
+ebéd és vacsora mellett (`MEALS`), ezért a napi és a heti menübe nem
+kerülnek be; a „Mi van itthon?” kereső viszont megtalálja őket. A receptek
+`easy` és `keepsWell` jelölésűek, a tűz nélkül elkészülők `noCook`.
+
 ### Szabad licencű receptek (Wikibooks Cookbook)
 
 2026 szeptemberében 200 gyors, egyszerű recept került az oldalra a
@@ -517,7 +531,7 @@ vagy pontatlan lehet benne.
 ## „Mi van itthon?” kereső
 
 Saját menüpont („Mi van itthon?”). Vesszővel (vagy „és”-sel)
-elválasztott hozzávalókat vagy ételnevet vár, és mind a 1134 kézzel írt
+elválasztott hozzávalókat vagy ételnevet vár, és mind a 1334 kézzel írt
 receptben keres (cím + hozzávalók, ékezet-függetlenül, részszóra is: a
 „csirke” a „csirkemell”-t is megtalálja). Rangsor: minél több megadott
 hozzávaló szerepel, annál előrébb; a címben szereplő szó plusz pontot ér;
@@ -777,7 +791,7 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
 Az oldal jobb felső sarkában az **English** / **Magyar** linkkel lehet
 nyelvet váltani. A böngésző megjegyzi a választást (`napi-recept-lang`),
 és közvetlenül is linkelhető: `index.html?lang=en`. Angolul jelenik meg
-a teljes felület és mind a 1134 recept (cím, idő, pácolás, adag,
+a teljes felület és mind a 1334 recept (cím, idő, pácolás, adag,
 hozzávalók, lépések). Ugyanígy a bevásárlólista, a „Mi van itthon?”
 kereső, a heti menü és az előre főzés is. A mennyiségek grammban és
 milliliterben szerepelnek (a dkg és a dl átszámolva), és az
