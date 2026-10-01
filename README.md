@@ -362,6 +362,51 @@ receptenként eltér:
   újrafuttatható, a meglévő `calories` mezőket nem írja felül, csak a
   hiányzókat tölti ki. Részletek: `tools/kcal-estimate/README.md`.
 
+### Magas fehérjetartalmú gyűjtemény és fehérjebecslés
+
+Minden kézzel írt receptnek van `proteinGrams` mezője: a **becsült fehérje grammban, egy adagra**.
+A kártyán a kalóriasor mellett „kb. N g fehérje” látszik (utána a „% a napi fehérjeszükségletből”
+sor, ha van), a heti „Becsült tápérték” táblázat fehérje oszlopa ebből számol. A kereső „Ötletek”
+sorában a **Magas fehérjetartalmú (N)** gomb, a kártyán a **Magas fehérjetartalmú** címke (tooltip:
+„Becsült érték, adagonként kb. N g fehérje; általános útmutatás, nem táplálkozási tanács”) a
+megfelelő recepteket mutatja. Semmi nem kézi jelölés: a címke a `proteinGrams` és a `calories` mezőből
+számolódik az `index.html`-ben (`isHighProtein()`).
+
+**A küszöb** (becsült, adagonként): étkezésnél **legalább 40 g**, vagy **legalább 30 g, ha az adag
+legfeljebb 450 kcal**; süteménynél (Könnyű sütik) csak **legalább 15 g**, vagyis a sütik közül csak a
+túrós, joghurtos, ricottás, skyres darabok kerülnek be. Eredmény: 180 recept a 1370-ből (13 %):
+167 étkezés (a 1170-ből 14 %: 5 reggeli, 64 ebéd, 98 vacsora) és 13 süti. A kiindulási javaslat
+(25 g, vagy 20 g 400 kcal alatt) a 1170 étkezés 42 %-át jelölte volna meg, mert a becsült fehérje
+mediánja vacsorára is 27 g; ezért emeltük a küszöböt, hogy a címke valóban kiemeljen. Ha a küszöb
+változik, az `index.html`-ben a `HP_*` konstansokat, a gomb tooltipjét és az angol szövegét kell
+együtt módosítani.
+
+**A becslés módja** (`tools/kcal-estimate`, ugyanaz a szkript, mint a kalóriánál): minden
+hozzávaló-sort mennyiségre/egységre és névre bont, grammra vált (dkg, dl, evőkanál, db, szelet…),
+majd a hozzávalónkénti fehérje/100 g értékkel (`db.js`, `prot` mező; hüvelyesnél `protDry` a
+nyers, szárazon mért tételre) összegez, és elosztja az adagszámmal. Egész grammra kerekít, 90 g/adag
+fölött levág (jelenleg egy recept sem éri el). Javítások, amelyek csak a fehérjét érintik:
+- konzerv hüvelyes (felöntőlével mért súly) a fehérje 65 %-a, súly nélküli konzerv 400 g;
+- csontos baromfi, bárány, oldalas, T-bone: 65 %; egész hal 60 %; alaplének főzött csont 15 %;
+  a húsleves derítéséhez használt darált hús nem számít;
+- plusz: `kb. 40 dkg` a névben az egész sor súlya, `kb. 15 dkg/db` darabonkénti; „fél” = ½;
+  „liter” mértékegység; szendvics-szeletek (főtt/sült/vékony) 25 g-osak.
+
+**Pontosság és korlátok.** Ez hozzávaló-alapú, tájékoztató becslés, nem mérlegpontos adat és nem
+táplálkozási tanács. A nyers állapotú tápérték-táblázatok értékeit használja, sütés-főzés
+veszteségét nem számolja. Tipikus hiba ±20-30 %, de nagyobb is lehet: (1) mennyiség nélküli
+tételek (pl. „bab”, „vegyes zöldség”) kevés fehérjét kapnak, (2) vesszővel szétvágott tételnél
+(„4 db előkészített, filézett angolna”) a mennyiség a névtelen töredékre kerül, (3) a marináda és
+az opcionális tételek teljes egészében beleszámítanak, (4) a „kb. 2 kg-os” egész állatnál a csont
+aránya becslés, (5) a „db” súlya alapértelmezés, ha nincs a db.js-ben (tojás 50 g, csirkemell 150 g,
+sertés- és marhaszelet 150 g, lazacszelet 150 g). A `calories` mezők jórészt az első, egyszerűbb
+becslőből maradtak (néhányuk nyilvánvalóan alacsony, pl. 90 kcal egy csirkés ételnél), ezért a
+„legfeljebb 450 kcal” ág megbízhatósága is korlátozott. A kalóriaszabályt nem írtuk át.
+
+Új recept felvételekor a `node tools/kcal-estimate/apply.js` a hiányzó `proteinGrams` mezőt is kitölti
+(meglévőt sosem ír felül); kézzel is lehet javítani. A Spoonacular-ból jövő élő receptek saját
+`proteinGrams` értéket kapnak az API-tól (ott nincs címke).
+
 ### Az adag a napi szükséglet hány százaléka
 
 A kalóriasor mellett (ahol van „kb. N kcal / adag”) egy kis szürke sor mutatja
@@ -369,7 +414,8 @@ az arányt, a meglévő számok változatlanok. Ha a kiválasztott profilnak van
 napi kalóriacélja, ahhoz viszonyít („≈ 23 % a napi kalóriacélból”); ha nincs
 profil vagy cél, a 2000 kcal-os referenciához („≈ 17 % a 2000 kcal-os
 referenciához képest”). Fehérjesor csak akkor jelenik meg, ha a receptnek van
-`proteinGrams` mezője: a profil testsúlyából számolt napi szükséglethez
+`proteinGrams` mezője (a kézzel írt receptekben is van: lásd „Magas fehérjetartalmú gyűjtemény és
+fehérjebecslés”; élő, Spoonacular-ból jövő receptnél az API értéke): a profil testsúlyából számolt napi szükséglethez
 (ugyanazzal a g/testsúlykilogramm szorzóval, mint a fehérjecél a szűrésnél),
 ennek híján az 50 g-os referenciához viszonyít. A százalék egyetlen adagra
 vonatkozik, tájékoztató becslés.
@@ -488,9 +534,9 @@ tartós beállítás.
 
 A hét alatt (a „Bevásárlólista ehhez a héthez” gomb fölött) egy **Becsült
 tápérték** táblázat mutatja naponta a kalóriát (a nap étkezéseinek `calories`
-értéke, adagonként, egy főre) és a fehérjét — ez utóbbit csak ott, ahol a
-receptnek van `proteinGrams` mezője (a kézzel írt receptekben ma nincs, ott
-„—” látszik). Ha egy napnak csak néhány étkezéséhez van adat, a sor ezt jelzi
+értéke, adagonként, egy főre) és a fehérjét (`proteinGrams`, adagonként, egy főre) — ez utóbbit csak ott,
+ahol a receptnek van ilyen mezője; a kézzel írt receptek mindegyikében van
+(becsült érték), így „—” csak az élő, adat nélküli receptnél látszik. Ha egy napnak csak néhány étkezéséhez van adat, a sor ezt jelzi
 („… kcal (2 étkezésből)”). A **napi átlag** csak a teljes, mindhárom
 étkezéssel megtervezett napokból készül. A táblázat a menü minden
 változásánál (újragenerálás, másik étel, hétváltás) újraszámolódik; a
@@ -718,7 +764,7 @@ egy konzervatív, becsült szabályt használ (lásd lent), és nem kerül
 címkeként a kártyára.
 
 A kereső alatti **Ötletek** gombokkal (Kezdőknek is megy / Grillen is /
-Hétvégi projekt / Nem kell főzni / Munkába is vihető) keresőszó nélkül is böngészhető egy-egy
+Hétvégi projekt / Nem kell főzni / Munkába is vihető / Hosszú életért / Fagyasztható / Magas fehérjetartalmú) keresőszó nélkül is böngészhető egy-egy
 címke; hozzávalóval és étkezéssel kombinálható, újra rákattintva kikapcsol.
 
 ### Gyors ötletek („Mi van itthon?”)
@@ -929,8 +975,10 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
   receptnél: `{"name": "Wikibooks Cookbook", "title": "<eredeti cím>",
   "url": "<eredeti oldal>", "license": "CC BY-SA 4.0"}`. A kártyán a
   forrás és a licenc jelenik meg (lásd „Szabad licencű receptek”).
-- `calories` és `image` — a `calories`-t a `tools/kcal-estimate` szkript
-  tölti ki (`node tools/kcal-estimate/apply.js`), az `image` nem kötelező.
+- `calories`, `proteinGrams` és `image` — a `calories`-t (kcal/adag) és a `proteinGrams`-t
+  (becsült fehérje, g/adag, egész szám) a `tools/kcal-estimate` szkript tölti ki
+  (`node tools/kcal-estimate/apply.js`, csak a hiányzót; most mind a 1370 recept megkapta), kézzel is
+  javítható; az `image` nem kötelező. A „Magas fehérjetartalmú” címke ezekből számolódik, nem kell jelölni.
 
 ## Angol változat (English version)
 

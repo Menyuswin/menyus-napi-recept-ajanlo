@@ -14,9 +14,9 @@ Magyar nyelvű napi receptajánló oldal (GitHub: Menyuswin/menyus-napi-recept-a
 - Az összes recept egy sorban: `  var RECIPES = {...};` (konyha → hely → tömb). Csak `JSON.stringify`-jal írd vissza, mást ne változtass a soron. Ne nyomtasd ki egészben.
 - Konyhák: polish, southslavic, hungarian, italian, greek, french, american, indian, chinese, japanese. Helyek: `breakfast`, `lunch`, `dinner` (a napi és heti menü csak ezeket használja) és `sweet` (Könnyű sütik fül, külön).
 - Azonosító: `konyha--slug(cím)`, a slug: NFD, ékezetek le, `œ`→`oe`, nem betű/szám → `-`.
-- Mezők: `title, time, servings, marinate?, ingredients, steps, noCook, easy, keepsWell?, lunchbox?, longevity?, freezable?, source?, image?, calories`. A hozzávalók sora mennyiséggel kezdődik (kivéve „só, bors”).
+- Mezők: `title, time, servings, marinate?, ingredients, steps, noCook, easy, keepsWell?, lunchbox?, longevity?, freezable?, source?, image?, calories, proteinGrams`. A hozzávalók sora mennyiséggel kezdődik (kivéve „só, bors”).
 - Jelenleg 1370 recept (1170 étkezési + 200 süti). A „Hosszú életért (longevity)” címke szabálya a README-ben van (kulcsszavas, 178 recept). A „Fagyasztható” címke (`freezable`, 400 recept) szabálya is a README-ben van: típus a címből, kizáró szavak erősebbek; a tárolási szöveg a címből számolódik (`FREEZE_KINDS`).
-- Kalória: `node tools/kcal-estimate/apply.js` csak a hiányzó `calories` mezőt tölti ki; a becslő kézzel javítható.
+- Kalória és fehérje: `node tools/kcal-estimate/apply.js` csak a hiányzó `calories` és `proteinGrams` (becsült g/adag, mind a 1370 recept) mezőt tölti ki; a becslő kézzel javítható. „Magas fehérjetartalmú” címke és gomb (180 recept): `isHighProtein()` az `index.html`-ben, nincs kézi jelölés; küszöb a README-ben.
 
 ## Angol változat
 - `i18n/en-ui.js`: kulcs = a magyar felületi szöveg. Új magyar szöveghez angol is kell; ellenőrzés: `node tools/i18n-check.js` (0 hiányzó, 1370/1370 recept).
@@ -30,5 +30,5 @@ Magyar nyelvű napi receptajánló oldal (GitHub: Menyuswin/menyus-napi-recept-a
 - Nincs hivatalos tesztkészlet; a munkamenetekben jsdom-os szkriptek futottak (oldalbetöltés, szűrők, fülek, angol oldal, i18n). Új funkciónál hasonló tesztet írj, és futtasd az `i18n-check`-et.
 
 ## Ötletek
-- A nemzetközi receptoldalak alapján összeállított ötletlista (29 ötlet, ellenőrzött és ismeretből jelölve): a repóban: `docs/otletek-ellenorzott.md` (19 ellenőrzött) és `docs/otletek-eredeti-23.md` (archív). Elkészült: fagyasztható jelzés, gyors idő- és edénygombok, mértékegység-átváltó, „Munkába is vihető” alcsoportok, heti tápérték, „Nálam van” chipek, maradék gombok, napi szükséglet %, alapanyag szerinti böngészés.
+- A nemzetközi receptoldalak alapján összeállított ötletlista (29 ötlet, ellenőrzött és ismeretből jelölve): a repóban: `docs/otletek-ellenorzott.md` (19 ellenőrzött) és `docs/otletek-eredeti-23.md` (archív). Elkészült: magas fehérjetartalmú gyűjtemény és fehérjebecslés, fagyasztható jelzés, gyors idő- és edénygombok, mértékegység-átváltó, „Munkába is vihető” alcsoportok, heti tápérték, „Nálam van” chipek, maradék gombok, napi szükséglet %, alapanyag szerinti böngészés.
 - Még nincs meg (példák): diétajelvények, költségkategória, „megfőztem” jelző, személyes jegyzet, szezonális gyűjtemény, gyerekbarát gyűjtemény, témás heti menük, naptárba mentés.

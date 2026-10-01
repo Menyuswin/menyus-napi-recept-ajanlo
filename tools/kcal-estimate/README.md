@@ -1,7 +1,7 @@
-# Kalória-becslő szkript
+# Kalória- és fehérjebecslő szkript
 
-Hozzávaló-alapú, offline kcal/adag becslést ad azoknak a recepteknek,
-amelyeknek még nincs `calories` mezője (a meglévőket sosem írja felül).
+Hozzávaló-alapú, offline kcal/adag és fehérje (g/adag) becslést ad azoknak a recepteknek,
+amelyeknek még nincs `calories`, illetve `proteinGrams` mezője (a meglévőket sosem írja felül).
 
 ## Használat
 
@@ -10,9 +10,10 @@ node apply.js
 ```
 
 Beolvassa a repo gyökerében lévő `index.html`-t, a `var RECIPES = {...}`
-tömböt, minden `calories` nélküli receptnél kiszámolja és beírja a
-becsült értéket, majd visszaírja a fájlt. Új recepték hozzáadása után
-egyszerűen futtatható újra — a már meglévő `calories` mezőket kihagyja.
+tömböt, minden `calories` vagy `proteinGrams` nélküli receptnél kiszámolja és beírja a
+becsült értéket (a fehérjét egész grammra kerekítve), majd visszaírja a fájlt. Ha a `RECIPES` sor
+`JSON.stringify`-jal nem írható vissza bájtra azonosan, leáll. Új recepték hozzáadása után
+egyszerűen futtatható újra — a már meglévő `calories` és `proteinGrams` mezőket kihagyja.
 
 ## Hogyan működik (`estimate.js`)
 
@@ -51,3 +52,21 @@ mérlegpontosságú vagy laboratóriumi adat. Kb. a receptek 5%-ánál lépett
 közbe a [80, 1600] tartomány-korlát — ezeknél a becslés kevésbé
 megbízható (gyakran mennyiség nélkül felsorolt, vagy szokatlanul
 megfogalmazott hozzávalók miatt).
+
+## Fehérje (`estimateRecipeProtein`, 2026-10-02)
+
+Ugyanaz a hozzávaló-bontás és grammra váltás, mint a kalóriánál (`recipeTotals()`), de a `db.js`
+`prot` (g fehérje / 100 g) mezőjével. Eredmény: egész gramm egy adagra, [0, 90] közé szorítva
+(a `PROT_CLAMPED` listába kerülő recepteket kézzel kell nézni; ma üres).
+
+- Hüvelyes (`protDry`): ha a név nem főttet/konzervet jelez, a száraz érték jár (30 dkg lencse = nyers);
+  a konzerv (felöntőlével mért) súly fehérjéje 65 %, a súly nélküli hüvelyes konzerv 400 g, a hal 130 g.
+- Csont (csak a fehérjére): baromfi/bárány/oldalas/T-bone csontosan 65 %, egész hal 60 %, alaplének
+  főzött csont 15 %, a húsleves derítéséhez adott darált hús 10 %.
+- Súlyok: `kb. 40 dkg` a darab-sor összsúlya, `kb. 15 dkg/db` darabonkénti; „fél” = ½; „liter”;
+  egész csirke 1,5 kg, egész hal 0,8 kg; a főtt/sült/vékony szelet 25 g.
+- Kalória: a `calories` becslője is megkapta a „liter”, „fél”, `kb.` és súly nélküli konzerv
+  javításokat, de a `calories` mezők a már kitöltött recepteknél **változatlanok** (nem írja felül).
+
+Pontosság: tájékoztató, tipikusan ±20-30 %; részletek és a korlátok a fő README „Magas
+fehérjetartalmú gyűjtemény és fehérjebecslés” szakaszában.
