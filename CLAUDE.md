@@ -30,5 +30,5 @@ Magyar nyelvű napi receptajánló oldal (GitHub: Menyuswin/menyus-napi-recept-a
 - Nincs hivatalos tesztkészlet; a munkamenetekben jsdom-os szkriptek futottak (oldalbetöltés, szűrők, fülek, angol oldal, i18n). Új funkciónál hasonló tesztet írj, és futtasd az `i18n-check`-et.
 
 ## Ötletek
-- A nemzetközi receptoldalak alapján összeállított ötletlista (29 ötlet, ellenőrzött és ismeretből jelölve): a felhasználó memóriájában, `napi-image-job/ideas-hu.md` és `ideas-eredeti-23.md`. Elkészült: gyors idő- és edénygombok, mértékegység-átváltó, „Munkába is vihető” alcsoportok, heti tápérték, „Nálam van” chipek, maradék gombok, napi szükséglet %, alapanyag szerinti böngészés.
+- A nemzetközi receptoldalak alapján összeállított ötletlista (29 ötlet, ellenőrzött és ismeretből jelölve): a repóban: `docs/otletek-ellenorzott.md` (19 ellenőrzött) és `docs/otletek-eredeti-23.md` (archív). Elkészült: gyors idő- és edénygombok, mértékegység-átváltó, „Munkába is vihető” alcsoportok, heti tápérték, „Nálam van” chipek, maradék gombok, napi szükséglet %, alapanyag szerinti böngészés.
 - Még nincs meg (példák): diétajelvények, fagyasztható jelzés, költségkategória, „megfőztem” jelző, személyes jegyzet, szezonális gyűjtemény, gyerekbarát gyűjtemény, témás heti menük, naptárba mentés.
