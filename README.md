@@ -38,6 +38,33 @@ dobozban, a munkahelyi mikróban gyorsan felmelegítve is jók. Mindegyiknél:
 Ezek saját, házias receptek (nem átvett szövegek), ezért nincs `source`
 mezőjük.
 
+### „Hosszú életért (longevity)” címke
+
+Egy szabály alapján megjelölt receptek (`longevity: true`), a kártyán
+„Hosszú életért” címkével, a kereső „Ötletek” sorában külön gombbal. A
+receptek szövegét nem írtuk át, csak megjelöltük a megfelelőket. A szabályt a
+mediterrán és a „kék zónák” étkezési mintákról szóló, általános táplálkozástudományi
+összefoglalók (hüvelyes, zöldség, teljes kiőrlésű gabona, dió, hal, olívaolaj
+többet; feldolgozott hús, vörös hús, hozzáadott cukor, só kevesebbet) alapján
+írtuk; ez általános útmutatás, nem orvosi tanács.
+
+Egy recept akkor kap `longevity: true` jelölést, ha mind teljesül (a szabály
+a hozzávalók és a lépések kulcsszavaiból dolgozik, az édességeket nem jelöli):
+
+- van benne legalább két ilyen csoportból: hüvelyes (bab, lencse,
+  csicseriborsó, tofu), hal és tenger gyümölcse, teljes kiőrlésű gabona (zab,
+  barna rizs, árpa, kinoa…), dió/mag, olívaolaj, erjesztett étel (kefir,
+  joghurt, savanyú káposzta); vagy egy csoport és legalább 3 féle zöldség;
+  vagy legalább 4 féle zöldség és legfeljebb egy tejtermék-tétel;
+- nincs benne feldolgozott hús (kolbász, szalonna, sonka, füstölt hús…), vörös
+  hús (sertés, marha, bárány…), rántás/bő olajban sütés, két vagy több tétel
+  hozzáadott cukorból/mézből, tejszín/mascarpone/majonéz, és adagonként nem
+  több mint 750 kcal.
+
+A szkript a recept szövegét nem módosítja, csak a `longevity` mezőt állítja
+be a `RECIPES` soron (`JSON.stringify`-jal). Jelenleg 133 receptet jelöl
+(az összes 1334 közül), konyhánként 7-25-öt.
+
 ### „Könnyű sütik” fül
 
 Külön menüpont 200 egészségesebb édességgel, konyhánként 20-20 recepttel
@@ -779,6 +806,9 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
   hiányzik, a cím alapján döntjük el (`keepsWell()` az `index.html`-ben).
 - `lunchbox` — nem kötelező; `true`, ha a recept dobozban, mikróban
   melegítve munkába is vihető („Munkába is vihető” címke és szűrő).
+- `longevity` — nem kötelező; `true`, ha a recept megfelel a „Hosszú életért”
+  szabálynak (lásd fent): „Hosszú életért” címke és szűrő. Új receptnél a
+  szerkesztő állítja be a szabály szerint.
 - `source` — nem kötelező; csak szabad licencű forrásból átdolgozott
   receptnél: `{"name": "Wikibooks Cookbook", "title": "<eredeti cím>",
   "url": "<eredeti oldal>", "license": "CC BY-SA 4.0"}`. A kártyán a

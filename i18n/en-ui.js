@@ -3,6 +3,15 @@
 // Egyes szám: "<kulcs>|1".
 window.I18N_EN_UI = {
  "Munkába is vihető": "Lunchbox-friendly",
+ "Hosszú életért (longevity)": "For a long life",
+ "Hüvelyes, hal, zöldség, teljes kiőrlésű gabona, dió vagy olívaolaj; kevés feldolgozott és vörös hús, cukor, tejszín.": "Legumes, fish, vegetables, whole grains, nuts or olive oil; little processed or red meat, sugar or cream.",
+ "Hüvelyest, halat, sok zöldséget, teljes kiőrlésű gabonát, diót vagy olívaolajat tartalmaz, és nincs benne feldolgozott hús, vörös hús, bő olajban sütés, sok cukor vagy tejszín.": "Contains legumes, fish, plenty of vegetables, whole grains, nuts or olive oil, and no processed meat, red meat, deep frying, lots of sugar or heavy cream.",
+ "Hüvelyes, zöldség, hal, dió és olívaolaj — hetente többször.": "Legumes, vegetables, fish, nuts and olive oil, several times a week.",
+ "A mediterrán és a „kék zónák” étkezési minták közös vonása, hogy sok a növényi étel, a hüvelyes (bab, lencse, csicseriborsó), a teljes kiőrlésű gabona és a dió, kevés a feldolgozott hús, a hozzáadott cukor és a só.": "What the Mediterranean and \"blue zone\" eating patterns share is plenty of plant food, legumes (beans, lentils, chickpeas), whole grains and nuts, and little processed meat, added sugar and salt.",
+ "A „Hosszú életért (longevity)” címke egy egyszerű szabály, nem diagnózis.": "The \"For a long life\" tag is a simple rule, not a diagnosis.",
+ "Akkor kapja egy recept, ha van benne hüvelyes, hal, sok zöldség, teljes kiőrlésű gabona, dió vagy olívaolaj, és nincs benne feldolgozott vagy vörös hús, bő olajban sütés, sok cukor vagy tejszín.": "A recipe gets it if it has legumes, fish, plenty of vegetables, whole grains, nuts or olive oil, and no processed or red meat, deep frying, lots of sugar or heavy cream.",
+ "Ez általános útmutatás, nem orvosi tanács.": "This is general guidance, not medical advice.",
+ "Betegség, gyógyszerszedés, terhesség vagy ételallergia esetén egyeztess az orvosoddal vagy dietetikussal, mielőtt az étrendeden változtatsz.": "If you have an illness, take medication, are pregnant or have a food allergy, check with your doctor or dietitian before changing your diet.",
  "Hétköznapi családi étel: több napra is megfőzhető, dobozban jól bírja, és mikróban megmelegítve is finom.": "Everyday family dish: can be cooked for several days, keeps well in a lunchbox and tastes good reheated in the microwave.",
  "Forrás: ": "Source: ",
  "átdolgozva, fordítva": "adapted and translated",
