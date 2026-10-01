@@ -144,7 +144,7 @@ window.I18N_EN_UI = {
  "Heti menü · ": "Weekly menu · ",
  "Ismeretlen bolt": "Unknown shop",
  "Nem találtunk élelmiszerboltot a közelben (3 km-es körzetben).": "We couldn't find a grocery shop nearby (within 3 km).",
- " aktuális akciói →": " current offers →",
+ " akciós újsága →": " current flyer →",
  "Útvonal (Google Maps)": "Directions (Google Maps)",
  "A böngésződ nem támogatja a helymeghatározást — add meg kézzel a várost/címet.": "Your browser doesn't support location — enter the town/address yourself.",
  "Helyzet lekérése...": "Getting your location...",

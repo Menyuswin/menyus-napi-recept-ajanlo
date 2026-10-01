@@ -4039,17 +4039,18 @@
   // ---------- boltkereső ----------
 
   var STORE_CHAIN_LINKS = [
-    { match: /tesco/i, label: "Tesco", url: "https://tesco.hu/aktualis-ajanlatok/" },
+    { match: /tesco/i, label: "Tesco", url: "https://www.tesco.hu/akciok/katalogusok" },
     { match: /spar|interspar/i, label: "SPAR", url: "https://www.spar.hu/ajanlatok" },
-    { match: /lidl/i, label: "Lidl", url: "https://www.lidl.hu/c/aktualis-ajanlataink/s10005903" },
-    { match: /aldi/i, label: "Aldi", url: "https://www.aldi.hu/hu/ajanlataink.html" },
-    { match: /penny/i, label: "Penny", url: "https://www.penny.hu/ajanlatok" },
-    { match: /\bcba\b/i, label: "CBA", url: "https://cba.hu/akcioink" },
-    { match: /auchan/i, label: "Auchan", url: "https://www.auchan.hu/akcio" },
-    { match: /coop/i, label: "Coop", url: "https://www.coop.hu/akcio" },
-    { match: /prima|príma/i, label: "Príma", url: "https://www.prima-abc.hu/akcio" },
-    { match: /reál|real magyarorsz/i, label: "Reál", url: "https://www.realmagyarorszag.hu/akcio" }
+    { match: /lidl/i, label: "Lidl", url: "https://www.lidl.hu/c/szorolap/s10013623" },
+    { match: /aldi/i, label: "Aldi", url: "https://www.aldi.hu/online-akcios-ujsag" },
+    { match: /penny/i, label: "Penny", url: "https://www.penny.hu/reklamujsag" },
+    { match: /\bcba\b/i, label: "CBA", url: "https://www.cba.hu/aktualis-ajanlataink/" },
+    { match: /auchan/i, label: "Auchan", url: "https://www.auchan.hu/" },
+    { match: /coop/i, label: "Coop", url: "https://www.coop.hu/ajanlatkereso/" },
+    { match: /prima|príma/i, label: "Príma", url: "https://www.prima.hu/aktualis-ajanlataink/" },
+    { match: /\breál\b|\breal\b/i, label: "Reál", url: "https://real.hu/aktualis-ajanlataink/" }
   ];
+
 
   function findChainLink(name) {
     for (var i = 0; i < STORE_CHAIN_LINKS.length; i++) {
@@ -4120,7 +4121,7 @@
       if (chain) {
         var a = document.createElement("a");
         a.href = chain.url; a.target = "_blank"; a.rel = "noopener";
-        a.textContent = chain.label + t(" aktuális akciói →");
+        a.textContent = chain.label + t(" akciós újsága →");
         links.appendChild(a);
       }
       var mapsA = document.createElement("a");
