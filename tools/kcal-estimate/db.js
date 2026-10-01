@@ -3,6 +3,20 @@
 // általános felé rendezve. unitG: jellemző súly (g) darab-alapú
 // mértékegységekhez (db, fej, gerezd, szelet, szál, csokor, köteg, marék).
 module.exports = [
+  // --- elsőbbségi, pontosító kulcsszavak (2026-09-30): ezek egyébként egy
+  // általánosabb, rossz tételhez illeszkednének, pl. "főzőtejszín" -> "őz",
+  // "marhaalaplé" -> "marha", "tésztaszósz" -> "tészta", "aszalt paradicsom"
+  // (olajos) -> "olaj", "kápia paprika" -> fűszerpaprika, levelek -> darab ---
+  { kw: ["főzőtejszín", "habtejszín", "tejszín"], kcal: 290 },
+  { kw: ["alaplé", "leveskocka", "leves-kocka", "húsleves"], kcal: 15 },
+  { kw: ["tésztaszósz", "pizzaszósz", "marinara", "paradicsomszósz", "passata"], kcal: 50 },
+  { kw: ["aszalt paradicsom"], kcal: 210, unitG: { db: 8 } },
+  { kw: ["kápia", "kaliforniai paprika", "zöldpaprika", "csípős paprika", "pritamin"], kcal: 30, unitG: { db: 150 } },
+  { kw: ["curry levél", "curry-levél", "bazsalikomlevél", "salátalevél", "shiso levél", "levél"], kcal: 25, unitG: { db: 1 } },
+  { kw: ["zöld chili", "piros chili", "chili,", "chilipaprika"], kcal: 40, unitG: { db: 10 } },
+  { kw: ["főtt rizs", "főtt, kihűlt", "rizs, megfőzve"], kcal: 130 },
+  { kw: ["fahéjrúd", "fahéj darab", "darab fahéj", "kardamom", "szegfűszeg", "csillagánizs", "babérlevél"], kcal: 300, unitG: { db: 2 } },
+  { kw: ["gyömbér"], kcal: 80, unitG: { db: 15 } },
   // --- húsok, konkrét (a "darált X" mindig elébb kell, mint az X önmagában,
   // mert a darálthús gyakorlatban zsírosabb, mint az adott hús sovány
   // szelete/filéje — enélkül pl. "darált pulykahús" tévesen a sovány
@@ -24,7 +38,7 @@ module.exports = [
   { kw: ["sonka"], kcal: 145 },
   { kw: ["virsli", "bagel"], kcal: 280 },
   { kw: ["hús alaplé", "húsalaplé", "húsleves"], kcal: 15 },
-  { kw: ["bélszín", "hátszín", "rostélyos", "borjú", "őz", "vad", "steak", "bifsztek"], kcal: 210 },
+  { kw: ["bélszín", "hátszín", "rostélyos", "borjú", "őzhús", "őzgerinc", "őzcomb", "vaddisznó", "vadhús", "szarvas", "steak", "bifsztek"], kcal: 210 },
   { kw: ["ragu", "bolognai"], kcal: 150 },
   { kw: ["hús"], kcal: 220 },
   // --- halak, tenger gyümölcsei ---
@@ -63,7 +77,7 @@ module.exports = [
   { kw: ["hajdinaliszt", "búzaliszt", "finomliszt", "liszt"], kcal: 340 },
   { kw: ["zabpehely"], kcal: 370 },
   { kw: ["árpagyöngy", "hajdinakása", "tarhonya"], kcal: 350 },
-  { kw: ["búzadara", "kukoricadara", "dara"], kcal: 360 },
+  { kw: ["búzadara", "kukoricadara", "puliszkadara"], kcal: 360 },
   { kw: ["kukoricakeményítő", "keményítő"], kcal: 355 },
   { kw: ["basmati", "rizottórizs", "rizs"], kcal: 355 },
   // Vékony tésztalapok (derelye/gyomor/rétes/filo/wonton/rizspapír) —

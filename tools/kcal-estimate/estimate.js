@@ -1,7 +1,7 @@
 var fs = require('fs');
 var DB = require('./db.js');
 
-var UNIT_WORDS = "kg|dkg|g|dl|cl|l|ml|db|evőkanál|ek\\.?|teáskanál|tk\\.?|kávéskanál|csipet|szelet|gerezd|fej|szál|szem|csokor|adag|marék|köteg|kanál";
+var UNIT_WORDS = "kg|dkg|g|dl|cl|l|ml|db|lap|evőkanál|ek\\.?|teáskanál|tk\\.?|kávéskanál|csipet|szelet|gerezd|fej|szál|szem|csokor|adag|marék|köteg|kanál";
 var QUANTITY_RE = new RegExp("^((?:\\d+[\\d.,]*|½|¼|¾)(?:\\s*[-–]\\s*\\d+[\\d.,]*)?\\s*(?:kis|közepes|nagy)?\\s*(?:" + UNIT_WORDS + ")?)\\s+(.+)$", "i");
 
 function splitIngredientLine(line) {
@@ -13,7 +13,7 @@ function splitIngredientLine(line) {
 var WEIGHT_UNITS = { g: 1, dkg: 10, kg: 1000 };
 var VOLUME_UNITS = { ml: 1, dl: 100, l: 1000, evőkanál: 15, "ek": 15, "ek.": 15, kanál: 15, teáskanál: 5, tk: 5, "tk.": 5, "kávéskanál": 5, csipet: 1 };
 var FRACTION_CHARS = { "½": 0.5, "¼": 0.25, "¾": 0.75 };
-var COUNT_UNIT_DEFAULT_G = { db: 80, fej: 100, gerezd: 5, szelet: 25, szál: 10, szem: 5, csokor: 30, köteg: 50, marék: 30, adag: 150 };
+var COUNT_UNIT_DEFAULT_G = { db: 80, lap: 20, fej: 100, gerezd: 5, szelet: 25, szál: 10, szem: 5, csokor: 30, köteg: 50, marék: 30, adag: 150 };
 
 function parseSingleNumber(tok) {
   var t = tok.trim().toLowerCase();
@@ -79,6 +79,12 @@ function estimateLineGrams(qtyPhrase, name) {
     var n = parseFloat(embedded[1].replace(",", "."));
     return n * WEIGHT_UNITS[embedded[2].toLowerCase()];
   }
+  // "2 cm-es darab gyömbér" — a "2" hosszt jelöl, nem darabszámot.
+  if (/^cm\b/i.test(name)) return 10;
+  // "..., 24 vékony szeletre vágva" / "8-10 darabra vágva" vágási utasítás, nem mennyiség.
+  if (/^(\S+\s+)?(darabra|szeletre|részre|cikkre|kockára|csíkra|karikára)\b/i.test(name)) return 0;
+  // "20 percig áztatva", "1 órára beáztatva" — idő, nem mennyiség.
+  if (/^(percig|percre|órán|órára|órát|napig)\b/i.test(name)) return 0;
   var parsed = parseQuantityPhrase(qtyPhrase);
   if (!parsed) {
     // Nincs mennyiség megadva (pl. "só ízlés szerint", "olaj a sütéshez").
@@ -91,6 +97,11 @@ function estimateLineGrams(qtyPhrase, name) {
     return 5;
   }
   var unit = parsed.unit || "db"; // "2 tojás" -> nincs explicit egység, db értendő
+  // "1 konzerv (40 dkg) paradicsom", "2 konzerv (egyenként 40 dkg) bab" — a zárójeles súly darabonként értendő.
+  if (!WEIGHT_UNITS[unit] && !VOLUME_UNITS[unit]) {
+    var packed = name.match(/^(?:konzerv|doboz|csomag|üveg|tasak)\s*\([^)\d]*?(\d+(?:[.,]\d+)?)\s*(kg|dkg|g)\b/i);
+    if (packed) return parsed.value * parseFloat(packed[1].replace(",", ".")) * WEIGHT_UNITS[packed[2].toLowerCase()];
+  }
   if (WEIGHT_UNITS[unit] !== undefined) return parsed.value * WEIGHT_UNITS[unit];
   if (VOLUME_UNITS[unit] !== undefined) return parsed.value * VOLUME_UNITS[unit] * findDensity(name);
   // darab-alapú egységek
@@ -117,7 +128,18 @@ function parseServings(text) {
 // mennyiség nélküli ág amúgy is csak kis, fix értéket számol.
 function expandIngredientLine(line) {
   var withoutLabel = line.replace(/^[^,:]{1,40}:\s*/, "");
-  return withoutLabel.split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+  // Csak a zárójelen kívüli és nem két számjegy közötti vesszőnél vágunk:
+  // "2,5 dl tej" tizedesvessző, "burgonya (fele lisztes, fele piros)" egy tétel.
+  var parts = [], cur = "", depth = 0;
+  for (var i = 0; i < withoutLabel.length; i++) {
+    var ch = withoutLabel[i];
+    if (ch === "(") depth++;
+    else if (ch === ")") depth = Math.max(0, depth - 1);
+    if (ch === "," && depth === 0 && !(/\d/.test(withoutLabel[i - 1] || "") && /\d/.test(withoutLabel[i + 1] || ""))) { parts.push(cur); cur = ""; continue; }
+    cur += ch;
+  }
+  parts.push(cur);
+  return parts.map(function (s) { return s.trim(); }).filter(Boolean);
 }
 
 function estimateRecipeCalories(recipe) {

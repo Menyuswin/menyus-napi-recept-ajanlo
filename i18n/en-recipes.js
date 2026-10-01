@@ -438,6 +438,30 @@ window.I18N_EN_RECIPES = {
    "Once cool, dust generously with icing sugar."
   ]
  },
+ "polish--racuszki-lengyel-iros-almas-bundas-palacsinta": {
+  "title": "Racuszki (Polish buttermilk pancakes with apple)",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "500 ml buttermilk or soured milk",
+   "130 g flour",
+   "1 tsp bicarbonate of soda",
+   "pinch of salt",
+   "2 eggs",
+   "3 apples, peeled and sliced into rings (optional)",
+   "½ tsp ground cinnamon (optional)",
+   "50 g raisins (optional)",
+   "a little oil for frying",
+   "icing sugar to serve"
+  ],
+  "steps": [
+   "In a large bowl, mix the flour, bicarbonate of soda and salt well.",
+   "Add the buttermilk and eggs and mix until smooth; stir in the cinnamon and raisins if you like.",
+   "Put small ladlefuls of batter into an oiled non-stick frying pan — or dip the peeled apple rings in the batter and put those in the pan.",
+   "Cook until the edges are dry, then flip and cook until golden.",
+   "Serve warm, dusted with icing sugar."
+  ]
+ },
  "polish--savanyu-rozsleves-kolbasszal": {
   "title": "Sour rye soup with sausage (żurek)",
   "time": "1 hr 15 min",
@@ -960,6 +984,274 @@ window.I18N_EN_RECIPES = {
    "Fry the patties for 4-5 minutes per side until nicely browned on both sides and cooked through.",
    "Meanwhile, peel and dice the potatoes, boil them in salted water until tender and drain.",
    "Serve the patties with the potatoes tossed in butter and dill."
+  ]
+ },
+ "polish--roso-lengyel-csirkehusleves-cernametelttel": {
+  "title": "Rosół (Polish chicken soup with vermicelli)",
+  "time": "1 hr 45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 small chicken or 1 kg chicken backs and legs",
+   "1 onion, halved",
+   "1 small leek",
+   "2 carrots, halved lengthways",
+   "½ celeriac",
+   "1-2 parsley roots",
+   "1 bunch parsley",
+   "1 wedge of white cabbage (optional)",
+   "1 clove garlic",
+   "2 bay leaves",
+   "3 allspice berries",
+   "3 juniper berries",
+   "a few dried porcini (optional)",
+   "salt, whole peppercorns",
+   "250 g fine vermicelli to serve"
+  ],
+  "steps": [
+   "Quarter the chicken, put it in a pot, cover with about 2.5 litres of cold water and bring to the boil without salt; skim off the foam.",
+   "Add the carrots, celeriac, parsley root, leek, garlic and cabbage.",
+   "Char the onion halves cut side down in a dry frying pan and add to the soup (this gives it a lovely golden colour).",
+   "Add the spices and mushrooms, season with salt and simmer very gently (not boiling, which makes it cloudy) for about 1 hour 30 minutes.",
+   "Strain; slice the carrots back into the soup and discard the other vegetables.",
+   "Cook the vermicelli separately and serve with the hot soup and fresh parsley."
+  ]
+ },
+ "polish--azanki-lengyel-kockateszta-parolt-kaposztaval-es-kolbasszal": {
+  "title": "Łazanki (Polish square noodles with braised cabbage and sausage)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g square pasta (łazanki or large squares)",
+   "500 g sauerkraut, squeezed and chopped",
+   "300 g white cabbage, shredded",
+   "200 g smoked sausage, diced",
+   "100 g smoked bacon, diced",
+   "1 onion, finely chopped",
+   "1 tsp paprika",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Braise the sauerkraut and white cabbage covered in a little water for 20 minutes.",
+   "Meanwhile, render the bacon in a large frying pan, add the onion and sausage and fry for 5 minutes.",
+   "Add the braised cabbage to the pan, sprinkle with paprika, season with pepper and fry together for 5-10 minutes.",
+   "Cook the pasta in salted water, drain and toss with the cabbage; add salt if needed.",
+   "It keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--grochowka-lengyel-borsoleves-fustolt-kolbasszal": {
+  "title": "Grochówka (Polish split pea soup with smoked sausage)",
+  "time": "1 hr 15 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "400 g split yellow peas",
+   "300 g smoked sausage, sliced",
+   "150 g smoked bacon, diced",
+   "2 carrots, diced",
+   "1 parsley root, diced",
+   "2 potatoes, diced",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "2 bay leaves, 3 allspice berries",
+   "1 tsp marjoram",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Rinse the peas and cook them in 2 litres of water with the bay leaves and allspice for 30 minutes.",
+   "Meanwhile, render the bacon in a frying pan, add the onion and sausage and fry for 5 minutes.",
+   "Add the carrots, parsley root, potatoes and crushed garlic to the soup, then the sausage mixture.",
+   "Cook for another 25-30 minutes until the peas fall apart and the vegetables are tender; season with marjoram, salt and pepper.",
+   "It keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "polish--fasolka-po-bretonsku-paradicsomos-feherbab-kolbasszal": {
+  "title": "Fasolka po bretońsku (white beans in tomato sauce with sausage)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (400 g each) white beans, rinsed",
+   "250 g sausage, diced",
+   "100 g smoked bacon, diced",
+   "1 onion, finely chopped",
+   "1 tin (400 g) chopped tomatoes",
+   "2 tbsp tomato purée",
+   "1 tsp marjoram",
+   "1 tsp paprika",
+   "2 bay leaves",
+   "salt, pepper, pinch of sugar"
+  ],
+  "steps": [
+   "Render the bacon in a saucepan, add the onion and sausage and fry for 5-6 minutes.",
+   "Add the tomatoes, tomato purée, bay leaves and 200 ml water.",
+   "Add the beans and season with marjoram, paprika, salt, pepper and a pinch of sugar.",
+   "Simmer covered over low heat for 20-25 minutes until thickened.",
+   "Serve with bread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--ryz-z-jab-kami-sult-almas-rizs-fahejjal": {
+  "title": "Ryż z jabłkami (baked rice with apples and cinnamon)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "300 g rice",
+   "800 ml milk",
+   "pinch of salt",
+   "1 kg tart apples, grated",
+   "80 g sugar",
+   "2 tsp cinnamon",
+   "40 g butter",
+   "sour cream or yogurt to serve"
+  ],
+  "steps": [
+   "Cook the rice in the milk with the salt over low heat, stirring often, for about 20 minutes until the milk is absorbed.",
+   "Squeeze out the grated apple and mix with the sugar and cinnamon.",
+   "Preheat the oven to 180 °C and butter an ovenproof dish.",
+   "Layer: half the rice, the apple, the rest of the rice; dot the top with butter.",
+   "Bake for 30 minutes; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "polish--leniwe-go-abki-lusta-toltott-kaposzta-gombocok-paradicsomszoszban": {
+  "title": "Leniwe gołąbki (lazy cabbage roll patties in tomato sauce)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g minced pork",
+   "400 g white cabbage, finely chopped",
+   "150 g rice, cooked until half done",
+   "1 onion, finely chopped",
+   "1 egg",
+   "salt, pepper, 1 tsp marjoram",
+   "flour for coating",
+   "oil for frying",
+   "500 ml tomato passata",
+   "200 ml sour cream"
+  ],
+  "steps": [
+   "Blanch the cabbage in boiling salted water for 5 minutes, drain and squeeze out.",
+   "Knead together the meat, cabbage, rice, onion, egg and seasonings and shape into oval patties; coat in flour.",
+   "Fry on both sides in oil (3-4 minutes) and put in a saucepan.",
+   "Dilute the passata with 300 ml water, season, pour over the patties and simmer covered over low heat for 30 minutes; finish with the sour cream.",
+   "serve with potatoes or bread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--ryba-po-grecku-halfile-repas-paradicsomos-zoldsegagyon": {
+  "title": "Ryba po grecku (fish fillets under carrot and tomato vegetables)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g white fish fillet (cod or pollock)",
+   "flour for coating",
+   "oil for frying",
+   "3 carrots, grated",
+   "1 parsley root, grated",
+   "¼ celeriac, grated",
+   "1 onion, finely chopped",
+   "3 tbsp tomato purée",
+   "2 bay leaves, 3 allspice berries",
+   "1 tsp paprika",
+   "salt, pepper, pinch of sugar"
+  ],
+  "steps": [
+   "Cut the fish into pieces, season, coat in flour and fry in oil until golden on both sides; put in a dish.",
+   "In the same pan, soften the onion in a little oil, add the grated vegetables and cook for 10 minutes.",
+   "Add the tomato purée, spices and 200 ml water and cook for another 10 minutes; season with salt, pepper and sugar.",
+   "Pour the hot vegetables over the fish and leave to cool.",
+   "It keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--kie-basa-w-sosie-cebulowym-hagymas-martasos-kolbasz-burgonyaval": {
+  "title": "Kiełbasa w sosie cebulowym (sausage in onion gravy with potatoes)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g Polish sausage (kiełbasa), sliced",
+   "3 onions, sliced into half moons",
+   "2 tbsp oil",
+   "1 tbsp flour",
+   "1 tbsp mustard",
+   "2 tbsp tomato purée",
+   "300 ml water or stock",
+   "1 tsp marjoram",
+   "pepper",
+   "1 kg potatoes to serve"
+  ],
+  "steps": [
+   "Boil the potatoes (peeled or in their skins) in salted water.",
+   "Fry the sausage in the oil, then add the onions and cook for 10 minutes until soft and golden.",
+   "Sprinkle with the flour, stir, then add the mustard, tomato purée and water.",
+   "Simmer for 10 minutes until the sauce thickens; season with marjoram and pepper.",
+   "Serve with the potatoes; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--kotlety-mielone-z-kurczaka-csirkefasirt-kapros-krumplival": {
+  "title": "Kotlety mielone z kurczaka (chicken patties with dill potatoes)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g minced chicken",
+   "1 bread roll, soaked in milk",
+   "1 egg",
+   "1 small onion, grated",
+   "1 clove garlic",
+   "salt, pepper",
+   "breadcrumbs for coating",
+   "oil for frying",
+   "1 kg new potatoes or potatoes",
+   "30 g butter",
+   "1 bunch dill"
+  ],
+  "steps": [
+   "Knead the meat with the squeezed-out roll, egg, onion, crushed garlic, salt and pepper.",
+   "With wet hands, shape into flat oval patties and coat in breadcrumbs.",
+   "Fry in oil over medium heat for 5-6 minutes per side until cooked through.",
+   "Boil the potatoes in salted water and toss with butter and chopped dill.",
+   "It keeps 3 days in a box; it heats through in the microwave in 1-2 minutes and is good cold too."
+  ]
+ },
+ "polish--zupa-kalafiorowa-lengyel-karfiolleves-kaporral": {
+  "title": "Zupa kalafiorowa (Polish cauliflower soup with dill)",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 cauliflower, broken into florets",
+   "2 carrots, sliced",
+   "1 parsley root, sliced",
+   "3 potatoes, diced",
+   "1 tbsp butter",
+   "2 litres chicken or vegetable stock",
+   "200 ml sour cream",
+   "1 tbsp flour",
+   "1 bunch dill",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Bring the stock to the boil, add the carrots, parsley root and potatoes and cook for 10 minutes.",
+   "Add the cauliflower and cook for another 10-12 minutes until tender.",
+   "Whisk the sour cream with the flour and a ladleful of soup, add to the pot and boil for 3 minutes.",
+   "Stir in the butter and dill; season.",
+   "It keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "polish--placki-z-cukinii-cukkinis-lepenykek-joghurtos-martassal": {
+  "title": "Placki z cukinii (courgette fritters with yogurt dip)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 medium courgettes (about 800 g), grated",
+   "2 eggs",
+   "100 g flour",
+   "50 g grated cheese",
+   "1 clove garlic, crushed",
+   "1 bunch dill",
+   "salt, pepper",
+   "oil for frying",
+   "200 ml yogurt or sour cream for the dip"
+  ],
+  "steps": [
+   "Salt the grated courgette, leave for 10 minutes, then squeeze out thoroughly.",
+   "Mix with the eggs, flour, cheese, garlic and half the dill; season with pepper.",
+   "Drop spoonfuls into hot oil, flatten slightly and fry for 3-4 minutes per side until golden.",
+   "Mix the yogurt with the rest of the dill and a pinch of salt.",
+   "Drain the fritters on kitchen paper; it keeps 2-3 days in a box; it heats through in the microwave in 1-2 minutes and is good cold too."
   ]
  },
  "polish--rantott-sertesszelet-lengyel-modra": {
@@ -1490,6 +1782,261 @@ window.I18N_EN_RECIPES = {
    "Rest for 10 minutes after roasting, then serve sliced, drizzled with the roasting juices."
   ]
  },
+ "polish--lengyel-vajas-morzsas-karfiol-kaporral": {
+  "title": "Polish-style cauliflower with buttered crumbs and dill",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 cauliflower (whole or in florets)",
+   "50 g butter",
+   "3 tbsp breadcrumbs",
+   "½ tsp chopped fresh dill (optional)",
+   "salt"
+  ],
+  "steps": [
+   "Cook the cauliflower in salted water for about 10 minutes (15 minutes whole) until tender but not falling apart.",
+   "Melt the butter in a small frying pan and fry the breadcrumbs until golden.",
+   "Stir in the dill.",
+   "Drain the cauliflower, put it on a dish and pour over the buttered crumbs; serve as a side or a light supper."
+  ]
+ },
+ "polish--leczo-lengyel-lecso-kolbasszal-es-cukkinivel": {
+  "title": "Leczo (Polish sausage, pepper and courgette stew)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g sausage (ideally Polish kiełbasa), sliced",
+   "1 onion, finely chopped",
+   "2 sweet peppers (red and yellow), cut into strips",
+   "1 courgette, diced",
+   "1 tin (400 g) chopped tomatoes",
+   "2 tbsp tomato purée",
+   "1 tsp paprika",
+   "2 tbsp oil",
+   "salt, pepper",
+   "bread or rice to serve"
+  ],
+  "steps": [
+   "Fry the sausage in the oil in a large saucepan, then add the onion and soften.",
+   "Add the peppers and courgette and fry for 5 minutes.",
+   "Add the tomatoes, tomato purée and paprika and season.",
+   "Simmer covered over low heat for 20 minutes until the vegetables are tender.",
+   "Serve with bread or rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--zapiekanka-makaronowa-sonkas-gombas-rakott-teszta": {
+  "title": "Zapiekanka makaronowa (ham and mushroom pasta bake)",
+  "time": "50 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "400 g penne or fusilli",
+   "250 g ham, diced",
+   "300 g button mushrooms, sliced",
+   "1 onion, finely chopped",
+   "1 tbsp oil",
+   "300 ml sour cream",
+   "200 ml milk",
+   "2 eggs",
+   "150 g grated cheese",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C; cook the pasta al dente.",
+   "Soften the onion in the oil, add the mushrooms and fry for 8-10 minutes until the liquid has cooked away; stir in the ham.",
+   "Whisk the sour cream with the milk, eggs and half the cheese and season.",
+   "Mix the pasta with the mushroom and ham base and the sour cream mixture, spread in a buttered dish and sprinkle with the rest of the cheese.",
+   "Bake for 25 minutes until golden; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "polish--zupa-jarzynowa-lengyel-zoldsegleves": {
+  "title": "Zupa jarzynowa (Polish vegetable soup)",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "2 carrots, diced",
+   "1 parsley root, diced",
+   "½ celeriac, diced",
+   "1 leek, sliced",
+   "3 potatoes, diced",
+   "150 g cauliflower florets",
+   "100 g green beans",
+   "100 g green peas",
+   "2 litres vegetable or chicken stock",
+   "200 ml sour cream",
+   "1 bunch dill",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Bring the stock to the boil, add the carrots, parsley root, celeriac and leek and cook for 10 minutes.",
+   "Add the potatoes, cauliflower and green beans and cook for another 15 minutes.",
+   "Add the peas for the last 5 minutes; season.",
+   "Mix the sour cream with a ladleful of soup, add to the pot and stir in the dill.",
+   "It keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "polish--kaszotto-z-pieczarkami-gombas-gyongyarpa-rizotto": {
+  "title": "Kaszotto z pieczarkami (mushroom pearl barley risotto)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g pearl barley",
+   "400 g button mushrooms, sliced",
+   "1 onion, finely chopped",
+   "2 cloves garlic, crushed",
+   "2 tbsp butter",
+   "1 litre vegetable or chicken stock",
+   "50 g grated cheese",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "In a saucepan, soften the onion and garlic in half the butter, add the barley and toast for 2 minutes.",
+   "Gradually add the hot stock and cook over low heat, stirring now and then, for 35-40 minutes until tender and creamy.",
+   "Meanwhile, fry the mushrooms in the rest of the butter until the liquid has cooked away and season.",
+   "Stir the mushrooms and cheese into the barley and sprinkle with parsley.",
+   "It keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--pierogi-leniwe-lusta-turos-galuska-vajjal-es-morzsaval": {
+  "title": "Pierogi leniwe (lazy curd cheese dumplings with buttered crumbs)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g semi-fat curd cheese",
+   "2 eggs",
+   "200 g flour + extra for rolling",
+   "pinch of salt",
+   "40 g butter",
+   "3 tbsp breadcrumbs",
+   "sour cream and sugar to serve (optional)"
+  ],
+  "steps": [
+   "Mash the curd cheese with a fork, add the eggs, salt and flour and quickly knead into a dough.",
+   "On a floured board, roll into finger-thick ropes and cut diagonally into 2 cm pieces.",
+   "Cook in boiling salted water until they float, then 1-2 minutes more.",
+   "Fry the breadcrumbs in the butter until golden and toss the drained dumplings in them.",
+   "Serve with sour cream (and sugar); it keeps 2-3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--gulasz-z-kurczaka-paprikas-csirkeragu-lengyel-modra": {
+  "title": "Gulasz z kurczaka (Polish chicken and pepper stew)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g boneless chicken thigh, diced",
+   "1 onion, finely chopped",
+   "2 sweet peppers, diced",
+   "2 cloves garlic",
+   "2 tbsp oil",
+   "1 tbsp flour",
+   "1 tsp paprika",
+   "½ tsp smoked paprika",
+   "2 tbsp tomato purée",
+   "400 ml chicken stock",
+   "salt, pepper",
+   "buckwheat, rice or pasta to serve"
+  ],
+  "steps": [
+   "Season the chicken, dust with the flour and brown all over in the oil over high heat.",
+   "Add the onion, garlic and peppers and fry for 5 minutes.",
+   "Sprinkle with paprika and smoked paprika and add the tomato purée and stock.",
+   "Simmer covered over low heat for 20-25 minutes until the meat is tender and the sauce has thickened; season with pepper.",
+   "Serve with buckwheat or rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--pieczone-udka-z-ziemniakami-sult-csirkecomb-majorannas-burgonyaval": {
+  "title": "Pieczone udka z ziemniakami (roast chicken legs with marjoram potatoes)",
+  "time": "1 hr 10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 whole chicken legs",
+   "1.2 kg potatoes, cut into wedges",
+   "1 onion, cut into wedges",
+   "4 cloves garlic, whole",
+   "3 tbsp oil",
+   "2 tsp marjoram",
+   "1 tsp sweet paprika",
+   "salt, pepper",
+   "mizeria (sour cream cucumber salad) to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Rub the legs with half the oil, the paprika, half the marjoram, salt and pepper.",
+   "Toss the potatoes, onion and garlic with the rest of the oil and marjoram, season and spread in a roasting tin.",
+   "Lay the legs on top and roast for 55-60 minutes, turning the potatoes halfway.",
+   "Serve with mizeria; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--makaron-z-kurczakiem-w-sosie-pieczarkowym-csirkes-gombas-tejszines-teszta": {
+  "title": "Makaron z kurczakiem (creamy chicken and mushroom pasta)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g penne or ribbon pasta",
+   "500 g chicken breast fillet, cut into strips",
+   "300 g button mushrooms, sliced",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "2 tbsp oil",
+   "300 ml single cream",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the pasta al dente.",
+   "Brown the chicken in the oil, season and take it out.",
+   "In the same pan, soften the onion and garlic, add the mushrooms and fry until the liquid has cooked away.",
+   "Return the chicken, pour in the cream and simmer for 5 minutes until slightly thickened.",
+   "Toss with the pasta and sprinkle with parsley; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--kapusta-zasmazana-z-kie-basa-piritott-parolt-kaposzta-kolbasszal": {
+  "title": "Kapusta zasmażana z kiełbasą (braised cabbage with sausage)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg sauerkraut (or half fresh white cabbage)",
+   "300 g sausage, sliced",
+   "100 g smoked bacon, diced",
+   "1 onion, finely chopped",
+   "1 tbsp flour",
+   "1 tsp caraway seeds",
+   "2 bay leaves",
+   "pepper, pinch of sugar",
+   "potatoes to serve"
+  ],
+  "steps": [
+   "Squeeze the sauerkraut lightly, chop it and braise in 300 ml water with the caraway and bay leaves for 25 minutes.",
+   "Meanwhile, render the bacon, soften the onion in it, add the sausage and fry for 5 minutes.",
+   "Sprinkle with the flour, stir and add to the cabbage.",
+   "Cook for another 10 minutes until thickened; season with pepper and a pinch of sugar.",
+   "Serve with boiled potatoes; it keeps 4-5 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "polish--bitki-wieprzowe-w-sosie-parolt-sertesszelet-hagymas-martasban": {
+  "title": "Bitki wieprzowe (braised pork steaks in onion gravy)",
+  "time": "1 hr 15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 slices pork neck or shoulder (about 800 g)",
+   "flour for coating",
+   "3 tbsp oil",
+   "2 onions, sliced into half moons",
+   "2 bay leaves, 3 allspice berries",
+   "500 ml water or stock",
+   "1 tbsp mustard",
+   "100 ml sour cream (optional)",
+   "salt, pepper",
+   "potatoes or buckwheat to serve"
+  ],
+  "steps": [
+   "Pound the meat lightly, season and coat in flour.",
+   "Brown on both sides in the oil for 2-3 minutes, then put in a saucepan.",
+   "Soften the onions in the same fat and put on top of the meat with the bay leaves and allspice; pour in the water.",
+   "Braise covered over low heat for 45-50 minutes until tender; finally stir in the mustard and sour cream if you like.",
+   "Serve with potatoes or buckwheat; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "southslavic--turos-retes-burek": {
   "title": "Cheese burek",
   "time": "1 hr 15 min",
@@ -1939,6 +2486,50 @@ window.I18N_EN_RECIPES = {
    "Cut the flatbread into wedges and, if you like it warm, toast it for a few minutes in a dry frying pan.",
    "Drizzle everything with a little olive oil.",
    "Serve at once so the cheese and sausage reach the table fresh and cold."
+  ]
+ },
+ "southslavic--csuski-burek-sajttal-tojassal-toltott-rantott-paprika": {
+  "title": "Chushki burek (fried peppers stuffed with cheese and egg)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg red peppers (romano)",
+   "250 g salty white sheep's cheese or feta, crumbled",
+   "6 eggs",
+   "100 g breadcrumbs",
+   "sunflower oil for frying",
+   "salt",
+   "chopped parsley"
+  ],
+  "steps": [
+   "Roast the peppers in the oven or over an open flame until the skins blacken, put them in a covered bowl for 10 minutes, then peel and carefully seed them (keep them whole).",
+   "Mix the crumbled cheese with 4 eggs and stuff the peppers with it.",
+   "Beat the remaining 2 eggs with a little salt.",
+   "Dip the stuffed peppers in the egg, then in the breadcrumbs.",
+   "Fry in hot oil until golden on both sides and drain on kitchen paper.",
+   "Serve sprinkled with chopped parsley."
+  ]
+ },
+ "southslavic--sirene-po-shopski-sult-sajt-paradicsommal-paprikaval-es-tojassal": {
+  "title": "Sirene po shopski (baked cheese with tomato, peppers and egg)",
+  "time": "35 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "400 g salty white cheese (feta or sheep's cheese)",
+   "150 g yellow cheese (e.g. kashkaval or similar), grated",
+   "2 hot peppers, sliced",
+   "2 tomatoes, sliced",
+   "2 roasted red peppers, chopped",
+   "1 tsp dried oregano or parsley",
+   "2 eggs",
+   "bread to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Layer in two small clay pots or ovenproof dishes: white cheese, hot and roasted peppers, tomato, then cheese again; sprinkle with herbs as you go and finish with the yellow cheese.",
+   "Cover and bake for about 20 minutes until the cheese melts.",
+   "Crack an egg on top of each and bake uncovered until the egg is as you like it (5-8 minutes).",
+   "Serve hot with fresh bread and salad."
   ]
  },
  "southslavic--toltott-savanyu-kaposzta-balkani-modra-sarma": {
@@ -2431,6 +3022,377 @@ window.I18N_EN_RECIPES = {
    "Simmer covered over low heat for 25-30 minutes, turning the meatballs gently now and then.",
    "Meanwhile, cook the rice in plenty of salted water for about 12-15 minutes until tender, then drain.",
    "Serve the ćufte with the rice, with plenty of sauce poured over."
+  ]
+ },
+ "southslavic--sopszka-salata-bolgar-paradicsom-uborka-paprika-salata-sajttal": {
+  "title": "Shopska salad (Bulgarian tomato, cucumber and pepper salad with cheese)",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 tomatoes",
+   "2 cucumbers",
+   "2 roasted or fresh green peppers",
+   "2 tbsp chopped parsley",
+   "2 tbsp chopped red onion or spring onion",
+   "220 g salty white cheese (feta)",
+   "a few olives (optional)",
+   "salt, 1 tbsp wine vinegar, 3 tbsp sunflower or olive oil"
+  ],
+  "steps": [
+   "Cut the tomatoes, cucumbers and peppers into small cubes.",
+   "Mix with the parsley, onion, salt, vinegar and oil.",
+   "To serve, grate or crumble plenty of cheese on top and add olives if you like."
+  ]
+ },
+ "southslavic--sznezsanka-bolgar-uborkas-joghurtos-salata-dioval": {
+  "title": "Snezhanka (Bulgarian cucumber and yogurt salad with walnuts)",
+  "time": "15 min + 1 hr draining",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 litre plain yogurt",
+   "500 g cucumbers or dill pickles (or mixed)",
+   "1-2 tbsp oil",
+   "1 tbsp wine vinegar or lemon juice",
+   "1 tsp seasoning salt or salt (none with salty pickles)",
+   "2-3 tbsp chopped dill",
+   "2-3 cloves garlic, crushed",
+   "2-3 tbsp ground walnuts"
+  ],
+  "steps": [
+   "Put the yogurt in a muslin-lined sieve and let it drain for about 1 hour to thicken; cut the cucumbers into tiny cubes.",
+   "Mix everything except the walnuts.",
+   "Sprinkle the walnuts on top and serve cold."
+  ]
+ },
+ "southslavic--tarator-bolgar-hideg-uborkaleves": {
+  "title": "Tarator (Bulgarian cold cucumber soup)",
+  "time": "10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g plain yogurt",
+   "250 ml cold water",
+   "1-2 cucumbers, finely diced",
+   "2 tbsp chopped dill",
+   "1-2 cloves garlic, crushed",
+   "salt",
+   "1 tsp wine vinegar",
+   "1 tbsp sunflower oil",
+   "2 tbsp chopped walnuts (optional)"
+  ],
+  "steps": [
+   "Mix all the ingredients, adding enough water for the soup to be about the consistency of milk.",
+   "Taste and season with salt and vinegar.",
+   "Serve cold in soup bowls; if it's not cold enough, add a few ice cubes."
+  ]
+ },
+ "southslavic--boranija-paradicsomos-hagymas-zoldbab-joghurttal": {
+  "title": "Boranija (green beans with tomato and onion, with yogurt)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g green beans, trimmed",
+   "3 tbsp oil",
+   "2 onions, finely chopped",
+   "3 tomatoes, peeled and chopped (or 1 tin)",
+   "salt",
+   "2 cloves garlic, finely chopped",
+   "200 ml plain yogurt to serve"
+  ],
+  "steps": [
+   "Cook the green beans in salted water until tender (8-10 minutes) and drain.",
+   "Heat the oil in a frying pan over medium-high heat.",
+   "Soften the onion until translucent.",
+   "Add the tomatoes, heat through and season with salt.",
+   "Stir in the beans and heat through; stir in the garlic just before serving.",
+   "Serve with yogurt."
+  ]
+ },
+ "southslavic--bolgar-zoldsegleves-joghurtos-tojasos-habarassal": {
+  "title": "Bulgarian vegetable soup with yogurt and egg",
+  "time": "50 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "2 carrots, diced",
+   "½ celeriac, diced",
+   "2 red peppers, finely chopped",
+   "¼ medium cabbage, finely chopped",
+   "3 potatoes, diced",
+   "3 tbsp sunflower oil",
+   "1 onion, finely chopped",
+   "3 tomatoes, grated",
+   "1 tbsp flour",
+   "1 tsp paprika",
+   "1 beetroot, boiled and diced",
+   "100 ml yogurt",
+   "1 egg",
+   "salt",
+   "chopped parsley",
+   "100 g grated yellow cheese (kashkaval or similar)"
+  ],
+  "steps": [
+   "Bring about 2 litres of salted water to the boil and cook the carrots, celeriac, peppers and cabbage until soft (about 15 minutes).",
+   "Add the potatoes.",
+   "In a frying pan, soften the onion in the oil, then stir in the flour, paprika and grated tomato.",
+   "Stir into the soup and cook for another 20 minutes or so; add the beetroot at the end.",
+   "Mix the yogurt with the egg, carefully temper it with a little hot broth, then stir it back into the soup and season with salt.",
+   "Serve sprinkled with parsley and grated cheese."
+  ]
+ },
+ "southslavic--gyuveche-bolgar-cserepedenyes-sajtos-kolbaszos-sult-tojassal": {
+  "title": "Gyuveche (Bulgarian clay pot bake with cheese, sausage and egg)",
+  "time": "35 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "250 g salty white cheese or feta, diced",
+   "100 g cooked or roast meat, or frankfurters, diced",
+   "1 tomato, diced",
+   "1 red pepper, diced",
+   "1 small hot pepper, sliced",
+   "50 g mushrooms, sliced",
+   "1 boiled potato, diced (optional)",
+   "fresh parsley and dill, chopped",
+   "2 eggs",
+   "bread or toast to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and dice everything.",
+   "Layer the cheese, meat and vegetables in two small clay or ovenproof pots, sprinkling with herbs as you go; finish with cheese on top.",
+   "Bake for about 20 minutes until the cheese melts.",
+   "Crack an egg onto each and return to the oven for 5-10 minutes, depending on how set you like your eggs.",
+   "Serve with fresh bread or toast."
+  ]
+ },
+ "southslavic--grasak-sa-mesom-szerb-borsoragu-hussal": {
+  "title": "Grašak sa mesom (Serbian pea and meat stew)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g pork or chicken, diced",
+   "600 g frozen peas",
+   "1 onion, finely chopped",
+   "2 carrots, sliced",
+   "2 tbsp oil",
+   "1 tsp paprika",
+   "2 tbsp tomato purée",
+   "1 tbsp flour",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion in the oil, add the meat and brown it all over.",
+   "Sprinkle with paprika, add the tomato purée and 300 ml water, season and braise covered for 25 minutes.",
+   "Add the carrots and peas, pour in another 300 ml water and cook for 15 minutes.",
+   "Mix the flour with a little cold water, stir into the stew, boil for 3 minutes and stir in the parsley.",
+   "Serve with bread; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--kelj-s-krumpirom-i-kobasicom-horvat-kelkaposzta-burgonyaval-es-kolbasszal": {
+  "title": "Kelj s krumpirom (Croatian Savoy cabbage and potato with sausage)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 Savoy cabbage, shredded",
+   "6 potatoes, diced",
+   "300 g smoked sausage, sliced",
+   "3 cloves garlic, sliced",
+   "3 tbsp oil",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the potatoes and cabbage in 1.5 litres of salted water for 15-20 minutes until tender, then drain (keep 100 ml of the cooking water).",
+   "In a large frying pan, fry the sausage in the oil, add the garlic and fry for 30 seconds.",
+   "Add the potatoes and cabbage and roughly mash with a fork, loosening with the reserved water.",
+   "Season and fry together for a few minutes.",
+   "best re-fried in a pan; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--pita-krompirusa-bosnyak-burgonyas-reteslepeny": {
+  "title": "Pita krompiruša (Bosnian potato filo pie)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 pack (500 g) strudel or filo pastry",
+   "1 kg potatoes, finely diced or grated",
+   "2 onions, finely chopped",
+   "100 ml sunflower oil + extra for brushing",
+   "1 tsp salt",
+   "½ tsp pepper",
+   "200 ml sour cream or yogurt to serve"
+  ],
+  "steps": [
+   "Mix the potatoes with the onion, oil, salt and pepper.",
+   "Lay 2 sheets of pastry in an oiled baking tin (brush each with oil), scatter over some of the filling; layer until it is used up (or roll the filling in the sheets and coil them).",
+   "Brush the top with oil and sprinkle with a little water so it doesn't dry out.",
+   "Bake at 200 °C for 40-45 minutes until golden and rest covered for 10 minutes.",
+   "Serve with yogurt; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "southslavic--prebranac-szerb-sult-hagymas-bab": {
+  "title": "Prebranac (Serbian baked beans with onions)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "3 tins (400 g each) large white beans, rinsed",
+   "3 onions, sliced into half moons",
+   "100 ml sunflower oil",
+   "1 tbsp paprika",
+   "½ tsp hot paprika",
+   "2 bay leaves",
+   "salt, pepper",
+   "smoked sausage (optional)"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Cook the onions slowly in the oil for 15 minutes until soft and golden, then take off the heat and stir in the paprikas.",
+   "Layer the beans and onions in an ovenproof dish with the bay leaves in between and season.",
+   "Pour in 300 ml water (just to cover) and bake for 35-40 minutes until browned on top and the liquid has thickened.",
+   "Serve with sausage or on its own with bread; it keeps 4-5 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--pilav-s-piletinom-csirkes-zoldseges-rizs-balkani-modra": {
+  "title": "Pilav s piletinom (Balkan chicken and vegetable rice)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g boneless chicken thigh, diced",
+   "300 g rice",
+   "1 onion, finely chopped",
+   "1 carrot, diced",
+   "1 romano pepper, diced",
+   "100 g green peas",
+   "3 tbsp oil",
+   "1 tsp paprika",
+   "1 tsp seasoning salt",
+   "700 ml hot water or stock",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion in the oil in a saucepan, add the chicken and brown it.",
+   "Add the carrot and pepper, fry for 5 minutes, then sprinkle with paprika and seasoning salt.",
+   "Add the washed rice, stir for 2 minutes and pour in the hot water; season.",
+   "Cook covered over low heat for 18 minutes, scattering the peas over for the last 5 minutes.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--krompir-paprikas-szerb-krumplipaprikas-kolbasszal": {
+  "title": "Krompir paprikaš (Serbian potato paprikash with sausage)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1.2 kg potatoes, diced",
+   "250 g smoked sausage, sliced",
+   "1 onion, finely chopped",
+   "1 romano pepper, diced",
+   "3 tbsp oil",
+   "1 tbsp paprika",
+   "2 tbsp tomato purée",
+   "2 bay leaves",
+   "salt, pepper",
+   "1 bunch parsley"
+  ],
+  "steps": [
+   "Soften the onion in the oil, add the sausage and pepper and fry for 3-4 minutes.",
+   "Take off the heat, sprinkle with paprika and add the tomato purée.",
+   "Add the potatoes and bay leaves, pour in just enough water to cover and season with salt.",
+   "Cook covered for 25 minutes until the potatoes are tender and the liquid has thickened slightly.",
+   "Serve sprinkled with parsley; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--ricet-szloven-gyongyarpas-babos-egytaletel-fustolt-hussal": {
+  "title": "Ričet (Slovenian pearl barley and bean stew with smoked meat)",
+  "time": "1 hr 20 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "200 g pearl barley",
+   "1 tin (400 g) borlotti beans, rinsed",
+   "300 g smoked pork neck or smoked sausage, diced",
+   "1 onion, finely chopped",
+   "2 carrots, diced",
+   "1 parsley root, diced",
+   "2 potatoes, diced",
+   "2 cloves garlic",
+   "2 bay leaves",
+   "1 tbsp oil",
+   "salt, pepper",
+   "1 bunch parsley"
+  ],
+  "steps": [
+   "Rinse the barley; in a large pot, soften the onion and smoked meat in the oil.",
+   "Add the barley, bay leaves and crushed garlic, pour in 2 litres of water and cook for 35 minutes.",
+   "Add the carrots, parsley root and potatoes and cook for another 20 minutes.",
+   "Add the beans and cook for 10 more minutes until it becomes a thick stew; season.",
+   "Serve with parsley; it keeps 4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--tikvice-u-pavlaci-kapros-tejfolos-cukkiniragu-csirkevel": {
+  "title": "Tikvice u pavlaci (courgette and chicken in dill sour cream)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 medium courgettes, diced",
+   "400 g chicken breast fillet, diced",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "250 ml sour cream",
+   "1 tbsp flour",
+   "1 bunch dill",
+   "1 clove garlic",
+   "salt, pepper",
+   "rice or potatoes to serve"
+  ],
+  "steps": [
+   "Soften the onion in the oil, add the chicken and brown it; season.",
+   "Add the courgette and crushed garlic, pour in 100 ml water and cook covered for 10-12 minutes.",
+   "Whisk the sour cream with the flour, add and boil for 3 minutes.",
+   "Stir in the dill and adjust the seasoning.",
+   "Serve with rice or potatoes; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--szvinszko-sz-kiszelo-zele-bolgar-serteshus-savanyu-kaposztaval": {
+  "title": "Svinsko s kiselo zele (Bulgarian pork with sauerkraut)",
+  "time": "1 hr 20 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "700 g pork shoulder, diced",
+   "1 kg sauerkraut, lightly squeezed",
+   "1 onion, finely chopped",
+   "3 tbsp oil",
+   "1 tbsp paprika",
+   "½ tsp hot paprika",
+   "2 bay leaves",
+   "5 peppercorns",
+   "100 ml tomato passata"
+  ],
+  "steps": [
+   "Brown the meat in the oil, add the onion and cook for 5 minutes.",
+   "Sprinkle with the paprikas, add the passata and 200 ml water and braise covered for 25 minutes.",
+   "Add the sauerkraut, bay leaves and peppercorns and pour in 300 ml water.",
+   "Braise covered over low heat (or in a 180 °C oven) for another 40 minutes until the meat is tender.",
+   "Serve with bread; it keeps 5 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--riblji-paprikas-od-oslica-paprikas-hekkragu": {
+  "title": "Riblji paprikaš (paprika hake stew)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g hake or other white fish fillet, cut into large pieces",
+   "2 onions, finely chopped",
+   "1 romano pepper, diced",
+   "3 tbsp oil",
+   "1 tbsp paprika",
+   "100 ml tomato passata",
+   "100 ml white wine (optional)",
+   "2 bay leaves",
+   "salt, pepper",
+   "parsley, and cooked pasta or polenta to serve"
+  ],
+  "steps": [
+   "Cook the onions in the oil for 8-10 minutes until soft, then add the pepper.",
+   "Take off the heat, sprinkle with paprika, add the passata, wine, bay leaves and 400 ml water and cook for 10 minutes.",
+   "Season, add the fish and cook for 10 minutes without stirring, just shaking the pan.",
+   "Sprinkle with parsley.",
+   "Serve with pasta or polenta; it keeps 2 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
  "southslavic--balkani-fuszeres-huspogacsa-hagymaval-pljeskavica": {
@@ -2949,6 +3911,362 @@ window.I18N_EN_RECIPES = {
    "Cook uncovered over low heat for another 20-25 minutes until the okra is tender and the sauce has thickened.",
    "Season with salt and pepper to taste, stirring gently so the okra doesn't fall apart.",
    "Serve with warm rice or fresh bread."
+  ]
+ },
+ "southslavic--kebapcseta-bolgar-komenyes-grillkolbaszka": {
+  "title": "Kebapcheta (Bulgarian cumin grilled sausages)",
+  "time": "30 min",
+  "servings": "6 servings",
+  "marinate": "at least 2 hours, ideally 1-2 days",
+  "ingredients": [
+   "1 kg minced meat (about 60% pork, 40% beef)",
+   "2 tsp salt",
+   "½ tsp ground cumin",
+   "½ tsp ground black pepper",
+   "3 tbsp cold water",
+   "roast potatoes or chips and salad to serve"
+  ],
+  "steps": [
+   "Salt the meat and knead it thoroughly with the spices and water.",
+   "Cover and chill for at least 2 hours, but the real flavour develops after resting for 1-2 days.",
+   "With wet hands (or a piping bag), shape into skinless sausages about 10 cm long and a finger thick.",
+   "Grill over medium-high heat or in a griddle pan; turn only once, as turning a lot dries them out.",
+   "Serve hot with potatoes and salad."
+  ]
+ },
+ "southslavic--kjufteta-bolgar-kakukkfuves-sult-fasirtok": {
+  "title": "Kyufteta (Bulgarian baked meat patties with thyme)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g lean minced pork",
+   "120 g minced beef",
+   "1 onion, finely chopped",
+   "50 g stale bread, crumbled",
+   "1 egg",
+   "black and white pepper",
+   "1.5 tsp dried thyme",
+   "1 tsp grated nutmeg",
+   "salt",
+   "a little oil for the tray"
+  ],
+  "steps": [
+   "Put all the ingredients in a bowl and knead well.",
+   "Shape into balls about 3 cm across and flatten to 1.5 cm thick.",
+   "Put on a lightly oiled baking tray and roast at 200 °C for about 15 minutes until golden.",
+   "Turn over and roast for about 5 minutes more until browned on the other side.",
+   "Put straight onto kitchen paper to absorb the fat and serve hot with salad or a sauce."
+  ]
+ },
+ "southslavic--kjopolu-bolgar-sult-padlizsan-es-paprikakrem": {
+  "title": "Kyopolu (Bulgarian roasted aubergine and pepper spread)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2-3 aubergines",
+   "4-5 red peppers (romano)",
+   "2-3 tomatoes, grated or finely chopped",
+   "3-4 cloves garlic, crushed",
+   "4 tbsp sunflower oil",
+   "1-2 tbsp wine vinegar",
+   "salt",
+   "chopped parsley",
+   "bread to serve"
+  ],
+  "steps": [
+   "Roast the aubergines and peppers in a hot oven (220 °C) or on a grill for about 25-30 minutes until the skins blacken and the flesh is soft; peel and chop finely.",
+   "Add the tomatoes, then the crushed garlic.",
+   "Mix with a wooden spoon, then add oil, vinegar and salt to taste and beat together well.",
+   "Spread on a plate, sprinkle with chopped parsley and serve with bread."
+  ]
+ },
+ "southslavic--bolgar-muszaka-rakott-burgonya-daralt-hussal-es-joghurtos-ontettel": {
+  "title": "Bulgarian moussaka (potato and mince bake with yogurt topping)",
+  "time": "1 hr 20 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "2 tbsp oil",
+   "1 onion, finely chopped",
+   "500 g minced pork",
+   "1 kg potatoes, peeled and cut into small cubes",
+   "2 tomatoes, finely chopped",
+   "1 bunch parsley, finely chopped",
+   "1 tsp paprika",
+   "3 eggs, beaten",
+   "250 ml plain yogurt",
+   "2 tbsp flour",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C; fry the onion and mince in a little oil in a frying pan until cooked.",
+   "Mix the meat with the potatoes, tomatoes, parsley and paprika, season and add 200 ml water.",
+   "Spread in a baking dish and bake for about 50 minutes until the potatoes are tender.",
+   "Whisk the eggs with the yogurt and flour, pour over the top and bake for another 10-15 minutes until golden.",
+   "Rest for 10 minutes before cutting."
+  ]
+ },
+ "southslavic--szupa-topcseta-bolgar-husgombocleves-citromos-tojasos-habarassal": {
+  "title": "Supa topcheta (Bulgarian meatball soup with egg and lemon)",
+  "time": "55 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "450 g minced beef",
+   "6 tbsp rice",
+   "1 tsp paprika",
+   "1 tsp dried savory",
+   "salt, pepper",
+   "flour for coating",
+   "1.5 litres water",
+   "2 beef stock cubes",
+   "½ bunch spring onions, sliced",
+   "1 green pepper, chopped",
+   "2 carrots, thinly sliced",
+   "3 tomatoes, peeled and chopped",
+   "½ bunch parsley, finely chopped",
+   "1 egg",
+   "1 lemon, juiced"
+  ],
+  "steps": [
+   "Mix the mince with the rice, paprika and savory, season and work together lightly but thoroughly.",
+   "Shape into 2.5 cm balls and roll in flour.",
+   "In a large pot, bring the water to the boil with the stock cubes, spring onion, pepper, carrots and tomatoes and simmer for 15 minutes.",
+   "Add the meatballs, bring back to the boil, then simmer covered over low heat for about 25 minutes until the rice is tender; add the parsley for the last 5 minutes and adjust the seasoning.",
+   "Just before serving, beat the egg with the lemon juice, stir in 1-2 tbsp hot soup, then stir it into the soup and heat, stirring, without boiling until slightly thickened."
+  ]
+ },
+ "southslavic--kupus-sa-mesom-parolt-kaposzta-serteshussal": {
+  "title": "Kupus sa mesom (braised cabbage with pork)",
+  "time": "1 hr 15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g pork shoulder, diced",
+   "1 small white cabbage (about 1 kg), shredded",
+   "1 onion, finely chopped",
+   "3 tbsp oil",
+   "1 tsp paprika",
+   "2 tomatoes or 2 tbsp tomato purée",
+   "2 bay leaves",
+   "½ tsp ground pepper",
+   "salt"
+  ],
+  "steps": [
+   "Soften the onion in the oil, add the meat and fry for 5 minutes.",
+   "Sprinkle with paprika, add the tomatoes, bay leaves and 200 ml water, season and braise covered for 25 minutes.",
+   "Add the cabbage (gradually as it wilts if it doesn't fit) and braise for another 30 minutes, stirring now and then.",
+   "Season with pepper and salt as needed; most of the liquid should cook away.",
+   "Serve with bread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--sataras-szerb-paprikas-paradicsomos-zoldsegragu-tojassal": {
+  "title": "Sataraš (Serbian pepper and tomato stew with egg)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "6 romano peppers, cut into strips",
+   "2 onions, sliced into half moons",
+   "5 ripe tomatoes, diced (or 1 tin)",
+   "1 courgette, diced (optional)",
+   "4 tbsp sunflower oil",
+   "1 tsp paprika",
+   "4 eggs (optional)",
+   "salt, pepper, pinch of sugar",
+   "bread or rice to serve"
+  ],
+  "steps": [
+   "Soften the onions in the oil until translucent.",
+   "Add the peppers and courgette and cook for 10 minutes.",
+   "Add the tomatoes and paprika, season, add a pinch of sugar and cook uncovered for 10-15 minutes.",
+   "If you like, beat the eggs, pour over the stew and cook, stirring, for 2 minutes.",
+   "Serve with rice or bread; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--sult-csirkecomb-zoldsegekkel-egy-tepsiben-piletina-s-povrcem": {
+  "title": "Tray-baked chicken thighs with vegetables (piletina s povrćem)",
+  "time": "1 hr 10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 chicken thighs",
+   "6 potatoes, cut into wedges",
+   "2 carrots, cut into thick slices",
+   "2 romano peppers, cut into pieces",
+   "1 courgette, cut into pieces",
+   "2 onions, cut into wedges",
+   "4 tbsp sunflower oil",
+   "2 tsp seasoning salt or salt",
+   "1 tsp paprika",
+   "1 tsp dried rosemary or thyme",
+   "pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Mix the oil with the seasoning salt, paprika, rosemary and pepper.",
+   "Toss the vegetables with half the spiced oil and spread in a roasting tin.",
+   "Brush the chicken with the rest and lay it on the vegetables; pour 100 ml water underneath.",
+   "Roast for 55-60 minutes, turning halfway; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--musaka-od-tikvica-rakott-cukkini-daralt-hussal": {
+  "title": "Musaka od tikvica (courgette moussaka with minced meat)",
+  "time": "1 hr 15 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "4 medium courgettes, sliced lengthways",
+   "500 g minced pork or beef",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "1 tsp paprika",
+   "2 tbsp tomato purée",
+   "3 eggs",
+   "250 ml milk or yogurt",
+   "2 tbsp flour",
+   "100 g grated cheese",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Salt the courgette slices, leave for 10 minutes, then pat dry with kitchen paper.",
+   "Soften the onion in the oil, add the meat and fry until crumbly, sprinkle with paprika, add the tomato purée, season and braise for 10 minutes.",
+   "Layer in an oiled baking dish: courgette, meat, courgette, meat, finishing with courgette.",
+   "Whisk the eggs with the milk and flour, pour over and sprinkle with the cheese.",
+   "Bake at 200 °C for 40 minutes; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "southslavic--muckalica-szerb-sertesragu-paprikaval": {
+  "title": "Mućkalica (Serbian pork and pepper stew)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g pork neck or shoulder, cut into strips (leftover roast pork works too)",
+   "3 onions, sliced into half moons",
+   "4 romano peppers, cut into strips",
+   "1 hot pepper",
+   "3 tomatoes, diced (or 1 tin)",
+   "3 tbsp oil",
+   "1 tsp paprika",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Brown the meat all over in the oil over high heat.",
+   "Add the onions and cook for 5 minutes, then the peppers for another 5 minutes.",
+   "Sprinkle with paprika, add the tomatoes and 100 ml water and season.",
+   "Simmer covered over low heat for 25-30 minutes until the meat is tender and the sauce has thickened.",
+   "Serve with bread or mashed potatoes; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--fasirane-snicle-u-paradajz-sosu-fasirtszeletek-paradicsommartasban": {
+  "title": "Faširane šnicle (meat patties in tomato sauce)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g mixed minced meat (pork and beef)",
+   "1 slice bread, soaked",
+   "1 egg",
+   "1 onion, grated",
+   "2 cloves garlic",
+   "1 tsp paprika",
+   "salt, pepper",
+   "flour for coating, oil for frying",
+   "500 ml tomato passata",
+   "1 tsp sugar",
+   "1 tsp dried basil"
+  ],
+  "steps": [
+   "Knead the meat with the squeezed-out bread, egg, onion, crushed garlic, paprika, salt and pepper.",
+   "Shape into flat oval patties, coat in flour and fry in oil for 3-4 minutes per side.",
+   "Bring the passata to the boil in a saucepan with 200 ml water, the sugar and basil and season.",
+   "Put the patties in the sauce and simmer covered over low heat for 20 minutes.",
+   "Serve with mash, rice or pasta; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--makarone-sa-mlevenim-mesom-rakott-makaroni-daralt-hussal": {
+  "title": "Makarone sa mlevenim mesom (macaroni bake with minced meat)",
+  "time": "55 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g macaroni or penne",
+   "500 g minced pork or beef",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "1 tsp paprika",
+   "300 ml tomato passata",
+   "3 eggs",
+   "300 ml milk",
+   "100 g grated cheese",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the pasta al dente in salted water and drain.",
+   "Soften the onion in the oil, add the meat and fry until crumbly, sprinkle with paprika, add the passata, season and cook for 10 minutes.",
+   "Layer in an oiled baking dish: half the pasta, the meat, the rest of the pasta.",
+   "Beat the eggs with the milk, season, pour over and sprinkle with the cheese.",
+   "Bake at 200 °C for 30 minutes; packed in portions it keeps 3-4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "southslavic--piletina-u-sosu-od-pecuraka-csirke-gombamartasban-tesztaval": {
+  "title": "Piletina u sosu od pečuraka (chicken in mushroom sauce with pasta)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g chicken breast or thigh fillet, cut into strips",
+   "400 g button mushrooms, sliced",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "1 tbsp flour",
+   "200 ml single cream",
+   "100 ml milk",
+   "1 tsp seasoning salt",
+   "pepper, parsley",
+   "400 g pasta (e.g. penne) to serve"
+  ],
+  "steps": [
+   "Brown the chicken in the oil, then take it out.",
+   "In the same pan, soften the onion, add the mushrooms and fry until the liquid has cooked away.",
+   "Sprinkle with the flour, stir and pour in the cream and milk; season with seasoning salt and pepper.",
+   "Return the chicken and cook for 8-10 minutes; meanwhile cook the pasta.",
+   "Serve sprinkled with parsley, with the pasta; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--mis-mas-bolgar-paprikas-paradicsomos-tojasos-sajtos-serpenyos": {
+  "title": "Mish-mash (Bulgarian pepper, tomato, egg and cheese scramble)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 romano peppers (ideally roasted and peeled), cut into strips",
+   "1 onion, finely chopped",
+   "4 tomatoes, diced",
+   "4 tbsp sunflower oil",
+   "200 g salty white cheese (feta), crumbled",
+   "6 eggs",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion in the oil, add the peppers and cook for 5 minutes.",
+   "Add the tomatoes and cook for 8-10 minutes until most of the liquid has cooked away.",
+   "Crumble in the cheese and stir for 1-2 minutes.",
+   "Pour in the beaten eggs and cook, stirring, for 2-3 minutes until just set; season with pepper and only a little salt.",
+   "Serve with parsley; it keeps 2 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "southslavic--sogan-dolma-bosnyak-daralthussal-toltott-hagyma": {
+  "title": "Sogan-dolma (Bosnian onions stuffed with minced meat)",
+  "time": "1 hr 20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 medium onions",
+   "400 g minced beef or veal",
+   "80 g rice",
+   "1 tsp paprika",
+   "salt, pepper",
+   "2 tbsp oil",
+   "2 tbsp tomato purée",
+   "200 ml yogurt or sour cream to serve"
+  ],
+  "steps": [
+   "Peel the onions, cut off the tops and cook in boiling salted water for 8 minutes; once cool, scoop out the insides, leaving only 2-3 layers.",
+   "Finely chop the scooped-out onion and knead some of it with the meat, rice, paprika, salt and pepper.",
+   "Stuff the onions and stand them in a saucepan; scatter the rest of the chopped onion between them.",
+   "Mix the tomato purée with 500 ml water and the oil, pour over and simmer covered over low heat for 45-50 minutes.",
+   "Serve with yogurt; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
  "hungarian--rantotta-kolbasszal-es-paradicsommal": {
@@ -3936,6 +5254,80 @@ window.I18N_EN_RECIPES = {
    "Finally roll it out 2 cm thick and cut out scones.",
    "Brush the tops with beaten egg and score a criss-cross pattern if you like.",
    "Bake in a preheated oven at 200 °C for 20 minutes until golden brown."
+  ]
+ },
+ "hungarian--csaszarmorzsa-mazsolaval": {
+  "title": "Kaiserschmarrn (shredded pancake with raisins)",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "3 eggs",
+   "500 ml milk",
+   "1 tbsp sugar",
+   "pinch of salt",
+   "350 g flour",
+   "2 tbsp raisins",
+   "30 g butter",
+   "icing sugar to serve",
+   "apricot jam or apple sauce to serve (optional)"
+  ],
+  "steps": [
+   "Separate the eggs.",
+   "In a bowl, whisk the yolks with the milk, sugar and salt until frothy.",
+   "Add the flour, stirring constantly, until you have a thick smooth batter, and stir in the raisins.",
+   "Whisk the whites to stiff peaks and fold gently into the batter.",
+   "Melt the butter in a large frying pan, pour in the batter and cook over medium heat until the bottom sets.",
+   "Cut into quarters with a wooden spoon, flip them, then after a little while start tearing into small pieces and keep turning until cooked through.",
+   "Serve dusted with icing sugar, with jam if you like."
+  ]
+ },
+ "hungarian--vekony-palacsinta-narancsos-vanilias-gyumolcsraguval": {
+  "title": "Thin pancakes with orange and vanilla fruit compote",
+  "time": "40 min",
+  "servings": "3 servings (about 6 pancakes)",
+  "ingredients": [
+   "70 g flour",
+   "1 egg",
+   "1 tsp sugar",
+   "3 tbsp melted butter + a little for frying",
+   "160 ml milk",
+   "pinch of salt",
+   "300 g mixed fruit or berries, chopped",
+   "2 tsp vanilla extract",
+   "100 g sugar",
+   "1 tbsp lemon juice",
+   "4 tbsp orange juice",
+   "icing sugar and cinnamon to serve"
+  ],
+  "steps": [
+   "In a bowl, mix the flour, egg, sugar, melted butter, milk and salt until smooth; strain and, if you have time, rest for 30 minutes.",
+   "Brush a 30 cm frying pan with butter and cook thin pancakes for about 1 minute per side.",
+   "In a saucepan, bring the orange juice, lemon juice, sugar and vanilla to the boil, add the fruit and cook for 2-3 minutes.",
+   "Put 2 tbsp fruit on each pancake and fold over.",
+   "Serve dusted with icing sugar and cinnamon."
+  ]
+ },
+ "hungarian--joghurtos-tojasos-langos": {
+  "title": "Lángos (Hungarian fried flatbread) with yogurt and egg",
+  "time": "30 min + 1 hr rising",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g plain flour",
+   "1 sachet (7 g) dried yeast",
+   "4 eggs",
+   "4 tbsp plain yogurt or sour cream",
+   "2 tsp salt",
+   "lard or oil for frying",
+   "garlic water, sour cream and grated cheese to serve"
+  ],
+  "steps": [
+   "Mix the flour with the yeast, add the eggs and yogurt and knead into a dough.",
+   "Add the salt and knead until elastic and not sticky, adding a little flour or yogurt if needed.",
+   "Put in an oiled bowl, cover and leave to rise in a warm place for 1 hour (or overnight in the fridge).",
+   "Heat about 5 cm of fat in a pan; it's ready when a small piece of dough drops to the bottom and immediately rises back up sizzling.",
+   "Take a piece of dough smaller than a tennis ball and flatten it by hand (not with a rolling pin), turning it, into a disc about 20 cm across, thin in the middle and thicker at the edge.",
+   "Slide it carefully into the oil, fry for about 30 seconds until it puffs, flip and fry both sides golden.",
+   "Drain and serve with garlic water, sour cream and grated cheese."
   ]
  },
  "hungarian--gulyasleves": {
@@ -5721,6 +7113,318 @@ window.I18N_EN_RECIPES = {
    "Leave to cool for 5 minutes, then cut into slices with a sharp knife and serve warm."
   ]
  },
+ "hungarian--rokagombapaprikas-tejfollel": {
+  "title": "Chanterelle paprikash with sour cream",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "800 g chanterelles (or mixed wild mushrooms or button mushrooms)",
+   "100 g onions",
+   "60 g butter or oil",
+   "125 g sour cream",
+   "10 g (about 1 tbsp) paprika",
+   "3-4 tbsp white wine vinegar",
+   "1 tsp flour",
+   "1 tbsp chopped parsley",
+   "salt, pepper",
+   "nokedli dumplings or boiled potatoes to serve"
+  ],
+  "steps": [
+   "Halve the larger mushrooms so all the pieces are roughly the same size, 2-3 cm.",
+   "Peel the onions and chop them into small cubes.",
+   "Heat the butter in a saucepan and fry the onion until golden.",
+   "Take off the heat, sprinkle in the paprika, stir and immediately deglaze with the vinegar (paprika turns bitter if it gets too hot).",
+   "Add the mushrooms, season, cover and cook for 10-12 minutes until soft; then boil off some of the liquid uncovered over higher heat.",
+   "Mix the flour into the sour cream, stir into the mushrooms, turn the heat down and cook for another 5 minutes; serve sprinkled with parsley, with nokedli."
+  ]
+ },
+ "hungarian--turos-derelye-piritott-vajjal": {
+  "title": "Curd cheese filled pasta triangles with buttered crumbs",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g flour",
+   "3 eggs",
+   "100 ml water",
+   "pinch of salt for the dough",
+   "400 g dry curd cheese or ricotta",
+   "pinch of salt for the filling",
+   "30 g butter and 2 tbsp breadcrumbs to serve (optional)",
+   "sour cream to serve"
+  ],
+  "steps": [
+   "Knead the flour, eggs, water and salt into a dough and work it until very smooth.",
+   "Cover and rest for at least half an hour.",
+   "Mash the curd cheese and season with salt.",
+   "Roll the dough out as thinly as you can (about 3 mm), cut into squares, put a little filling on each and fold diagonally into triangles; press the edges together.",
+   "Cook in boiling salted water for about 5 minutes until they float.",
+   "Drain and serve hot with buttered crumbs and sour cream."
+  ]
+ },
+ "hungarian--szilvas-gomboc-fahejas-morzsaval": {
+  "title": "Plum dumplings with cinnamon crumbs",
+  "time": "1 hr 15 min",
+  "servings": "4 servings (about 16 dumplings)",
+  "ingredients": [
+   "900 g potatoes",
+   "1 egg",
+   "pinch of salt",
+   "3 tbsp oil",
+   "about 250-300 g flour",
+   "16 fresh plums (or 16 tsp plum jam)",
+   "80 g butter",
+   "100 g breadcrumbs",
+   "3 tbsp icing sugar",
+   "1 tsp cinnamon"
+  ],
+  "steps": [
+   "Boil the potatoes in their skins until soft (about 30 minutes), peel and mash while warm.",
+   "Mix in the egg, salt and oil.",
+   "Work in enough flour to make a smooth, non-sticky dough.",
+   "Roll out about 5 mm thick and cut into 7 cm squares; put a stoned plum in the middle of each (you can put a little cinnamon sugar where the stone was) or a teaspoon of jam, and close into a dumpling.",
+   "Cook in boiling salted water for 10-15 minutes, until they float and then 2-3 minutes more.",
+   "Meanwhile, fry the breadcrumbs in the butter until golden; roll the drained dumplings in them and serve dusted with cinnamon sugar."
+  ]
+ },
+ "hungarian--sajtos-galuska-piritott-hagymaval-kasnocken": {
+  "title": "Cheese spaetzle with fried onions (Kasnocken)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 ml water",
+   "2 eggs",
+   "300 g flour",
+   "70 g butter",
+   "250 g grated cheese (half rich, e.g. Emmental, half milder)",
+   "salt, pepper",
+   "1 large onion, cut into rings",
+   "1 bunch chives, finely chopped"
+  ],
+  "steps": [
+   "Mix the flour, eggs, water and salt into a dumpling batter — neither too stiff nor too soft.",
+   "Press it through a spaetzle maker into boiling salted water, cook for about 3 minutes, then drain and rinse with cold water.",
+   "Melt half the butter in a frying pan, add the dumplings and season.",
+   "Gradually sprinkle in the grated cheese and stir vigorously until it melts.",
+   "In another pan, fry the onion rings in the rest of the butter until golden.",
+   "Serve the dumplings topped with the fried onion and chives."
+  ]
+ },
+ "hungarian--zoldborsofozelek-fasirttal": {
+  "title": "Creamy green pea stew with meat patties",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g frozen peas",
+   "30 g butter",
+   "1 tbsp sugar",
+   "2 tbsp flour",
+   "250 ml milk",
+   "1 bunch parsley, finely chopped",
+   "salt",
+   "for the patties: 500 g minced pork, 1 bread roll, 1 egg, 1 small onion, 2 cloves garlic, salt, pepper, breadcrumbs, oil"
+  ],
+  "steps": [
+   "Soak the roll in water and grate the onion.",
+   "Mix the mince with the squeezed-out roll, egg, onion, crushed garlic, salt and pepper; shape into flat patties, coat in breadcrumbs and fry in oil on both sides (about 5-6 minutes per side).",
+   "Meanwhile, cook the peas in the butter with the sugar for 2-3 minutes, add 500 ml water, season with salt and simmer for 10 minutes.",
+   "Whisk the flour into the milk until smooth, pour into the peas while stirring and boil for 3-4 minutes until thickened; stir in the parsley.",
+   "It keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--lencsefozelek-virslivel": {
+  "title": "Lentil stew with frankfurters",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g brown lentils (or 2 tins cooked lentils)",
+   "2 bay leaves",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "2 tbsp flour",
+   "1 tsp mustard",
+   "1-2 tbsp vinegar",
+   "1 tsp sugar",
+   "200 ml sour cream (optional)",
+   "salt",
+   "6 pairs of frankfurters"
+  ],
+  "steps": [
+   "Wash the lentils and cook in plenty of water with the bay leaves for 25-30 minutes until soft (skip this with tinned lentils).",
+   "Soften the onion in the oil, sprinkle over the flour and make a light roux.",
+   "Mix the roux with a little cold water, add to the lentils and season with mustard, vinegar, sugar and salt; boil for 5 minutes.",
+   "Heat the frankfurters in the stew or separately in water for 3-4 minutes; loosen with sour cream if you like.",
+   "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--sargaborsofozelek-piritott-hagymaval": {
+  "title": "Yellow split pea purée with fried onions",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g split yellow peas",
+   "1 bay leaf",
+   "2 cloves garlic",
+   "2 onions, sliced into half moons",
+   "3 tbsp oil",
+   "1 tsp paprika",
+   "salt, pepper",
+   "smoked sausage or fried frankfurters to serve (optional)"
+  ],
+  "steps": [
+   "Rinse the peas and cook them in 1.2 litres of water with the bay leaf and garlic for about 40 minutes until they fall apart (skim off the foam).",
+   "Remove the bay leaf, season and purée with a stick blender or masher; thin with water if thick.",
+   "Meanwhile, fry the onion slowly in the oil for about 15 minutes until golden, sprinkling with paprika at the end.",
+   "Pile the fried onion on top of the purée; serve with sausage or frankfurters.",
+   "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--brassoi-apropecsenye": {
+  "title": "Brassó-style pork with fried potatoes",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g pork leg or neck, cut into strips",
+   "1 kg potatoes, cut into small cubes",
+   "1 onion, finely chopped",
+   "5 cloves garlic, crushed",
+   "oil for frying",
+   "1 tsp paprika",
+   "½ tsp ground caraway",
+   "1 tsp marjoram",
+   "salt, pepper",
+   "gherkins to serve"
+  ],
+  "steps": [
+   "Fry the potato cubes in plenty of oil until golden (or roast with a little oil at 220 °C for 30 minutes) and drain.",
+   "In a large frying pan, soften the onion in a little oil, add the meat and fry over high heat until it turns white.",
+   "Sprinkle with paprika, caraway and marjoram, season, add 100 ml water and braise covered for 20-25 minutes until the meat is tender and the liquid has cooked away.",
+   "Finally add the garlic and the fried potatoes and toss together.",
+   "Serve with gherkins; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--rizses-hus": {
+  "title": "Hungarian pork and rice (rizses hús)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g pork shoulder or boneless chicken thigh, diced",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "1 tsp paprika",
+   "1 tomato or 1 tbsp tomato purée",
+   "1 green pepper, chopped",
+   "300 g rice",
+   "salt, pepper",
+   "gherkins or beetroot salad to serve"
+  ],
+  "steps": [
+   "Soften the onion in the oil, take off the heat, sprinkle with paprika and add the meat.",
+   "Season, add the pepper and tomato, pour in a little water and braise covered for about 30 minutes (20 minutes for chicken).",
+   "Add the washed rice, stir for 1-2 minutes, then pour in 600 ml boiling water and season with salt.",
+   "Cook covered over low heat for 18-20 minutes without stirring until the rice is tender.",
+   "Serve with pickles; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--paradicsomos-husgomboc-krumplipurevel": {
+  "title": "Meatballs in tomato sauce with mashed potatoes",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g minced pork",
+   "1 bread roll, soaked",
+   "1 egg",
+   "1 small onion, grated",
+   "salt, pepper",
+   "700 ml tomato juice or passata",
+   "2 tbsp oil",
+   "2 tbsp flour",
+   "2-3 tbsp sugar",
+   "1 sprig celery leaves or basil",
+   "1 kg potatoes plus 200 ml milk and 30 g butter for the mash"
+  ],
+  "steps": [
+   "Mix the meat with the squeezed-out roll, egg, onion, salt and pepper and shape into walnut-sized balls.",
+   "Cook the flour in the oil until pale, pour in the tomato juice and 300 ml water, add the sugar and herbs, season and bring to the boil.",
+   "Drop the meatballs into the boiling sauce and simmer covered over low heat for 25 minutes.",
+   "Meanwhile, boil the potatoes in salted water, drain and mash with the warm milk and butter.",
+   "It keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--bakonyi-csirkemell-gombas-tejfolos-csirke": {
+  "title": "Bakony-style chicken with mushrooms and sour cream",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g chicken breast or thigh fillet, cut into strips",
+   "400 g button mushrooms, sliced",
+   "1 onion, finely chopped",
+   "1 green pepper and 1 tomato, chopped",
+   "3 tbsp oil",
+   "1 tsp paprika",
+   "250 ml sour cream",
+   "1 tbsp flour",
+   "salt, pepper",
+   "dumplings, rice or pasta to serve"
+  ],
+  "steps": [
+   "Soften the onion in the oil, take off the heat and stir in the paprika.",
+   "Add the chicken and fry until white, then the mushrooms, pepper and tomato; season.",
+   "Pour in a little water and braise covered for 15-20 minutes.",
+   "Whisk the sour cream with the flour, add and boil for 3-4 minutes.",
+   "Serve with dumplings, rice or pasta; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--palocleves": {
+  "title": "Palóc soup (pork, green bean and potato soup with dill)",
+  "time": "1 hr 15 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g pork shoulder (or lamb), diced",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "1 tsp paprika",
+   "½ tsp ground caraway",
+   "1 bay leaf",
+   "3 medium potatoes, diced",
+   "300 g green beans (fresh or frozen)",
+   "200 ml sour cream",
+   "1 tbsp flour",
+   "1 bunch dill",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion in the oil, take off the heat, sprinkle with paprika and add the meat, caraway and bay leaf.",
+   "Season, add a little water and braise covered for 30 minutes.",
+   "Pour in 1.5 litres of water, add the potatoes and green beans and cook for another 20 minutes.",
+   "Whisk the sour cream with the flour and a ladleful of soup, add to the pot, boil for 3 minutes and stir in the dill.",
+   "It keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--babgulyas": {
+  "title": "Bean goulash soup",
+  "time": "1 hr 30 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g beef shin or pork shoulder, diced",
+   "2 tins (400 g each) borlotti beans, rinsed (or 300 g dried, soaked the day before)",
+   "1 large onion, finely chopped",
+   "2 tbsp oil",
+   "1 tbsp paprika",
+   "½ tsp ground caraway",
+   "2 cloves garlic",
+   "2 carrots and 1 parsnip, sliced",
+   "2 potatoes, diced",
+   "1 green pepper and 1 tomato",
+   "salt, pepper, hot paprika to taste"
+  ],
+  "steps": [
+   "Soften the onion in the oil, take off the heat, sprinkle with paprika and add the meat, caraway and crushed garlic.",
+   "Season and braise covered with a little water for 40 minutes (longer for beef, until half tender).",
+   "Pour in 1.5 litres of water, add the carrots, parsnip, pepper and tomato and cook for 15 minutes.",
+   "Add the potatoes and beans and cook for another 15-20 minutes until everything is tender; season with hot paprika.",
+   "It keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
  "hungarian--lecso-kolbasszal": {
   "title": "Lecsó with sausage",
   "time": "40 min",
@@ -7165,6 +8869,281 @@ window.I18N_EN_RECIPES = {
    "Serve warm, cut into slices."
   ]
  },
+ "hungarian--zsemlegomboc-petrezselyemmel": {
+  "title": "Bread dumplings with parsley",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "5 tbsp oil",
+   "2 onions, finely chopped",
+   "10 stale bread rolls, cut into small cubes",
+   "4 eggs",
+   "about 700 ml milk",
+   "1 bunch parsley, finely chopped",
+   "about 7 tbsp flour",
+   "1 tsp salt",
+   "pinch of white pepper"
+  ],
+  "steps": [
+   "Heat the oil in a frying pan and soften the onion until translucent, then take off the heat.",
+   "Mix the bread cubes with the onion.",
+   "Beat the eggs with the milk, pour over the bread and mix into a dough; leave to soak for 10 minutes.",
+   "Mix in the parsley and flour and season.",
+   "With wet hands, shape into dumplings the size of tennis balls.",
+   "Put them into boiling salted water, turn the heat down after 2 minutes and simmer for another 12-15 minutes; serve with stew or mushroom sauce."
+  ]
+ },
+ "hungarian--kapros-tokfozelek": {
+  "title": "Marrow stew with dill",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg shredded marrow (or courgette)",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "1 tsp paprika",
+   "1 tbsp vinegar",
+   "200 ml sour cream",
+   "2 tbsp flour",
+   "1 bunch dill, finely chopped",
+   "salt"
+  ],
+  "steps": [
+   "Salt the shredded marrow, leave for 10 minutes, then squeeze out the liquid.",
+   "Soften the onion in the oil, take off the heat and stir in the paprika.",
+   "Add the marrow, 200 ml water and the vinegar and cook covered for 8-10 minutes until tender.",
+   "Whisk the sour cream with the flour and a little water until smooth, add to the marrow and boil for 3-4 minutes; finally stir in the dill.",
+   "Serve with meat patties, boiled eggs or frankfurters; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--spenotfozelek-fott-tojassal": {
+  "title": "Creamy spinach stew with boiled eggs",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg frozen spinach (or 450 g condensed)",
+   "30 g butter",
+   "2 tbsp flour",
+   "300 ml milk",
+   "3 cloves garlic, crushed",
+   "salt, pepper, pinch of nutmeg",
+   "4-8 eggs to serve"
+  ],
+  "steps": [
+   "Thaw the spinach in a covered saucepan and cook for 5 minutes.",
+   "In a small saucepan, cook the flour in the butter for 1 minute, whisk in the milk and cook into a thick sauce.",
+   "Stir the sauce into the spinach, add the garlic, season with salt, pepper and nutmeg and boil for 2-3 minutes.",
+   "Meanwhile, hard-boil the eggs for 9-10 minutes and peel them.",
+   "It keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--kelkaposztafozelek": {
+  "title": "Savoy cabbage stew",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 Savoy cabbage (about 1 kg)",
+   "2 medium potatoes, diced",
+   "2 tbsp oil",
+   "2 tbsp flour",
+   "1 onion, grated",
+   "2 cloves garlic, crushed",
+   "1 tsp paprika",
+   "½ tsp ground caraway",
+   "250 ml sour cream",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Quarter the cabbage, cut out the core, slice the leaves into strips and wash.",
+   "Cook the cabbage and potatoes in 1 litre of salted water for 15-20 minutes until tender.",
+   "Cook the flour in the oil until pale, add the onion and garlic, take off the heat and stir in the paprika and caraway.",
+   "Mix the roux with a little cold water, add to the stew and boil for 5 minutes, then stir in the sour cream; season.",
+   "Serve with meat patties or fried sausage; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--tarhonyas-hus": {
+  "title": "Pork stew with toasted egg barley (tarhonyás hús)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g pork shoulder or boneless chicken thigh, diced",
+   "300 g egg barley pasta (tarhonya)",
+   "1 onion, finely chopped",
+   "3 tbsp oil",
+   "1 tsp paprika",
+   "1 green pepper, chopped",
+   "1 tomato, chopped",
+   "salt, pepper",
+   "gherkins to serve"
+  ],
+  "steps": [
+   "Soften the onion in half the oil, sprinkle with paprika, add the meat, pepper and tomato, season and braise covered with a little water for 25-30 minutes.",
+   "Meanwhile, in another saucepan, toast the tarhonya in the rest of the oil, stirring, until golden (5-6 minutes).",
+   "Add the toasted tarhonya to the stew, pour in enough boiling water to cover it by two fingers and season with salt.",
+   "Cook covered over low heat for about 20 minutes until the pasta is tender and has absorbed the liquid, stirring gently once.",
+   "Serve with pickles; it keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--kaposztas-teszta": {
+  "title": "Cabbage and noodles (káposztás tészta)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 small white cabbage (about 800 g), grated",
+   "1 onion, finely chopped",
+   "4 tbsp oil",
+   "1 tbsp sugar",
+   "salt, pepper",
+   "400 g square egg noodles"
+  ],
+  "steps": [
+   "Salt the grated cabbage, leave for 10 minutes, then squeeze it out.",
+   "In a large frying pan, caramelise the sugar lightly in the oil, add the onion and cook for 2-3 minutes.",
+   "Add the cabbage and fry over medium heat, stirring often, for about 20-25 minutes until browned and soft; season with pepper.",
+   "Meanwhile, cook the pasta in salted water and drain.",
+   "Toss the pasta with the cabbage (with icing sugar if you like); it keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--krumplis-teszta-grenadirmars": {
+  "title": "Potato pasta with paprika (grenadírmars)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg potatoes, diced",
+   "1 large onion, finely chopped",
+   "3 tbsp oil or lard",
+   "2 tsp paprika",
+   "salt, pepper",
+   "400 g pasta (squares or elbows)",
+   "pickles to serve"
+  ],
+  "steps": [
+   "Boil the potatoes in salted water for 12-15 minutes until tender and drain.",
+   "Meanwhile, cook the pasta too and drain.",
+   "In a large pan, fry the onion in the fat until golden, take off the heat and stir in the paprika.",
+   "Add the potatoes, crush them lightly with a fork, season, then toss with the pasta.",
+   "Serve with pickles; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--gombapaprikas-nokedlivel": {
+  "title": "Mushroom paprikash with nokedli dumplings",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "800 g button mushrooms, sliced",
+   "1 onion, finely chopped",
+   "3 tbsp oil",
+   "1 tbsp paprika",
+   "1 green pepper, chopped",
+   "1 tbsp flour",
+   "250 ml sour cream",
+   "salt, pepper",
+   "for the nokedli: 400 g flour, 2 eggs, 250 ml water, salt"
+  ],
+  "steps": [
+   "Soften the onion in the oil, take off the heat and stir in the paprika.",
+   "Add the mushrooms and green pepper, season and cook for 15 minutes.",
+   "Whisk the sour cream with the flour until smooth, add to the mushrooms and boil for 3-4 minutes.",
+   "For the nokedli, mix the flour with the eggs, water and salt into a thick batter and press it through a nokedli maker into boiling salted water; drain when they float.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--rakott-karfiol-daralt-hussal": {
+  "title": "Layered cauliflower bake with minced pork",
+  "time": "1 hr 15 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 large cauliflower (about 1 kg), broken into florets",
+   "500 g minced pork",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "1 tsp paprika",
+   "150 g rice",
+   "300 ml sour cream",
+   "2 eggs",
+   "100 g grated cheese",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Parboil the cauliflower in salted water for 6-8 minutes and cook the rice separately for about 12 minutes until half done; drain both.",
+   "Soften the onion in the oil, add the mince and fry until crumbly; sprinkle with paprika, season and braise with a little water for 10 minutes.",
+   "Mix the meat with the rice; whisk the sour cream with the eggs and season.",
+   "Layer in a buttered dish: half the cauliflower, the meat and rice, the rest of the cauliflower; pour over the egg and sour cream and sprinkle with cheese.",
+   "Bake at 180 °C for 30-35 minutes; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "hungarian--frankfurti-leves": {
+  "title": "Frankfurter soup with cabbage and potato",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 small white cabbage (about 600 g), shredded",
+   "3 medium potatoes, diced",
+   "6 pairs frankfurters, sliced",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "2 tbsp flour",
+   "1 tsp paprika",
+   "½ tsp ground caraway",
+   "200 ml sour cream",
+   "1-2 tbsp vinegar",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the cabbage and potatoes in 1.5 litres of salted water with the caraway for 15-20 minutes.",
+   "Cook the flour in the oil until pale, add the onion, take off the heat and stir in the paprika.",
+   "Mix the roux with a little cold water, add to the soup and boil for 5 minutes.",
+   "Add the frankfurters, cook for 3-4 minutes, season with vinegar until slightly tangy and stir in the sour cream.",
+   "It keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--hagymas-csirkemaj-burgonyapurevel": {
+  "title": "Chicken livers with onions and mashed potatoes",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g chicken livers, trimmed",
+   "2 large onions, sliced into half moons",
+   "3 tbsp oil",
+   "1 tsp marjoram",
+   "½ tsp ground pepper",
+   "salt (only at the end!)",
+   "1 kg potatoes",
+   "200 ml milk",
+   "30 g butter",
+   "pickles to serve"
+  ],
+  "steps": [
+   "Boil the potatoes in salted water and mash with the warm milk and butter.",
+   "Meanwhile, cook the onions in the oil for 8-10 minutes until soft and golden.",
+   "Add the livers and fry over medium-high heat, stirring, for 6-8 minutes until no longer pink inside.",
+   "Sprinkle with marjoram and pepper and add salt only at the end (otherwise the liver toughens).",
+   "Serve with mash and pickles; it keeps 2 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "hungarian--tepsis-csirkecomb-krumplival": {
+  "title": "Tray-baked chicken legs with potatoes",
+  "time": "1 hr 15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 chicken thighs or 4 whole legs",
+   "1.2 kg potatoes, cut into wedges",
+   "2 onions, cut into wedges",
+   "4 tbsp oil",
+   "2 tsp paprika",
+   "1 tsp garlic powder",
+   "1 tsp marjoram",
+   "salt, pepper",
+   "mixed salad or pickles to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Mix the oil with the paprika, garlic powder, marjoram, salt and pepper.",
+   "Toss the potatoes and onions with half the spiced oil and spread in a roasting tin.",
+   "Rub the chicken with the rest of the spiced oil and lay it on the potatoes.",
+   "Roast for 50-60 minutes until the chicken skin is crisp and the potatoes are tender; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "french--tartine-vajjal-es-gyumolcslekvarral": {
   "title": "Tartine with butter and jam",
   "time": "5 min",
@@ -8035,6 +10014,52 @@ window.I18N_EN_RECIPES = {
    "Serve sprinkled with torn mint leaves."
   ]
  },
+ "french--burgonyas-sajtos-omlett": {
+  "title": "Potato and cheese omelette",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "5 eggs",
+   "1 tsp sugar",
+   "¼ tsp salt",
+   "¼ tsp pepper",
+   "120 ml milk",
+   "2 tbsp butter",
+   "1 potato, cut into 1 cm cubes",
+   "1 small onion, finely chopped",
+   "50 g grated cheese"
+  ],
+  "steps": [
+   "In a bowl, beat the eggs with the sugar, salt and pepper, then mix in the milk.",
+   "Heat two frying pans over medium heat and grease them with butter.",
+   "In one, fry the potato until light brown, then add the onion and cook until soft.",
+   "Pour half the egg mixture into the other pan and cook for about 1 minute until it starts to set.",
+   "Put half the potato and half the cheese on one side of the part-set omelette, fold the other side over and cook for another 30 seconds; make the second omelette the same way."
+  ]
+ },
+ "french--piritott-bagett-brie-vel-almaval-es-pekandiovajjal": {
+  "title": "Toasted baguette with brie, apple and pecan butter",
+  "time": "25 min",
+  "servings": "6 servings (24 pieces)",
+  "ingredients": [
+   "24 slices baguette (0.5 cm thick)",
+   "9 tbsp melted butter",
+   "140 g chopped pecans (or walnuts)",
+   "1 tbsp groundnut or sunflower oil",
+   "salt",
+   "140 g cream cheese, at room temperature",
+   "1 apple, cut into 24 thin slices",
+   "280 g chilled brie, cut into 24 slices",
+   "30 g pecan halves (24 pieces)"
+  ],
+  "steps": [
+   "Put the baguette slices on a baking tray, brush with melted butter and bake in a 200 °C oven for about 8 minutes until golden; leave to cool.",
+   "Blend the chopped pecans with the oil to a smooth paste and season with salt.",
+   "Spread the toasts with cream cheese and top each with an apple slice and a slice of brie.",
+   "Spread a little nut butter on top and crown with a pecan half.",
+   "Put back on the tray and bake for about 1 minute until the cheese melts slightly; serve at once."
+  ]
+ },
  "french--ratatouille-zoldsegragu": {
   "title": "Ratatouille (vegetable stew)",
   "time": "60 min",
@@ -8414,6 +10439,277 @@ window.I18N_EN_RECIPES = {
    "Add the vegetables and seasonings.",
    "Simmer gently for 3-4 hours.",
    "Serve the meat and vegetables on a separate platter with mustard and horseradish, with the broth served first on its own as a consommé."
+  ]
+ },
+ "french--burgundi-csiga-fokhagymas-petrezselymes-vajjal": {
+  "title": "Burgundy snails in garlic and parsley butter",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "24 tinned snails (and 24 empty shells, if you have them)",
+   "220 g butter, at room temperature",
+   "1 tbsp finely chopped shallot",
+   "1 tsp crushed garlic",
+   "1.5 tbsp chopped fresh parsley",
+   "salt, pepper",
+   "baguette to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Drain and rinse the snails.",
+   "Mix the butter with the shallot, garlic, parsley, salt and pepper.",
+   "Put a snail in each shell and fill the rest of the space with garlic butter (instead of shells you can use a snail dish or small ovenproof dishes).",
+   "Bake for 5-7 minutes until the butter is foaming, and serve with plenty of baguette to mop up the butter."
+  ]
+ },
+ "french--dijoni-mustaros-toltott-csirkemell": {
+  "title": "Dijon mustard stuffed chicken breasts",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 chicken breast fillets",
+   "3 tbsp Dijon mustard",
+   "1 tsp chicken grill seasoning",
+   "3 slices bread, diced",
+   "1 small onion, finely chopped",
+   "1 celery stick, finely chopped",
+   "2 tbsp butter",
+   "1 tsp dried sage or thyme",
+   "100 ml chicken stock",
+   "salt, pepper"
+  ],
+  "steps": [
+   "For the stuffing, soften the onion and celery in the butter, add the bread, sage and stock, season and mix to a soft paste.",
+   "With a thin, sharp knife, cut a pocket into the side of each chicken breast, almost all the way through.",
+   "Fill the pockets halfway with stuffing, brush the opening with mustard and press shut.",
+   "Brush the outside of the chicken with mustard too and rub in the grill seasoning.",
+   "Cook on a hot grill or griddle pan, turning often, for about 20 minutes until both chicken and stuffing are cooked through; rest for 5-7 minutes and serve."
+  ]
+ },
+ "french--ropogos-sult-hagymas-bundaban-sult-csirkemell": {
+  "title": "Crispy fried-onion crusted chicken breasts",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "150 g crispy fried onions (ready-made)",
+   "1 egg, beaten",
+   "4 chicken breast fillets (500-600 g in total)",
+   "½ tsp paprika (optional)",
+   "a little oil for the tray"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Crush the fried onions (e.g. in a bag with a rolling pin) and mix in the paprika.",
+   "Put the beaten egg in a medium shallow dish.",
+   "Halve the chicken breasts, dip in the egg, then coat thoroughly in the onion crumbs.",
+   "Put on an oiled, lined baking tray.",
+   "Bake for 20-25 minutes until the chicken is cooked and the crust is crisp."
+  ]
+ },
+ "french--poulet-au-cidre-almaboros-gombas-csirke": {
+  "title": "Poulet au cidre (chicken with cider and mushrooms)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 chicken thighs",
+   "2 tbsp butter",
+   "1 tbsp oil",
+   "2 shallots or 1 onion, finely chopped",
+   "250 g button mushrooms, quartered",
+   "300 ml dry cider",
+   "150 ml single cream",
+   "1 tsp mustard",
+   "salt, pepper",
+   "rice or potatoes to serve"
+  ],
+  "steps": [
+   "Season the chicken and brown it all over in half the butter and the oil; take out.",
+   "In the same pan, soften the onion, add the mushrooms with the rest of the butter and fry for 5 minutes.",
+   "Pour in the cider, return the chicken and braise covered for 25 minutes.",
+   "Stir in the cream and mustard and boil uncovered for 5 minutes until the sauce thickens slightly.",
+   "Serve with rice or potatoes; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--tian-provencal-sult-zoldsegtorony-kakukkfuvel": {
+  "title": "Tian provençal (baked layered vegetables with thyme)",
+  "time": "1 hr 15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 courgettes",
+   "2 small aubergines",
+   "5 tomatoes",
+   "2 onions",
+   "3 cloves garlic",
+   "5 tbsp olive oil",
+   "1 tsp herbes de Provence or thyme",
+   "salt, pepper",
+   "100 g grated cheese (optional)"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Slice the onions, soften them with the garlic in 2 tbsp oil and spread over the bottom of an ovenproof dish.",
+   "Slice the vegetables into 5 mm rounds and arrange them alternately, tightly and on their edges, over the onions.",
+   "Drizzle with the rest of the oil, sprinkle with the herbs, season and bake covered with foil for 40 minutes.",
+   "Remove the foil, sprinkle with cheese and bake for another 20 minutes; packed in portions it keeps 3-4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "french--boeuf-aux-carottes-repas-parolt-marhahus": {
+  "title": "Bœuf aux carottes (braised beef with carrots)",
+  "time": "1 hr 30 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "1 kg beef shoulder or shin, diced",
+   "1 kg carrots, cut into thick slices",
+   "2 onions, finely chopped",
+   "100 g smoked bacon, diced (optional)",
+   "2 tbsp oil",
+   "1 tbsp flour",
+   "200 ml white wine or water",
+   "500 ml stock",
+   "1 bouquet garni (bay leaf, thyme, parsley stalks)",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Brown the meat in batches in the oil; take out.",
+   "In the same pan, fry the bacon and onion for 5 minutes, sprinkle with the flour and pour in the wine.",
+   "Return the meat, add the stock and bouquet garni, season and braise covered over low heat for 45 minutes (20 minutes in a pressure cooker).",
+   "Add the carrots and cook for another 30 minutes until the meat is tender and the carrots soft.",
+   "Serve with potatoes or pasta; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--parmentier-de-poisson-halas-burgonyapures-rakott": {
+  "title": "Parmentier de poisson (fish and mashed potato bake)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg potatoes",
+   "600 g white fish fillet (cod, hake)",
+   "200 ml milk + 100 ml for the mash",
+   "30 g butter",
+   "1 leek, sliced",
+   "100 ml single cream",
+   "80 g grated cheese",
+   "1 bunch parsley",
+   "salt, pepper, nutmeg"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C; boil the potatoes in salted water and mash with 100 ml milk, half the butter and nutmeg.",
+   "Poach the fish in the 200 ml milk for 5-6 minutes, then flake it with a fork.",
+   "Soften the leek in the rest of the butter, add the fish, cream and parsley and season.",
+   "Put the fish mixture in an ovenproof dish, spread the mash on top and sprinkle with cheese.",
+   "Bake for 20 minutes until golden; packed in portions it keeps 2-3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "french--poelee-campagnarde-serpenyos-burgonya-szalonnaval-es-zoldbabbal": {
+  "title": "Poêlée campagnarde (pan-fried potatoes with bacon and green beans)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg potatoes, diced",
+   "200 g smoked bacon (lardons), diced",
+   "400 g green beans, cut into 3 cm pieces",
+   "1 onion, sliced",
+   "2 cloves garlic",
+   "2 tbsp oil",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Parboil the potatoes and beans in salted water for 8 minutes and drain.",
+   "Render the bacon in a large frying pan, add the onion and fry for 3 minutes.",
+   "Add the oil and potatoes and fry over medium heat, turning now and then, for 15 minutes until golden.",
+   "Add the beans and garlic, fry for 5 minutes, season and sprinkle with parsley.",
+   "It keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--gratin-de-poireaux-au-jambon-sonkaba-tekert-porehagyma-besamellel": {
+  "title": "Gratin de poireaux au jambon (ham-wrapped leeks in béchamel)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "6 leeks, cut into 15 cm pieces",
+   "12 thin slices cooked ham",
+   "for the béchamel: 40 g butter, 40 g flour, 600 ml milk, pinch of nutmeg, salt",
+   "100 g grated Emmental",
+   "pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C; cook the leeks in salted water for 10 minutes and drain well.",
+   "For the béchamel, cook the flour in the butter for 1 minute, whisk in the milk, cook until thick and season with salt and nutmeg.",
+   "Wrap each leek piece in ham and lay side by side in an ovenproof dish.",
+   "Pour over the béchamel and sprinkle with cheese and pepper.",
+   "Bake for 20-25 minutes until golden; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "french--gratin-de-pates-au-thon-tonhalas-paradicsomos-rakott-teszta": {
+  "title": "Gratin de pâtes au thon (tuna and tomato pasta bake)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "350 g short pasta (penne or fusilli)",
+   "2 tins (160 g each drained) tuna",
+   "400 ml tomato sauce",
+   "100 ml single cream",
+   "1 onion, finely chopped",
+   "1 tbsp oil",
+   "120 g grated cheese",
+   "1 tsp herbes de Provence",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and cook the pasta al dente.",
+   "Soften the onion in the oil, add the tomato sauce, cream and herbs and cook for 5 minutes.",
+   "Stir in the tuna and pasta, season and spread in an ovenproof dish.",
+   "Sprinkle with cheese and bake for 15-20 minutes.",
+   "Packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "french--emince-de-porc-a-la-moutarde-mustaros-tejszines-sertescsikok": {
+  "title": "Émincé de porc à la moutarde (pork strips in creamy mustard sauce)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g pork loin or tenderloin, cut into thin strips",
+   "1 onion, finely chopped",
+   "2 tbsp oil",
+   "2 tbsp Dijon mustard",
+   "1 tbsp wholegrain mustard",
+   "250 ml single cream",
+   "100 ml white wine or stock",
+   "salt, pepper",
+   "pasta or rice to serve"
+  ],
+  "steps": [
+   "Quickly brown the meat in batches in the oil over high heat; season and take out.",
+   "In the same pan, soften the onion and pour in the wine.",
+   "Stir in the mustards and cream and boil for 3-4 minutes.",
+   "Return the meat and cook together for 2-3 minutes.",
+   "Serve with pasta or rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--poulet-a-la-provencale-paradicsomos-olivas-provence-i-csirke": {
+  "title": "Poulet à la provençale (Provençal chicken with tomato and olives)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 chicken thighs",
+   "3 tbsp olive oil",
+   "1 onion, sliced",
+   "1 sweet pepper, sliced",
+   "3 cloves garlic",
+   "1 tin (400 g) chopped tomatoes",
+   "100 ml white wine (optional)",
+   "100 g black olives",
+   "1 tsp herbes de Provence",
+   "salt, pepper",
+   "rice or pasta to serve"
+  ],
+  "steps": [
+   "Season the chicken and brown it all over in the oil; take out.",
+   "In the same pan, cook the onion, pepper and garlic for 5 minutes and pour in the wine.",
+   "Add the tomatoes and herbs, return the chicken and simmer covered for 25 minutes.",
+   "Add the olives and cook uncovered for 5 more minutes.",
+   "Serve with rice or pasta; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
  "french--salade-lyonnaise-feldelos-salata-bacon-nal-es-buggyantott-tojassal": {
@@ -10543,6 +12839,360 @@ window.I18N_EN_RECIPES = {
    "Serve the meat sliced with the lentils and fresh parsley."
   ]
  },
+ "french--le-tourin-francia-fokhagymaleves-tojassal": {
+  "title": "Le tourin (French garlic soup with egg)",
+  "time": "30 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "10-12 cloves garlic, finely chopped",
+   "1 tbsp olive oil",
+   "1 tbsp flour",
+   "1 litre water",
+   "1 egg, separated",
+   "1 tsp vinegar",
+   "salt, pepper",
+   "4 thin slices (ideally slightly stale) bread"
+  ],
+  "steps": [
+   "Fry the garlic in the olive oil in a saucepan until golden.",
+   "Sprinkle over the flour, mix and cook for a few minutes to lose the raw flour taste.",
+   "Gradually stir in the water and cook for 10 minutes.",
+   "Beat the egg white in a small bowl, gradually whisk in a ladleful of the soup, then pour it back into the pot.",
+   "Mix the yolk with the pepper and vinegar and temper it the same way with a ladleful of soup; take the soup off the heat, stir it in and season with salt.",
+   "Put the bread slices in the bowls, pour over the hot soup and serve at once."
+  ]
+ },
+ "french--sonkas-sajtos-sult-palacsinta-tejfollel": {
+  "title": "Baked ham and cheese crêpes with sour cream",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "12 ready-made (or pre-cooked) thin crêpes",
+   "150 g grated cheddar",
+   "12 thin slices cooked ham",
+   "2 tbsp chopped spring onion",
+   "½ tsp salt",
+   "pinch of pepper",
+   "120 ml sour cream",
+   "½ tsp mustard",
+   "4 tbsp breadcrumbs",
+   "3 tbsp melted butter"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C.",
+   "In a small bowl, mix the cheese, spring onion, salt, pepper, sour cream and mustard.",
+   "Lay a slice of ham on each crêpe and spread about 1 tbsp of the cheese mixture on it.",
+   "Roll them up and lay side by side in a dish of about 23×33 cm; mix the breadcrumbs with the melted butter and scatter over the top.",
+   "Cover loosely with foil and bake for 15-20 minutes."
+  ]
+ },
+ "french--tarbes-i-salata-narancccsal-dioval-es-keksajttal": {
+  "title": "Tarbes salad with orange, walnuts and blue cheese",
+  "time": "20 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "1 onion, cut into half moons",
+   "1 tbsp olive oil",
+   "½ head lettuce",
+   "5 walnuts, cracked",
+   "1 ripe orange, cut into small pieces",
+   "50 g Roquefort or other blue cheese, diced",
+   "5 tbsp extra virgin olive oil",
+   "2 tbsp balsamic vinegar",
+   "1 tsp wholegrain mustard",
+   "a little lemon juice",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Fry the onion in a little olive oil until crisp, put it in a bowl and squeeze over a little lemon juice.",
+   "Meanwhile, wash the lettuce well, tear into bite-sized pieces and spin dry (wet lettuce dilutes the dressing).",
+   "Put the lettuce in a large bowl and add the onion, walnuts, orange and cheese.",
+   "For the dressing, shake the olive oil, balsamic vinegar and mustard in a jar and season.",
+   "Toss everything together and serve at once."
+  ]
+ },
+ "french--tapenad-provence-i-olivakrem-piritossal-es-tojassal": {
+  "title": "Tapenade (Provençal olive spread) with toast and eggs",
+  "time": "10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "6 anchovy fillets",
+   "1 tbsp capers, rinsed",
+   "200 g pitted black olives",
+   "3-4 tbsp extra virgin olive oil",
+   "toasted baguette to serve",
+   "4 hard-boiled eggs to serve"
+  ],
+  "steps": [
+   "Blend the anchovies, capers and olives in a food processor or blender.",
+   "Mix in enough olive oil to make a smooth paste.",
+   "Serve spread on toasted baguette, with halved hard-boiled eggs, or with goat's cheese and roasted peppers."
+  ]
+ },
+ "french--coquillettes-gratinees-sonkas-sajtos-sult-kagyloteszta": {
+  "title": "Coquillettes gratinées (baked pasta shells with ham and cheese)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g small pasta shells (coquillettes)",
+   "200 g cooked ham, diced",
+   "150 g grated Emmental",
+   "200 ml single cream",
+   "100 ml milk",
+   "pinch of nutmeg",
+   "salt, pepper",
+   "1 tbsp butter"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and cook the pasta for 2 minutes less than the packet says.",
+   "Mix the cream, milk and nutmeg and season.",
+   "Toss the drained pasta with the ham, half the cheese and the cream mixture and spread in a buttered dish.",
+   "Sprinkle with the rest of the cheese and bake for 15-20 minutes until golden.",
+   "Packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "french--rougail-saucisse-reunioni-paradicsomos-kolbaszragu-rizzsel": {
+  "title": "Rougail saucisse (Réunion sausage and tomato stew with rice)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 smoked or fresh sausages (e.g. Toulouse), sliced",
+   "2 onions, finely chopped",
+   "4 cloves garlic",
+   "1 piece of ginger, grated",
+   "1 tin (400 g) chopped tomatoes",
+   "1 tsp turmeric",
+   "1 hot pepper (optional)",
+   "2 tbsp oil",
+   "5 sprigs thyme",
+   "salt, pepper",
+   "rice to serve"
+  ],
+  "steps": [
+   "Cover the sausage slices with water in a saucepan, boil for 5 minutes and drain (less fatty this way).",
+   "Brown the sausage in the oil, add the onion, garlic, ginger and turmeric and cook for 5 minutes.",
+   "Add the tomatoes, thyme and hot pepper and season.",
+   "Simmer covered over low heat for 20 minutes until thickened.",
+   "Serve with rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--cake-sale-sos-sonkas-olivas-kenyerpiskota": {
+  "title": "Cake salé (savoury ham and olive loaf)",
+  "time": "1 hr",
+  "servings": "8 slices",
+  "ingredients": [
+   "180 g flour",
+   "1 sachet baking powder",
+   "3 eggs",
+   "100 ml olive oil",
+   "120 ml milk",
+   "100 g grated Emmental or similar",
+   "150 g cooked ham, diced",
+   "100 g green olives, sliced",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and line a loaf tin with baking paper.",
+   "Mix the flour with the baking powder, then add the eggs, oil and milk and mix until smooth; season.",
+   "Fold in the cheese, ham and olives.",
+   "Pour into the tin and bake for 40-45 minutes until a skewer comes out clean.",
+   "Slice once cool; packed in portions it keeps 4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "french--saute-de-porc-aux-pruneaux-aszalt-szilvas-sertesragu": {
+  "title": "Sauté de porc aux pruneaux (pork stew with prunes)",
+  "time": "1 hr 15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "800 g pork shoulder, diced",
+   "2 tbsp oil",
+   "2 onions, finely chopped",
+   "1 tbsp flour",
+   "200 ml red wine or apple juice",
+   "300 ml stock",
+   "150 g pitted prunes",
+   "2 bay leaves, 2 sprigs thyme",
+   "salt, pepper",
+   "mashed potatoes or pasta to serve"
+  ],
+  "steps": [
+   "Brown the meat in batches in the oil and season; take out.",
+   "Soften the onion in the same pan, sprinkle with the flour and pour in the wine and stock.",
+   "Return the meat with the bay leaves and thyme and braise covered over low heat for 40 minutes.",
+   "Add the prunes and cook for another 15 minutes until the sauce is thick and glossy.",
+   "Serve with mash or pasta; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--pates-au-saumon-et-poireaux-lazacos-porehagymas-tejszines-teszta": {
+  "title": "Pâtes au saumon et poireaux (creamy salmon and leek pasta)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g pasta (tagliatelle or penne)",
+   "2 leeks, thinly sliced",
+   "400 g skinless salmon fillet, diced",
+   "2 tbsp butter",
+   "250 ml single cream",
+   "1 lemon, zest grated",
+   "1 bunch dill",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the pasta al dente.",
+   "Soften the leeks in the butter for 8-10 minutes.",
+   "Pour in the cream, add the lemon zest, bring to the boil, then add the salmon and cook for 4-5 minutes until done.",
+   "Season, stir in the dill and toss with the pasta.",
+   "It keeps 2 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--dahl-de-lentilles-corail-voroslencse-kokusztejjel-francia-otthoni-kedvenc": {
+  "title": "Dahl de lentilles corail (red lentils with coconut milk)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g red lentils",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "1 piece of ginger, grated",
+   "2 tbsp oil",
+   "2 tsp curry powder",
+   "1 tin (400 g) chopped tomatoes",
+   "400 ml coconut milk",
+   "500 ml water",
+   "100 g baby spinach (optional)",
+   "salt",
+   "rice or naan to serve"
+  ],
+  "steps": [
+   "Cook the onion, garlic and ginger in the oil for 5 minutes, add the curry powder and fry for 30 seconds.",
+   "Add the rinsed lentils, tomatoes, coconut milk and water and season.",
+   "Simmer over low heat, stirring often, for 20-25 minutes until the lentils break down.",
+   "Finally stir in the spinach and let it wilt.",
+   "Serve with rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--colombo-de-poulet-antillai-curry-s-csirke-burgonyaval": {
+  "title": "Colombo de poulet (Caribbean curried chicken with potatoes)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken legs",
+   "2 tbsp colombo or curry spice mix",
+   "1 onion, finely chopped",
+   "3 cloves garlic",
+   "2 tbsp oil",
+   "3 potatoes, diced",
+   "1 courgette or aubergine, diced",
+   "1 lime, juiced",
+   "400 ml water",
+   "salt, pepper",
+   "rice to serve"
+  ],
+  "steps": [
+   "Rub the chicken with half the spice mix and the lime juice and season.",
+   "Brown it in the oil, then add the onion, garlic and the rest of the spice and fry for 2 minutes.",
+   "Pour in the water and simmer covered for 20 minutes.",
+   "Add the potatoes and courgette and cook for another 20 minutes until everything is tender and the sauce has thickened.",
+   "Serve with rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--quiche-sans-pate-teszta-nelkuli-cukkinis-kecskesajtos-quiche": {
+  "title": "Quiche sans pâte (crustless courgette and goat's cheese quiche)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "3 medium courgettes, grated and squeezed",
+   "4 eggs",
+   "200 ml milk",
+   "100 ml single cream",
+   "50 g flour",
+   "120 g goat's cheese or feta",
+   "50 g grated cheese",
+   "a few basil leaves",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and butter a pie dish.",
+   "Beat the eggs with the milk, cream and flour until smooth and season.",
+   "Stir in the courgette, basil and grated cheese and pour into the dish.",
+   "Crumble over the goat's cheese and bake for 35-40 minutes until set and golden.",
+   "Serve with salad; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "french--blanquette-de-poulet-gyors-tejszines-gombas-csirkeragu": {
+  "title": "Blanquette de poulet (quick creamy chicken and mushroom stew)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g chicken breast or thigh fillet, diced",
+   "3 carrots, sliced",
+   "250 g button mushrooms, quartered",
+   "1 onion, finely chopped",
+   "30 g butter",
+   "3 tbsp flour",
+   "600 ml chicken stock",
+   "150 ml single cream",
+   "1 egg yolk",
+   "1 lemon, juiced",
+   "salt, pepper",
+   "rice to serve"
+  ],
+  "steps": [
+   "Soften the onion in the butter, add the chicken and cook until it turns white (don't brown it).",
+   "Sprinkle with the flour, stir and pour in the stock while stirring.",
+   "Add the carrots and mushrooms, season and simmer covered for 20 minutes.",
+   "Mix the cream with the yolk and lemon juice, take the stew off the heat and stir it in (don't boil again).",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "french--soupe-de-pois-casses-francia-zold-borsofozelek-leves-fustolt-hussal": {
+  "title": "Soupe de pois cassés (French split pea soup with smoked pork)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "400 g split green peas (or yellow)",
+   "1 onion, finely chopped",
+   "2 carrots, sliced",
+   "1 leek, sliced",
+   "200 g smoked bacon or smoked pork neck, diced",
+   "1 bay leaf, 2 sprigs thyme",
+   "1.8 litres water",
+   "salt, pepper",
+   "croutons to serve"
+  ],
+  "steps": [
+   "Render the bacon in a pot, add the onion, carrots and leek and cook for 5 minutes.",
+   "Add the rinsed peas, herbs and water.",
+   "Simmer covered over low heat for 45 minutes until the peas fall apart.",
+   "Remove the bay leaf and partly blend the soup with a stick blender (leave the meat in pieces); season.",
+   "Serve with croutons; it keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "french--riz-a-la-tomate-et-au-chorizo-paradicsomos-kolbaszos-rizs-paprikaval": {
+  "title": "Riz à la tomate et au chorizo (tomato rice with chorizo and peppers)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g rice",
+   "150 g chorizo or spicy sausage, sliced",
+   "1 onion, finely chopped",
+   "1 sweet pepper, diced",
+   "2 cloves garlic",
+   "1 tbsp olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "500 ml hot stock",
+   "1 tsp smoked paprika",
+   "150 g green peas",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Fry the sausage in the oil for 2-3 minutes, add the onion, pepper and garlic and cook for 5 minutes.",
+   "Add the rice and smoked paprika and stir for 1 minute.",
+   "Add the tomatoes and stock and season.",
+   "Cook covered over low heat for 18-20 minutes, scattering the peas over for the last 5 minutes.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "italian--spaghetti-alla-carbonara": {
   "title": "Spaghetti alla carbonara",
   "time": "20 min",
@@ -10849,6 +13499,603 @@ window.I18N_EN_RECIPES = {
   "steps": [
    "Braise the boar for a long time in the spiced, winey tomato sauce.",
    "Make a silky, soft polenta and pile the rich ragù on top."
+  ]
+ },
+ "italian--sult-olasz-husgombocok-parmezannal": {
+  "title": "Baked Italian meatballs with Parmesan",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g minced veal or beef",
+   "¼ tsp dried oregano",
+   "¼ tsp dried parsley",
+   "1 clove garlic, finely chopped",
+   "1 egg",
+   "60 g breadcrumbs",
+   "30 g grated Parmesan",
+   "salt, pepper",
+   "olive oil for frying"
+  ],
+  "steps": [
+   "Mix all the ingredients together by hand in a large bowl.",
+   "Preheat the oven to 175 °C; heat a large frying pan over medium heat with a little olive oil.",
+   "With wet hands, roll the mixture into bite-sized balls.",
+   "Put them in the pan and cook uncovered for 3 minutes, then turn and cook for another 3 minutes.",
+   "Transfer to a baking tray and bake for 20-25 minutes; serve with tomato sauce and pasta."
+  ]
+ },
+ "italian--serpenyos-lasagne": {
+  "title": "Skillet lasagne",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "450 g lean minced beef",
+   "700 ml tomato pasta sauce",
+   "250 ml water",
+   "1 green pepper, diced",
+   "1 clove garlic, crushed",
+   "1 tsp dried Italian herbs",
+   "10 dried lasagne sheets, broken into squares",
+   "120 g grated mozzarella",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the lasagne sheets in plenty of salted water until tender.",
+   "Meanwhile, brown the mince in a heavy frying pan and pour off the fat.",
+   "Add the pasta sauce, water, pepper, garlic and herbs, season and stir.",
+   "Cover and cook over medium heat for 5 minutes until the pepper is tender.",
+   "Stir in the drained pasta, cover and leave over low heat for 5 minutes; finally stir in the cheese, turn off the heat and serve after a few minutes."
+  ]
+ },
+ "italian--sult-ziti-rakott-teszta-ricottaval-es-mozzarellaval": {
+  "title": "Baked ziti (pasta bake with ricotta and mozzarella)",
+  "time": "45 min",
+  "servings": "8 servings",
+  "ingredients": [
+   "450 g ziti or penne",
+   "350 ml tomato pasta sauce (marinara)",
+   "450 g grated mozzarella",
+   "220 g ricotta",
+   "110 g grated Parmesan",
+   "1 egg, beaten",
+   "3 tbsp chopped fresh basil",
+   "2 tbsp chopped fresh oregano (or 2 tsp dried)",
+   "3 tbsp chopped parsley",
+   "50 g breadcrumbs",
+   "pinch of chilli flakes (optional)",
+   "salt, pepper",
+   "olive oil for the dish"
+  ],
+  "steps": [
+   "Preheat the oven to 220 °C and grease a large ovenproof dish with olive oil.",
+   "In a large bowl, mix the ricotta, egg, herbs and half the mozzarella and Parmesan until smooth; season.",
+   "Cook the pasta al dente in plenty of salted water and drain well.",
+   "Toss the pasta with the tomato sauce and chilli, then fold in the ricotta mixture and spread in the dish.",
+   "Scatter over the remaining mozzarella and Parmesan, then the breadcrumbs.",
+   "Bake for about 20 minutes until the cheese is golden and bubbling."
+  ]
+ },
+ "italian--cukkinis-sajtos-rakott-teszta": {
+  "title": "Courgette and cheese pasta bake",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g short pasta",
+   "250 g grated cheese (cheddar or similar)",
+   "2 eggs",
+   "200 ml milk",
+   "50 g butter, melted",
+   "3 medium courgettes, grated",
+   "1 tsp vegetable stock powder, dissolved in 100 ml hot water",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the pasta as directed on the packet and drain; preheat the oven to 200 °C.",
+   "In a mixing bowl, mix the eggs, milk, salt and pepper.",
+   "Stir in the grated cheese, melted butter and dissolved stock.",
+   "Fold in the grated courgette, then the drained pasta.",
+   "Spread evenly in a buttered ovenproof dish.",
+   "Bake for about 30 minutes until set all the way through and browned on top."
+  ]
+ },
+ "italian--olasz-kolbaszos-serpenyos-teszta-zoldbabbal": {
+  "title": "Italian sausage skillet pasta with green beans",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g fusilli",
+   "330 g sweet Italian sausage, sliced",
+   "2 tsp oil",
+   "1 tin (400 g) chopped tomatoes with juice",
+   "400 g green beans (frozen or tinned, drained)",
+   "170 g tomato purée",
+   "250 ml chicken stock",
+   "60 g grated provolone or mozzarella"
+  ],
+  "steps": [
+   "Cook the pasta and drain.",
+   "Meanwhile, brown the sausage in the hot oil in a large frying pan for 5 minutes, then pour off the fat.",
+   "Stir in the tomatoes with their juice, the tomato purée, stock and green beans; bring to the boil, then simmer covered for 10 minutes.",
+   "Stir in the cooked pasta.",
+   "Sprinkle with the cheese and leave covered until it melts."
+  ]
+ },
+ "italian--calzone-ricottas-sonkas-toltott-pizza": {
+  "title": "Calzone (ricotta and ham folded pizza)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 pack (about 400 g) ready-made pizza dough",
+   "250 g ricotta",
+   "120 g grated mozzarella",
+   "120 g ham, salami or cooked bacon, chopped",
+   "2 tsp dried oregano",
+   "tomato sauce (marinara) to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Mix the ricotta, mozzarella, meat and oregano.",
+   "Divide the dough into four and roll each into a thin round between two sheets of baking paper.",
+   "Spoon filling onto the middle of each, moisten the edges, fold in half and press shut with a fork.",
+   "Bake for 12-15 minutes until golden.",
+   "Serve with tomato sauce."
+  ]
+ },
+ "italian--caponata-sziciliai-edes-savanyu-padlizsanragu": {
+  "title": "Caponata (Sicilian sweet and sour aubergine)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 large aubergines (about 800 g), diced",
+   "3 celery sticks, cut into bite-sized pieces",
+   "1 large onion, thinly sliced",
+   "4 ripe tomatoes (or 1 tin peeled), chopped",
+   "100 g pitted green olives",
+   "2 tbsp capers, rinsed",
+   "3 tbsp pine nuts",
+   "6 tbsp wine vinegar",
+   "2 tbsp sugar",
+   "100 ml olive oil",
+   "fresh basil",
+   "salt"
+  ],
+  "steps": [
+   "Salt the aubergine, leave for 15 minutes, then rinse and pat dry; meanwhile blanch the celery in salted water for 5 minutes and drain.",
+   "In a saucepan, soften the onion in a little olive oil, add the capers, pine nuts, olives and tomatoes and cook, stirring, for 15 minutes.",
+   "Meanwhile, fry the aubergine in batches in the rest of the oil in a frying pan until golden; briefly fry the celery too.",
+   "Stir the aubergine and celery into the tomato base and cook gently over low heat for a few minutes.",
+   "Stir in the vinegar and sugar and cook until the vinegar has almost evaporated.",
+   "Serve cold or lukewarm with fresh basil — it keeps for days in the fridge."
+  ]
+ },
+ "italian--vorosboros-kapribogyos-lazac": {
+  "title": "Salmon in red wine and caper sauce",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 salmon fillets (170 g each), pin-boned",
+   "180 ml red wine",
+   "4 tbsp tomato purée",
+   "1 tbsp finely chopped capers",
+   "2 tbsp olive oil",
+   "1 tbsp chopped garlic",
+   "1 tsp fresh rosemary, finely chopped",
+   "2 tsp fresh thyme",
+   "1 tsp lemon zest",
+   "flour for coating",
+   "salt, freshly ground pepper"
+  ],
+  "steps": [
+   "Mix the wine, tomato purée and capers.",
+   "Heat 1 tbsp oil in a large frying pan and fry the garlic until golden; pour in the wine mixture and turn to low so it just simmers.",
+   "Rub the salmon with the remaining oil, press on the herbs, season and dust with flour.",
+   "Sear the fillets on all sides in a non-stick frying pan over high heat.",
+   "Transfer to the simmering wine sauce and poach for 4-6 minutes until the fish flakes easily; serve at once."
+  ]
+ },
+ "italian--csirkes-baconos-brokkolis-alfredo-spagetti": {
+  "title": "Chicken, bacon and broccoli Alfredo spaghetti",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "220 g spaghetti",
+   "1 tbsp oil",
+   "2 chicken breast fillets (about 400 g), diced",
+   "½ tsp salt",
+   "½ tsp pepper",
+   "2 cloves garlic, crushed",
+   "200 g broccoli, cut into florets",
+   "500 ml milk",
+   "120 g grated Parmesan",
+   "1 bunch parsley, finely chopped",
+   "4 rashers crisp-fried bacon, crumbled"
+  ],
+  "steps": [
+   "Cook the spaghetti al dente.",
+   "Meanwhile, heat the oil in a frying pan over medium heat and cook the chicken for about 4 minutes until done.",
+   "Season and stir in the garlic.",
+   "Add the broccoli and milk and cook for 3-4 minutes, stirring now and then.",
+   "Stir in the Parmesan, parsley and bacon.",
+   "Toss in the drained pasta and serve at once."
+  ]
+ },
+ "italian--penne-alla-casa-kremes-paradicsomos-spenotos-penne": {
+  "title": "Penne alla casa (creamy tomato and spinach penne)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "450 g penne",
+   "1 tbsp olive oil",
+   "4 cloves garlic, finely chopped",
+   "500 ml double cream",
+   "4 tbsp sun-dried tomatoes, cut into strips",
+   "350 ml tomato pasta sauce (marinara)",
+   "220 g fresh spinach",
+   "50 g grated pecorino romano or Parmesan",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the penne al dente and drain.",
+   "Heat the olive oil in a large saucepan over high heat and fry the garlic for about 1 minute until just colouring (don't burn it).",
+   "Add the cream and sun-dried tomatoes, bring to the boil, then stir in the tomato sauce.",
+   "Cook, stirring now and then, until the sauce thickens and reduces by a quarter; season.",
+   "Fold in the spinach and cheese and heat just until the spinach wilts; toss with the pasta and serve hot."
+  ]
+ },
+ "italian--burgonyagnocchi-bazsalikommal-es-aszalt-paradicsommal": {
+  "title": "Potato gnocchi with basil and sun-dried tomatoes",
+  "time": "15 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "500 g ready-made potato gnocchi",
+   "30 g fresh basil",
+   "2 cloves garlic, finely chopped",
+   "4-5 sun-dried tomatoes in oil",
+   "2 tbsp oil from the sun-dried tomatoes",
+   "30 g pine nuts"
+  ],
+  "steps": [
+   "Cook the gnocchi as directed on the packet (they're done when they float) and drain.",
+   "Finely chop the sun-dried tomatoes.",
+   "Heat the tomato oil in a frying pan and fry the garlic for 2 minutes.",
+   "Add the tomatoes, gnocchi and basil and stir until the basil wilts.",
+   "Scatter over the pine nuts, toss and serve."
+  ]
+ },
+ "italian--toszkan-fuszeres-sult-burgonya": {
+  "title": "Tuscan herb roast potatoes",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "900 g potatoes (half floury, half red-skinned), cut into 4-5 cm cubes",
+   "1 tsp salt",
+   "1 tsp freshly ground pepper",
+   "100 ml olive oil",
+   "1 tsp each of dried parsley, rosemary, thyme, basil and oregano"
+  ],
+  "steps": [
+   "Preheat the oven to 230 °C.",
+   "Parboil the potatoes in boiling salted water for 8-10 minutes, then cool in cold water and drain well.",
+   "Mix the olive oil with the salt, pepper and herbs and toss the potatoes in it.",
+   "Spread in one layer on your largest baking tray.",
+   "Roast for about 25 minutes, turning halfway, until crisp and golden; serve warm."
+  ]
+ },
+ "italian--virslis-gyorsteszta-paradicsomszosszal": {
+  "title": "Quick sausage pasta with tomato sauce",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "150 g spaghetti",
+   "2-4 frankfurters or thin sausages, sliced",
+   "1 tbsp butter or oil",
+   "3-5 tbsp tomato pasta sauce or ketchup",
+   "¼ tsp salt",
+   "grated cheese to serve (optional)"
+  ],
+  "steps": [
+   "Bring 2 litres of water to the boil and add the salt.",
+   "Add the spaghetti and cook for 3 minutes.",
+   "Add the sausages and cook together for another 5-6 minutes until the pasta is al dente.",
+   "Drain, stir in the butter, then the sauce.",
+   "Serve with grated cheese if you like."
+  ]
+ },
+ "italian--olasz-vorosboros-fuszeres-rizs-pilaf": {
+  "title": "Italian red wine and herb rice pilaf",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "360 g white rice",
+   "2 tbsp butter",
+   "1 large onion, finely chopped",
+   "½ tsp salt",
+   "½ tsp freshly ground pepper",
+   "600 ml chicken stock",
+   "250 ml red wine (ideally Chianti)",
+   "3 bay leaves",
+   "7 cloves garlic, smashed",
+   "10 sprigs fresh thyme",
+   "5 sprigs fresh rosemary"
+  ],
+  "steps": [
+   "Melt the butter in a large saucepan over medium-high heat and fry the rice and onion until the rice is golden; take it out of the pan.",
+   "Pour the stock, wine, herbs, garlic, salt and pepper into the same pan and bring to the boil.",
+   "Return the rice and cook over low heat, stirring now and then, for 20-25 minutes until tender and the liquid is absorbed.",
+   "Remove the bay leaves and herb stalks and serve warm with steak or sautéed vegetables."
+  ]
+ },
+ "italian--gyors-sult-daralthusos-rakott-penne": {
+  "title": "Quick baked beef and penne",
+  "time": "45 min",
+  "servings": "8 servings",
+  "ingredients": [
+   "450 g minced beef",
+   "1 medium onion, finely chopped",
+   "2 tbsp dried Italian herbs",
+   "450 g rigatoni or penne, cooked al dente",
+   "900 ml tomato pasta sauce",
+   "a little oil for the dish",
+   "200 g grated mozzarella"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C.",
+   "Brown the beef lightly with the onion in a large frying pan, pour off the fat and sprinkle with the herbs.",
+   "In a large bowl, mix the meat with the tomato sauce, then with the cooked pasta.",
+   "Oil a large ovenproof dish, spread in the pasta and sprinkle with mozzarella.",
+   "Bake covered with foil for 20 minutes, then uncovered for another 10 minutes."
+  ]
+ },
+ "italian--tortellini-edesburgonyas-fokhagymas-martasban": {
+  "title": "Tortellini in sweet potato and garlic sauce",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 large sweet potato (about 400 g)",
+   "450 g frozen or fresh tortellini",
+   "1 tbsp butter",
+   "2 cloves garlic, finely chopped",
+   "250 ml milk",
+   "salt, pepper",
+   "grated Parmesan to serve (optional)"
+  ],
+  "steps": [
+   "Bake or microwave the sweet potato in its skin until soft (about 8-10 minutes in the microwave) and let it cool a little.",
+   "Cook the tortellini as directed on the packet, drain and return to the pot.",
+   "Meanwhile, melt the butter in a small frying pan and fry the garlic gently for about 1 minute until golden.",
+   "Peel and mash the sweet potato, mix in the garlic butter and enough milk to make a thick sauce; season.",
+   "Stir the sauce into the pasta, heat through and serve with Parmesan if you like."
+  ]
+ },
+ "italian--pasta-e-lenticchie-olasz-lencses-teszta": {
+  "title": "Pasta e lenticchie (Italian pasta and lentils)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g brown lentils (or 2 tins cooked)",
+   "250 g small pasta (ditalini or elbows)",
+   "1 onion, 1 carrot, 1 celery stick, finely chopped",
+   "2 cloves garlic",
+   "4 tbsp olive oil",
+   "3 tbsp tomato passata",
+   "1 sprig rosemary",
+   "salt, pepper, pinch of chilli",
+   "grated Parmesan"
+  ],
+  "steps": [
+   "Pre-cook the lentils in plenty of water for 20 minutes (skip for tinned).",
+   "Soften the onion, carrot, celery and garlic in the olive oil for 5 minutes and add the passata and rosemary.",
+   "Add the lentils and 1 litre of water, season and cook for 10 minutes.",
+   "Add the pasta and cook, stirring, until tender and the soup is thick; season with chilli and pepper.",
+   "Serve with Parmesan; it keeps 4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--pollo-alla-pizzaiola-csirkemell-paradicsommal-oreganoval-es-mozzarellaval": {
+  "title": "Pollo alla pizzaiola (chicken with tomato, oregano and mozzarella)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 chicken breast fillets, halved and lightly pounded",
+   "3 tbsp olive oil",
+   "2 cloves garlic",
+   "1 tin (400 g) chopped tomatoes",
+   "1 tsp oregano",
+   "120 g mozzarella, sliced",
+   "1 tbsp capers or a few olives (optional)",
+   "salt, pepper",
+   "pasta or bread to serve"
+  ],
+  "steps": [
+   "Season the chicken and fry both sides in the oil for 3 minutes; take out.",
+   "Fry the garlic in the same pan, add the tomatoes, oregano and capers and cook for 10 minutes.",
+   "Return the chicken to the sauce and simmer covered for 10 minutes.",
+   "Top the pieces with mozzarella and leave covered until it melts.",
+   "Serve with pasta; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--spezzatino-con-piselli-olasz-marharagu-borsoval": {
+  "title": "Spezzatino con piselli (Italian beef stew with peas)",
+  "time": "1 hr 30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g beef shoulder or shin, diced",
+   "flour for coating",
+   "3 tbsp olive oil",
+   "1 onion, 1 carrot, 1 celery stick, finely chopped",
+   "100 ml red wine",
+   "3 tbsp tomato passata",
+   "500 ml stock",
+   "1 sprig rosemary",
+   "400 g frozen peas",
+   "salt, pepper",
+   "mashed potatoes or polenta to serve"
+  ],
+  "steps": [
+   "Coat the meat in flour and brown in batches in the oil; take out.",
+   "Soften the vegetables in the same pan for 5 minutes, add the wine and let it evaporate.",
+   "Return the meat, add the passata, stock and rosemary, season and braise covered over low heat for about 1 hour (25 minutes in a pressure cooker).",
+   "Add the peas for the last 10 minutes.",
+   "Serve with mash or polenta; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--parmigiana-di-zucchine-rakott-cukkini-paradicsommal-es-mozzarellaval": {
+  "title": "Parmigiana di zucchine (courgette parmigiana)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "5 medium courgettes, sliced lengthways 5 mm thick",
+   "4 tbsp olive oil",
+   "500 ml tomato passata",
+   "1 clove garlic",
+   "a few basil leaves",
+   "250 g mozzarella, sliced",
+   "80 g grated Parmesan",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Brush the courgette slices with oil and soften them in a griddle pan or a 220 °C oven for 12-15 minutes.",
+   "Cook the passata with the garlic and basil for 10 minutes and season.",
+   "Layer in an ovenproof dish: sauce, courgette, mozzarella, Parmesan — several times, finishing with sauce and Parmesan.",
+   "Bake at 200 °C for 25 minutes until bubbling and browned on top.",
+   "Packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "italian--pasta-alla-boscaiola-gombas-sonkas-tejszines-teszta-borsoval": {
+  "title": "Pasta alla boscaiola (creamy mushroom, ham and pea pasta)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g penne or fusilli",
+   "300 g mushrooms (button or wild), sliced",
+   "150 g ham or sausage meat",
+   "150 g green peas",
+   "1 small onion, finely chopped",
+   "2 tbsp olive oil",
+   "200 ml single cream",
+   "2 tbsp tomato passata (optional)",
+   "50 g grated Parmesan",
+   "salt, pepper, parsley"
+  ],
+  "steps": [
+   "Cook the pasta al dente.",
+   "Soften the onion in the oil, add the ham and mushrooms and fry until the mushroom liquid has cooked away.",
+   "Add the peas, cream and passata and cook for 5 minutes.",
+   "Toss in the pasta with a splash of cooking water, stir in the Parmesan and sprinkle with parsley.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--risi-e-bisi-velencei-borsos-rizs": {
+  "title": "Risi e bisi (Venetian rice and peas)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g frozen peas",
+   "250 g risotto rice",
+   "1 small onion, finely chopped",
+   "50 g pancetta or ham, diced",
+   "30 g butter",
+   "1 tbsp olive oil",
+   "1.2 litres hot stock",
+   "50 g grated Parmesan",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion and pancetta in half the butter and the oil.",
+   "Add half the peas and toss for 2 minutes; blend the other half with a ladle of stock.",
+   "Add the rice, stir and cook for 18 minutes, gradually adding the hot stock (it should be looser than risotto, almost a thick soup).",
+   "Stir in the pea purée, the rest of the peas, the butter, Parmesan and parsley; season.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--zucchine-ripiene-daralthussal-toltott-sult-cukkini": {
+  "title": "Zucchine ripiene (baked courgettes stuffed with mince)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 medium courgettes",
+   "350 g minced meat (pork or beef)",
+   "1 egg",
+   "50 g grated Parmesan + extra for the top",
+   "3 tbsp breadcrumbs",
+   "1 clove garlic",
+   "1 bunch parsley",
+   "300 ml tomato passata",
+   "2 tbsp olive oil",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Halve the courgettes lengthways and scoop out the insides with a spoon; chop the scooped flesh.",
+   "Knead the mince with the chopped courgette, egg, Parmesan, breadcrumbs, crushed garlic, parsley, salt and pepper.",
+   "Fill the courgette boats, pour the seasoned passata into a baking dish and lay them on top.",
+   "Drizzle with oil, sprinkle with Parmesan and bake at 190 °C for 35-40 minutes.",
+   "Serve with rice or bread; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--pasta-al-tonno-tonhalas-paradicsomos-teszta": {
+  "title": "Pasta al tonno (tuna and tomato pasta)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g spaghetti or penne",
+   "2 tins (160 g each drained) tuna in oil",
+   "1 tin (400 g) chopped tomatoes",
+   "2 cloves garlic, finely chopped",
+   "3 tbsp olive oil",
+   "1 tbsp capers",
+   "a few black olives (optional)",
+   "pinch of chilli",
+   "1 bunch parsley",
+   "salt"
+  ],
+  "steps": [
+   "Cook the pasta al dente.",
+   "Fry the garlic and chilli in the oil, add the tomatoes and cook for 10 minutes.",
+   "Stir in the drained tuna, capers and olives and heat through for 2-3 minutes; season with salt.",
+   "Toss with the pasta and sprinkle with parsley.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--pasta-al-forno-con-prosciutto-e-piselli-sonkas-borsos-rakott-teszta-besamellel": {
+  "title": "Pasta al forno con prosciutto e piselli (ham and pea pasta bake with béchamel)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g penne",
+   "200 g cooked ham, diced",
+   "300 g green peas",
+   "120 g mozzarella, diced",
+   "80 g grated Parmesan",
+   "for the béchamel: 50 g butter, 50 g flour, 800 ml milk, pinch of nutmeg, salt"
+  ],
+  "steps": [
+   "Cook the pasta for 2 minutes less than the packet says, adding the peas for the last 3 minutes; drain.",
+   "For the béchamel, cook the flour in the butter for 1 minute, whisk in the milk, cook until thick and season with salt and nutmeg.",
+   "Mix the pasta with two-thirds of the béchamel, the ham, mozzarella and half the Parmesan.",
+   "Spread in a buttered dish, spread the rest of the béchamel on top and sprinkle with the remaining Parmesan.",
+   "Bake at 200 °C for 25 minutes until golden; packed in portions it keeps 3-4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "italian--gnocchi-alla-romana-sult-buzadara-galuska-parmezannal": {
+  "title": "Gnocchi alla romana (baked semolina gnocchi with Parmesan)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 litre milk",
+   "250 g semolina",
+   "80 g butter",
+   "100 g grated Parmesan",
+   "2 egg yolks",
+   "pinch of nutmeg",
+   "1 tsp salt",
+   "tomato sauce or salad to serve"
+  ],
+  "steps": [
+   "Bring the milk to the boil with the salt, nutmeg and 30 g butter, then pour in the semolina while stirring constantly and cook for 5-6 minutes until very thick.",
+   "Take off the heat and stir in the yolks and half the Parmesan.",
+   "Spread 1.5 cm thick on a wet tray or baking paper and leave to cool for 20 minutes.",
+   "Cut out rounds with a cutter, arrange overlapping in a buttered dish and sprinkle with the rest of the Parmesan and dots of butter.",
+   "Bake at 220 °C for 20-25 minutes until golden; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
   ]
  },
  "italian--cornetti-vajas-briostesztas-kifli-lekvaros-vagy-kremes-toltelekkel": {
@@ -11168,6 +14415,98 @@ window.I18N_EN_RECIPES = {
    "Serve with a fresh brioche bun, as is the custom for breakfast in Sicily."
   ]
  },
+ "italian--frittata-spargaval-spargas-sult-omlett": {
+  "title": "Asparagus frittata",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 tbsp olive oil",
+   "2 cloves garlic, finely chopped",
+   "1 bunch green asparagus, woody ends removed, chopped",
+   "8 eggs",
+   "3 tsp milk",
+   "2 tsp chopped fresh basil (or 1 tsp dried)",
+   "pinch of salt",
+   "pinch of pepper",
+   "3 tbsp grated Parmesan"
+  ],
+  "steps": [
+   "In a bowl, beat the eggs with the milk, basil, salt and pepper.",
+   "Turn on the oven grill; heat the olive oil in an ovenproof frying pan over medium heat.",
+   "Fry the garlic for about 1 minute until fragrant, then add the asparagus and cook for about 5 minutes until it starts to soften.",
+   "Pour in the eggs and cook for about 4 minutes until bubbles appear in the middle.",
+   "Sprinkle with Parmesan and put under the grill for about 3 minutes until puffed and browned.",
+   "Take it out carefully (the handle is hot!), cut into wedges and serve with crusty bread."
+  ]
+ },
+ "italian--rokagombas-sult-frittata": {
+  "title": "Baked chanterelle frittata",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "6 egg whites",
+   "2 egg yolks",
+   "120 ml milk",
+   "100 g chanterelles (or other wild mushrooms), chopped",
+   "1 tbsp butter",
+   "60 g grated cheddar or other semi-hard cheese",
+   "1 tsp lemon juice",
+   "salt, ½ tsp pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C; fry the mushrooms in the butter for 3-4 minutes.",
+   "Mix the egg whites and yolks in a medium bowl.",
+   "Add the milk, lemon juice, salt and pepper.",
+   "Whisk until slightly frothy (the longer you whisk, the fluffier it gets).",
+   "Pour into a small oiled baking dish or muffin tin and scatter over the mushrooms and cheese.",
+   "Bake for 15-20 minutes until the middle is set (check with a fork) and serve warm."
+  ]
+ },
+ "italian--pizzaomlett-mozzarellaval": {
+  "title": "Pizza omelette with mozzarella",
+  "time": "15 min",
+  "servings": "1 serving",
+  "ingredients": [
+   "2 eggs",
+   "4 tbsp tomato sauce",
+   "pinch of dried oregano and basil",
+   "salt, pepper",
+   "2 tbsp chopped green pepper",
+   "2 tbsp chopped mushrooms",
+   "30 g grated mozzarella",
+   "a little oil"
+  ],
+  "steps": [
+   "Mix the tomato sauce with the herbs, season and leave to stand while you prepare the rest.",
+   "Beat the eggs well.",
+   "Heat a small oiled frying pan over low heat, pour in the eggs, cover and cook for about 3 minutes until nearly set.",
+   "Carefully flip and cook for another minute; meanwhile fry the pepper and mushrooms in a little oil for 1-2 minutes.",
+   "Spread the omelette with the tomato sauce, sprinkle with the cheese, then the pepper and mushrooms.",
+   "Cover and cook for another 2 minutes until the cheese has melted."
+  ]
+ },
+ "italian--bruschetta-friss-mozzarellaval-es-bazsalikommal": {
+  "title": "Bruschetta with fresh mozzarella and basil",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 baguette or ciabatta",
+   "3 medium ripe tomatoes (ideally Roma)",
+   "2 balls fresh mozzarella (about 250 g)",
+   "20-24 fresh basil leaves",
+   "3 tbsp extra virgin olive oil",
+   "1 tbsp balsamic vinegar",
+   "dried oregano",
+   "coarse salt, freshly ground pepper"
+  ],
+  "steps": [
+   "Cut the bread diagonally into slices about 1.3 cm thick and toast lightly on both sides in the oven.",
+   "Slice the tomatoes thinly and put one slice on each piece of bread.",
+   "Slice the mozzarella and lay it on the tomato.",
+   "Cut the basil into thin strips and scatter over the top with the oregano.",
+   "Mix the olive oil and balsamic vinegar in a small bowl, drizzle over the bruschetta, season and serve at once."
+  ]
+ },
  "italian--spaghetti-al-pomodoro": {
   "title": "Spaghetti al pomodoro",
   "time": "35 min",
@@ -11478,6 +14817,756 @@ window.I18N_EN_RECIPES = {
    "Rest in the fridge for at least 30 minutes before serving."
   ]
  },
+ "italian--spaghetti-aglio-e-olio-fokhagymas-olivaolajos-spagetti": {
+  "title": "Spaghetti aglio e olio (garlic and olive oil spaghetti)",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "250 g spaghetti",
+   "4 cloves garlic",
+   "6 tbsp olive oil",
+   "½ tsp chilli flakes (optional)",
+   "freshly ground pepper",
+   "1 bunch flat-leaf parsley, finely chopped",
+   "salt"
+  ],
+  "steps": [
+   "Cook the spaghetti al dente in plenty of salted water.",
+   "Peel the garlic and crush it lightly with the heel of your hand.",
+   "Heat the olive oil in a frying pan and fry the garlic (and chilli, if using) until golden — not dark, or it turns bitter.",
+   "Take the garlic out of the oil.",
+   "Toss the drained spaghetti in the oil with a splash of the cooking water.",
+   "Season with pepper, mix and serve sprinkled with parsley."
+  ]
+ },
+ "italian--vajas-parmezanos-teszta-brokkolival-es-dioval": {
+  "title": "Butter and Parmesan pasta with broccoli and walnuts",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "220 g fettuccine or thin spaghetti",
+   "300 g broccoli, cut into florets",
+   "100 g butter",
+   "2 tsp dried basil",
+   "2 tsp lemon juice",
+   "1 tsp garlic powder (or 2 fresh cloves, crushed)",
+   "½ tsp salt",
+   "3 tbsp roughly chopped walnuts",
+   "50 g freshly grated Parmesan"
+  ],
+  "steps": [
+   "Cook the pasta al dente; add the broccoli for the last 3 minutes so it stays crisp, then drain.",
+   "Melt the butter in a large frying pan and stir in the basil, lemon juice, garlic and salt.",
+   "Add the pasta, broccoli and walnuts and toss until coated in butter.",
+   "Serve generously topped with freshly grated Parmesan."
+  ]
+ },
+ "italian--fokhagymas-vajas-garnelas-spagetti-scampi": {
+  "title": "Garlic butter prawn spaghetti (scampi)",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "220 g spaghetti",
+   "3 tbsp butter",
+   "3 cloves garlic, finely chopped",
+   "450 g peeled prawns",
+   "1 tsp salt",
+   "1 tsp freshly ground pepper",
+   "½ lemon, juiced",
+   "1 tsp chilli flakes",
+   "1 bunch parsley, finely chopped"
+  ],
+  "steps": [
+   "Cook the spaghetti al dente.",
+   "Meanwhile, melt the butter in a frying pan over medium heat and stir in the garlic.",
+   "Add the prawns and cook for about 5-6 minutes, stirring now and then, until pink.",
+   "Season, then stir in the lemon juice, chilli and parsley.",
+   "Toss in the drained pasta, divide between four plates and serve at once."
+  ]
+ },
+ "italian--spenotos-gombas-pesztos-spagetti": {
+  "title": "Spinach and mushroom pesto spaghetti",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "220 g spaghetti",
+   "2 tbsp olive oil",
+   "150 g baby spinach",
+   "200 g button mushrooms, sliced",
+   "1 tsp salt",
+   "1 tsp pepper",
+   "150 g basil pesto",
+   "60 g grated Parmesan + a little to serve"
+  ],
+  "steps": [
+   "Cook the spaghetti al dente.",
+   "Meanwhile, heat the oil in a frying pan over medium heat and cook the spinach for a few minutes until wilted.",
+   "Add the mushrooms, season and cook for another 3 minutes, stirring now and then.",
+   "Stir in the pesto and Parmesan and cook for 1-2 minutes.",
+   "Toss in the drained pasta and serve sprinkled with extra Parmesan."
+  ]
+ },
+ "italian--kolbaszos-paradicsomos-bazsalikomos-spagetti": {
+  "title": "Sausage, tomato and basil spaghetti",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "220 g spaghetti",
+   "450 g Italian sausage meat (squeezed from the skins) or seasoned minced pork",
+   "½ onion, finely chopped",
+   "1 tsp salt",
+   "1 tsp pepper",
+   "500 ml tomato passata",
+   "120 ml milk or single cream",
+   "1 bunch fresh basil, chopped"
+  ],
+  "steps": [
+   "Cook the spaghetti al dente.",
+   "Meanwhile, fry the sausage meat in a frying pan over medium heat for about 6 minutes, breaking it up, until well browned.",
+   "Add the onion, season and cook for another 2 minutes, stirring now and then.",
+   "Stir in the passata, milk and basil and cook for 2-3 minutes.",
+   "Toss in the drained pasta and serve."
+  ]
+ },
+ "italian--pasta-alla-gorgonzola-gorgonzolas-ricottas-penne": {
+  "title": "Pasta alla gorgonzola (penne with gorgonzola and ricotta)",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g penne",
+   "250 g gorgonzola",
+   "150 g ricotta",
+   "a few drops of olive oil",
+   "1 lemon, zest grated",
+   "100-200 ml milk",
+   "pinch of dried Italian herbs",
+   "freshly grated nutmeg",
+   "salt"
+  ],
+  "steps": [
+   "Put the pasta on to cook in plenty of salted water.",
+   "Add a few drops of olive oil to a heavy-based saucepan and melt the crumbled gorgonzola over very low heat.",
+   "When it's runny, stir in the ricotta and keep heating until it forms a sauce; if too thick, thin it with a little milk.",
+   "Grate in plenty of nutmeg and add the herbs and lemon zest.",
+   "Put the drained pasta in a bowl, pour over the sauce, mix and serve at once."
+  ]
+ },
+ "italian--kremes-gombas-teszta-feherborral": {
+  "title": "Creamy mushroom pasta with white wine",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "150 g linguine or other long pasta",
+   "2 tbsp butter",
+   "3 cloves garlic, finely chopped",
+   "350 g button mushrooms, stalks removed",
+   "4 tbsp dry white wine",
+   "120 ml double cream",
+   "120 ml chicken stock",
+   "60 g grated Parmesan",
+   "salt, freshly ground pepper",
+   "chopped parsley to serve"
+  ],
+  "steps": [
+   "Cook the pasta in plenty of salted water for 8-9 minutes until al dente, then drain.",
+   "Meanwhile, melt the butter in a large frying pan over medium-high heat and fry the garlic for about 30 seconds.",
+   "Add the mushrooms cup side down and cook for 3-5 minutes, turning now and then, until they shrink; pour in the wine and cook it off for about 3 minutes.",
+   "Pour in the cream and stock, season with salt and cook over medium heat until slightly thickened.",
+   "Sprinkle in the Parmesan and stir until melted; toss in the pasta.",
+   "Serve sprinkled with pepper and parsley, with extra Parmesan if you like."
+  ]
+ },
+ "italian--nyari-teszta-mozzarellaval-paradicsommal-es-bazsalikommal": {
+  "title": "Summer pasta with mozzarella, tomato and basil",
+  "time": "20 min + 30 min standing",
+  "servings": "3 servings",
+  "ingredients": [
+   "2 balls mozzarella (about 250 g)",
+   "400 g cherry tomatoes or 4-5 larger tomatoes",
+   "1 handful fresh basil leaves (15-20)",
+   "4 tbsp extra virgin olive oil",
+   "salt, a little pepper",
+   "250 g fresh egg pasta (e.g. tagliatelle)"
+  ],
+  "steps": [
+   "Roughly chop the mozzarella and tomatoes and put them in a large salad bowl.",
+   "Tear over the basil.",
+   "Drizzle generously with olive oil, salt well and add a little pepper — the salt draws out the juices, which become the sauce.",
+   "Leave for at least 30 minutes.",
+   "Cook the pasta al dente and drain.",
+   "Toss the hot pasta with the mozzarella and tomato mixture in the bowl and serve."
+  ]
+ },
+ "italian--lazacos-tejszines-spagetti-kaporral": {
+  "title": "Creamy salmon spaghetti with dill",
+  "time": "25 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "250 g spaghetti",
+   "1 tbsp olive oil",
+   "1 small onion, finely chopped",
+   "250 g smoked or fresh salmon, diced",
+   "120 ml dry white wine",
+   "250 ml single cream",
+   "1 tbsp crème fraîche or sour cream",
+   "1 tsp freshly grated horseradish",
+   "1 tbsp chopped fresh dill",
+   "pinch of salt, pinch of freshly ground pepper",
+   "lemon slices to serve"
+  ],
+  "steps": [
+   "Cook the spaghetti al dente.",
+   "In a large frying pan, soften the onion in the oil for about 2 minutes until translucent.",
+   "Add the salmon and cook for another 3 minutes; pour in the wine (not too much) and let it bubble for 1 minute.",
+   "Add the cream, stir in the crème fraîche and horseradish, and simmer until thickened.",
+   "Finally stir in the dill, add pepper and only a little salt (smoked salmon is salty); serve over the pasta with lemon slices."
+  ]
+ },
+ "italian--spaghetti-alla-puttanesca-olivas-kapribogyos-spagetti": {
+  "title": "Spaghetti alla puttanesca (olive and caper spaghetti)",
+  "time": "30 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "600 g spaghetti",
+   "50 g butter",
+   "3 tbsp extra virgin olive oil",
+   "8 anchovy fillets, mashed to a paste (left out in the Neapolitan version)",
+   "5 cloves garlic, finely chopped",
+   "200 g pitted black olives, chopped",
+   "2 tbsp capers, rinsed and roughly chopped",
+   "1-2 small dried chillies, crumbled (optional)",
+   "900 g peeled tomatoes, puréed (or 2 tins)",
+   "2 tbsp chopped parsley",
+   "salt"
+  ],
+  "steps": [
+   "Put the butter, olive oil, garlic and anchovy paste in a frying pan over medium heat.",
+   "Before the garlic browns, add the olives, capers, tomatoes and chilli.",
+   "Add 2-3 pinches of salt and cook over higher heat, stirring, for 10-15 minutes.",
+   "Meanwhile, cook the spaghetti al dente in plenty of salted water and drain.",
+   "Put it in a large bowl, toss with the sauce and serve hot, sprinkled with parsley."
+  ]
+ },
+ "italian--olasz-kremes-feherbableves": {
+  "title": "Italian creamy white bean soup",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (400 g each) white beans, rinsed",
+   "2 tbsp butter",
+   "1 carrot, chopped",
+   "1 onion, chopped",
+   "1 leek, sliced",
+   "1 celery stick, chopped",
+   "1 litre chicken or vegetable stock",
+   "2 egg yolks",
+   "250 ml single cream",
+   "150 g green peas, cooked",
+   "fried croutons to serve",
+   "salt"
+  ],
+  "steps": [
+   "Soften the carrot, onion, leek and celery in the butter in a saucepan for about 10 minutes.",
+   "Add the beans and two-thirds of the stock, season and cook for 15 minutes.",
+   "Blend smooth with a stick blender and thin to the consistency you like with the rest of the stock; bring to the boil and keep warm.",
+   "Whisk the yolks with the cream, take the soup off the heat and stir it in (don't boil it again).",
+   "Serve with the peas, with croutons in a separate bowl."
+  ]
+ },
+ "italian--agnolotti-in-brodo-toltott-teszta-tejszines-huslevesben": {
+  "title": "Agnolotti in brodo (filled pasta in creamy broth)",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "250 g agnolotti, tortellini or other small filled pasta",
+   "500 ml chicken broth (or 500 ml water and 2 good stock cubes)",
+   "120 ml single cream",
+   "pinch of freshly ground pepper",
+   "1 handful chopped flat-leaf parsley",
+   "1 tbsp sweet sherry (optional)",
+   "freshly grated Parmesan to serve"
+  ],
+  "steps": [
+   "Bring the broth to the boil (or boil the water and dissolve the stock cubes in it).",
+   "Add the pasta and cook as directed on the packet.",
+   "About 2 minutes before the end, add the cream, pepper and parsley and turn the heat down.",
+   "Add the sherry just before serving (serve children's portions first).",
+   "Let it stand for a few minutes for the flavours to marry and serve with grated Parmesan."
+  ]
+ },
+ "italian--csirkes-zoldseges-tesztasalata": {
+  "title": "Chicken and vegetable pasta salad",
+  "time": "25 min + chilling",
+  "servings": "6 servings",
+  "ingredients": [
+   "300 g fusilli",
+   "2 carrots, grated",
+   "1 cucumber",
+   "1 tin (400 g) kidney beans, rinsed",
+   "150 g green peas (tinned or cooked)",
+   "150 g sweetcorn",
+   "3 hard-boiled eggs, diced",
+   "300 g cooked chicken breast, diced",
+   "4 tbsp mayonnaise",
+   "4 tbsp ranch or yogurt dressing",
+   "1 tbsp ketchup",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the pasta al dente, rinse under cold water and drain.",
+   "Peel the cucumber, halve it, scoop out the seeds with a spoon and dice.",
+   "In a large bowl, mix the cucumber, carrot, pasta, beans, peas, sweetcorn, egg and chicken.",
+   "Stir in the mayonnaise, dressing and ketchup and season.",
+   "Chill for a few hours before serving."
+  ]
+ },
+ "italian--villamrizotto-parmezannal": {
+  "title": "Quick Parmesan risotto",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g risotto rice (arborio)",
+   "600 ml chicken or vegetable stock",
+   "3 tbsp butter",
+   "1 small onion, finely chopped",
+   "50 g grated Parmesan",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Bring the stock (twice the amount of rice) to the boil in a saucepan.",
+   "In another saucepan, melt 2 tbsp butter over high heat and fry the onion for 1-2 minutes.",
+   "Add the rice and toast it for 2 minutes, stirring constantly with a wooden spoon, until the butter starts to froth.",
+   "Pour in all the hot stock at once (careful, it steams up suddenly), stir so nothing sticks, cover, turn off the heat and leave for 12-15 minutes.",
+   "Stir in the remaining butter and the Parmesan, season and serve."
+  ]
+ },
+ "italian--rantott-ravioli-paradicsomszosszal": {
+  "title": "Fried ravioli with tomato sauce",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tbsp milk",
+   "1 egg",
+   "100 g Italian-seasoned breadcrumbs",
+   "½ tsp salt",
+   "400 g fresh or thawed ravioli",
+   "oil for frying",
+   "1 tbsp grated Parmesan",
+   "450 ml tomato pasta sauce (marinara)"
+  ],
+  "steps": [
+   "Beat the milk and egg in a small bowl; put the breadcrumbs and salt in a shallow dish.",
+   "Dip the ravioli in the egg mixture, then coat in the breadcrumbs.",
+   "Heat the tomato sauce in a saucepan over medium heat until bubbling, then turn to low.",
+   "Heat oil 5 cm deep in a large, heavy pan to 190 °C.",
+   "Fry the ravioli a few at a time for about 1 minute per side until golden, then drain on kitchen paper.",
+   "Sprinkle with Parmesan and serve at once with the hot sauce."
+  ]
+ },
+ "italian--kaposztas-rizses-minestrone-sonkaval": {
+  "title": "Cabbage and rice minestrone with ham",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "½ Savoy or white cabbage (about 500 g)",
+   "1.2 litres stock",
+   "60 g rice",
+   "100 g cooked ham, finely chopped",
+   "4 tbsp tomato sauce",
+   "salt, pepper",
+   "grated Parmesan to serve"
+  ],
+  "steps": [
+   "Cut the core and tough outer leaves off the cabbage, wash it and slice into strips.",
+   "Bring the stock to the boil and cook the cabbage in it for 10 minutes.",
+   "Add the rice and cook for another 15 minutes until tender.",
+   "Stir in the ham and tomato sauce, season and simmer for 2-3 more minutes.",
+   "Serve with grated Parmesan."
+  ]
+ },
+ "italian--tonhalas-kukoricas-kremsajtos-teszta": {
+  "title": "Tuna, sweetcorn and cream cheese pasta",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "350 g short pasta",
+   "400 g plain cream cheese",
+   "1 tin sweetcorn (about 280 g drained)",
+   "1 tin tuna (about 160 g drained)",
+   "3 tsp basil pesto",
+   "a little freshly ground pepper",
+   "a little olive oil"
+  ],
+  "steps": [
+   "Cook the pasta in plenty of lightly salted water with a drop of olive oil.",
+   "Meanwhile, mix the cream cheese, sweetcorn, tuna, pesto and pepper in a mixing bowl.",
+   "Drain the cooked pasta and add it to the bowl.",
+   "Toss until everything is coated and serve at once."
+  ]
+ },
+ "italian--zoldseges-gyorsteszta-paradicsommal-es-uborkaval": {
+  "title": "Quick vegetable pasta with tomato and cucumber",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "150 g spaghetti",
+   "2 medium tomatoes, diced",
+   "1 medium cucumber, diced",
+   "½ medium onion, finely chopped",
+   "1 tbsp butter or oil",
+   "3-5 tbsp tomato pasta sauce or ketchup",
+   "¼ tsp salt"
+  ],
+  "steps": [
+   "Bring 2 litres of water to the boil with the salt.",
+   "Add the spaghetti and cook for 4 minutes.",
+   "Add the tomato and cucumber and cook together for another 5 minutes.",
+   "Drain and mix in the butter and onion.",
+   "Stir in the sauce and serve."
+  ]
+ },
+ "italian--haromszinu-olasz-tojaskockas-husleves": {
+  "title": "Italian tricolour egg custard broth",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 eggs",
+   "150 ml milk",
+   "pinch of salt and nutmeg",
+   "2 tbsp tomato purée",
+   "30 g baby spinach, blanched, squeezed and puréed",
+   "1 tbsp butter for the dish",
+   "1.2 litres chicken or beef broth",
+   "grated Parmesan to serve"
+  ],
+  "steps": [
+   "Beat the eggs with the milk, salt and nutmeg and divide into three: leave one plain, mix the tomato purée into the second and the spinach purée into the third.",
+   "Pour the three colours in layers into a buttered small saucepan or ovenproof dish and cook covered over very low heat or over steam for about 10-15 minutes until set.",
+   "Let it cool a little, turn out and cut into small cubes.",
+   "Meanwhile, bring the broth to the boil.",
+   "Divide the custard cubes between the bowls, pour over the hot broth and serve with Parmesan."
+  ]
+ },
+ "italian--pizzaleves-sonkaval-es-gombaval": {
+  "title": "Pizza soup with ham and mushrooms",
+  "time": "20 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "1 tin (400 g) chopped tomatoes with juice",
+   "250 ml water",
+   "100 g grated good melting cheese (e.g. mozzarella) + a little for the top",
+   "1 tsp cornflour",
+   "1 tsp dried oregano",
+   "80 g ham, diced",
+   "80 g mushrooms, sliced",
+   "½ green pepper, chopped",
+   "4 tbsp sweetcorn (optional)"
+  ],
+  "steps": [
+   "Put the tomatoes with their juice and the water in a saucepan and bring to the boil.",
+   "Over lower heat, stir in the cheese, the cornflour (mixed with a little water) and the oregano and heat, stirring, until the cheese melts.",
+   "If you like it smoother, blend with a stick blender.",
+   "Add the ham, mushrooms, pepper and sweetcorn and cook for another 5 minutes.",
+   "Serve hot with a little extra cheese on top."
+  ]
+ },
+ "italian--vajas-sajtos-fokhagymas-spagetti-paradicsommal": {
+  "title": "Buttery cheese and garlic spaghetti with tomato",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "200 g linguine or spaghetti",
+   "1 vegetable stock cube",
+   "30 g butter",
+   "40 g goat's cheese or grated Parmesan",
+   "3-5 cloves garlic, crushed",
+   "1 tomato, diced",
+   "1 tsp dried basil or oregano"
+  ],
+  "steps": [
+   "Bring enough water for 2 portions of pasta to the boil in a pot and dissolve the stock cube in it.",
+   "Add the pasta and cook al dente.",
+   "Pour off most of the water, leaving only about 2 cm in the bottom of the pot.",
+   "Add the butter, cheese, tomato, garlic and herbs.",
+   "Stir often until the sauce is as thick as you like and serve at once."
+  ]
+ },
+ "italian--majonezes-makaroni-salata-zellerrel": {
+  "title": "Creamy macaroni salad with celery",
+  "time": "20 min + chilling",
+  "servings": "6 servings",
+  "ingredients": [
+   "450 g elbow macaroni, cooked, drained and cooled",
+   "120 ml mayonnaise",
+   "1 tsp mustard powder or 1 tbsp mustard",
+   "1 tsp sugar",
+   "2 tbsp cider vinegar",
+   "salt, pepper",
+   "5 tbsp chopped red onion",
+   "5 tbsp chopped celery"
+  ],
+  "steps": [
+   "In a small bowl, whisk the mayonnaise, mustard, sugar and vinegar and season.",
+   "In a large bowl, mix the pasta, onion and celery.",
+   "Pour over the dressing and toss.",
+   "Chill before serving."
+  ]
+ },
+ "italian--olasz-csirkegaluska-leves-quenelle-brodoban": {
+  "title": "Italian chicken quenelle soup (quenelles in brodo)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g chicken breast",
+   "1 tbsp rice flour or semolina",
+   "1 egg yolk",
+   "salt, pepper",
+   "pinch of nutmeg",
+   "1.2 litres chicken broth or stock",
+   "chopped parsley and grated Parmesan to serve"
+  ],
+  "steps": [
+   "Mince the chicken breast to a paste in a food processor.",
+   "Mix in the rice flour, egg yolk, salt, pepper and nutmeg (press through a sieve for an even smoother texture).",
+   "Shape into small dumplings (quenelles) with two wet teaspoons.",
+   "Bring the broth to the boil, turn down to a simmer and poach the quenelles for 6-8 minutes until they float and are cooked through.",
+   "Serve with parsley and Parmesan."
+  ]
+ },
+ "italian--pasta-e-patate-napolyi-krumplis-teszta": {
+  "title": "Pasta e patate (Neapolitan pasta and potatoes)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g potatoes, cut into small cubes",
+   "300 g mixed short pasta",
+   "1 onion, finely chopped",
+   "1 celery stick and 1 carrot, finely chopped",
+   "3 tbsp olive oil",
+   "50 g pancetta or bacon (optional)",
+   "2 tbsp tomato purée",
+   "1.2 litres hot water or stock",
+   "50 g grated Parmesan",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion, celery, carrot and pancetta in the olive oil for 5 minutes.",
+   "Add the potatoes and tomato purée, pour in the hot water, season and cook for 15 minutes until the potatoes start to break down.",
+   "Add the pasta and cook, stirring often, for the time on the packet until creamy (add water if needed).",
+   "Off the heat, stir in the Parmesan and season with pepper.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--risotto-alla-zucca-sutotokos-rizotto": {
+  "title": "Risotto alla zucca (pumpkin risotto)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g pumpkin or squash, cut into small cubes",
+   "300 g risotto rice",
+   "1 onion, finely chopped",
+   "2 tbsp olive oil",
+   "30 g butter",
+   "1 litre hot vegetable or chicken stock",
+   "100 ml white wine (optional)",
+   "60 g grated Parmesan",
+   "pinch of nutmeg",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion in the oil, add the pumpkin and fry for 5 minutes.",
+   "Add the rice, toast for 2 minutes and pour in the wine.",
+   "Add the hot stock a ladle at a time and cook, stirring, for 18-20 minutes until the rice is creamy and the pumpkin breaks down.",
+   "Off the heat, stir in the butter, Parmesan and nutmeg; season.",
+   "It keeps 2-3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--polpette-al-sugo-olasz-husgomboc-paradicsomszoszban": {
+  "title": "Polpette al sugo (Italian meatballs in tomato sauce)",
+  "time": "1 hr",
+  "servings": "5 servings",
+  "ingredients": [
+   "600 g mixed minced meat",
+   "2 slices stale bread, soaked in milk",
+   "1 egg",
+   "50 g grated Parmesan",
+   "1 bunch parsley",
+   "1 clove garlic",
+   "salt, pepper",
+   "2 tbsp olive oil",
+   "700 ml tomato passata",
+   "a few basil leaves",
+   "pasta or bread to serve"
+  ],
+  "steps": [
+   "Knead the meat with the squeezed-out bread, egg, Parmesan, parsley, crushed garlic, salt and pepper.",
+   "Shape into walnut-sized balls and brown them all over in the oil (or bake at 200 °C for 15 minutes).",
+   "Bring the passata to the boil in a saucepan with 200 ml water and the basil and season.",
+   "Add the meatballs and simmer covered over low heat for 25-30 minutes.",
+   "Serve with pasta or bread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--frittata-di-pasta-sult-tesztas-omlett-maradek-tesztabol": {
+  "title": "Frittata di pasta (baked pasta omelette from leftover spaghetti)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g cooked spaghetti (leftovers work, even with sauce)",
+   "6 eggs",
+   "80 g grated Parmesan",
+   "100 g ham or salami, diced",
+   "100 g mozzarella, diced",
+   "1 bunch parsley",
+   "salt, pepper",
+   "2 tbsp olive oil"
+  ],
+  "steps": [
+   "Beat the eggs with the Parmesan, salt, pepper and parsley.",
+   "Mix with the pasta, ham and mozzarella.",
+   "Heat the oil in a large non-stick frying pan, pour in the mixture and smooth it.",
+   "Cook over medium-low heat for 8-10 minutes, then flip using a plate and cook the other side for 5-6 minutes.",
+   "Packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "italian--cannelloni-ricotta-e-spinaci-ricottas-spenotos-cannelloni": {
+  "title": "Cannelloni ricotta e spinaci (ricotta and spinach cannelloni)",
+  "time": "1 hr 15 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "250 g cannelloni tubes (no pre-cook)",
+   "400 g frozen spinach, thawed and squeezed",
+   "500 g ricotta",
+   "1 egg",
+   "80 g grated Parmesan",
+   "pinch of nutmeg",
+   "salt, pepper",
+   "700 ml tomato passata",
+   "1 clove garlic",
+   "150 g grated mozzarella"
+  ],
+  "steps": [
+   "Mix the spinach with the ricotta, egg, half the Parmesan, nutmeg, salt and pepper.",
+   "Mix the passata with the crushed garlic and 100 ml water and season; pour a third into the bottom of a baking dish.",
+   "Fill the tubes with the filling (with a small spoon or piping bag) and lay them side by side on the sauce.",
+   "Pour over the rest of the sauce (it should cover the pasta completely) and sprinkle with the mozzarella and remaining Parmesan.",
+   "Bake covered with foil at 190 °C for 30 minutes, then uncovered for 15 minutes; packed in portions it keeps 3-4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "italian--ribollita-toszkan-kenyeres-babos-zoldsegleves": {
+  "title": "Ribollita (Tuscan bread and bean vegetable soup)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 onion, 2 carrots, 2 celery sticks, finely chopped",
+   "2 cloves garlic",
+   "5 tbsp olive oil",
+   "2 potatoes, diced",
+   "½ Savoy cabbage or cavolo nero, shredded",
+   "1 tin (400 g) chopped tomatoes",
+   "2 tins (400 g each) cannellini beans, rinsed",
+   "1.5 litres water or stock",
+   "4 slices stale Tuscan bread or ciabatta",
+   "salt, pepper",
+   "Parmesan to serve"
+  ],
+  "steps": [
+   "Soften the onion, carrots, celery and garlic in half the oil for 8 minutes.",
+   "Add the potatoes, cabbage and tomatoes, pour in the water and cook for 25 minutes.",
+   "Purée one tin of beans and add it with the other to the soup; season and cook for 10 minutes.",
+   "Tear the bread in, stir and leave for 5 minutes to make a thick, spoonable soup.",
+   "Serve drizzled with the rest of the olive oil and with Parmesan; it keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "italian--pasta-con-broccoli-e-salsiccia-brokkolis-kolbaszos-teszta": {
+  "title": "Pasta con broccoli e salsiccia (pasta with broccoli and sausage)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g orecchiette or penne",
+   "1 large head broccoli, broken into florets",
+   "350 g Italian sausage (squeezed from the skins) or seasoned minced pork",
+   "3 cloves garlic, sliced",
+   "4 tbsp olive oil",
+   "pinch of chilli flakes",
+   "60 g grated pecorino or Parmesan",
+   "salt"
+  ],
+  "steps": [
+   "Cook the broccoli in a pot of salted water for 3 minutes, then add the pasta to the same water.",
+   "Meanwhile, fry the sausage meat in half the oil in a large frying pan until crumbly.",
+   "Add the garlic and chilli and fry for 30 seconds.",
+   "Drain the pasta with the broccoli (keeping a mug of cooking water), tip into the pan and toss with the rest of the oil, the water and cheese so the broccoli breaks down a little.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--fagioli-all-uccelletto-con-salsiccia-zsalyas-paradicsomos-bab-kolbasszal": {
+  "title": "Fagioli all'uccelletto (sage and tomato beans with sausages)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (400 g each) cannellini beans, rinsed",
+   "4 Italian or other fresh sausages",
+   "3 tbsp olive oil",
+   "3 cloves garlic, smashed",
+   "6-8 sage leaves",
+   "1 tin (400 g) chopped tomatoes",
+   "salt, pepper",
+   "bread to serve"
+  ],
+  "steps": [
+   "Prick the sausages with a fork and brown them in half the oil (8-10 minutes); take out and slice.",
+   "In the same pan, fry the garlic and sage in the rest of the oil for 1 minute.",
+   "Add the tomatoes and cook for 10 minutes.",
+   "Add the beans and sausages, season and cook for another 10-15 minutes until thickened.",
+   "Serve with bread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "italian--salsiccia-e-patate-al-forno-sult-kolbasz-burgonyaval-es-paprikaval": {
+  "title": "Salsiccia e patate al forno (roast sausages with potatoes and peppers)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 Italian or fresh sausages",
+   "1 kg potatoes, cut into wedges",
+   "2 romano peppers, cut into pieces",
+   "1 red onion, cut into wedges",
+   "4 tbsp olive oil",
+   "2 sprigs rosemary",
+   "4 cloves garlic, whole",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Toss the potatoes, peppers, onion and garlic with the oil, rosemary, salt and pepper and spread in a roasting tin.",
+   "Roast for 20 minutes.",
+   "Add the sausages and roast for another 25-30 minutes, turning once, until nicely browned.",
+   "Packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "italian--pollo-con-peperoni-paprikas-paradicsomos-csirke-olasz-modra": {
+  "title": "Pollo con peperoni (Italian chicken with peppers and tomato)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 boneless chicken thighs, cut into large pieces",
+   "3 sweet peppers (red, yellow), cut into strips",
+   "1 onion, cut into strips",
+   "2 cloves garlic",
+   "4 tbsp olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "100 ml white wine (optional)",
+   "1 tsp oregano",
+   "salt, pepper",
+   "bread, rice or polenta to serve"
+  ],
+  "steps": [
+   "Season the chicken and brown it in half the oil; take out.",
+   "In the same pan, cook the onion, peppers and garlic in the rest of the oil for 8 minutes.",
+   "Pour in the wine, then add the tomatoes and oregano.",
+   "Return the chicken and simmer covered for 20-25 minutes until tender and the sauce is thick.",
+   "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "american--iros-amerikai-palacsinta": {
   "title": "American buttermilk pancakes",
   "time": "20 min",
@@ -11767,6 +15856,443 @@ window.I18N_EN_RECIPES = {
    "Pour it evenly over the bread and leave for at least 15 minutes to soak in.",
    "Bake in a 180 °C oven for 30-35 minutes until set and golden on top.",
    "Serve warm with maple syrup."
+  ]
+ },
+ "american--ropogos-amerikai-gofri": {
+  "title": "Crispy American waffles",
+  "time": "30 min",
+  "servings": "4 servings (about 6 waffles)",
+  "ingredients": [
+   "220 g flour",
+   "1 tbsp sugar",
+   "1 tbsp baking powder",
+   "1 tsp salt",
+   "2 eggs, separated",
+   "350 ml milk",
+   "120 ml vegetable oil + a little for the waffle iron"
+  ],
+  "steps": [
+   "Brush the plates of the waffle iron lightly with oil and preheat it.",
+   "Whisk the egg whites to stiff peaks in a small bowl and set aside.",
+   "In a large bowl, beat the yolks until pale, then add the milk and oil while beating.",
+   "Mix in the flour, sugar, baking powder and salt until smooth, then gently fold in the egg whites.",
+   "Pour a ladleful of batter onto the hot iron, close it and cook until golden (about 4-5 minutes each).",
+   "Serve with butter and maple syrup or fresh fruit."
+  ]
+ },
+ "american--teljes-kiorlesu-gofri-szerecsendioval": {
+  "title": "Wholemeal waffles with nutmeg",
+  "time": "30 min",
+  "servings": "4 servings (about 6 waffles)",
+  "ingredients": [
+   "160 g wholemeal flour",
+   "80 g wheat germ",
+   "2 tbsp sugar",
+   "1 tbsp baking powder",
+   "1 tsp grated nutmeg",
+   "1 tsp salt",
+   "500 ml milk",
+   "120 ml vegetable oil",
+   "2 eggs"
+  ],
+  "steps": [
+   "Preheat the waffle iron.",
+   "Mix the flour, wheat germ, sugar, baking powder, nutmeg and salt.",
+   "Add the milk, oil and eggs and mix until smooth.",
+   "Cook a ladleful of batter at a time in the oiled waffle iron for about 4-5 minutes.",
+   "Serve with melted butter, syrup or fruit."
+  ]
+ },
+ "american--mezeskalacsos-palacsinta-kaveval": {
+  "title": "Gingerbread pancakes with coffee",
+  "time": "25 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "350 g ready-made pancake mix",
+   "250 ml brewed coffee, cooled",
+   "250 ml water",
+   "4 tbsp molasses or honey",
+   "½ tsp cinnamon",
+   "¼ tsp ground ginger",
+   "¼ tsp grated nutmeg",
+   "a little oil for frying"
+  ],
+  "steps": [
+   "In a bowl, mix the pancake mix, coffee, water, molasses and spices.",
+   "The batter will be thin; for thicker pancakes, add another spoonful or two of mix.",
+   "Brush a non-stick frying pan lightly with oil and heat over medium heat.",
+   "Pour in half a ladleful of batter and cook for about 2 minutes until bubbles appear and the edges look dry, then flip and cook for another 1-2 minutes.",
+   "Serve with butter and syrup."
+  ]
+ },
+ "american--turmixolt-turos-palacsinta": {
+  "title": "Blender cottage cheese pancakes",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g cottage cheese or cream cheese",
+   "6 eggs",
+   "120 g flour",
+   "¼ tsp salt",
+   "6 tbsp vegetable oil",
+   "6 tbsp milk",
+   "½ tsp vanilla extract",
+   "a little oil for frying"
+  ],
+  "steps": [
+   "Put all the ingredients in a blender and blend for 1 minute until smooth.",
+   "Pour small ladlefuls of batter into a hot, lightly oiled frying pan.",
+   "Cook over medium heat until golden on both sides.",
+   "Serve warm with fruit or honey."
+  ]
+ },
+ "american--bananos-dios-muffin": {
+  "title": "Banana walnut muffins",
+  "time": "40 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "2 eggs",
+   "1 tbsp honey",
+   "250 ml milk",
+   "6 tbsp vegetable oil",
+   "2-3 ripe bananas, mashed with a fork",
+   "90 g plain flour",
+   "170 g wholemeal flour",
+   "½ tsp salt",
+   "2 tsp baking powder",
+   "60 g roughly chopped walnuts"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and grease a muffin tin.",
+   "Mix the eggs, honey, milk, oil and mashed banana until smooth.",
+   "In another bowl, mix the flours, salt, baking powder and walnuts, then gently fold into the wet mixture — lumps are fine.",
+   "Spoon into the tin and bake for 20-25 minutes until a skewer comes out clean.",
+   "Leave to cool in the tin for a few minutes, then on a rack."
+  ]
+ },
+ "american--afonyas-muffin": {
+  "title": "Blueberry muffins",
+  "time": "35 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "250 g flour",
+   "65 g sugar",
+   "2 tsp baking powder",
+   "¼ tsp salt",
+   "1 egg, beaten",
+   "180 ml milk",
+   "6 tbsp vegetable oil",
+   "150 g fresh or frozen blueberries"
+  ],
+  "steps": [
+   "Line a muffin tin with paper cases and preheat the oven to 200 °C.",
+   "In a bowl, mix the flour, sugar, baking powder and salt and make a well in the centre.",
+   "In a small bowl, mix the beaten egg, milk and oil and pour it into the flour mixture all at once.",
+   "Fold in the blueberries and stir only until combined — overmixing makes them tough.",
+   "Fill the cases two-thirds full and bake for 18-20 minutes until golden and a skewer comes out clean.",
+   "Take them out of the tin and cool on a rack for 5 minutes."
+  ]
+ },
+ "american--kukoricalisztes-muffin": {
+  "title": "Cornmeal muffins",
+  "time": "30 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "130 g cornmeal (polenta)",
+   "150 g plain flour",
+   "65 g sugar",
+   "2 tsp baking powder",
+   "½ tsp bicarbonate of soda",
+   "1 tsp salt",
+   "2 eggs",
+   "350 ml plain yogurt or sour cream",
+   "60 g butter, melted and cooled"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and grease a muffin tin.",
+   "Mix the cornmeal, flour, sugar, baking powder, bicarbonate of soda and salt.",
+   "Whisk the eggs with the yogurt and stir quickly into the dry ingredients, leaving some lumps.",
+   "Fold in the melted butter.",
+   "Spoon into the tin and bake for 15-18 minutes until golden on top."
+  ]
+ },
+ "american--zabpelyhes-kokuszos-muffin": {
+  "title": "Oat and coconut muffins",
+  "time": "35 min",
+  "servings": "12 muffins",
+  "ingredients": [
+   "90 g rolled oats",
+   "250 ml buttermilk",
+   "1 egg",
+   "50 g melted butter or margarine",
+   "130 g flour",
+   "1 tsp baking powder",
+   "½ tsp bicarbonate of soda",
+   "¼ tsp salt",
+   "150 g brown sugar",
+   "20 g desiccated coconut"
+  ],
+  "steps": [
+   "Mix the oats with the buttermilk and leave for 10 minutes; meanwhile preheat the oven to 200 °C.",
+   "In another bowl, mix the flour, coconut, sugar, baking powder, bicarbonate of soda and salt.",
+   "Add the egg and melted butter to the oat mixture and mix well.",
+   "Pour it all at once into the flour mixture and stir just until everything is moistened.",
+   "Fill the muffin tin three-quarters full and bake for 15-20 minutes."
+  ]
+ },
+ "american--csipos-delnyugati-tojasrantotta": {
+  "title": "Spicy Southwestern scrambled eggs",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 eggs",
+   "2 tbsp milk",
+   "1 tbsp butter",
+   "1 medium red onion, finely chopped",
+   "1 green chilli (e.g. jalapeño), seeded and chopped",
+   "1 green pepper, sliced",
+   "salt, pepper",
+   "hot sauce to serve"
+  ],
+  "steps": [
+   "Beat the eggs with the milk in a large bowl.",
+   "Melt the butter in a large frying pan over medium heat and fry the onion, chilli and green pepper for 2-4 minutes.",
+   "Pour in the eggs and wait 30 seconds to a minute until they start to set.",
+   "Stir, scraping the bottom of the pan with a spatula, until the eggs are nearly set but still creamy.",
+   "Take off the heat (the remaining heat keeps cooking them), season and serve with hot sauce."
+  ]
+ },
+ "american--latin-amerikai-sonkas-kukoricas-rantotta": {
+  "title": "Latin American ham and sweetcorn scramble",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "6 eggs",
+   "1 large onion, finely chopped",
+   "1 large tomato, diced",
+   "6 slices ham, chopped",
+   "1 tin sweetcorn (about 280 g drained), drained",
+   "100 g grated mozzarella",
+   "1 tbsp butter",
+   "1 tbsp ketchup",
+   "salt, pepper, a few drops of hot sauce"
+  ],
+  "steps": [
+   "Melt the butter in a medium frying pan and fry the onion until it starts to brown.",
+   "Add the ham and sweetcorn and fry for 5 minutes.",
+   "Add the tomato, season and, if you like, add a few drops of hot sauce.",
+   "Beat the eggs with the ketchup, pour into the pan and immediately scatter over the mozzarella.",
+   "Cook, stirring, until the eggs are as set as you like."
+  ]
+ },
+ "american--mogyorovajas-bananos-zabkasa": {
+  "title": "Peanut butter and banana porridge",
+  "time": "15 min",
+  "servings": "1 serving",
+  "ingredients": [
+   "90 g rolled oats",
+   "250 ml water",
+   "120 ml milk",
+   "1 banana, sliced",
+   "1-2 tbsp peanut butter",
+   "½ tbsp honey (or to taste)"
+  ],
+  "steps": [
+   "Cook the oats in the water for about 10 minutes (instant oats cook faster).",
+   "Put the cooked oats in a bowl.",
+   "Add the milk, peanut butter, honey and banana.",
+   "Mash the banana with a fork and mix everything well.",
+   "Serve warm, drizzled with a little honey."
+  ]
+ },
+ "american--hazi-tojasos-baconos-muffinszendvics": {
+  "title": "Homemade bacon and egg muffin",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 English muffins (or round rolls), halved",
+   "4 rashers bacon",
+   "2 eggs",
+   "salt, pepper",
+   "2 slices cheese (optional)"
+  ],
+  "steps": [
+   "Fry the bacon in one layer over medium heat until crisp, turning it now and then.",
+   "Drain on kitchen paper; leave about 1 tbsp of fat in the pan.",
+   "Meanwhile toast the muffins (if using cheese, put it on now so it melts).",
+   "Crack the eggs into the pan, season and fry for about 2 minutes, break the yolks, flip and cook for another minute.",
+   "Fill the muffins with the bacon and egg and serve at once."
+  ]
+ },
+ "american--amerikai-vajas-pogacsa-biscuit": {
+  "title": "American buttermilk-style biscuits",
+  "time": "30 min",
+  "servings": "8 biscuits",
+  "ingredients": [
+   "140 g flour + a little for rolling",
+   "½ tsp salt",
+   "2 tsp baking powder",
+   "20 g cold butter",
+   "120 ml milk"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Sift the flour, salt and baking powder together, then cut in the cold butter with a knife until it looks like breadcrumbs.",
+   "Add the milk and mix only until it comes together as a soft dough.",
+   "Knead briefly on a floured board and roll out to 1.3 cm thick; cut out small rounds and re-roll the scraps.",
+   "Put on a greased tray and bake for about 15 minutes until nicely browned; cool on a rack."
+  ]
+ },
+ "american--denveri-omlett-sonkaval-es-paprikaval": {
+  "title": "Denver omelette with ham and peppers",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "4 eggs",
+   "1 onion, finely chopped",
+   "½ red pepper, finely chopped",
+   "½ green pepper, finely chopped",
+   "80 g cooked ham, diced",
+   "4 rashers crisp-fried bacon, crumbled",
+   "2 tbsp butter",
+   "½ tsp salt",
+   "½ tsp pepper",
+   "a few drops of hot sauce (optional)"
+  ],
+  "steps": [
+   "Melt the butter in a large frying pan.",
+   "Fry the onion, peppers, ham and bacon until the onion is translucent.",
+   "In a small bowl, beat the eggs with the salt, pepper and hot sauce if using.",
+   "Pour slowly into the pan and stir into the vegetables.",
+   "Cook until lightly browned underneath, then flip and brown the other side."
+  ]
+ },
+ "american--kremsajttal-toltott-bundas-kenyer": {
+  "title": "Cream cheese stuffed French toast",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "4 slices (1.5 cm thick) stale brioche",
+   "1 egg, beaten",
+   "2 tbsp cream cheese",
+   "pinch of salt",
+   "2 tbsp butter",
+   "6 tbsp double cream",
+   "50 g sugar",
+   "2 tsp vanilla extract"
+  ],
+  "steps": [
+   "Spread half the brioche slices with cream cheese and top with the rest like a sandwich.",
+   "In a shallow dish, mix the egg, cream, sugar, vanilla and salt and coat the sandwiches on both sides.",
+   "Melt 1 tbsp butter in a small non-stick frying pan over medium-high heat and fry the first sandwich golden on both sides.",
+   "Take it out, melt the remaining butter and fry the second.",
+   "Serve at once with maple syrup, icing sugar or fresh fruit."
+  ]
+ },
+ "american--reggeli-rakott-kolbasszal-es-baconnel": {
+  "title": "Breakfast bake with sausage and bacon",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "5 thin breakfast sausages, cooked and chopped",
+   "8 rashers crisp-fried bacon, crumbled",
+   "4 eggs, beaten",
+   "250 g ricotta",
+   "300 g crumbled cornbread or toasted white bread",
+   "60 g melted butter",
+   "½ tsp salt",
+   "½ tsp freshly ground pepper",
+   "100 g grated semi-hard cheese",
+   "50 g breadcrumbs"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and grease a large ovenproof dish.",
+   "Mix the sausage and bacon; in another bowl mix the ricotta, eggs, butter, salt, pepper and crumbled bread.",
+   "Layer in the dish: bread mixture, meat mixture, and repeat until used up.",
+   "Mix the cheese with the breadcrumbs and scatter evenly over the top.",
+   "Bake for 30-35 minutes until browned and bubbling; serve warm."
+  ]
+ },
+ "american--sutoben-sult-serpenyos-palacsinta": {
+  "title": "Oven-baked skillet pancake",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "150 g flour",
+   "2 tsp baking powder",
+   "½ tsp bicarbonate of soda",
+   "½ tsp salt",
+   "2 tbsp sugar",
+   "250 ml milk",
+   "2 tbsp vegetable oil + a little for the pan",
+   "2 tsp vanilla extract",
+   "1 tbsp cider vinegar"
+  ],
+  "steps": [
+   "Preheat the oven to 230 °C and oil a 20 cm ovenproof frying pan.",
+   "Mix the flour, baking powder, bicarbonate of soda, salt and sugar.",
+   "Add the milk, oil and vanilla and mix well.",
+   "Stir in the vinegar and pour immediately into the pan.",
+   "Bake for 18-20 minutes until a skewer comes out clean; serve in wedges with syrup."
+  ]
+ },
+ "american--zoldseges-rantotta-paradicsommal-es-uborkaval": {
+  "title": "Scrambled eggs with tomato and cucumber",
+  "time": "10 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "1 tbsp oil",
+   "2 medium tomatoes, diced",
+   "1 medium cucumber, diced",
+   "3-4 eggs",
+   "½ small onion, finely chopped",
+   "2 pinches of salt"
+  ],
+  "steps": [
+   "Heat the oil in a frying pan over medium heat.",
+   "Add the tomato and cucumber and cook for 2 minutes, stirring now and then; season with salt.",
+   "Beat the eggs with the onion and a pinch of salt and pour into the pan.",
+   "Cook, turning every 30 seconds, until done to your liking.",
+   "Serve at once with toast."
+  ]
+ },
+ "american--sajtos-bundas-kenyer-szendvics": {
+  "title": "Cheese sandwich eggy bread",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "4 slices bread",
+   "2 slices cheese",
+   "2 eggs",
+   "salt, pepper",
+   "1 tbsp butter"
+  ],
+  "steps": [
+   "Beat the eggs in a bowl and season.",
+   "Put a slice of cheese on a slice of bread, sprinkle with pepper, top with another slice and cut in half diagonally.",
+   "Melt the butter in a frying pan over medium heat.",
+   "Dip the sandwich triangles in the egg, put them in the pan and fry, turning once, until golden on both sides.",
+   "Serve at once."
+  ]
+ },
+ "american--zabpelyhes-bananos-gofri-tojas-es-liszt-nelkul": {
+  "title": "Oat and banana waffles (no egg, no flour)",
+  "time": "35 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "180 g rolled oats",
+   "500 ml water",
+   "½ banana",
+   "2 tbsp milk powder",
+   "2 tbsp olive oil + a little for the iron",
+   "½ tsp salt"
+  ],
+  "steps": [
+   "Turn the waffle iron to its highest setting.",
+   "Put all the ingredients in a blender and blend until smooth; leave to stand for 10-15 minutes.",
+   "Grease the waffle iron with oil.",
+   "Pour in a portion of batter and cook for about 8-10 minutes until crisp; repeat until the batter is used up.",
+   "Serve with fruit, yogurt or syrup."
   ]
  },
  "american--klasszikus-amerikai-cheeseburger": {
@@ -12060,6 +16586,708 @@ window.I18N_EN_RECIPES = {
    "Stir in the prawns for the last 5 minutes and cook until they turn pink."
   ]
  },
+ "american--grillezett-sajtos-szendvics": {
+  "title": "Grilled cheese sandwich",
+  "time": "10 min",
+  "servings": "1 serving",
+  "ingredients": [
+   "2 slices bread",
+   "1 tbsp butter",
+   "2-3 slices good melting cheese (cheddar, gouda or similar)",
+   "ham or tomato slices to taste"
+  ],
+  "steps": [
+   "Heat a frying pan over medium-low heat.",
+   "Butter one side of each bread slice.",
+   "Put one slice in the pan butter side down, top with cheese (and ham or tomato if you like), then the other slice, butter side up.",
+   "Press down with a spatula and cook until golden underneath and the cheese starts to melt.",
+   "Flip, cook the other side, then cut in half and serve warm."
+  ]
+ },
+ "american--reuben-szendvics": {
+  "title": "Reuben sandwich",
+  "time": "15 min",
+  "servings": "1 serving",
+  "ingredients": [
+   "2 slices rye bread",
+   "120 g thinly sliced corned beef or pastrami",
+   "6 tbsp drained sauerkraut",
+   "2 tbsp chopped onion",
+   "2 tbsp Thousand Island or Russian dressing",
+   "1-2 slices Emmental",
+   "a little chopped parsley",
+   "1 tbsp butter"
+  ],
+  "steps": [
+   "Mix the sauerkraut with the onion and parsley.",
+   "Spread the dressing on the inside of both bread slices.",
+   "Layer the meat, cheese and sauerkraut mixture on one slice and top with the other.",
+   "Butter the outside of the bread.",
+   "Cook in a frying pan or sandwich press for 5-10 minutes until lightly browned on both sides."
+  ]
+ },
+ "american--po-boy-new-orleans-i-bagettszendvics": {
+  "title": "Po' boy (New Orleans baguette sandwich)",
+  "time": "10 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "1 baguette",
+   "200 g thinly sliced roast meat, turkey or ham",
+   "4 slices cheese",
+   "a few lettuce leaves, shredded",
+   "1 tomato, sliced",
+   "2 gherkins, sliced",
+   "mayonnaise and mustard to taste"
+  ],
+  "steps": [
+   "Cut the baguette in two, then slit each piece open lengthways like a book (leave one side joined).",
+   "Spread with mayonnaise and mustard.",
+   "Layer in the cheese, lettuce, meat, tomato and gherkins.",
+   "Close, press down and serve at once."
+  ]
+ },
+ "american--monte-cristo-szendvics": {
+  "title": "Monte Cristo sandwich",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "6 slices white bread",
+   "3 tbsp butter",
+   "6 slices cooked ham",
+   "6 slices roast chicken breast",
+   "4 slices Emmental",
+   "2 eggs",
+   "6 tbsp milk",
+   "redcurrant or strawberry jam to serve"
+  ],
+  "steps": [
+   "Butter the first bread slice and top with ham and chicken.",
+   "Butter the middle slice on both sides, lay it on the meat and top with cheese.",
+   "Put the third slice, butter side down, on the cheese; cut the sandwich in two and secure with cocktail sticks.",
+   "Beat the eggs with the milk, dip in the sandwiches and fry in butter until golden on all sides.",
+   "Remove the sticks and serve with redcurrant jam."
+  ]
+ },
+ "american--kubai-szendvics-cubano": {
+  "title": "Cuban sandwich (cubano)",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "1 long soft baguette",
+   "2 tbsp mustard",
+   "4 gherkins, sliced lengthways",
+   "10 slices cooked ham",
+   "4 slices roast pork",
+   "4 slices salami",
+   "2 slices Emmental",
+   "30 g butter"
+  ],
+  "steps": [
+   "Cut the baguette into pieces about 18 cm long and slice them open lengthways.",
+   "Spread the top halves with mustard and add the gherkins and cheese.",
+   "Put the folded ham slices on the bottom halves, then the roast pork and salami, and close the sandwiches.",
+   "Butter the outside and cook in a sandwich press, or in a frying pan weighed down with a heavy pan, for 4-6 minutes until crisp and the cheese has melted.",
+   "Cut in half diagonally and serve warm."
+  ]
+ },
+ "american--sloppy-joe-szaftos-daralthusos-hamburger": {
+  "title": "Sloppy Joes",
+  "time": "30 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "450 g minced beef",
+   "250 ml ketchup",
+   "250 ml barbecue sauce",
+   "1 tsp garlic powder",
+   "1 tsp chilli powder",
+   "1 small onion, finely chopped",
+   "½ green pepper, finely chopped",
+   "6 burger buns, toasted"
+  ],
+  "steps": [
+   "Brown the mince with the onion and pepper in a frying pan over medium heat.",
+   "Pour off any liquid.",
+   "Stir in the ketchup, barbecue sauce, garlic powder and chilli powder.",
+   "Simmer over low heat, stirring now and then, for 15-20 minutes until thickened.",
+   "Pile onto the toasted buns to serve."
+  ]
+ },
+ "american--sajtos-babos-quesadilla": {
+  "title": "Cheese and bean quesadillas",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "4 flour tortillas (about 20 cm)",
+   "100 g grated good melting cheese (cheddar or similar)",
+   "½ tin black beans, rinsed and drained",
+   "1 tomato, finely chopped",
+   "fresh coriander or parsley",
+   "a little oil",
+   "salsa to serve"
+  ],
+  "steps": [
+   "Heat a frying pan over medium-low heat and brush it lightly with oil.",
+   "Put in a tortilla and scatter over half the cheese.",
+   "Spread the beans, tomato and herbs evenly on top, then cover with another tortilla and press down.",
+   "When the cheese has melted and the underside is spotted brown, flip and cook until it holds together; make the second quesadilla the same way.",
+   "Cut into eight wedges and serve at once with salsa."
+  ]
+ },
+ "american--sajtos-enchilada-chilis-martassal": {
+  "title": "Cheese enchiladas in chilli gravy",
+  "time": "40 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "3 tbsp flour",
+   "2 tbsp chilli powder (or half sweet paprika)",
+   "3 tbsp vegetable oil",
+   "700 ml water",
+   "500 g grated cheddar",
+   "1 large onion, finely chopped",
+   "15-16 corn tortillas"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C.",
+   "In a large frying pan, fry the chilli powder and flour in the oil for 1 minute, pour in the water, bring to the boil and cook, stirring, for about 5 minutes until slightly thickened; turn the heat down.",
+   "Dip a tortilla in the gravy for 20-30 seconds to soften, lay it on a plate, put 1 tbsp cheese and a little onion in the middle, roll up and lay seam side down in a baking dish.",
+   "If the gravy gets too thick towards the end, thin it with a little water; spread the remaining gravy, cheese and onion over the rolls.",
+   "Bake for 5-10 minutes until the cheese melts — no longer, or the cheese toughens — and serve hot."
+  ]
+ },
+ "american--delnyugati-fekete-bab-rizzsel": {
+  "title": "Southwestern black beans and rice",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g rice (about 500 g cooked)",
+   "1 tin black beans (400 g), drained",
+   "1 tin chopped tomatoes (400 g)",
+   "1 green chilli, finely chopped",
+   "½ tsp ground cumin",
+   "salt"
+  ],
+  "steps": [
+   "Cook the rice in salted water as directed on the packet.",
+   "Meanwhile, mix the beans, tomatoes, chilli and cumin in a saucepan and season with salt.",
+   "Bring to the boil and heat through over low heat for 5-10 minutes.",
+   "Serve spooned over the hot rice."
+  ]
+ },
+ "american--kremes-kukoricaleves-corn-chowder": {
+  "title": "Creamy corn chowder",
+  "time": "35 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "2 tbsp butter",
+   "1 onion, finely chopped",
+   "1 celery stick, finely chopped",
+   "3 medium potatoes, cut into 1 cm cubes",
+   "300 g sweetcorn (frozen or tinned)",
+   "350 ml water",
+   "2 chicken stock cubes",
+   "¼ tsp thyme",
+   "250 ml milk",
+   "250 ml single cream",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Melt the butter in a medium saucepan and soften the onion and celery.",
+   "Add the potatoes, sweetcorn, water, stock cubes and thyme and season.",
+   "Cover and simmer for about 15 minutes until the potatoes are tender.",
+   "Pour in the milk and cream and heat through without boiling."
+  ]
+ },
+ "american--buffalo-csirkeszendvics": {
+  "title": "Buffalo chicken sandwich",
+  "time": "35 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 chicken breast fillets, pounded flat",
+   "120 g flour",
+   "1 tsp salt",
+   "250 ml milk",
+   "oil for frying",
+   "2 burger buns",
+   "2 lettuce leaves",
+   "4 slices tomato",
+   "a few red onion rings",
+   "4 tbsp hot sauce",
+   "blue cheese dressing to serve"
+  ],
+  "steps": [
+   "Mix the flour with the salt. Dip the chicken in the milk, then the flour, then again in milk and flour, and chill for 10-15 minutes.",
+   "In a large frying pan, heat enough oil to cover the chicken to 175 °C and fry for about 10 minutes until golden; drain on a rack.",
+   "Toast the cut sides of the buns.",
+   "Put the chicken in a lidded box with the hot sauce and shake gently to coat.",
+   "Put on the buns with lettuce, tomato and onion, and serve with blue cheese dressing."
+  ]
+ },
+ "american--muffuletta-new-orleans-i-olivas-felvagottas-kenyer": {
+  "title": "Muffuletta (New Orleans olive and cold cut loaf)",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 round loaf (about 25 cm across)",
+   "150 g olive spread or tapenade",
+   "100 g sliced ham",
+   "100 g sliced mortadella",
+   "150 g sliced salami",
+   "100 g sliced Emmental",
+   "100 g sliced provolone or other semi-hard cheese"
+  ],
+  "steps": [
+   "Cut the loaf in half horizontally and spread both cut sides with olive spread.",
+   "On the bottom half, layer half the salami, the ham, Emmental, provolone, mortadella, then the rest of the salami.",
+   "Cover with the top half and press down well.",
+   "Cut into four wedges and serve — or wrap tightly in film for a few hours so the flavours meld."
+  ]
+ },
+ "american--loco-moco-hawaii-rizstal-fasirttal-es-tukortojassal": {
+  "title": "Loco moco (Hawaiian rice bowl with burger and fried egg)",
+  "time": "30 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "150 g rice",
+   "300 g minced beef",
+   "salt, pepper",
+   "4 eggs",
+   "1 tbsp butter",
+   "1 tbsp flour",
+   "250 ml beef stock",
+   "1 tbsp soy sauce",
+   "1 spring onion, sliced"
+  ],
+  "steps": [
+   "Cook the rice.",
+   "Season the mince, shape into two flat patties and fry for 4-5 minutes per side; set aside.",
+   "Melt the butter in the meat juices, cook the flour for 1 minute, pour in the stock and soy sauce and cook, stirring, into a thick gravy.",
+   "Fry the eggs sunny side up in another pan.",
+   "To serve, put the rice at the bottom, then the patty and eggs, pour over the gravy and sprinkle with spring onion."
+  ]
+ },
+ "american--sult-pulykas-olivas-tortillatekercs": {
+  "title": "Baked turkey and olive wraps",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 large flour tortillas",
+   "150 g tomato purée (concentrated)",
+   "150 g black olives (drained), halved",
+   "500 g roast or cooked turkey, cut into 2 cm cubes"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C.",
+   "Mix the halved olives with the tomato purée.",
+   "Toss in the turkey, as much as the paste will coat.",
+   "Put some of the mixture on each tortilla, roll up and lay seam side down on a baking tray.",
+   "Bake for about 15 minutes until starting to brown; leave to cool for a few minutes so the heat reaches the middle."
+  ]
+ },
+ "american--steakes-baconos-melegszendvics": {
+  "title": "Steak and bacon hot sandwich",
+  "time": "20 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "2 beef fillet or sirloin steaks (about 300 g)",
+   "salt, pepper",
+   "6 rashers bacon",
+   "6 slices spicy cheese (e.g. pepper jack or chilli gouda)",
+   "1 baguette, split lengthways"
+  ],
+  "steps": [
+   "Season the steaks and cook in a hot frying pan for 2-3 minutes per side; rest for 5 minutes, then slice thinly.",
+   "Fry the bacon until crisp in the same pan.",
+   "Layer the steak, bacon and cheese on the bottom half of the baguette and cover with the top.",
+   "Put in a 180 °C oven for 5-8 minutes until the cheese melts and the bread is toasted.",
+   "Cut into three and serve warm."
+  ]
+ },
+ "american--sajtos-nachos": {
+  "title": "Cheesy nachos",
+  "time": "10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "350 g tortilla chips",
+   "400 g grated cheddar",
+   "2 tbsp chopped pickled green chillies (optional)",
+   "½ onion, finely chopped (optional)",
+   "salsa or sour cream to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and spread the chips on a lined baking tray.",
+   "Toss the cheese with the chillies and onion and scatter evenly over the chips.",
+   "Bake for 2-4 minutes until the cheese melts.",
+   "Serve hot with salsa or sour cream."
+  ]
+ },
+ "american--coleslaw-amerikai-kaposztasalata": {
+  "title": "Coleslaw",
+  "time": "15 min + 20 min standing",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 small white cabbage (about 800 g)",
+   "1 medium red onion, thinly sliced",
+   "4 tbsp mayonnaise",
+   "3 tbsp cider vinegar",
+   "1 carrot, grated (optional)",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Mix the mayonnaise with the cider vinegar until smooth.",
+   "Shred or slice the cabbage as finely as you like.",
+   "In a large bowl, mix the cabbage, onion and carrot, if using, with the dressing; season.",
+   "Leave in the fridge for at least 20 minutes, preferably a few hours, before serving so the flavours meld."
+  ]
+ },
+ "american--citromos-bazsalikomos-tojasos-krumplisalata": {
+  "title": "Lemon and basil potato salad with egg",
+  "time": "40 min + 30 min chilling",
+  "servings": "6 servings",
+  "ingredients": [
+   "1.3 kg small new or salad potatoes",
+   "5 hard-boiled eggs, chopped",
+   "1 medium red onion, finely chopped",
+   "2 tbsp chopped fresh basil",
+   "150 g sweetcorn",
+   "120 ml fresh lemon juice (2-3 lemons)",
+   "120 ml extra virgin olive oil",
+   "1 tbsp dried Italian herb mix",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Put the potatoes in plenty of salted water and cook for 15-20 minutes from boiling until a knife slides in easily; drain.",
+   "Put the chopped eggs in a large bowl; fry the onion in a little oil until light golden and add to the eggs.",
+   "Quarter the slightly cooled potatoes and add to the bowl with the sweetcorn, basil and herb mix; season.",
+   "In a small bowl, slowly whisk the olive oil into the lemon juice and toss with the salad.",
+   "Chill for 30 minutes before eating."
+  ]
+ },
+ "american--csipos-csirkes-ricottas-panini": {
+  "title": "Spicy chicken and ricotta panini",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g cooked chicken, shredded",
+   "250 g ricotta",
+   "2 tbsp extra virgin olive oil",
+   "8 slices (1.3 cm thick) white bread",
+   "hot sauce (e.g. Tabasco) to taste"
+  ],
+  "steps": [
+   "Spread half the bread slices generously with ricotta; toss the chicken with hot sauce, spread evenly over the ricotta and top with the remaining slices.",
+   "Heat a griddle pan over medium-high heat and brush the outside of the sandwiches with olive oil.",
+   "Cook in batches until browned on both sides and the cheese has melted (you can weigh them down with a heavy lid); serve warm."
+  ]
+ },
+ "american--fokhagymas-paradicsomos-cheddaros-szendvics": {
+  "title": "Garlic, tomato and cheddar sandwich",
+  "time": "10 min",
+  "servings": "1 serving",
+  "ingredients": [
+   "2 slices brown bread",
+   "1 clove garlic",
+   "1 green chilli",
+   "1 tomato",
+   "5 slices extra mature cheddar",
+   "1 tbsp olive oil",
+   "1 tsp lemon juice",
+   "salt, black pepper"
+  ],
+  "steps": [
+   "Toast the two slices of bread, one of them until really crisp.",
+   "Rub the crisp slice well with the garlic, chop the rest and scatter it over.",
+   "Halve the tomato, squash the cut side onto the same slice, spread the juice, slice the rest of the tomato and put it on the bread.",
+   "Drizzle carefully with the olive oil (no more than the bread can absorb), season, scatter over the sliced chilli and add the lemon juice.",
+   "Neatly lay on the cheddar slices and close with the other slice of bread."
+  ]
+ },
+ "american--grillezett-zoldseges-nyitott-szendvics-oreganoval": {
+  "title": "Open grilled vegetable sandwich with oregano",
+  "time": "15 min",
+  "servings": "1 serving",
+  "ingredients": [
+   "2 slices wholemeal bread",
+   "150 g mixed vegetables, thinly sliced (mushrooms, courgette, tomato, pepper)",
+   "1 tbsp olive oil",
+   "1 tsp dried oregano",
+   "salt"
+  ],
+  "steps": [
+   "Put the bread slices side by side on a baking tray.",
+   "Arrange the vegetables evenly on top.",
+   "Drizzle with the olive oil, season with salt and sprinkle generously with oregano.",
+   "Grill under medium-high heat for 5-10 minutes until golden.",
+   "Serve open, or carefully put the two halves together."
+  ]
+ },
+ "american--spenotsalata-tojassal-baconnel-es-lilahagymaval": {
+  "title": "Spinach salad with egg, bacon and red onion",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "180 ml olive oil",
+   "6 tbsp red wine vinegar",
+   "¼ tsp pepper",
+   "¼ tsp mustard powder",
+   "½ tsp salt",
+   "1 tbsp Worcestershire sauce",
+   "1.5 tsp paprika",
+   "2 tsp sugar",
+   "450 g baby spinach, patted dry",
+   "3 hard-boiled eggs, chopped",
+   "6 rashers crisp-fried bacon (or vegetarian bacon strips), crumbled",
+   "1 red onion, thinly sliced"
+  ],
+  "steps": [
+   "Mix the dressing ingredients (oil, vinegar, pepper, mustard powder, salt, Worcestershire sauce, paprika, sugar) well.",
+   "In a large bowl, mix the spinach, egg and onion.",
+   "Pour over the dressing (you won't need it all), toss and scatter over the bacon."
+  ]
+ },
+ "american--american-goulash-egyedenyes-daralthusos-paradicsomos-makaroni": {
+  "title": "American goulash (one-pot beef and tomato macaroni)",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "600 g minced beef",
+   "1 onion, finely chopped",
+   "1 sweet pepper, diced",
+   "2 cloves garlic",
+   "2 tins (400 g each) chopped tomatoes",
+   "500 ml beef stock",
+   "1 tbsp Worcestershire sauce",
+   "1 tsp Italian herb mix",
+   "1 tsp paprika",
+   "350 g elbow macaroni",
+   "100 g grated cheddar",
+   "salt, pepper"
+  ],
+  "steps": [
+   "In a large saucepan, brown the mince with the onion, pepper and garlic until crumbly.",
+   "Add the tomatoes, stock, Worcestershire sauce and spices, season and bring to the boil.",
+   "Stir in the dry macaroni and cook covered, stirring often, for 12-15 minutes until the pasta is tender.",
+   "Off the heat, stir in the cheese.",
+   "It keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--chicken-fajita-rice-bowl-fuszeres-csirkes-paprikas-rizstal": {
+  "title": "Chicken fajita rice bowls",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g chicken breast fillet, cut into strips",
+   "3 sweet peppers, cut into strips",
+   "1 red onion, sliced",
+   "3 tbsp oil",
+   "2 tsp fajita or taco seasoning",
+   "1 lime, juiced",
+   "250 g rice",
+   "1 tin (400 g) black beans, rinsed",
+   "salt",
+   "sour cream and salsa to serve"
+  ],
+  "steps": [
+   "Cook the rice in salted water.",
+   "Toss the chicken with half the seasoning, the lime juice and 1 tbsp oil.",
+   "In a large frying pan, stir-fry the peppers and onion in the rest of the oil over high heat for 5 minutes, sprinkle with the rest of the seasoning and take out.",
+   "Cook the chicken in the same pan for 6-8 minutes, then add the vegetables and beans and heat through.",
+   "Serve piled on the rice; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--unstuffed-pepper-skillet-lusta-toltott-paprika-serpenyoben": {
+  "title": "Unstuffed pepper skillet",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g minced beef",
+   "3 sweet peppers, diced",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "1 tin (400 g) chopped tomatoes",
+   "200 ml tomato sauce",
+   "200 g rice",
+   "400 ml stock",
+   "1 tsp Italian herb mix",
+   "100 g grated cheese",
+   "salt, pepper"
+  ],
+  "steps": [
+   "In a deep frying pan, brown the mince with the onion and garlic until crumbly.",
+   "Add the peppers and fry for 3 minutes.",
+   "Add the tomatoes, tomato sauce, rice, stock and herbs and season.",
+   "Simmer covered over low heat for 20 minutes until the rice is tender; scatter over the cheese and leave covered to melt.",
+   "It keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--chicken-tetrazzini-csirkes-gombas-sajtos-rakott-spagetti": {
+  "title": "Chicken tetrazzini (baked chicken and mushroom spaghetti)",
+  "time": "50 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "350 g spaghetti",
+   "500 g cooked chicken, shredded",
+   "300 g button mushrooms, sliced",
+   "1 onion, finely chopped",
+   "40 g butter",
+   "4 tbsp flour",
+   "500 ml chicken stock",
+   "250 ml milk",
+   "100 g grated Parmesan",
+   "150 g green peas",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C and cook the spaghetti al dente.",
+   "Soften the onion and mushrooms in the butter, sprinkle with the flour and whisk in the stock and milk; cook until thick.",
+   "Stir in half the Parmesan, season, then fold in the chicken, peas and pasta.",
+   "Spread in an ovenproof dish, sprinkle with the rest of the Parmesan and bake for 20-25 minutes.",
+   "Packed in portions it keeps 3-4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "american--cheeseburger-pasta-egyedenyes-sajtburgeres-teszta": {
+  "title": "Cheeseburger pasta (one pot)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g minced beef",
+   "1 onion, finely chopped",
+   "350 g short pasta (elbows or penne)",
+   "200 ml tomato sauce",
+   "2 tbsp ketchup",
+   "1 tbsp mustard",
+   "600 ml beef stock",
+   "150 ml milk",
+   "150 g grated cheddar",
+   "salt, pepper",
+   "gherkins to serve"
+  ],
+  "steps": [
+   "In a large saucepan, brown the mince with the onion until crumbly.",
+   "Add the tomato sauce, ketchup, mustard, stock and milk and bring to the boil.",
+   "Add the pasta and cook covered, stirring often, for 12-14 minutes.",
+   "Stir in the cheese and season.",
+   "Serve with chopped gherkins; it keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--broccoli-cheddar-soup-brokkolis-cheddaros-kremleves": {
+  "title": "Broccoli cheddar soup",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 large head broccoli, finely chopped",
+   "1 carrot, grated",
+   "1 onion, finely chopped",
+   "40 g butter",
+   "4 tbsp flour",
+   "700 ml vegetable or chicken stock",
+   "400 ml milk",
+   "200 g grated cheddar",
+   "pinch of nutmeg",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion in the butter, sprinkle over the flour and cook for 1 minute.",
+   "Whisk in the stock and milk and bring to the boil.",
+   "Add the broccoli and carrot and cook for 15 minutes.",
+   "Blend half the soup with a stick blender, then off the heat stir in the cheese; season with nutmeg, salt and pepper.",
+   "It keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "american--bbq-pulled-chicken-rice-bowl-szaftos-barbecue-csirke-rizzsel-es-kukoricaval": {
+  "title": "BBQ pulled chicken rice bowls",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g boneless chicken thigh or breast",
+   "1 onion, finely chopped",
+   "1 tbsp oil",
+   "250 ml barbecue sauce",
+   "100 ml stock",
+   "1 tsp smoked paprika",
+   "250 g rice",
+   "1 tin (300 g) sweetcorn",
+   "coleslaw or cabbage salad to serve"
+  ],
+  "steps": [
+   "Soften the onion in the oil and sprinkle with the smoked paprika.",
+   "Add the whole chicken pieces, barbecue sauce and stock and simmer covered over low heat for 25 minutes.",
+   "Shred the chicken in the sauce with two forks and reduce uncovered for 5 minutes.",
+   "Meanwhile, cook the rice and mix with the sweetcorn.",
+   "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--beef-and-barley-soup-marhahusos-gyongyarpaleves": {
+  "title": "Beef and barley soup",
+  "time": "1 hr 20 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g beef shin or shoulder, cut into small cubes",
+   "150 g pearl barley",
+   "1 onion, 2 carrots, 2 celery sticks, diced",
+   "250 g button mushrooms, sliced",
+   "2 tbsp oil",
+   "2 tbsp tomato purée",
+   "2 litres beef stock",
+   "1 tbsp Worcestershire sauce",
+   "2 bay leaves, 1 tsp thyme",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Brown the meat in the oil, add the onion, carrots, celery and mushrooms and cook for 5 minutes.",
+   "Stir in the tomato purée, pour in the stock and add the seasonings.",
+   "Simmer covered over low heat for 30 minutes.",
+   "Add the rinsed barley and cook for another 35-40 minutes until the meat and barley are tender; season.",
+   "It keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "american--chicken-and-dumplings-csirkeragu-puha-galuskaval": {
+  "title": "Chicken and dumplings",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g boneless chicken thigh, diced",
+   "1 onion, 2 carrots, 2 celery sticks, diced",
+   "3 tbsp butter",
+   "3 tbsp flour",
+   "1.2 litres chicken stock",
+   "100 ml milk",
+   "1 tsp thyme",
+   "salt, pepper",
+   "for the dumplings: 200 g flour, 2 tsp baking powder, ½ tsp salt, 30 g melted butter, 180 ml milk"
+  ],
+  "steps": [
+   "Soften the vegetables in the butter for 5 minutes, add the chicken, sprinkle with the flour and cook for 1 minute.",
+   "Whisk in the stock and milk, add the thyme, season and simmer for 15 minutes.",
+   "For the dumplings, mix the flour with the baking powder and salt, add the melted butter and milk and stir just to combine.",
+   "Drop spoonfuls of dough onto the simmering stew, cover and cook for 15 minutes (don't lift the lid) until the dumplings are puffed and cooked through.",
+   "It keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--chicken-and-rice-casserole-sult-csirkes-brokkolis-rizs-sajttal": {
+  "title": "Chicken and rice casserole with broccoli and cheese",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "600 g chicken breast fillet, diced",
+   "250 g rice",
+   "1 head broccoli, cut into small florets",
+   "1 onion, finely chopped",
+   "2 tbsp butter",
+   "250 g button mushrooms, sliced",
+   "250 ml single cream",
+   "600 ml hot chicken stock",
+   "150 g grated cheddar",
+   "1 tsp garlic powder",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Soften the onion and mushrooms in the butter and mix with the raw rice in a large ovenproof dish.",
+   "Stir in the chicken and garlic powder, season and pour over the hot stock and cream.",
+   "Cover with foil and bake for 35 minutes; then stir in the broccoli, sprinkle with cheese and bake uncovered for another 15 minutes.",
+   "Packed in portions it keeps 3-4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
  "american--sutoben-sult-barbecue-csirke": {
   "title": "Oven-baked barbecue chicken",
   "time": "55 min",
@@ -12346,6 +17574,652 @@ window.I18N_EN_RECIPES = {
    "Add the drained beans and the sausage and pour in a little water or stock.",
    "Cook covered for 20-25 minutes, mashing some of the beans now and then to make it creamy.",
    "Serve with separately cooked rice."
+  ]
+ },
+ "american--egyserpenyos-daralthusos-paradicsomos-teszta": {
+  "title": "One-pan beef and tomato pasta",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g short pasta (elbows or farfalle)",
+   "500 g minced beef",
+   "1 small onion, finely chopped",
+   "1 clove garlic, crushed",
+   "500 ml tomato passata",
+   "1 tsp sugar",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the pasta al dente in plenty of salted water, then drain.",
+   "Meanwhile, fry the onion and garlic in a large frying pan, add the mince and brown it, breaking it up.",
+   "Pour in the passata and sugar, season and cook for 5 minutes.",
+   "Stir in the drained pasta and serve hot."
+  ]
+ },
+ "american--tacos-rakott-tortillaval-es-sajttal": {
+  "title": "Taco bake with tortillas and cheese",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "450 g minced beef",
+   "1 packet taco seasoning",
+   "1 tsp chilli powder",
+   "1 tsp garlic powder",
+   "250 ml tomato passata",
+   "3 flour tortillas, torn into bite-sized pieces",
+   "250 g grated cheese"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Brown the mince in a frying pan over medium heat, then pour off the liquid.",
+   "Stir in the taco seasoning, chilli powder, garlic powder and passata and cook for 5 minutes, stirring now and then.",
+   "In an ovenproof dish, mix the meat with the tortilla pieces and two-thirds of the cheese, and scatter the rest of the cheese on top.",
+   "Bake for 20 minutes and serve hot."
+  ]
+ },
+ "american--tonhalas-borsos-rakott-teszta": {
+  "title": "Tuna noodle bake with peas",
+  "time": "45 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "250 g egg noodles",
+   "2 tins tuna (about 300 g drained in total)",
+   "300 g frozen peas",
+   "250 g button mushrooms, sliced",
+   "3 tbsp butter",
+   "3 tbsp flour",
+   "500 ml milk",
+   "1 small onion, finely chopped",
+   "a few drops of hot sauce (optional)",
+   "100 g grated cheese",
+   "2 tbsp breadcrumbs",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C and cook the noodles al dente.",
+   "In a saucepan, soften the onion and mushrooms in 2 tbsp butter, sprinkle with the flour, cook for 1 minute, then whisk in the milk and cook into a thick sauce; season.",
+   "Mix the sauce with the noodles, flaked tuna, peas and hot sauce if using, and spread in an ovenproof dish.",
+   "Top with the cheese and the breadcrumbs mixed with the remaining melted butter.",
+   "Bake for 20-25 minutes until golden and bubbling."
+  ]
+ },
+ "american--csirke-a-la-king-kremes-gombas-csirkeragu": {
+  "title": "Chicken à la King (creamy chicken and mushrooms)",
+  "time": "30 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 chicken breast fillets, diced",
+   "1 tbsp olive oil",
+   "1 small onion, diced",
+   "100 g button mushrooms, sliced",
+   "100 g sweet red pepper or pimento, chopped",
+   "45 g butter",
+   "20 g flour",
+   "250 ml milk",
+   "salt, pepper",
+   "toast or cooked rice to serve"
+  ],
+  "steps": [
+   "Fry the chicken with the onion, mushrooms and pepper in the olive oil in a frying pan until the chicken is cooked through.",
+   "Melt the butter in a small saucepan, stir in the flour, season and cook over medium heat for about 1 minute.",
+   "Add the milk and cook, stirring, until thickened.",
+   "Stir the chicken and vegetables into the sauce and cook together for a few more minutes.",
+   "Serve on toast or rice."
+  ]
+ },
+ "american--chicken-fried-steak-rantott-marhaszelet-feher-martassal": {
+  "title": "Chicken-fried steak with white gravy",
+  "time": "30 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "3 beef steaks (1.2 cm thick, topside or fillet), pounded",
+   "100 g flour + 3 tbsp for the gravy",
+   "2 eggs, beaten",
+   "1 tsp salt",
+   "1 tsp freshly ground pepper",
+   "1 tbsp smoked paprika",
+   "4 tbsp bacon fat or oil",
+   "200 ml milk",
+   "6 tbsp double cream",
+   "100 ml chicken stock"
+  ],
+  "steps": [
+   "Heat 3 tbsp fat in a large (ideally cast-iron) frying pan over medium-high heat.",
+   "Beat the eggs with the salt, pepper and paprika, dip in the steaks, then coat both sides thoroughly in flour.",
+   "Fry the steaks for about 4 minutes per side until golden, then keep warm in a 90 °C oven.",
+   "Add the remaining fat to the pan, turn the heat down, sprinkle in 3 tbsp flour and cook, whisking, until pale blond.",
+   "Pour in the stock, scrape up the browned bits, add the milk and cream, bring to the boil and simmer until it coats a spoon; pour over the steaks and serve."
+  ]
+ },
+ "american--20-perces-gyors-marha-sztroganov": {
+  "title": "20-minute beef stroganoff",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g wide egg noodles",
+   "500 g beef sirloin or fillet, cut into thin strips",
+   "2 tbsp oil",
+   "250 g sliced button mushrooms",
+   "1 large onion, roughly chopped",
+   "1 clove garlic, crushed",
+   "½ tsp paprika",
+   "1 tbsp flour",
+   "200 ml beef stock",
+   "250 ml sour cream",
+   "salt, pepper",
+   "1 bunch parsley, finely chopped"
+  ],
+  "steps": [
+   "Cook the noodles as directed on the packet and drain.",
+   "Meanwhile, in a deep frying pan, quickly sear the beef strips in half the oil over high heat and take them out.",
+   "Soften the mushrooms and onion in the rest of the oil for about 3 minutes, add the garlic and paprika, sprinkle with the flour and pour in the stock.",
+   "Return the beef, season, then over low heat stir in the sour cream and heat through without boiling (it curdles if it boils).",
+   "Serve over the noodles, sprinkled with parsley."
+  ]
+ },
+ "american--curryvel-fuszerezett-csirkes-brokkolis-rakott": {
+  "title": "Curried chicken and broccoli bake",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "450 g chicken breast fillet, diced",
+   "1 tbsp oil",
+   "400 g frozen broccoli",
+   "200 ml single cream",
+   "100 g mayonnaise",
+   "150 ml milk",
+   "1 tsp curry powder",
+   "50 g grated cheese",
+   "salt, pepper",
+   "cooked rice to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Brown the chicken in the oil on all sides and season.",
+   "Whisk the cream, mayonnaise, milk and curry powder until smooth.",
+   "Put the chicken and broccoli in an ovenproof dish, pour over the sauce and sprinkle with cheese.",
+   "Bake covered with foil for 25 minutes, then uncovered for another 5 minutes; serve with rice."
+  ]
+ },
+ "american--kreol-garnelaragu-fustos-paprikaval": {
+  "title": "Creole prawns with smoky paprika",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 tsp oil",
+   "1 onion, finely chopped",
+   "1 small green pepper, seeded and chopped",
+   "1 small celery stick, thinly sliced",
+   "2 cloves garlic, finely chopped",
+   "1 tin (400 g) chopped tomatoes",
+   "2 bay leaves",
+   "1 tsp paprika",
+   "¼-½ tsp ground chipotle or smoked hot paprika",
+   "350 g peeled prawns",
+   "salt, freshly ground pepper",
+   "200 g brown rice (about 500 g cooked)"
+  ],
+  "steps": [
+   "Cook the rice as directed on the packet.",
+   "In a medium frying pan, soften the onion, celery, pepper and garlic in the oil over medium-high heat for 4-5 minutes until the onion is translucent.",
+   "Add the tomatoes, bay leaves, paprika and chipotle and simmer uncovered for 15 minutes, stirring 2-3 times, until thick.",
+   "Add the prawns and cook for 4-5 minutes until pink and firm.",
+   "Season, remove the bay leaves and serve with the rice."
+  ]
+ },
+ "american--sajtos-tejfolos-rakott-reszelt-burgonya": {
+  "title": "Cheesy hash brown bake",
+  "time": "50 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "900 g frozen hash browns, or raw potatoes grated and squeezed dry",
+   "200 g grated cheddar",
+   "250 ml sour cream",
+   "250 ml single cream",
+   "50 g melted butter",
+   "1 bunch spring onions, sliced",
+   "1 tsp salt",
+   "½ tsp pepper",
+   "50 g cornflakes",
+   "1 tbsp melted butter for the topping"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C.",
+   "In a large bowl, mix the potatoes, cheese, sour cream, cream, 50 g butter, spring onions, salt and pepper.",
+   "Spread in an ovenproof dish of about 25×35 cm.",
+   "Lightly crush the cornflakes, toss with 1 tbsp butter and scatter over the top.",
+   "Bake for about 40 minutes until bubbling and lightly browned on top."
+  ]
+ },
+ "american--gyors-csirkes-zoldseges-pite": {
+  "title": "Quick chicken and vegetable pot pie",
+  "time": "50 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "2 sheets puff pastry or ready-made pie pastry (about 270 g each)",
+   "400 g cooked chicken, torn into bite-sized pieces",
+   "450 g frozen mixed vegetables (peas, carrots, sweetcorn)",
+   "2 tbsp butter",
+   "3 tbsp flour",
+   "300 ml chicken stock",
+   "150 ml single cream",
+   "salt, pepper",
+   "1 egg for brushing"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Melt the butter in a saucepan, cook the flour for 1 minute, pour in the stock and cream and cook, stirring, until thick; season.",
+   "Stir in the chicken and vegetables.",
+   "Line a pie dish with one pastry sheet, pour in the filling, cover with the other sheet and press the edges together; cut a few slits in the top and brush with beaten egg.",
+   "Bake for 30-35 minutes until golden."
+  ]
+ },
+ "american--makos-kekszmorzsas-csirkerakott": {
+  "title": "Poppy seed chicken bake with cracker crumbs",
+  "time": "45 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "4 chicken breast fillets, poached and diced",
+   "250 ml mayonnaise",
+   "250 ml sour cream",
+   "100 g grated cheddar",
+   "150 g savoury crackers (e.g. Ritz), crushed",
+   "3 tbsp poppy seeds",
+   "100 g butter, melted"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C.",
+   "Mix the chicken with the mayonnaise and sour cream and spread over the bottom of a dish of about 23×33 cm.",
+   "Sprinkle with the cheese, then the cracker crumbs, then the poppy seeds.",
+   "Drizzle the melted butter evenly over the top.",
+   "Bake for 25 minutes until golden on top."
+  ]
+ },
+ "american--babos-kukoricas-teszta-delnyugati-modra": {
+  "title": "Southwestern pasta with beans and sweetcorn",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "350 g pasta shells or other short pasta",
+   "2 tbsp olive oil",
+   "1 onion, finely chopped",
+   "1 green pepper, chopped",
+   "1 tin (400 g) sweetcorn, drained",
+   "1 tin (400 g) black beans, drained",
+   "1 tin (400 g) chopped tomatoes with juice",
+   "4 tbsp salsa",
+   "4 tbsp sliced black olives",
+   "1.5 tbsp taco seasoning",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the pasta in lightly salted boiling water for 8-10 minutes until al dente, then drain.",
+   "Meanwhile, fry the onion and pepper in the olive oil in a large frying pan over medium heat for about 10 minutes until lightly browned.",
+   "Stir in the sweetcorn, beans, tomatoes, salsa, olives and taco seasoning, season and heat through for about 5 minutes.",
+   "Toss the vegetables with the pasta.",
+   "Serve warm, or cold as a pasta salad."
+  ]
+ },
+ "american--csipos-csirkes-tortillarakott": {
+  "title": "Spicy chicken tortilla bake",
+  "time": "50 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "400 g cooked chicken, shredded",
+   "1 tin (400 g) kidney beans in chilli sauce or chilli con carne",
+   "250 ml sour cream",
+   "200 ml single cream",
+   "350 ml salsa",
+   "10-12 corn tortillas",
+   "250 g grated cheddar"
+  ],
+  "steps": [
+   "Preheat the oven to 190 °C.",
+   "Mix the chicken, chilli beans, sour cream, cream and salsa.",
+   "Layer in an ovenproof dish: tortillas, chicken mixture, cheese — in two layers, finishing with cheese.",
+   "Bake for 30-35 minutes until bubbling and the cheese is browned.",
+   "Rest for a few minutes before cutting."
+  ]
+ },
+ "american--mini-pizzak-angol-muffinon-haromfele-sajttal": {
+  "title": "Three-cheese English muffin mini pizzas",
+  "time": "25 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "6 English muffins (or round rolls), halved and lightly buttered",
+   "3 tbsp grated Parmesan",
+   "150 g grated cheddar",
+   "6 frankfurters, cut into 5 mm slices",
+   "300 ml pizza sauce",
+   "100 g grated mozzarella"
+  ],
+  "steps": [
+   "Preheat the oven to 175 °C.",
+   "Sprinkle the buttered muffin halves with Parmesan and toast under the grill until golden.",
+   "Put 1.5 tbsp cheddar on each, then cover with frankfurter slices.",
+   "Spread about 2 tbsp pizza sauce on each and sprinkle with 1 tbsp mozzarella.",
+   "Bake for 12-15 minutes until heated through."
+  ]
+ },
+ "american--mezes-mustaros-borsos-lazac": {
+  "title": "Honey mustard peppered salmon",
+  "time": "25 min",
+  "servings": "4 servings",
+  "marinate": "30 minutes",
+  "ingredients": [
+   "4 salmon fillets (170 g each)",
+   "4 tbsp olive oil",
+   "1 tbsp honey",
+   "2 tbsp Dijon mustard",
+   "3 cloves garlic, crushed",
+   "½ tsp cayenne pepper",
+   "½ tsp ground coriander",
+   "2 tbsp fresh lemon juice",
+   "salt"
+  ],
+  "steps": [
+   "In a shallow dish, mix the oil, honey, mustard, garlic, cayenne, coriander, lemon juice and salt.",
+   "Turn the salmon in it and marinate at room temperature for 30 minutes.",
+   "Preheat the oven to 175 °C and grease an ovenproof dish.",
+   "Take the salmon out of the marinade and lay it in the dish.",
+   "Bake for 10-12 minutes until just cooked; serve with rice or salad."
+  ]
+ },
+ "american--baconos-zoldbab-burgonyaval-es-mandulaval": {
+  "title": "Green beans with bacon, potato and almonds",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 medium potato (about 300 g)",
+   "6 rashers bacon",
+   "800 g green beans (tinned or frozen)",
+   "120 ml water or liquid from the tin",
+   "½ tsp salt",
+   "½ tsp onion powder",
+   "2 tbsp flaked almonds"
+  ],
+  "steps": [
+   "Fry the bacon until crisp and crumble into small pieces.",
+   "Peel the potato and cut into small cubes.",
+   "Drain the green beans (keep 120 ml of the liquid if tinned).",
+   "Put the beans, liquid, bacon and potato in a saucepan and sprinkle with the salt and onion powder.",
+   "Cook covered over medium heat, stirring once, for 12-15 minutes until the potato is tender (2×5 minutes in the microwave also works), then let it stand for 5 minutes.",
+   "Serve sprinkled with flaked almonds."
+  ]
+ },
+ "american--rakott-spagetti-daralt-hussal-es-kremsajtos-reteggel": {
+  "title": "Layered spaghetti bake with mince and cream cheese",
+  "time": "1 hr",
+  "servings": "8 servings",
+  "ingredients": [
+   "450 g minced turkey or beef",
+   "½ onion, finely chopped",
+   "700 ml tomato pasta sauce",
+   "2 tsp dried Italian herbs",
+   "220 g cream cheese",
+   "450 g curd cheese or cottage cheese",
+   "120 ml sour cream",
+   "500 g spaghetti",
+   "2 tbsp breadcrumbs",
+   "50 g grated Parmesan",
+   "a little oil for the dish"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C.",
+   "Brown the mince with the onion and, when cooked through, stir in the pasta sauce and herbs.",
+   "Mix the cream cheese, curd cheese and sour cream until smooth.",
+   "Cook the spaghetti as directed on the packet and drain.",
+   "In an oiled ovenproof dish of about 3 litres, layer half the spaghetti, the cheese mixture, the rest of the spaghetti and finally the meat sauce; mix the breadcrumbs with the Parmesan and scatter over the top.",
+   "Bake for 30 minutes until bubbling and heated through."
+  ]
+ },
+ "american--chicken-noodle-soup-amerikai-csirkes-tesztaleves": {
+  "title": "Chicken noodle soup",
+  "time": "50 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "600 g boneless chicken thigh or breast",
+   "1 onion, finely chopped",
+   "3 carrots, sliced",
+   "2 celery sticks, sliced",
+   "2 tbsp butter",
+   "2 litres chicken stock",
+   "1 bay leaf, 1 tsp thyme",
+   "200 g wide egg noodles",
+   "1 bunch parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion, carrots and celery in the butter in a pot for 5 minutes.",
+   "Add the stock, the whole chicken pieces, bay leaf and thyme and cook for 20 minutes.",
+   "Take out the chicken, shred it with forks and return it.",
+   "Add the noodles and cook as directed (6-8 minutes); season and stir in the parsley.",
+   "It keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "american--burrito-bowl-daralthusos-babos-rizstal-kukoricaval": {
+  "title": "Burrito bowls with beef, beans and sweetcorn",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g minced beef",
+   "1 onion, finely chopped",
+   "2 tsp taco seasoning",
+   "1 tin (400 g) kidney beans, rinsed",
+   "1 tin (300 g) sweetcorn, drained",
+   "200 ml tomato sauce",
+   "250 g rice",
+   "1 lime, juiced",
+   "1 bunch coriander or parsley",
+   "100 g grated cheddar",
+   "salt"
+  ],
+  "steps": [
+   "Cook the rice and stir in the lime juice and half the chopped herbs.",
+   "Brown the mince with the onion until crumbly, sprinkle with taco seasoning, add the tomato sauce and cook for 5 minutes.",
+   "Add the beans and sweetcorn and heat through; season.",
+   "Divide into boxes: rice at the bottom, the beef and beans on top, then cheese and herbs.",
+   "It keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--salisbury-steak-huspogacsa-gombas-hagymas-szaftban-purevel": {
+  "title": "Salisbury steak with mushroom onion gravy and mash",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g minced beef",
+   "1 egg",
+   "4 tbsp breadcrumbs",
+   "1 tbsp Worcestershire sauce",
+   "salt, pepper",
+   "2 tbsp oil",
+   "1 onion, sliced into half moons",
+   "250 g button mushrooms, sliced",
+   "2 tbsp flour",
+   "400 ml beef stock",
+   "1 kg potatoes plus 200 ml milk and 30 g butter for the mash"
+  ],
+  "steps": [
+   "Knead the meat with the egg, breadcrumbs, Worcestershire sauce, salt and pepper and shape into 6-8 flat oval patties.",
+   "Brown both sides in the oil for 3-4 minutes and take out.",
+   "In the same pan, cook the onion and mushrooms for 6-8 minutes, sprinkle with the flour and whisk in the stock.",
+   "Return the patties and simmer covered in the gravy for 15 minutes; meanwhile make mash from the potatoes.",
+   "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--swedish-meatballs-tejszines-husgomboc-amerikai-modra-burgonyaval": {
+  "title": "Swedish meatballs in cream gravy with potatoes",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g mixed minced meat",
+   "1 small onion, grated",
+   "1 egg",
+   "5 tbsp breadcrumbs",
+   "pinch of nutmeg and allspice",
+   "salt, pepper",
+   "3 tbsp butter",
+   "3 tbsp flour",
+   "500 ml beef stock",
+   "150 ml single cream",
+   "1 tbsp soy or Worcestershire sauce",
+   "1 kg potatoes to serve"
+  ],
+  "steps": [
+   "Knead the meat with the onion, egg, breadcrumbs and spices and shape into walnut-sized balls.",
+   "Brown them all over in half the butter (10 minutes) and take out; meanwhile boil the potatoes.",
+   "Cook the flour in the rest of the butter for 1 minute, pour in the stock and cook, stirring, until thick; add the cream and soy sauce.",
+   "Return the meatballs and simmer in the gravy for 10 minutes.",
+   "Serve with potatoes or mash; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--taco-soup-tacos-bab-es-daralthusleves": {
+  "title": "Taco soup with beans and beef",
+  "time": "40 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g minced beef",
+   "1 onion, finely chopped",
+   "1 sweet pepper, diced",
+   "2 tins (400 g each) beans (kidney and black), rinsed",
+   "1 tin (300 g) sweetcorn",
+   "2 tins (400 g each) chopped tomatoes",
+   "700 ml beef stock",
+   "2 tbsp taco seasoning",
+   "salt",
+   "sour cream, grated cheese, tortilla chips to serve"
+  ],
+  "steps": [
+   "Brown the mince with the onion and pepper in a pot until crumbly.",
+   "Sprinkle with the taco seasoning and fry for 1 minute.",
+   "Add the beans, sweetcorn, tomatoes and stock and season.",
+   "Simmer for 20 minutes.",
+   "Serve with sour cream and cheese; it keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "american--honey-garlic-chicken-mezes-fokhagymas-csirkecomb-rizzsel-es-brokkolival": {
+  "title": "Honey garlic chicken with rice and broccoli",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 boneless chicken thighs",
+   "1 tbsp oil",
+   "4 tbsp honey",
+   "4 tbsp soy sauce",
+   "4 cloves garlic, crushed",
+   "1 tbsp cider vinegar",
+   "1 tsp cornflour",
+   "250 g rice",
+   "1 head broccoli, cut into florets",
+   "salt, pepper",
+   "sesame seeds to serve"
+  ],
+  "steps": [
+   "Cook the rice and steam the broccoli on top of the rice or separately for the last 5 minutes.",
+   "Season the chicken and fry in the oil for 5-6 minutes per side until golden.",
+   "Mix the honey, soy sauce, garlic, vinegar and cornflour with 3 tbsp water.",
+   "Pour over the chicken and cook, turning, for 3-4 minutes until the sauce becomes a thick, glossy glaze.",
+   "Serve with sesame seeds, rice and broccoli; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--white-chicken-chili-feher-babos-csirkes-chili": {
+  "title": "White chicken chili",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "600 g chicken breast fillet",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "1 green chilli, finely chopped",
+   "1 tbsp oil",
+   "2 tsp ground cumin",
+   "1 tsp oregano",
+   "2 tins (400 g each) white beans, rinsed",
+   "1 tin (300 g) sweetcorn",
+   "800 ml chicken stock",
+   "150 ml sour cream or cream cheese",
+   "salt, pepper",
+   "fresh coriander"
+  ],
+  "steps": [
+   "Soften the onion, garlic and chilli in the oil and sprinkle in the cumin and oregano.",
+   "Add the whole chicken, the stock and half the beans and cook for 20 minutes.",
+   "Take out and shred the chicken; mash the rest of the beans with a fork and add them to the pot with the sweetcorn.",
+   "Return the meat, stir in the sour cream, season and boil for 5 minutes.",
+   "Serve with coriander; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--sausage-and-peppers-kolbasz-paprikaval-es-hagymaval-rizzsel": {
+  "title": "Sausage and peppers with rice",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 fresh (Italian) sausages",
+   "3 sweet peppers, cut into strips",
+   "2 onions, sliced",
+   "3 cloves garlic",
+   "2 tbsp olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "1 tsp oregano",
+   "salt, pepper",
+   "250 g rice or 4 rolls to serve"
+  ],
+  "steps": [
+   "Brown the sausages in half the oil (8-10 minutes), take out and slice.",
+   "Cook the peppers and onions in the rest of the oil for 8 minutes and add the garlic.",
+   "Add the tomatoes and oregano, return the sausages, season and cook for 10 minutes.",
+   "Meanwhile, cook the rice.",
+   "Serve with rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--turkey-sweet-potato-skillet-pulykas-edesburgonyas-serpenyos-spenottal": {
+  "title": "Turkey and sweet potato skillet with spinach",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g minced turkey",
+   "2 medium sweet potatoes (about 700 g), cut into small cubes",
+   "1 red onion, finely chopped",
+   "1 sweet pepper, diced",
+   "2 tbsp olive oil",
+   "1 tsp smoked paprika",
+   "1 tsp ground cumin",
+   "100 g baby spinach",
+   "80 g grated cheese (optional)",
+   "salt, pepper"
+  ],
+  "steps": [
+   "In a large frying pan, cook the sweet potato in half the oil, covered and stirring now and then, for 10-12 minutes until nearly tender.",
+   "Add the onion and pepper and fry for 3 minutes.",
+   "Push aside, brown the turkey in the rest of the oil until crumbly, sprinkle with the spices, season and mix together.",
+   "Stir in the spinach and let it wilt; sprinkle with cheese if you like.",
+   "It keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "american--lasagna-soup-lasagneleves-daralt-hussal-es-ricottaval": {
+  "title": "Lasagna soup with beef and ricotta",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "500 g minced beef or sausage meat",
+   "1 onion, finely chopped",
+   "3 cloves garlic",
+   "1 tbsp olive oil",
+   "2 tbsp tomato purée",
+   "1 tin (400 g) chopped tomatoes",
+   "1.2 litres stock",
+   "1 tsp Italian herb mix",
+   "8 lasagne sheets, broken into pieces",
+   "150 g ricotta",
+   "50 g grated Parmesan",
+   "salt, pepper, basil"
+  ],
+  "steps": [
+   "Brown the meat with the onion and garlic in the oil until crumbly.",
+   "Stir in the tomato purée, then add the tomatoes, stock and herbs; season and cook for 10 minutes.",
+   "Add the pasta pieces and cook for 10-12 minutes until tender.",
+   "Mix the ricotta with the Parmesan.",
+   "Serve each bowl with a spoonful of ricotta and basil; it keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
   ]
  },
  "greek--gorog-joghurt-mezzel-es-dioval": {
@@ -12969,6 +18843,326 @@ window.I18N_EN_RECIPES = {
    "Serve topped with chopped red onion, a drop of lemon juice and olive oil."
   ]
  },
+ "greek--gorog-csirkes-fetas-tortillatekercs": {
+  "title": "Greek chicken and feta wraps",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g cooked or roast chicken, shredded",
+   "200 g crumbled feta",
+   "120 ml tzatziki or garlicky Greek yogurt",
+   "4 tbsp chopped fresh oregano (or 1 tsp dried) + extra to serve",
+   "4 flour tortillas",
+   "1 tbsp olive oil"
+  ],
+  "steps": [
+   "Mix the feta, chicken, tzatziki and oregano.",
+   "Brush one side of each tortilla lightly with olive oil.",
+   "Put a quarter of the filling on each and roll up lengthways.",
+   "Sprinkle with a little more oregano and serve cold."
+  ]
+ },
+ "greek--spenotos-joghurtos-lepenykek-spanakokeftedes": {
+  "title": "Spinach and yogurt fritters (spanakokeftedes)",
+  "time": "30 min",
+  "servings": "4 servings (about 18 fritters)",
+  "ingredients": [
+   "250 ml Greek yogurt",
+   "130 g flour",
+   "3 handfuls spinach and rocket leaves, finely chopped",
+   "3 eggs",
+   "1 tsp baking powder",
+   "1 tsp crushed garlic",
+   "1 tbsp olive oil + extra for frying",
+   "salt, pepper"
+  ],
+  "steps": [
+   "In a mixing bowl, mix the yogurt, eggs, flour, garlic and olive oil and season.",
+   "Stir in the chopped spinach and rocket.",
+   "Finally mix in the baking powder.",
+   "Heat a frying pan and grease it with olive oil.",
+   "Drop spoonfuls of batter into the pan 3 cm apart and fry until golden underneath; flip and cook the other side.",
+   "Repeat until the batter is used up; serve with tzatziki."
+  ]
+ },
+ "greek--gyors-humusz-konzerv-csicseriborsobol": {
+  "title": "Quick hummus from tinned chickpeas",
+  "time": "15 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "2 tins (400 g each) chickpeas, drained (keep 100 ml of the liquid)",
+   "120 g tahini (sesame paste)",
+   "120 ml fresh lemon juice",
+   "3 cloves garlic, roughly chopped",
+   "8 tbsp extra virgin olive oil",
+   "1 tsp salt",
+   "¼ tsp freshly ground pepper",
+   "pitta to serve"
+  ],
+  "steps": [
+   "Rinse the chickpeas in cold water and, if you have time, rub off the skins — it makes it smoother.",
+   "Mix the lemon juice with the tahini in a food processor.",
+   "Add the chickpeas, garlic and most of the olive oil and blend until smooth; if too thick, thin with the reserved liquid.",
+   "Stir in the salt and pepper.",
+   "Spread in a bowl, drizzle with the rest of the olive oil and serve with pitta."
+  ]
+ },
+ "greek--fetaval-toltott-csipos-hamburger": {
+  "title": "Spicy feta-stuffed burgers",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "450 g minced beef",
+   "1 tsp salt",
+   "1 tsp freshly ground pepper",
+   "1 tsp garlic powder",
+   "½ tsp cayenne pepper",
+   "80 g crumbled feta",
+   "4 buns or 8 slices toasted bread",
+   "hot mustard to serve"
+  ],
+  "steps": [
+   "Knead the mince thoroughly with the spices by hand.",
+   "Shape into 8 balls and press them into very flat discs.",
+   "Put about 2 tbsp feta in the middle of four discs and cover with the other four.",
+   "Press together and flatten, sealing the edges well; chill for 10 minutes.",
+   "Cook in a frying pan or on a grill for 4-5 minutes per side, turning gently so they don't break; serve in toasted buns with hot mustard."
+  ]
+ },
+ "greek--fasolakia-gorog-paradicsomos-zoldbab-burgonyaval": {
+  "title": "Fasolakia (Greek green beans and potatoes in tomato)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "800 g green beans (fresh or frozen)",
+   "3 potatoes, cut into large cubes",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "100 ml olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "1 bunch parsley or mint",
+   "salt, pepper",
+   "feta and bread to serve"
+  ],
+  "steps": [
+   "Soften the onion and garlic in half the olive oil.",
+   "Add the green beans and toss for 5 minutes.",
+   "Add the potatoes, tomatoes and 200 ml water and season.",
+   "Simmer covered over low heat for 30-35 minutes until the beans and potatoes are very tender; finally add the rest of the olive oil and the herbs.",
+   "Serve with feta and bread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--kritharaki-me-kotopoulo-sutoben-sult-csirke-orzo-tesztaval": {
+  "title": "Kritharaki me kotopoulo (baked chicken with orzo)",
+  "time": "1 hr 10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "8 chicken thighs",
+   "400 g orzo",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "1 tin (400 g) chopped tomatoes",
+   "4 tbsp olive oil",
+   "1 tsp oregano",
+   "1 cinnamon stick (optional)",
+   "800 ml hot chicken stock",
+   "salt, pepper",
+   "grated hard cheese to serve"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C; season the chicken and brown it in half the oil in a frying pan.",
+   "In a roasting tin, mix the onion, garlic, tomatoes, oregano, remaining oil and cinnamon, lay the chicken on top and bake for 25 minutes.",
+   "Take out the tin, stir the orzo into the sauce and pour in the hot stock.",
+   "Return the chicken and bake for another 25-30 minutes, stirring halfway, until the pasta is tender and has absorbed the liquid.",
+   "Serve with grated cheese; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--soutzoukakia-komenyes-gorog-husrudak-paradicsomszoszban": {
+  "title": "Soutzoukakia (Greek cumin meatballs in tomato sauce)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g minced beef or mixed mince",
+   "2 slices stale bread, soaked",
+   "1 egg",
+   "3 cloves garlic, crushed",
+   "1.5 tsp ground cumin",
+   "salt, pepper",
+   "flour for coating, oil for frying",
+   "1 tin (400 g) tomato passata",
+   "100 ml red wine (optional)",
+   "1 cinnamon stick",
+   "1 tsp sugar",
+   "rice or mashed potatoes to serve"
+  ],
+  "steps": [
+   "Knead the meat with the squeezed-out bread, egg, garlic, cumin, salt and pepper.",
+   "Shape into oblong rolls about 8 cm long, coat in flour and brown all over in oil.",
+   "In a saucepan, bring the passata to the boil with the wine, cinnamon, sugar and 200 ml water and season.",
+   "Add the meat rolls and simmer covered for 25-30 minutes.",
+   "Serve with rice or mash; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--papoutsakia-daralthussal-toltott-padlizsan-besamellel": {
+  "title": "Papoutsakia (aubergines stuffed with mince and béchamel)",
+  "time": "1 hr 20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 medium aubergines",
+   "400 g minced beef",
+   "1 onion, finely chopped",
+   "2 tbsp olive oil + extra for baking",
+   "2 tbsp tomato purée",
+   "½ tsp cinnamon",
+   "salt, pepper",
+   "for the béchamel: 30 g butter, 3 tbsp flour, 400 ml milk, 1 egg yolk, 50 g grated cheese"
+  ],
+  "steps": [
+   "Halve the aubergines lengthways, score the flesh, brush with oil and bake at 200 °C for 20 minutes; scrape out the soft flesh and chop it.",
+   "Soften the onion in the olive oil, add the mince and fry until crumbly, then the aubergine flesh, tomato purée and cinnamon; season and cook for 10 minutes.",
+   "For the béchamel, cook the flour in the butter, pour in the milk, cook until thick and, off the heat, stir in the yolk.",
+   "Fill the aubergine shells with the meat, spread béchamel on top and sprinkle with cheese.",
+   "Bake at 200 °C for 20-25 minutes until golden; packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "greek--kotopoulo-me-bamies-paradicsomos-csirke-okraval": {
+  "title": "Kotopoulo me bamies (chicken with okra in tomato)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken legs (thighs or whole legs)",
+   "500 g okra (frozen is fine)",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "1 tin (400 g) chopped tomatoes",
+   "5 tbsp olive oil",
+   "2 tbsp vinegar (for fresh okra)",
+   "salt, pepper",
+   "rice or bread to serve"
+  ],
+  "steps": [
+   "If the okra is fresh, trim the stalks, sprinkle with vinegar and leave for 20 minutes, then rinse (so it isn't slimy).",
+   "Season the chicken and brown it all over in half the oil in a saucepan.",
+   "Add the onion and garlic, then the tomatoes and 200 ml water; braise covered for 25 minutes.",
+   "Add the okra and the rest of the oil and cook for 15-20 minutes without stirring, just shaking the pan.",
+   "Serve with rice or bread; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--prasorizo-porehagymas-rizs-citrommal": {
+  "title": "Prasorizo (leek and rice with lemon)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 leeks, sliced",
+   "250 g rice",
+   "1 onion, finely chopped",
+   "1 carrot, grated",
+   "100 ml olive oil",
+   "1 tsp tomato purée (optional)",
+   "1 lemon, juiced",
+   "1 bunch dill or parsley",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Cook the onion and leeks in half the olive oil for 8-10 minutes until soft.",
+   "Add the carrot and tomato purée, then the rice and toss for 1-2 minutes.",
+   "Pour in 600 ml boiling water, season and cook covered for 18-20 minutes.",
+   "Stir in the lemon juice, the rest of the oil and the herbs.",
+   "Serve with feta or yogurt; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--kotosoupa-avgolemono-citromos-tojasos-csirkeleves-rizzsel": {
+  "title": "Kotosoupa avgolemono (egg-lemon chicken and rice soup)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "4 chicken legs or 1 kg chicken backs and legs",
+   "1 onion, halved",
+   "2 carrots",
+   "1 celery stick",
+   "120 g rice",
+   "2 eggs",
+   "2 lemons, juiced",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Bring the chicken to the boil in 2 litres of water with the onion, carrots and celery, skim, season and cook for 40 minutes.",
+   "Take out the meat, remove the bones and shred it; slice the carrots and discard the onion and celery.",
+   "Add the rice to the soup and cook for 15 minutes; return the meat and carrots.",
+   "Whisk the eggs with the lemon juice until frothy, slowly add 2 ladles of hot soup while whisking, then pour it back into the pot and don't boil again.",
+   "It keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "greek--kolokithopita-cukkinis-fetas-reteslepeny": {
+  "title": "Kolokithopita (courgette and feta filo pie)",
+  "time": "1 hr 10 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 kg courgettes, grated",
+   "250 g feta, crumbled",
+   "3 eggs",
+   "1 bunch dill and mint",
+   "4 spring onions, sliced",
+   "100 ml olive oil + extra for brushing",
+   "300 g strudel or filo pastry",
+   "pepper"
+  ],
+  "steps": [
+   "Salt the grated courgette, leave for 15 minutes, then squeeze out thoroughly.",
+   "Mix with the feta, eggs, herbs, spring onions and olive oil; season with pepper.",
+   "Lay half the sheets in an oiled tin, brushing each with oil; spread over the filling and cover with the rest of the sheets, also oiled.",
+   "Score the top into portions and bake at 180 °C for 45 minutes until golden.",
+   "Packed in portions it keeps 3 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "greek--kotopoulo-me-hilopites-csirke-tojasos-kockatesztaval": {
+  "title": "Kotopoulo me hilopites (chicken with Greek egg noodles)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken legs",
+   "1 onion, finely chopped",
+   "4 tbsp olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "1 cinnamon stick",
+   "1 bay leaf",
+   "salt, pepper",
+   "350 g square egg noodles (hilopites)",
+   "1 litre hot water or stock",
+   "grated hard cheese"
+  ],
+  "steps": [
+   "Season the chicken and brown it in the oil in a wide saucepan.",
+   "Add the onion, then the tomatoes, cinnamon, bay leaf and 300 ml water; braise covered for 30 minutes.",
+   "Pour in the hot water and, when boiling, add the noodles.",
+   "Cook, stirring, for 12-15 minutes until the pasta is tender and has absorbed most of the liquid.",
+   "Serve with grated cheese; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--kotopoulo-pilafi-gorog-csirkes-rizs-paradicsommal": {
+  "title": "Kotopoulo pilafi (Greek chicken and tomato rice)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g boneless chicken thigh, diced",
+   "300 g rice",
+   "1 onion, finely chopped",
+   "2 tbsp olive oil",
+   "2 tbsp butter",
+   "2 tbsp tomato purée",
+   "1 tsp oregano",
+   "700 ml hot chicken stock",
+   "salt, pepper",
+   "yogurt to serve"
+  ],
+  "steps": [
+   "Brown the chicken in the oil and season.",
+   "Add the onion, then the tomato purée and oregano and fry for 2 minutes.",
+   "Add the rice, stir and pour in the hot stock.",
+   "Cook covered over low heat for 18-20 minutes; finally stir in the butter and rest for 5 minutes.",
+   "Serve with yogurt; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "greek--muszaka": {
   "title": "Moussaka",
   "time": "2 hr",
@@ -13312,6 +19506,373 @@ window.I18N_EN_RECIPES = {
    "Serve sprinkled with grated cheese."
   ]
  },
+ "greek--gorog-fuszeres-grillcsirke-mentaval-es-oreganoval": {
+  "title": "Greek herb grilled chicken with mint and oregano",
+  "time": "45 min",
+  "servings": "4 servings",
+  "marinate": "at least 1 hour",
+  "ingredients": [
+   "1 whole chicken (1.5-1.8 kg), jointed",
+   "1 tbsp dried oregano",
+   "1 tbsp dried thyme",
+   "1 tbsp dried mint",
+   "2 tsp dried rosemary",
+   "1 tsp garlic powder",
+   "3 tbsp extra virgin olive oil",
+   "salt, freshly ground pepper",
+   "lemon wedges to serve"
+  ],
+  "steps": [
+   "Brush the chicken pieces with olive oil.",
+   "Mix the herbs, salt and pepper, rub into the meat and marinate in the fridge for at least 1 hour.",
+   "Prepare the charcoal grill (or preheat the oven to 200 °C).",
+   "Cook the chicken, turning often, for 30-40 minutes until no longer pink at the thickest part of the thigh.",
+   "Rest for 10 minutes under foil and serve with lemon."
+  ]
+ },
+ "greek--rozmaringos-fokhagymas-sult-halfile-ecetes-martassal": {
+  "title": "Rosemary garlic pan-fried fish with vinegar sauce",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g white fish fillets (cod, hake or zander)",
+   "50 g flour seasoned with salt and pepper",
+   "3 tbsp olive oil",
+   "2 cloves fresh garlic, finely chopped",
+   "1 sprig fresh rosemary, leaves finely chopped",
+   "120 ml cider or wine vinegar",
+   "100 ml water",
+   "Greek salad to serve"
+  ],
+  "steps": [
+   "Coat the fish fillets in the seasoned flour.",
+   "Heat the oil in a frying pan, add the garlic and rosemary, fry for 30 seconds, then add the fish.",
+   "Cook for 3-4 minutes per side until done, take it out and pour off the excess oil.",
+   "Brown the floury bits left in the pan (add 1 tbsp flour if there's too little), pour in the vinegar (stand back, the steam is strong), then the water, and stir into a sauce.",
+   "Spoon the sauce over the fish and serve with Greek salad."
+  ]
+ },
+ "greek--fuszernovenyekkel-toltott-grillezett-egesz-hal": {
+  "title": "Herb-stuffed grilled whole fish",
+  "time": "35 min + 30 min resting",
+  "servings": "3 servings",
+  "ingredients": [
+   "1 whole sea fish (about 900 g, e.g. red snapper, sea bream or sea bass), cleaned",
+   "3 tbsp olive oil",
+   "½ bunch dill",
+   "½ bunch fresh oregano",
+   "½ bunch flat-leaf parsley",
+   "2 sprigs rosemary",
+   "½ bunch thyme",
+   "a few thin slices of red onion",
+   "6 cloves garlic, smashed",
+   "a few thin lemon slices",
+   "salt, freshly ground pepper",
+   "120 ml white wine",
+   "250 ml fish or vegetable stock"
+  ],
+  "steps": [
+   "Rub the fish inside and out with olive oil and season generously.",
+   "Stuff the cavity with the herbs, garlic, onion and lemon; score the skin in a diamond pattern.",
+   "Mix the stock and wine in a large freezer bag, put in the fish, squeeze out the air and chill for at least 30 minutes.",
+   "Grill over medium-high heat or in a griddle pan for 6-8 minutes per side.",
+   "Take off the heat and rest for 7 minutes before serving."
+  ]
+ },
+ "greek--kotopoulo-kapama-fahejas-paradicsomos-parolt-csirke": {
+  "title": "Kotopoulo kapama (chicken braised with cinnamon and tomato)",
+  "time": "1 hr 15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 chicken legs or 8 thighs",
+   "2 large onions, finely chopped",
+   "4 cloves garlic, finely chopped",
+   "1 tin (400 g) chopped tomatoes",
+   "3 tbsp olive oil",
+   "1 cinnamon stick",
+   "3 bay leaves",
+   "120 ml red wine",
+   "3 tbsp tomato purée",
+   "1 carrot, cut into thick slices",
+   "1 celery stick, cut into strips",
+   "¼ tsp ground cloves",
+   "½ tbsp chopped parsley",
+   "salt, pepper",
+   "cooked thin pasta and grated cheese to serve"
+  ],
+  "steps": [
+   "Fry the onion in the oil in a saucepan until well browned.",
+   "Add the chicken, bay leaves and cinnamon and brown the meat well on all sides.",
+   "Add the garlic, tomatoes, tomato purée, wine and cloves, then the carrot, celery and parsley; season.",
+   "Pour in just enough water to cover and simmer covered over low heat, without stirring (so it doesn't break up), for about 50 minutes until the meat is tender and the sauce has thickened.",
+   "Serve with thin pasta and plenty of grated cheese."
+  ]
+ },
+ "greek--youvarlakia-gorog-rizses-husgombocleves-citromos-tojasos-martassal": {
+  "title": "Youvarlakia (Greek meatball and rice soup with egg-lemon sauce)",
+  "time": "1 hr",
+  "servings": "6 servings",
+  "ingredients": [
+   "700 g minced beef",
+   "150 g short-grain rice",
+   "2 eggs",
+   "1 large onion, diced",
+   "2 tsp salt",
+   "4 tbsp olive oil or butter",
+   "1 lemon, juiced",
+   "pepper",
+   "flour for coating"
+  ],
+  "steps": [
+   "Mix the mince with 1 egg, two-thirds of the rice, salt and pepper and shape into ping-pong ball-sized meatballs; roll them in flour.",
+   "In a large pot, soften the onion in the fat, pour in 2 litres of water and bring to the boil.",
+   "Drop the meatballs one by one into the boiling water and cook for 25 minutes; then add the remaining rice, cook for another 15 minutes and take off the heat.",
+   "In a bowl, whisk the egg white with a little water until frothy, add the lemon juice, then whisk in the yolk (this is avgolemono).",
+   "Whisking constantly, slowly pour in 250 ml of hot soup, then pour it all back into the pot and serve hot."
+  ]
+ },
+ "greek--arakas-latheros-gorog-olajos-borsoragu-repaval": {
+  "title": "Arakas latheros (Greek peas with carrots in olive oil)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g frozen peas",
+   "2 carrots, sliced",
+   "2 potatoes, diced",
+   "1 onion, finely chopped",
+   "4 spring onions, sliced",
+   "100 ml olive oil",
+   "2 tbsp tomato purée",
+   "1 bunch dill",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion and spring onions in half the olive oil.",
+   "Add the carrots and potatoes and toss for 3 minutes.",
+   "Add the peas, tomato purée and 300 ml water and season.",
+   "Cook covered for 25-30 minutes until everything is tender; stir in the dill and the rest of the oil.",
+   "Serve with feta and bread; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--makaronia-me-kima-gorog-fahejas-daralthusos-spagetti": {
+  "title": "Makaronia me kima (Greek spaghetti with cinnamon meat sauce)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g minced beef",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "3 tbsp olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "2 tbsp tomato purée",
+   "1 cinnamon stick or ½ tsp ground cinnamon",
+   "2 cloves",
+   "1 bay leaf",
+   "salt, pepper",
+   "500 g spaghetti",
+   "grated kefalotyri or Parmesan"
+  ],
+  "steps": [
+   "Soften the onion and garlic in the olive oil, add the mince and fry until crumbly.",
+   "Add the tomatoes, tomato purée, cinnamon, cloves, bay leaf and 200 ml water; season.",
+   "Simmer over low heat for 25-30 minutes until thick; remove the cinnamon stick and bay leaf.",
+   "Meanwhile, cook the spaghetti.",
+   "Serve with plenty of grated cheese; it keeps 4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--imam-bayildi-paradicsomos-hagymas-toltott-padlizsan": {
+  "title": "Imam bayildi (aubergines stuffed with onion and tomato)",
+  "time": "1 hr 15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 medium aubergines",
+   "3 onions, sliced into half moons",
+   "4 cloves garlic, sliced",
+   "1 tin (400 g) chopped tomatoes",
+   "150 ml olive oil",
+   "1 tsp sugar",
+   "1 bunch parsley",
+   "salt, pepper",
+   "feta to serve"
+  ],
+  "steps": [
+   "Halve the aubergines lengthways, score the flesh, salt and leave for 10 minutes, then pat dry.",
+   "Fry cut side down in a little oil for 5 minutes and put in a baking tin.",
+   "Cook the onions in the rest of the oil for 10 minutes until soft, add the garlic, tomatoes and sugar, season, cook for 5 minutes and stir in the parsley.",
+   "Press the aubergines down slightly and pile the onion-tomato mixture generously on top; pour 100 ml water underneath.",
+   "Bake at 190 °C for 40 minutes; packed in portions it keeps 4 days; it heats through in the microwave in 1.5-2 minutes (and can be eaten cold)."
+  ]
+ },
+ "greek--kolokithokeftedes-cukkinis-fetas-gorog-fasirtok": {
+  "title": "Kolokithokeftedes (Greek courgette and feta fritters)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 medium courgettes, grated",
+   "200 g feta, crumbled",
+   "2 eggs",
+   "4 spring onions, sliced",
+   "1 bunch mint and dill, finely chopped",
+   "80 g breadcrumbs",
+   "50 g flour",
+   "pepper",
+   "oil for frying",
+   "tzatziki to serve"
+  ],
+  "steps": [
+   "Salt the grated courgette, leave for 15 minutes, then squeeze out thoroughly in a tea towel.",
+   "Mix with the feta, eggs, spring onions, herbs, breadcrumbs and flour; season with pepper.",
+   "Shape spoonfuls into small patties (add more breadcrumbs if too soft).",
+   "Fry in hot oil for 3-4 minutes per side until golden, or brush with oil and bake at 200 °C for 25 minutes.",
+   "Serve with tzatziki; it keeps 3 days in a box; it heats through in the microwave in 1-2 minutes and is good cold too."
+  ]
+ },
+ "greek--spanakorizo-gorog-spenotos-rizs-citrommal": {
+  "title": "Spanakorizo (Greek spinach rice with lemon)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg fresh spinach (or 600 g frozen)",
+   "250 g rice",
+   "1 onion, finely chopped",
+   "4 spring onions, sliced",
+   "100 ml olive oil",
+   "1 bunch dill",
+   "1 lemon, juiced",
+   "salt, pepper",
+   "feta to serve"
+  ],
+  "steps": [
+   "Soften the onion and spring onions in half the olive oil.",
+   "Add the spinach and toss until wilted.",
+   "Add the rice, pour in 500 ml boiling water, season and cook covered over low heat for 18-20 minutes.",
+   "Off the heat, stir in the dill, lemon juice and the rest of the oil and rest for 5 minutes.",
+   "Serve with feta; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--lahanorizo-paradicsomos-kaposztas-rizs": {
+  "title": "Lahanorizo (cabbage and rice in tomato)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "½ white cabbage (about 700 g), shredded",
+   "200 g rice",
+   "1 onion, finely chopped",
+   "100 ml olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "1 tsp paprika",
+   "½ tsp caraway seeds (optional)",
+   "salt, pepper",
+   "1 lemon to serve"
+  ],
+  "steps": [
+   "Soften the onion in half the olive oil, add the cabbage and cook for 8-10 minutes until wilted.",
+   "Add the tomatoes, paprika and caraway and season.",
+   "Add the rice, pour in 400 ml boiling water and cook covered over low heat for 20 minutes.",
+   "Stir in the rest of the oil and rest for 5 minutes.",
+   "Serve drizzled with lemon juice; it keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--kotopoulo-kokkinisto-paradicsomos-fahejas-csirke-tesztaval": {
+  "title": "Kotopoulo kokkinisto (chicken in cinnamon tomato sauce with pasta)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken legs",
+   "1 onion, finely chopped",
+   "2 cloves garlic",
+   "4 tbsp olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "2 tbsp tomato purée",
+   "1 cinnamon stick",
+   "3 allspice berries",
+   "1 bay leaf",
+   "salt, pepper",
+   "400 g pasta (hilopites or spaghetti)",
+   "grated cheese to serve"
+  ],
+  "steps": [
+   "Season the chicken and brown it all over in the oil.",
+   "Add the onion and garlic, then the tomatoes, tomato purée, spices and 300 ml water.",
+   "Simmer covered over low heat for 40 minutes until the meat is tender and the sauce is thick.",
+   "Meanwhile, cook the pasta.",
+   "Pour the sauce over the pasta and serve with grated cheese; it keeps 3-4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--biftekia-me-patates-gorog-fasirtok-burgonyaval-egy-tepsiben": {
+  "title": "Biftekia me patates (Greek meat patties with potatoes in one tin)",
+  "time": "1 hr 10 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g minced beef",
+   "1 onion, grated",
+   "2 slices bread, soaked",
+   "1 egg",
+   "1 tsp oregano",
+   "1 bunch mint or parsley",
+   "salt, pepper",
+   "1 kg potatoes, cut into wedges",
+   "5 tbsp olive oil",
+   "1 lemon, juiced",
+   "1 tsp oregano for the potatoes"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C.",
+   "Toss the potatoes with half the oil, the lemon juice, oregano, salt and pepper, spread in a tin with 150 ml water and roast for 20 minutes.",
+   "Knead the meat with the onion, squeezed-out bread, egg and herbs and shape into 8 flat patties.",
+   "Put the patties among the potatoes, drizzle with the rest of the oil and roast for another 30-35 minutes, turning once.",
+   "Serve with tzatziki or salad; it keeps 3 days in a box; it heats through in the microwave in 1-2 minutes and is good cold too."
+  ]
+ },
+ "greek--patates-yahni-paradicsomos-gorog-burgonyaragu": {
+  "title": "Patates yahni (Greek potato stew in tomato)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1.2 kg potatoes, cut into large cubes",
+   "2 onions, finely chopped",
+   "2 cloves garlic",
+   "100 ml olive oil",
+   "1 tin (400 g) chopped tomatoes",
+   "1 tsp oregano",
+   "1 bay leaf",
+   "salt, pepper",
+   "feta and olives to serve"
+  ],
+  "steps": [
+   "Soften the onions and garlic in half the oil.",
+   "Add the potatoes and toss for 3 minutes.",
+   "Add the tomatoes, oregano, bay leaf and enough water to half cover; season.",
+   "Cook covered for 25-30 minutes until the potatoes are tender and the sauce is thick; finally add the rest of the oil.",
+   "Serve with feta and olives; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "greek--hortosoupa-gorog-zoldsegleves-citrommal-es-olivaolajjal": {
+  "title": "Hortosoupa (Greek vegetable soup with lemon and olive oil)",
+  "time": "45 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "1 onion, finely chopped",
+   "2 carrots, diced",
+   "2 celery sticks, diced",
+   "2 potatoes, diced",
+   "1 courgette, diced",
+   "1 tin (400 g) chopped tomatoes",
+   "1 tin (400 g) white beans, rinsed",
+   "80 g orzo or small soup pasta",
+   "100 ml olive oil",
+   "1 tsp oregano",
+   "1 lemon, juiced",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Soften the onion, carrots and celery in half the oil for 5 minutes.",
+   "Add the potatoes, tomatoes, oregano and 1.5 litres of water, season and cook for 15 minutes.",
+   "Add the courgette, beans and pasta and cook for another 10 minutes.",
+   "Off the heat, stir in the lemon juice and the rest of the olive oil.",
+   "It keeps 4 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
  "indian--poha-lapitott-rizses-reggeli-hagymaval-es-foldimogyoroval": {
   "title": "Poha (flattened rice with onion and peanuts)",
   "time": "20 min",
@@ -13626,6 +20187,112 @@ window.I18N_EN_RECIPES = {
    "Rest for 20 minutes, then divide into small balls and roll them into thin flatbreads.",
    "Cook both sides in a hot, dry frying pan, brushing with a little oil, until small brown spots appear.",
    "Serve with yogurt or chutney."
+  ]
+ },
+ "indian--medu-vada-del-indiai-lencsefank": {
+  "title": "Medu vada (South Indian lentil doughnuts)",
+  "time": "40 min + 6 hr soaking",
+  "servings": "4 servings",
+  "ingredients": [
+   "240 g skinned black gram (urad dal)",
+   "salt",
+   "¼ tsp asafoetida",
+   "8-10 curry leaves, chopped",
+   "1 tsp ground cumin",
+   "1 tsp coarsely crushed black pepper",
+   "oil for frying"
+  ],
+  "steps": [
+   "Wash the dal and soak for 6 hours, then grind or blend with a little water into a thick, smooth paste.",
+   "Mix in the salt, asafoetida, curry leaves, cumin and pepper.",
+   "Heat the oil to medium in a deep pan (kadai).",
+   "With wet palms, take a little batter, shape it into a ball and press a hole in the middle with your thumb like a doughnut.",
+   "Fry in medium-hot oil until golden and crisp.",
+   "Serve hot with sambar and coconut chutney."
+  ]
+ },
+ "indian--kicsri-rizses-lencses-reggeli-kasa": {
+  "title": "Khichdi (rice and lentil porridge)",
+  "time": "35 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "1 cup (about 180 g) rice",
+   "1 cup (about 180 g) split yellow mung beans or red lentils",
+   "1 tsp turmeric",
+   "salt",
+   "8 cups water (about 1.5 litres)",
+   "1 tbsp ghee or butter to serve"
+  ],
+  "steps": [
+   "Wash the rice and lentils, soak in water for 10-15 minutes, then drain.",
+   "Put them in a pot with the water, turmeric and salt.",
+   "Bring to the boil, then cook covered over low heat, stirring now and then, for 20-25 minutes until soft and porridge-like (in a pressure cooker, 4-5 minutes after the first whistle is enough).",
+   "Let it cool a little, then serve with ghee or buttermilk."
+  ]
+ },
+ "indian--kokusztejes-paradicsomos-indiai-burgonya": {
+  "title": "Indian potatoes in coconut milk and tomato",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "6 small potatoes, peeled and halved",
+   "2 small tins (160 g each) coconut milk",
+   "½ tin (200 g) chopped tomatoes",
+   "2 cloves garlic, finely chopped",
+   "½ tsp chilli flakes",
+   "2 tbsp olive oil",
+   "salt"
+  ],
+  "steps": [
+   "Fry the garlic in the oil in a saucepan.",
+   "Add the tomatoes and cook for about 10 minutes until the oil separates and it bubbles.",
+   "Stir in the coconut milk and chilli, season and bring to the boil.",
+   "Add the potatoes and cook over medium-low heat for about 20 minutes until easily pierced with a fork and nicely soft."
+  ]
+ },
+ "indian--sev-puri-ropogos-indiai-falatok-burgonyaval-es-csatnikkal": {
+  "title": "Sev puri (crispy Indian bites with potato and chutneys)",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "10 flat crisp puris (papdi)",
+   "1 boiled potato, finely diced",
+   "3 tbsp tamarind chutney",
+   "3 tbsp coriander chutney",
+   "½ tsp roasted ground cumin",
+   "salt",
+   "½ tsp chilli powder",
+   "1 small onion, finely chopped",
+   "80 g fine sev (fried chickpea-flour noodles)",
+   "fresh coriander, finely chopped"
+  ],
+  "steps": [
+   "Arrange the puris on a plate.",
+   "Put a few cubes of boiled potato on each.",
+   "Drizzle each with a little tamarind and coriander chutney and sprinkle with cumin, salt and chilli powder.",
+   "Scatter over the onion, then plenty of sev.",
+   "Garnish with fresh coriander and serve at once while crisp."
+  ]
+ },
+ "indian--del-indiai-kokuszos-rizs-mustarmaggal-es-kesudioval": {
+  "title": "South Indian coconut rice with mustard seeds and cashews",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tsp oil",
+   "1 tsp black mustard seeds",
+   "50 g grated coconut (fresh, frozen or desiccated)",
+   "2 dried red chillies",
+   "7-10 curry leaves",
+   "1 tsp chana dal (split yellow chickpeas, optional)",
+   "1 handful cashews",
+   "salt",
+   "800 g cooked, cooled long-grain rice"
+  ],
+  "steps": [
+   "Heat the oil with the mustard seeds in a frying pan and cover, as they pop.",
+   "When the mustard seeds stop popping, add everything except the rice and toast until golden.",
+   "Mix the spice mixture into the cooked rice, season and serve."
   ]
  },
  "indian--dal-fry-sargaborso-fozelek-indiai-modra": {
@@ -13949,6 +20616,553 @@ window.I18N_EN_RECIPES = {
    "Thread the paneer onto skewers, alternating with the pepper and onion.",
    "Cook on a hot grill or in the oven (220 °C) for 15-20 minutes until the edges are charred.",
    "Serve drizzled with lemon juice, with coriander chutney."
+  ]
+ },
+ "indian--moong-dal-sarga-mungobab-fozelek-komenyes-olajjal": {
+  "title": "Moong dal (yellow mung bean dal with cumin oil)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "120 g split yellow mung beans (moong dal)",
+   "3 green chillies, slit",
+   "½ tsp turmeric",
+   "600 ml water",
+   "salt",
+   "2 tbsp oil or ghee",
+   "1 sprig curry leaves",
+   "1 tsp cumin seeds"
+  ],
+  "steps": [
+   "Put the dal, chillies, turmeric and water in a saucepan and cook covered over low heat for about 25 minutes until completely soft (15 minutes in a pressure cooker).",
+   "Mash the cooked dal, season, thin with a little water if too thick, and bring to the boil over medium heat.",
+   "In a small frying pan, heat the oil or ghee and fry the cumin and curry leaves until they sizzle.",
+   "Pour over the dal and serve hot with rice or flatbread."
+  ]
+ },
+ "indian--tadka-dal-fuszeres-voroslencse-curry": {
+  "title": "Tadka dal (spiced red lentil curry)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 medium onions, very finely chopped",
+   "2 tbsp oil",
+   "1 small chilli, finely chopped",
+   "2 large cloves garlic, crushed",
+   "1 piece of ginger (garlic-sized), finely chopped",
+   "250 g red lentils",
+   "2 tins (400 g each) chopped tomatoes",
+   "1 stock cube",
+   "6 green cardamom pods, lightly crushed",
+   "1 tsp garam masala",
+   "1 tsp paprika",
+   "¼ tsp mustard seeds",
+   "freshly ground pepper",
+   "water as needed"
+  ],
+  "steps": [
+   "Soften the onion in the oil in a saucepan for about 8-10 minutes.",
+   "Add the chilli, garlic, ginger and spices in turn and fry for 1-2 minutes.",
+   "Stir in the lentils, tomatoes, stock cube and enough water to cover.",
+   "Cook covered, stirring now and then, for 20-25 minutes until the lentils are as soft as you like; add water as needed.",
+   "Serve with rice or naan."
+  ]
+ },
+ "indian--almas-paradicsomos-gyors-curry-rizskoszoruban": {
+  "title": "Quick apple and tomato curry in a rice ring",
+  "time": "25 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "1 apple, grated",
+   "1 onion, finely chopped",
+   "3 tomatoes, thickly sliced",
+   "60 g butter",
+   "1 tsp curry powder",
+   "100 ml milk",
+   "salt, black pepper",
+   "150 g rice, cooked"
+  ],
+  "steps": [
+   "In a frying pan, cook the apple and onion in 40 g butter until soft and blended.",
+   "Mix the curry powder into the milk, pour it in and cook for a few minutes until thick; season.",
+   "In another pan, fry the tomato slices on both sides in the remaining butter.",
+   "Arrange the cooked rice in a ring around the plate, put the tomatoes in the middle and pour over the curry."
+  ]
+ },
+ "indian--mangos-lencses-curry": {
+  "title": "Mango and lentil curry",
+  "time": "35 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "200 g red lentils or split yellow pigeon peas (soak toor dal beforehand)",
+   "1 tin (about 400 g) mango with juice, or 2 ripe fresh mangoes, sliced",
+   "1 onion, finely chopped",
+   "1 piece of ginger, grated",
+   "1 tsp garlic paste or 2 cloves crushed",
+   "1 tbsp oil",
+   "1 tsp ghee or butter",
+   "pinch of asafoetida (optional)",
+   "1 tsp turmeric",
+   "1 tsp garam masala",
+   "½ tsp chilli powder",
+   "1 tsp mustard seeds",
+   "1 tsp cumin",
+   "1 tsp dried fenugreek leaves (optional)",
+   "salt"
+  ],
+  "steps": [
+   "Cook the lentils in plenty of water for about 15 minutes until soft, then drain.",
+   "In a pot, bring the mango and its juice to the boil, add the lentils and a little water if needed.",
+   "Fry the onion, ginger and garlic in the oil in a frying pan until golden and add to the pot.",
+   "Heat the ghee in a small pan and fry the mustard seeds, cumin, asafoetida, turmeric, garam masala and chilli for 30 seconds, then add to the pot too.",
+   "Add the fenugreek, season and cook for another 5 minutes; serve with rice or naan."
+  ]
+ },
+ "indian--kokusztejes-burgonyas-csicseriborsos-curry": {
+  "title": "Coconut potato and chickpea curry",
+  "time": "50 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "1 small onion, finely chopped",
+   "2 cloves garlic, crushed",
+   "2 tbsp olive oil",
+   "1 tbsp curry powder",
+   "1 tin (400 ml) coconut milk",
+   "3 medium potatoes, diced",
+   "1 tin (400 g) chickpeas, drained",
+   "salt",
+   "basmati rice to serve"
+  ],
+  "steps": [
+   "Soften the onion and garlic in the olive oil in a saucepan for about 5 minutes.",
+   "Sprinkle in the curry powder and fry for another 1-2 minutes.",
+   "Pour in the coconut milk, add the potatoes and simmer covered for about 20 minutes.",
+   "Add the chickpeas, season and cook for another 15-20 minutes until the potatoes are completely tender.",
+   "Serve with basmati rice."
+  ]
+ },
+ "indian--voroslencses-burgonyas-paradicsomos-curry": {
+  "title": "Red lentil, potato and tomato curry",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g split red lentils",
+   "1 litre water",
+   "1 tsp salt",
+   "1 bay leaf",
+   "1 tbsp butter or margarine",
+   "1 tbsp olive oil",
+   "2 large potatoes, cut into 1 cm cubes",
+   "1 tsp turmeric",
+   "½ tsp cayenne pepper",
+   "2 tins (400 g each) chopped tomatoes",
+   "2 tsp garam masala",
+   "1 tsp honey or sugar"
+  ],
+  "steps": [
+   "In a large pot, put the lentils on to cook with the water, salt and bay leaf.",
+   "In a large frying pan, toss the potatoes with the turmeric, cayenne and oil and fry for 5-10 minutes.",
+   "Add the potatoes to the lentils together with the tomatoes, butter, garam masala and honey.",
+   "Cook for about 20 minutes until the potatoes are tender.",
+   "Remove the bay leaf before serving."
+  ]
+ },
+ "indian--curryvel-fuszerezett-sutotokkremleves": {
+  "title": "Curried pumpkin soup",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g pumpkin or squash, diced (or 400 g pumpkin purée)",
+   "800 ml chicken or vegetable stock",
+   "1 medium sweet onion, finely chopped",
+   "2 tbsp olive oil",
+   "1 tsp curry powder",
+   "pinch of nutmeg",
+   "1 bay leaf",
+   "black pepper",
+   "250 ml single cream"
+  ],
+  "steps": [
+   "Soften the onion in the olive oil in a saucepan until translucent.",
+   "Add the pumpkin and stock and mix.",
+   "Add the spices and simmer for at least 15-20 minutes until the pumpkin is soft; remove the bay leaf.",
+   "Blend smooth with a stick blender.",
+   "Stir in the cream and heat through over low heat without boiling."
+  ]
+ },
+ "indian--szindhi-pulao-sult-hagymas-fuszeres-rizs-kesudioval": {
+  "title": "Sindhi pulao (fried onion spiced rice with cashews)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 tbsp oil",
+   "3 onions, finely chopped",
+   "3-5 green chillies, finely chopped",
+   "1 sprig curry leaves",
+   "7-10 cashews",
+   "1 tbsp garam masala",
+   "1 tsp ground pepper",
+   "½ tsp chilli powder",
+   "1 bay leaf",
+   "salt",
+   "360 g basmati rice, rinsed",
+   "750 ml water"
+  ],
+  "steps": [
+   "Heat the oil in a saucepan and fry the onion until dark brown.",
+   "Add the chillies, curry leaves, cashews, garam masala, pepper, chilli powder, bay leaf and salt and fry for 1 minute.",
+   "Stir in the rice, pour in the water and cook uncovered until the water has boiled down to the surface, then cover and leave over low heat for another 10 minutes until all the water is absorbed.",
+   "Serve hot."
+  ]
+ },
+ "indian--banancurry-kokuszos-tejszines-martasban": {
+  "title": "Banana curry in a creamy spiced sauce",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "750 g slightly unripe bananas (about 500 g peeled)",
+   "½ tsp cumin seeds",
+   "½ tsp turmeric",
+   "½ tsp garam masala or good curry powder",
+   "2 tsp lemon juice",
+   "100 ml milk",
+   "4 tbsp double cream",
+   "½ tsp chilli powder",
+   "30 g butter",
+   "salt",
+   "rice to serve"
+  ],
+  "steps": [
+   "Cut the bananas into 2 cm slices.",
+   "Pour over the milk and cream, add the garam masala, chilli and lemon juice and season with salt.",
+   "Melt the butter in a frying pan, add the cumin and turmeric and cook over medium-low heat for a few minutes until fragrant.",
+   "Add the bananas with their sauce.",
+   "Cook gently until the bananas are hot and just softened (depends on ripeness) — don't overcook; serve with rice."
+  ]
+ },
+ "indian--ananaszos-kokuszos-garnelacurry": {
+  "title": "Pineapple and coconut prawn curry",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "170 g pineapple chunks (fresh or tinned)",
+   "2 tbsp red curry paste",
+   "120 ml coconut milk",
+   "220 g peeled prawns (or chicken breast strips)",
+   "½ tbsp palm sugar or brown sugar",
+   "½ tbsp fish sauce",
+   "1.5 tbsp tamarind paste or lime juice",
+   "rice to serve"
+  ],
+  "steps": [
+   "Simmer the coconut milk in a saucepan over medium heat for 5 minutes, then stir in the curry paste.",
+   "Add the pineapple and cook until soft.",
+   "Bring to the boil over high heat and add the prawns; cook for 3-4 minutes until pink.",
+   "Season with the sugar, fish sauce and tamarind (more sugar for sweeter, more fish sauce for saltier, more tamarind for sourer) and serve with rice."
+  ]
+ },
+ "indian--csirkes-zoldseges-masala-curry-curry-levellel": {
+  "title": "Chicken and vegetable masala curry with curry leaves",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g onions, finely chopped",
+   "3 tbsp oil",
+   "2 tomatoes, chopped",
+   "1 tsp crushed garlic",
+   "1 tsp grated ginger",
+   "500 g chicken thigh or breast fillet, cut into bite-sized pieces",
+   "300 g mixed vegetables (potato, carrot, green beans), diced",
+   "2 tbsp garam masala or curry spice mix",
+   "8-10 curry leaves",
+   "500-700 ml warm water",
+   "salt"
+  ],
+  "steps": [
+   "Fry the onion in a little oil until golden.",
+   "Add the tomatoes and cook for a few minutes until pulpy.",
+   "Stir in the garlic, ginger, meat and vegetables and fry, stirring, for about 10 minutes until the meat is nearly cooked.",
+   "Stir in the spice mix, curry leaves and warm water, season, bring to the boil, then simmer for about 20 minutes until everything is tender.",
+   "Serve with rice or flatbread."
+  ]
+ },
+ "indian--komenyes-basmati-rizs-mazsolaval-es-kesudioval": {
+  "title": "Cumin basmati rice with raisins and cashews",
+  "time": "25 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "2 tsp olive oil",
+   "1 tsp cumin seeds",
+   "80 g raisins",
+   "40 g cashews",
+   "360 g basmati rice, rinsed",
+   "750 ml water",
+   "salt"
+  ],
+  "steps": [
+   "Heat the olive oil in a saucepan.",
+   "Add the cumin, then the raisins and cashews and fry for 2 minutes.",
+   "Add the rice and fry for another minute.",
+   "Pour in the water, season and bring to the boil.",
+   "Turn to low, cover and cook for 12 minutes; rest for 5 minutes and fluff with a fork."
+  ]
+ },
+ "indian--aloo-matar-burgonyas-borsos-curry-paradicsommal": {
+  "title": "Aloo matar (potato and pea curry)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 medium potatoes, diced",
+   "400 g frozen peas",
+   "1 onion, finely chopped",
+   "2 tomatoes, chopped (or 1 tin)",
+   "2 cloves garlic and 1 piece of ginger, grated",
+   "3 tbsp oil",
+   "1 tsp cumin seeds",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp garam masala",
+   "pinch of chilli powder",
+   "salt",
+   "fresh coriander, rice or flatbread to serve"
+  ],
+  "steps": [
+   "Fry the cumin in the oil for 30 seconds, add the onion and cook until golden.",
+   "Add the garlic, ginger, turmeric, coriander and chilli, then the tomatoes and cook for 5 minutes until pulpy.",
+   "Add the potatoes, pour in 400 ml water, season and cook covered for 15 minutes.",
+   "Add the peas and garam masala and cook for another 5 minutes.",
+   "Serve with coriander, rice or flatbread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--ghar-ka-murgh-hazi-indiai-csirkecurry-burgonyaval": {
+  "title": "Ghar ka murgh (home-style Indian chicken curry with potatoes)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken legs, jointed (or 700 g fillet)",
+   "2 potatoes, cut into large cubes",
+   "2 onions, finely chopped",
+   "3 tomatoes, chopped",
+   "4 cloves garlic, 1 piece of ginger, grated",
+   "4 tbsp oil",
+   "1 bay leaf, 4 green cardamom pods",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp chilli powder",
+   "2 tsp garam masala",
+   "150 ml natural yogurt",
+   "salt",
+   "fresh coriander, rice"
+  ],
+  "steps": [
+   "Fry the bay leaf and cardamom in the oil for 30 seconds, add the onion and fry for 10 minutes until golden brown.",
+   "Add the garlic, ginger, turmeric, coriander and chilli, then the tomatoes and cook for 5 minutes.",
+   "Add the chicken and toss for 5 minutes, then stir in the yogurt.",
+   "Add the potatoes and 300 ml water, season and cook covered for 25 minutes; finally stir in the garam masala.",
+   "Serve with coriander and rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--chicken-pulao-egyedenyes-fuszeres-csirkes-rizs": {
+  "title": "Chicken pulao (one-pot spiced chicken rice)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g boneless chicken thigh, diced",
+   "300 g basmati rice, soaked for 20 minutes",
+   "1 onion, sliced",
+   "2 cloves garlic, 1 piece of ginger, grated",
+   "3 tbsp oil or ghee",
+   "1 bay leaf, 1 piece of cinnamon, 4 cardamom pods, 4 cloves",
+   "1 tsp garam masala",
+   "100 ml yogurt",
+   "600 ml boiling water",
+   "salt",
+   "fresh mint or coriander"
+  ],
+  "steps": [
+   "Fry the whole spices in the oil for 30 seconds, add the onion and fry until golden brown.",
+   "Add the garlic, ginger and chicken and fry for 5 minutes; stir in the yogurt and garam masala and cook for 5 minutes.",
+   "Add the drained rice, stir gently, pour in the boiling water and season.",
+   "Cook covered over very low heat for 15 minutes, then rest with the lid on for 10 minutes.",
+   "Sprinkle with mint; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--lemon-rice-citromos-kurkumas-rizs-foldimogyoroval": {
+  "title": "Lemon rice (turmeric lemon rice with peanuts)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g basmati rice, cooked and cooled",
+   "3 tbsp oil",
+   "1 tsp mustard seeds",
+   "1 tbsp chana dal or urad dal (optional)",
+   "50 g peanuts",
+   "10 curry leaves",
+   "2 green chillies, slit",
+   "1 tsp turmeric",
+   "2 lemons, juiced",
+   "salt",
+   "fresh coriander"
+  ],
+  "steps": [
+   "Fry the mustard seeds in the oil until they pop, add the dal and peanuts and fry until golden.",
+   "Add the curry leaves, chillies and turmeric and fry for 30 seconds.",
+   "Stir in the cooked rice, season and toss gently until evenly yellow.",
+   "Take off the heat and stir in the lemon juice and coriander.",
+   "also good with dal or curry; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--lauki-chana-dal-tokos-csicseriborso-dal": {
+  "title": "Lauki chana dal (squash and split chickpea dal)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "200 g chana dal (split chickpeas) or split yellow peas, soaked for 1 hour",
+   "500 g bottle gourd, marrow or courgette, diced",
+   "1 onion, finely chopped",
+   "2 tomatoes, chopped",
+   "2 cloves garlic, 1 piece of ginger",
+   "3 tbsp oil or ghee",
+   "1 tsp cumin, 1 tsp turmeric, 1 tsp chilli powder, 1 tsp garam masala",
+   "salt",
+   "rice or flatbread"
+  ],
+  "steps": [
+   "Cook the dal in 1 litre of water with the turmeric for 30 minutes (10 minutes in a pressure cooker) until soft but not falling apart.",
+   "Add the squash and cook for 8-10 minutes.",
+   "Meanwhile, fry the cumin in the oil, add the onion, garlic, ginger, chilli and tomatoes and cook for 6-8 minutes.",
+   "Stir the spiced base into the dal, season, stir in the garam masala and cook for 5 more minutes.",
+   "Serve with rice or flatbread; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--sabut-masoor-dal-egesz-barna-lencse-indiai-modra": {
+  "title": "Sabut masoor dal (whole brown lentils, Indian style)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g brown or black lentils",
+   "1 onion, finely chopped",
+   "2 tomatoes, chopped",
+   "3 cloves garlic, 1 piece of ginger, grated",
+   "3 tbsp oil",
+   "1 tsp cumin",
+   "1 tsp turmeric",
+   "1 tsp chilli powder",
+   "1 tsp garam masala",
+   "salt",
+   "fresh coriander, rice"
+  ],
+  "steps": [
+   "Wash the lentils and cook them in 1.2 litres of water with the turmeric for 30-35 minutes until tender.",
+   "Meanwhile, fry the cumin in the oil, add the onion and fry until golden.",
+   "Add the garlic, ginger, chilli and tomatoes and cook for 8 minutes.",
+   "Stir the spiced base into the lentils, season, add the garam masala and cook for 5-10 minutes until creamy.",
+   "Serve with coriander and rice; it keeps 4-5 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--chicken-do-pyaza-ketszeres-hagymas-csirkecurry": {
+  "title": "Chicken do pyaza (double onion chicken curry)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g boneless chicken thigh, diced",
+   "4 onions (2 finely chopped, 2 cut into large wedges)",
+   "2 tomatoes, chopped",
+   "3 cloves garlic, 1 piece of ginger, grated",
+   "4 tbsp oil",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp chilli powder",
+   "2 tsp garam masala",
+   "100 ml yogurt",
+   "salt",
+   "rice or naan"
+  ],
+  "steps": [
+   "Fry the onion wedges in half the oil for 5 minutes until browned at the edges, then take out.",
+   "Fry the chopped onion in the rest of the oil for 10 minutes until golden brown, add the garlic, ginger and spices.",
+   "Add the tomatoes, then the chicken and toss for 5 minutes; stir in the yogurt, season and cook covered for 20 minutes.",
+   "Return the fried onion wedges and cook together for 5 minutes.",
+   "Serve with rice or naan; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--patta-gobhi-matar-fuszeres-kaposzta-borsoval": {
+  "title": "Patta gobhi matar (spiced cabbage with peas)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "½ white cabbage (about 700 g), finely shredded",
+   "200 g green peas",
+   "1 potato, cut into small cubes",
+   "1 onion, finely chopped",
+   "1 piece of ginger, grated",
+   "3 tbsp oil",
+   "1 tsp mustard or cumin seeds",
+   "1 tsp turmeric",
+   "1 tsp garam masala",
+   "1 green chilli",
+   "salt",
+   "rice or flatbread, with dal"
+  ],
+  "steps": [
+   "Fry the mustard seeds in the oil until they pop, add the onion, ginger and chilli and fry for 3 minutes.",
+   "Add the potato and turmeric and toss for 3 minutes.",
+   "Add the cabbage and peas, season and cook covered, stirring now and then, for 12-15 minutes.",
+   "Sprinkle with garam masala and fry uncovered for 2-3 more minutes.",
+   "Serve with dal and rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--soya-chunks-curry-szojakockas-curry-paradicsommal": {
+  "title": "Soya chunks curry",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "150 g dried soya chunks",
+   "1 onion, finely chopped",
+   "3 tomatoes, puréed",
+   "3 cloves garlic, 1 piece of ginger, grated",
+   "3 tbsp oil",
+   "1 tsp cumin",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp chilli powder",
+   "2 tsp garam masala",
+   "100 ml yogurt or coconut milk",
+   "salt",
+   "rice"
+  ],
+  "steps": [
+   "Boil the soya chunks in salted water for 5 minutes, rinse in cold water and squeeze out thoroughly.",
+   "Fry the cumin and onion in the oil until golden, add the garlic, ginger and spices.",
+   "Add the tomato purée and cook for 8 minutes until the oil separates.",
+   "Add the soya chunks, yogurt and 300 ml water, season and cook covered for 10-12 minutes.",
+   "Serve with rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--kala-chana-curry-barna-csicseriborso-curry": {
+  "title": "Kala chana curry (chickpea curry)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tins (400 g each) chickpeas (or 250 g black chickpeas, soaked and cooked)",
+   "2 onions, finely chopped",
+   "3 tomatoes, chopped",
+   "4 cloves garlic, 1 piece of ginger, grated",
+   "4 tbsp oil",
+   "1 tsp cumin",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp chilli powder",
+   "2 tsp garam masala or chana masala",
+   "1 tsp amchur or 1 tbsp lemon juice",
+   "salt",
+   "fresh coriander, rice"
+  ],
+  "steps": [
+   "Fry the cumin in the oil, add the onion and fry for 10 minutes until golden brown.",
+   "Add the garlic, ginger and ground spices, then the tomatoes and cook for 8 minutes.",
+   "Add the chickpeas and 400 ml water, season and cook for 15-20 minutes; crush a few with the spoon to thicken.",
+   "Stir in the garam masala and amchur or lemon juice.",
+   "Serve with coriander and rice; it keeps 4-5 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
  "indian--butter-chicken-murgh-makhani": {
@@ -14280,6 +21494,488 @@ window.I18N_EN_RECIPES = {
    "Serve sprinkled with fresh coriander, with rice."
   ]
  },
+ "indian--gyors-garnelacurry-voros-currypasztaval": {
+  "title": "Quick prawn curry with red curry paste",
+  "time": "20 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "450 g large peeled prawns",
+   "½ onion, finely chopped",
+   "1 tbsp chopped garlic",
+   "1 tbsp oil",
+   "1 tbsp ghee or butter",
+   "1 tbsp curry powder",
+   "1 heaped tbsp red curry paste",
+   "120 ml chicken stock",
+   "rice to serve"
+  ],
+  "steps": [
+   "Heat the oil in a large frying pan over medium-high heat and fry the prawns until just pink; take them out and keep warm.",
+   "Melt the ghee in the same pan and fry the onion and garlic until browned at the edges.",
+   "Stir in the curry powder, curry paste and stock, then return the prawns and toss to coat.",
+   "Turn the heat to medium-low and cook until the prawns are hot through; serve with rice."
+  ]
+ },
+ "indian--keralai-kokuszos-garnela-curry-levellel": {
+  "title": "Keralan coconut prawns with curry leaves",
+  "time": "30 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "500 g raw shell-on prawns",
+   "¼ tbsp chilli powder",
+   "¼ tsp turmeric",
+   "¼ tsp ground coriander",
+   "¼ tbsp finely chopped ginger",
+   "3 tbsp oil",
+   "1 lime, juiced (or kudampuli to taste)",
+   "15 curry leaves",
+   "3 tbsp coconut chips (or thin fresh coconut slices)",
+   "1 large green chilli, slit",
+   "¼ onion, thinly sliced",
+   "salt"
+  ],
+  "steps": [
+   "Remove the heads and tails from the prawns and clean them.",
+   "Cook the prawns in a saucepan in a little water with the ginger, salt, curry leaves, chilli and coconut (add the lime juice only at the end); leave a little liquid in the pan at the end.",
+   "Heat the oil in a frying pan and fry the turmeric, chilli powder and coriander until browned.",
+   "Add the onion and cook until wilted.",
+   "Add the cooked prawns with their liquid and the lime juice and simmer, stirring, until semi-dry; serve with rice."
+  ]
+ },
+ "indian--goai-garnela-hooman-kokuszos-tamarindos-curry": {
+  "title": "Goan prawn hooman (coconut and tamarind curry)",
+  "time": "30 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "100 g grated coconut (ideally fresh)",
+   "2 dried red chillies",
+   "½ tsp turmeric",
+   "2 black peppercorns",
+   "1 small (hazelnut-sized) piece of tamarind or 1 tsp tamarind paste",
+   "½ onion, finely chopped",
+   "150 g green beans or okra, cut into 3 cm pieces",
+   "300 g peeled prawns (or white fish fillet)",
+   "pinch of asafoetida",
+   "salt",
+   "rice to serve"
+  ],
+  "steps": [
+   "Put the prawns, onion, green beans and asafoetida in a saucepan, add a little water and cook until the prawns and beans are done (if using fish, don't add it yet).",
+   "Meanwhile, grind or blend the coconut, chillies, turmeric, pepper and tamarind into a thick, fine paste, adding only as much water as you really need.",
+   "Stir the paste into the prawns and bring to the boil (add the fish now, if using, and cook for 5 minutes).",
+   "Season with salt to taste.",
+   "Serve with hot white rice."
+  ]
+ },
+ "indian--tonhalas-zoldseges-curry-rizzsel": {
+  "title": "Tuna and vegetable curry with rice",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "3 tbsp butter or olive oil",
+   "1 medium onion, diced",
+   "1 tbsp flour",
+   "1 tbsp curry powder",
+   "250 ml milk",
+   "100 g frozen mixed vegetables (carrot, green beans or peas)",
+   "1 tin (150 g drained) tuna in water",
+   "salt, pepper",
+   "cooked rice to serve"
+  ],
+  "steps": [
+   "Heat the oil or melt the butter in a saucepan and soften the onion until translucent.",
+   "Sprinkle in the flour and stir, then the curry powder.",
+   "Pour in the milk, add the frozen vegetables and heat, stirring, until hot again and thickened.",
+   "Stir in the tuna and only then taste and season (tuna is salty).",
+   "Heat through thoroughly and serve with rice."
+  ]
+ },
+ "indian--malvani-kokuszos-csirkecurry": {
+  "title": "Malvani coconut chicken curry",
+  "time": "50 min",
+  "servings": "4 servings",
+  "marinate": "at least 1 hour",
+  "ingredients": [
+   "800 g chicken, cut into medium pieces (thigh and breast)",
+   "4-8 green chillies, finely chopped",
+   "2 tbsp ginger paste or grated ginger",
+   "2 tbsp garlic paste or crushed garlic",
+   "3 tbsp oil",
+   "150 g grated coconut (fresh or desiccated)",
+   "4 onions, finely chopped",
+   "1 tsp chilli powder",
+   "½ tsp turmeric",
+   "2 tsp garam masala",
+   "2 tsp Malvani or other hot curry spice mix",
+   "salt",
+   "fresh coriander, finely chopped"
+  ],
+  "steps": [
+   "Grind half the chillies to a paste and mix with the ginger and garlic pastes; slash the chicken, rub the paste in well and marinate for at least 1 hour.",
+   "Toast the coconut in a little oil in a frying pan until light brown, let it cool, then blend it with half the onions into a paste.",
+   "In a heavy-based saucepan, fry the remaining onion in the rest of the oil for about 2 minutes until light brown.",
+   "Add the remaining chillies and the ground spices, fry for a few seconds, then add the marinated chicken and fry for about 3 minutes.",
+   "Stir in the coconut paste and salt, add as much water as you want for the sauce, bring to the boil and simmer covered for about 25 minutes until the chicken is tender.",
+   "Serve sprinkled with fresh coriander, with rice."
+  ]
+ },
+ "indian--csirke-tikka-joghurtos-fuszeres-csirkenyars": {
+  "title": "Chicken tikka (spiced yogurt chicken skewers)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "marinate": "at least 1 hour, ideally overnight",
+  "ingredients": [
+   "700 g skinless chicken breast fillet, diced",
+   "1 tbsp mustard oil or other oil",
+   "5 tbsp milk",
+   "150 ml natural yogurt",
+   "2 tbsp lemon juice",
+   "1 tbsp tomato purée",
+   "2 tbsp chopped fresh coriander",
+   "4 large cloves garlic, finely chopped",
+   "1-4 fresh red chillies, chopped (depending on strength)",
+   "2 tsp paprika",
+   "2 tsp garam masala",
+   "1 tsp ground cumin",
+   "½ tsp turmeric",
+   "1 tsp salt"
+  ],
+  "steps": [
+   "In a non-metallic mixing bowl, mix all the ingredients except the chicken.",
+   "Add the chicken and mix until completely coated.",
+   "Marinate in the fridge for at least 1 hour, ideally overnight (no more than 24 hours).",
+   "Thread onto skewers and cook under a medium-hot grill or on a barbecue for 5-8 minutes per side until cooked through (it comes apart easily when pressed with a fork).",
+   "Serve with naan or rice, or use it in chicken tikka masala."
+  ]
+ },
+ "indian--tandoori-tofu-nyarson": {
+  "title": "Tandoori tofu skewers",
+  "time": "45 min",
+  "servings": "3 servings",
+  "marinate": "at least 1 hour, ideally 8 hours",
+  "ingredients": [
+   "400 g firm tofu",
+   "3 tbsp natural yogurt",
+   "120 ml tomato sauce or tomato purée",
+   "2 tbsp olive oil",
+   "1 tsp tandoori spice mix or garam masala",
+   "½ tsp turmeric",
+   "pepper, salt, a few drops of hot sauce"
+  ],
+  "steps": [
+   "Cut the tofu into 2.5 cm cubes.",
+   "Spread on a baking tray and bake at 180 °C for 20-25 minutes — this dries it out so it absorbs the marinade better.",
+   "In a bowl, mix the spices, tomato sauce, yogurt and oil.",
+   "Toss the tofu in it and marinate in the fridge for at least 1 hour, best for 8 hours.",
+   "Thread onto skewers and cook on a hot grill or griddle pan until coloured all over."
+  ]
+ },
+ "indian--bengali-mentas-gyomberes-sult-hal": {
+  "title": "Bengali mint and ginger baked fish",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "800 g oily fish steaks (e.g. mackerel, catfish or carp), cut into 8-10 pieces",
+   "1 tsp chopped fresh mint",
+   "1 tsp grated ginger",
+   "½ tsp grated nutmeg",
+   "50 g butter, diced",
+   "3 tbsp chopped green pepper",
+   "1 tsp green chilli paste or 1 green chilli, chopped",
+   "pinch of sugar",
+   "salt"
+  ],
+  "steps": [
+   "Preheat the oven to 200 °C; wash the fish well and pat dry.",
+   "Put the salt, sugar, half the butter and the other spices, mint and pepper in an ovenproof dish and mix.",
+   "Turn the fish in the mixture and dot the rest of the butter on top.",
+   "Bake for 15-20 minutes until the fish is golden and cooked; serve with rice."
+  ]
+ },
+ "indian--szilheti-savanykas-paradicsomcurry": {
+  "title": "Sylheti tangy tomato curry",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg ripe tomatoes, chopped",
+   "4 tbsp oil",
+   "1 head garlic (about 10 cloves), finely chopped",
+   "2 onions, grated or blended to a paste",
+   "1 tsp turmeric",
+   "salt",
+   "500 ml boiling water",
+   "rice to serve"
+  ],
+  "steps": [
+   "Heat the oil in a large frying pan.",
+   "Add the garlic and fry until fragrant.",
+   "Stir in the onion paste and fry until golden.",
+   "Add the tomatoes and cook until they break down and the oil separates (about 10 minutes).",
+   "Stir in the turmeric and salt, pour in the boiling water and simmer until as thick as you like; serve with rice."
+  ]
+ },
+ "indian--matar-paneer-borsos-paneer-paradicsomos-hagymas-martasban": {
+  "title": "Matar paneer (paneer and peas in tomato onion gravy)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g paneer (or halloumi), diced",
+   "400 g green peas",
+   "1 onion, grated",
+   "3 tomatoes, puréed",
+   "2 cloves garlic, 1 piece of ginger, grated",
+   "3 tbsp oil",
+   "1 tsp turmeric",
+   "2 tsp garam masala",
+   "1 tsp ground cumin",
+   "100 ml single cream or milk",
+   "salt",
+   "rice or naan to serve"
+  ],
+  "steps": [
+   "Fry the paneer in half the oil until golden and take out.",
+   "Fry the onion in the rest of the oil for 5-6 minutes, add the garlic, ginger and spices, then the tomato purée and cook for 8 minutes.",
+   "Add the peas and 200 ml water, season and cook for 5 minutes.",
+   "Return the paneer, stir in the cream and cook for 3 minutes.",
+   "Serve with rice or naan; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--kadhai-chicken-paprikas-paradicsomos-serpenyos-csirke": {
+  "title": "Kadhai chicken (skillet chicken with peppers and tomato)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g boneless chicken thigh, diced",
+   "2 sweet peppers, cut into large dice",
+   "1 onion, cut into large dice + 1 finely chopped",
+   "3 tomatoes, puréed",
+   "3 cloves garlic, 1 piece of ginger, grated",
+   "3 tbsp oil",
+   "2 tsp coriander seeds and 1 tsp cumin seeds, coarsely crushed",
+   "1 tsp turmeric",
+   "1 tsp chilli powder",
+   "1 tsp garam masala",
+   "salt",
+   "naan or rice"
+  ],
+  "steps": [
+   "Fry the crushed spices in the oil for 30 seconds, add the chopped onion and fry for 5 minutes.",
+   "Add the garlic, ginger, turmeric and chilli, then the tomato purée and cook for 5 minutes.",
+   "Add the chicken, season and cook covered for 15 minutes.",
+   "Add the pepper and onion chunks and stir-fry over higher heat for 5 minutes (they should stay crunchy); sprinkle with garam masala.",
+   "Serve with naan or rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--mix-veg-sabzi-vegyes-zoldseges-curry": {
+  "title": "Mix veg sabzi (mixed vegetable curry)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 potatoes, diced",
+   "2 carrots, diced",
+   "250 g cauliflower florets",
+   "150 g green beans, cut into pieces",
+   "150 g green peas",
+   "1 onion, finely chopped",
+   "2 tomatoes, chopped",
+   "2 cloves garlic, 1 piece of ginger",
+   "3 tbsp oil",
+   "1 tsp cumin, 1 tsp turmeric, 2 tsp ground coriander, 1 tsp garam masala",
+   "salt",
+   "flatbread or rice"
+  ],
+  "steps": [
+   "Fry the cumin in the oil, add the onion, garlic and ginger and fry for 5 minutes.",
+   "Add the turmeric, coriander and tomatoes and cook until pulpy.",
+   "Add the potatoes, carrots, cauliflower and green beans, pour in 200 ml water, season and cook covered for 15 minutes.",
+   "Add the peas and garam masala and cook for another 5 minutes.",
+   "Serve with flatbread or rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--tomato-rice-paradicsomos-fuszeres-rizs": {
+  "title": "Tomato rice (spiced tomato rice with peas)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g basmati rice, soaked for 20 minutes",
+   "4 ripe tomatoes, puréed",
+   "1 onion, sliced",
+   "2 cloves garlic, 1 piece of ginger",
+   "3 tbsp oil or ghee",
+   "1 tsp mustard or cumin seeds",
+   "10 curry leaves",
+   "1 tsp turmeric",
+   "1 tsp chilli powder",
+   "1 tsp garam masala",
+   "150 g green peas",
+   "500 ml water",
+   "salt"
+  ],
+  "steps": [
+   "Fry the mustard seeds and curry leaves in the oil, add the onion and fry for 5 minutes.",
+   "Add the garlic, ginger and spices, then the tomato purée and cook for 8 minutes until the oil separates.",
+   "Add the drained rice and peas, pour in the water and season.",
+   "Cook covered over low heat for 15 minutes, then rest for 5 minutes.",
+   "Serve with yogurt; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--palak-dal-spenotos-sarga-lencse": {
+  "title": "Palak dal (lentils with spinach)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "250 g split yellow mung beans or red lentils",
+   "300 g spinach (fresh or frozen), chopped",
+   "1 onion, finely chopped",
+   "1 tomato, chopped",
+   "3 cloves garlic, sliced",
+   "3 tbsp ghee or oil",
+   "1 tsp cumin, 1 tsp turmeric",
+   "2 dried red chillies",
+   "salt",
+   "lemon juice, rice"
+  ],
+  "steps": [
+   "Cook the lentils in 1 litre of water with the turmeric for 20 minutes until they break down.",
+   "Add the spinach and cook for 5 minutes; season.",
+   "In a small frying pan, fry the cumin, chillies and garlic in the ghee until golden, add the onion and tomato and cook for 5 minutes.",
+   "Pour the spiced oil (tadka) into the dal and mix.",
+   "Serve with lemon juice and rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--keema-aloo-fuszeres-daralt-hus-burgonyaval": {
+  "title": "Keema aloo (spiced mince with potatoes)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g minced lamb or beef",
+   "3 potatoes, cut into small cubes",
+   "1 onion, finely chopped",
+   "2 tomatoes, chopped",
+   "3 cloves garlic, 1 piece of ginger, grated",
+   "3 tbsp oil",
+   "1 tsp cumin",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp chilli powder",
+   "1 tsp garam masala",
+   "salt",
+   "fresh coriander, flatbread or rice"
+  ],
+  "steps": [
+   "Fry the cumin in the oil, add the onion and fry until golden.",
+   "Add the garlic, ginger and mince and brown until crumbly.",
+   "Stir in the turmeric, coriander, chilli and tomatoes and cook for 5 minutes.",
+   "Add the potatoes and 300 ml water, season and cook covered for 15-20 minutes until the potatoes are tender; sprinkle with garam masala.",
+   "Serve with coriander, flatbread or rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--aloo-baingan-burgonyas-padlizsanos-curry": {
+  "title": "Aloo baingan (potato and aubergine curry)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 medium aubergines, diced",
+   "3 potatoes, diced",
+   "1 onion, finely chopped",
+   "2 tomatoes, chopped",
+   "2 cloves garlic, 1 piece of ginger",
+   "4 tbsp oil",
+   "1 tsp cumin",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp garam masala",
+   "pinch of chilli",
+   "salt",
+   "fresh coriander, flatbread"
+  ],
+  "steps": [
+   "Fry the cumin in the oil, add the onion, garlic and ginger and fry for 5 minutes.",
+   "Add the potatoes, turmeric, coriander and chilli and toss for 3 minutes.",
+   "Add the aubergine and tomatoes, pour in 100 ml water and season.",
+   "Cook covered, stirring now and then, for 20 minutes until everything is tender; sprinkle with garam masala.",
+   "Serve with coriander and flatbread; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--gajar-matar-repas-borsos-szaraz-curry": {
+  "title": "Gajar matar (dry carrot and pea curry)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "6 carrots, cut into small cubes",
+   "400 g green peas",
+   "1 onion, finely chopped",
+   "1 piece of ginger, grated",
+   "3 tbsp oil",
+   "1 tsp cumin",
+   "1 tsp turmeric",
+   "1 tsp ground coriander",
+   "½ tsp garam masala",
+   "pinch of chilli",
+   "salt",
+   "flatbread or rice"
+  ],
+  "steps": [
+   "Fry the cumin in the oil, add the onion and ginger and fry for 4 minutes.",
+   "Add the carrots, turmeric, coriander and chilli and toss for 3 minutes.",
+   "Add the peas, pour in 100 ml water, season and cook covered for 10-12 minutes.",
+   "Sprinkle with garam masala and fry uncovered for 2 minutes.",
+   "Serve with flatbread or rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--mushroom-masala-gombacurry-paradicsomos-hagymas-martasban": {
+  "title": "Mushroom masala",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g button mushrooms, quartered",
+   "1 sweet pepper, diced",
+   "1 onion, finely chopped",
+   "3 tomatoes, puréed",
+   "3 cloves garlic, 1 piece of ginger",
+   "3 tbsp oil",
+   "1 tsp cumin",
+   "1 tsp turmeric",
+   "2 tsp ground coriander",
+   "1 tsp garam masala",
+   "pinch of chilli",
+   "100 ml single cream (optional)",
+   "salt",
+   "rice or naan"
+  ],
+  "steps": [
+   "Fry the cumin and onion in the oil until golden, add the garlic and ginger.",
+   "Stir in the turmeric, coriander and chilli, then the tomato purée and cook for 6-8 minutes.",
+   "Add the mushrooms and pepper, season and cook for 10 minutes until the mushroom liquid has reduced a little.",
+   "Stir in the garam masala and cream and cook for 2 minutes.",
+   "Serve with rice or naan; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "indian--paneer-bhurji-morzsolt-fuszeres-paneer-paprikaval": {
+  "title": "Paneer bhurji (spiced scrambled paneer with peppers)",
+  "time": "20 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "300 g paneer or semi-fat curd cheese (squeezed), crumbled",
+   "1 onion, finely chopped",
+   "1 sweet pepper, finely chopped",
+   "2 tomatoes, chopped",
+   "1 green chilli, 1 piece of ginger",
+   "2 tbsp oil or ghee",
+   "1 tsp cumin",
+   "½ tsp turmeric",
+   "1 tsp garam masala",
+   "salt",
+   "fresh coriander, flatbread or toast"
+  ],
+  "steps": [
+   "Fry the cumin in the oil, add the onion, chilli and ginger and fry for 4 minutes.",
+   "Add the pepper and tomatoes and cook for 5 minutes.",
+   "Stir in the turmeric and garam masala, then the crumbled paneer; season.",
+   "Heat through for 2-3 minutes, stirring, and sprinkle with coriander.",
+   "Serve with flatbread or toast; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "chinese--congee-rizskasa-serteshussal-es-gyomberrel": {
   "title": "Congee (rice porridge with pork and ginger)",
   "time": "1 hr",
@@ -14568,6 +22264,96 @@ window.I18N_EN_RECIPES = {
    "Divide the dough into small discs, put a spoonful of red bean paste on each and pleat them closed.",
    "Put them on squares of baking paper and leave to rise for another 20 minutes.",
    "Steam for 12-15 minutes until risen and cooked through."
+  ]
+ },
+ "chinese--szazeves-tojas-sonkaval-es-savanyitott-gyomberrel": {
+  "title": "Century eggs with ham and pickled ginger",
+  "time": "10 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "4 century eggs (pidan)",
+   "80 g cured ham (e.g. Jinhua or prosciutto)",
+   "80 g pickled ginger",
+   "1 small bowl of black (Chinese) vinegar for dipping"
+  ],
+  "steps": [
+   "Wash and peel the eggs and cut each into 4 slices.",
+   "Slice the ginger thinly.",
+   "Slice the ham thinly too (if very salty, soak in water for a few minutes, then pat dry).",
+   "Top each egg slice with a slice of ginger and a slice of ham.",
+   "Serve with black vinegar for dipping; also good with congee."
+  ]
+ },
+ "chinese--kremes-gombas-selymes-tofus-leves": {
+  "title": "Creamy mushroom and silken tofu soup",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "300 g silken tofu",
+   "350 ml water",
+   "1 medium onion, finely chopped",
+   "1 tbsp oil",
+   "250 g mushrooms (button or shiitake), thickly sliced",
+   "1 tsp dried thyme",
+   "120 ml dry red wine or rice wine",
+   "1 tsp soy sauce",
+   "salt"
+  ],
+  "steps": [
+   "Blend the tofu with 60 ml water for about 2 minutes until smooth, then add the rest of the water and blend until even.",
+   "In a large frying pan, soften the onion in the oil for about 5 minutes.",
+   "Add the mushrooms and thyme and fry for another 5 minutes.",
+   "Pour in the wine and simmer for 5 minutes.",
+   "Add the tofu mixture and simmer until the mushrooms are soft; stir in the soy sauce and season with salt."
+  ]
+ },
+ "chinese--fuszeres-basmati-rizs-tofuval-mandulaval-es-mazsolaval": {
+  "title": "Spiced basmati rice with tofu, almonds and raisins",
+  "time": "30 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "120 g basmati rice",
+   "200 g firm tofu, diced",
+   "2 tbsp olive oil",
+   "2 tbsp blanched flaked almonds",
+   "2 tbsp roughly chopped cashews",
+   "1 tbsp raisins",
+   "1 bay leaf",
+   "4 peppercorns",
+   "2 cm piece of cinnamon stick",
+   "2 cloves",
+   "480 ml water",
+   "salt"
+  ],
+  "steps": [
+   "Rinse the rice several times in cold water and drain.",
+   "Put it in a saucepan with the water, bay leaf, peppercorns, cinnamon, cloves and salt and bring to the boil.",
+   "Turn to medium-low and cook covered for about 12 minutes until the water is absorbed and the grains are tender but separate.",
+   "Meanwhile, heat the oil in a frying pan and fry the tofu for a few minutes per side, then lift out; in the same oil, fry the nuts and raisins until golden.",
+   "Put the rice in a bowl, fluff with a fork, gently fold in the tofu and nut mixture and serve hot."
+  ]
+ },
+ "chinese--tofurantotta-spenottal-es-aszalt-paradicsommal": {
+  "title": "Tofu scramble with spinach and sun-dried tomato",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 tbsp oil",
+   "200 g soft tofu, drained for 15 minutes",
+   "½ small onion, diced",
+   "1 clove garlic, finely chopped",
+   "2 sun-dried tomatoes, finely chopped",
+   "1 small handful baby spinach",
+   "2 pinches chilli flakes",
+   "2 pinches turmeric or curry powder",
+   "salt, pepper",
+   "2 tortillas or 4 slices bread (optional)"
+  ],
+  "steps": [
+   "Heat the oil in a frying pan and cook the onion, garlic and sun-dried tomato until soft and golden.",
+   "Meanwhile, mash the tofu with a fork to a scrambled texture and mix in the spices.",
+   "When the onion is ready, add the tofu and spinach and heat, stirring, until the spinach wilts.",
+   "Serve wrapped in tortillas as a breakfast burrito, or with bread."
   ]
  },
  "chinese--wonton-leves": {
@@ -14884,6 +22670,449 @@ window.I18N_EN_RECIPES = {
    "Pour off the liquid from the plate and sprinkle the fish with fresh spring onion and coriander.",
    "Pour over the soy sauce.",
    "Heat the oil until very hot, pour it sizzling over the spring onion and coriander, and serve at once."
+  ]
+ },
+ "chinese--rakhusos-sult-rizs-babcsiraval": {
+  "title": "Crab fried rice with bean sprouts",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 tbsp oil",
+   "2 cloves garlic, finely chopped",
+   "2 small red onions, thinly sliced",
+   "150 g bean sprouts, rinsed with hot water",
+   "2 large red chillies, finely chopped",
+   "2 tins (about 200 g in total) crab meat or surimi, drained",
+   "3 spring onions, cut into 1 cm pieces",
+   "500 g cooked, cooled rice",
+   "2 tbsp fish sauce",
+   "½ tsp salt",
+   "1 tsp freshly ground pepper"
+  ],
+  "steps": [
+   "Stir-fry the crab in 2 tbsp oil in a wok for 1 minute, then take it out.",
+   "In the remaining oil, stir-fry the garlic, red onion, spring onion and chilli for about 1 minute until fragrant.",
+   "Add the crab and bean sprouts and stir for 1 minute.",
+   "Add the rice, fish sauce, salt and pepper and stir-fry over high heat until everything is hot and well mixed.",
+   "Serve hot."
+  ]
+ },
+ "chinese--csipos-sult-rizs-gyomberrel-es-ujhagymaval": {
+  "title": "Spicy fried rice with ginger and spring onion",
+  "time": "15 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "2 tbsp coconut oil or other oil",
+   "1 large onion, diced",
+   "3 cloves garlic, crushed",
+   "2 cm piece of ginger, finely chopped",
+   "2 spring onions, cut into 1.5 cm pieces",
+   "2-3 red chillies, finely chopped",
+   "600 g cooked, cooled basmati rice",
+   "1 tsp chilli powder",
+   "3 tbsp light soy sauce",
+   "1 tbsp fish sauce",
+   "1 tsp chicken stock powder",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Heat the oil in a non-stick frying pan or wok and fry the onion, garlic, chilli, ginger and spring onion for 2-3 minutes until fragrant.",
+   "Add the rice, chilli powder, soy sauce, fish sauce and stock powder and season.",
+   "Stir-fry until well mixed and heated through.",
+   "Serve hot."
+  ]
+ },
+ "chinese--kacsas-sult-rizs-chilivel": {
+  "title": "Duck fried rice with chilli",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "3 tbsp butter",
+   "2 tbsp sesame oil",
+   "3 cloves garlic, finely chopped",
+   "2 red chillies, sliced",
+   "2 green chillies, sliced",
+   "3 spring onions (white part), thinly sliced",
+   "200 g bean sprouts, rinsed with hot water",
+   "1 small bunch parsley",
+   "300 g roast duck meat (e.g. leftover roast duck), cut into strips",
+   "600 g cooked, cooled rice",
+   "2 tbsp light soy sauce",
+   "1 tsp freshly ground pepper",
+   "salt"
+  ],
+  "steps": [
+   "Heat the butter and sesame oil in a non-stick frying pan over medium-high heat and fry the garlic, chillies and spring onion for about 15 seconds.",
+   "Add the duck, bean sprouts and parsley and stir until the meat is hot.",
+   "Add the rice, then the soy sauce and pepper, and season with salt.",
+   "Stir-fry until well mixed and serve hot."
+  ]
+ },
+ "chinese--hideg-szezamolajas-tesztasalata-korianderrel": {
+  "title": "Cold sesame noodle salad with coriander",
+  "time": "15 min + chilling",
+  "servings": "4 servings",
+  "ingredients": [
+   "450 g thin noodles (vermicelli or angel hair)",
+   "3 tbsp sesame oil",
+   "1 tbsp olive oil",
+   "1 tsp salt",
+   "1 large bunch fresh coriander, finely chopped",
+   "1 bunch spring onions, sliced",
+   "3 carrots, cut into thin strips",
+   "1 tbsp toasted sesame seeds (optional)"
+  ],
+  "steps": [
+   "Cook the noodles as directed on the packet and drain.",
+   "While still warm, toss with the sesame oil, olive oil and salt.",
+   "Mix in the coriander, spring onions and carrots.",
+   "Chill before serving and sprinkle with sesame seeds, if using."
+  ]
+ },
+ "chinese--szezamos-gyomberes-csirkesalata-ropogos-tesztaval": {
+  "title": "Sesame ginger chicken salad with crispy noodles",
+  "time": "30 min",
+  "servings": "4 servings",
+  "marinate": "at least 30 minutes, ideally 8 hours",
+  "ingredients": [
+   "500 g chicken breast or thigh fillet",
+   "3 tbsp soy sauce",
+   "1 tbsp brown sugar",
+   "2 cloves garlic, crushed",
+   "2 tsp grated ginger",
+   "4 tbsp mayonnaise",
+   "1 tbsp sesame oil",
+   "1 tsp sugar",
+   "2 tbsp sesame seeds",
+   "400 g white cabbage, finely shredded",
+   "2 carrots, grated",
+   "1 handful crispy fried noodles or fried rice noodles"
+  ],
+  "steps": [
+   "Toss the chicken with the soy sauce, brown sugar, garlic and half the ginger, cover and marinate in the fridge for at least 30 minutes, up to 8 hours.",
+   "For the dressing, mix the mayonnaise, sesame oil, sugar and the rest of the ginger.",
+   "Drain the chicken and cook in an oiled griddle pan for about 10 minutes until done; let it cool a little, then cut into bite-sized pieces.",
+   "Toast the sesame seeds in a dry pan, shaking, for 2-3 minutes until fragrant, and tip out at once.",
+   "Toss the cabbage, carrot, chicken and sesame seeds with the dressing and serve topped with crispy noodles."
+  ]
+ },
+ "chinese--piritott-tojasos-teszta-garnelaval-es-halgomboccal": {
+  "title": "Stir-fried egg noodles with prawns and fish balls",
+  "time": "20 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g fresh or pre-cooked Chinese egg noodles",
+   "2 tbsp oil",
+   "2 cloves garlic, crushed",
+   "5 fish balls or 100 g surimi, cut into 1 cm pieces",
+   "200 g peeled prawns",
+   "100 g white or Chinese cabbage, cut into bite-sized pieces",
+   "2 spring onions, cut into 1 cm pieces",
+   "150 g bean sprouts, rinsed with hot water",
+   "2 tbsp light soy sauce",
+   "½ tsp salt",
+   "1 tsp sugar",
+   "1 tsp pepper",
+   "2 tbsp crispy fried onion"
+  ],
+  "steps": [
+   "Heat the oil in a wok and fry the garlic for about 10 seconds until golden.",
+   "Add the fish balls and prawns and stir-fry until they just change colour.",
+   "Add the cabbage and spring onion and stir-fry until hot.",
+   "Add the noodles and stir-fry until everything is hot; finally add the bean sprouts, soy sauce, salt, sugar and pepper and stir-fry for another minute — the sprouts should stay crunchy.",
+   "Serve at once, sprinkled with crispy onion."
+  ]
+ },
+ "chinese--szojaszoszos-morzsolt-tofu-rizzsel-es-ujhagymaval": {
+  "title": "Soy-marinated crumbled tofu with rice and spring onion",
+  "time": "25 min + 30 min marinating",
+  "servings": "2 servings",
+  "ingredients": [
+   "300 g extra-firm tofu",
+   "3 tbsp soy sauce (gluten-free tamari works too)",
+   "1 tsp yeast extract or 1 tbsp oyster sauce",
+   "1 tsp beetroot juice (for colour, optional)",
+   "½ tsp mushroom powder or stock powder",
+   "½ tsp onion powder",
+   "1 tbsp oil",
+   "2 spring onions, sliced",
+   "150 g rice, cooked"
+  ],
+  "steps": [
+   "In a small bowl, mix the soy sauce, yeast extract, beetroot juice, mushroom powder and onion powder until lump-free.",
+   "Press the tofu well, then crumble it with your fingers in a bag into fingernail-sized pieces and pour over the marinade.",
+   "Leave for at least 30 minutes (or up to overnight) to absorb the marinade.",
+   "Fry in a non-stick pan over medium heat in a little oil until golden; spread out and left to cool for a few minutes, it becomes drier, like mince.",
+   "Serve piled on hot rice, sprinkled with spring onion (also good in tacos or pasta sauce)."
+  ]
+ },
+ "chinese--sozott-halas-csirkes-sult-rizs": {
+  "title": "Salted fish and chicken fried rice",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tbsp oil",
+   "20 g (about 4 cloves) chopped garlic",
+   "1 red chilli, finely chopped",
+   "2 spring onions, finely chopped",
+   "100 g salted dried fish (or smoked mackerel), flaked",
+   "100 g cooked chicken, shredded",
+   "75 g bean sprouts",
+   "500 g cooked, cooled jasmine rice",
+   "½ tsp salt",
+   "1 tbsp fish sauce",
+   "1 tsp pepper"
+  ],
+  "steps": [
+   "Heat the oil in a non-stick frying pan or wok and fry the garlic, chilli and spring onion for 1 minute until fragrant.",
+   "Add the fish and chicken and stir until hot and lightly browned.",
+   "Add the rice and bean sprouts and season with the salt (carefully, as the fish is salty), pepper and fish sauce.",
+   "Stir-fry over high heat until everything is hot and serve at once."
+  ]
+ },
+ "chinese--hong-shao-ji-chi-szojaszoszban-parolt-csirkeszarny-rizzsel": {
+  "title": "Hong shao ji chi (soy-braised chicken wings with rice)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken wings (or thighs)",
+   "3 slices ginger",
+   "3 spring onions, cut into pieces",
+   "2 tbsp oil",
+   "2 tbsp sugar",
+   "3 tbsp light soy sauce",
+   "1 tbsp dark soy sauce",
+   "2 tbsp rice wine (optional)",
+   "1 star anise",
+   "250 g rice"
+  ],
+  "steps": [
+   "Blanch the wings in boiling water for 2 minutes and drain.",
+   "Melt the sugar in the oil to a light caramel, add the wings and turn until coated.",
+   "Add the ginger, spring onion, soy sauces, rice wine, star anise and 300 ml water.",
+   "Braise covered for 20 minutes, then boil uncovered for 5-8 minutes until the sauce is thick and glossy; meanwhile cook the rice.",
+   "Serve with rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--tudou-dun-niurou-kinai-marharagu-burgonyaval": {
+  "title": "Tudou dun niurou (Chinese beef and potato stew)",
+  "time": "1 hr 30 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "800 g beef shin or shoulder, diced",
+   "4 potatoes, cut into large cubes",
+   "2 carrots, cut into pieces",
+   "1 onion",
+   "4 slices ginger, 3 cloves garlic",
+   "2 tbsp oil",
+   "1 tbsp sugar",
+   "3 tbsp soy sauce",
+   "1 tbsp dark soy or oyster sauce",
+   "2 star anise, 1 piece cinnamon, 2 bay leaves",
+   "2 tbsp rice wine",
+   "rice to serve"
+  ],
+  "steps": [
+   "Bring the beef to the boil in cold water, boil for 3 minutes, drain and rinse.",
+   "Fry the ginger, garlic and onion in the oil, add the sugar and meat and toss for 3 minutes.",
+   "Add the soy sauces, rice wine, spices and enough boiling water to cover; braise covered over low heat for 50 minutes (20 minutes in a pressure cooker).",
+   "Add the potatoes and carrots and cook for another 20-25 minutes until tender and the sauce has thickened.",
+   "Serve with rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--yuxiang-rousi-edes-savanykas-csipos-sertescsikok-repaval": {
+  "title": "Yuxiang rousi (fish-fragrant sweet, sour and spicy pork with carrot)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g pork loin, cut into thin strips",
+   "1 tsp cornflour, 1 tbsp soy sauce for the marinade",
+   "2 carrots, cut into matchsticks",
+   "50 g soaked wood ear mushrooms or button mushrooms, cut into strips",
+   "1 green pepper, cut into strips",
+   "3 cloves garlic, 1 piece of ginger",
+   "1 tbsp chilli bean paste (doubanjiang)",
+   "3 tbsp oil",
+   "for the sauce: 2 tbsp soy sauce, 2 tbsp vinegar, 2 tbsp sugar, 1 tsp cornflour, 4 tbsp water",
+   "rice to serve"
+  ],
+  "steps": [
+   "Toss the pork with the marinade ingredients; mix the sauce ingredients in a small bowl.",
+   "Stir-fry the pork in 2 tbsp oil in a hot wok for 2-3 minutes and take out.",
+   "Fry the chilli bean paste, garlic and ginger in the rest of the oil for 30 seconds, add the carrot, mushrooms and pepper and stir-fry for 3 minutes.",
+   "Return the pork, pour in the sauce and toss for 1 minute until thickened.",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--cu-liu-baicai-ecetes-piritott-kinai-kel-serteshussal": {
+  "title": "Cu liu baicai (vinegar stir-fried Chinese cabbage with pork)",
+  "time": "20 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "1 small Chinese cabbage (about 800 g)",
+   "200 g pork loin, thinly sliced",
+   "3 cloves garlic",
+   "2 dried chillies",
+   "2 tbsp oil",
+   "2 tbsp rice or black vinegar",
+   "1 tbsp soy sauce",
+   "1 tsp sugar",
+   "1 tsp cornflour mixed with 3 tbsp water",
+   "salt",
+   "rice"
+  ],
+  "steps": [
+   "Separate the thick white stems from the leaves: slice the white parts diagonally and cut the green into larger pieces.",
+   "Stir-fry the pork in the oil in a hot wok for 2 minutes, add the garlic and chillies.",
+   "Add the white parts and stir-fry over high heat for 3 minutes, then the green parts for 1-2 minutes.",
+   "Add the vinegar, soy sauce and sugar, season and thicken with the cornflour water.",
+   "Serve with rice; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--mu-xu-rou-tojasos-gombas-sertescsikok-uborkaval": {
+  "title": "Mu xu rou (moo shu pork with egg, mushrooms and cucumber)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g pork loin, cut into thin strips",
+   "1 tsp cornflour, 1 tbsp soy sauce for the marinade",
+   "3 eggs, beaten",
+   "100 g soaked wood ear or shiitake mushrooms, cut into strips",
+   "1 cucumber, sliced into half moons",
+   "1 carrot, thinly sliced",
+   "2 spring onions, 2 cloves garlic",
+   "3 tbsp oil",
+   "2 tbsp soy sauce, 1 tbsp rice wine, 1 tsp sugar",
+   "rice"
+  ],
+  "steps": [
+   "Toss the pork with the marinade ingredients.",
+   "Scramble the eggs into large curds in 1 tbsp oil in the wok and take out.",
+   "Stir-fry the pork in 1 tbsp oil for 2-3 minutes and take out.",
+   "Stir-fry the garlic, spring onion, mushrooms, carrot and cucumber in the rest of the oil for 3 minutes, return the pork and egg and season with the soy sauce, rice wine and sugar.",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--xianggu-dun-ji-shiitake-gombaval-parolt-csirke": {
+  "title": "Xianggu dun ji (chicken braised with shiitake)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken legs, jointed",
+   "8 dried shiitake mushrooms, soaked (keep the soaking water)",
+   "4 slices ginger",
+   "3 spring onions",
+   "2 tbsp oil",
+   "3 tbsp soy sauce",
+   "1 tbsp oyster sauce",
+   "1 tbsp rice wine",
+   "1 tsp sugar",
+   "rice"
+  ],
+  "steps": [
+   "Squeeze the mushrooms and halve them; strain 300 ml of the soaking water.",
+   "Fry the ginger and white part of the spring onions in the oil, add the chicken and brown it all over.",
+   "Add the mushrooms, soy sauce, oyster sauce, rice wine, sugar and the mushroom water.",
+   "Braise covered for 25-30 minutes, then reduce the sauce a little uncovered.",
+   "Serve with spring onion and rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--huangmen-ji-parolt-csirke-gombaval-es-paprikaval": {
+  "title": "Huangmen ji (braised chicken with mushrooms and pepper)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken legs, jointed",
+   "6 dried shiitake, soaked",
+   "1 green pepper, cut into pieces",
+   "3 slices ginger, 3 cloves garlic",
+   "2 dried chillies",
+   "2 tbsp oil",
+   "1 tbsp sugar",
+   "3 tbsp soy sauce",
+   "1 tbsp dark soy sauce",
+   "1 tbsp oyster sauce",
+   "rice"
+  ],
+  "steps": [
+   "Melt the sugar in the oil to a light caramel, add the chicken and turn to coat.",
+   "Add the ginger, garlic and chillies, then the soy sauces and oyster sauce.",
+   "Add the mushrooms, pour in 400 ml water (or the mushroom water) and braise covered for 25 minutes.",
+   "Add the pepper and cook uncovered for 5 minutes until the sauce is thick.",
+   "Serve with rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--lu-rou-fan-tajvani-parolt-serteshas-rizzsel": {
+  "title": "Lu rou fan (Taiwanese braised pork over rice)",
+  "time": "1 hr 15 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "700 g pork belly or neck, cut into small cubes",
+   "6 shallots or 1 onion, thinly sliced",
+   "3 cloves garlic",
+   "1 tbsp oil",
+   "2 tbsp sugar",
+   "4 tbsp soy sauce",
+   "1 tbsp dark soy sauce",
+   "2 tbsp rice wine",
+   "1 star anise, pinch of five-spice",
+   "4 boiled eggs, peeled (optional)",
+   "rice"
+  ],
+  "steps": [
+   "Fry the shallots in the oil until golden brown and add the garlic.",
+   "Add the pork and fry for 5 minutes, then the sugar, soy sauces, rice wine and spices.",
+   "Pour in water to cover, add the eggs and braise covered over low heat for 50 minutes.",
+   "Boil uncovered for 10 minutes until the sauce is thick.",
+   "Serve over rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--yangcong-chao-niurou-piritott-marhahus-hagymaval": {
+  "title": "Yangcong chao niurou (stir-fried beef with onions)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g beef topside or sirloin, thinly sliced",
+   "1 tbsp soy sauce, 1 tsp cornflour, 1 tbsp oil for the marinade",
+   "2 onions, cut into wedges",
+   "1 green pepper, cut into strips",
+   "2 cloves garlic",
+   "2 tbsp oil",
+   "2 tbsp soy sauce",
+   "1 tbsp oyster sauce",
+   "½ tsp sugar",
+   "rice"
+  ],
+  "steps": [
+   "Toss the beef with the marinade ingredients and leave for 15 minutes; meanwhile cook the rice.",
+   "Stir-fry the beef in 1 tbsp oil in a hot wok over high heat for 1-2 minutes and take out.",
+   "Stir-fry the onions, pepper and garlic in the rest of the oil for 3 minutes.",
+   "Return the beef, add the soy sauce, oyster sauce and sugar and toss for 1 minute.",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--tudou-si-ecetes-chilis-piritott-burgonyacsikok-csirkevel": {
+  "title": "Tudou si (vinegar-chilli shredded potatoes with chicken)",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "4 large potatoes, cut into thin matchsticks",
+   "300 g chicken breast, cut into strips",
+   "1 green pepper, cut into strips",
+   "3 cloves garlic",
+   "2 dried chillies",
+   "3 tbsp oil",
+   "2 tbsp rice vinegar",
+   "1 tbsp soy sauce",
+   "salt",
+   "rice or flatbread"
+  ],
+  "steps": [
+   "Rinse the potato strips well in cold water (this keeps them crunchy) and drain.",
+   "Stir-fry the chicken in half the oil for 3-4 minutes, season and take out.",
+   "Fry the garlic and chillies in the rest of the oil, add the potato and pepper and stir-fry over high heat for 4-5 minutes.",
+   "Return the chicken, add the vinegar and soy sauce, season and toss for 1 minute.",
+   "Serve with rice; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  },
  "chinese--kung-pao-chicken": {
@@ -15211,6 +23440,383 @@ window.I18N_EN_RECIPES = {
    "Heat the oil until very hot, pour it sizzling over the spring onion and coriander, and serve at once."
   ]
  },
+ "chinese--foldimogyoros-piritott-csirke-zellerrel-es-gombaval": {
+  "title": "Peanut chicken stir-fry with celery and mushrooms",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 tbsp butter or oil",
+   "2 celery sticks, sliced",
+   "1 small onion, finely chopped",
+   "400 g cooked or roast chicken or turkey, cut into bite-sized pieces",
+   "200 g mushrooms (tinned and drained, or fresh sliced)",
+   "1 tbsp cornflour",
+   "3 tbsp soy sauce",
+   "250 ml chicken stock",
+   "140 g roasted peanuts",
+   "cooked rice to serve"
+  ],
+  "steps": [
+   "Melt the butter in a wok or frying pan and stir-fry the celery and onion.",
+   "Add the chicken and mushrooms and stir over lower heat for 5 minutes.",
+   "In a separate bowl, mix the cornflour with the soy sauce and stock until smooth, slowly pour into the wok and cook for 5 minutes until thickened.",
+   "Stir in the peanuts.",
+   "Serve over hot rice."
+  ]
+ },
+ "chinese--piritott-garnela-brokkolival-osztrigaszoszban": {
+  "title": "Stir-fried prawns and broccoli in oyster sauce",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "1 tbsp oil",
+   "1 tbsp chopped garlic",
+   "200 g peeled prawns",
+   "300 g broccoli, cut into florets and rinsed",
+   "½ tsp salt",
+   "1 tbsp oyster sauce",
+   "3 tbsp water",
+   "rice to serve"
+  ],
+  "steps": [
+   "Heat the oil in a wok and fry the garlic until golden.",
+   "Add the prawns and broccoli, season with salt and add the oyster sauce and water.",
+   "Stir-fry over high heat for 3-4 minutes until the prawns are pink and the broccoli is tender-crisp.",
+   "Serve on a plate with rice."
+  ]
+ },
+ "chinese--parolt-sparga-szezammaggal-es-szojaszosszal": {
+  "title": "Steamed asparagus with sesame seeds and soy sauce",
+  "time": "15 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 bunches (about 500 g) thin green asparagus",
+   "2 tbsp soy sauce",
+   "1 tbsp sesame oil",
+   "2 tbsp sesame seeds",
+   "pinch of coarse salt"
+  ],
+  "steps": [
+   "Set up a steamer and bring the water underneath to the boil.",
+   "Snap off the woody, thick ends of the asparagus.",
+   "Steam the asparagus for 6-8 minutes until tender but still crisp.",
+   "Meanwhile, toast the sesame seeds in a dry frying pan over medium heat, shaking, until just coloured and fragrant (watch them, they burn easily).",
+   "Drain the asparagus, arrange on a plate, drizzle with the soy sauce and sesame oil and sprinkle with the sesame seeds and a little salt."
+  ]
+ },
+ "chinese--szojaszoszos-piritott-tofu-zoldsegekkel-es-almaval": {
+  "title": "Soy-glazed tofu with vegetables and apple",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "400 g firm tofu",
+   "1 onion, sliced",
+   "1 green pepper, cut into strips",
+   "2 tomatoes, cut into wedges",
+   "½ apple, thinly sliced",
+   "3 tbsp soy sauce",
+   "2 tbsp olive oil",
+   "pepper, a few drops of hot sauce, salt",
+   "rice or couscous to serve"
+  ],
+  "steps": [
+   "Cut the tofu into slices no more than 5 mm thick.",
+   "Slice the vegetables and apple too.",
+   "In a large frying pan, mix the oil with the soy sauce, add the tofu and vegetables and cook over medium-high heat.",
+   "Cook until the tofu is golden and the vegetables have soaked up the juices; season with pepper, hot sauce and salt.",
+   "Serve with rice or couscous."
+  ]
+ },
+ "chinese--hoisin-szoszban-sult-fuszeres-husrudak": {
+  "title": "Spiced meat rolls baked in hoisin sauce",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 large red onion, thinly sliced",
+   "2 cloves garlic, finely chopped",
+   "¼ tsp cumin seeds",
+   "¼ tsp coriander seeds",
+   "3 peppercorns",
+   "2 cloves",
+   "¼ tsp sea salt",
+   "450 g minced beef or bison",
+   "80 g cooked rice",
+   "10 large basil leaves, cut into strips",
+   "1 tsp oil",
+   "½ tsp fish sauce",
+   "5-6 tbsp hoisin sauce"
+  ],
+  "steps": [
+   "Preheat the oven to 220 °C and oil an ovenproof dish of about 23×30 cm.",
+   "Soften the onion and garlic in a little oil (or in the microwave for 5 minutes).",
+   "Grind the cumin, coriander, peppercorns, cloves and salt in a mortar.",
+   "Loosely mix the onion, meat, rice, spice mix, fish sauce and basil.",
+   "Shape into rolls about 3 cm thick and 12 cm long, tapered at both ends, lay them in the dish and brush with hoisin sauce.",
+   "Bake for 20-25 minutes; serve with rice and steamed vegetables."
+  ]
+ },
+ "chinese--gyomberes-szojas-parolt-lazac": {
+  "title": "Steamed salmon with ginger and soy",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 salmon fillets (150 g each)",
+   "250 ml boiling water",
+   "1 tsp salt",
+   "2 cm piece of ginger, cut into thin strips",
+   "1 spring onion, cut into strips",
+   "1 tbsp soy sauce",
+   "1 tsp sesame oil"
+  ],
+  "steps": [
+   "Put the salmon in a saucepan and scatter over half the ginger.",
+   "Pour over the boiling water and add the salt.",
+   "Cover and steam over low heat for 6-8 minutes until just cooked.",
+   "Lift onto plates, top with the rest of the ginger and the spring onion and drizzle with the soy sauce and sesame oil; serve with rice."
+  ]
+ },
+ "chinese--kola-chi-kolas-csirkeszarny-kinai-csaladi-kedvenc": {
+  "title": "Coca-Cola chicken wings (Chinese family favourite)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg chicken wings",
+   "3 slices ginger",
+   "2 spring onions",
+   "1 tbsp oil",
+   "300 ml cola",
+   "3 tbsp soy sauce",
+   "1 tbsp rice wine (optional)",
+   "sesame seeds",
+   "rice to serve"
+  ],
+  "steps": [
+   "Score the wings twice on each side, blanch for 2 minutes and pat dry.",
+   "Fry the wings in the oil until golden on both sides.",
+   "Add the ginger, spring onion, soy sauce, rice wine and cola.",
+   "Braise covered for 15 minutes, then boil uncovered, turning, until the sauce reduces to a sticky glaze.",
+   "Serve with sesame seeds and rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--qingjiao-rousi-sertescsikok-zoldpaprikaval": {
+  "title": "Qingjiao rousi (pork strips with green pepper)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g pork loin, cut into thin strips",
+   "1 tbsp soy sauce and 1 tsp cornflour for the marinade",
+   "3 green peppers (or romano), cut into strips",
+   "3 cloves garlic",
+   "3 tbsp oil",
+   "2 tbsp soy sauce",
+   "1 tbsp oyster sauce",
+   "1 tsp sugar",
+   "250 g rice"
+  ],
+  "steps": [
+   "Toss the pork with the soy sauce and cornflour and leave for 10 minutes; meanwhile cook the rice.",
+   "Stir-fry the pork in 2 tbsp oil in a hot wok over high heat for 2-3 minutes and take out.",
+   "Stir-fry the garlic and peppers in the rest of the oil for 2-3 minutes.",
+   "Return the pork, add the soy sauce, oyster sauce and sugar and toss for 1 minute.",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--jiachang-doufu-hazias-tofu-zoldsegekkel": {
+  "title": "Jiachang doufu (home-style tofu with vegetables)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g firm tofu, cut into triangles",
+   "100 g pork leg or loin, thinly sliced (optional)",
+   "1 green pepper, 1 carrot, sliced",
+   "50 g mushrooms, sliced",
+   "2 spring onions, 2 cloves garlic",
+   "1 tbsp chilli bean paste",
+   "2 tbsp soy sauce",
+   "1 tbsp oyster sauce",
+   "1 tsp sugar",
+   "1 tsp cornflour mixed with 100 ml water",
+   "oil for frying",
+   "rice"
+  ],
+  "steps": [
+   "Pat the tofu dry and fry both sides in a little oil until golden; take out.",
+   "In the same pan, stir-fry the pork for 2 minutes, add the chilli bean paste, garlic and white part of the spring onion.",
+   "Add the vegetables and stir-fry for 3 minutes.",
+   "Return the tofu, add the soy sauce, oyster sauce, sugar and cornflour water and cook for 3-4 minutes until the sauce coats it.",
+   "Serve with spring onion and rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--di-san-xian-piritott-burgonya-padlizsan-es-paprika": {
+  "title": "Di san xian (stir-fried potato, aubergine and pepper)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "2 potatoes, cut into wedges",
+   "2 aubergines, cut into large pieces",
+   "2 green peppers, cut into pieces",
+   "3 cloves garlic",
+   "oil for frying",
+   "3 tbsp soy sauce",
+   "1 tbsp oyster sauce",
+   "1 tsp sugar",
+   "1 tbsp cornflour + 100 ml water",
+   "rice"
+  ],
+  "steps": [
+   "Fry the potatoes in a little oil, covered, for 10 minutes until tender and golden; take out.",
+   "Dust the aubergine with half the cornflour and fry in more oil for 6-8 minutes until golden; take out.",
+   "Stir-fry the garlic and peppers in a little oil for 2 minutes.",
+   "Return the potato and aubergine, add the soy sauce, oyster sauce, sugar and the rest of the cornflour water and toss for 1-2 minutes.",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--tang-cu-paigu-edes-savanyu-sertesoldalas": {
+  "title": "Tang cu paigu (sweet and sour pork ribs)",
+  "time": "1 hr",
+  "servings": "4 servings",
+  "ingredients": [
+   "1 kg pork ribs, cut into small pieces",
+   "3 slices ginger",
+   "1 tbsp oil",
+   "4 tbsp sugar",
+   "4 tbsp rice or black vinegar",
+   "3 tbsp soy sauce",
+   "2 tbsp ketchup (optional)",
+   "sesame seeds",
+   "rice"
+  ],
+  "steps": [
+   "Bring the ribs to the boil in cold water, boil for 3 minutes, drain and rinse.",
+   "Fry the ginger and ribs in the oil in a saucepan for 5 minutes.",
+   "Pour in just enough water to cover, add the soy sauce and braise covered for 30 minutes.",
+   "Add the sugar, vinegar and ketchup and boil uncovered, turning often, until the sauce reduces to a glossy glaze.",
+   "Serve with sesame seeds and rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--ga-li-ji-kinai-csirkecurry-burgonyaval-es-repaval": {
+  "title": "Ga li ji (Chinese chicken curry with potato and carrot)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g boneless chicken thigh, diced",
+   "3 potatoes, diced",
+   "2 carrots, sliced",
+   "1 onion, cut into wedges",
+   "2 tbsp oil",
+   "2 tbsp curry powder",
+   "200 ml coconut milk or milk",
+   "1 tbsp soy sauce",
+   "1 tsp sugar",
+   "salt",
+   "rice"
+  ],
+  "steps": [
+   "Fry the onion in the oil for 3 minutes, add the chicken and fry until it turns white.",
+   "Sprinkle with the curry powder and fry for 30 seconds.",
+   "Add the potatoes, carrots and 500 ml water and cook covered for 20 minutes.",
+   "Add the coconut milk, soy sauce and sugar, season and cook uncovered for 5 minutes until thickened.",
+   "Serve with rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--rou-mo-qiezi-daralt-husos-szecsuani-padlizsan": {
+  "title": "Rou mo qiezi (Sichuan aubergine with minced pork)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "3 aubergines, cut into finger-thick batons",
+   "250 g minced pork",
+   "3 cloves garlic, 1 piece of ginger",
+   "1 tbsp chilli bean paste",
+   "2 tbsp soy sauce",
+   "1 tbsp vinegar",
+   "1 tsp sugar",
+   "1 tsp cornflour mixed with 100 ml water",
+   "oil for frying",
+   "spring onion",
+   "rice"
+  ],
+  "steps": [
+   "Salt the aubergine, leave for 10 minutes, squeeze and fry in a little oil for 8 minutes until soft; take out.",
+   "In the same pan, brown the mince until crumbly, add the chilli bean paste, garlic and ginger.",
+   "Return the aubergine and add the soy sauce, vinegar, sugar and cornflour water.",
+   "Toss for 2-3 minutes until the sauce coats it.",
+   "Serve with spring onion and rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--lachang-fan-kinai-kolbaszos-rizs-egy-edenyben": {
+  "title": "Lachang fan (one-pot Chinese sausage rice)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g rice",
+   "4 Chinese sausages (lap cheong) or smoked sausages, sliced diagonally",
+   "4 dried shiitake, soaked and sliced",
+   "1 carrot, finely diced",
+   "150 g green peas",
+   "2 tbsp soy sauce",
+   "1 tbsp oyster sauce",
+   "1 tsp sugar",
+   "1 tsp sesame oil",
+   "spring onion"
+  ],
+  "steps": [
+   "Wash the rice and bring it to the boil in a saucepan with 400 ml water.",
+   "Scatter over the sausage, mushrooms, carrot and peas, cover and cook over low heat for 18 minutes.",
+   "Meanwhile, mix the soy sauce, oyster sauce, sugar, sesame oil and 2 tbsp water.",
+   "Drizzle the sauce over the cooked rice, toss and rest covered for 5 minutes.",
+   "Serve with spring onion; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--ganguo-huacai-szaraz-serpenyos-karfiol-szalonnaval": {
+  "title": "Ganguo huacai (dry-pot cauliflower with bacon)",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "1 cauliflower, broken into small florets",
+   "100 g smoked bacon or pork belly, thinly sliced",
+   "4 cloves garlic, sliced",
+   "3 dried chillies",
+   "2 spring onions",
+   "2 tbsp oil",
+   "2 tbsp soy sauce",
+   "1 tsp sugar",
+   "salt",
+   "rice"
+  ],
+  "steps": [
+   "Blanch the cauliflower in boiling salted water for 1 minute and drain well.",
+   "Render the bacon in the oil in the wok, add the garlic and chillies.",
+   "Add the cauliflower and stir-fry over high heat for 6-8 minutes until charred at the edges.",
+   "Add the soy sauce and sugar, season and sprinkle with spring onion.",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "chinese--xihongshi-niurou-paradicsomos-parolt-marhahus": {
+  "title": "Xihongshi niurou (Chinese tomato braised beef)",
+  "time": "1 hr 20 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "800 g beef shin or shoulder, diced",
+   "5 ripe tomatoes, cut into wedges",
+   "2 tbsp tomato purée",
+   "1 onion",
+   "3 slices ginger",
+   "2 tbsp oil",
+   "2 tbsp soy sauce",
+   "1 tbsp sugar",
+   "1 star anise",
+   "salt",
+   "rice or noodles"
+  ],
+  "steps": [
+   "Bring the beef to the boil in cold water, boil for 3 minutes, drain and rinse.",
+   "Fry the onion and ginger in the oil, add half the tomatoes and the tomato purée and cook for 5 minutes until they break down.",
+   "Add the beef, soy sauce, sugar, star anise and boiling water to cover; braise covered for 50 minutes.",
+   "Add the rest of the tomatoes, season and cook for another 10-15 minutes.",
+   "Serve with rice or noodles; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "japanese--tamagoyaki-edes-sos-hengerelt-omlett": {
   "title": "Tamagoyaki (sweet-savoury rolled omelette)",
   "time": "20 min",
@@ -15478,6 +24084,45 @@ window.I18N_EN_RECIPES = {
    "Add the dashi, soy sauce and sugar and bring to the boil.",
    "Add the soya beans and simmer uncovered over low heat for 15-18 minutes until the liquid has almost cooked away.",
    "Serve cold or lukewarm, alongside rice."
+  ]
+ },
+ "japanese--kinpira-sargarepa-szojaszoszos-parolt-repa": {
+  "title": "Kinpira carrots (soy-braised carrots)",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "250 g carrots, cut into thin matchsticks",
+   "1 tbsp oil, ideally sesame oil",
+   "100 ml water",
+   "1-2 tbsp tamari or soy sauce",
+   "1 tsp toasted sesame seeds (optional)"
+  ],
+  "steps": [
+   "Cut the carrots into thin matchsticks.",
+   "Heat a little oil in a saucepan and briefly stir-fry the carrots.",
+   "Add just enough water to half cover them.",
+   "Cover and simmer over medium-low heat for 4-5 minutes until tender-crisp.",
+   "Season with soy sauce and sprinkle with sesame seeds if you like; serve with rice."
+  ]
+ },
+ "japanese--daigakuimo-karamellizalt-edesburgonya-szezammaggal": {
+  "title": "Daigakuimo (candied sweet potato with sesame)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g sweet potatoes (ideally Japanese)",
+   "70 g sugar",
+   "1 tsp soy sauce",
+   "2 tbsp water",
+   "1 tsp sesame seeds",
+   "oil for frying"
+  ],
+  "steps": [
+   "Cut the sweet potatoes into bite-sized pieces.",
+   "Heat the oil to 175 °C and fry the sweet potato until golden, then drain.",
+   "In a small saucepan, mix the water, sugar and soy sauce and put over low heat.",
+   "When the syrup turns sticky, take it off the heat, add the fried sweet potato and quickly toss to coat.",
+   "Sprinkle with sesame seeds and serve."
   ]
  },
  "japanese--shoyu-ramen-szojaszoszos-ramen": {
@@ -15799,6 +24444,331 @@ window.I18N_EN_RECIPES = {
    "Serve cold, sprinkled with nori strips and sesame seeds."
   ]
  },
+ "japanese--napolitan-japan-ketchupos-spagetti-kolbasszal": {
+  "title": "Napolitan (Japanese ketchup spaghetti with sausage)",
+  "time": "20 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "170 g spaghetti",
+   "1 green pepper, thinly sliced",
+   "½ small onion, thinly sliced",
+   "110 g frankfurters, sausage or ham, sliced",
+   "8 tbsp ketchup",
+   "2 tsp butter",
+   "2 tsp oil",
+   "salt, pepper"
+  ],
+  "steps": [
+   "In a large pot, bring 2 litres of water to the boil with 2 tbsp salt and cook the spaghetti as directed on the packet.",
+   "Meanwhile, fry the onion, pepper and sausage in the oil in a large frying pan over medium heat until soft; season.",
+   "Add the drained spaghetti to the pan and stir-fry with the rest.",
+   "Add the ketchup and keep stir-frying until it coats the pasta.",
+   "Stir in the butter, turn off the heat and serve."
+  ]
+ },
+ "japanese--misos-tonhalas-sult-rizs-tojassal": {
+  "title": "Miso tuna fried rice with egg",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "180 g basmati rice, cooked dry (pilaf-style)",
+   "2 tbsp olive oil",
+   "1 medium red onion, finely chopped",
+   "100 g white cabbage, thinly sliced",
+   "1 handful bean sprouts",
+   "1 tsp hot pepper paste (e.g. gochujang)",
+   "½ tsp hot paprika",
+   "1 tbsp miso",
+   "½-¾ tbsp honey",
+   "a few drops of hot sauce",
+   "1 tin (about 150 g drained) good-quality tuna",
+   "2 eggs",
+   "salt, if needed",
+   "chopped spring onion",
+   "katsuobushi (dried bonito flakes) to serve, optional"
+  ],
+  "steps": [
+   "Cook the rice dry, with separate grains.",
+   "In a large frying pan, soften the onion in 1 tbsp oil, then add the cabbage and bean sprouts.",
+   "Stir in the pepper paste and paprika, then the rice.",
+   "Add the miso and honey, mix thoroughly, season with hot sauce and fold in the tuna.",
+   "Push the rice to one side of the pan, crack the eggs into the other side with the remaining oil and scramble them, then mix into the rice.",
+   "Serve sprinkled with spring onion and katsuobushi, if using."
+  ]
+ },
+ "japanese--gyors-paradicsomos-virslis-ramenleves": {
+  "title": "Quick tomato and sausage ramen soup",
+  "time": "10 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "2 packets instant ramen or udon noodles with seasoning sachets",
+   "2 tomatoes, diced",
+   "2 frankfurters, sliced",
+   "½ medium onion, finely chopped"
+  ],
+  "steps": [
+   "Bring 1.5 litres of water to the boil.",
+   "Add the noodles and the contents of one seasoning sachet.",
+   "Add the tomatoes and frankfurters and cook for 5 minutes.",
+   "Stir in the onion and serve at once."
+  ]
+ },
+ "japanese--tojasbatyus-szusi-chakin-zushi": {
+  "title": "Egg-wrapped sushi parcels (chakin-zushi)",
+  "time": "45 min",
+  "servings": "4 servings (about 10 pieces)",
+  "ingredients": [
+   "300 g sushi rice",
+   "4 tbsp rice vinegar",
+   "1 tbsp sugar + 1 tsp for the egg",
+   "1 tsp salt + a pinch for the egg",
+   "4 large eggs",
+   "2 tsp sake or dry white wine",
+   "1 tsp cornflour",
+   "1 tbsp cold water",
+   "a little oil for frying"
+  ],
+  "steps": [
+   "Cook the sushi rice and, while still warm, mix in 1 tbsp sugar and 1 tsp salt dissolved in the rice vinegar; leave to cool to lukewarm.",
+   "Break the eggs into a bowl, add the sake, 1 tsp sugar and a pinch of salt and beat until smooth but not frothy.",
+   "Mix the cornflour into the cold water and stir into the egg.",
+   "Heat a frying pan (oiled if not non-stick) over medium heat, pour in 3-4 tbsp egg and swirl to spread thinly.",
+   "When the edges start to dry, take it off the heat, flip after 30 seconds and return to the heat for 30 seconds; cook all the thin omelettes this way and let them cool.",
+   "Shape the rice into oblong portions, put one in the centre of each egg sheet and fold the edges over like a parcel."
+  ]
+ },
+ "japanese--kare-raisu-japan-curry-rizzsel": {
+  "title": "Kare raisu (Japanese curry rice)",
+  "time": "50 min",
+  "servings": "5 servings",
+  "ingredients": [
+   "600 g pork shoulder or boneless chicken thigh, diced",
+   "2 onions, cut into wedges",
+   "2 carrots, cut into pieces",
+   "3 potatoes, cut into large cubes",
+   "1 tbsp oil",
+   "1 box (about 100-120 g) Japanese curry roux",
+   "800 ml water",
+   "1 grated apple (optional)",
+   "300 g rice"
+  ],
+  "steps": [
+   "Fry the meat and onion in the oil in a saucepan for 5 minutes.",
+   "Add the carrots and potatoes, pour in the water and simmer covered for 20 minutes (skim off the foam).",
+   "Take off the heat, break in the curry roux and stir to dissolve; add the grated apple.",
+   "Simmer over low heat, stirring, for 10 minutes until thick; meanwhile cook the rice.",
+   "Serve with rice; it keeps 4 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--buta-shogayaki-gyomberes-sertesszeletek-rizzsel": {
+  "title": "Buta shogayaki (ginger pork with rice)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g thinly sliced pork neck or loin",
+   "1 onion, sliced",
+   "1 tbsp oil",
+   "for the sauce: 4 tbsp soy sauce, 3 tbsp mirin, 1 tbsp sake, 1 tbsp sugar, 2 tbsp grated ginger",
+   "300 g rice",
+   "finely shredded cabbage to serve"
+  ],
+  "steps": [
+   "Cook the rice; mix the sauce ingredients.",
+   "Marinate the pork in 2 tbsp of the sauce for 10 minutes.",
+   "Stir-fry the onion and pork in the oil over high heat for 3-4 minutes.",
+   "Pour in the rest of the sauce and toss for 1-2 minutes until glossy.",
+   "Serve with rice and cabbage; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--saba-misoni-misoban-parolt-makrela": {
+  "title": "Saba misoni (mackerel simmered in miso)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "4 mackerel fillets, halved",
+   "1 piece of ginger, thinly sliced",
+   "200 ml water",
+   "100 ml sake or water",
+   "3 tbsp miso",
+   "2 tbsp sugar",
+   "2 tbsp mirin",
+   "1 tbsp soy sauce",
+   "rice"
+  ],
+  "steps": [
+   "Score the fish skin and pour boiling water over it (this removes the fishy smell).",
+   "In a wide pan, bring the water, sake, sugar, mirin and ginger to the boil.",
+   "Add the fish skin side up and cook for 8 minutes covered with baking paper or a smaller lid.",
+   "Dissolve the miso and soy sauce in a little of the liquid, pour over the fish and cook for 5-7 minutes, spooning the sauce over, until thickened.",
+   "Serve with rice; it keeps 2-3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--omurice-ketchupos-csirkes-rizs-omlettbe-csomagolva": {
+  "title": "Omurice (ketchup chicken rice wrapped in omelette)",
+  "time": "30 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "400 g cooked rice (leftovers work)",
+   "200 g chicken breast, finely diced",
+   "1 small onion, finely chopped",
+   "50 g green peas",
+   "4 tbsp ketchup + extra to serve",
+   "1 tbsp oil",
+   "4 eggs",
+   "2 tbsp milk",
+   "1 tbsp butter",
+   "salt, pepper"
+  ],
+  "steps": [
+   "Fry the onion and chicken in the oil for 4-5 minutes and add the peas.",
+   "Add the rice and ketchup, season and fry for 2-3 minutes.",
+   "Beat 2 eggs at a time with the milk and cook a thin, just-set omelette in the butter in a frying pan.",
+   "Pile half the rice in the middle of the omelette and fold the edges over; do the second the same way.",
+   "Serve with ketchup on top; it keeps 2 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--tsukune-teriyaki-csirkefasirtok-rizzsel": {
+  "title": "Tsukune (teriyaki chicken meatballs with rice)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "600 g minced chicken",
+   "3 spring onions, finely chopped",
+   "1 tbsp grated ginger",
+   "1 egg",
+   "3 tbsp panko or breadcrumbs",
+   "1 tsp cornflour, pinch of salt",
+   "1 tbsp oil",
+   "for the glaze: 3 tbsp soy sauce, 3 tbsp mirin, 1 tbsp sugar",
+   "300 g rice",
+   "sesame seeds"
+  ],
+  "steps": [
+   "Knead the meat with the spring onion, ginger, egg, breadcrumbs, cornflour and salt and shape into 12-16 flat patties with wet hands.",
+   "Fry in the oil over medium heat for 3-4 minutes per side, then steam covered with a little water for 3 minutes.",
+   "Pour in the glaze ingredients and cook, turning, for 2 minutes until glossy.",
+   "Meanwhile, cook the rice.",
+   "Serve with sesame seeds and rice; it keeps 3 days in a box; it heats through in the microwave in 1-2 minutes and is good cold too."
+  ]
+ },
+ "japanese--soboro-don-haromszinu-rizstal-daralt-csirke-tojas-borso": {
+  "title": "Soboro don (three-colour rice bowl: chicken, egg, peas)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "400 g minced chicken",
+   "3 tbsp soy sauce",
+   "2 tbsp mirin",
+   "1 tbsp sugar",
+   "1 tsp grated ginger",
+   "4 eggs",
+   "1 tbsp sugar and pinch of salt for the eggs",
+   "200 g peas or mangetout",
+   "300 g rice"
+  ],
+  "steps": [
+   "Cook the rice; cook the peas in salted water for 3 minutes.",
+   "In a frying pan, cook the chicken with the soy sauce, mirin, sugar and ginger, stirring, until crumbly and the liquid has cooked away.",
+   "Beat the eggs with the sugar and salt and scramble into fine crumbs in another pan, stirring.",
+   "Arrange the chicken, egg and peas in three stripes on top of the rice.",
+   "It keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--korokke-japan-krumplis-daralthusos-krokett": {
+  "title": "Korokke (Japanese potato and mince croquettes)",
+  "time": "50 min",
+  "servings": "4 servings (about 10 pieces)",
+  "ingredients": [
+   "800 g potatoes",
+   "200 g minced beef or pork",
+   "1 onion, finely chopped",
+   "1 tbsp oil",
+   "1 tbsp soy sauce",
+   "1 tsp sugar",
+   "salt, pepper",
+   "flour, 2 beaten eggs, 100 g panko for coating",
+   "oil for frying",
+   "tonkatsu sauce and cabbage to serve"
+  ],
+  "steps": [
+   "Boil the potatoes in their skins, peel and mash.",
+   "Fry the onion and mince in the oil until crumbly, season with soy sauce, sugar, salt and pepper and mix into the potatoes.",
+   "Once cool, shape into 10 flat oval croquettes and coat in flour, egg, then panko.",
+   "Fry in hot oil (about 1 cm deep) for 2-3 minutes per side until golden (or spray with oil and bake at 220 °C for 20 minutes).",
+   "Serve with tonkatsu sauce and cabbage; it keeps 3 days in a box; it heats through in the microwave in 1-2 minutes and is good cold too."
+  ]
+ },
+ "japanese--tonjiru-serteshusos-misoleves-zoldsegekkel": {
+  "title": "Tonjiru (pork and vegetable miso soup)",
+  "time": "35 min",
+  "servings": "6 servings",
+  "ingredients": [
+   "250 g thinly sliced pork belly or neck",
+   "2 carrots, sliced into half moons",
+   "1 parsley root or ½ daikon, sliced into half moons",
+   "2 potatoes, diced",
+   "1 onion, sliced",
+   "200 g tofu, diced",
+   "1 tbsp sesame oil",
+   "1.5 litres dashi or water",
+   "5 tbsp miso",
+   "2 spring onions"
+  ],
+  "steps": [
+   "Fry the pork in the sesame oil for 2 minutes, add the vegetables and toss for 3 minutes.",
+   "Pour in the dashi and cook for 15-20 minutes until the vegetables are tender (skim off the foam).",
+   "Add the tofu and cook for 2 minutes.",
+   "Take off the heat and stir in the miso dissolved in a ladleful of soup (don't boil again).",
+   "Serve with spring onion; it keeps 3 days in a soup container; reheat covered in the microwave on medium for 3-4 minutes, stirring halfway."
+  ]
+ },
+ "japanese--yaki-udon-piritott-udon-teszta-serteshussal-es-kaposztaval": {
+  "title": "Yaki udon (stir-fried udon with pork and cabbage)",
+  "time": "20 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "3 packs (200 g each) pre-cooked udon noodles",
+   "200 g thinly sliced pork or chicken",
+   "200 g white cabbage, shredded",
+   "1 carrot, cut into thin strips",
+   "1 onion, sliced",
+   "50 g mushrooms",
+   "1 tbsp oil",
+   "3 tbsp soy sauce",
+   "2 tbsp mirin",
+   "1 tbsp oyster sauce",
+   "katsuobushi or sesame seeds to serve"
+  ],
+  "steps": [
+   "Loosen the udon in hot water for 1 minute and drain.",
+   "Stir-fry the meat in the oil in the wok for 2 minutes.",
+   "Add the onion, carrot, mushrooms and cabbage and stir-fry over high heat for 3-4 minutes.",
+   "Add the noodles, soy sauce, mirin and oyster sauce and toss for 2 minutes.",
+   "Serve with katsuobushi; it keeps 2-3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--sake-no-nanbanzuke-pacolt-sult-lazac-edes-savanyu-zoldsegekkel": {
+  "title": "Sake no nanbanzuke (fried salmon marinated with sweet-sour vegetables)",
+  "time": "35 min + 30 min standing",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g salmon fillet, cut into bite-sized pieces",
+   "3 tbsp cornflour",
+   "oil for frying",
+   "1 onion, thinly sliced",
+   "1 carrot, cut into thin strips",
+   "1 sweet pepper, cut into strips",
+   "for the marinade: 100 ml rice vinegar, 4 tbsp soy sauce, 3 tbsp sugar, 100 ml dashi or water, 1 dried chilli",
+   "rice"
+  ],
+  "steps": [
+   "Bring the marinade ingredients to the boil and pour into a shallow dish; add the raw vegetables.",
+   "Season the salmon, coat in cornflour and fry in a little oil until golden (3-4 minutes).",
+   "Put the hot fish straight into the marinade and toss with the vegetables.",
+   "Leave to take on flavour for at least 30 minutes (it improves for days in the fridge).",
+   "It keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
  "japanese--nigiri-sushi": {
   "title": "Nigiri sushi",
   "time": "45 min",
@@ -16117,6 +25087,388 @@ window.I18N_EN_RECIPES = {
    "Turn, brush with the sauce and keep cooking.",
    "Repeat 2-3 times until the eel has a glossy, caramelised coating.",
    "Serve on hot rice, sprinkled with sansho pepper."
+  ]
+ },
+ "japanese--nikujaga-japan-marhahusos-burgonyas-ragu": {
+  "title": "Nikujaga (Japanese beef and potato stew)",
+  "time": "35 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "200 g thinly sliced beef",
+   "4 small potatoes (ideally red-skinned)",
+   "1 white onion, sliced",
+   "350 ml water",
+   "2 tbsp mirin",
+   "3 tbsp soy sauce",
+   "2 tbsp sugar",
+   "1 slice ginger",
+   "100 g shirataki noodles (optional)"
+  ],
+  "steps": [
+   "Cut the potatoes into bite-sized pieces and soak in cold water.",
+   "In a saucepan, mix the mirin, soy sauce, sugar and ginger, add the beef and simmer gently for 2-3 minutes.",
+   "Take out the beef and add the drained potatoes, onion and water to the liquid; bring to the boil.",
+   "Simmer uncovered for 15-20 minutes until the liquid has reduced to about a third and the potatoes are tender.",
+   "Return the beef and shirataki, cook for about 5 more minutes and serve."
+  ]
+ },
+ "japanese--agedashi-tofu-ropogos-tofu-dashis-szoszban": {
+  "title": "Agedashi tofu (crispy tofu in dashi sauce)",
+  "time": "30 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "300 g silken or soft tofu",
+   "3 tbsp potato starch or cornflour",
+   "oil for frying",
+   "120 ml dashi stock",
+   "2 tbsp light soy sauce",
+   "1.5 tbsp mirin",
+   "2 spring onions, thinly sliced",
+   "1 tsp grated ginger",
+   "4 tbsp grated daikon (or white radish)"
+  ],
+  "steps": [
+   "Cut the tofu into 2.5 cm thick rectangles, lay on kitchen paper and drain for 10-15 minutes (turn halfway and change the paper).",
+   "In a small saucepan, bring the dashi, soy sauce and mirin to the boil, then turn off the heat.",
+   "Sprinkle starch on a plate, lay the tofu on it and sprinkle more on top.",
+   "Heat the oil to 180 °C, shake off the excess starch and slide the tofu in one piece at a time; not too many at once or the oil cools. Fry until golden, turning once.",
+   "Drain on kitchen paper.",
+   "Arrange in a bowl, pour over the sauce and top with grated radish, ginger and spring onion."
+  ]
+ },
+ "japanese--grillezett-teriyaki-lazac-gyomberrel-es-citromhejjal": {
+  "title": "Grilled teriyaki salmon with ginger and lemon zest",
+  "time": "25 min",
+  "servings": "4 servings",
+  "marinate": "at least 30 minutes, no more than 4 hours",
+  "ingredients": [
+   "4 skin-on salmon fillets (170 g each), pin-boned",
+   "120 ml soy sauce",
+   "1 tbsp chopped ginger",
+   "2 tsp chopped garlic",
+   "2 tbsp rice vinegar",
+   "1.5 tsp grated lemon zest",
+   "1 tbsp light brown sugar",
+   "1-2 small hot chillies",
+   "1 tbsp sesame oil"
+  ],
+  "steps": [
+   "Blend all the ingredients except the salmon (and the sesame oil) until smooth, pour into a bag, add the salmon, toss to coat, squeeze out the air and marinate in the fridge for 30 minutes to 4 hours at most.",
+   "Take the fish out of the marinade and pat dry with kitchen paper; brush all sides with sesame oil.",
+   "Heat a grill or griddle pan until very hot.",
+   "Put the salmon on skin side up and cook for 3-5 minutes per side (turn 90 degrees halfway for nice marks).",
+   "Rest on a plate under foil for 5 minutes and serve with rice."
+  ]
+ },
+ "japanese--sutoben-sult-tempuras-hal-korianderos-aiolival": {
+  "title": "Oven-baked tempura fish with coriander aioli",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "450 g thick white fish fillet (e.g. halibut or cod), cut into 5 cm pieces",
+   "130 g flour",
+   "1 egg",
+   "250 ml iced water",
+   "4 tbsp mayonnaise",
+   "1 tbsp extra virgin olive oil",
+   "1 tbsp crushed garlic",
+   "1 tbsp chopped fresh coriander",
+   "1 tsp lemon juice",
+   "1 tsp freshly ground pepper",
+   "a little oil for the tray"
+  ],
+  "steps": [
+   "Preheat the oven to 180 °C and oil a baking tray.",
+   "Beat the egg in a medium bowl and add the iced water.",
+   "Add the flour and mix only briefly — lumps are fine.",
+   "Dip the fish in the batter and lay on the tray.",
+   "Bake for about 20 minutes until lightly golden.",
+   "Meanwhile, whisk the mayonnaise, olive oil, garlic, coriander, lemon juice and pepper in a small bowl and serve with the fish."
+  ]
+ },
+ "japanese--ananaszos-teriyaki-csirke-rizzsel": {
+  "title": "Pineapple teriyaki chicken with rice",
+  "time": "30 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "250 g rice",
+   "500 ml water",
+   "pinch of salt",
+   "2 tbsp oil",
+   "400 g chicken breast or firm tofu, diced",
+   "1 onion, diced",
+   "1-2 sweet peppers, diced",
+   "1 tin (about 450 g) pineapple chunks, drained (keep 6 tbsp of the juice)",
+   "6 tbsp teriyaki sauce",
+   "1 tbsp cornflour",
+   "100 g mushrooms, sliced (optional)",
+   "1-2 cloves garlic, finely chopped (optional)"
+  ],
+  "steps": [
+   "Bring the rice to the boil with the water and salt, cover and simmer for 20 minutes; turn off the heat, fluff with a fork and let stand for a few minutes.",
+   "Heat the oil in a large, deep frying pan or wok over high heat.",
+   "Stir-fry in this order: first the chicken (tofu only at the end), then the onion and garlic, the peppers, the mushrooms and finally the pineapple.",
+   "Mix the cornflour with the pineapple juice and add to the pan with the teriyaki sauce; bring to the boil to thicken, thinning with a little water if needed.",
+   "Serve with the cooked rice."
+  ]
+ },
+ "japanese--misos-grillezett-padlizsan-szezammaggal-nasu-dengaku": {
+  "title": "Miso-glazed grilled aubergine with sesame (nasu dengaku)",
+  "time": "15 min",
+  "servings": "2 servings",
+  "ingredients": [
+   "1 large aubergine (about 400 g)",
+   "2 tbsp oil",
+   "2 tbsp miso paste",
+   "1.5 tbsp sugar",
+   "2 tbsp dashi or vegetable stock",
+   "1 tsp white sesame seeds"
+  ],
+  "steps": [
+   "Wash the aubergine and cut lengthways into 2.5 cm thick slices.",
+   "Brush the cut surfaces with oil.",
+   "Grill 7-10 cm from the heat or cook in a griddle pan for about 5 minutes until soft and browned all over.",
+   "In a small saucepan, stir the miso, sugar and stock over low heat until smooth and hot — don't let it boil.",
+   "Pour the sauce over the aubergine.",
+   "Toast the sesame seeds in a small pan until they start to jump and sprinkle over the top."
+  ]
+ },
+ "japanese--hambagu-japan-huspogacsa-szaftos-martassal": {
+  "title": "Hambagu (Japanese hamburger steak with sauce)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g mixed minced meat",
+   "1 onion, finely chopped and softened",
+   "50 g panko or breadcrumbs, soaked in 4 tbsp milk",
+   "1 egg",
+   "pinch of nutmeg, salt, pepper",
+   "1 tbsp oil",
+   "for the sauce: 4 tbsp ketchup, 3 tbsp Worcestershire (tonkatsu) sauce, 100 ml water, 1 tbsp butter",
+   "rice and steamed vegetables to serve"
+  ],
+  "steps": [
+   "Knead the meat with the cooled onion, soaked crumbs, egg and seasonings and shape into 4 oval patties with a slight dip in the middle.",
+   "Brown one side in the oil over medium heat for 3 minutes, flip, add 3 tbsp water and steam covered for 8-10 minutes.",
+   "Take out the patties, add the sauce ingredients to the pan and boil for 2 minutes.",
+   "Pour the sauce over the meat.",
+   "Serve with rice and vegetables; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--chikuzenni-parolt-csirke-gyokerzoldsegekkel": {
+  "title": "Chikuzenni (simmered chicken and root vegetables)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g boneless chicken thigh, cut into bite-sized pieces",
+   "2 carrots, cut diagonally",
+   "1 parsley root or 150 g bamboo shoots",
+   "6 dried shiitake, soaked",
+   "150 g green beans or mangetout",
+   "1 tbsp oil",
+   "400 ml dashi or mushroom soaking water",
+   "3 tbsp soy sauce",
+   "2 tbsp mirin",
+   "1 tbsp sugar",
+   "rice"
+  ],
+  "steps": [
+   "Brown the chicken in the oil.",
+   "Add the carrots, root and mushrooms and toss for 2 minutes.",
+   "Pour in the dashi, add the soy sauce, mirin and sugar and simmer covered over low heat for 20 minutes.",
+   "Add the green beans and cook uncovered for 5-8 minutes until most of the liquid has cooked away.",
+   "Serve with rice; it keeps 4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--chicken-nanban-ecetes-edes-mazas-sult-csirke-tartarmartassal": {
+  "title": "Chicken nanban (sweet-vinegar glazed fried chicken with tartare)",
+  "time": "40 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g boneless chicken thigh",
+   "salt, pepper",
+   "3 tbsp flour",
+   "2 eggs, beaten",
+   "oil for frying",
+   "for the glaze: 4 tbsp rice vinegar, 3 tbsp soy sauce, 3 tbsp sugar",
+   "for the tartare: 2 hard-boiled eggs finely chopped, 5 tbsp mayonnaise, 1 tbsp chopped onion, 1 gherkin finely chopped",
+   "rice, cabbage salad"
+  ],
+  "steps": [
+   "For the glaze, boil the vinegar, soy sauce and sugar for 1 minute.",
+   "For the tartare, mix the egg, mayonnaise, onion and gherkin.",
+   "Season the chicken, coat in flour, then egg, and fry in a little oil for 5-6 minutes per side until golden.",
+   "Dip the hot chicken in the glaze and slice.",
+   "It keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--hayashi-rice-japan-marharagu-demi-glace-martasban-rizzsel": {
+  "title": "Hayashi rice (Japanese beef in demi-glace sauce with rice)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g thinly sliced beef",
+   "2 onions, sliced",
+   "250 g button mushrooms, sliced",
+   "2 tbsp butter",
+   "2 tbsp flour",
+   "4 tbsp ketchup",
+   "3 tbsp Worcestershire sauce",
+   "100 ml red wine (optional)",
+   "400 ml beef stock",
+   "1 tsp sugar",
+   "salt, pepper",
+   "300 g rice"
+  ],
+  "steps": [
+   "Cook the onions in the butter for 8-10 minutes until golden and add the mushrooms.",
+   "Add the beef and fry for 2-3 minutes; sprinkle with the flour.",
+   "Pour in the wine and stock and add the ketchup, Worcestershire sauce and sugar.",
+   "Simmer for 15 minutes until thick; season and meanwhile cook the rice.",
+   "Serve with rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--butadon-edes-szojas-serteshusos-rizstal-hagymaval": {
+  "title": "Butadon (sweet soy pork and onion rice bowl)",
+  "time": "25 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g thinly sliced pork neck",
+   "1 large onion, sliced",
+   "1 tbsp oil",
+   "4 tbsp soy sauce",
+   "3 tbsp mirin",
+   "1 tbsp sugar",
+   "1 tsp grated ginger",
+   "100 ml water",
+   "300 g rice",
+   "spring onion, pickled ginger"
+  ],
+  "steps": [
+   "Cook the rice.",
+   "Fry the onion in the oil for 3 minutes.",
+   "Add the pork and fry for 2-3 minutes.",
+   "Pour in the soy sauce, mirin, sugar, ginger and water and cook for 5 minutes.",
+   "Serve piled on the rice with spring onion; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--mabo-nasu-japan-csipos-daralthusos-padlizsan": {
+  "title": "Mabo nasu (Japanese spicy minced pork and aubergine)",
+  "time": "30 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "3 aubergines, cut into large pieces",
+   "250 g minced pork",
+   "2 cloves garlic, 1 piece of ginger",
+   "2 spring onions",
+   "3 tbsp oil",
+   "1 tsp chilli bean paste or spicy miso",
+   "2 tbsp miso",
+   "1 tbsp soy sauce",
+   "1 tbsp sugar",
+   "1 tsp cornflour mixed with 150 ml water",
+   "rice"
+  ],
+  "steps": [
+   "Fry the aubergine in 2 tbsp oil for 6-8 minutes until soft and golden and take out.",
+   "In the rest of the oil, fry the garlic, ginger and mince until crumbly.",
+   "Add the chilli bean paste, miso, soy sauce, sugar and cornflour water and bring to the boil.",
+   "Return the aubergine and toss for 2 minutes; sprinkle with spring onion.",
+   "Serve with rice; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--kabocha-no-nimono-szojas-edes-parolt-sutotok-csirkevel": {
+  "title": "Kabocha no nimono (sweet soy simmered squash with chicken)",
+  "time": "35 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "700 g squash (kabocha or Hokkaido), skin on, cut into large cubes",
+   "300 g boneless chicken thigh, cut into bite-sized pieces",
+   "1 tbsp oil",
+   "300 ml dashi or water",
+   "3 tbsp soy sauce",
+   "2 tbsp mirin",
+   "1.5 tbsp sugar",
+   "rice"
+  ],
+  "steps": [
+   "Brown the chicken in the oil.",
+   "Add the squash skin side down, pour in the dashi and add the sugar and mirin.",
+   "Cover with baking paper and cook for 10 minutes.",
+   "Add the soy sauce and cook for another 8-10 minutes until the squash is tender but not falling apart and most of the liquid has cooked away.",
+   "Serve with rice; it keeps 3-4 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--takikomi-gohan-csirkes-gombas-repas-fott-rizs": {
+  "title": "Takikomi gohan (rice cooked with chicken, mushrooms and carrot)",
+  "time": "50 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "300 g Japanese (short-grain) rice",
+   "200 g boneless chicken thigh, finely chopped",
+   "6 dried shiitake, soaked and sliced",
+   "1 carrot, cut into matchsticks",
+   "1 aburaage or 50 g smoked tofu, cut into strips (optional)",
+   "3 tbsp soy sauce",
+   "2 tbsp mirin",
+   "1 tbsp sake",
+   "360 ml dashi or mushroom soaking water"
+  ],
+  "steps": [
+   "Rinse the rice several times and leave to drain for 20 minutes.",
+   "Put the rice in a heavy-based saucepan and pour over the dashi, soy sauce, mirin and sake.",
+   "Scatter the chicken, mushrooms, carrot and tofu on top (don't stir them in).",
+   "Bring to the boil, then cook covered over very low heat for 15 minutes and rest with the lid on for 10 minutes.",
+   "Stir gently; it keeps 3 days in a box; sprinkle with a spoonful of water and reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--kurimu-shichu-japan-tejszines-csirke-es-zoldsegragu": {
+  "title": "Kurimu shichu (Japanese creamy chicken and vegetable stew)",
+  "time": "45 min",
+  "servings": "4 servings",
+  "ingredients": [
+   "500 g boneless chicken thigh, diced",
+   "2 potatoes, 2 carrots, 1 onion, cut into pieces",
+   "1 head broccoli, cut into small florets",
+   "3 tbsp butter",
+   "4 tbsp flour",
+   "500 ml water or chicken stock",
+   "400 ml milk",
+   "1 stock cube",
+   "salt, pepper",
+   "rice or bread"
+  ],
+  "steps": [
+   "Fry the chicken and onion in 1 tbsp butter in a saucepan for 5 minutes.",
+   "Add the potatoes, carrots, stock and stock cube and cook covered for 15 minutes.",
+   "In a small pan, cook the flour in the rest of the butter for 2 minutes, whisk in the milk and cook into a thick sauce.",
+   "Stir the sauce into the stew, add the broccoli and cook for 5 minutes; season.",
+   "Serve with rice or bread; it keeps 3 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
+  ]
+ },
+ "japanese--ebi-chiri-garnela-edes-csipos-paradicsomos-szoszban": {
+  "title": "Ebi chiri (prawns in sweet-spicy tomato sauce)",
+  "time": "25 min",
+  "servings": "3 servings",
+  "ingredients": [
+   "400 g peeled prawns",
+   "1 tbsp cornflour + 1 tsp for the sauce",
+   "2 tbsp oil",
+   "2 cloves garlic, 1 piece of ginger, finely chopped",
+   "2 spring onions, finely chopped",
+   "1 tsp chilli bean paste",
+   "4 tbsp ketchup",
+   "1 tbsp sugar",
+   "1 tbsp rice vinegar",
+   "150 ml water",
+   "rice"
+  ],
+  "steps": [
+   "Salt the prawns, toss with 1 tbsp cornflour and stir-fry in half the oil for 2 minutes, then take out.",
+   "Fry the garlic, ginger and chilli bean paste in the rest of the oil.",
+   "Add the ketchup, sugar, vinegar and 1 tsp cornflour mixed into the water and boil until thick.",
+   "Return the prawns with the spring onion and toss for 1 minute.",
+   "Serve with rice; it keeps 2 days in a box; reheat covered in the microwave for 2-3 minutes, stirring halfway."
   ]
  }
 };

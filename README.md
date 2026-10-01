@@ -21,6 +21,45 @@ maradt, dormant állapotban — ha egy `curatedSlots` beállítást
 visszaállítanál, vagy egy nyolcadik konyhát adnál hozzá élőben, azonnal
 újra működne, de jelen állapotban egyetlen kártya sem hívja.
 
+### „Munkába is vihető” receptek
+
+200 hétköznapi, begyakorolt családi étel (konyhánként 20): főzelékek,
+raguk, egytálételek, rakottak, curryk, levesek — olyanok, amelyeket egy
+fáradt szülő munka után 1-1,5 óra alatt megfőz több napra, és amelyek
+dobozban, a munkahelyi mikróban gyorsan felmelegítve is jók. Mindegyiknél:
+
+- `lunchbox: true` és `keepsWell: true` — a kártyán „Munkába is vihető”
+  címke, a kereső „Ötletek” sorában külön gomb, és az előre főzés is
+  ezeket veszi előre;
+- az utolsó lépés megmondja, hány napig áll el a hűtőben, és hogyan
+  melegítsük mikróban (fedővel, hány percig, kell-e egy kanál víz);
+- `time` legfeljebb 1 óra 30 perc.
+
+Ezek saját, házias receptek (nem átvett szövegek), ezért nincs `source`
+mezőjük.
+
+### Szabad licencű receptek (Wikibooks Cookbook)
+
+2026 szeptemberében 200 gyors, egyszerű recept került az oldalra a
+[Wikibooks Cookbook](https://en.wikibooks.org/wiki/Cookbook:Table_of_Contents)
+gyűjteményéből (letöltve a [3895 receptes adatkészletből](https://huggingface.co/datasets/gossminn/wikibooks-cookbook)).
+A Wikibooks tartalma **CC BY-SA 4.0** licencű: szabadon átdolgozható és
+fordítható, ha a forrást és a licencet feltüntetjük, és az átdolgozás is
+ugyanezt a licencet kapja. Ezért:
+
+- ezek a receptek egy `source` mezőt kapnak (`name`, `title`, `url`,
+  `license`), és a kártya alján a „Kézzel válogatott … recept” sor helyett
+  a forrás, a licenc és az „átdolgozva, fordítva” megjegyzés látszik;
+- a szövegük magyar és angol átdolgozás (metrikus mértékegységek, reális
+  idők, a hazai boltokban kapható alapanyagok — az amerikai konzervlevesek
+  helyett például házi mártás), és ezek a szövegek is CC BY-SA 4.0
+  licencűek. Az oldal többi része és kódja nem kerül e licenc alá.
+
+Válogatási szempont: legfeljebb 2-es nehézség, általában 1 óránál rövidebb
+elkészítés, és ne legyen szinte ugyanilyen recept már az oldalon.
+Konyhánként: amerikai 59, olasz 43, indiai 26, kínai 18, japán 12,
+balkáni 13, görög 9, francia 9, magyar 8, lengyel 3.
+
 - **Francia** — 40 kézzel írt reggeli (tartine-ok, croissant, pain au
   chocolat, brioche, kouign-amann, madeleine, œufs cocotte, omlettek,
   croque-monsieur/-madame, quiche, crêpe, galette, pain perdu), 107
@@ -478,7 +517,7 @@ vagy pontatlan lehet benne.
 ## „Mi van itthon?” kereső
 
 Saját menüpont („Mi van itthon?”). Vesszővel (vagy „és”-sel)
-elválasztott hozzávalókat vagy ételnevet vár, és mind a 734 kézzel írt
+elválasztott hozzávalókat vagy ételnevet vár, és mind a 1134 kézzel írt
 receptben keres (cím + hozzávalók, ékezet-függetlenül, részszóra is: a
 „csirke” a „csirkemell”-t is megtalálja). Rangsor: minél több megadott
 hozzávaló szerepel, annál előrébb; a címben szereplő szó plusz pontot ér;
@@ -572,7 +611,7 @@ nem ajánlja rövid időkerethez.
 megbízhatóan eldönteni (a nokedlis vagy lasagnés recept is annak tűnne).
 
 A kereső alatti **Ötletek** gombokkal (Kezdőknek is megy / Grillen is /
-Hétvégi projekt / Nem kell főzni) keresőszó nélkül is böngészhető egy-egy
+Hétvégi projekt / Nem kell főzni / Munkába is vihető) keresőszó nélkül is böngészhető egy-egy
 címke; hozzávalóval és étkezéssel kombinálható, újra rákattintva kikapcsol.
 
 ## Kedvencek, megosztás, adagszám
@@ -724,6 +763,12 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
 - `keepsWell` — nem kötelező; `true`, ha hűtőben 3-4 napig jól eláll és
   felmelegítve is jó (több napra előre főzhető), `false`, ha nem. Ha
   hiányzik, a cím alapján döntjük el (`keepsWell()` az `index.html`-ben).
+- `lunchbox` — nem kötelező; `true`, ha a recept dobozban, mikróban
+  melegítve munkába is vihető („Munkába is vihető” címke és szűrő).
+- `source` — nem kötelező; csak szabad licencű forrásból átdolgozott
+  receptnél: `{"name": "Wikibooks Cookbook", "title": "<eredeti cím>",
+  "url": "<eredeti oldal>", "license": "CC BY-SA 4.0"}`. A kártyán a
+  forrás és a licenc jelenik meg (lásd „Szabad licencű receptek”).
 - `calories` és `image` — a `calories`-t a `tools/kcal-estimate` szkript
   tölti ki (`node tools/kcal-estimate/apply.js`), az `image` nem kötelező.
 
@@ -732,7 +777,7 @@ A receptek az `index.html` `var RECIPES = {...}` sorában vannak, konyha
 Az oldal jobb felső sarkában az **English** / **Magyar** linkkel lehet
 nyelvet váltani. A böngésző megjegyzi a választást (`napi-recept-lang`),
 és közvetlenül is linkelhető: `index.html?lang=en`. Angolul jelenik meg
-a teljes felület és mind a 734 recept (cím, idő, pácolás, adag,
+a teljes felület és mind a 1134 recept (cím, idő, pácolás, adag,
 hozzávalók, lépések). Ugyanígy a bevásárlólista, a „Mi van itthon?”
 kereső, a heti menü és az előre főzés is. A mennyiségek grammban és
 milliliterben szerepelnek (a dkg és a dl átszámolva), és az
