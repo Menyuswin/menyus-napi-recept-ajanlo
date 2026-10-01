@@ -277,6 +277,15 @@ Escape vagy egy menüpont választása).
 
 ## Személyre szabás
 
+> **Hal és tenger gyümölcsei, kagyló/rák szűrés (2026-10-02):** a kézzel írt receptek hozzávalóiban
+> szóhatáros minta keres (`ALLERGEN_PATTERNS`), nem sima részletre keresés. Így a hering, pisztráng,
+> szardínia, szardella, süllő, nyelvhal, dashi, kaviár stb. is találat, a „marhalapocka”, a „shallot”
+> és a „halloumi” viszont nem (a „hal” szó korábban ezeket tévesen kizárta, a heringet pedig nem).
+> A „Hal és tenger gyümölcsei” a kagylót, rákot, polipot és az osztrigaszószt is kizárja, a „Kagyló/rák” csak
+> ezeket. A szűrés csak a hozzávalók szövegét nézi (a címet és a lépéseket nem), és a szószokban
+> rejtett halat (pl. Worcestershire) nem ismeri fel: ez általános útmutatás, nem allergén-biztosíték.
+
+
 A Beállítások panelen felvehetsz **célszemélyeket** (pl. családtagokat):
 név, kor, testsúly, nem, fehérjedús étrend igénye, napi kalóriacél,
 ételintolerancia (tejtermék, tojás, glutén, földimogyoró stb.). A "Kinek

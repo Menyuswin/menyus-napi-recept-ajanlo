@@ -48,7 +48,7 @@ window.I18N_EN_UI = {
  "Gabona": "Grains",
  "Földimogyoró": "Peanut",
  "Diófélék": "Tree nuts",
- "Tenger gyümölcsei": "Seafood",
+ "Hal és tenger gyümölcsei": "Fish and seafood",
  "Kagyló/rák": "Shellfish",
  "Szója": "Soy",
  "Szezámmag": "Sesame",

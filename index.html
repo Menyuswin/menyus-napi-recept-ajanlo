@@ -1443,7 +1443,7 @@
     { value: "Grain",     label: t("Gabona") },
     { value: "Peanut",    label: t("Földimogyoró") },
     { value: "Tree Nut",  label: t("Diófélék") },
-    { value: "Seafood",   label: t("Tenger gyümölcsei") },
+    { value: "Seafood",   label: t("Hal és tenger gyümölcsei") },
     { value: "Shellfish", label: t("Kagyló/rák") },
     { value: "Soy",       label: t("Szója") },
     { value: "Sesame",    label: t("Szezámmag") },
@@ -1478,6 +1478,22 @@
     "Wheat":     ["liszt", "zsemlemorzsa", "tészta", "búzadara", "kenyér", "bagett", "croissant", "brioche", "pain au chocolat", "pain de mie"],
     "InsulinResistance": ["cukor", "méz", "lekvár", "szirup", "karamell", "csokoládé", "kakaó"]
   };
+
+  // A hal és a tenger gyümölcsei szűrése szóhatáros mintával működik: a sima "hal" részletre keresés
+  // a "shallot"-ot és a "halloumi"-t is találatnak venné, a hering, pisztráng, szardella stb. viszont kimaradt volna.
+  var ALLERGEN_LETTERS = "a-záéíóöőúüű";
+  var SHELLFISH_RE = "(?:^|[^" + ALLERGEN_LETTERS + "])rák|garnéla|kagyló|osztriga|ostriga|tintahal|kalmár|polip|languszta|homár|tengeri herkentyű|tenger gyümölcs";
+  var FISH_RE = "(?:^|[^" + ALLERGEN_LETTERS + "])hal(?:$|[^" + ALLERGEN_LETTERS + "]|fil|szelet|leves|ász|konzerv|fasírt|pástétom|paprikás|szósz|fűszer|kocka|rúd|at|ak|as|ból|ra|hoz|nak|ban|nal|tól)" +
+    "|lazac|tonhal|tőkehal|hekk|pisztráng|ponty|harcsa|szardínia|szardinia|szardella|hering|makréla|süllő|fogas|busa|keszeg|compó|angolna|tilápia|tilapia|pangasius|sügér|csuka|tengeri hal|nyelvhal|fehérhal|édesvízi hal|szürimi|surimi|dashi|bonito|katsuobushi|unagi|kaviár|ikra|ostrigaszósz|halszósz";
+  var ALLERGEN_PATTERNS = {
+    "Seafood": new RegExp(FISH_RE + "|" + SHELLFISH_RE),
+    "Shellfish": new RegExp(SHELLFISH_RE)
+  };
+  function allergenHit(intol, text) {
+    var re = ALLERGEN_PATTERNS[intol];
+    if (re) return re.test(text);
+    return (ALLERGEN_KEYWORDS[intol] || []).some(function (kw) { return text.indexOf(kw) !== -1; });
+  }
 
   var MEAL_SHARE = { breakfast: 0.25, lunch: 0.40, dinner: 0.35 };
 
@@ -1705,10 +1721,7 @@
     if (profile && profile.intolerances && profile.intolerances.length) {
       filtered = filtered.filter(function (r) {
         var text = r.ingredients.join(" ").toLowerCase();
-        return !profile.intolerances.some(function (intol) {
-          var kws = ALLERGEN_KEYWORDS[intol] || [];
-          return kws.some(function (kw) { return text.indexOf(kw) !== -1; });
-        });
+        return !profile.intolerances.some(function (intol) { return allergenHit(intol, text); });
       });
       if (!filtered.length) return { pool: [], safetyEmpty: true };
     }
@@ -2323,9 +2336,7 @@
     getPantryIndex().forEach(function (entry) {
       if (slot && entry.found.slot !== slot) return;
       if (!hasPantryTag(entry.found.recipe, tag)) return;
-      var unsafe = intol.some(function (i) {
-        return (ALLERGEN_KEYWORDS[i] || []).some(function (kw) { return entry.raw.indexOf(kw) !== -1; });
-      });
+      var unsafe = intol.some(function (i) { return allergenHit(i, entry.raw); });
       if (unsafe) return;
       var have = [], missing = [], titleHit = false;
       expanded.forEach(function (variants, i) {
